@@ -4,12 +4,16 @@ using UnityEngine;
 
 namespace LW.Data
 {
-    public class PlayerData
+    public static class PlayerData
     {
-        private Vector2 currentMoveInput;
-        private Vector2 currentCameraInput;
+        private static Vector2 currentMoveInput;
+        private static Vector2 currentCameraInput;
+        private static bool isWordModeEnabled;
 
-        public Vector2 CurrentMoveInput { get => currentMoveInput; set => currentMoveInput = value; }
-        public Vector2 CurrentCameraInput { get => currentCameraInput; set => currentCameraInput = value; }
+        public static Vector2 CurrentMoveInput { get => currentMoveInput; set => currentMoveInput = value; }
+        public static Vector2 CurrentCameraInput { get => currentCameraInput; set => currentCameraInput = value; }
+        public static bool IsWordModeEnabled { get => isWordModeEnabled; set => isWordModeEnabled = value; }
+
+        public static bool CanMove => !isWordModeEnabled;
     }
 }

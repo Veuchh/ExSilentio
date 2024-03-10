@@ -1,21 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LW.Data;
+using System.Linq;
 
 namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        string currentWordInput;
 
+       public void ToggleConsole(bool isToggled)
+        {
+            ConsoleUI.Instance.ToggleConsole(isToggled);
         }
 
-        // Update is called once per frame
-        void Update()
+        public void ClearWord()
         {
+            currentWordInput = "";
+        }
 
+        public void AddCharacter(char chr)
+        {
+            if (!UsableCharacters.Characters.Contains(chr))
+                return;
+
+            currentWordInput += chr;
+            ConsoleUI.Instance.UpdateInput(currentWordInput);
+        }
+
+        public void RemoveCharacter()
+        {
+            if (currentWordInput.Length > 0)
+            {
+                currentWordInput.Remove(currentWordInput.Length - 1);
+                ConsoleUI.Instance.UpdateInput(currentWordInput);
+            }
+        }
+
+        public void SubmitWord()
+        {
+            ConsoleUI.Instance.AddToHistory(currentWordInput);
+            ClearWord();
+            ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
     }
 }

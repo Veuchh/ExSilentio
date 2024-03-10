@@ -1,3 +1,5 @@
+using LW.Data;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +11,13 @@ namespace LW.Player
     {
         public static PlayerInputsHandler Instance;
 
+        WordInputManager wordManager;
         PlayerMovement playerMovement;
+        bool isWordModeEnabled = false;
 
         private void Awake()
         {
+            wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
         }
@@ -36,6 +41,44 @@ namespace LW.Player
                 return;
 
             playerMovement.OnNewLookInput(value.Get<Vector2>().normalized);
+        }
+
+        public void OnToggleWordMode(InputValue value)
+        {
+            if (playerMovement == null)
+                return;
+
+            isWordModeEnabled = !isWordModeEnabled;
+            PlayerData.IsWordModeEnabled = isWordModeEnabled;
+            wordManager.ToggleConsole(isWordModeEnabled);
+            Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
+
+            if (isWordModeEnabled)
+            {
+                Keyboard.current.onTextInput += OnNewCharacter;
+                wordManager.ClearWord();
+            }
+            else
+            {
+                Keyboard.current.onTextInput -= OnNewCharacter;
+                wordManager.ClearWord();
+            }
+        }
+
+        private void OnNewCharacter(char chr)
+        {
+            wordManager.AddCharacter(chr);
+        }
+
+        public void OnSubmitWord(InputValue value)
+        {
+            wordManager.SubmitWord();
+        }
+
+
+        public void OnBackspace(InputValue value)
+        {
+            wordManager.RemoveCharacter();
         }
     }
 }

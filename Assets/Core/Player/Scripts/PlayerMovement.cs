@@ -21,17 +21,17 @@ namespace LW.Player
         [SerializeField, MinMaxSlider(-180, 180)] Vector2 verticalLookClamp;
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
-        PlayerData playerData;
-
 
         private void Start()
         {
-            playerData = new PlayerData();
             PlayerInputsHandler.Instance?.SetPlayerMovementScript(this);
         }
 
         private void Update()
         {
+            if (!PlayerData.CanMove)
+                return;
+
             HandleRotation();
 
             Vector3 movement = ComputeMovement();
@@ -44,7 +44,7 @@ namespace LW.Player
         private void HandleRotation()
         {
             //cameraMovement
-            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (playerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
+            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
 
             // newCamXRotation = Mathf.Clamp(newCamXRotation, verticalLookClamp.x, verticalLookClamp.y);
 
@@ -61,9 +61,9 @@ namespace LW.Player
             cameraTransform.localRotation = Quaternion.Euler(newCamXRotation, 0, 0);
 
             //Horizontal rotation
-            float newCamYRotation = transform.localRotation.eulerAngles.y + (playerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
+            float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
 
-            Vector3 playerRotation = new Vector3(0, (playerData.CurrentCameraInput.x * Time.deltaTime * rotationSpeed / horizontalRotationMultiplier), 0);
+            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentCameraInput.x * Time.deltaTime * rotationSpeed / horizontalRotationMultiplier), 0);
 
             transform.Rotate(playerRotation);
             //playerData.CurrentCameraInput.x;
@@ -72,7 +72,7 @@ namespace LW.Player
         private Vector3 ComputeMovement()
         {
             //movment
-            Vector3 movement = new Vector3(playerData.CurrentMoveInput.x, 0, playerData.CurrentMoveInput.y) * movementSpeed * Time.deltaTime;
+            Vector3 movement = new Vector3(PlayerData.CurrentMoveInput.x, 0, PlayerData.CurrentMoveInput.y) * movementSpeed * Time.deltaTime;
 
             //gravity
             if (characterController.isGrounded)
@@ -89,12 +89,12 @@ namespace LW.Player
 
         public void OnNewMoveInput(Vector2 newInput)
         {
-            playerData.CurrentMoveInput = newInput;
+            PlayerData.CurrentMoveInput = newInput;
         }
 
         public void OnNewLookInput(Vector2 newInput)
         {
-            playerData.CurrentCameraInput = newInput;
+            PlayerData.CurrentCameraInput = newInput;
         }
     }
 }
