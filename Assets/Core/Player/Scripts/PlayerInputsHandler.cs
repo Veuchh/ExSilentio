@@ -40,7 +40,7 @@ namespace LW.Player
             if (playerMovement == null)
                 return;
 
-            playerMovement.OnNewLookInput(value.Get<Vector2>().normalized);
+            playerMovement.OnNewLookInput(value.Get<Vector2>());
         }
 
         public void OnToggleWordMode(InputValue value)
@@ -72,6 +72,7 @@ namespace LW.Player
 
         public void OnSubmitWord(InputValue value)
         {
+            Debug.Log(value.isPressed);
             wordManager.SubmitWord();
         }
 

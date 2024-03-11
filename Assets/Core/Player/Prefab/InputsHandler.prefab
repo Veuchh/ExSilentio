@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6936752408951722947}
   - component: {fileID: 345147333362325820}
   - component: {fileID: 85882193839517980}
-  - component: {fileID: 2869900982692870918}
   - component: {fileID: 1616906314153863399}
+  - component: {fileID: 5369070425929500776}
   m_Layer: 0
   m_Name: InputsHandler
   m_TagString: Untagged
@@ -78,18 +78,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2869900982692870918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8439468828921275471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97bb57bdca0fe6046b488e1a977054d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1616906314153863399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,3 +90,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffda7c13accf8342999e5122270c707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordCorrector: {fileID: 5369070425929500776}
+--- !u!114 &5369070425929500776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439468828921275471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3dc0839e611ff04884f956dbe187246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stringTable:
+    m_TableReference:
+      m_TableCollectionName: GUID:b82483cc0c585ae46a976025932d651f

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using LW.Data;
 using System.Linq;
+using LW.Word;
 
 namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
+        [SerializeField] WordCorrector wordCorrector;
         string currentWordInput;
 
        public void ToggleConsole(bool isToggled)
@@ -38,9 +40,24 @@ namespace LW.Player
             }
         }
 
+        private void OnSuccesfullParse(WordID wordID)
+        {
+            Debug.Log($"Parse succesful : {wordID}");
+        }
+
+        private void OnFailedParse()
+        {
+            Debug.Log($"Parse failed");
+        }
+
         public void SubmitWord()
         {
             ConsoleUI.Instance.AddToHistory(currentWordInput);
+
+            if (string.IsNullOrEmpty(currentWordInput))
+                return;
+
+            wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
