@@ -28,5 +28,10 @@ namespace LW.Data
 
             return new DatabaseQueryResult(mainResult, secondaryResult);
         }
+
+        public List<WordDatabaseEntry> GetDatabase()
+        {
+            return database;
+        }
     }
 }
