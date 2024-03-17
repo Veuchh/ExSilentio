@@ -14,5 +14,6 @@ namespace LW.Data
 
         public WordID ID { get => id; set => id = value; }
         public List<WordID> AdditionalAcceptedIds { get => additionalAcceptedIds; set => additionalAcceptedIds = value; }
+        public string GdNotes { get => gdNotes; set => gdNotes = value; }
     }
 }

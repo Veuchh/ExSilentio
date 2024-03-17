@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +33,18 @@ namespace LW.Data
         public List<WordDatabaseEntry> GetDatabase()
         {
             return database;
+        }
+
+        public void UpdateEntry(WordDatabaseEntry newEntry)
+        {
+            foreach (WordDatabaseEntry entry in database)
+            {
+                if (entry.ID == newEntry.ID)
+                {
+                    entry.AdditionalAcceptedIds = newEntry.AdditionalAcceptedIds;
+                    entry.GdNotes = newEntry.GdNotes;
+                }
+            }
         }
     }
 }
