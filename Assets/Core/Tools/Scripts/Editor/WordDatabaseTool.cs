@@ -1,6 +1,7 @@
 ﻿using Codice.CM.Common;
 using LW.Data;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -267,35 +268,8 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
             if (GUILayout.Button("Add New"))
             {
-                //Get a random example string to create an enum with
-                string newEnum = $"Test{UnityEngine.Random.Range(0, 34433)}";
-
-                //Edit the enum delaration script
-                string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
-                lines[lines.Count() - 3] += $"{newEnum},";
-                File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
-
-                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
-
-                //Create a new translation entry for the newly added enum
-                foreach (Locale locale in LocalizationEditorSettings.GetLocales())
-                {
-                    var localTable = collection.GetTable(locale.Identifier) as StringTable;
-                        localTable.AddEntry(newEnum, "");
-                }
-
-                //Create a new entry
-                WordDatabaseEntry newEntry = new WordDatabaseEntry();
-
-                //Sets the correct ID for the (not compiled yet lol) enum
-                newEntry.ID = (WordID)Enum.GetNames(typeof(WordID)).Length;
-
-                Database.AddEntry(newEntry);
-                //Save the scriptableobject
-                EditorUtility.SetDirty(Database);
-
-                //Recompile for the new enum
-                CompilationPipeline.RequestScriptCompilation();
+                isInteractionDisabled = true;
+                AddWindow.ShowWindow(OnShowAddConfirmed, OnPopupClosed).Focus();
             }
 
             if (GUILayout.Button("Delete Selected"))
@@ -315,19 +289,51 @@ namespace LW.Editor.Tools.WordDatabaseTool
             EditorGUILayout.EndHorizontal();
         }
 
-        void OnPopupClosed()
+        static void OnPopupClosed()
         {
             isInteractionDisabled = false;
         }
 
-        void OnShowAddConfirmed(string newKeyName)
+        static void OnShowAddConfirmed(List<string> newKeysNames)
         {
             OnPopupClosed();
 
-            //Add to table
-            //Add to enum
-            //recompile
-            //Refresh
+            int nextEnumValue = Enum.GetNames(typeof(WordID)).Length;
+
+            for (int i = 0; i < newKeysNames.Count; i++)
+            {
+                newKeysNames[i] = newKeysNames[i].Replace(" ", "");
+                if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]))
+                    continue;
+
+                //Edit the enum delaration script
+                string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
+                lines[lines.Count() - 3] += $"{newKeysNames[i]},";
+                File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
+
+                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
+                //Create a new translation entry for the newly added enum
+                foreach (Locale locale in LocalizationEditorSettings.GetLocales())
+                {
+                    var localTable = collection.GetTable(locale.Identifier) as StringTable;
+                    localTable.AddEntry(newKeysNames[i], "");
+                }
+
+                //Create a new entry
+                WordDatabaseEntry newEntry = new WordDatabaseEntry();
+
+                //Sets the correct ID for the (not compiled yet lol) enum
+                newEntry.ID = (WordID)nextEnumValue;
+                nextEnumValue++;
+
+                Database.AddEntry(newEntry);
+                //Save the scriptableobject
+                EditorUtility.SetDirty(Database);
+
+                //Recompile for the new enum
+                CompilationPipeline.RequestScriptCompilation();
+            }
         }
 
         static WordDatabase Database
