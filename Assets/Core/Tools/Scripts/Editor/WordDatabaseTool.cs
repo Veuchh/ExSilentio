@@ -1,14 +1,20 @@
+﻿using Codice.CM.Common;
 using LW.Data;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 using UnityEditor;
+using UnityEditor.Compilation;
 using UnityEditor.Localization;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
+using static UnityEngine.EventSystems.EventTrigger;
 
 namespace LW.Editor.Tools.WordDatabaseTool
 {
@@ -20,27 +26,32 @@ namespace LW.Editor.Tools.WordDatabaseTool
         static EditorWindow window;
 
         static WordDatabase database;
-        static Vector2 scrollPositon;
+        static Vector2 leftScrollPositon;
+        static Vector2 rightScrollPositon;
 
-        static List<ToolEntry> entries = new List<ToolEntry>();
+        static List<ToolEntry> entries;
         ToolEntry selectedEntry = null;
+        static bool isInteractionDisabled = false;
 
         [MenuItem("Window/Tool GD")]
         public static void ShowWindow()
         {
             window = GetWindow(typeof(WordDatabaseTool));
             ReloadEntries();
+            isInteractionDisabled = false;
         }
 
         void OnGUI()
         {
+            if (isInteractionDisabled)
+                GUI.enabled = false;
             DisplayLeftSide();
             DisplayRightSide();
         }
 
         private void DisplayRightSide()
         {
-            GUILayout.BeginArea(new Rect(position.width / 2, position.height / 2, position.width / 2, position.height / 2));
+            GUILayout.BeginArea(new Rect(position.width / 2, 0, position.width / 2, position.height));
 
             if (selectedEntry == null)
             {
@@ -49,53 +60,74 @@ namespace LW.Editor.Tools.WordDatabaseTool
             else
             {
                 bool isModified = false;
-                GUILayout.BeginVertical();
+                WordDatabaseEntry entry = Database.GetDatabase()[Entries.IndexOf(selectedEntry)];
+                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
                 //Display the entry
 
                 //Display search bar
 
                 //Display title
-                WordDatabaseEntry entry = Database.GetDatabase()[entries.IndexOf(selectedEntry)];
                 GUILayout.BeginHorizontal();
                 GUILayout.FlexibleSpace();
-                EditorGUILayout.LabelField(entry.ID.ToString(), EditorStyles.boldLabel);
+                GUILayout.Label(entry.ID.ToString(), EditorStyles.boldLabel);
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
-                GUILayout.FlexibleSpace();
 
-                var collection = UnityEditor.Localization.LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+                GUILayout.Space(10);
 
-                for (int i = 0; i < entry.AdditionalAcceptedIds.Count; i++)
+                //Display designer notes
+                entry.GdNotes = EditorGUILayout.TextArea(entry.GdNotes);
+
+                GUILayout.Space(10);
+
+                //Display the additional ids
+                GUILayout.Label("Additional Inputs");
+
+                GUILayout.Space(5);
+
+                string bufferNotes = entry.GdNotes;
+
+                if (bufferNotes != entry.GdNotes)
+                    isModified = true;
+
+                GUILayout.Space(5);
+
+                rightScrollPositon = GUILayout.BeginScrollView(rightScrollPositon);
+
+                for (int i = 0; i < Database.GetDatabase().Count; i++)
                 {
+                    if (Database.GetDatabase()[i].ID == entry.ID)
+                        continue;
+
                     GUILayout.BeginHorizontal();
+                    bool isIDAccepted = entry.AdditionalAcceptedIds.Contains(Database.GetDatabase()[i].ID);
 
-                    //Button to remove the accepted id
-                    if (GUILayout.Button("-"))
+                    GUI.backgroundColor = isIDAccepted ? Color.green : Color.red;
+                    string buttonText = isIDAccepted ? "✔" : "X";
+                    if (GUILayout.Button(buttonText))
                     {
-
+                        if (isIDAccepted)
+                            entry.AdditionalAcceptedIds.Remove(Database.GetDatabase()[i].ID);
+                        else
+                            entry.AdditionalAcceptedIds.Add(Database.GetDatabase()[i].ID);
+                        isModified = true;
                     }
+                    GUI.backgroundColor = Color.white;
 
                     //Displays the key
-                    entry.AdditionalAcceptedIds[i] = (WordID)EditorGUILayout.EnumPopup(entry.AdditionalAcceptedIds[i]);
+                    EditorGUILayout.LabelField(Database.GetDatabase()[i].ID.ToString());
 
                     //Displays the translated keys
                     foreach (Locale locale in LocalizationEditorSettings.GetLocales())
                     {
                         var localTable = collection.GetTable(locale.Identifier) as StringTable;
-                        EditorGUILayout.LabelField(localTable.GetEntry(entry.ID.ToString()).LocalizedValue);
+                        EditorGUILayout.LabelField(localTable.GetEntry(Database.GetDatabase()[i].ID.ToString()).LocalizedValue);
                     }
                     GUILayout.EndHorizontal();
                 }
+                GUILayout.EndScrollView();
 
-                //Add another additional id
-                if (GUILayout.Button("+"))
-                {
-
-                }
-
-                //Display designer notes
-
-                GUILayout.EndVertical();
 
                 //Saves entry and sets the database as dirty
                 if (isModified)
@@ -103,14 +135,16 @@ namespace LW.Editor.Tools.WordDatabaseTool
                     Database.UpdateEntry(entry);
                     EditorUtility.SetDirty(Database);
                 }
+                GUILayout.FlexibleSpace();
             }
+
 
             GUILayout.EndArea();
         }
 
         private void DisplayLeftSide()
         {
-            GUILayout.BeginArea(new Rect(0, 0, position.width / 2, position.height / 2));
+            GUILayout.BeginArea(new Rect(0, 0, position.width / 2, position.height - 25));
             DisplayBottomButtons();
             DisplayEntries();
             GUILayout.EndArea();
@@ -128,23 +162,22 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
         private void DisplayEntries()
         {
-            scrollPositon = EditorGUILayout.BeginScrollView(scrollPositon);
+            leftScrollPositon = EditorGUILayout.BeginScrollView(leftScrollPositon);
 
-            var collection = UnityEditor.Localization.LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
 
-            string debug = "";
 
             foreach (WordDatabaseEntry entry in Database.GetDatabase())
             {
                 DisplayEntry(collection, entry);
             }
-            Debug.Log(debug);
+
             EditorGUILayout.EndScrollView();
         }
 
         private void HideCurrentlyDisplayedEntry()
         {
-            foreach (ToolEntry entry in entries)
+            foreach (ToolEntry entry in Entries)
             {
                 if (entry.IsDisplayed)
                 {
@@ -169,7 +202,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             //Displays a toggle to select the entry
             float labelWidthBuffer = EditorGUIUtility.labelWidth;
             EditorGUIUtility.labelWidth = 1;
-            entries[index].IsSelected = EditorGUILayout.Toggle(entries[index].IsSelected, toggleOptions);
+            Entries[index].IsSelected = EditorGUILayout.Toggle(Entries[index].IsSelected, toggleOptions);
             EditorGUIUtility.labelWidth = labelWidthBuffer;
 
             GUILayoutOption[] buttonOptions = new GUILayoutOption[]
@@ -180,10 +213,11 @@ namespace LW.Editor.Tools.WordDatabaseTool
         };
 
             //colors the button to green if it is the currently selected entry
-            if (entries[index].IsDisplayed)
+            if (Entries[index].IsDisplayed)
             {
                 GUI.backgroundColor = Color.green;
             }
+
             //Button to select entry
             if (GUILayout.Button(entry.ID.ToString(), buttonOptions))
             {
@@ -213,8 +247,8 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
         private void SelectDisplayedEntry(int index)
         {
-            selectedEntry = entries[index];
-            entries[index].IsDisplayed = true;
+            selectedEntry = Entries[index];
+            Entries[index].IsDisplayed = true;
         }
 
         /// <summary>
@@ -230,16 +264,70 @@ namespace LW.Editor.Tools.WordDatabaseTool
         private static void DisplayBottomButtons()
         {
             EditorGUILayout.BeginHorizontal();
+
             if (GUILayout.Button("Add New"))
             {
+                //Get a random example string to create an enum with
+                string newEnum = $"Test{UnityEngine.Random.Range(0, 34433)}";
+
+                //Edit the enum delaration script
+                string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
+                lines[lines.Count() - 3] += $"{newEnum},";
+                File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
+
+                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
+                //Create a new translation entry for the newly added enum
+                foreach (Locale locale in LocalizationEditorSettings.GetLocales())
+                {
+                    var localTable = collection.GetTable(locale.Identifier) as StringTable;
+                        localTable.AddEntry(newEnum, "");
+                }
+
+                //Create a new entry
+                WordDatabaseEntry newEntry = new WordDatabaseEntry();
+
+                //Sets the correct ID for the (not compiled yet lol) enum
+                newEntry.ID = (WordID)Enum.GetNames(typeof(WordID)).Length;
+
+                Database.AddEntry(newEntry);
+                //Save the scriptableobject
+                EditorUtility.SetDirty(Database);
+
+                //Recompile for the new enum
+                CompilationPipeline.RequestScriptCompilation();
             }
+
             if (GUILayout.Button("Delete Selected"))
             {
+                //Check if have 1 or more selected item
+                //Pop open a confirmation window
+                //Remove every selected elements
             }
+
             if (GUILayout.Button("Copy Selected"))
             {
+                //Check if have 1 and only 1 selected item
+                //Pop open a window asking to name the key
+                //Add in a new entry
+                //populate the entr additional ids and note by copying those of the selected one.
             }
             EditorGUILayout.EndHorizontal();
+        }
+
+        void OnPopupClosed()
+        {
+            isInteractionDisabled = false;
+        }
+
+        void OnShowAddConfirmed(string newKeyName)
+        {
+            OnPopupClosed();
+
+            //Add to table
+            //Add to enum
+            //recompile
+            //Refresh
         }
 
         static WordDatabase Database
@@ -251,6 +339,19 @@ namespace LW.Editor.Tools.WordDatabaseTool
                     database = (WordDatabase)AssetDatabase.LoadAssetAtPath(DATABASE_PATH, typeof(WordDatabase));
                 }
                 return database;
+            }
+        }
+
+
+        static List<ToolEntry> Entries
+        {
+            get
+            {
+                if (entries == null)
+                {
+                    ReloadEntries();
+                }
+                return entries;
             }
         }
     }

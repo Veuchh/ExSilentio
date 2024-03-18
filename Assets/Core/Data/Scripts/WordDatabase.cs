@@ -46,5 +46,10 @@ namespace LW.Data
                 }
             }
         }
+
+        public void AddEntry(WordDatabaseEntry newEntry)
+        {
+            database.Add(newEntry);
+        }
     }
 }

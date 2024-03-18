@@ -32,7 +32,7 @@ namespace LW.Player
             if (!PlayerData.CanMove)
                 return;
 
-            HandleRotation();
+            ComputeRotation();
 
             Vector3 movement = ComputeMovement();
 
@@ -41,13 +41,12 @@ namespace LW.Player
             characterController.Move(movement);
         }
 
-        private void HandleRotation()
+        private void ComputeRotation()
         {
             //cameraMovement
-            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
+            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
 
-            // newCamXRotation = Mathf.Clamp(newCamXRotation, verticalLookClamp.x, verticalLookClamp.y);
-
+            //rotation clamping
             if (newCamXRotation > 180 && newCamXRotation < 360 + verticalLookClamp.x)
             {
                 newCamXRotation = 360 + verticalLookClamp.x;
@@ -60,13 +59,11 @@ namespace LW.Player
 
             cameraTransform.localRotation = Quaternion.Euler(newCamXRotation, 0, 0);
 
+
             //Horizontal rotation
-            float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentCameraInput.y * Time.deltaTime * rotationSpeed * -1);
-
-            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentCameraInput.x * Time.deltaTime * rotationSpeed / horizontalRotationMultiplier), 0);
-
+            float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
+            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * Time.deltaTime * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
-            //playerData.CurrentCameraInput.x;
         }
 
         private Vector3 ComputeMovement()
@@ -84,6 +81,7 @@ namespace LW.Player
                 movement.y = movement.y + (gravity * Time.deltaTime);
             }
 
+            //Rotates the movement input by the current rotation of the player
             return transform.rotation * movement;
         }
 
@@ -94,7 +92,7 @@ namespace LW.Player
 
         public void OnNewLookInput(Vector2 newInput)
         {
-            PlayerData.CurrentCameraInput = newInput;
+            PlayerData.CurrentLookInput = newInput;
         }
     }
 }
