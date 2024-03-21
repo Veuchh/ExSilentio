@@ -637,6 +637,9 @@
             "m_Id": "c520494cc89449eabf3fcc4097430eaa"
         },
         {
+            "m_Id": "306a7818f605405fa0b5be82e027a2a9"
+        },
+        {
             "m_Id": "5e504a3b5f404e7586cdc3ed79c02d80"
         }
     ],
@@ -650,10 +653,12 @@
     },
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"6708d15321c3fa04f96d437ad1d5dc7a\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
-        "0231a6a9-3268-46ee-be9f-bf59ccf21c7b"
+        "0231a6a9-3268-46ee-be9f-bf59ccf21c7b",
+        "22445527-b691-4d2e-abee-a3903c30e124"
     ],
     "m_PropertyIds": [
-        1719466419
+        1719466419,
+        -618119903
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -1088,6 +1093,27 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "306a7818f605405fa0b5be82e027a2a9",
+    "m_Id": -618119903,
+    "m_DisplayName": "Seed",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Seed",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 12.989800453186036,
+        "y": 78.23300170898438
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "30a9c9d5fb264b89b2bc53efda86424b",
     "m_Group": {
@@ -1401,6 +1427,9 @@
             "m_Id": "124b6d4d49f14e599d19256ed7969a5f"
         },
         {
+            "m_Id": "4fae3adc5de44b2d985c20b6edc334f9"
+        },
+        {
             "m_Id": "01823f1ddcc14f19b61f434e8a310fc4"
         }
     ],
@@ -1414,10 +1443,12 @@
     },
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"6708d15321c3fa04f96d437ad1d5dc7a\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
-        "0231a6a9-3268-46ee-be9f-bf59ccf21c7b"
+        "0231a6a9-3268-46ee-be9f-bf59ccf21c7b",
+        "22445527-b691-4d2e-abee-a3903c30e124"
     ],
     "m_PropertyIds": [
-        1719466419
+        1719466419,
+        -618119903
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -1509,6 +1540,27 @@
         "m_SerializableColors": []
     },
     "m_Value": 0.0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "4fae3adc5de44b2d985c20b6edc334f9",
+    "m_Id": -618119903,
+    "m_DisplayName": "Seed",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Seed",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 12.989800453186036,
+        "y": 78.23300170898438
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
 }
 
 {
