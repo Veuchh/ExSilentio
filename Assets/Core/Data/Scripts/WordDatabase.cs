@@ -51,5 +51,16 @@ namespace LW.Data
         {
             database.Add(newEntry);
         }
+
+        public void RemoveEntryByID(WordID idToRemove)
+        {
+            for (int i = database.Count - 1; i >= 0; i--)
+            {
+                if (database[i].ID == idToRemove)
+                {
+                    database.RemoveAt(i);
+                }
+            }
+        }
     }
 }

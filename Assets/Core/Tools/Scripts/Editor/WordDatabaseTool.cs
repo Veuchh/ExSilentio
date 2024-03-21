@@ -275,8 +275,27 @@ namespace LW.Editor.Tools.WordDatabaseTool
             if (GUILayout.Button("Delete Selected"))
             {
                 //Check if have 1 or more selected item
+                int selectedItems = 0;
+
+                foreach (ToolEntry entry in entries)
+                {
+                    if (entry.IsSelected)
+                    {
+                        selectedItems++;
+                    }
+                }
+
+                if (selectedItems <= 0)
+                {
+                    EditorGUILayout.EndHorizontal();
+                    return;
+                }
+
+                //Disable interaction on this window
+                isInteractionDisabled = true;
+
                 //Pop open a confirmation window
-                //Remove every selected elements
+                DeleteWindow.ShowWindow(DeleteSelectedElements, OnPopupClosed, selectedItems);
             }
 
             if (GUILayout.Button("Copy Selected"))
@@ -294,6 +313,42 @@ namespace LW.Editor.Tools.WordDatabaseTool
             isInteractionDisabled = false;
         }
 
+        static void DeleteSelectedElements()
+        {
+            List<string> enumsToRemove = new List<string>();
+
+            for (int i = 0; i < entries.Count; i++)
+            {
+                if (entries[i].IsSelected)
+                {
+                    enumsToRemove.Add(Database.GetDatabase()[i].ID.ToString());
+                }
+            }
+
+            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
+
+            // string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
+            for (int entryIndex = 0; entryIndex < enumsToRemove.Count; entryIndex++)
+            {
+                //Remove it from the database
+                WordID parsedEnum = (WordID)Enum.Parse(typeof(WordID), enumsToRemove[entryIndex]);
+                Database.RemoveEntryByID(parsedEnum);
+
+                //Remove it from the translation
+                collection.RemoveEntry(enumsToRemove[entryIndex]);
+
+            }
+            //File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
+
+            //Save scriptableObjects
+            EditorUtility.SetDirty(Database);
+            EditorUtility.SetDirty(collection);
+
+            //Recompile for the enums
+            //CompilationPipeline.RequestScriptCompilation();
+        }
+
         static void OnShowAddConfirmed(List<string> newKeysNames)
         {
             OnPopupClosed();
@@ -308,7 +363,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 //Edit the enum delaration script
                 string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
-                lines[lines.Count() - 3] += $"{newKeysNames[i]},";
+                lines[lines.Count() - 3] += $", {newKeysNames[i]}";
                 File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
 
                 var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
@@ -328,8 +383,9 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 nextEnumValue++;
 
                 Database.AddEntry(newEntry);
-                //Save the scriptableobject
+                //Save the scriptableobjects
                 EditorUtility.SetDirty(Database);
+                EditorUtility.SetDirty(collection);
 
                 //Recompile for the new enum
                 CompilationPipeline.RequestScriptCompilation();
