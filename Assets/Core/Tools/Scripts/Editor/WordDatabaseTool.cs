@@ -176,7 +176,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             EditorGUILayout.EndScrollView();
         }
 
-        private void HideCurrentlyDisplayedEntry()
+        private static void HideCurrentlyDisplayedEntry()
         {
             foreach (ToolEntry entry in Entries)
             {
@@ -345,8 +345,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             EditorUtility.SetDirty(Database);
             EditorUtility.SetDirty(collection);
 
-            //Recompile for the enums
-            //CompilationPipeline.RequestScriptCompilation();
+            HideCurrentlyDisplayedEntry();
         }
 
         static void OnShowAddConfirmed(List<string> newKeysNames)
@@ -389,6 +388,37 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 //Recompile for the new enum
                 CompilationPipeline.RequestScriptCompilation();
+            }
+        }
+
+        static void OnCopyConfirmed(List<string> newKeysNames, List<WordDatabaseEntry> entriesToCopy)
+        {
+            if (entriesToCopy.Count != newKeysNames.Count)
+            {
+                Debug.LogError("The amount of new names and capied entries did not match. No entry was copied");
+                return;
+            }
+
+            int nextEnumValue = Enum.GetNames(typeof(WordID)).Length;
+
+            for (int i = 0; i < newKeysNames.Count; i++)
+            {
+                WordDatabaseEntry newEntry = new WordDatabaseEntry();
+
+                newKeysNames[i] = newKeysNames[i].Replace(" ", "");
+                if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]))
+                {
+                    Debug.LogWarning($"Entry {entriesToCopy[i]} did not have a valid naming conterpart, and wasn't copied");
+                    continue;
+                }
+
+                newEntry.ID = (WordID)nextEnumValue;
+                nextEnumValue++;
+                newEntry.GdNotes = entriesToCopy[i].GdNotes;
+                newEntry.AdditionalAcceptedIds = entriesToCopy[i].AdditionalAcceptedIds;
+
+
+                Database.GetDatabase().Add(newEntry);
             }
         }
 
