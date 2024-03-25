@@ -1,12 +1,8 @@
-using Codice.CM.Common;
 using LW.Data;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
-using UnityEngine.Localization.Tables;
 
 namespace LW.Word
 {
@@ -27,7 +23,7 @@ namespace LW.Word
                     Debug.LogError("AN ID IN THE WORDID ENUM DOES NOT EXIST IN THE STRING TABLE");
                     continue;
                 }
-               
+
                 if (stringTable.GetTable().GetEntry(id.ToString()).LocalizedValue.ToLower() == word.ToLower())
                 {
                     onSuccesfulParse?.Invoke(id);
