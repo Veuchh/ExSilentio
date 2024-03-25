@@ -31,6 +31,9 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
         Color orangeColor => new Color(2, 1f, 0);
 
+        string leftSearch = "";
+        string rightSearch = "";
+
         [MenuItem("Window/Tool GD")]
         public static void ShowWindow()
         {
@@ -52,6 +55,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
         {
             GUILayout.BeginArea(new Rect(0, 0, position.width / 2, position.height - 25));
             DisplayTopButtons();
+            leftSearch = GUILayout.TextField(leftSearch);
             DisplayEntries();
             GUILayout.EndArea();
         }
@@ -73,6 +77,9 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
             foreach (WordDatabaseEntry entry in Database.GetDatabase())
             {
+                //filter through search
+                if (!entry.ID.ToString().ToLower().Contains(leftSearch.ToLower())) 
+                    continue;
                 DisplayEntry(collection, entry, buttonOptions);
             }
 
@@ -162,7 +169,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 DeleteWindow.ShowWindow(DeleteSelectedElements, OnPopupClosed, selectedItems);
             }
 
-            if (GUILayout.Button("Copy Selected"))
+            if (GUILayout.Button("Duplicate Selected"))
             {
 
                 List<WordDatabaseEntry> entriesToCopy = new List<WordDatabaseEntry>();
@@ -221,6 +228,17 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 GUILayout.Space(10);
 
+                //display Search
+                GUILayout.BeginHorizontal();
+                float bufferSize = EditorGUIUtility.labelWidth;
+                var textDimensions = GUI.skin.label.CalcSize(new GUIContent("Key"));
+                EditorGUIUtility.labelWidth = textDimensions.x;
+                EditorGUIUtility.labelWidth = bufferSize;
+                rightSearch = NoSpaceTextField("Search", rightSearch, GUILayout.ExpandWidth(true));
+                GUILayout.EndHorizontal();
+
+                GUILayout.Space(10);
+
                 //Display the additional ids
                 GUILayout.Label("Additional Inputs");
 
@@ -239,6 +257,12 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 {
                     if (Database.GetDatabase()[i].ID == entry.ID)
                         continue;
+
+                    //Filtering through search
+                    if (!Database.GetDatabase()[i].ID.ToString().ToLower().Contains(rightSearch.ToLower()))
+                    {
+                        continue;
+                    }
 
                     GUILayout.BeginHorizontal();
 
@@ -487,6 +511,13 @@ namespace LW.Editor.Tools.WordDatabaseTool
         /// <summary>
         /// Create a EditorGUILayout.TextField with no space between label and text field
         /// </summary>
+        public static string NoSpaceTextField(string label, string text, GUILayoutOption option)
+        {
+            var textDimensions = GUI.skin.label.CalcSize(new GUIContent(label));
+            EditorGUIUtility.labelWidth = textDimensions.x;
+            return EditorGUILayout.TextField(label, text, option);
+        }
+
         public static string NoSpaceTextField(string label, string text)
         {
             var textDimensions = GUI.skin.label.CalcSize(new GUIContent(label));
