@@ -1,21 +1,16 @@
-﻿using Codice.CM.Common;
-using LW.Data;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
+﻿using LW.Data;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEditor.Localization;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
-using static UnityEngine.EventSystems.EventTrigger;
 
 namespace LW.Editor.Tools.WordDatabaseTool
 {
@@ -34,6 +29,8 @@ namespace LW.Editor.Tools.WordDatabaseTool
         ToolEntry selectedEntry = null;
         static bool isInteractionDisabled = false;
 
+        Color orangeColor => new Color(2, 1f, 0);
+
         [MenuItem("Window/Tool GD")]
         public static void ShowWindow()
         {
@@ -50,6 +47,148 @@ namespace LW.Editor.Tools.WordDatabaseTool
             DisplayRightSide();
         }
 
+        #region LeftSide
+        private void DisplayLeftSide()
+        {
+            GUILayout.BeginArea(new Rect(0, 0, position.width / 2, position.height - 25));
+            DisplayTopButtons();
+            DisplayEntries();
+            GUILayout.EndArea();
+        }
+
+        private void DisplayEntries()
+        {
+            leftScrollPositon = GUILayout.BeginScrollView(leftScrollPositon, false, false, GUIStyle.none, GUI.skin.verticalScrollbar);
+
+            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
+            if (window == null)
+                window = GetWindow(typeof(WordDatabaseTool));
+
+            GUILayoutOption[] buttonOptions = new GUILayoutOption[]
+            {
+            GUILayout.MinWidth(window.position.width/7),
+            GUILayout.MaxWidth(window.position.width/7)
+            };
+
+            foreach (WordDatabaseEntry entry in Database.GetDatabase())
+            {
+                DisplayEntry(collection, entry, buttonOptions);
+            }
+
+            EditorGUILayout.EndScrollView();
+        }
+
+        private void DisplayEntry(StringTableCollection collection, WordDatabaseEntry entry, GUILayoutOption[] buttonOptions)
+        {
+            EditorGUILayout.BeginHorizontal();
+
+            int index = Database.GetDatabase().IndexOf(entry);
+
+
+            //Displays a toggle to select the entry
+            float labelWidthBuffer = EditorGUIUtility.labelWidth;
+            EditorGUIUtility.labelWidth = 1;
+            Entries[index].IsSelected = EditorGUILayout.Toggle(Entries[index].IsSelected, toggleOptions);
+            EditorGUIUtility.labelWidth = labelWidthBuffer;
+
+
+            //colors the button to green if it is the currently selected entry
+            if (Entries[index].IsDisplayed)
+            {
+                GUI.backgroundColor = Color.green;
+            }
+
+            //Button to select entry
+            if (GUILayout.Button(entry.ID.ToString(), buttonOptions))
+            {
+                HideCurrentlyDisplayedEntry();
+
+                SelectDisplayedEntry(index);
+                //Select the entry
+            }
+
+            GUI.backgroundColor = Color.white;
+
+            foreach (Locale locale in LocalizationEditorSettings.GetLocales())
+            {
+                var localTable = collection.GetTable(locale.Identifier) as StringTable;
+                string localName = localTable.GetEntry(entry.ID.ToString()).LocalizedValue;
+
+                string newName = NoSpaceTextField(locale.ToString() + " : ", localName);
+
+                if (localName != newName)
+                {
+                    localTable.AddEntry(entry.ID.ToString(), newName);
+                    EditorUtility.SetDirty(localTable);
+                }
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+
+        private static void DisplayTopButtons()
+        {
+            EditorGUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("Add New"))
+            {
+                isInteractionDisabled = true;
+                AddWindow.ShowWindow(OnShowAddConfirmed, OnPopupClosed).Focus();
+            }
+
+            if (GUILayout.Button("Delete Selected"))
+            {
+                //Check if have 1 or more selected item
+                int selectedItems = 0;
+
+                foreach (ToolEntry entry in entries)
+                {
+                    if (entry.IsSelected)
+                    {
+                        selectedItems++;
+                    }
+                }
+
+                if (selectedItems <= 0)
+                {
+                    EditorGUILayout.EndHorizontal();
+                    return;
+                }
+
+                //Disable interaction on this window
+                isInteractionDisabled = true;
+
+                //Pop open a confirmation window
+                DeleteWindow.ShowWindow(DeleteSelectedElements, OnPopupClosed, selectedItems);
+            }
+
+            if (GUILayout.Button("Copy Selected"))
+            {
+
+                List<WordDatabaseEntry> entriesToCopy = new List<WordDatabaseEntry>();
+
+                for (int i = 0; i < entries.Count; i++)
+                {
+                    if (entries[i].IsSelected)
+                        entriesToCopy.Add(Database.GetDatabase()[i]);
+                }
+
+                //Check if have 1 and only 1 selected item
+                if (entriesToCopy.Count <= 0)
+                {
+                    EditorGUILayout.EndHorizontal();
+                    return;
+                }
+                isInteractionDisabled = true;
+
+                //Pop open a window asking to name the keys
+                CopyWindow.ShowWindow(entriesToCopy, OnCopyConfirmed, OnPopupClosed);
+            }
+            EditorGUILayout.EndHorizontal();
+        }
+        #endregion LeftSide
+
+        #region RightSide
         private void DisplayRightSide()
         {
             GUILayout.BeginArea(new Rect(position.width / 2, 0, position.width / 2, position.height));
@@ -94,7 +233,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 GUILayout.Space(5);
 
-                rightScrollPositon = GUILayout.BeginScrollView(rightScrollPositon);
+                rightScrollPositon = GUILayout.BeginScrollView(rightScrollPositon, false, false, GUIStyle.none, GUI.skin.verticalScrollbar);
 
                 for (int i = 0; i < Database.GetDatabase().Count; i++)
                 {
@@ -102,18 +241,49 @@ namespace LW.Editor.Tools.WordDatabaseTool
                         continue;
 
                     GUILayout.BeginHorizontal();
-                    bool isIDAccepted = entry.AdditionalAcceptedIds.Contains(Database.GetDatabase()[i].ID);
 
+                    //Display button for additional IDs
+                    bool isIDAccepted = entry.AdditionalAcceptedIds.Contains(Database.GetDatabase()[i].ID);
                     GUI.backgroundColor = isIDAccepted ? Color.green : Color.red;
                     string buttonText = isIDAccepted ? "✔" : "X";
-                    if (GUILayout.Button(buttonText))
+                    if (GUILayout.Button(buttonText, GUILayout.Width(50)))
                     {
                         if (isIDAccepted)
+                        {
                             entry.AdditionalAcceptedIds.Remove(Database.GetDatabase()[i].ID);
+                        }
                         else
+                        {
+                            if (entry.CloselySemanticIds.Contains(Database.GetDatabase()[i].ID))
+                            {
+                                entry.CloselySemanticIds.Remove(Database.GetDatabase()[i].ID);
+                            }
                             entry.AdditionalAcceptedIds.Add(Database.GetDatabase()[i].ID);
+                        }
                         isModified = true;
                     }
+
+                    //Display button for semantically close words
+                    bool isIDSemanticallyClose = entry.CloselySemanticIds.Contains(Database.GetDatabase()[i].ID);
+                    GUI.backgroundColor = isIDSemanticallyClose ? orangeColor : Color.red;
+                    buttonText = isIDSemanticallyClose ? "✔" : "X";
+                    if (GUILayout.Button(buttonText, GUILayout.Width(50)))
+                    {
+                        if (isIDSemanticallyClose)
+                        {
+                            entry.CloselySemanticIds.Remove(Database.GetDatabase()[i].ID);
+                        }
+                        else
+                        {
+                            if (entry.AdditionalAcceptedIds.Contains(Database.GetDatabase()[i].ID))
+                            {
+                                entry.AdditionalAcceptedIds.Remove(Database.GetDatabase()[i].ID);
+                            }
+                            entry.CloselySemanticIds.Add(Database.GetDatabase()[i].ID);
+                        }
+                        isModified = true;
+                    }
+
                     GUI.backgroundColor = Color.white;
 
                     //Displays the key
@@ -139,16 +309,14 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 GUILayout.FlexibleSpace();
             }
 
-
             GUILayout.EndArea();
         }
+        #endregion RightSide
 
-        private void DisplayLeftSide()
+        #region Logic
+        static bool HasSpecialChars(string yourString)
         {
-            GUILayout.BeginArea(new Rect(0, 0, position.width / 2, position.height - 25));
-            DisplayBottomButtons();
-            DisplayEntries();
-            GUILayout.EndArea();
+            return yourString.Any(ch => !char.IsLetterOrDigit(ch));
         }
 
         static void ReloadEntries()
@@ -160,22 +328,6 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 entries.Add(new ToolEntry());
             }
         }
-
-        private void DisplayEntries()
-        {
-            leftScrollPositon = EditorGUILayout.BeginScrollView(leftScrollPositon);
-
-            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
-
-
-            foreach (WordDatabaseEntry entry in Database.GetDatabase())
-            {
-                DisplayEntry(collection, entry);
-            }
-
-            EditorGUILayout.EndScrollView();
-        }
-
         private static void HideCurrentlyDisplayedEntry()
         {
             foreach (ToolEntry entry in Entries)
@@ -186,128 +338,14 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 }
             }
         }
-
-        private void DisplayEntry(StringTableCollection collection, WordDatabaseEntry entry)
-        {
-            EditorGUILayout.BeginHorizontal();
-
-            int index = Database.GetDatabase().IndexOf(entry);
-
-            GUILayoutOption[] toggleOptions = new GUILayoutOption[]
-    {
-            GUILayout.MinWidth(0),
-            GUILayout.ExpandWidth(false)
-        //add more layout options
-    };
-
-            //Displays a toggle to select the entry
-            float labelWidthBuffer = EditorGUIUtility.labelWidth;
-            EditorGUIUtility.labelWidth = 1;
-            Entries[index].IsSelected = EditorGUILayout.Toggle(Entries[index].IsSelected, toggleOptions);
-            EditorGUIUtility.labelWidth = labelWidthBuffer;
-
-            GUILayoutOption[] buttonOptions = new GUILayoutOption[]
-        {
-            GUILayout.MinWidth(position.width/7),
-            GUILayout.MaxWidth(position.width/7)
-            //add more layout options
-        };
-
-            //colors the button to green if it is the currently selected entry
-            if (Entries[index].IsDisplayed)
-            {
-                GUI.backgroundColor = Color.green;
-            }
-
-            //Button to select entry
-            if (GUILayout.Button(entry.ID.ToString(), buttonOptions))
-            {
-                HideCurrentlyDisplayedEntry();
-
-                SelectDisplayedEntry(index);
-                //Select the entry
-            }
-
-            GUI.backgroundColor = Color.white;
-
-            foreach (Locale locale in LocalizationEditorSettings.GetLocales())
-            {
-                var localTable = collection.GetTable(locale.Identifier) as StringTable;
-                string localName = localTable.GetEntry(entry.ID.ToString()).LocalizedValue;
-
-                string newName = TextField(locale.ToString() + " : ", localName);
-
-                if (localName != newName)
-                {
-                    localTable.AddEntry(entry.ID.ToString(), newName);
-                    EditorUtility.SetDirty(localTable);
-                }
-            }
-            EditorGUILayout.EndHorizontal();
-        }
-
         private void SelectDisplayedEntry(int index)
         {
             selectedEntry = Entries[index];
             Entries[index].IsDisplayed = true;
         }
+        #endregion Logic
 
-        /// <summary>
-        /// Create a EditorGUILayout.TextField with no space between label and text field
-        /// </summary>
-        public static string TextField(string label, string text)
-        {
-            var textDimensions = GUI.skin.label.CalcSize(new GUIContent(label));
-            EditorGUIUtility.labelWidth = textDimensions.x;
-            return EditorGUILayout.TextField(label, text);
-        }
-
-        private static void DisplayBottomButtons()
-        {
-            EditorGUILayout.BeginHorizontal();
-
-            if (GUILayout.Button("Add New"))
-            {
-                isInteractionDisabled = true;
-                AddWindow.ShowWindow(OnShowAddConfirmed, OnPopupClosed).Focus();
-            }
-
-            if (GUILayout.Button("Delete Selected"))
-            {
-                //Check if have 1 or more selected item
-                int selectedItems = 0;
-
-                foreach (ToolEntry entry in entries)
-                {
-                    if (entry.IsSelected)
-                    {
-                        selectedItems++;
-                    }
-                }
-
-                if (selectedItems <= 0)
-                {
-                    EditorGUILayout.EndHorizontal();
-                    return;
-                }
-
-                //Disable interaction on this window
-                isInteractionDisabled = true;
-
-                //Pop open a confirmation window
-                DeleteWindow.ShowWindow(DeleteSelectedElements, OnPopupClosed, selectedItems);
-            }
-
-            if (GUILayout.Button("Copy Selected"))
-            {
-                //Check if have 1 and only 1 selected item
-                //Pop open a window asking to name the key
-                //Add in a new entry
-                //populate the entr additional ids and note by copying those of the selected one.
-            }
-            EditorGUILayout.EndHorizontal();
-        }
-
+        #region Callbacks
         static void OnPopupClosed()
         {
             isInteractionDisabled = false;
@@ -357,7 +395,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             for (int i = 0; i < newKeysNames.Count; i++)
             {
                 newKeysNames[i] = newKeysNames[i].Replace(" ", "");
-                if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]))
+                if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]) || HasSpecialChars(newKeysNames[i].Replace("_", "")))
                     continue;
 
                 //Edit the enum delaration script
@@ -385,10 +423,10 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 //Save the scriptableobjects
                 EditorUtility.SetDirty(Database);
                 EditorUtility.SetDirty(collection);
-
-                //Recompile for the new enum
-                CompilationPipeline.RequestScriptCompilation();
             }
+
+            //Recompile for the new enum
+            CompilationPipeline.RequestScriptCompilation();
         }
 
         static void OnCopyConfirmed(List<string> newKeysNames, List<WordDatabaseEntry> entriesToCopy)
@@ -406,6 +444,24 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 WordDatabaseEntry newEntry = new WordDatabaseEntry();
 
                 newKeysNames[i] = newKeysNames[i].Replace(" ", "");
+                if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]) || HasSpecialChars(newKeysNames[i].Replace("_", "")))
+                    continue;
+
+                //Edit the enum delaration script
+                string[] lines = File.ReadAllLines("Assets/Core/Data/Scripts/WordID.cs");
+                lines[lines.Count() - 3] += $", {newKeysNames[i]}";
+                File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
+
+                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+
+                //Create a new translation entry for the newly added enum
+                foreach (Locale locale in LocalizationEditorSettings.GetLocales())
+                {
+                    var localTable = collection.GetTable(locale.Identifier) as StringTable;
+                    localTable.AddEntry(newKeysNames[i], "");
+                }
+
+                newKeysNames[i] = newKeysNames[i].Replace(" ", "");
                 if (string.IsNullOrEmpty(newKeysNames[i]) || Enum.GetNames(typeof(WordID)).Contains(newKeysNames[i]))
                 {
                     Debug.LogWarning($"Entry {entriesToCopy[i]} did not have a valid naming conterpart, and wasn't copied");
@@ -416,11 +472,33 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 nextEnumValue++;
                 newEntry.GdNotes = entriesToCopy[i].GdNotes;
                 newEntry.AdditionalAcceptedIds = entriesToCopy[i].AdditionalAcceptedIds;
+                newEntry.CloselySemanticIds = entriesToCopy[i].CloselySemanticIds;
 
-
-                Database.GetDatabase().Add(newEntry);
+                Database.AddEntry(newEntry);
+                //Save the scriptableobjects
+                EditorUtility.SetDirty(Database);
+                EditorUtility.SetDirty(collection);
             }
+
+            CompilationPipeline.RequestScriptCompilation();
         }
+        #endregion Callbacks
+
+        /// <summary>
+        /// Create a EditorGUILayout.TextField with no space between label and text field
+        /// </summary>
+        public static string NoSpaceTextField(string label, string text)
+        {
+            var textDimensions = GUI.skin.label.CalcSize(new GUIContent(label));
+            EditorGUIUtility.labelWidth = textDimensions.x;
+            return EditorGUILayout.TextField(label, text);
+        }
+
+        GUILayoutOption[] toggleOptions = new GUILayoutOption[]
+        {
+            GUILayout.MinWidth(0),
+            GUILayout.ExpandWidth(false)
+        };
 
         static WordDatabase Database
         {
@@ -433,7 +511,6 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 return database;
             }
         }
-
 
         static List<ToolEntry> Entries
         {

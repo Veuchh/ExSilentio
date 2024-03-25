@@ -13,6 +13,7 @@ namespace LW.Data
         {
             WordDatabaseEntry mainResult = null;
             List<WordDatabaseEntry> secondaryResult = new List<WordDatabaseEntry>();
+            List<WordDatabaseEntry> semanticallyClose = new List<WordDatabaseEntry>();
 
             foreach (WordDatabaseEntry entry in database)
             {
@@ -25,9 +26,14 @@ namespace LW.Data
                 {
                     secondaryResult.Add(entry);
                 }
+
+                if (entry.CloselySemanticIds.Contains(attemptedID))
+                {
+                    semanticallyClose.Add(entry);
+                }
             }
 
-            return new DatabaseQueryResult(mainResult, secondaryResult);
+            return new DatabaseQueryResult(mainResult, secondaryResult, semanticallyClose);
         }
 
         public List<WordDatabaseEntry> GetDatabase()
@@ -42,6 +48,7 @@ namespace LW.Data
                 if (entry.ID == newEntry.ID)
                 {
                     entry.AdditionalAcceptedIds = newEntry.AdditionalAcceptedIds;
+                    entry.CloselySemanticIds = newEntry.CloselySemanticIds;
                     entry.GdNotes = newEntry.GdNotes;
                 }
             }
