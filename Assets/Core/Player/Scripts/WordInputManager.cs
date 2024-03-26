@@ -7,6 +7,7 @@ namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
+        [SerializeField] WordDatabase wordDatabase;
         [SerializeField] WordCorrector wordCorrector;
         string currentWordInput;
 
@@ -41,6 +42,15 @@ namespace LW.Player
         private void OnSuccesfullParse(WordID wordID)
         {
             Debug.Log($"Parse succesful : {wordID}");
+            
+            if (RevealableObjectHandler.Instance == null)
+            {
+                Debug.LogWarning($"You attempted to reveal a word, but no {nameof(RevealableObjectHandler)} Instance was found.");
+            }
+
+            var queryResult = wordDatabase.AttemptDatabaseRetrieve(wordID);
+
+            RevealableObjectHandler.Instance.AttemptWordDiscovery(queryResult);
         }
 
         private void OnFailedParse()
