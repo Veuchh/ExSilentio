@@ -2,7 +2,6 @@ using LW.Data;
 using System;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 
 namespace LW.Word
 {
@@ -14,17 +13,18 @@ namespace LW.Word
         {
             Debug.LogWarning("TODO : MISSING AUTOCORRECT");
 
-            Locale currentLocale = LocalizationSettings.SelectedLocale;
-            //Debug.Log(stringTable.GetTable());
-            foreach (WordID id in System.Enum.GetValues(typeof(WordID)))
+            var table = stringTable.GetTable();
+
+            foreach (WordID id in Enum.GetValues(typeof(WordID)))
             {
-                if (stringTable.GetTable().GetEntry(id.ToString()) == null)
+                string stringID = id.ToString();
+                if (table.GetEntry(id.ToString()) == null)
                 {
-                    Debug.LogError("AN ID IN THE WORDID ENUM DOES NOT EXIST IN THE STRING TABLE");
+                    Debug.LogWarning("AN ID IN THE WORDID ENUM DOES NOT EXIST IN THE STRING TABLE");
                     continue;
                 }
 
-                if (stringTable.GetTable().GetEntry(id.ToString()).LocalizedValue.ToLower() == word.ToLower())
+                if (table.GetEntry(stringID).LocalizedValue.ToLower() == word.ToLower())
                 {
                     onSuccesfulParse?.Invoke(id);
                     return;

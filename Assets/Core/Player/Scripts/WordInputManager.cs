@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using LW.Data;
-using System.Linq;
 using LW.Word;
+using System.Linq;
+using UnityEngine;
 
 namespace LW.Player
 {
@@ -12,7 +10,7 @@ namespace LW.Player
         [SerializeField] WordCorrector wordCorrector;
         string currentWordInput;
 
-       public void ToggleConsole(bool isToggled)
+        public void ToggleConsole(bool isToggled)
         {
             ConsoleUI.Instance.ToggleConsole(isToggled);
         }

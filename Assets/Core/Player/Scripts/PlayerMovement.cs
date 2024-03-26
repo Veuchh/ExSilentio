@@ -14,7 +14,6 @@ namespace LW.Player
         [Header("Movement Settings")]
         [SerializeField] float movementSpeed = 60;
         [SerializeField] float gravity = -9.81f;
-        Vector3 currentVelocity;
 
         [Header("RotationSettings Settings")]
         [SerializeField] float rotationSpeed = 10;
@@ -24,7 +23,7 @@ namespace LW.Player
 
         private void Start()
         {
-            PlayerInputsHandler.Instance?.SetPlayerMovementScript(this);
+            PlayerInputsHandler.Instance.SetPlayerMovementScript(this);
         }
 
         private void Update()
@@ -35,8 +34,6 @@ namespace LW.Player
             ComputeRotation();
 
             Vector3 movement = ComputeMovement();
-
-            currentVelocity = movement;
 
             characterController.Move(movement);
         }
