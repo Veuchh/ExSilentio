@@ -1,7 +1,4 @@
 using LW.Data;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -45,11 +42,7 @@ namespace LW.Player
 
         public void OnToggleWordMode(InputValue value)
         {
-            if (playerMovement == null)
-                return;
-
             isWordModeEnabled = !isWordModeEnabled;
-            PlayerData.IsWordModeEnabled = isWordModeEnabled;
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
 
@@ -63,6 +56,9 @@ namespace LW.Player
                 Keyboard.current.onTextInput -= OnNewCharacter;
                 wordManager.ClearWord();
             }
+
+            if (playerMovement != null)
+                PlayerData.IsWordModeEnabled = isWordModeEnabled;
         }
 
         private void OnNewCharacter(char chr)
