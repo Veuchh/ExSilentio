@@ -2,8 +2,8 @@ namespace LW.Level
 {
     public enum ObjectImportance
     {
-        Core,
-        Secondary,
-        Bonus
+        Core = 0,
+        Secondary = 1,
+        Bonus = 2
     }
 }

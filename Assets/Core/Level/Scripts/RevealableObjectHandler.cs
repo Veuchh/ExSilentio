@@ -8,6 +8,8 @@ namespace LW.Level
     {
         public static RevealableObjectHandler Instance { get; private set; }
 
+        [SerializeField] WordDatabase database;
+
         List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
 
         private void Awake()
@@ -23,9 +25,14 @@ namespace LW.Level
         public void RegisterBundle(RevealableObjectBundle newBundle)
         {
             if (!bundles.Contains(newBundle))
+            {
                 bundles.Add(newBundle);
+                newBundle.AssignEntry(database.GetEntry(newBundle.ID));
+            }
             else
+            {
                 Debug.LogWarning("A bundle attempted to register twice. Register attempt rejected.");
+            }
         }
 
         public void AttemptWordDiscovery(DatabaseQueryResult queryResult)
@@ -35,9 +42,13 @@ namespace LW.Level
             WordID usedID = 0;
             ObjectImportance currentImportance = ObjectImportance.Bonus;
 
+            bool isSemanticallyClose = false;
 
             foreach (RevealableObjectBundle bundle in bundles)
             {
+                if (bundle.IsRevealed)
+                    continue;
+
                 //If we found the specific word we are looking for, no need to look into things further
                 if (bundle.ID == queryResult.MainResult.ID)
                 {
@@ -54,11 +65,24 @@ namespace LW.Level
                     if (bundle.ID == secondaryResult.ID)
                     {
                         //if the item is of the same importance or more important
-                        if (currentImportance <= bundle.ObjectImportance)
+                        if ((int)currentImportance >= (int)bundle.ObjectImportance)
                         {
                             bundleToReveal = bundle;
                             usedID = secondaryResult.ID;
                             currentImportance = bundle.ObjectImportance;
+                        }
+                    }
+                }
+
+                if (bundleToReveal == null && isSemanticallyClose == false)
+                {
+
+                    foreach (WordDatabaseEntry semanticallyCloseEntrie in queryResult.SemanticallyCloseIDs)
+                    {
+                        if (bundle.ID == semanticallyCloseEntrie.ID)
+                        {
+                            isSemanticallyClose = true;
+                            break;
                         }
                     }
                 }
@@ -69,6 +93,10 @@ namespace LW.Level
                 bundleToReveal.RevealBundle(usedID);
                 //Console feedback
                 ConsoleUI.Instance.AddToHistory($"{queryResult.MainResult.ID.ToString()} was revealed.");
+            }
+            else if (isSemanticallyClose)
+            {
+                ConsoleUI.Instance.AddToHistory($"{queryResult.MainResult.ID.ToString()} was semantically close to a word in the scene.");
             }
         }
     }

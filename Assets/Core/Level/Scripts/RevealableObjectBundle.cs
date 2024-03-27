@@ -1,5 +1,6 @@
 using LW.Data;
 using NaughtyAttributes;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +11,14 @@ namespace LW.Level
         [SerializeField] List<RevealableItem> itemsRevealed;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
+        
         bool isRevealed = false;
+        WordDatabaseEntry entry;
 
         public WordID ID => awaitedID;
         public ObjectImportance ObjectImportance => objectImportance;
-        public bool IsRevealed { get => isRevealed; set => isRevealed = value; }
+        public bool IsRevealed => isRevealed;
+        public WordDatabaseEntry Entry => entry;
 
         private void Start()
         {
@@ -53,6 +57,11 @@ namespace LW.Level
 
                 itemsRevealed.Add(reveleableItem);
             }
+        }
+
+        public void AssignEntry(WordDatabaseEntry assignedEntry)
+        {
+            entry = assignedEntry;
         }
     }
 }

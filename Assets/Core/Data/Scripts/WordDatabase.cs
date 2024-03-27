@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -68,6 +67,19 @@ namespace LW.Data
                     database.RemoveAt(i);
                 }
             }
+        }
+
+        public WordDatabaseEntry GetEntry(WordID id)
+        {
+            foreach (WordDatabaseEntry entry in database)
+            {
+                if (entry.ID == id)
+                    return entry;
+            }
+
+            Debug.LogError($"No entry with the id {id} found in database");
+
+            return null;
         }
     }
 }
