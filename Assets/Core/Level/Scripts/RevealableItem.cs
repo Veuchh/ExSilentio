@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+using LW.Data;
+using System;
 using UnityEngine;
 
-public class RevealableItem : MonoBehaviour
+namespace LW.Level
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RevealableItem : MonoBehaviour
     {
-        
-    }
+        [SerializeField] WordID id;
+        [SerializeField] Renderer attachedRenderer;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public WordID ID => id;
+
+        public void Init(WordID newID, Renderer attachedRenderer)
+        {
+            this.attachedRenderer = attachedRenderer;
+            id = newID;
+        }
+
+        private void Awake()
+        {
+            attachedRenderer.enabled = false;
+        }
+
+        public void UpdateID(WordID newID)
+        {
+            id = newID;
+        }
+
+        internal void RevealItem()
+        {
+            attachedRenderer.enabled = true;
+        }
     }
 }

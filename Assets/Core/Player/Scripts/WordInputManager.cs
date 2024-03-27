@@ -1,4 +1,5 @@
 using LW.Data;
+using LW.Level;
 using LW.Word;
 using System.Linq;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace LW.Player
 
         public void ClearWord()
         {
-            currentWordInput = "";
+            currentWordInput = string.Empty;
         }
 
         public void AddCharacter(char chr)
@@ -48,7 +49,7 @@ namespace LW.Player
                 Debug.LogWarning($"You attempted to reveal a word, but no {nameof(RevealableObjectHandler)} Instance was found.");
             }
 
-            var queryResult = wordDatabase.AttemptDatabaseRetrieve(wordID);
+            DatabaseQueryResult queryResult = wordDatabase.AttemptDatabaseRetrieve(wordID);
 
             RevealableObjectHandler.Instance.AttemptWordDiscovery(queryResult);
         }
