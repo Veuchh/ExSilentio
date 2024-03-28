@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_WaterName
+  m_Name: M_WaterName 1
   m_Shader: {fileID: -6465566751694194690, guid: 334bb32839bb5af4a89e71534d3225ff,
     type: 3}
   m_Parent: {fileID: 0}
@@ -58,7 +58,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 10
     - _MainSmoothness: 0.515
-    - _Main_DistanceFade: 7
+    - _Main_DistanceFade: 1.06
     - _Main_StrengthFade: 4
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -75,7 +75,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _MainColor: {r: 0.081573464, g: 0.29556888, b: 0.6452829, a: 0}
-    - _MainTiling: {r: 1000, g: 1000, b: 0, a: 0}
+    - _MainTiling: {r: 10, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7422425664416726847
 MonoBehaviour:
