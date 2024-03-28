@@ -3325,6 +3325,12 @@ Transform:
   - {fileID: 666694271}
   m_Father: {fileID: 1831335521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &326745256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454346841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &338890160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7728,7 +7734,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &821919171
 Transform:
@@ -16968,7 +16974,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1824266800}
     m_Modifications:
     - target: {fileID: 6601803234507565295, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
@@ -16988,22 +16994,22 @@ PrefabInstance:
     - target: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.73450285
+      value: 0.7345028
       objectReference: {fileID: 0}
     - target: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -86.58
+      value: -141.4443
       objectReference: {fileID: 0}
     - target: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: -7.585079
       objectReference: {fileID: 0}
     - target: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70.93
+      value: -26.098473
       objectReference: {fileID: 0}
     - target: {fileID: 7696383429431752370, guid: 18c4c92224d0fe04b950f80baac7b0b7,
         type: 3}
@@ -17339,7 +17345,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1503575240
 Transform:
@@ -19583,6 +19589,7 @@ Transform:
   - {fileID: 1025677911}
   - {fileID: 1293305946}
   - {fileID: 1016669064}
+  - {fileID: 326745256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831335520
@@ -19600,7 +19607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1831335521
 Transform:
   m_ObjectHideFlags: 0
@@ -22623,4 +22630,3 @@ SceneRoots:
   - {fileID: 1356275550}
   - {fileID: 1831335521}
   - {fileID: 1824266800}
-  - {fileID: 1454346841}
