@@ -71,3 +71,34 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 .vsconfig
+
+
+#_Wwise
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+IncrementalSoundBankData.xml
+
+WWiseProject/.cache/
+WWiseProject/*.prof
+WwiseProject/*_WwiseProject.*.validationcache
+WwiseProject/*_WwiseProject.*.wsettings
+WwiseProject/**/*.akd
+
+# build stuff (unsure?)
+# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
+
+# WWise Picker (editor)
+# from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
+# >> Do not keep AkWwiseProjectData.asset under version control! 
+# >> This is a temporary cache file for the Wwise project data, 
+# >> so as to avoid having the Wwise Picker continuously parse the Work Unit files.
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+----------------
+.cache
+/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+----------------

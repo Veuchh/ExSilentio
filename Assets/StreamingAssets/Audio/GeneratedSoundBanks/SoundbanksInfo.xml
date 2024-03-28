@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../../../+WWISE+/LeWorld_Wwise_Session</ProjectRoot>
+		<SourceFilesRoot>../../../../../../+WWISE+/LeWorld_Wwise_Session/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../../+WWISE+/LeWorld_Wwise_Session/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E1FF3201-0EDC-D754-B8ED-D881C6067BDB}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{89F21E4A-C93C-1ED3-1C2E-9F84C4A588E6}">
+			<ShortName>Test</ShortName>
+			<Path>Test.bnk</Path>
+			<Media>
+				<File Id="960600503" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FIre Loop.wav</ShortName>
+					<CachePath>SFX/FIre Loop_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="63543724" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="2165247623" Name="Enfer" DurationType="Unknown">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63543724"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3157003241" Name="Test" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="960600503"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E288D84A-5884-97B0-57C7-2DD6B0BDC064}</FileHash>
+</SoundBanksInfo>
