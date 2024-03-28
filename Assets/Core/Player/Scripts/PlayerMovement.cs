@@ -41,7 +41,7 @@ namespace LW.Player
         private void ComputeRotation()
         {
             //cameraMovement
-            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
+            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentLookInput.y * rotationSpeed * -1);
 
             //rotation clamping
             if (newCamXRotation > 180 && newCamXRotation < 360 + verticalLookClamp.x)
@@ -58,8 +58,8 @@ namespace LW.Player
 
 
             //Horizontal rotation
-            float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
-            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * Time.deltaTime * rotationSpeed / horizontalRotationMultiplier), 0);
+          //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
+            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
         }
 

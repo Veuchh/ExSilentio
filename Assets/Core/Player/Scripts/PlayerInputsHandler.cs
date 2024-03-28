@@ -42,7 +42,36 @@ namespace LW.Player
 
         public void OnToggleWordMode(InputValue value)
         {
+            ToggleWordMode();
+        }
+
+        private void OnNewCharacter(char chr)
+        {
+            wordManager.AddCharacter(chr);
+        }
+
+        public void OnSubmitWord(InputValue value)
+        {
+            wordManager.SubmitWord();
+        }
+
+        public void OnStartWordMode(InputValue value)
+        {
+             if (isWordModeEnabled)
+                return;
+
+            ToggleWordMode();
+        }
+
+        public void OnBackspace(InputValue value)
+        {
+            wordManager.RemoveCharacter();
+        }
+
+        void ToggleWordMode()
+        {
             isWordModeEnabled = !isWordModeEnabled;
+
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
 
@@ -59,23 +88,6 @@ namespace LW.Player
 
             if (playerMovement != null)
                 PlayerData.IsWordModeEnabled = isWordModeEnabled;
-        }
-
-        private void OnNewCharacter(char chr)
-        {
-            wordManager.AddCharacter(chr);
-        }
-
-        public void OnSubmitWord(InputValue value)
-        {
-            Debug.Log(value.isPressed);
-            wordManager.SubmitWord();
-        }
-
-
-        public void OnBackspace(InputValue value)
-        {
-            wordManager.RemoveCharacter();
         }
     }
 }

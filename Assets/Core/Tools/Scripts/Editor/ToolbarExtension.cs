@@ -1,16 +1,17 @@
-using LW.Data;
-using System.Collections;
-using System.Collections.Generic;
+using LW.Level;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityToolbarExtender;
 
+
+
 [InitializeOnLoad]
 public class ToolbarExtension
 {
     const string SCENE_REFERENCE_SO_PATH = "Assets/Core/Tools/ScriptableObjects/DebugSceneReferences.asset";
+    const string LEVEL_HANDLER_PREFAB_PATH = "Assets/Core/Level/Prefabs/RevealableObjectHandler.prefab";
 
     static ToolbarExtension()
     {
@@ -30,6 +31,17 @@ public class ToolbarExtension
                 string scenePath = SceneUtility.GetScenePathByBuildIndex(sceneIndex);
                 EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Additive);
             }
+
+        }
+        if (GUILayout.Button(new GUIContent("Make scene game ready")))
+        {
+            GameObject handler = Object.FindObjectOfType<RevealableObjectHandler>().gameObject;
+            if (handler == null)
+            {
+                handler = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(LEVEL_HANDLER_PREFAB_PATH));
+            }
+
+            Selection.activeGameObject = handler;
 
         }
     }

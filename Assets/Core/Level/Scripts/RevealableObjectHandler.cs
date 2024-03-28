@@ -1,14 +1,21 @@
 using LW.Data;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 namespace LW.Level
 {
     public class RevealableObjectHandler : MonoBehaviour
     {
+        public static string REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY = "revealFailedFeedback";
+        public static string REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY = "revealSuccesfulFeedback";
+        public static string REVEAL_ALREADY_HERE_FEEDBACK_TRANSLATION_KEY = "revealAlreadyRevealedFeedback";
+        public static string REVEAL_CLOSE_FEEDBACK_TRANSLATION_KEY = "revealSemanticallyCloseFeedback";
         public static RevealableObjectHandler Instance { get; private set; }
 
         [SerializeField] WordDatabase database;
+        [SerializeField] LocalizedStringTable stringTable;
 
         List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
 
@@ -43,11 +50,16 @@ namespace LW.Level
             ObjectImportance currentImportance = ObjectImportance.Bonus;
 
             bool isSemanticallyClose = false;
-
+            bool isAlreadyRevealed = false;
             foreach (RevealableObjectBundle bundle in bundles)
             {
                 if (bundle.IsRevealed)
+                {
+                    if (bundle.ID == queryResult.MainResult.ID)
+                        isAlreadyRevealed = true;
+
                     continue;
+                }
 
                 //If we found the specific word we are looking for, no need to look into things further
                 if (bundle.ID == queryResult.MainResult.ID)
@@ -76,7 +88,6 @@ namespace LW.Level
 
                 if (bundleToReveal == null && isSemanticallyClose == false)
                 {
-
                     foreach (WordDatabaseEntry semanticallyCloseEntrie in queryResult.SemanticallyCloseIDs)
                     {
                         if (bundle.ID == semanticallyCloseEntrie.ID)
@@ -88,16 +99,38 @@ namespace LW.Level
                 }
             }
 
+            string consoleFeedback = string.Empty;
+            string translatedID = stringTable.GetTable().GetEntry(queryResult.MainResult.ID.ToString()).LocalizedValue;
+
             if (bundleToReveal != null)
             {
                 bundleToReveal.RevealBundle(usedID);
-                //Console feedback
-                ConsoleUI.Instance.AddToHistory($"{queryResult.MainResult.ID.ToString()} was revealed.");
+                consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                translatedID = "[!] " + translatedID;
             }
             else if (isSemanticallyClose)
             {
-                ConsoleUI.Instance.AddToHistory($"{queryResult.MainResult.ID.ToString()} was semantically close to a word in the scene.");
+                consoleFeedback = stringTable.GetTable().GetEntry(REVEAL_CLOSE_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                translatedID = "[?] " + translatedID;
             }
+            else if (isAlreadyRevealed)
+            {
+                consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_ALREADY_HERE_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                translatedID = "[.] " + translatedID;
+            }
+            else
+            {
+                consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                translatedID = "[...]" + translatedID;
+            }
+
+            ConsoleUI.Instance.AddToHistory($"{translatedID}{consoleFeedback}");
+        }
+
+        public void OnParseFailed(string failedToParseString)
+        {
+            string revealFailedEntry = stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+            ConsoleUI.Instance.AddToHistory($"[...] {failedToParseString} {revealFailedEntry}");
         }
     }
 }

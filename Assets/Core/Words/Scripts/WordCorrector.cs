@@ -9,7 +9,7 @@ namespace LW.Word
     {
         [SerializeField] LocalizedStringTable stringTable;
 
-        public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action OnFailedParse)
+        public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action<string> OnFailedParse)
         {
             Debug.LogWarning("TODO : MISSING AUTOCORRECT");
 
@@ -31,7 +31,7 @@ namespace LW.Word
                 }
             }
 
-            OnFailedParse?.Invoke();
+            OnFailedParse?.Invoke(word );
         }
     }
 }

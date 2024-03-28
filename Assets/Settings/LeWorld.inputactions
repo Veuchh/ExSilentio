@@ -39,12 +39,21 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "Remove",
+                    "name": "Backspace",
                     "type": "Button",
                     "id": "13ef847e-3fca-492f-9267-d4c5cc8ffd00",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StartWordMode",
+                    "type": "Button",
+                    "id": "7bf57676-f3b8-4494-9685-6f1f2435f133",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -246,7 +255,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Remove",
+                    "action": "Backspace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff2f78d1-602a-4f90-9437-5385258c5bd9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartWordMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

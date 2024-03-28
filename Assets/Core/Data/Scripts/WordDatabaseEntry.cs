@@ -11,7 +11,7 @@ namespace LW.Data
         [SerializeField] WordID id;
         [SerializeField] List<WordID> additionalAcceptedIds;
         [SerializeField] List<WordID> closelySemanticIds;
-        [TextArea, SerializeField] string gdNotes;
+        [TextArea, SerializeField] string gdNotes = "Entry Notes";
 
         public WordID ID { get => id; set => id = value; }
         public List<WordID> AdditionalAcceptedIds { get => additionalAcceptedIds; set => additionalAcceptedIds = value; }

@@ -2,6 +2,7 @@ using LW.Data;
 using LW.Level;
 using LW.Word;
 using System.Linq;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 
 namespace LW.Player
@@ -33,9 +34,9 @@ namespace LW.Player
 
         public void RemoveCharacter()
         {
-            if (currentWordInput.Length > 0)
+            if (!string.IsNullOrEmpty(currentWordInput))
             {
-                currentWordInput.Remove(currentWordInput.Length - 1);
+                currentWordInput = currentWordInput.Substring(0, currentWordInput.Length - 1);
                 ConsoleUI.Instance.UpdateInput(currentWordInput);
             }
         }
@@ -54,15 +55,20 @@ namespace LW.Player
             RevealableObjectHandler.Instance.AttemptWordDiscovery(queryResult);
         }
 
-        private void OnFailedParse()
+        private void OnFailedParse(string failedToParseString)
         {
             Debug.Log($"Parse failed");
+
+            if (RevealableObjectHandler.Instance == null)
+            {
+                Debug.LogWarning($"You attempted to reveal a word, but no {nameof(RevealableObjectHandler)} Instance was found.");
+            }
+
+            RevealableObjectHandler.Instance.OnParseFailed(failedToParseString);
         }
 
         public void SubmitWord()
         {
-            ConsoleUI.Instance.AddToHistory(currentWordInput);
-
             if (string.IsNullOrEmpty(currentWordInput))
                 return;
 

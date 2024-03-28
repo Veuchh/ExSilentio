@@ -22,7 +22,7 @@ public class ConsoleUI : MonoBehaviour
 
     public void AddToHistory(string newHistory)
     {
-        history.text += "\n" + newHistory;
+        history.text += newHistory + "\n";
     }
 
     public void UpdateInput(string newInput)
