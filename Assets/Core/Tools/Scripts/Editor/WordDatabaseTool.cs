@@ -34,6 +34,8 @@ namespace LW.Editor.Tools.WordDatabaseTool
         string leftSearch = "";
         string rightSearch = "";
 
+        static bool isCompiling = false;
+
         [MenuItem("Window/Tool GD")]
         public static void ShowWindow()
         {
@@ -44,6 +46,11 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
         void OnGUI()
         {
+            if (isCompiling)
+            {
+                EditorGUILayout.LabelField("Compiling...");
+                return;
+            }
             if (isInteractionDisabled)
                 GUI.enabled = false;
             DisplayLeftSide();
@@ -450,6 +457,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             }
 
             //Recompile for the new enum
+            isCompiling = true;
             CompilationPipeline.RequestScriptCompilation();
         }
 
@@ -504,6 +512,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 EditorUtility.SetDirty(collection);
             }
 
+            isCompiling = true;
             CompilationPipeline.RequestScriptCompilation();
         }
         #endregion Callbacks
