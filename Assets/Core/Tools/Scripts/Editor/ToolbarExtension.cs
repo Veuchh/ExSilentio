@@ -35,7 +35,7 @@ public class ToolbarExtension
         }
         if (GUILayout.Button(new GUIContent("Make scene game ready")))
         {
-            GameObject handler = Object.FindObjectOfType<RevealableObjectHandler>().gameObject;
+            GameObject handler = Object.FindObjectOfType<RevealableObjectHandler>()?.gameObject;
             if (handler == null)
             {
                 handler = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(LEVEL_HANDLER_PREFAB_PATH));
