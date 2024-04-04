@@ -28,8 +28,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _ColoredWave_Gradient:
+        m_Texture: {fileID: 2800000, guid: 614315dfef9285d4d988d4c1c1455bfd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SGFlooredGradient_1516cef16875407899ce874454e27bed_Gradient_4086124264_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 5bbe802347dd35e458e83ced2d521382, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureWaves_Gradient:
@@ -55,6 +63,8 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 0
+    - _ColoredWave_Intensity: 0.29
+    - _ColoredWave_Speed: 0.1
     - _Cull: 2
     - _DstBlend: 10
     - _MainSmoothness: 0.515
@@ -74,8 +84,10 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
+    - _ColoredWave_Color: {r: 0.2559185, g: 0.4465057, b: 0.764151, a: 1}
     - _MainColor: {r: 0.081573464, g: 0.29556888, b: 0.6452829, a: 0}
     - _MainTiling: {r: 50, g: 50, b: 0, a: 0}
+    - _MainWaveColor: {r: 0.42168027, g: 0.66853887, b: 0.8679245, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7422425664416726847
 MonoBehaviour:
