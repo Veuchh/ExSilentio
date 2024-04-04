@@ -18,7 +18,8 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -46,19 +47,37 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _CastShadows: 1
+    - _Cull: 2
     - _Dissolve: 0
     - _Dissolve_MaskHorizontal: 0
     - _Dissolve_MaskStrength: 1
+    - _DstBlend: 0
+    - _Lighting_Ambient: 0
     - _Lighting_Smoothness: 0
     - _Lighting_ToonRampOffset: 0.27
+    - _Lighting_ToonRampOffsetPoint: 0
     - _Lighting_ToonRampSmoothness: 0
     - _Main_Smoothness: 0
+    - _OnlySplatting: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _Splatting: 1
+    - _SplattingAndName: 1
     - _Splatting_NoiseByPos: 0
     - _Splatting_Rotated: 0
     - _Splatting_VertexColorMask: 0
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
     - _Dissolve_Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Lighting_ToonRampTinting: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
