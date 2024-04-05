@@ -117,8 +117,10 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _Dissolve: 0
+    - _Dissolve_Amount: 1
     - _Dissolve_MaskHorizontal: 0
     - _Dissolve_MaskStrength: 1
+    - _Dissolve_Test: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
@@ -127,7 +129,7 @@ Material:
     - _GlossyReflections: 0
     - _Lighting_Ambient: 0
     - _Lighting_Smoothness: 0
-    - _Lighting_ToonRampOffset: 1.17
+    - _Lighting_ToonRampOffset: 0.2
     - _Lighting_ToonRampOffsetPoint: 0
     - _Lighting_ToonRampSmoothness: 0.57
     - _Metallic: 0
@@ -155,6 +157,8 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Dissolve_NamesTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Dissolve_SplattingTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Dissolve_Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Lighting_ToonRampTinting: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
