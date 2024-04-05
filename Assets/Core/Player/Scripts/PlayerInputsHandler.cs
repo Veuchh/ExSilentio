@@ -68,7 +68,7 @@ namespace LW.Player
             wordManager.RemoveCharacter();
         }
 
-        void ToggleWordMode()
+        public void ToggleWordMode()
         {
             isWordModeEnabled = !isWordModeEnabled;
 

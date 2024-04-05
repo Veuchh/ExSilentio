@@ -1,4 +1,5 @@
 using LW.Data;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -42,7 +43,7 @@ namespace LW.Level
             }
         }
 
-        public void AttemptWordDiscovery(DatabaseQueryResult queryResult)
+        public void AttemptWordDiscovery(DatabaseQueryResult queryResult, Action OnSuccesfulWordReveal)
         {
             RevealableObjectBundle bundleToReveal = null;
 
@@ -104,6 +105,7 @@ namespace LW.Level
 
             if (bundleToReveal != null)
             {
+                OnSuccesfulWordReveal?.Invoke();
                 bundleToReveal.RevealBundle(usedID);
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
                 translatedID = "[!] " + translatedID;
