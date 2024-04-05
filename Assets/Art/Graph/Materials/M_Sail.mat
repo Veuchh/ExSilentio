@@ -37,8 +37,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Dissolve_Texture:
+        m_Texture: {fileID: 2800000, guid: 718641744dcefef49b191e7ddeda1f6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
+        m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Name:
         m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SGDissolve_e283a5ae1e8e4a4db36fc521bc122817_DissolveTex_2798294983_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 718641744dcefef49b191e7ddeda1f6b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -56,9 +68,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _DisplacementStrength: 10
+    - _Displacement_Speed: 2.3
+    - _Displacement_Strength: 7
+    - _Dissolve_Amount: 1
+    - _Dissolve_Steps: 2
     - _NoiseStrength: 2.74
+    - _Noise_Strength: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 2.08
-    m_Colors: []
+    m_Colors:
+    - _Dissolve_Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
