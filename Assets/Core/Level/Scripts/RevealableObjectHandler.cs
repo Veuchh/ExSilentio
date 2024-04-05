@@ -134,5 +134,12 @@ namespace LW.Level
             string revealFailedEntry = stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
             ConsoleUI.Instance.AddToHistory($"[...] {failedToParseString} {revealFailedEntry}");
         }
+
+        public void RevealAllItemsOfType(ObjectImportance importance)
+        {
+            foreach (RevealableObjectBundle bundle in bundles)
+                if (!bundle.IsRevealed && bundle.ObjectImportance == importance)
+                    bundle.RevealBundle(bundle.ID);
+        }
     }
 }

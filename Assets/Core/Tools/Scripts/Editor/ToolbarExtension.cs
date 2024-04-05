@@ -15,10 +15,43 @@ public class ToolbarExtension
 
     static ToolbarExtension()
     {
-        ToolbarExtender.LeftToolbarGUI.Add(OnToolbarGUI);
+        ToolbarExtender.LeftToolbarGUI.Add(OnLeftToolbarGUI);
+        ToolbarExtender.RightToolbarGUI.Add(OnRightToolbarGUI);
     }
 
-    static void OnToolbarGUI()
+    private static void OnRightToolbarGUI()
+    {
+        if (Application.isPlaying && GUILayout.Button(new GUIContent("Reveal All Core Objects")))
+        {
+            RevealableObjectHandler handler = Object.FindObjectOfType<RevealableObjectHandler>();
+
+            if (handler != null)
+            {
+                handler.RevealAllItemsOfType(ObjectImportance.Core);
+            }
+        }
+        if (Application.isPlaying && GUILayout.Button(new GUIContent("Reveal All Secondary Objects")))
+        {
+            RevealableObjectHandler handler = Object.FindObjectOfType<RevealableObjectHandler>();
+
+            if (handler != null)
+            {
+                handler.RevealAllItemsOfType(ObjectImportance.Secondary);
+            }
+        }
+        if (Application.isPlaying && GUILayout.Button(new GUIContent("Reveal All Bonus Objects")))
+        {
+            RevealableObjectHandler handler = Object.FindObjectOfType<RevealableObjectHandler>();
+
+            if (handler != null)
+            {
+                handler.RevealAllItemsOfType(ObjectImportance.Bonus);
+            }
+        }
+        GUILayout.FlexibleSpace();
+    }
+
+    static void OnLeftToolbarGUI()
     {
         GUILayout.FlexibleSpace();
 
