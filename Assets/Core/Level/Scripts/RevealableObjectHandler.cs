@@ -106,8 +106,11 @@ namespace LW.Level
             if (bundleToReveal != null)
             {
                 OnSuccesfulWordReveal?.Invoke();
-                bundleToReveal.RevealBundle(usedID);
+                //Get texture from input
+                StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue);
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                bundleToReveal.RevealBundle(usedID);
+
                 translatedID = "[!] " + translatedID;
             }
             else if (isSemanticallyClose)
