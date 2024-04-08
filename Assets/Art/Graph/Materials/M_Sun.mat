@@ -37,7 +37,15 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Dissolve_Texture:
+        m_Texture: {fileID: 2800000, guid: 718641744dcefef49b191e7ddeda1f6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
         m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -56,11 +64,19 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorNoiseStrength: 0.43
+    - _Dissolve_Amount: 1
+    - _Dissolve_Steps: 2
+    - _Main_ColorVar: 0.56
+    - _Movement_Offset: 1.5
+    - _Movement_Speed: 0.3
     - _OffsetSine: 1.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SpeedSine: 0.3
     m_Colors:
+    - _Dissolve_Tiling: {r: 2, g: 2, b: 0, a: 0}
     - _MainColor: {r: 2.951357, g: 0.7383123, b: 0.1726264, a: 0}
+    - _Main_Color: {r: 2.951357, g: 0.7383123, b: 0.1726264, a: 0}
+    - _Main_Tiling: {r: 8, g: 6, b: 0, a: 0}
     - _Tiling: {r: 8, g: 6, b: 0, a: 0}
   m_BuildTextureStacks: []
