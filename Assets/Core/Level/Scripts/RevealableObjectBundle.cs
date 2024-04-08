@@ -2,7 +2,9 @@ using LW.Data;
 using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace LW.Level
 {
@@ -25,8 +27,11 @@ namespace LW.Level
             RevealableObjectHandler.Instance.RegisterBundle(this);
         }
 
-        public void RevealBundle(WordID usedID)
+        public void RevealBundle(WordID usedID, LocalizedStringTable stringTable)
         {
+            Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
+            //Get texture from input
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
             foreach (RevealableItem revealableItem in itemsRevealed)
             {
                 //if the item id is the same as the expected but the used ID is different from the expect one, we change it
@@ -34,7 +39,15 @@ namespace LW.Level
                 {
                     revealableItem.UpdateID(usedID);
                 }
-                revealableItem.RevealItem();
+
+                string usedInput = stringTable.GetTable().GetEntry(revealableItem.ID.ToString()).LocalizedValue;
+
+                if (!textureMaps.Keys.Contains(usedInput))
+                {
+                    textureMaps.Add(usedInput, StringToTextureConverter.Instance.GetTextureFromInput(usedInput));
+                }
+
+                revealableItem.RevealItem(textureMaps[usedInput]);
             }
 
             isRevealed = true;

@@ -81,7 +81,7 @@ namespace LW.Level
                         if ((int)currentImportance >= (int)bundle.ObjectImportance)
                         {
                             bundleToReveal = bundle;
-                            usedID = secondaryResult.ID;
+                            usedID = queryResult.MainResult.ID;
                             currentImportance = bundle.ObjectImportance;
                         }
                     }
@@ -106,8 +106,9 @@ namespace LW.Level
             if (bundleToReveal != null)
             {
                 OnSuccesfulWordReveal?.Invoke();
-                bundleToReveal.RevealBundle(usedID);
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                bundleToReveal.RevealBundle(usedID, stringTable);
+
                 translatedID = "[!] " + translatedID;
             }
             else if (isSemanticallyClose)
@@ -139,7 +140,7 @@ namespace LW.Level
         {
             foreach (RevealableObjectBundle bundle in bundles)
                 if (!bundle.IsRevealed && bundle.ObjectImportance == importance)
-                    bundle.RevealBundle(bundle.ID);
+                    bundle.RevealBundle(bundle.ID, stringTable);
         }
     }
 }

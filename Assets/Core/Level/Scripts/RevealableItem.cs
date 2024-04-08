@@ -6,6 +6,7 @@ namespace LW.Level
     public class RevealableItem : MonoBehaviour
     {
         const string DISSOLVE_PARAMETER_NAME = "_Dissolve_Amount";
+        const string TEXTURE_PARAMETER_NAME = "_Main_Tex";
         [SerializeField] WordID id;
         [SerializeField] Renderer attachedRenderer;
         [SerializeField] AnimationCurve revealCurve = default;
@@ -59,12 +60,14 @@ namespace LW.Level
             id = newID;
         }
 
-        internal void RevealItem()
+        public void RevealItem(Texture2D texture)
         {
             isRevealing = true;
             startRevealTime = Time.time;
             endRevealTime = Time.time + revealDuration;
             attachedRenderer.GetPropertyBlock(mpb);
+            mpb.SetTexture(TEXTURE_PARAMETER_NAME, texture);
+            attachedRenderer.SetPropertyBlock(mpb);
         }
     }
 }
