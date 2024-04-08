@@ -81,7 +81,7 @@ namespace LW.Level
                         if ((int)currentImportance >= (int)bundle.ObjectImportance)
                         {
                             bundleToReveal = bundle;
-                            usedID = secondaryResult.ID;
+                            usedID = queryResult.MainResult.ID;
                             currentImportance = bundle.ObjectImportance;
                         }
                     }
