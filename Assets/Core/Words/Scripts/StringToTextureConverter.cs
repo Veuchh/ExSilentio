@@ -49,11 +49,11 @@ public class StringToTextureConverter : MonoBehaviour
 
         int letterHeightPos = textureSize / 2 - characterWidth / 2;
 
-        foreach (char chr in input)
+        for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
         {
-            Color[] characterColors = GetColorArrayFromCharacter(chr, characterWidth);
+            Color[] characterColors = GetColorArrayFromCharacter(input[characterIndex], characterWidth);
 
-            output.SetPixels(wordPadding + input.IndexOf(chr) * characterWidth, letterHeightPos, characterWidth, characterWidth, characterColors);
+            output.SetPixels(wordPadding + characterIndex * characterWidth, letterHeightPos, characterWidth, characterWidth, characterColors);
         }
 
         output.Apply();
