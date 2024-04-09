@@ -24,8 +24,9 @@ public class StringToTextureConverter : MonoBehaviour
         Instance = this;
     }
 
-    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 20)
+    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
     {
+        input = input.ToUpper();
         Texture2D output = new Texture2D(textureSize, textureSize);
         int characterWidth = (textureSize - wordPadding * 2) / input.Length;
 
