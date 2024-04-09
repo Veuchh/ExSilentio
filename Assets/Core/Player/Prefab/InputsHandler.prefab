@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bb57bdca0fe6046b488e1a977054d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultToLockedCursorMode: 1
 --- !u!114 &85882193839517980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffda7c13accf8342999e5122270c707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stringTable:
+    m_TableReference:
+      m_TableCollectionName: GUID:b82483cc0c585ae46a976025932d651f
   wordDatabase: {fileID: 11400000, guid: 91cc711ae07c2d140bc557b55ef2a0d8, type: 2}
   wordCorrector: {fileID: 5369070425929500776}
 --- !u!114 &5369070425929500776

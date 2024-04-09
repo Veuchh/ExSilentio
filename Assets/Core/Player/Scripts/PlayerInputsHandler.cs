@@ -26,7 +26,7 @@ namespace LW.Player
         public void LockMouse(bool locked)
         {
             Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
-            Cursor.visible = locked;
+            Cursor.visible = !locked;
         }
 
         public void SetPlayerMovementScript(PlayerMovement playerMovement)
@@ -81,6 +81,8 @@ namespace LW.Player
         public void ToggleWordMode()
         {
             isWordModeEnabled = !isWordModeEnabled;
+
+            LockMouse(!isWordModeEnabled);  
 
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");

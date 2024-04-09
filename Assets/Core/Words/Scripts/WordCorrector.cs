@@ -1,3 +1,4 @@
+using Codice.CM.Client.Differences;
 using LW.Data;
 using System;
 using UnityEngine;
@@ -8,6 +9,32 @@ namespace LW.Word
     public class WordCorrector : MonoBehaviour
     {
         [SerializeField] LocalizedStringTable stringTable;
+
+        public bool AttemptParsingToCommand(string currentWordInput, Action<CommandID> onSuccesfullCommandParse)
+        {
+            Debug.LogWarning("TODO : MISSING AUTOCORRECT");
+
+            var table = stringTable.GetTable();
+
+            foreach (CommandID id in Enum.GetValues(typeof(CommandID)))
+            {
+                string stringID = id.ToString();
+
+                if (table.GetEntry(id.ToString()) == null)
+                {
+                    Debug.LogWarning("AN ID IN THE COMMANDID ENUM DOES NOT EXIST IN THE STRING TABLE");
+                    continue;
+                }
+
+                if (ReplaceSpecialCharacterWithNormalOnes(table.GetEntry(stringID).LocalizedValue.ToLower()) == ReplaceSpecialCharacterWithNormalOnes(currentWordInput.ToLower()))
+                {
+                    onSuccesfullCommandParse?.Invoke(id);
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action<string> OnFailedParse)
         {
@@ -31,7 +58,7 @@ namespace LW.Word
                 }
             }
 
-            OnFailedParse?.Invoke(word );
+            OnFailedParse?.Invoke(word);
         }
 
         string ReplaceSpecialCharacterWithNormalOnes(string input)

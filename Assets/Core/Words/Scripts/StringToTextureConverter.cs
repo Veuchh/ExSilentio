@@ -24,10 +24,12 @@ public class StringToTextureConverter : MonoBehaviour
         Instance = this;
     }
 
-    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 20)
+    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
     {
+        input = input.ToUpper();
         Texture2D output = new Texture2D(textureSize, textureSize);
         int characterWidth = (textureSize - wordPadding * 2) / input.Length;
+        int characterheight = characterWidth * 2;
 
         Color[] color = new Color[256];
 
@@ -47,13 +49,13 @@ public class StringToTextureConverter : MonoBehaviour
             }
         }
 
-        int letterHeightPos = textureSize / 2 - characterWidth / 2;
+        int letterHeightPos = textureSize / 2 - characterheight / 2;
 
         for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
         {
-            Color[] characterColors = GetColorArrayFromCharacter(input[characterIndex], characterWidth);
+            Color[] characterColors = GetColorArrayFromCharacter(input[characterIndex], characterWidth, characterheight);
 
-            output.SetPixels(wordPadding + characterIndex * characterWidth, letterHeightPos, characterWidth, characterWidth, characterColors);
+            output.SetPixels(wordPadding + characterIndex * characterWidth, letterHeightPos, characterWidth, characterheight, characterColors);
         }
 
         output.Apply();
@@ -61,13 +63,13 @@ public class StringToTextureConverter : MonoBehaviour
         return output;
     }
 
-    Color[] GetColorArrayFromCharacter(char chr, int outputSize)
+    Color[] GetColorArrayFromCharacter(char chr, int outputWidth, int outputHeight)
     {
-        Color[] output = new Color[outputSize * outputSize];
+        Color[] output = new Color[outputWidth * outputHeight];
 
         if (!charList.Contains(chr))
         {
-            for (int i = 0; i < outputSize * outputSize; i++)
+            for (int i = 0; i < outputWidth * outputHeight; i++)
                 output[i] = Color.black;
 
             return output;
@@ -75,14 +77,18 @@ public class StringToTextureConverter : MonoBehaviour
 
         Sprite characterSprite = spritesList[charList.IndexOf(chr)];
 
-        Vector2 texturePosition = characterSprite.textureRect.position;
-        float textureDimention = characterSprite.textureRect.width;
+        Rect textureRect = characterSprite.textureRect;
+        Texture2D texture = characterSprite.texture;
 
-        for (int i = 0; i < outputSize * outputSize; i++)
+        for (int i = 0; i < outputWidth * outputHeight; i++)
         {
-            int x = Mathf.FloorToInt(Mathf.Lerp(0, textureDimention, Mathf.InverseLerp(0, outputSize, i % outputSize)));
-            int y = Mathf.FloorToInt(Mathf.Lerp(0, textureDimention, Mathf.InverseLerp(0, outputSize, i / outputSize)));
-            output[i] = characterSprite.texture.GetPixel(Mathf.FloorToInt(texturePosition.x) + x, Mathf.FloorToInt(texturePosition.y) + y);
+            int x = Mathf.FloorToInt(i % outputWidth);
+            int y = Mathf.FloorToInt(i / outputWidth);
+
+            float textureX = Mathf.Lerp(textureRect.xMin, textureRect.xMax, x / (float)outputWidth);
+            float textureY = Mathf.Lerp(textureRect.yMin, textureRect.yMax, y / (float)outputHeight);
+
+            output[i] = texture.GetPixel(Mathf.FloorToInt(textureX), Mathf.FloorToInt(textureY));
         }
 
         return output;

@@ -1,9 +1,9 @@
 using LW.Data;
+using LW.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 
 namespace LW.Level
 {
@@ -128,6 +128,21 @@ namespace LW.Level
             }
 
             ConsoleUI.Instance.AddToHistory($"{translatedID}{consoleFeedback}");
+        }
+
+        public List<RevealableObjectBundle> GetBundleOfImportnce(ObjectImportance objectImportance)
+        {
+            List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
+
+            foreach (var bundle in this.bundles)
+            {
+                if (bundle.ObjectImportance == objectImportance)
+                {
+                    bundles.Add(bundle);
+                }
+            }
+
+            return bundles;
         }
 
         public void OnParseFailed(string failedToParseString)
