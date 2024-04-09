@@ -1,6 +1,8 @@
 using LW.Data;
 using LW.Level;
 using LW.Word;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -11,6 +13,10 @@ namespace LW.Player
     public class WordInputManager : MonoBehaviour
     {
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
+        const string REVEALED_ITEMS_LOCALIZATION_ID = "revealedItems";
+        const string CORE_LOCALIZATION_ID = "Core";
+        const string SECONDARY_LOCALIZATION_ID = "Secondary";
+        const string BONUS_LOCALIZATION_ID = "Bonus";
 
         [SerializeField] LocalizedStringTable stringTable;
         [SerializeField] WordDatabase wordDatabase;
@@ -109,6 +115,18 @@ namespace LW.Player
             {
                 Debug.LogError("Progress command was typed when not in console");
             }
+
+            var translatedTable = stringTable.GetTable();
+            string consoleOutput = translatedTable.GetEntry(REVEALED_ITEMS_LOCALIZATION_ID).LocalizedValue + " :";
+            foreach (ObjectImportance importance in Enum.GetValues(typeof(ObjectImportance)))
+            {
+                List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundleOfImportnce(importance);
+                consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString()).LocalizedValue
+                    + " : " + bundles.Where(i => i.IsRevealed).Count().ToString() 
+                    + " / " + bundles.Count();
+            }
+
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
         }
 
         void OnHelpCommand()
