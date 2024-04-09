@@ -1,4 +1,5 @@
 using LW.Data;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -42,7 +43,7 @@ namespace LW.Level
             }
         }
 
-        public void AttemptWordDiscovery(DatabaseQueryResult queryResult)
+        public void AttemptWordDiscovery(DatabaseQueryResult queryResult, Action OnSuccesfulWordReveal)
         {
             RevealableObjectBundle bundleToReveal = null;
 
@@ -80,7 +81,7 @@ namespace LW.Level
                         if ((int)currentImportance >= (int)bundle.ObjectImportance)
                         {
                             bundleToReveal = bundle;
-                            usedID = secondaryResult.ID;
+                            usedID = queryResult.MainResult.ID;
                             currentImportance = bundle.ObjectImportance;
                         }
                     }
@@ -104,8 +105,10 @@ namespace LW.Level
 
             if (bundleToReveal != null)
             {
-                bundleToReveal.RevealBundle(usedID);
+                OnSuccesfulWordReveal?.Invoke();
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_SUCCESFUL_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
+                bundleToReveal.RevealBundle(usedID, stringTable);
+
                 translatedID = "[!] " + translatedID;
             }
             else if (isSemanticallyClose)
@@ -131,6 +134,13 @@ namespace LW.Level
         {
             string revealFailedEntry = stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
             ConsoleUI.Instance.AddToHistory($"[...] {failedToParseString} {revealFailedEntry}");
+        }
+
+        public void RevealAllItemsOfType(ObjectImportance importance)
+        {
+            foreach (RevealableObjectBundle bundle in bundles)
+                if (!bundle.IsRevealed && bundle.ObjectImportance == importance)
+                    bundle.RevealBundle(bundle.ID, stringTable);
         }
     }
 }

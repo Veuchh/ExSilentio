@@ -85,7 +85,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             foreach (WordDatabaseEntry entry in Database.GetDatabase())
             {
                 //filter through search
-                if (!entry.ID.ToString().ToLower().Contains(leftSearch.ToLower())) 
+                if (!entry.ID.ToString().ToLower().Contains(leftSearch.ToLower()))
                     continue;
                 DisplayEntry(collection, entry, buttonOptions);
             }
@@ -422,6 +422,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
             OnPopupClosed();
 
             int nextEnumValue = Enum.GetNames(typeof(WordID)).Length;
+            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
 
             for (int i = 0; i < newKeysNames.Count; i++)
             {
@@ -434,13 +435,13 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 lines[lines.Count() - 3] += $", {newKeysNames[i]}";
                 File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
 
-                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
 
                 //Create a new translation entry for the newly added enum
                 foreach (Locale locale in LocalizationEditorSettings.GetLocales())
                 {
                     var localTable = collection.GetTable(locale.Identifier) as StringTable;
-                    localTable.AddEntry(newKeysNames[i], "");
+                    localTable.AddEntry(newKeysNames[i], newKeysNames[i]);
+                    EditorUtility.SetDirty(localTable);
                 }
 
                 //Create a new entry
@@ -452,12 +453,13 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 Database.AddEntry(newEntry);
                 //Save the scriptableobjects
-                EditorUtility.SetDirty(Database);
-                EditorUtility.SetDirty(collection);
             }
+            EditorUtility.SetDirty(collection);
+            EditorUtility.SetDirty(Database);
+            AssetDatabase.SaveAssets();
 
-            //Recompile for the new enum
             isCompiling = true;
+            //Recompile for the new enum
             CompilationPipeline.RequestScriptCompilation();
         }
 
@@ -471,6 +473,7 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
             int nextEnumValue = Enum.GetNames(typeof(WordID)).Length;
 
+            var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
             for (int i = 0; i < newKeysNames.Count; i++)
             {
                 WordDatabaseEntry newEntry = new WordDatabaseEntry();
@@ -484,13 +487,13 @@ namespace LW.Editor.Tools.WordDatabaseTool
                 lines[lines.Count() - 3] += $", {newKeysNames[i]}";
                 File.WriteAllLines("Assets/Core/Data/Scripts/WordID.cs", lines);
 
-                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
 
                 //Create a new translation entry for the newly added enum
                 foreach (Locale locale in LocalizationEditorSettings.GetLocales())
                 {
                     var localTable = collection.GetTable(locale.Identifier) as StringTable;
-                    localTable.AddEntry(newKeysNames[i], "");
+                    localTable.AddEntry(newKeysNames[i], newKeysNames[i]);
+                    EditorUtility.SetDirty(localTable);
                 }
 
                 newKeysNames[i] = newKeysNames[i].Replace(" ", "");
@@ -508,9 +511,10 @@ namespace LW.Editor.Tools.WordDatabaseTool
 
                 Database.AddEntry(newEntry);
                 //Save the scriptableobjects
-                EditorUtility.SetDirty(Database);
-                EditorUtility.SetDirty(collection);
             }
+            EditorUtility.SetDirty(Database);
+            EditorUtility.SetDirty(collection);
+            AssetDatabase.SaveAssets();
 
             isCompiling = true;
             CompilationPipeline.RequestScriptCompilation();

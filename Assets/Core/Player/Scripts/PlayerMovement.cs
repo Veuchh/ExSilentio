@@ -1,10 +1,10 @@
 using LW.Data;
-using System;
 using UnityEngine;
 using NaughtyAttributes;
 
 namespace LW.Player
 {
+    [SelectionBase]
     public class PlayerMovement : MonoBehaviour
     {
         const float DEFAULT_GRAVITY = -.5f;

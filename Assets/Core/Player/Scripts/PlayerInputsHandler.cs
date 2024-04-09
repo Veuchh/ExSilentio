@@ -8,6 +8,8 @@ namespace LW.Player
     {
         public static PlayerInputsHandler Instance;
 
+        [SerializeField] bool defaultToLockedCursorMode = true;
+
         WordInputManager wordManager;
         PlayerMovement playerMovement;
         bool isWordModeEnabled = false;
@@ -17,6 +19,14 @@ namespace LW.Player
             wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
+
+            LockMouse(defaultToLockedCursorMode);
+        }
+
+        public void LockMouse(bool locked)
+        {
+            Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = locked;
         }
 
         public void SetPlayerMovementScript(PlayerMovement playerMovement)
@@ -57,7 +67,7 @@ namespace LW.Player
 
         public void OnStartWordMode(InputValue value)
         {
-             if (isWordModeEnabled)
+            if (isWordModeEnabled)
                 return;
 
             ToggleWordMode();
@@ -68,7 +78,7 @@ namespace LW.Player
             wordManager.RemoveCharacter();
         }
 
-        void ToggleWordMode()
+        public void ToggleWordMode()
         {
             isWordModeEnabled = !isWordModeEnabled;
 

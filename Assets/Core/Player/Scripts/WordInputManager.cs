@@ -2,7 +2,6 @@ using LW.Data;
 using LW.Level;
 using LW.Word;
 using System.Linq;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 
 namespace LW.Player
@@ -52,7 +51,7 @@ namespace LW.Player
 
             DatabaseQueryResult queryResult = wordDatabase.AttemptDatabaseRetrieve(wordID);
 
-            RevealableObjectHandler.Instance.AttemptWordDiscovery(queryResult);
+            RevealableObjectHandler.Instance.AttemptWordDiscovery(queryResult, OnWordRevealed);
         }
 
         private void OnFailedParse(string failedToParseString)
@@ -75,6 +74,11 @@ namespace LW.Player
             wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
+        }
+
+        void OnWordRevealed()
+        {
+            PlayerInputsHandler.Instance.ToggleWordMode();
         }
     }
 }
