@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{81093722-EC05-4840-6527-32AA674EE32C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,8 +21,354 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<SwitchGroups>
+				<SwitchGroup Id="1218704685" Name="SW_FT_OC">
+					<Switches>
+						<Switch Id="2295428781" Name="SW_FT_OC_Water"/>
+						<Switch Id="3462940353" Name="SW_FT_OC_Ground"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{F91D42DD-CDE4-0FFE-BFE0-6625FCAA1248}">
+		<SoundBank Id="1465331116" Type="User" Language="SFX" Hash="{31120BDB-D969-EF30-44B3-8DA1F776723F}">
+			<ShortName>Global</ShortName>
+			<Path>Global.bnk</Path>
+			<Media>
+				<File Id="19911218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_CLick L1-001.wav</ShortName>
+					<CachePath>SFX/UI_CL_CLick L1-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="52600204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Open.wav</ShortName>
+					<CachePath>SFX/UI_CL_Open_818F3B66.wem</CachePath>
+				</File>
+				<File Id="72377590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_CLick L2.wav</ShortName>
+					<CachePath>SFX/UI_CL_CLick L2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="330022282" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-002.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="346834434" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Op_Noise.wav</ShortName>
+					<CachePath>SFX/UI_CL_Op_Noise_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="397082096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L2-001.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L2-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="412121495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L2-002.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L2-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="431057401" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-004.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-004_818F3B66.wem</CachePath>
+				</File>
+				<File Id="432174329" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-001.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="462162919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Close.wav</ShortName>
+					<CachePath>SFX/UI_CL_Close_7E282A06.wem</CachePath>
+				</File>
+				<File Id="501268183" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_DeleteText L1.wav</ShortName>
+					<CachePath>SFX/UI_CL_DeleteText L1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="548112328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="555107989" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L2-005.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L2-005_818F3B66.wem</CachePath>
+				</File>
+				<File Id="685662307" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-006.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-006_818F3B66.wem</CachePath>
+				</File>
+				<File Id="694773789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WrongWord.wav</ShortName>
+					<CachePath>SFX/UI_CL_WrongWord_818F3B66.wem</CachePath>
+				</File>
+				<File Id="707686238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WordEnter L1.wav</ShortName>
+					<CachePath>SFX/UI_CL_WordEnter L1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="772602096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WordEnter L2.wav</ShortName>
+					<CachePath>SFX/UI_CL_WordEnter L2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="773935871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L2-003.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L2-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="806993475" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_DeleteText L2.wav</ShortName>
+					<CachePath>SFX/UI_CL_DeleteText L2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="844039344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L2-004.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L2-004_818F3B66.wem</CachePath>
+				</File>
+				<File Id="888963396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-005.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-005_818F3B66.wem</CachePath>
+				</File>
+				<File Id="944222257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_CLick L1-002.wav</ShortName>
+					<CachePath>SFX/UI_CL_CLick L1-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="963266010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_GoodWord.wav</ShortName>
+					<CachePath>SFX/UI_CL_GoodWord_818F3B66.wem</CachePath>
+				</File>
+				<File Id="981665145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_WriteText L1-003.wav</ShortName>
+					<CachePath>SFX/UI_CL_WriteText L1-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1057119317" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_CLick L1-003.wav</ShortName>
+					<CachePath>SFX/UI_CL_CLick L1-003_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2266750638" Name="UI_CL_CLick" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
+					<MediaRefs>
+						<MediaRef Id="19911218"/>
+						<MediaRef Id="72377590"/>
+						<MediaRef Id="944222257"/>
+						<MediaRef Id="1057119317"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2803237010" Name="UI_CL_Close" DurationType="OneShot" DurationMin="0.41833106" DurationMax="0.41833106">
+					<MediaRefs>
+						<MediaRef Id="462162919"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2442725498" Name="UI_CL_DeleteText" DurationType="OneShot" DurationMin="0.14491667" DurationMax="0.14491667">
+					<MediaRefs>
+						<MediaRef Id="501268183"/>
+						<MediaRef Id="806993475"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="84328085" Name="UI_CL_GoodWord" DurationType="OneShot" DurationMin="2.1165833" DurationMax="2.1165833">
+					<MediaRefs>
+						<MediaRef Id="963266010"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1967546360" Name="UI_CL_Line" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="548112328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="767596870" Name="UI_CL_Open" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="52600204"/>
+						<MediaRef Id="346834434"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2292383016" Name="UI_CL_WordEnter" DurationType="OneShot" DurationMin="0.4160625" DurationMax="0.4160625">
+					<MediaRefs>
+						<MediaRef Id="707686238"/>
+						<MediaRef Id="772602096"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2143859642" Name="UI_CL_WriteText" DurationType="OneShot" DurationMin="0.105791666" DurationMax="0.15652083">
+					<MediaRefs>
+						<MediaRef Id="330022282"/>
+						<MediaRef Id="397082096"/>
+						<MediaRef Id="412121495"/>
+						<MediaRef Id="431057401"/>
+						<MediaRef Id="432174329"/>
+						<MediaRef Id="555107989"/>
+						<MediaRef Id="685662307"/>
+						<MediaRef Id="773935871"/>
+						<MediaRef Id="844039344"/>
+						<MediaRef Id="888963396"/>
+						<MediaRef Id="981665145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2279735865" Name="UI_CL_WrongWord" DurationType="OneShot" DurationMin="0.48052084" DurationMax="0.48052084">
+					<MediaRefs>
+						<MediaRef Id="694773789"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2321219508" Type="User" Language="SFX" Hash="{AAB46655-8ADF-C169-F674-EC808C812A9C}">
+			<ShortName>OceanCity</ShortName>
+			<Path>OceanCity.bnk</Path>
+			<Media>
+				<File Id="152825524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OC_TrainPlayerExit.wav</ShortName>
+					<CachePath>SFX/SFX_OC_TrainPlayerExit_818F3B66.wem</CachePath>
+				</File>
+				<File Id="191788900" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Bo_Bell-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Bo_Bell-003_818F3B66.wem</CachePath>
+				</File>
+				<File Id="274005601" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Bo_Tug-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Bo_Tug-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="286609776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OC_TrainExit.wav</ShortName>
+					<CachePath>SFX/SFX_OC_TrainExit_818F3B66.wem</CachePath>
+				</File>
+				<File Id="395810104" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Water.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Water_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="403234293" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_M_Waves.wav</ShortName>
+					<CachePath>SFX/AMB_OC_M_Waves_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="503104760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_M_Wind.wav</ShortName>
+					<CachePath>SFX/AMB_OC_M_Wind_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="515997920" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Ki_Laugh.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Ki_Laugh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="538045953" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Tr_Swish.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Tr_Swish_818F3B66.wem</CachePath>
+				</File>
+				<File Id="561673441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Tr_WaterSplash.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Tr_WaterSplash_818F3B66.wem</CachePath>
+				</File>
+				<File Id="622404005" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Tr_Loop.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Tr_Loop_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="667273339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OC_TrainStop.wav</ShortName>
+					<CachePath>SFX/SFX_OC_TrainStop_818F3B66.wem</CachePath>
+				</File>
+				<File Id="668449909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Bo_Tug-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Bo_Tug-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="674881482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_OC_TrainPlayerEnter.wav</ShortName>
+					<CachePath>SFX/SFX_OC_TrainPlayerEnter_818F3B66.wem</CachePath>
+				</File>
+				<File Id="821535745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Fontain.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Fontain_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="822449642" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Tr_WaterFill.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Tr_WaterFill_818F3B66.wem</CachePath>
+				</File>
+				<File Id="852095958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Bo_Bell-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Bo_Bell-001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="867719482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Ki_Crowd.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Ki_Crowd_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="882565897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Bo_Bell-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Bo_Bell-002_818F3B66.wem</CachePath>
+				</File>
+				<File Id="985438458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Tr_Siren.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Tr_Siren_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="811535592" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="930159812" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="2826138305" Name="AMB_OC_Boat" DurationType="OneShot" DurationMin="11.602" DurationMax="22.438917">
+					<MediaRefs>
+						<MediaRef Id="191788900"/>
+						<MediaRef Id="274005601"/>
+						<MediaRef Id="668449909"/>
+						<MediaRef Id="852095958"/>
+						<MediaRef Id="882565897"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="740376728" Name="AMB_OC_Fontain" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="821535745"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2880313612" Name="AMB_OC_Kids" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="515997920"/>
+						<MediaRef Id="867719482"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="930159812"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="1192067392" Name="AMB_OC_Main" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="403234293"/>
+						<MediaRef Id="503104760"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="561950100" Name="AMB_OC_Train_Swish" DurationType="OneShot" DurationMin="7.743708" DurationMax="7.743708">
+					<MediaRefs>
+						<MediaRef Id="538045953"/>
+						<MediaRef Id="561673441"/>
+						<MediaRef Id="822449642"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1049210069" Name="AMB_OC_TrainLoop" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="622404005"/>
+						<MediaRef Id="985438458"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="811535592"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="1628818968" Name="AMB_OC_Water" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="395810104"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4026521433" Name="FT_OceanCity" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3210636256" Name="SFX_OC_TrainExit" DurationType="OneShot" DurationMin="2.363896" DurationMax="2.363896">
+					<MediaRefs>
+						<MediaRef Id="286609776"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1031639743" Name="SFX_OC_TrainPlayerEnter" DurationType="OneShot" DurationMin="2.6703959" DurationMax="2.6703959">
+					<MediaRefs>
+						<MediaRef Id="674881482"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1560947431" Name="SFX_OC_TrainPlayerExit" DurationType="OneShot" DurationMin="2.7844791" DurationMax="2.7844791">
+					<MediaRefs>
+						<MediaRef Id="152825524"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="341180760" Name="SFX_OC_TrainStop" DurationType="OneShot" DurationMin="2.370375" DurationMax="2.370375">
+					<MediaRefs>
+						<MediaRef Id="667273339"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{89F21E4A-C93C-1ED3-1C2E-9F84C4A588E6}">
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
 			<Media>
@@ -31,8 +377,20 @@
 					<CachePath>SFX/FIre Loop_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="63543724" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+				</Custom>
+			</Plugins>
 			<Events>
-				<Event Id="3157003241" Name="Test">
+				<Event Id="2165247623" Name="Enfer" DurationType="Unknown">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63543724"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3157003241" Name="Test" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="960600503"/>
 					</MediaRefs>
@@ -40,5 +398,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E44E7949-0B7A-3CB2-4D27-1235A36F7D2C}</FileHash>
+	<FileHash>{FB88EE77-53BC-BD8E-87D5-B11A746A8A8B}</FileHash>
 </SoundBanksInfo>
