@@ -24,6 +24,16 @@ namespace LW.Player
         [SerializeField] WordCorrector wordCorrector;
         string currentWordInput;
 
+        private void Awake()
+        {
+            ConsoleUI.onCommandClicked += OnUseCommand;
+        }
+
+        private void OnDestroy()
+        {
+            ConsoleUI.onCommandClicked -= OnUseCommand;
+        }
+
         public void ToggleConsole(bool isToggled)
         {
             ConsoleUI.Instance.ToggleConsole(isToggled);
@@ -83,14 +93,14 @@ namespace LW.Player
             if (string.IsNullOrEmpty(currentWordInput))
                 return;
 
-            if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnSuccesfullCommandParse))
+            if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnUseCommand))
                 wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
 
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
 
-        private void OnSuccesfullCommandParse(CommandID id)
+        private void OnUseCommand(CommandID id)
         {
             switch (id)
             {
@@ -108,6 +118,7 @@ namespace LW.Player
 
         void OnHintCommand()
         {
+            ConsoleUI.Instance.AddToHistory("Hint command is not implemented yet.");
         }
 
         void OnProgressCommand()

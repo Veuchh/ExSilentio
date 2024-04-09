@@ -2,6 +2,9 @@ using UnityEngine;
 using TMPro;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using System;
+using LW.Data;
+using System.Globalization;
 
 namespace LW.UI
 {
@@ -12,7 +15,13 @@ namespace LW.UI
         [SerializeField] VerticalLayoutGroup historyParent;
         [SerializeField] TextMeshProUGUI input;
         [SerializeField] ConsoleEntry consoleEntryPrefab;
+        [SerializeField] GameObject commandPannel;
+        [SerializeField] Button helpCommand;
+        [SerializeField] Button hintCommand;
+        [SerializeField] Button progressCommand;
+        [SerializeField] Button togglePannelButton;
 
+        [SerializeField] float cursorFlashingSpeed = 1;
         [SerializeField] bool separateWithDashes = false;
         [SerializeField] bool changeBackground = false;
         [SerializeField, ShowIf(nameof(changeBackground))] Color backgroundColor1;
@@ -21,13 +30,36 @@ namespace LW.UI
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor1;
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor2;
 
+        public static event Action<CommandID> onCommandClicked;
+
         bool isEntryEven = true;
+        string currentInput = string.Empty;
+
+        float elapsedTime = 0;
 
         public static ConsoleUI Instance;
         private void Awake()
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            helpCommand.onClick.AddListener(() => OnCommandClicked(CommandID.help));
+            hintCommand.onClick.AddListener(() => OnCommandClicked(CommandID.hint));
+            progressCommand.onClick.AddListener(() => OnCommandClicked(CommandID.progress));
+            togglePannelButton.onClick.AddListener(() => TogglePannel());
+        }
+
+        private void Update()
+        {
+            elapsedTime += Time.deltaTime;
+            input.text = currentInput + (Mathf.Sin(elapsedTime * cursorFlashingSpeed) < 0 ? "" : "|");
+        }
+
+        private void OnDestroy()
+        {
+            helpCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.help));
+            hintCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.hint));
+            progressCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.progress));
+            togglePannelButton.onClick.RemoveListener(() => TogglePannel());
         }
 
         public void ToggleConsole(bool toggle)
@@ -61,7 +93,20 @@ namespace LW.UI
 
         public void UpdateInput(string newInput)
         {
-            input.text = newInput;
+            currentInput = newInput;
+            elapsedTime = 0;
+        }
+
+        public void OnCommandClicked(CommandID commandID)
+        {
+            onCommandClicked?.Invoke(commandID);
+        }
+
+        void TogglePannel()
+        {
+            commandPannel.SetActive(!commandPannel.activeSelf);
+
+            togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 90f : -90f);
         }
     }
 }
