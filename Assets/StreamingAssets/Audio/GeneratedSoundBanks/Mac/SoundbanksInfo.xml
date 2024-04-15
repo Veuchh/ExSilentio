@@ -9,28 +9,30 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F16CBBC6-1449-7339-2431-66346358123B}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F16CBBC6-1449-7339-2431-66346358123B}">
+			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{71D2E600-0242-46CB-AFF2-89568830AF77}" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{06E7D91D-4434-4414-8FC3-ACC5247E2347}" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 			<SwitchGroups>
-				<SwitchGroup Id="1218704685" Name="SW_FT_OC">
+				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\SW_FOOTSTEPS\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
 					<Switches>
-						<Switch Id="2295428781" Name="SW_FT_OC_Water"/>
-						<Switch Id="3462940353" Name="SW_FT_OC_Ground"/>
+						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\SW_FOOTSTEPS\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
+						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\SW_FOOTSTEPS\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" Language="SFX" Hash="{31120BDB-D969-EF30-44B3-8DA1F776723F}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{31120BDB-D969-EF30-44B3-8DA1F776723F}">
+			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
 			<Media>
@@ -136,7 +138,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2266750638" Name="UI_CL_CLick" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
+				<Event Id="2266750638" Name="UI_CL_CLick" ObjectPath="\Events\UI\UI_Consol\UI_CL_CLick" GUID="{76936BFC-85AC-4543-A1B2-543D9250E5ED}" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
 					<MediaRefs>
 						<MediaRef Id="19911218"/>
 						<MediaRef Id="72377590"/>
@@ -144,40 +146,40 @@
 						<MediaRef Id="1057119317"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2803237010" Name="UI_CL_Close" DurationType="OneShot" DurationMin="0.41833106" DurationMax="0.41833106">
+				<Event Id="2803237010" Name="UI_CL_Close" ObjectPath="\Events\UI\UI_Consol\UI_CL_Close" GUID="{06E8738B-3B91-4FB1-A0D4-954D8FC65BB0}" DurationType="OneShot" DurationMin="0.41833106" DurationMax="0.41833106">
 					<MediaRefs>
 						<MediaRef Id="462162919"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2442725498" Name="UI_CL_DeleteText" DurationType="OneShot" DurationMin="0.14491667" DurationMax="0.14491667">
+				<Event Id="2442725498" Name="UI_CL_DeleteText" ObjectPath="\Events\UI\UI_Consol\UI_CL_DeleteText" GUID="{7E6CD3C5-EC89-4EA4-AC3A-0A4E39C1ACC4}" DurationType="OneShot" DurationMin="0.14491667" DurationMax="0.14491667">
 					<MediaRefs>
 						<MediaRef Id="501268183"/>
 						<MediaRef Id="806993475"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="84328085" Name="UI_CL_GoodWord" DurationType="OneShot" DurationMin="2.1165833" DurationMax="2.1165833">
+				<Event Id="84328085" Name="UI_CL_GoodWord" ObjectPath="\Events\UI\UI_Consol\UI_CL_GoodWord" GUID="{4EF38AA3-1274-4A60-9FED-3B0AC9BFFA20}" DurationType="OneShot" DurationMin="2.1165833" DurationMax="2.1165833">
 					<MediaRefs>
 						<MediaRef Id="963266010"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1967546360" Name="UI_CL_Line" DurationType="Infinite">
+				<Event Id="1967546360" Name="UI_CL_Line" ObjectPath="\Events\UI\UI_Consol\UI_CL_Line" GUID="{0DA15F7A-460B-4DEC-AC28-50F7FDF63FAF}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="548112328"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="767596870" Name="UI_CL_Open" DurationType="Infinite">
+				<Event Id="767596870" Name="UI_CL_Open" ObjectPath="\Events\UI\UI_Consol\UI_CL_Open" GUID="{AC05B2B9-9F4E-4DF0-B23E-67430A0CD88D}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="52600204"/>
 						<MediaRef Id="346834434"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2292383016" Name="UI_CL_WordEnter" DurationType="OneShot" DurationMin="0.4160625" DurationMax="0.4160625">
+				<Event Id="2292383016" Name="UI_CL_WordEnter" ObjectPath="\Events\UI\UI_Consol\UI_CL_WordEnter" GUID="{0BA22B39-AD5F-404B-8DED-B6A93AAB59B5}" DurationType="OneShot" DurationMin="0.4160625" DurationMax="0.4160625">
 					<MediaRefs>
 						<MediaRef Id="707686238"/>
 						<MediaRef Id="772602096"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2143859642" Name="UI_CL_WriteText" DurationType="OneShot" DurationMin="0.105791666" DurationMax="0.15652083">
+				<Event Id="2143859642" Name="UI_CL_WriteText" ObjectPath="\Events\UI\UI_Consol\UI_CL_WriteText" GUID="{5FEB739A-4B46-4939-AC2C-76353BE079EA}" DurationType="OneShot" DurationMin="0.105791666" DurationMax="0.15652083">
 					<MediaRefs>
 						<MediaRef Id="330022282"/>
 						<MediaRef Id="397082096"/>
@@ -192,14 +194,15 @@
 						<MediaRef Id="981665145"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2279735865" Name="UI_CL_WrongWord" DurationType="OneShot" DurationMin="0.48052084" DurationMax="0.48052084">
+				<Event Id="2279735865" Name="UI_CL_WrongWord" ObjectPath="\Events\UI\UI_Consol\UI_CL_WrongWord" GUID="{7103DECB-62B5-42F1-9484-E060001E7CB2}" DurationType="OneShot" DurationMin="0.48052084" DurationMax="0.48052084">
 					<MediaRefs>
 						<MediaRef Id="694773789"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" Language="SFX" Hash="{AAB46655-8ADF-C169-F674-EC808C812A9C}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{AAB46655-8ADF-C169-F674-EC808C812A9C}">
+			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
 			<Media>
@@ -286,12 +289,12 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="811535592" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="930159812" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="811535592" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_TrainLoop\AMB_OC_Tr_Siren\AMB_OC_Tr_Siren_Silence\Silence" GUID="{A43D6AC0-FBCE-4E2B-AC86-C16C649245B9}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="930159812" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Kids\AMB_OC_Ki_Laugh\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{E4D35E7A-4416-4DDC-BE9F-C298A841E30B}" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2826138305" Name="AMB_OC_Boat" DurationType="OneShot" DurationMin="11.602" DurationMax="22.438917">
+				<Event Id="2826138305" Name="AMB_OC_Boat" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Boat" GUID="{00C9D133-7D17-48A2-BF08-E9CA701ED5C4}" MaxAttenuation="100" DurationType="OneShot" DurationMin="11.602" DurationMax="22.438917">
 					<MediaRefs>
 						<MediaRef Id="191788900"/>
 						<MediaRef Id="274005601"/>
@@ -300,12 +303,12 @@
 						<MediaRef Id="882565897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="740376728" Name="AMB_OC_Fontain" DurationType="Infinite">
+				<Event Id="740376728" Name="AMB_OC_Fontain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fontain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="821535745"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2880313612" Name="AMB_OC_Kids" DurationType="Infinite">
+				<Event Id="2880313612" Name="AMB_OC_Kids" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Kids" GUID="{B24422DA-A9E9-45F7-8263-F8D113FD3EDC}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="515997920"/>
 						<MediaRef Id="867719482"/>
@@ -316,20 +319,20 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="1192067392" Name="AMB_OC_Main" DurationType="Infinite">
+				<Event Id="1192067392" Name="AMB_OC_Main" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Main" GUID="{33F6C63F-5123-4F9B-8EE8-672419DB62E6}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="403234293"/>
 						<MediaRef Id="503104760"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="561950100" Name="AMB_OC_Train_Swish" DurationType="OneShot" DurationMin="7.743708" DurationMax="7.743708">
+				<Event Id="561950100" Name="AMB_OC_Train_Swish" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish" GUID="{BBD02BF5-707C-450A-A476-135C6CCA451A}" MaxAttenuation="100" DurationType="OneShot" DurationMin="7.743708" DurationMax="7.743708">
 					<MediaRefs>
 						<MediaRef Id="538045953"/>
 						<MediaRef Id="561673441"/>
 						<MediaRef Id="822449642"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1049210069" Name="AMB_OC_TrainLoop" DurationType="Infinite">
+				<Event Id="1049210069" Name="AMB_OC_TrainLoop" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_TrainLoop" GUID="{92CFA5D1-6C44-4CBC-B03C-B1C244B3E9A6}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="622404005"/>
 						<MediaRef Id="985438458"/>
@@ -340,35 +343,36 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="1628818968" Name="AMB_OC_Water" DurationType="Infinite">
+				<Event Id="1628818968" Name="AMB_OC_Water" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Water" GUID="{CD1E23CB-C735-432F-854F-C2962EC3FE3D}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="395810104"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4026521433" Name="FT_OceanCity" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3210636256" Name="SFX_OC_TrainExit" DurationType="OneShot" DurationMin="2.363896" DurationMax="2.363896">
+				<Event Id="4026521433" Name="FT_OceanCity" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCity" GUID="{D0B2B762-3554-4CC3-9DE3-DBECEA1B77C6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3210636256" Name="SFX_OC_TrainExit" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainExit" GUID="{21C227C1-FAA7-4679-98F5-546AB936F2E5}" DurationType="OneShot" DurationMin="2.363896" DurationMax="2.363896">
 					<MediaRefs>
 						<MediaRef Id="286609776"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1031639743" Name="SFX_OC_TrainPlayerEnter" DurationType="OneShot" DurationMin="2.6703959" DurationMax="2.6703959">
+				<Event Id="1031639743" Name="SFX_OC_TrainPlayerEnter" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerEnter" GUID="{5961649E-863E-4294-A1FB-8919DACEEEFD}" DurationType="OneShot" DurationMin="2.6703959" DurationMax="2.6703959">
 					<MediaRefs>
 						<MediaRef Id="674881482"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1560947431" Name="SFX_OC_TrainPlayerExit" DurationType="OneShot" DurationMin="2.7844791" DurationMax="2.7844791">
+				<Event Id="1560947431" Name="SFX_OC_TrainPlayerExit" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerExit" GUID="{67817692-DDED-4307-8EBB-E496F7875DF4}" DurationType="OneShot" DurationMin="2.7844791" DurationMax="2.7844791">
 					<MediaRefs>
 						<MediaRef Id="152825524"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="341180760" Name="SFX_OC_TrainStop" DurationType="OneShot" DurationMin="2.370375" DurationMax="2.370375">
+				<Event Id="341180760" Name="SFX_OC_TrainStop" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainStop" GUID="{241B7800-0CC8-4D34-B68C-1E3149D1078D}" DurationType="OneShot" DurationMin="2.370375" DurationMax="2.370375">
 					<MediaRefs>
 						<MediaRef Id="667273339"/>
 					</MediaRefs>
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{89F21E4A-C93C-1ED3-1C2E-9F84C4A588E6}">
+		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{89F21E4A-C93C-1ED3-1C2E-9F84C4A588E6}">
+			<ObjectPath>\SoundBanks\Default Work Unit\Test</ObjectPath>
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
 			<Media>
@@ -379,18 +383,18 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="63543724" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="63543724" Name="Synth One" ObjectPath="\Actor-Mixer Hierarchy\Default Work Unit\New Sound SFX\Synth One" GUID="{44E07E1F-7DF1-4F37-9204-EAFD5532AEB9}" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="2165247623" Name="Enfer" DurationType="Unknown">
+				<Event Id="2165247623" Name="Enfer" ObjectPath="\Events\Default Work Unit\Enfer" GUID="{52456F44-3358-48D2-B87C-11D7FBA23AA8}" DurationType="Unknown">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="63543724"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3157003241" Name="Test" DurationType="Infinite">
+				<Event Id="3157003241" Name="Test" ObjectPath="\Events\Default Work Unit\Test" GUID="{50C49DE5-490F-466B-903F-1C842B1F700B}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="960600503"/>
 					</MediaRefs>
@@ -398,5 +402,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4FBF1041-E613-8F0F-1E17-F4C9C91E8935}</FileHash>
+	<FileHash>{B467E5D2-19BA-1E9B-09C7-F291C3DD96F7}</FileHash>
 </SoundBanksInfo>
