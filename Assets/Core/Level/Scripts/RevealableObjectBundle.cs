@@ -13,7 +13,7 @@ namespace LW.Level
         [SerializeField] List<RevealableItem> itemsRevealed;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
-        
+
         bool isRevealed = false;
         WordDatabaseEntry entry;
 

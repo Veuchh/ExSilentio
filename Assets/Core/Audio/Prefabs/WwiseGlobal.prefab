@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6509258059348101779}
   - component: {fileID: 7712819905991406318}
   - component: {fileID: 8048959766066722676}
+  - component: {fileID: 608727911523144873}
   m_Layer: 0
-  m_Name: Wwise Global
+  m_Name: WwiseGlobal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0251af20da87615438164f5e8eda2ce3,
+    WwiseObjectReference: {fileID: 11400000, guid: db8a84edb955d8c4fb3d9a14ea3dc2bd,
       type: 2}
   decodeBank: 0
   overrideLoadSetting: 1
@@ -85,3 +86,15 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &608727911523144873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066519225242145153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c477275ded7b3f04e8af8826cfe244a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

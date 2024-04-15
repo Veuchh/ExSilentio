@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using UnityEngine;
 using NaughtyAttributes;
@@ -24,6 +25,12 @@ namespace LW.Player
         private void Start()
         {
             PlayerInputsHandler.Instance.SetPlayerMovementScript(this);
+            WwiseInterface.Instance.UpdatePlayerCamera(GetComponentInChildren<Camera>().gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            WwiseInterface.Instance.RemovePlayerCameraIfCameraIsThis(GetComponentInChildren<Camera>().gameObject);
         }
 
         private void Update()

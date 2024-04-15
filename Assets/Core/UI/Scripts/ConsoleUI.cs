@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using LW.Data;
 using System.Globalization;
+using LW.Audio;
 
 namespace LW.UI
 {
@@ -29,6 +30,10 @@ namespace LW.UI
         [SerializeField] bool changeTextColor = true;
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor1;
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor2;
+
+        [Header("Wwise Events")]
+        [SerializeField] AK.Wwise.Event uiClClick;
+        [SerializeField] AK.Wwise.Event uiClLine;
 
         public static event Action<CommandID> onCommandClicked;
 
@@ -64,7 +69,8 @@ namespace LW.UI
 
         public void ToggleConsole(bool toggle)
         {
-            canvasGroup.alpha = toggle ? 1 : 0;
+            canvasGroup.alpha = toggle ? 1 : 0; 
+            UpdateInput("");
         }
 
         public void AddToHistory(string newHistory)
@@ -89,6 +95,8 @@ namespace LW.UI
             historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical(); 
             
             scrollRect.verticalNormalizedPosition = 0;
+            
+            //WwiseInterface.Instance.PlayEvent(uiClLine);
         }
 
         public void UpdateInput(string newInput)
@@ -100,11 +108,14 @@ namespace LW.UI
         public void OnCommandClicked(CommandID commandID)
         {
             onCommandClicked?.Invoke(commandID);
+            WwiseInterface.Instance.PlayEvent(uiClClick);
         }
 
         void TogglePannel()
         {
             commandPannel.SetActive(!commandPannel.activeSelf);
+
+            WwiseInterface.Instance.PlayEvent(uiClLine);
 
             togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 90f : -90f);
         }

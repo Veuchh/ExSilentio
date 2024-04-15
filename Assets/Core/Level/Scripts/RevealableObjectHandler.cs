@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using LW.UI;
 using System;
@@ -17,6 +18,11 @@ namespace LW.Level
 
         [SerializeField] WordDatabase database;
         [SerializeField] LocalizedStringTable stringTable;
+
+
+        [Header("Wwise Events")]
+        [SerializeField] AK.Wwise.Event uiClGoodWord;
+        [SerializeField] AK.Wwise.Event uiClWrongWord;
 
         List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
 
@@ -110,21 +116,27 @@ namespace LW.Level
                 bundleToReveal.RevealBundle(usedID, stringTable);
 
                 translatedID = "[!] " + translatedID;
+
+
+                WwiseInterface.Instance.PlayEvent(uiClGoodWord);
             }
             else if (isSemanticallyClose)
             {
                 consoleFeedback = stringTable.GetTable().GetEntry(REVEAL_CLOSE_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
                 translatedID = "[?] " + translatedID;
+                WwiseInterface.Instance.PlayEvent(uiClWrongWord);
             }
             else if (isAlreadyRevealed)
             {
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_ALREADY_HERE_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
                 translatedID = "[.] " + translatedID;
+                WwiseInterface.Instance.PlayEvent(uiClWrongWord);
             }
             else
             {
                 consoleFeedback += " " + stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
                 translatedID = "[...]" + translatedID;
+                WwiseInterface.Instance.PlayEvent(uiClWrongWord);
             }
 
             ConsoleUI.Instance.AddToHistory($"{translatedID}{consoleFeedback}");
@@ -149,6 +161,7 @@ namespace LW.Level
         {
             string revealFailedEntry = stringTable.GetTable().GetEntry(REVEAL_FAILED_FEEDBACK_TRANSLATION_KEY).LocalizedValue;
             ConsoleUI.Instance.AddToHistory($"[...] {failedToParseString} {revealFailedEntry}");
+            WwiseInterface.Instance.PlayEvent(uiClWrongWord);
         }
 
         public void RevealAllItemsOfType(ObjectImportance importance)
