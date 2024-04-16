@@ -2,6 +2,7 @@ using LW.Audio;
 using LW.Data;
 using UnityEngine;
 using NaughtyAttributes;
+using LW.Logger;
 
 namespace LW.Player
 {
@@ -21,6 +22,8 @@ namespace LW.Player
         [SerializeField, MinMaxSlider(-180, 180)] Vector2 verticalLookClamp;
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
+
+        Vector3 storedPosition;
 
         private void Start()
         {
@@ -43,6 +46,10 @@ namespace LW.Player
             Vector3 movement = ComputeMovement();
 
             characterController.Move(movement);
+
+            CustomLogger.IncrementTraveledDistance((transform.position - storedPosition).magnitude);
+
+            storedPosition = transform.position;
         }
 
         private void ComputeRotation()
