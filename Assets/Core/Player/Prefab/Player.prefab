@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 733434773201429593}
   - component: {fileID: 8242959867574868212}
   - component: {fileID: 8334861715979446098}
+  - component: {fileID: 190876080394664651}
+  - component: {fileID: 7814999637673104035}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -162,6 +164,42 @@ MonoBehaviour:
   gravity: -9.8
   rotationSpeed: 0.05
   verticalLookClamp: {x: -90, y: 90}
+--- !u!114 &190876080394664651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619847771750206806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769a06aa88a63424b94eb3e304faa138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &7814999637673104035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619847771750206806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a85b1e9804aa9b469bc62a903629372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!1 &5974750379429615268
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,10 +210,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8954751115493715739}
   - component: {fileID: 9077945929130513364}
-  - component: {fileID: 7874041228432878979}
   - component: {fileID: 8675198787359689278}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,14 +284,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7874041228432878979
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5974750379429615268}
-  m_Enabled: 1
 --- !u!114 &8675198787359689278
 MonoBehaviour:
   m_ObjectHideFlags: 0

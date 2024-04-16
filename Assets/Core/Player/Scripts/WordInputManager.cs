@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using LW.Level;
 using LW.UI;
@@ -22,6 +23,13 @@ namespace LW.Player
         [SerializeField] LocalizedStringTable stringTable;
         [SerializeField] WordDatabase wordDatabase;
         [SerializeField] WordCorrector wordCorrector;
+
+        [Header("WwiseEvents")]
+        [SerializeField] AK.Wwise.Event uiClOpen;
+        [SerializeField] AK.Wwise.Event uiClClose;
+        [SerializeField] AK.Wwise.Event uiClWriteText;
+        [SerializeField] AK.Wwise.Event uiClDeleteText;
+        [SerializeField] AK.Wwise.Event uiClWordEnter;
         string currentWordInput;
 
         private void Awake()
@@ -37,6 +45,9 @@ namespace LW.Player
         public void ToggleConsole(bool isToggled)
         {
             ConsoleUI.Instance.ToggleConsole(isToggled);
+            ClearWord();
+            ConsoleUI.Instance.UpdateInput(currentWordInput);
+            WwiseInterface.Instance.PlayEvent((isToggled ? uiClOpen : uiClClose));
         }
 
         public void ClearWord()
@@ -49,6 +60,7 @@ namespace LW.Player
             if (!UsableCharacters.Characters.Contains(chr))
                 return;
 
+            WwiseInterface.Instance.PlayEvent(uiClWriteText);
             currentWordInput += chr;
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
@@ -60,6 +72,7 @@ namespace LW.Player
                 currentWordInput = currentWordInput.Substring(0, currentWordInput.Length - 1);
                 ConsoleUI.Instance.UpdateInput(currentWordInput);
             }
+            WwiseInterface.Instance.PlayEvent(uiClDeleteText);
         }
 
         private void OnSuccesfullParse(WordID wordID)
@@ -96,6 +109,8 @@ namespace LW.Player
             if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnUseCommand))
                 wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
 
+
+            WwiseInterface.Instance.PlayEvent(uiClWordEnter);
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
@@ -134,7 +149,7 @@ namespace LW.Player
             {
                 List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundleOfImportnce(importance);
                 consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString()).LocalizedValue
-                    + " : " + bundles.Where(i => i.IsRevealed).Count().ToString() 
+                    + " : " + bundles.Where(i => i.IsRevealed).Count().ToString()
                     + " / " + bundles.Count();
             }
 

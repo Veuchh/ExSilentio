@@ -5,7 +5,7 @@ public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] GameObject playerPrefab;
 
-    private void Awake()
+    private void Start()
     {
         Instantiate(playerPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
