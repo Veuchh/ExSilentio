@@ -33,7 +33,6 @@ namespace LW.UI
 
         [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClClick;
-        [SerializeField] AK.Wwise.Event uiClLine;
 
         public static event Action<CommandID> onCommandClicked;
 
@@ -95,8 +94,6 @@ namespace LW.UI
             historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical(); 
             
             scrollRect.verticalNormalizedPosition = 0;
-            
-            //WwiseInterface.Instance.PlayEvent(uiClLine);
         }
 
         public void UpdateInput(string newInput)
@@ -115,7 +112,7 @@ namespace LW.UI
         {
             commandPannel.SetActive(!commandPannel.activeSelf);
 
-            WwiseInterface.Instance.PlayEvent(uiClLine);
+            WwiseInterface.Instance.PlayEvent(uiClClick);
 
             togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 90f : -90f);
         }
