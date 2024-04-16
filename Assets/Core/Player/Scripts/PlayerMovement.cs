@@ -3,6 +3,7 @@ using LW.Data;
 using UnityEngine;
 using NaughtyAttributes;
 using LW.Logger;
+using System;
 
 namespace LW.Player
 {
@@ -20,6 +21,14 @@ namespace LW.Player
         [Header("RotationSettings Settings")]
         [SerializeField] float rotationSpeed = 10;
         [SerializeField, MinMaxSlider(-180, 180)] Vector2 verticalLookClamp;
+
+        [Header("Audio Settings")]
+        [SerializeField] AK.Wwise.Event footstepEvent;
+        [SerializeField] AK.Wwise.Switch groundSwitch;
+        [SerializeField] AK.Wwise.Switch waterSwitch;
+        [SerializeField] float footstepTickDuration = .5f;
+        float footstepCoolDown;
+        bool isOnGround = true;
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
 
@@ -60,6 +69,25 @@ namespace LW.Player
                 nextUpdateTime += updateTick;
                 CustomLogger.AddToTrajectoryHistory(transform.position);
             }
+
+            Footsteps();
+        }
+
+        private void Footsteps()
+        {
+            //Raycast to check for ground type
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1))
+            {
+                footstepCoolDown -= Time.deltaTime;
+                if (footstepCoolDown <= 0)
+                {
+                    footstepCoolDown += footstepTickDuration;
+
+                    //TODO : better wauy of checking ground type
+                    WwiseInterface.Instance.SetSwitch(hit.collider.CompareTag("Ground") ? groundSwitch : waterSwitch);
+                    WwiseInterface.Instance.PlayEvent(footstepEvent);
+                }
+            }
         }
 
         private void ComputeRotation()
@@ -82,7 +110,7 @@ namespace LW.Player
 
 
             //Horizontal rotation
-          //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
+            //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
             Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
         }

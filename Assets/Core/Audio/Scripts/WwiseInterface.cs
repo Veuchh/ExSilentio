@@ -19,6 +19,23 @@ namespace LW.Audio
             playerCamera = newCamera;
         }
 
+        public void SetSwitch(AK.Wwise.Switch mySwitch, GameObject origin = null)
+        {
+            if (origin == null)
+            {
+                if (playerCamera != null)
+                {
+                    origin = playerCamera;
+                }
+                else
+                {
+                    Debug.LogError("No camera was set");
+                    return;
+                }
+            }
+            mySwitch.SetValue(origin);
+        }
+
         public void RemovePlayerCameraIfCameraIsThis(GameObject camToRemove)
         {
             if (camToRemove == playerCamera)
