@@ -23,10 +23,14 @@ namespace LW.Player
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
 
+
+        private float nextUpdateTime;
+        private float updateTick = 1;
         Vector3 storedPosition;
 
         private void Start()
         {
+            storedPosition = transform.position;
             PlayerInputsHandler.Instance.SetPlayerMovementScript(this);
             WwiseInterface.Instance.UpdatePlayerCamera(GetComponentInChildren<Camera>().gameObject);
         }
@@ -50,6 +54,12 @@ namespace LW.Player
             CustomLogger.IncrementTraveledDistance((transform.position - storedPosition).magnitude);
 
             storedPosition = transform.position;
+
+            if (nextUpdateTime < Time.time)
+            {
+                nextUpdateTime += updateTick;
+                CustomLogger.AddToTrajectoryHistory(transform.position);
+            }
         }
 
         private void ComputeRotation()

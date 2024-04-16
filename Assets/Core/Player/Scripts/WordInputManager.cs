@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 
 namespace LW.Player
