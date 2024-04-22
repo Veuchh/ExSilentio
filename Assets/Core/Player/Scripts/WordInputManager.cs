@@ -1,6 +1,7 @@
 using LW.Audio;
 using LW.Data;
 using LW.Level;
+using LW.Logger;
 using LW.UI;
 using LW.Word;
 using System;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Tables;
 
 namespace LW.Player
@@ -105,6 +107,8 @@ namespace LW.Player
         {
             if (string.IsNullOrEmpty(currentWordInput))
                 return;
+
+            CustomLogger.OnWordInput(currentWordInput, Vector3.zero, 0);
 
             if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnUseCommand))
                 wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
