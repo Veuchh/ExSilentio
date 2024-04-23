@@ -28,6 +28,7 @@ public class StringToTextureConverter : MonoBehaviour
     {
         input = input.ToUpper();
         Texture2D output = new Texture2D(textureSize, textureSize);
+        output.wrapMode = TextureWrapMode.Clamp;
         int characterWidth = (textureSize - wordPadding * 2) / input.Length;
         int characterheight = characterWidth * 2;
 

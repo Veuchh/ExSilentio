@@ -93,7 +93,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584895551796793781
+    m_lastTime: -8584884158852118660
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -135,7 +135,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584895557721417788
+    m_lastTime: -8584883293591771521
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -171,7 +171,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 33d1c900177da248bf08e9ca701ed5c4
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Boat
-      maxAttenuation: 0
+      maxAttenuation: 156
       maxDuration: 22.438917
       minDuration: 11.602
     - name: AMB_OC_Fontain
@@ -191,7 +191,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8b6eaaa12618be4380c40f56cbfeecde
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Fontain
-      maxAttenuation: 0
+      maxAttenuation: 40
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Kids
@@ -211,7 +211,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: da2244b2e9a9f7458263f8d113fd3edc
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Kids
-      maxAttenuation: 0
+      maxAttenuation: 21
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Main
@@ -251,7 +251,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f52bd0bb7c700a45a476135c6cca451a
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish
-      maxAttenuation: 0
+      maxAttenuation: 60
       maxDuration: 7.743708
       minDuration: 7.743708
     - name: AMB_OC_TrainLoop
@@ -271,7 +271,27 @@ MonoBehaviour:
         ObjectType: 3
         guid: d1a5cf92446cbc4cb03cb1c244b3e9a6
       Path: Events\AMB\AMB_OceanCity\AMB_OC_TrainLoop
-      maxAttenuation: 0
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_TrainStation
+      guid: 585a10b1a3d21045a86059c56ebf9647
+      id: 4149905421
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_TrainStation
+        ObjectType: 3
+        guid: 585a10b1a3d21045a86059c56ebf9647
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_TrainStation
+      maxAttenuation: 45
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Water
@@ -291,7 +311,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: cb231ecd35c72f43854fc2962ec3fe3d
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Water
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: AMB_OceanCity
@@ -322,7 +342,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b74c2a65d53e854bb513b47eb47eae78
     GuidInternal: 
-    m_lastTime: -8584904917695359133
+    m_lastTime: -8584884098881067111
     List:
     - name: Enfer
       guid: 446f45525833d248b87c11d7fba23aa8
@@ -338,6 +358,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 446f45525833d248b87c11d7fba23aa8
       Path: Events\Default Work Unit\Enfer
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_MX_OC_L_Child
+      guid: 9dbacfa66e1cb34586d0c20fabd2a615
+      id: 989869996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b74c2a65d53e854bb513b47eb47eae78
+      - ElementName: Play_MX_OC_L_Child
+        ObjectType: 3
+        guid: 9dbacfa66e1cb34586d0c20fabd2a615
+      Path: Events\Default Work Unit\Play_MX_OC_L_Child
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -419,8 +456,28 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584900520143119602
+    m_lastTime: -8584883463361203388
     List:
+    - name: MX_OC_L_Ocean
+      guid: 98a13dc84d7767438117039eae0d6c53
+      id: 2156412433
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_L_Ocean
+        ObjectType: 3
+        guid: 98a13dc84d7767438117039eae0d6c53
+      Path: Events\MX\MX_OceanCity\MX_OC_L_Ocean
+      maxAttenuation: 0
+      maxDuration: 153.6
+      minDuration: 153.6
     - name: MX_OceanCity
       guid: 16f08d1e62da6f41b2c4d75626b03a9c
       id: 1358232996
@@ -659,8 +716,8 @@ MonoBehaviour:
         guid: 7a5fa10d0b46ec4dac2850f7fdf63faf
       Path: Events\UI\UI_Consol\UI_CL_Line
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.34452575
+      minDuration: 0.34452575
     - name: UI_CL_Open
       guid: b9b205ac4e9ff04db23e67430a0cd88d
       id: 767596870
@@ -789,6 +846,50 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938861068860
     List: []
+  - PhysicalPath: Game Parameters\Game Parameters.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Game Parameters
+      ObjectType: 12
+      guid: bab44e09d18d8841bf1f7a1ac201fe0e
+    ParentPath: Game Parameters\Game Parameters
+    guid: bab44e09d18d8841bf1f7a1ac201fe0e
+    GuidInternal: 
+    m_lastTime: -8584887616299654044
+    List:
+    - name: GP_OC_MX
+      guid: 801db89d6f20e048aa1154dd89742376
+      id: 75168183
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX
+    - name: GP_OceanCity
+      guid: 1da2e570a6b65a468f458f76ba5d2e93
+      id: 2861474034
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      Path: Game Parameters\Game Parameters\GP_OceanCity
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -814,8 +915,137 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584895572566340155
-    List: []
+    m_lastTime: -8584884159276309724
+    List:
+    - name: ST_MX_OC_Ocean
+      guid: a5022f150a580645bfd46e8e89afcd13
+      id: 3608668146
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: ST_MX_OC_Ocean
+        ObjectType: 9
+        guid: a5022f150a580645bfd46e8e89afcd13
+      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean
+      values:
+      - name: None
+        guid: 6af993b0242b9346ba5fc4b9dbcec5c7
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Ocean
+          ObjectType: 9
+          guid: a5022f150a580645bfd46e8e89afcd13
+        - ElementName: None
+          ObjectType: 8
+          guid: 6af993b0242b9346ba5fc4b9dbcec5c7
+      - name: Reveal
+        guid: e66cdf2ab0cef248ab57ddb0686838a6
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Ocean
+          ObjectType: 9
+          guid: a5022f150a580645bfd46e8e89afcd13
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: e66cdf2ab0cef248ab57ddb0686838a6
+      - name: Unreaveal
+        guid: f0543bdaf8b1d84d881874e1d4fe1e69
+        id: 1457005672
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Ocean
+          ObjectType: 9
+          guid: a5022f150a580645bfd46e8e89afcd13
+        - ElementName: Unreaveal
+          ObjectType: 8
+          guid: f0543bdaf8b1d84d881874e1d4fe1e69
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_OC_MX
+      guid: e97fd7f234764d43bd850da446753ec0
+      id: 4198588639
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      Path: States\States\ST_OceanCity\ST_OC_MX
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_OceanCity
+      guid: 5d0c55818c3c8847a893d7c1da597f12
+      id: 700224282
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      Path: States\States\ST_OceanCity
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -828,7 +1058,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a80bb048c613e044aca6b1ce1d2b909b
     GuidInternal: 
-    m_lastTime: -8584895571886487568
+    m_lastTime: -8584884123027843066
     List: []
   - PhysicalPath: Switches\SW_FOOTSTEPS.wwu
     PathAndIcons:
@@ -893,6 +1123,101 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+  - PhysicalPath: Switches\SW_MX.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: SW_MX
+      ObjectType: 12
+      guid: 7b0ed2cd14dff1488f9e525504835c2d
+    ParentPath: Switches\SW_MX
+    guid: 7b0ed2cd14dff1488f9e525504835c2d
+    GuidInternal: 
+    m_lastTime: -8584884117940498158
+    List:
+    - name: SW_MX_OC
+      guid: d211eebc7870ca4c816235b66013367a
+      id: 1237553662
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SW_MX
+        ObjectType: 12
+        guid: 7b0ed2cd14dff1488f9e525504835c2d
+      - ElementName: SW_MX_OC
+        ObjectType: 11
+        guid: d211eebc7870ca4c816235b66013367a
+      Path: Switches\SW_MX\SW_MX_OC
+      values:
+      - name: Buildings
+        guid: a9033e8a7d5f0a4abc4890791f1df2cf
+        id: 1213198520
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SW_MX
+          ObjectType: 12
+          guid: 7b0ed2cd14dff1488f9e525504835c2d
+        - ElementName: SW_MX_OC
+          ObjectType: 11
+          guid: d211eebc7870ca4c816235b66013367a
+        - ElementName: Buildings
+          ObjectType: 10
+          guid: a9033e8a7d5f0a4abc4890791f1df2cf
+      - name: Default
+        guid: fd3ecbfb0a479f42bce12f7143869e62
+        id: 782826392
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SW_MX
+          ObjectType: 12
+          guid: 7b0ed2cd14dff1488f9e525504835c2d
+        - ElementName: SW_MX_OC
+          ObjectType: 11
+          guid: d211eebc7870ca4c816235b66013367a
+        - ElementName: Default
+          ObjectType: 10
+          guid: fd3ecbfb0a479f42bce12f7143869e62
+      - name: Fountain
+        guid: 51922355fbdb2d43a468a9f754784f66
+        id: 1362338037
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SW_MX
+          ObjectType: 12
+          guid: 7b0ed2cd14dff1488f9e525504835c2d
+        - ElementName: SW_MX_OC
+          ObjectType: 11
+          guid: d211eebc7870ca4c816235b66013367a
+        - ElementName: Fountain
+          ObjectType: 10
+          guid: 51922355fbdb2d43a468a9f754784f66
+      - name: Ocean
+        guid: 3f7580eeb010b34c9277aa23ec1fe2d8
+        id: 3802555985
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: SW_MX
+          ObjectType: 12
+          guid: 7b0ed2cd14dff1488f9e525504835c2d
+        - ElementName: SW_MX_OC
+          ObjectType: 11
+          guid: d211eebc7870ca4c816235b66013367a
+        - ElementName: Ocean
+          ObjectType: 10
+          guid: 3f7580eeb010b34c9277aa23ec1fe2d8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -907,7 +1232,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 0200000005000000060000000b0000000d000000
+  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d0000001300000014000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

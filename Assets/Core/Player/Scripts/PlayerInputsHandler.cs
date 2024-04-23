@@ -1,4 +1,5 @@
 using LW.Data;
+using LW.Logger;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -89,6 +90,7 @@ namespace LW.Player
 
             if (isWordModeEnabled)
             {
+                CustomLogger.IncrementConsoleOpenValue();
                 Keyboard.current.onTextInput += OnNewCharacter;
                 wordManager.ClearWord();
             }
@@ -100,6 +102,11 @@ namespace LW.Player
 
             if (playerMovement != null)
                 PlayerData.IsWordModeEnabled = isWordModeEnabled;
+        }
+
+        public void OnOutputLog(InputValue value)
+        {
+            CustomLogger.CompileDataToCSV();
         }
     }
 }
