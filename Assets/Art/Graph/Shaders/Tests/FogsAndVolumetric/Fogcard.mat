@@ -24,8 +24,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Cloud_Tex:
+        m_Texture: {fileID: 2800000, guid: eabd5ffd4c876244693d2c7acbfe75a0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Fogtex:
         m_Texture: {fileID: 2800000, guid: eabd5ffd4c876244693d2c7acbfe75a0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SGFlooredGradient_3401e0127065483c8d65cfae56d77655_Gradient_4086124264_Texture2D:
@@ -54,12 +62,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cloud_Speed: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 0.05
-    - _Transparence: 8.41
+    - _Transparence: 1.93
     m_Colors:
+    - _Cloud_Tiling: {r: 1.55, g: 0.57, b: 0, a: 0}
     - _Color: {r: 0.8244927, g: 0.9056604, b: 0.9024158, a: 0}
+    - _Main_Color: {r: 0.8244927, g: 0.9056604, b: 0.9024158, a: 0}
+    - _Main_Tiling: {r: 30, g: 30, b: 0, a: 0}
     - _NmaesTiling: {r: 20, g: 20, b: 0, a: 0}
     - _TextureTiling: {r: 2.2, g: 0.6, b: 0, a: 0}
   m_BuildTextureStacks: []
