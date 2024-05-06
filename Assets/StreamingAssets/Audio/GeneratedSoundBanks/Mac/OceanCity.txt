@@ -7,19 +7,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	1031639743	SFX_OC_TrainPlayerEnter			\SFX\SFX_OceanCity\SFX_OC_TrainPlayerEnter	
 	1049210069	AMB_OC_TrainLoop			\AMB\AMB_OceanCity\AMB_OC_TrainLoop	
 	1192067392	AMB_OC_Main			\AMB\AMB_OceanCity\AMB_OC_Main	
+	1217064079	MX_OC_ST_FontainEnter			\MX\MX_OceanCity\MX_OC_ST_FontainEnter	
 	1317712632	MX_OC_ST_Sun			\MX\MX_OceanCity\MX_OC_ST_Sun	
 	1560947431	SFX_OC_TrainPlayerExit			\SFX\SFX_OceanCity\SFX_OC_TrainPlayerExit	
 	1628818968	AMB_OC_Water			\AMB\AMB_OceanCity\AMB_OC_Water	
-	1648586872	MX_OC_L_Buildings			\MX\MX_OceanCity\MX_OC_L_Buildings	
-	2156412433	MX_OC_L_Ocean			\MX\MX_OceanCity\MX_OC_L_Ocean	
+	2171996891	MX_OC_Awake			\MX\MX_OceanCity\MX_OC_Awake	
+	2315091060	MX_OC_ST_ChildExit			\MX\MX_OceanCity\MX_OC_ST_ChildExit	
 	2383654854	MX_OC_ST_Station			\MX\MX_OceanCity\MX_OC_ST_Station	
-	2636259917	MX_OC_L_Sun			\MX\MX_OceanCity\MX_OC_L_Sun	
+	2668009623	MX_OC_ST_FontainExit			\MX\MX_OceanCity\MX_OC_ST_FontainExit	
 	2826138305	AMB_OC_Boat			\AMB\AMB_OceanCity\AMB_OC_Boat	
 	2880313612	AMB_OC_Kids			\AMB\AMB_OceanCity\AMB_OC_Kids	
 	2973427017	MX_OC_ST_Buildings			\MX\MX_OceanCity\MX_OC_ST_Buildings	
-	3072611669	MX_OC_L_Child			\MX\MX_OceanCity\MX_OC_L_Child	
 	3210636256	SFX_OC_TrainExit			\SFX\SFX_OceanCity\SFX_OC_TrainExit	
-	3266233103	MX_OC_L_Station			\MX\MX_OceanCity\MX_OC_L_Station	
 	3286101857	FT_OceanCityStop			\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop	
 	3287519140	MX_OC_ST_Child			\MX\MX_OceanCity\MX_OC_ST_Child	
 	4149905421	AMB_OC_TrainStation			\AMB\AMB_OceanCity\AMB_OC_TrainStation	
@@ -32,6 +31,7 @@ Switch	ID	Name	Switch Group			Notes
 	3462940353	SW_FT_OC_Ground	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	104216065	ST_MX_OC_Fontain			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
 	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
@@ -39,6 +39,9 @@ State Group	ID	Name			Wwise Object Path	Notes
 	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
 
 State	ID	Name	State Group			Notes
+	634183254	Reveal	ST_MX_OC_Fontain			
+	748895195	None	ST_MX_OC_Fontain			
+	3384621607	Unreveal	ST_MX_OC_Fontain			
 	634183254	Reveal	ST_MX_OC_Buildings			
 	748895195	None	ST_MX_OC_Buildings			
 	3384621607	Unreveal	ST_MX_OC_Buildings			
@@ -65,7 +68,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	7249235	AMB_OC_TrainStationL2	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_TrainStationL2_38D53287.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_TrainStation\AMB_OC_TrainStationL2		1007674
-	41467455	MX_OC_L_Ocean	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_Ocean_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_OceanCity\MX_OC_L_Ocean=Fontain\MX_OC_L_Ocean=Fontain\MX_OC_L_Ocean		2326256
+	41467455	MX_OC_L_Ocean	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_Ocean_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_OceanCity\MX_OC_L_Ocean\MX_OC_L_Ocean\MX_OC_L_Ocean		2326256
 	78976199	FT_OC_Water-008	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-008_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Water\FT_OC_Water-008		11127
 	119802720	FT_OC_Water-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Water\FT_OC_Water-002		18240
 	130851682	AMB_OC_TrainStationL1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_TrainStationL1_46FBD884.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_TrainStation\AMB_OC_TrainStationL1		4717098
@@ -75,7 +78,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	188203818	FT_OC_Ground-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Ground-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_Ground-002		3305
 	191788900	AMB_OC_Bo_Bell-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Bo_Bell-003_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Boat\AMB_OC_Bo_Bell\AMB_OC_Bo_Bell-003		28708
 	192593148	FT_OC_Water-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Water\FT_OC_Water-005		12308
-	261144076	MX_OC_L_Ocean	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_Fountain_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_OceanCity\MX_OC_L_Ocean=Fontain\MX_OC_L_Ocean=Fontain\MX_OC_L_Ocean		1342064
+	261144076	MX_OC_L_Fontain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_Fountain_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_OceanCity\MX_OC_L_Fontain\MX_OC_L_Fontain\MX_OC_L_Fontain		1342064
 	274005601	AMB_OC_Bo_Tug-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Bo_Tug-001_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Boat\AMB_OC_Bo_Tug\AMB_OC_Bo_Tug-001		49637
 	286609776	SFX_OC_TrainExit	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_OC_TrainExit_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainExit		17415
 	289865734	FT_OC_Water-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Water\FT_OC_Water-003		16866

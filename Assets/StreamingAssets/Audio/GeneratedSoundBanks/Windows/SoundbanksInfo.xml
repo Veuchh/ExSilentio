@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{CC2E22B6-9C0D-4B34-5F93-BC094C7469B9}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D00C7CF0-3233-D88D-B4EC-9A5BEDA8CFBA}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,6 +26,13 @@
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\None" GUID="{EF4A5BD6-9F22-4803-8A1A-DA64CCC87C83}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="719384611" Name="ST_MX_OC_Buildings" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings" GUID="{152F02A5-580A-4506-BFD4-6E8E89AFCD13}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Reveal" GUID="{2ADF6CE6-CEB0-48F2-AB57-DDB0686838A6}"/>
@@ -68,12 +75,6 @@
 					<Switches>
 						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="1237553662" Name="SW_MX_OC" ObjectPath="\Switches\Switch\SW_MX_OC" GUID="{BCEE11D2-7078-4CCA-8162-35B66013367A}">
-					<Switches>
-						<Switch Id="1362338037" Name="Fountain" ObjectPath="\Switches\Switch\SW_MX_OC\Fountain" GUID="{55239251-DBFB-432D-A468-A9F754784F66}"/>
-						<Switch Id="3802555985" Name="Ocean" ObjectPath="\Switches\Switch\SW_MX_OC\Ocean" GUID="{EE80753F-10B0-4CB3-9277-AA23EC1FE2D8}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -248,7 +249,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{DEBA1E13-8CE9-BD2C-4B8E-49FD1E53263E}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{6E5D0086-0470-F56A-E152-D6AB407A3265}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -565,48 +566,17 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1648586872" Name="MX_OC_L_Buildings" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_L_Buildings" GUID="{686E2C86-F88B-4989-A691-70649D89FC6A}" DurationType="OneShot" DurationMin="76.8" DurationMax="76.8">
-					<MediaRefs>
-						<MediaRef Id="313375692"/>
-					</MediaRefs>
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="719384611" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="3072611669" Name="MX_OC_L_Child" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_L_Child" GUID="{6E88C30F-8E0D-4E91-9ED1-F807AA1CF75E}" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="1054178735"/>
-					</MediaRefs>
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="2156412433" Name="MX_OC_L_Ocean" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_L_Ocean" GUID="{C83DA198-774D-4367-8117-039EAE0D6C53}" DurationType="Infinite">
+				<Event Id="2171996891" Name="MX_OC_Awake" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_Awake" GUID="{686E2C86-F88B-4989-A691-70649D89FC6A}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="41467455"/>
 						<MediaRef Id="261144076"/>
-					</MediaRefs>
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="3608668146" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Unreveal" GUID="{69C75521-8486-46CA-BBC4-77EE6CD4CFCC}"/>
-					</ActionSetState>
-					<ActionSetSwitch>
-						<ActionSetSwitchEntry GroupId="1237553662" Id="3802555985" Name="Ocean" ObjectPath="\Switches\Switch\SW_MX_OC\Ocean" GUID="{EE80753F-10B0-4CB3-9277-AA23EC1FE2D8}"/>
-					</ActionSetSwitch>
-				</Event>
-				<Event Id="3266233103" Name="MX_OC_L_Station" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_L_Station" GUID="{B8904B70-96B1-43E3-AE33-8A31A7B676A7}" DurationType="Infinite">
-					<MediaRefs>
+						<MediaRef Id="313375692"/>
 						<MediaRef Id="434975524"/>
-					</MediaRefs>
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="3640304444" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station\Unreveal" GUID="{2FA87383-FBE8-409B-B537-EFCE675A5F3F}"/>
-					</ActionSetState>
-				</Event>
-				<Event Id="2636259917" Name="MX_OC_L_Sun" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_L_Sun" GUID="{F4EEE3F8-D00C-46BF-91E6-82ACBF0328F8}" DurationType="OneShot" DurationMin="86.4" DurationMax="86.4">
-					<MediaRefs>
 						<MediaRef Id="932489431"/>
+						<MediaRef Id="1054178735"/>
 					</MediaRefs>
 					<ActionSetState>
-						<ActionSetStateEntry GroupId="4266710578" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun\Unreveal" GUID="{F0D45662-5908-4F9D-8D8C-2F8D4F075969}"/>
+						<ActionSetStateEntry GroupId="719384611" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="2973427017" Name="MX_OC_ST_Buildings" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Buildings" GUID="{C87B4FF4-7FA6-4D31-9769-85F087957F71}" DurationType="OneShot" DurationMin="38.4" DurationMax="38.4">
@@ -621,6 +591,23 @@
 				<Event Id="3287519140" Name="MX_OC_ST_Child" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Child" GUID="{4E2B07B0-8F56-4249-AEDD-7F6EA8432F29}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="867132074" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1217064079" Name="MX_OC_ST_FontainEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter" GUID="{4D4C051C-61A1-43D2-840D-D4ABB6B17E3B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="104216065" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
+						<ActionSetStateEntry GroupId="3608668146" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Unreveal" GUID="{69C75521-8486-46CA-BBC4-77EE6CD4CFCC}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2668009623" Name="MX_OC_ST_FontainExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainExit" GUID="{C3CB9702-3FED-4CA9-A157-353578E667EA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3608668146" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Reveal" GUID="{98CD5FED-4762-453F-AE0B-554EB9CA6E7B}"/>
+						<ActionSetStateEntry GroupId="104216065" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="438261988" Name="MX_OC_ST_Ocean" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Ocean" GUID="{22C36B1E-4BE6-4028-8C73-01E92B1517D4}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -663,6 +650,13 @@
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\None" GUID="{EF4A5BD6-9F22-4803-8A1A-DA64CCC87C83}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="719384611" Name="ST_MX_OC_Buildings" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings" GUID="{152F02A5-580A-4506-BFD4-6E8E89AFCD13}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Reveal" GUID="{2ADF6CE6-CEB0-48F2-AB57-DDB0686838A6}"/>
@@ -707,12 +701,6 @@
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="1237553662" Name="SW_MX_OC" ObjectPath="\Switches\Switch\SW_MX_OC" GUID="{BCEE11D2-7078-4CCA-8162-35B66013367A}">
-					<Switches>
-						<Switch Id="1362338037" Name="Fountain" ObjectPath="\Switches\Switch\SW_MX_OC\Fountain" GUID="{55239251-DBFB-432D-A468-A9F754784F66}"/>
-						<Switch Id="3802555985" Name="Ocean" ObjectPath="\Switches\Switch\SW_MX_OC\Ocean" GUID="{EE80753F-10B0-4CB3-9277-AA23EC1FE2D8}"/>
-					</Switches>
-				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{92B2990B-6C15-260E-C5AC-E9004C4E948A}">
@@ -746,5 +734,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BB05A5AB-B953-B8E4-BDB1-D5CEB8908377}</FileHash>
+	<FileHash>{FA87DAC0-1905-24E4-48FC-ED1089AEFEE8}</FileHash>
 </SoundBanksInfo>

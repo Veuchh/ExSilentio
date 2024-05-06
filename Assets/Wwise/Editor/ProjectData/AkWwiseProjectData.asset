@@ -406,7 +406,7 @@ MonoBehaviour:
     ParentPath: Events\FOOTSTEPS
     guid: 8aa0b113ff87cd41827a9050ed54407c
     GuidInternal: 
-    m_lastTime: -8584866082616096845
+    m_lastTime: -8584866077572900060
     List:
     - name: FT_OceanCity
       guid: 8a3bada84552514696cf9d980a2323c3
@@ -476,11 +476,11 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584866196616730090
+    m_lastTime: -8584866007463917659
     List:
-    - name: MX_OC_L_Buildings
+    - name: MX_OC_Awake
       guid: 862c6e688bf88949a69170649d89fc6a
-      id: 1648586872
+      id: 2171996891
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -491,93 +491,13 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_L_Buildings
+      - ElementName: MX_OC_Awake
         ObjectType: 3
         guid: 862c6e688bf88949a69170649d89fc6a
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Buildings
+      Path: Events\MX\MX_OceanCity\MX_OC_Awake
       maxAttenuation: 0
-      maxDuration: 76.8
-      minDuration: 76.8
-    - name: MX_OC_L_Child
-      guid: 0fc3886e0d8e914e9ed1f807aa1cf75e
-      id: 3072611669
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_OceanCity
-        ObjectType: 4
-        guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_L_Child
-        ObjectType: 3
-        guid: 0fc3886e0d8e914e9ed1f807aa1cf75e
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Child
-      maxAttenuation: 0
-      maxDuration: 50.4
-      minDuration: 50.4
-    - name: MX_OC_L_Ocean
-      guid: 98a13dc84d7767438117039eae0d6c53
-      id: 2156412433
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_OceanCity
-        ObjectType: 4
-        guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_L_Ocean
-        ObjectType: 3
-        guid: 98a13dc84d7767438117039eae0d6c53
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Ocean
-      maxAttenuation: 0
-      maxDuration: 153.6
-      minDuration: 153.6
-    - name: MX_OC_L_Station
-      guid: 704b90b8b196e343ae338a31a7b676a7
-      id: 3266233103
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_OceanCity
-        ObjectType: 4
-        guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_L_Station
-        ObjectType: 3
-        guid: 704b90b8b196e343ae338a31a7b676a7
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Station
-      maxAttenuation: 0
-      maxDuration: 69.6
-      minDuration: 69.6
-    - name: MX_OC_L_Sun
-      guid: f8e3eef40cd0bf4691e682acbf0328f8
-      id: 2636259917
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_OceanCity
-        ObjectType: 4
-        guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_L_Sun
-        ObjectType: 3
-        guid: f8e3eef40cd0bf4691e682acbf0328f8
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Sun
-      maxAttenuation: 0
-      maxDuration: 86.4
-      minDuration: 86.4
+      maxDuration: -1
+      minDuration: -1
     - name: MX_OC_ST_Buildings
       guid: f44f7bc8a67f314d976985f087957f71
       id: 2973427017
@@ -615,6 +535,66 @@ MonoBehaviour:
         ObjectType: 3
         guid: b0072b4e568f4942aedd7f6ea8432f29
       Path: Events\MX\MX_OceanCity\MX_OC_ST_Child
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_ChildExit
+      guid: ee1341616360e645b856f85789ac8c9c
+      id: 2315091060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_ChildExit
+        ObjectType: 3
+        guid: ee1341616360e645b856f85789ac8c9c
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_ChildExit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_FontainEnter
+      guid: 1c054c4da161d243840dd4abb6b17e3b
+      id: 1217064079
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_FontainEnter
+        ObjectType: 3
+        guid: 1c054c4da161d243840dd4abb6b17e3b
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_FontainExit
+      guid: 0297cbc3ed3fa94ca157353578e667ea
+      id: 2668009623
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_FontainExit
+        ObjectType: 3
+        guid: 0297cbc3ed3fa94ca157353578e667ea
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_FontainExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1132,7 +1112,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584866191777614721
+    m_lastTime: -8584866044069678562
     List:
     - name: ST_MX_OC_Buildings
       guid: a5022f150a580645bfd46e8e89afcd13
@@ -1311,6 +1291,96 @@ MonoBehaviour:
         - ElementName: Unreveal
           ObjectType: 8
           guid: 83219ea42945404c8bcd3af5ac7fb00f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_MX_OC_Fontain
+      guid: 76563eae3ef48f469506520dff5022c4
+      id: 104216065
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: ST_MX_OC_Fontain
+        ObjectType: 9
+        guid: 76563eae3ef48f469506520dff5022c4
+      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain
+      values:
+      - name: None
+        guid: d65b4aef229f03488a1ada64ccc87c83
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Fontain
+          ObjectType: 9
+          guid: 76563eae3ef48f469506520dff5022c4
+        - ElementName: None
+          ObjectType: 8
+          guid: d65b4aef229f03488a1ada64ccc87c83
+      - name: Reveal
+        guid: 1a9cd368adf1154b82d3477e1e83644c
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Fontain
+          ObjectType: 9
+          guid: 76563eae3ef48f469506520dff5022c4
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 1a9cd368adf1154b82d3477e1e83644c
+      - name: Unreveal
+        guid: 60a033c4173ae347a704233c7701e1a5
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Fontain
+          ObjectType: 9
+          guid: 76563eae3ef48f469506520dff5022c4
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 60a033c4173ae347a704233c7701e1a5
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -1648,7 +1718,7 @@ MonoBehaviour:
     ParentPath: Switches\Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584882576301811523
+    m_lastTime: -8584866049742448944
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -1700,56 +1770,6 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: SW_MX_OC
-      guid: d211eebc7870ca4c816235b66013367a
-      id: 1237553662
-      PathAndIcons:
-      - ElementName: Switches
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Switch
-        ObjectType: 12
-        guid: ec7f80df76c16843ad435dd5726a9c1e
-      - ElementName: SW_MX_OC
-        ObjectType: 11
-        guid: d211eebc7870ca4c816235b66013367a
-      Path: Switches\Switch\SW_MX_OC
-      values:
-      - name: Fountain
-        guid: 51922355fbdb2d43a468a9f754784f66
-        id: 1362338037
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switch
-          ObjectType: 12
-          guid: ec7f80df76c16843ad435dd5726a9c1e
-        - ElementName: SW_MX_OC
-          ObjectType: 11
-          guid: d211eebc7870ca4c816235b66013367a
-        - ElementName: Fountain
-          ObjectType: 10
-          guid: 51922355fbdb2d43a468a9f754784f66
-      - name: Ocean
-        guid: 3f7580eeb010b34c9277aa23ec1fe2d8
-        id: 3802555985
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switch
-          ObjectType: 12
-          guid: ec7f80df76c16843ad435dd5726a9c1e
-        - ElementName: SW_MX_OC
-          ObjectType: 11
-          guid: d211eebc7870ca4c816235b66013367a
-        - ElementName: Ocean
-          ObjectType: 10
-          guid: 3f7580eeb010b34c9277aa23ec1fe2d8
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1764,7 +1784,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 0200000003000000060000000b0000000d00000013000000140000001500000016000000
+  ExpandedFileSystemItemIds: 02000000060000000b0000000d0000001300000014000000150000001600000017000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
