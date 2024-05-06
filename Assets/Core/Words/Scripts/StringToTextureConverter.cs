@@ -1,8 +1,15 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
+using UnityEngine.Localization.SmartFormat.Core.Output;
+using UnityEngine.UIElements;
+using UnityEngine.Windows;
 
 public class StringToTextureConverter : MonoBehaviour
 {
+    Texture2D sourceTexture;
     const int CHARACTER_TEXTURE_WIDTH = 410;
 
     public static StringToTextureConverter Instance;
@@ -17,46 +24,73 @@ public class StringToTextureConverter : MonoBehaviour
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
+    bool d = false;
+
     Dictionary<char, Texture2D> _textures;
 
-    private void Awake()
+    private void Start()
     {
         Instance = this;
     }
 
     public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
     {
-        input = input.ToUpper();
-        Texture2D output = new Texture2D(textureSize, textureSize);
-        output.wrapMode = TextureWrapMode.Clamp;
-        int characterWidth = (textureSize - wordPadding * 2) / input.Length;
-        int characterheight = characterWidth * 2;
-
-        Color[] color = new Color[256];
-
-        for (int i = 0; i < 256; i++)
+        if (!d)
         {
-            color[i] = Color.black;
+            d = true;
+
+
+            //Create default black texture
+            sourceTexture = new Texture2D(2, 2, TextureFormat.RGBA32, -1, false, false);
+
+            sourceTexture.alphaIsTransparency = true;
+            sourceTexture.SetPixel(0, 0, new Color(0, 0, 0, 0));
+            sourceTexture.SetPixel(0, 1, new Color(0, 0, 0, 0));
+            sourceTexture.SetPixel(1, 0, new Color(0, 0, 0, 0));
+            sourceTexture.SetPixel(1, 1, new Color(0, 0, 0, 0));
+
+            sourceTexture.wrapMode = TextureWrapMode.Clamp;
+
+            sourceTexture.Apply();
         }
+        Texture2D output = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, -1, false, false);
 
-        int setPixels = 0;
 
-        for (int x = 0; x < textureSize / 16; x++)
+
+        if (Graphics.ConvertTexture(sourceTexture, output))
+        
         {
-            for (int y = 0; y < textureSize / 16; y++)
+
+        }
+        else { }
+        foreach (var item in output.GetPixels())
+        {
+            if (item.r == 0)
             {
-                output.SetPixels(16 * x, 16 * y, 16, 16, color);
-                setPixels += 256;
+                //yeh
             }
         }
+        input = input.ToUpper();
 
-        int letterHeightPos = textureSize / 2 - characterheight / 2;
+        output.wrapMode = TextureWrapMode.Clamp;
+        int characterWidth = (textureSize - wordPadding * 2) / input.Length;
+        int characterHeight = characterWidth * 2;
+
+        int letterHeightPos = textureSize / 2 - characterHeight / 2;
 
         for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
         {
-            Color[] characterColors = GetColorArrayFromCharacter(input[characterIndex], characterWidth, characterheight);
+            Texture2D characterColors = GetColorArrayFromCharacter(input[characterIndex], characterWidth, characterHeight);
 
-            output.SetPixels(wordPadding + characterIndex * characterWidth, letterHeightPos, characterWidth, characterheight, characterColors);
+            foreach (var item in characterColors.GetPixels())
+            {
+                if (item.r == 0)
+                {
+                    //yeh
+                }
+            }
+
+            Graphics.CopyTexture(characterColors, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0, wordPadding + characterIndex * characterWidth, letterHeightPos);
         }
 
         output.Apply();
@@ -64,33 +98,29 @@ public class StringToTextureConverter : MonoBehaviour
         return output;
     }
 
-    Color[] GetColorArrayFromCharacter(char chr, int outputWidth, int outputHeight)
+    Texture2D GetColorArrayFromCharacter(char chr, int outputWidth, int outputHeight)
     {
-        Color[] output = new Color[outputWidth * outputHeight];
-
-        if (!charList.Contains(chr))
-        {
-            for (int i = 0; i < outputWidth * outputHeight; i++)
-                output[i] = Color.black;
-
-            return output;
-        }
-
         Sprite characterSprite = spritesList[charList.IndexOf(chr)];
 
-        Rect textureRect = characterSprite.textureRect;
-        Texture2D texture = characterSprite.texture;
-
-        for (int i = 0; i < outputWidth * outputHeight; i++)
+        Texture2D letterBaseTexture = characterSprite.texture;
+        Texture2D output = new Texture2D(outputWidth, outputHeight, TextureFormat.RGBA32, -1, false, false);
+        foreach (var item in output.GetPixels())
         {
-            int x = Mathf.FloorToInt(i % outputWidth);
-            int y = Mathf.FloorToInt(i / outputWidth);
-
-            float textureX = Mathf.Lerp(textureRect.xMin, textureRect.xMax, x / (float)outputWidth);
-            float textureY = Mathf.Lerp(textureRect.yMin, textureRect.yMax, y / (float)outputHeight);
-
-            output[i] = texture.GetPixel(Mathf.FloorToInt(textureX), Mathf.FloorToInt(textureY));
+            if (item.r == 0)
+            {
+                //yeh
+            }
         }
+        Graphics.ConvertTexture(letterBaseTexture, output);
+        foreach (var item in output.GetPixels())
+        {
+            if (item.r == 0)
+            {
+                //yeh
+            }
+        }
+        //utput.Resize(outputWidth, outputHeight);
+        output.Apply();
 
         return output;
     }

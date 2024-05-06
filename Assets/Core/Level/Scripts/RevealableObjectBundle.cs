@@ -35,6 +35,8 @@ namespace LW.Level
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
             Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
+            textureMaps.Add(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, wordTexture);
+
             foreach (RevealableItem revealableItem in itemsRevealed)
             {
                 //if the item id is the same as the expected but the used ID is different from the expect one, we change it
