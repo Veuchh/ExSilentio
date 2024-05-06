@@ -6,6 +6,7 @@ namespace LW.Level
     public class RevealableItem : MonoBehaviour
     {
         const string DISSOLVE_PARAMETER_NAME = "_Dissolve_Amount";
+        const string LETTER_NUMBER_PARAMETER_NAME = "_NumberOfLetters";
         const string TEXTURE_PARAMETER_NAME = "_Main_Tex";
         [SerializeField] WordID id;
         [SerializeField] Renderer attachedRenderer;
@@ -60,13 +61,14 @@ namespace LW.Level
             id = newID;
         }
 
-        public void RevealItem(Texture2D texture)
+        public void RevealItem(Texture2D texture, int letterAmount)
         {
             isRevealing = true;
             startRevealTime = Time.time;
             endRevealTime = Time.time + revealDuration;
             attachedRenderer.GetPropertyBlock(mpb);
             mpb.SetTexture(TEXTURE_PARAMETER_NAME, texture);
+            mpb.SetInt(LETTER_NUMBER_PARAMETER_NAME, letterAmount);
             attachedRenderer.SetPropertyBlock(mpb);
         }
     }

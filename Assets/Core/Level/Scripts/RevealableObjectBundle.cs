@@ -50,7 +50,7 @@ namespace LW.Level
                     textureMaps.Add(usedInput, StringToTextureConverter.Instance.GetTextureFromInput(usedInput));
                 }
 
-                revealableItem.RevealItem(textureMaps[usedInput]);
+                revealableItem.RevealItem(textureMaps[usedInput], usedInput.Length);
             }
 
             if (playWwiseEventOnReveal)
