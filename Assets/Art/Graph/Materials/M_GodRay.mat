@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GodraySplatted
+  m_Name: M_GodRay
   m_Shader: {fileID: -6465566751694194690, guid: 2a2094d52f480f244bb02730c7e6a3e1,
     type: 3}
   m_Parent: {fileID: 0}
@@ -40,6 +40,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Name:
         m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -62,25 +66,31 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _CastShadows: 1
-    - _Cull: 0
+    - _Cull: 2
     - _Distance: 5
     - _DitherSize: 1
     - _DstBlend: 10
     - _Gradient: 1.8
-    - _LOD: 1.79
+    - _LOD: 6.26
     - _LODtest: 1.85
+    - _ObjectFadeDistance: 19.3
+    - _ObjectFadeGradient: 1.6
+    - _PlayerFadeDistance: 17.08
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Seethroughdistance: 22
     - _Speed: 0.56
     - _SrcBlend: 5
     - _Surface: 1
-    - _Transparence: 0.06
+    - _Transparence: 0.15
+    - _Transparency: 0.2
+    - _TransparencyVarSpeed: 0.2
     - _TransparencyVarStrength: 0.19
-    - _VertexcolorMask: 1.57
+    - _VertexcolorMask: 3.73
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
+    - _Main_Tiling: {r: 30, g: 30, b: 0, a: 0}
     - _Tiling: {r: 30, g: 30, b: 0, a: 0}
   m_BuildTextureStacks: []
