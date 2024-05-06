@@ -22,7 +22,7 @@ namespace LW.Player
         const string SECONDARY_LOCALIZATION_ID = "Secondary";
         const string BONUS_LOCALIZATION_ID = "Bonus";
 
-        [SerializeField] LocalizedStringTable stringTable;
+        [SerializeField] LocalizedStringTable commandsTable;
         [SerializeField] WordDatabase wordDatabase;
         [SerializeField] WordCorrector wordCorrector;
 
@@ -144,15 +144,15 @@ namespace LW.Player
         {
             if (RevealableObjectHandler.Instance == null)
             {
-                Debug.LogError("Progress command was typed when not in console");
+                Debug.LogError("Progress command was typed when RevealableObjectHandler was not here");
             }
 
-            var translatedTable = stringTable.GetTable();
+            var translatedTable = commandsTable.GetTable();
             string consoleOutput = translatedTable.GetEntry(REVEALED_ITEMS_LOCALIZATION_ID).LocalizedValue + " :";
             foreach (ObjectImportance importance in Enum.GetValues(typeof(ObjectImportance)))
             {
                 List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundleOfImportnce(importance);
-                consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString()).LocalizedValue
+                consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString().ToLower()).LocalizedValue
                     + " : " + bundles.Where(i => i.IsRevealed).Count().ToString()
                     + " / " + bundles.Count();
             }
@@ -162,7 +162,7 @@ namespace LW.Player
 
         void OnHelpCommand()
         {
-            ConsoleUI.Instance.AddToHistory(stringTable.GetTable().GetEntry(HELP_COMMAND_FEEDBACK_ID).LocalizedValue);
+            ConsoleUI.Instance.AddToHistory(commandsTable.GetTable().GetEntry(HELP_COMMAND_FEEDBACK_ID).LocalizedValue);
         }
 
         void OnWordRevealed()
