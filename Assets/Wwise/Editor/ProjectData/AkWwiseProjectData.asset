@@ -406,7 +406,7 @@ MonoBehaviour:
     ParentPath: Events\FOOTSTEPS
     guid: 8aa0b113ff87cd41827a9050ed54407c
     GuidInternal: 
-    m_lastTime: -8584882597382699884
+    m_lastTime: -8584866082616096845
     List:
     - name: FT_OceanCity
       guid: 8a3bada84552514696cf9d980a2323c3
@@ -423,11 +423,11 @@ MonoBehaviour:
         guid: 8a3bada84552514696cf9d980a2323c3
       Path: Events\FOOTSTEPS\FT_OceanCity
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: FT_OceanCity
+      maxDuration: -1
+      minDuration: -1
+    - name: FT_OceanCityPlay
       guid: 62b7b2d05435c34c9de3dbecea1b77c6
-      id: 4026521433
+      id: 126894539
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -438,10 +438,30 @@ MonoBehaviour:
       - ElementName: FT_OceanCity
         ObjectType: 4
         guid: 8a3bada84552514696cf9d980a2323c3
-      - ElementName: FT_OceanCity
+      - ElementName: FT_OceanCityPlay
         ObjectType: 3
         guid: 62b7b2d05435c34c9de3dbecea1b77c6
-      Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCity
+      Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: FT_OceanCityStop
+      guid: 15e5def64449c3408e4c2746a52fe714
+      id: 3286101857
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: FOOTSTEPS
+        ObjectType: 12
+        guid: 8aa0b113ff87cd41827a9050ed54407c
+      - ElementName: FT_OceanCity
+        ObjectType: 4
+        guid: 8a3bada84552514696cf9d980a2323c3
+      - ElementName: FT_OceanCityStop
+        ObjectType: 3
+        guid: 15e5def64449c3408e4c2746a52fe714
+      Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -456,7 +476,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584882576411946210
+    m_lastTime: -8584866196616730090
     List:
     - name: MX_OC_L_Buildings
       guid: 862c6e688bf88949a69170649d89fc6a
@@ -1037,7 +1057,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584882600896656063
+    m_lastTime: -8584866085041627609
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -1112,7 +1132,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584882603187358761
+    m_lastTime: -8584866191777614721
     List:
     - name: ST_MX_OC_Buildings
       guid: a5022f150a580645bfd46e8e89afcd13
