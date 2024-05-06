@@ -1,10 +1,33 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1218704685	SW_FT_OC			\Switch\SW_FT_OC	
+
+Switch	ID	Name	Switch Group			Notes
+	2295428781	SW_FT_OC_Water	SW_FT_OC			
+	3462940353	SW_FT_OC_Ground	SW_FT_OC			
+
 State Group	ID	Name			Wwise Object Path	Notes
+	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
+	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
+	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
+	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
 
 State	ID	Name	State Group			Notes
+	634183254	Reveal	ST_MX_OC_Buildings			
+	748895195	None	ST_MX_OC_Buildings			
+	3384621607	Unreveal	ST_MX_OC_Buildings			
+	634183254	Reveal	ST_MX_OC_Child			
+	748895195	None	ST_MX_OC_Child			
+	3384621607	Unreveal	ST_MX_OC_Child			
 	634183254	Reveal	ST_MX_OC_Ocean			
 	748895195	None	ST_MX_OC_Ocean			
-	1457005672	Unreaveal	ST_MX_OC_Ocean			
+	3384621607	Unreveal	ST_MX_OC_Ocean			
+	634183254	Reveal	ST_MX_OC_Station			
+	748895195	None	ST_MX_OC_Station			
+	3384621607	Unreveal	ST_MX_OC_Station			
+	634183254	Reveal	ST_MX_OC_Sun			
+	748895195	None	ST_MX_OC_Sun			
+	3384621607	Unreveal	ST_MX_OC_Sun			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
