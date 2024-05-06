@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using NaughtyAttributes;
 using System;
@@ -13,6 +14,8 @@ namespace LW.Level
         [SerializeField] List<RevealableItem> itemsRevealed;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
+        [SerializeField] bool playWwiseEventOnReveal = false;
+        [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
 
         bool isRevealed = false;
         WordDatabaseEntry entry;
@@ -49,6 +52,9 @@ namespace LW.Level
 
                 revealableItem.RevealItem(textureMaps[usedInput]);
             }
+
+            if (playWwiseEventOnReveal)
+                WwiseInterface.Instance.PlayEvent(eventToPlay);
 
             isRevealed = true;
         }
