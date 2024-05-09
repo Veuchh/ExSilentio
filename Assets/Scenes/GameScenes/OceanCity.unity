@@ -766,6 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 48495220}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -791,6 +792,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &48495220 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1575549668321891846, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -1767,6 +1769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   attachedRenderer: {fileID: 95659186}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -1792,6 +1795,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!1 &100813315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,6 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 127683791}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -2232,6 +2237,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &127683791 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4230838054575196457, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -2864,6 +2870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 175266058}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -2889,6 +2896,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &175266058 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -2915,6 +2923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 191866882}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -2940,6 +2949,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &191866882 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -9039956921166636824, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -2966,6 +2976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 192419938}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -2991,6 +3002,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &192419938 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8369182139229439107, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -3171,6 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 215968182}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -3196,6 +3209,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &215968182 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -3222,6 +3236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 227379549}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -3247,6 +3262,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &227379549 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4543051378714489744, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -3595,6 +3611,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 3226229977787474963, guid: 53da21614fdbda94d9e324d07f92bbc8,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226229977787474963, guid: 53da21614fdbda94d9e324d07f92bbc8,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226229977787474963, guid: 53da21614fdbda94d9e324d07f92bbc8,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226229977787474963, guid: 53da21614fdbda94d9e324d07f92bbc8,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7175570232818469126, guid: 53da21614fdbda94d9e324d07f92bbc8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3676,6 +3712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 291856785}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -3701,6 +3738,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &291856785 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -4350,6 +4388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 366615526}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -4375,6 +4414,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &366615526 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -4401,6 +4441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 375876844}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -4426,51 +4467,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &375876844 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5667491192268232113, guid: c2c0027ef7c05f1438afff6e0af3a883,
     type: 3}
   m_PrefabInstance: {fileID: 1735549597}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &381043826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437324561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 8
-  attachedRenderer: {fileID: 1437324562}
-  revealCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  revealDuration: 1
 --- !u!114 &389114842 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7030096893517316790, guid: 29a991cfd2681814da5eb7f2656e6860,
@@ -4509,6 +4512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 402929885}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -4534,6 +4538,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &402929885 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -4566,6 +4571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 406534984}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -4591,6 +4597,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &406534984 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -5071,6 +5078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 426802812}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5096,6 +5104,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &426802812 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -5239,6 +5248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 432717237}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5264,6 +5274,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &432717237 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -5302,6 +5313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   attachedRenderer: {fileID: 444348466}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5327,6 +5339,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!1 &465025911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5563,6 +5576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   attachedRenderer: {fileID: 475383405}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5588,6 +5602,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!1 &487069025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2258462336379063567, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -5608,6 +5623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 487069028}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5633,6 +5649,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &487069028 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1971750908059995519, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -5948,6 +5965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 514555280}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -5973,6 +5991,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &514555280 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -6047,6 +6066,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29a991cfd2681814da5eb7f2656e6860, type: 3}
+--- !u!2083052967 &529903054 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 6052073318469407926, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530772508
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,6 +6539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 597284375}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -6539,6 +6565,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &597284375 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -8004,6 +8031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 769934895}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -8029,6 +8057,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &769934895 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -8055,6 +8084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 774059987}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -8080,6 +8110,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &774059987 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4132051322102484889, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -8106,6 +8137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 780247699}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -8131,6 +8163,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &780247699 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7826161148629109008, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -8526,6 +8559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 830456800}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -8551,6 +8585,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &830456800 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -8837,6 +8872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 866973417}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -8862,6 +8898,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &866973417 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5354429748500497489, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -9221,6 +9258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 916379187}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -9246,6 +9284,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &916379187 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -9914,6 +9953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 962923666}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -9939,6 +9979,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &962923666 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -15122,6 +15163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1012458720}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -15147,6 +15189,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1012458720 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -15173,6 +15216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1019582979}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -15198,6 +15242,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1019582979 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6919369599069129061, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -15471,6 +15516,47 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1410034877}
   m_SourcePrefab: {fileID: 100100000, guid: d667bdd607bf17242ba1a41b9262c17a, type: 3}
+--- !u!114 &1089797868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437324557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 1288874391}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  type: 1
 --- !u!114 &1094127991 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 524792547839934437, guid: 29a991cfd2681814da5eb7f2656e6860,
@@ -15588,45 +15674,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100633824}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1101775775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437324559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 8
-  attachedRenderer: {fileID: 1437324560}
-  revealCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  revealDuration: 1
 --- !u!1001 &1112607430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16197,22 +16244,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 1437324571}
-  - {fileID: 1437324570}
-  - {fileID: 1437324569}
-  - {fileID: 381043826}
-  - {fileID: 1101775775}
-  - {fileID: 1243825231}
-  - {fileID: 1844484227}
+  - {fileID: 1437324578}
+  - {fileID: 1437324577}
+  - {fileID: 1924598764}
+  - {fileID: 2010331007}
+  - {fileID: 1089797868}
+  - {fileID: 1844484230}
   awaitedID: 8
   objectImportance: 0
-  playWwiseEventOnReveal: 1
+  playWwiseEventOnReveal: 0
   eventToPlay:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 69de49cc24498bb4fa7b376796d9a2f3,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1179980376
 GameObject:
   m_ObjectHideFlags: 0
@@ -16356,6 +16402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1190145453}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -16381,6 +16428,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!114 &1192589745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4996435360630511237, guid: 29a991cfd2681814da5eb7f2656e6860,
@@ -16737,45 +16785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1243825231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437324557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 8
-  attachedRenderer: {fileID: 1437324558}
-  revealCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  revealDuration: 1
 --- !u!1 &1256816050
 GameObject:
   m_ObjectHideFlags: 0
@@ -17231,6 +17240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1286609222}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -17256,11 +17266,18 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1286609222 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
     type: 3}
   m_PrefabInstance: {fileID: 2087883880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &1288874391 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 1722540759873052849, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1293950800 stripped
 GameObject:
@@ -17288,6 +17305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1293950803}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -17313,6 +17331,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1293950803 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -17339,6 +17358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1298679039}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -17364,6 +17384,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1298679039 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 9175866838256998340, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -17396,6 +17417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1318207657}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -17421,6 +17443,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1318207657 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -17755,6 +17778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1360833591}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -17780,6 +17804,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1360833591 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -17968,7 +17993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 1627397279}
   - {fileID: 1190145455}
   - {fileID: 830456799}
@@ -18435,6 +18460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1410034878}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -18460,6 +18486,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1410034878 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -18597,6 +18624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1420974353}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -18622,6 +18650,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1420974353 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -18902,27 +18931,27 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4977763348462687108, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1437324570}
+      addedObject: {fileID: 1437324578}
     - targetCorrespondingSourceObject: {fileID: 5309786613205019107, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1437324569}
+      addedObject: {fileID: 1437324577}
     - targetCorrespondingSourceObject: {fileID: 6435565862002207018, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 381043826}
+      addedObject: {fileID: 1924598764}
     - targetCorrespondingSourceObject: {fileID: 2041431905642860671, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1101775775}
+      addedObject: {fileID: 2010331007}
     - targetCorrespondingSourceObject: {fileID: 7314429957117317573, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1243825231}
+      addedObject: {fileID: 1089797868}
     - targetCorrespondingSourceObject: {fileID: 7046690742940819404, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1844484227}
+      addedObject: {fileID: 1844484230}
   m_SourcePrefab: {fileID: 100100000, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45, type: 3}
 --- !u!4 &1437324554 stripped
 Transform:
@@ -18936,21 +18965,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324556 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 3536705331164137058, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437324557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7314429957117317573, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324558 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 869293794616989900, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
@@ -18960,21 +18977,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324560 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 7969573185519843771, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437324561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6435565862002207018, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324562 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 4357656639622201001, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
@@ -18984,21 +18989,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324564 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 2533430365398498340, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437324565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4977763348462687108, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1437324553}
-  m_PrefabAsset: {fileID: 0}
---- !u!73398921 &1437324566 stripped
-VFXRenderer:
-  m_CorrespondingSourceObject: {fileID: 471073473433954628, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
@@ -19014,84 +19007,6 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1437324553}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1437324569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437324563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 8
-  attachedRenderer: {fileID: 1437324564}
-  revealCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  revealDuration: 1
---- !u!114 &1437324570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437324565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 8
-  attachedRenderer: {fileID: 1437324566}
-  revealCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  revealDuration: 1
 --- !u!114 &1437324571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19106,6 +19021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   attachedRenderer: {fileID: 1437324568}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -19131,6 +19047,101 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
+--- !u!2083052967 &1437324573 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 7191096789704716101, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &1437324575 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 4266414738961146504, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1437324577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437324563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 1437324573}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  type: 1
+--- !u!114 &1437324578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437324565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 1437324575}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  type: 1
 --- !u!1 &1438323055
 GameObject:
   m_ObjectHideFlags: 0
@@ -19256,6 +19267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1443282150}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -19281,6 +19293,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1443282150 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2425690243087268844, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -19650,7 +19663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 444348469}
   awaitedID: 6
   objectImportance: 0
@@ -19680,6 +19693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1507477470}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -19705,6 +19719,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1507477470 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 555074830921971922, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -20154,6 +20169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1550991314}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -20179,6 +20195,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1550991314 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -20211,6 +20228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1555067666}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -20236,6 +20254,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1555067666 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -20679,6 +20698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1585380613}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -20704,6 +20724,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1585380613 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5447331667604542231, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -21045,6 +21066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1604483875}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -21070,6 +21092,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1604483875 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -21121,7 +21144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 1860656659}
   - {fileID: 95659188}
   - {fileID: 475383407}
@@ -21482,6 +21505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   attachedRenderer: {fileID: 1627397280}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -21507,6 +21531,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1627397280 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -22360,6 +22385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 1792968502}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -22385,6 +22411,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1792968502 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7557782100753133831, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -22742,7 +22769,13 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1844484227
+--- !u!2083052967 &1844484229 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 7037794404126788735, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844484230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22755,7 +22788,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 8
-  attachedRenderer: {fileID: 1437324556}
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 1844484229}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -22781,6 +22815,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 1
 --- !u!114 &1845873040 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3012554743072616407, guid: 29a991cfd2681814da5eb7f2656e6860,
@@ -23245,6 +23280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   attachedRenderer: {fileID: 1860656656}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -23270,6 +23306,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!1 &1868650648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -23296,6 +23333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1868650651}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -23321,6 +23359,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1868650651 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -23560,6 +23599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 1890836567}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -23585,6 +23625,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &1890836567 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -23853,7 +23894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 674899285}
   - {fileID: 1398014183}
   - {fileID: 961439370}
@@ -23981,6 +24022,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!2083052967 &1924598763 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 5629141110850999828, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437324553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924598764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437324561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 1924598763}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  type: 1
 --- !u!1 &1926169395
 GameObject:
   m_ObjectHideFlags: 0
@@ -24532,6 +24620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 2000564920}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -24557,6 +24646,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2000564920 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -24589,6 +24679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 2000920085}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -24614,12 +24705,54 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2000920085 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
     type: 3}
   m_PrefabInstance: {fileID: 2143900778}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2010331007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437324559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  attachedRenderer: {fileID: 0}
+  vfx: {fileID: 529903054}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  type: 1
 --- !u!1 &2013148530
 GameObject:
   m_ObjectHideFlags: 0
@@ -24958,6 +25091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 2028265307}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -24983,6 +25117,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2028265307 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -25661,6 +25796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 2057947457}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -25686,6 +25822,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2057947457 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
@@ -25724,6 +25861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 2062348087}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -25749,6 +25887,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2062348087 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5072044128080396394, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -25775,6 +25914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 2064275398}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -25800,6 +25940,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2064275398 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3524007147160623222, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -25826,6 +25967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   attachedRenderer: {fileID: 2066450254}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -25851,6 +25993,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2066450254 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 320865423681272570, guid: c2c0027ef7c05f1438afff6e0af3a883,
@@ -25902,7 +26045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRevealed:
+  itemsInBundle:
   - {fileID: 1298679038}
   - {fileID: 1792968501}
   - {fileID: 192419937}
@@ -26487,6 +26630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   attachedRenderer: {fileID: 2136090036}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -26512,6 +26656,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  type: 0
 --- !u!23 &2136090036 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d667bdd607bf17242ba1a41b9262c17a,
