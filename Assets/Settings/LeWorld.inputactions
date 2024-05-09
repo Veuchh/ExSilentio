@@ -67,6 +67,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "NavigateConsoleUp",
+                    "type": "Button",
+                    "id": "3f709e9b-37e0-4208-95f4-548e62162993",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NavigateConsoleDown",
+                    "type": "Button",
+                    "id": "b59aa29f-d325-432a-90cb-dbd97c27d574",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -287,6 +305,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "OutputLog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0dca1e96-e03a-485e-b79a-32d5c5cd0e34",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigateConsoleUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5f1251b-d642-4ecd-b9c7-9a7554d1c364",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigateConsoleDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

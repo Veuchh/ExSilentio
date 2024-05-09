@@ -109,5 +109,15 @@ namespace LW.Player
         {
             CustomLogger.CompileDataToCSV();
         }
+
+        public void OnNavigateConsoleUp(InputValue value)
+        {
+            wordManager.OnNavigateConsoleHistory(-1);
+        }
+
+        public void OnNavigateConsoleDown(InputValue value)
+        {
+            wordManager.OnNavigateConsoleHistory(1);
+        }
     }
 }

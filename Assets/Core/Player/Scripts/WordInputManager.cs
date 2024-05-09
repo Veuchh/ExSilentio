@@ -7,6 +7,7 @@ using LW.Word;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -39,6 +40,10 @@ namespace LW.Player
         [SerializeField] float chainDeleteDelay = .05f;
         float nextDeleteTime = 0;
         bool isDeleting = false;
+
+        //Console navigation
+        List<string> previousInputs = new List<string>();
+        int currentNavigationIndex;
 
         private void Awake()
         {
@@ -135,6 +140,9 @@ namespace LW.Player
             if (string.IsNullOrEmpty(currentWordInput))
                 return;
 
+            previousInputs.Add(currentWordInput);
+            ResetConsoleNavigaion();
+
             CustomLogger.OnWordInput(currentWordInput, Vector3.zero, 0);
 
             if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnUseCommand))
@@ -195,6 +203,31 @@ namespace LW.Player
         void OnWordRevealed()
         {
             PlayerInputsHandler.Instance.ToggleWordMode();
+        }
+
+        public void OnNavigateConsoleHistory(int delta)
+        {
+            currentNavigationIndex = Mathf.Clamp(currentNavigationIndex + delta, 0, previousInputs.Count);
+            SetInputAsHistoryIndex();
+        }
+
+        void SetInputAsHistoryIndex()
+        {
+            if (currentNavigationIndex >= 0 && currentNavigationIndex < previousInputs.Count)
+            {
+                currentWordInput = previousInputs[currentNavigationIndex];
+                ConsoleUI.Instance.UpdateInput(currentWordInput);
+            }
+            else
+            {
+                ClearWord();
+                ConsoleUI.Instance.UpdateInput(currentWordInput);
+            }
+        }
+
+        void ResetConsoleNavigaion()
+        {
+            currentNavigationIndex = previousInputs.Count;
         }
     }
 }
