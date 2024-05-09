@@ -3,6 +3,7 @@ using LW.Data;
 using UnityEngine;
 using NaughtyAttributes;
 using LW.Logger;
+using System;
 
 namespace LW.Player
 {
@@ -10,6 +11,9 @@ namespace LW.Player
     public class PlayerMovement : MonoBehaviour
     {
         const float DEFAULT_GRAVITY = -.5f;
+        const string CONRETE_GROUND_TAG = "Concrete";
+        const string WATER_GROUND_TAG = "Water";
+
         [SerializeField] CharacterController characterController;
         [SerializeField] Transform cameraTransform;
 
@@ -20,6 +24,14 @@ namespace LW.Player
         [Header("RotationSettings Settings")]
         [SerializeField] float rotationSpeed = 10;
         [SerializeField, MinMaxSlider(-180, 180)] Vector2 verticalLookClamp;
+
+        [Header("Audio Settings")]
+        [SerializeField] AK.Wwise.Event footstepEvent;
+        [SerializeField] AK.Wwise.Switch concreteSwitch;
+        [SerializeField] AK.Wwise.Switch waterSwitch;
+
+        uint footstepEventID;
+        bool isFootstepPlaying = false;
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
 
@@ -60,6 +72,47 @@ namespace LW.Player
                 nextUpdateTime += updateTick;
                 CustomLogger.AddToTrajectoryHistory(transform.position);
             }
+
+            Footsteps(movement);
+        }
+
+        private void Footsteps(Vector3 currentMovement)
+        {
+           Vector2 horizontalMovement = new Vector2(currentMovement.x, currentMovement.z);
+
+            //Play footstep event
+            if (!isFootstepPlaying && characterController.isGrounded && horizontalMovement.sqrMagnitude > 0)
+            {
+                footstepEventID = WwiseInterface.Instance.PlayEvent(footstepEvent, gameObject);
+                isFootstepPlaying = true;
+            }
+
+            //Stop footstep event
+            if (isFootstepPlaying && (horizontalMovement.sqrMagnitude == 0 || !characterController.isGrounded))
+            {
+                WwiseInterface.Instance.StopEvent(footstepEventID);
+                isFootstepPlaying = false;
+                footstepEventID = 0;
+            }
+
+            if (characterController.isGrounded)
+            {
+                float maxRayDistance = .2f;
+                Physics.Raycast(transform.position + Vector3.up * .1f, Vector3.down, out RaycastHit hit, maxRayDistance);
+
+                if (hit.collider == null)
+                    return;
+
+                switch (hit.collider.tag)
+                {
+                    case CONRETE_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(concreteSwitch, gameObject);
+                        break;
+                    case WATER_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(waterSwitch, gameObject);
+                        break;
+                }
+            }
         }
 
         private void ComputeRotation()
@@ -82,7 +135,7 @@ namespace LW.Player
 
 
             //Horizontal rotation
-          //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
+            //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
             Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
         }
