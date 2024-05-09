@@ -26,13 +26,19 @@ namespace LW.Player
         [SerializeField] WordDatabase wordDatabase;
         [SerializeField] WordCorrector wordCorrector;
 
-        [Header("WwiseEvents")]
+        [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClOpen;
         [SerializeField] AK.Wwise.Event uiClClose;
         [SerializeField] AK.Wwise.Event uiClWriteText;
         [SerializeField] AK.Wwise.Event uiClDeleteText;
         [SerializeField] AK.Wwise.Event uiClWordEnter;
         string currentWordInput;
+
+        [Header("Input Settings")]
+        [SerializeField] float startchainDeleteDelay = .2f;
+        [SerializeField] float chainDeleteDelay = .05f;
+        float nextDeleteTime = 0;
+        bool isDeleting = false;
 
         private void Awake()
         {
@@ -42,6 +48,15 @@ namespace LW.Player
         private void OnDestroy()
         {
             ConsoleUI.onCommandClicked -= OnUseCommand;
+        }
+
+        private void Update()
+        {
+            while (isDeleting && Time.time > nextDeleteTime)
+            {
+                nextDeleteTime += chainDeleteDelay;
+                RemoveCharacter();
+            }
         }
 
         public void ToggleConsole(bool isToggled)
@@ -67,13 +82,25 @@ namespace LW.Player
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
 
-        public void RemoveCharacter()
+        public void ToggleDelete(bool deleteToggled)
+        {
+            if (deleteToggled)
+            {
+                RemoveCharacter();
+                nextDeleteTime = Time.time + startchainDeleteDelay;
+            }
+
+            isDeleting = deleteToggled;
+        }
+
+        void RemoveCharacter()
         {
             if (!string.IsNullOrEmpty(currentWordInput))
             {
                 currentWordInput = currentWordInput.Substring(0, currentWordInput.Length - 1);
                 ConsoleUI.Instance.UpdateInput(currentWordInput);
             }
+
             WwiseInterface.Instance.PlayEvent(uiClDeleteText);
         }
 
