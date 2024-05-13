@@ -31,20 +31,14 @@ public class StringToTextureConverter : MonoBehaviour
     {
         Instance = this;
 
-        
+        GenerateDefaultTexture();
     }
-    bool isDefaultTextureGenerated = false;
-    private void OnRenderObject()
-    {
-        if (isDefaultTextureGenerated) return;
 
-        isDefaultTextureGenerated = true;
+    private void GenerateDefaultTexture()
+    {
         //Create default black texture
         sourceTexture = new Texture2D(1, 1, TextureFormat.RGBA32, -1, false, false);
-
-        sourceTexture.alphaIsTransparency = true;
         sourceTexture.SetPixel(0, 0, new Color(0, 0, 0, 0));
-        sourceTexture.ReadPixels(new Rect(0, 0, sourceTexture.width, sourceTexture.height), 0, 0);
         sourceTexture.wrapMode = TextureWrapMode.Clamp;
         sourceTexture.Apply();
     }
@@ -54,7 +48,6 @@ public class StringToTextureConverter : MonoBehaviour
         Texture2D output = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, -1, false, false);
 
         Graphics.ConvertTexture(sourceTexture, output);
-
         output.ReadPixels(new Rect(0, 0, output.width, output.height), 0, 0);
 
         input = input.ToUpper();
@@ -99,8 +92,6 @@ public class StringToTextureConverter : MonoBehaviour
             dstMip: 0,
             dstX: 0,
             dstY: 0);
-
-        letterBaseResolution.ReadPixels(new Rect(0, 0, letterBaseResolution.width, letterBaseResolution.height), 0, 0);
 
         Graphics.ConvertTexture(letterBaseResolution, output);
 
