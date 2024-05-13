@@ -476,7 +476,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584865339605298755
+    m_lastTime: -8584865096406438782
     List:
     - name: MX_OC_Awake
       guid: 862c6e688bf88949a69170649d89fc6a
@@ -535,6 +535,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: b0072b4e568f4942aedd7f6ea8432f29
       Path: Events\MX\MX_OceanCity\MX_OC_ST_Child
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_ChildEnter
+      guid: c055c38c57fee148b5aeb0f69f5a3d97
+      id: 3404723406
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_ChildEnter
+        ObjectType: 3
+        guid: c055c38c57fee148b5aeb0f69f5a3d97
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_ChildEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1037,7 +1057,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584866085041627609
+    m_lastTime: -8584865100351241015
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -1073,6 +1093,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 801db89d6f20e048aa1154dd89742376
       Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX
+    - name: GP_OC_MX_ChildExit
+      guid: 02ab3cc55ba7f34387a74b63e017326d
+      id: 3566296580
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      - ElementName: GP_OC_MX_ChildExit
+        ObjectType: 13
+        guid: 02ab3cc55ba7f34387a74b63e017326d
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit
     - name: GP_OceanCity
       guid: 1da2e570a6b65a468f458f76ba5d2e93
       id: 2861474034
@@ -1784,7 +1824,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d000000130000001400000015000000
+  ExpandedFileSystemItemIds: 0200000003000000060000000b0000000d0000001300000014000000150000001600000017000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

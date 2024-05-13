@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D00C7CF0-3233-D88D-B4EC-9A5BEDA8CFBA}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{99769910-2668-3861-DBFE-6EA3ACCC4A1C}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -24,6 +24,8 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
+				<GameParameter Id="3566296580" Name="GP_OC_MX_ChildExit" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit" GUID="{C53CAB02-A75B-43F3-87A7-4B63E017326D}"/>
+				<GameParameter Id="3815697657" Name="GP_OC_WaterHigh" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh" GUID="{FAA5339D-BEAD-4829-B320-C9D7A03BB665}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
@@ -71,7 +73,6 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\Switch\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
-					<GameParameterRef Id="226166670"/>
 					<Switches>
 						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
@@ -249,7 +250,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{AF7A5FE8-0BE9-8A27-9B98-D8C75A201F69}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{33CF88C8-6B03-9D3B-C6C2-B80F5033721F}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -594,11 +595,8 @@
 						<ActionSetStateEntry GroupId="867132074" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
-					</ActionSetState>
-				</Event>
+				<Event Id="3404723406" Name="MX_OC_ST_ChildEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildEnter" GUID="{8CC355C0-FE57-48E1-B5AE-B0F69F5A3D97}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1217064079" Name="MX_OC_ST_FontainEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter" GUID="{4D4C051C-61A1-43D2-840D-D4ABB6B17E3B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="104216065" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
@@ -649,7 +647,7 @@
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
+				<GameParameter Id="3566296580" Name="GP_OC_MX_ChildExit" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit" GUID="{C53CAB02-A75B-43F3-87A7-4B63E017326D}"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
@@ -697,7 +695,6 @@
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\Switch\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
-					<GameParameterRef Id="226166670"/>
 					<Switches>
 						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
@@ -736,5 +733,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B340F641-7279-2D6C-7313-E2DE91FF3B1B}</FileHash>
+	<FileHash>{2C4F4DC7-CF20-8712-A1E4-C24F4F3D5F06}</FileHash>
 </SoundBanksInfo>
