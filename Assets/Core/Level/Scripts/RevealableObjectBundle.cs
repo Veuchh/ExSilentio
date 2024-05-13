@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using NaughtyAttributes;
 using System;
@@ -5,14 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Serialization;
+using UnityEngine.VFX;
 
 namespace LW.Level
 {
     public class RevealableObjectBundle : MonoBehaviour
     {
-        [SerializeField] List<RevealableItem> itemsRevealed;
+        [SerializeField, FormerlySerializedAs("itemsRevealed")] List<RevealableItem> itemsInBundle;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
+        [SerializeField] bool playWwiseEventOnReveal = false;
+        [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
 
         bool isRevealed = false;
         WordDatabaseEntry entry;
@@ -32,7 +37,9 @@ namespace LW.Level
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
             Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
-            foreach (RevealableItem revealableItem in itemsRevealed)
+            textureMaps.Add(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, wordTexture);
+
+            foreach (RevealableItem revealableItem in itemsInBundle)
             {
                 //if the item id is the same as the expected but the used ID is different from the expect one, we change it
                 if (revealableItem.ID == awaitedID)
@@ -47,8 +54,11 @@ namespace LW.Level
                     textureMaps.Add(usedInput, StringToTextureConverter.Instance.GetTextureFromInput(usedInput));
                 }
 
-                revealableItem.RevealItem(textureMaps[usedInput]);
+                revealableItem.RevealItem(textureMaps[usedInput], usedInput.Length);
             }
+
+            if (playWwiseEventOnReveal)
+                WwiseInterface.Instance.PlayEvent(eventToPlay);
 
             isRevealed = true;
         }
@@ -56,9 +66,11 @@ namespace LW.Level
         [Button]
         void SetupElements()
         {
-            itemsRevealed = new List<RevealableItem>();
+            itemsInBundle = new List<RevealableItem>();
 
-            foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+
+            //Handles cases for the mesh renderers
+            foreach (MeshRenderer renderer in GetComponentsInChildren<MeshRenderer>())
             {
                 RevealableItem reveleableItem = renderer.GetComponent<RevealableItem>();
 
@@ -68,7 +80,21 @@ namespace LW.Level
                     reveleableItem.Init(awaitedID, renderer);
                 }
 
-                itemsRevealed.Add(reveleableItem);
+                itemsInBundle.Add(reveleableItem);
+            }
+
+            //Handles cases for VFX Graphs
+            foreach (VisualEffect vfx in GetComponentsInChildren<VisualEffect>())
+            {
+                RevealableItem reveleableItem = vfx.GetComponent<RevealableItem>();
+
+                if (reveleableItem == null)
+                {
+                    reveleableItem = vfx.gameObject.AddComponent<RevealableItem>();
+                    reveleableItem.Init(awaitedID, vfx);
+                }
+
+                itemsInBundle.Add(reveleableItem);
             }
         }
 
