@@ -121,6 +121,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 139502b3321f0a440a125739a23f0059,
       type: 2}
+  startchainDeleteDelay: 0.2
+  chainDeleteDelay: 0.05
 --- !u!114 &5369070425929500776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3dc0839e611ff04884f956dbe187246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringTable:
+  wordStringTable:
     m_TableReference:
       m_TableCollectionName: GUID:b82483cc0c585ae46a976025932d651f
+  commandStringTable:
+    m_TableReference:
+      m_TableCollectionName: GUID:ecb5f576e54c1e84c845ee20a321dfc3

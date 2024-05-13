@@ -76,14 +76,15 @@ namespace LW.Player
 
         public void OnBackspace(InputValue value)
         {
-            wordManager.RemoveCharacter();
+            if (isWordModeEnabled)
+                wordManager.ToggleDelete(value.Get<float>() > .5f);
         }
 
         public void ToggleWordMode()
         {
             isWordModeEnabled = !isWordModeEnabled;
 
-            LockMouse(!isWordModeEnabled);  
+            LockMouse(!isWordModeEnabled);
 
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
@@ -107,6 +108,16 @@ namespace LW.Player
         public void OnOutputLog(InputValue value)
         {
             CustomLogger.CompileDataToCSV();
+        }
+
+        public void OnNavigateConsoleUp(InputValue value)
+        {
+            wordManager.OnNavigateConsoleHistory(-1);
+        }
+
+        public void OnNavigateConsoleDown(InputValue value)
+        {
+            wordManager.OnNavigateConsoleHistory(1);
         }
     }
 }

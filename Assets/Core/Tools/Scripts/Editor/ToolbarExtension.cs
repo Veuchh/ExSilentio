@@ -23,12 +23,15 @@ public class ToolbarExtension
     {
         if (Application.isPlaying && GUILayout.Button(new GUIContent("Reveal All Core Objects")))
         {
+            float t = Time.realtimeSinceStartup;
             RevealableObjectHandler handler = Object.FindObjectOfType<RevealableObjectHandler>();
 
             if (handler != null)
             {
                 handler.RevealAllItemsOfType(ObjectImportance.Core);
             }
+
+            Debug.Log($"Revelead all object in {Time.realtimeSinceStartup - t} ms");
         }
         if (Application.isPlaying && GUILayout.Button(new GUIContent("Reveal All Secondary Objects")))
         {
