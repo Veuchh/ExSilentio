@@ -135,7 +135,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584865346616380043
+    m_lastTime: -8584859926790695927
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -154,9 +154,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: AMB_OC_Boat
+    - name: AMB_OC_BoatFar
       guid: 33d1c900177da248bf08e9ca701ed5c4
-      id: 2826138305
+      id: 355115256
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -167,16 +167,16 @@ MonoBehaviour:
       - ElementName: AMB_OceanCity
         ObjectType: 4
         guid: 0b541abb7f3cb046bf8f351963be05e5
-      - ElementName: AMB_OC_Boat
+      - ElementName: AMB_OC_BoatFar
         ObjectType: 3
         guid: 33d1c900177da248bf08e9ca701ed5c4
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Boat
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_BoatFar
       maxAttenuation: 156
       maxDuration: 22.438917
       minDuration: 11.602
-    - name: AMB_OC_Fontain
-      guid: 8b6eaaa12618be4380c40f56cbfeecde
-      id: 740376728
+    - name: AMB_OC_BoatIdle
+      guid: ceec6ba57a972c4bac1f1c7600db23ff
+      id: 2033445011
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -187,16 +187,16 @@ MonoBehaviour:
       - ElementName: AMB_OceanCity
         ObjectType: 4
         guid: 0b541abb7f3cb046bf8f351963be05e5
-      - ElementName: AMB_OC_Fontain
+      - ElementName: AMB_OC_BoatIdle
         ObjectType: 3
-        guid: 8b6eaaa12618be4380c40f56cbfeecde
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Fontain
-      maxAttenuation: 40
+        guid: ceec6ba57a972c4bac1f1c7600db23ff
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_BoatIdle
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: AMB_OC_Kids
-      guid: da2244b2e9a9f7458263f8d113fd3edc
-      id: 2880313612
+    - name: AMB_OC_ChildLaugh1
+      guid: 42169ba52e111f4ebbe7bb9ccb7ce8dc
+      id: 2535946479
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -207,11 +207,111 @@ MonoBehaviour:
       - ElementName: AMB_OceanCity
         ObjectType: 4
         guid: 0b541abb7f3cb046bf8f351963be05e5
-      - ElementName: AMB_OC_Kids
+      - ElementName: AMB_OC_ChildLaugh1
+        ObjectType: 3
+        guid: 42169ba52e111f4ebbe7bb9ccb7ce8dc
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh1
+      maxAttenuation: 21
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_ChildLaugh2
+      guid: 90385f2a81ef1a4eab2f16552d4fe633
+      id: 2535946476
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_ChildLaugh2
+        ObjectType: 3
+        guid: 90385f2a81ef1a4eab2f16552d4fe633
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh2
+      maxAttenuation: 21
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_ChildLaugh3
+      guid: af52688049d83d47b2777f800b86d689
+      id: 2535946477
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_ChildLaugh3
+        ObjectType: 3
+        guid: af52688049d83d47b2777f800b86d689
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh3
+      maxAttenuation: 21
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_ChildsReveal
+      guid: 27d8a682cc22c049837216404ca5dde9
+      id: 3630637613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_ChildsReveal
+        ObjectType: 3
+        guid: 27d8a682cc22c049837216404ca5dde9
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildsReveal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_OC_ChildsUnreaveal
+      guid: da2244b2e9a9f7458263f8d113fd3edc
+      id: 3385110621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_ChildsUnreaveal
         ObjectType: 3
         guid: da2244b2e9a9f7458263f8d113fd3edc
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Kids
-      maxAttenuation: 21
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildsUnreaveal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_Fountain
+      guid: 8b6eaaa12618be4380c40f56cbfeecde
+      id: 638998895
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_Fountain
+        ObjectType: 3
+        guid: 8b6eaaa12618be4380c40f56cbfeecde
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_Fountain
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Main
@@ -232,8 +332,28 @@ MonoBehaviour:
         guid: 3fc6f63323519b4f8ee8672419db62e6
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Main
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_SeagullBarks
+      guid: 3f1e4a82c4318a4f853b5983aa60f401
+      id: 380529525
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_SeagullBarks
+        ObjectType: 3
+        guid: 3f1e4a82c4318a4f853b5983aa60f401
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_SeagullBarks
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_OC_Train_Swish
       guid: f52bd0bb7c700a45a476135c6cca451a
       id: 561950100
@@ -294,9 +414,9 @@ MonoBehaviour:
       maxAttenuation: 45
       maxDuration: -1
       minDuration: -1
-    - name: AMB_OC_Water
-      guid: cb231ecd35c72f43854fc2962ec3fe3d
-      id: 1628818968
+    - name: AMB_OC_WaterSplocBuilding
+      guid: da42c8b2cb51d847b2859dc0a1db50aa
+      id: 1772926457
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -307,13 +427,93 @@ MonoBehaviour:
       - ElementName: AMB_OceanCity
         ObjectType: 4
         guid: 0b541abb7f3cb046bf8f351963be05e5
-      - ElementName: AMB_OC_Water
+      - ElementName: AMB_OC_WaterSplocBuilding
         ObjectType: 3
-        guid: cb231ecd35c72f43854fc2962ec3fe3d
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Water
+        guid: da42c8b2cb51d847b2859dc0a1db50aa
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_WaterSplocBuilding
       maxAttenuation: 100
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_Wind
+      guid: 7f7ff24359cd0b45a1aa26e32a52ad3f
+      id: 931952533
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_Wind
+        ObjectType: 3
+        guid: 7f7ff24359cd0b45a1aa26e32a52ad3f
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_WindCan
+      guid: 1fc18eafb610ed48bdb89e80aa368dc9
+      id: 864634897
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_WindCan
+        ObjectType: 3
+        guid: 1fc18eafb610ed48bdb89e80aa368dc9
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindCan
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_WindChim
+      guid: 42d9e4d52ee62b4d907c54b25dc465a7
+      id: 321855098
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_WindChim
+        ObjectType: 3
+        guid: 42d9e4d52ee62b4d907c54b25dc465a7
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindChim
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_WindWisthling
+      guid: 018ab326c4257c4188ec004600b2145b
+      id: 3333365000
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_WindWisthling
+        ObjectType: 3
+        guid: 018ab326c4257c4188ec004600b2145b
+      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindWisthling
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_OceanCity
       guid: 0b541abb7f3cb046bf8f351963be05e5
       id: 1709551633
@@ -1057,7 +1257,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584865100351241015
+    m_lastTime: -8584860022724559318
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -1113,6 +1313,23 @@ MonoBehaviour:
         ObjectType: 13
         guid: 02ab3cc55ba7f34387a74b63e017326d
       Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit
+    - name: GP_OC_WaterHigh
+      guid: 9d33a5faadbe2948b320c9d7a03bb665
+      id: 3815697657
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_WaterHigh
+        ObjectType: 13
+        guid: 9d33a5faadbe2948b320c9d7a03bb665
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh
     - name: GP_OceanCity
       guid: 1da2e570a6b65a468f458f76ba5d2e93
       id: 2861474034
@@ -1152,7 +1369,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584866044069678562
+    m_lastTime: -8584860001105144387
     List:
     - name: ST_MX_OC_Buildings
       guid: a5022f150a580645bfd46e8e89afcd13
@@ -1758,7 +1975,7 @@ MonoBehaviour:
     ParentPath: Switches\Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584866049742448944
+    m_lastTime: -8584860186351210243
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -1824,7 +2041,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 0200000003000000060000000b0000000d0000001300000014000000150000001600000017000000
+  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d0000001300000014000000150000001600000017000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
