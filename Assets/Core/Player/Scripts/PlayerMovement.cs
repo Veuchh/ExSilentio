@@ -97,7 +97,7 @@ namespace LW.Player
 
             if (characterController.isGrounded)
             {
-                float maxRayDistance = .2f;
+                float maxRayDistance = 1f;
                 Physics.Raycast(transform.position + Vector3.up * .1f, Vector3.down, out RaycastHit hit, maxRayDistance);
 
                 if (hit.collider == null)
