@@ -27,7 +27,7 @@ public static class StringToTextureTest
         sourceTexture.Apply();
     }
 
-    public static Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
+    public static Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0, bool isVertical = false)
     {
         GenerateDefaultTexture();
 
@@ -39,16 +39,46 @@ public static class StringToTextureTest
         input = input.ToUpper();
 
         output.wrapMode = TextureWrapMode.Clamp;
-        int characterWidth = (textureSize - wordPadding * 2) / input.Length;
-        int characterHeight = characterWidth * 2;
 
-        int letterHeightPos = textureSize / 2 - characterHeight / 2;
-
-        for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
+        if (isVertical)
         {
-            Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+            int characterHeight = (textureSize - wordPadding * 2) / input.Length;
+            int characterWidth = characterHeight / 2;
 
-            Graphics.CopyTexture(characterColors, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0, wordPadding + characterIndex * characterWidth, letterHeightPos);
+            int letterWidthPos = textureSize / 2 - characterWidth / 2;
+
+            for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
+            {
+                Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+
+                Graphics.CopyTexture(characterColors,
+                    0,
+                    0,
+                    0,
+                    0,
+                    characterWidth,
+                    characterHeight,
+                    output,
+                    0,
+                    0,
+                    dstX: letterWidthPos,
+                    dstY: wordPadding + (input.Length - characterIndex - 1) * characterHeight);
+            }
+        }
+
+        else
+        {
+            int characterWidth = (textureSize - wordPadding * 2) / input.Length;
+            int characterHeight = characterWidth * 2;
+
+            int letterHeightPos = textureSize / 2 - characterHeight / 2;
+
+            for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
+            {
+                Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+
+                Graphics.CopyTexture(characterColors, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0, wordPadding + characterIndex * characterWidth, letterHeightPos);
+            }
         }
 
         output.Apply();

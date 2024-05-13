@@ -28,7 +28,7 @@ namespace LW.Editor.Tools
 
             if (GUILayout.Button("Generate Texture"))
             {
-                Texture2D texture = StringToTextureTest.GetTextureFromInput(input);
+                Texture2D texture = StringToTextureTest.GetTextureFromInput(input, isVertical:createVertical);
 
                 //then Save To Disk as PNG
                 byte[] bytes = texture.EncodeToPNG();
