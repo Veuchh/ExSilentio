@@ -1,16 +1,16 @@
+using LW.Data;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class StringToTextureConverter : MonoBehaviour
+public static class StringToTextureTest
 {
-    Texture2D sourceTexture;
+    const string ATLAS_REFERENCE_PATH = "Assets/Core/Tools/ScriptableObjects/LetterReferences.asset";
+    static Texture2D sourceTexture;
     const int CHARACTER_TEXTURE_WIDTH = 410;
 
-    public static StringToTextureConverter Instance;
-
-    [SerializeField] List<Sprite> spritesList;
-
-    List<char> charList = new List<char>()
+    static List<char> charList = new List<char>()
 {
     ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -18,14 +18,7 @@ public class StringToTextureConverter : MonoBehaviour
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
-    private void Start()
-    {
-        Instance = this;
-
-        GenerateDefaultTexture();
-    }
-
-    private void GenerateDefaultTexture()
+    private static void GenerateDefaultTexture()
     {
         //Create default black texture
         sourceTexture = new Texture2D(1, 1, TextureFormat.RGBA32, -1, false, false);
@@ -34,8 +27,10 @@ public class StringToTextureConverter : MonoBehaviour
         sourceTexture.Apply();
     }
 
-    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
+    public static Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0)
     {
+        GenerateDefaultTexture();
+
         Texture2D output = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, -1, false, false);
 
         Graphics.ConvertTexture(sourceTexture, output);
@@ -61,9 +56,9 @@ public class StringToTextureConverter : MonoBehaviour
         return output;
     }
 
-    Texture2D GetLetterTexture(char chr, int outputWidth, int outputHeight)
+    static Texture2D GetLetterTexture(char chr, int outputWidth, int outputHeight)
     {
-        Sprite characterSprite = spritesList[charList.IndexOf(chr)];
+        Sprite characterSprite = ((LetterAtlasReference)AssetDatabase.LoadAssetAtPath(ATLAS_REFERENCE_PATH, typeof(LetterAtlasReference))).SpritesList[charList.IndexOf(chr)];
         Rect textureRect = characterSprite.textureRect;
 
         Texture2D output = new Texture2D(outputWidth, outputHeight, TextureFormat.RGBA32, -1, false, false);
