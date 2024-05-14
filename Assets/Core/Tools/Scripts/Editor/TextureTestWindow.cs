@@ -12,6 +12,7 @@ namespace LW.Editor.Tools
     {
         static TextureTestWindow textureTestWindow;
         static string input;
+        static int textWidth = 512;
         static bool createVertical = false;
 
         [MenuItem("Window/Texture test")]
@@ -28,7 +29,7 @@ namespace LW.Editor.Tools
 
             if (GUILayout.Button("Generate Texture"))
             {
-                Texture2D texture = StringToTextureTest.GetTextureFromInput(input, isVertical:createVertical);
+                Texture2D texture = StringToTextureTest.GetTextureFromInput(input, isVertical: createVertical);
 
                 //then Save To Disk as PNG
                 byte[] bytes = texture.EncodeToPNG();
@@ -38,6 +39,29 @@ namespace LW.Editor.Tools
                     Directory.CreateDirectory(dirPath);
                 }
                 File.WriteAllBytes(dirPath + input + ".png", bytes);
+
+                AssetDatabase.Refresh();
+            }
+
+            textWidth = EditorGUILayout.IntField("Texture width", textWidth);
+
+            EditorGUI.BeginDisabledGroup(true);
+            EditorGUILayout.IntField("Texture height", textWidth * 2);
+            EditorGUI.EndDisabledGroup();
+
+            if (GUILayout.Button("Generate Character Texture"))
+            {
+                Texture2D texture = StringToTextureTest.GetCharacterTexture(input[0], textWidth, textWidth * 2);
+
+                //then Save To Disk as PNG
+                byte[] bytes = texture.EncodeToPNG();
+                var dirPath = Application.dataPath + "/Core/Tools/Textures/";
+                if (!Directory.Exists(dirPath))
+                {
+                    Directory.CreateDirectory(dirPath);
+                }
+
+                File.WriteAllBytes(dirPath + input[0] + ".png", bytes);
 
                 AssetDatabase.Refresh();
             }

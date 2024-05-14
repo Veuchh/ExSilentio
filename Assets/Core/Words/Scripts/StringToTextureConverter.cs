@@ -49,18 +49,18 @@ public class StringToTextureConverter : MonoBehaviour
 
         if (isVertical)
         {
-            float characterHeight = (textureSize - wordPadding * 2) / input.Length;
-            float characterWidth = characterHeight / 2;
+            int characterHeight = (textureSize - wordPadding * 2) / input.Length;
+            int characterWidth = characterHeight / 2;
 
-            float letterWidthPos = textureSize / 2 - characterWidth / 2;
+            int letterWidthPos = textureSize / 2 - characterWidth / 2;
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterColors = GetLetterTexture(input[characterIndex], Mathf.FloorToInt(characterWidth), Mathf.FloorToInt(characterHeight));
+                Texture2D characterTexture = GetCharacterTexture(input[characterIndex],characterWidth, characterHeight);
 
-                Graphics.CopyTexture(characterColors, 0, 0, 0, 0, Mathf.FloorToInt(characterWidth), Mathf.FloorToInt(characterHeight), output, 0, 0,
-                    dstX: Mathf.FloorToInt(letterWidthPos),
-                   dstY: Mathf.FloorToInt(wordPadding + (input.Length - characterIndex - 1) * characterHeight));
+                Graphics.CopyTexture(characterTexture, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0,
+                    dstX: letterWidthPos,
+                   dstY: (wordPadding + (input.Length - characterIndex - 1) * characterHeight));
             }
         }
 
@@ -73,7 +73,7 @@ public class StringToTextureConverter : MonoBehaviour
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+                Texture2D characterColors = GetCharacterTexture(input[characterIndex], characterWidth, characterHeight);
 
                 Graphics.CopyTexture(characterColors, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0, wordPadding + characterIndex * characterWidth, letterHeightPos);
             }
@@ -84,18 +84,24 @@ public class StringToTextureConverter : MonoBehaviour
         return output;
     }
 
-    Texture2D GetLetterTexture(char chr, int outputWidth, int outputHeight)
+    Texture2D GetCharacterTexture(char chr, int outputWidth, int outputHeight)
     {
         if (!charList.Contains(chr))
             return null;
 
+        //retrieve the sprite of the character
         Sprite characterSprite = spritesList[charList.IndexOf(chr)];
+
+        //retrieve the coordinates of the character texture within the atlas
         Rect textureRect = characterSprite.textureRect;
 
+        //Create the output texture with the proper size
         Texture2D output = new Texture2D(outputWidth, outputHeight, TextureFormat.RGBA32, -1, false, false);
 
+        //Create the texture of the letter that we are copying
         Texture2D letterBaseResolution = new Texture2D(Mathf.FloorToInt(characterSprite.textureRect.width), Mathf.FloorToInt(characterSprite.textureRect.height), TextureFormat.RGBA32, -1, false, false);
 
+        //Create the texture of the letter into the texture we just created
         Graphics.CopyTexture(
             src: characterSprite.texture,
             srcElement: 0,
@@ -110,8 +116,10 @@ public class StringToTextureConverter : MonoBehaviour
             dstX: 0,
             dstY: 0);
 
+        //Copy the texture of the letter to the proper size
         Graphics.ConvertTexture(letterBaseResolution, output);
 
+        //Retrieves the pixels data from the GPU to the CPU
         output.ReadPixels(new Rect(0, 0, output.width, output.height), 0, 0);
 
         return output;

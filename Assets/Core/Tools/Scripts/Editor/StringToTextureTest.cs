@@ -49,7 +49,7 @@ public static class StringToTextureTest
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+                Texture2D characterColors = GetCharacterTexture(input[characterIndex], characterWidth, characterHeight);
 
                 Graphics.CopyTexture(characterColors,
                     0,
@@ -75,7 +75,7 @@ public static class StringToTextureTest
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterColors = GetLetterTexture(input[characterIndex], characterWidth, characterHeight);
+                Texture2D characterColors = GetCharacterTexture(input[characterIndex], characterWidth, characterHeight);
 
                 Graphics.CopyTexture(characterColors, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0, wordPadding + characterIndex * characterWidth, letterHeightPos);
             }
@@ -86,15 +86,21 @@ public static class StringToTextureTest
         return output;
     }
 
-    static Texture2D GetLetterTexture(char chr, int outputWidth, int outputHeight)
+    public static Texture2D GetCharacterTexture(char chr, int outputWidth, int outputHeight)
     {
+        //retrieve the sprite of the character
         Sprite characterSprite = ((LetterAtlasReference)AssetDatabase.LoadAssetAtPath(ATLAS_REFERENCE_PATH, typeof(LetterAtlasReference))).SpritesList[charList.IndexOf(chr)];
+
+        //retrieve the coordinates of the character texture within the atlas
         Rect textureRect = characterSprite.textureRect;
 
+        //Create the output texture with the proper size
         Texture2D output = new Texture2D(outputWidth, outputHeight, TextureFormat.RGBA32, -1, false, false);
 
+        //Create the texture of the letter that we are copying
         Texture2D letterBaseResolution = new Texture2D(Mathf.FloorToInt(characterSprite.textureRect.width), Mathf.FloorToInt(characterSprite.textureRect.height), TextureFormat.RGBA32, -1, false, false);
 
+        //Create the texture of the letter into the texture we just created
         Graphics.CopyTexture(
             src: characterSprite.texture,
             srcElement: 0,
@@ -109,8 +115,10 @@ public static class StringToTextureTest
             dstX: 0,
             dstY: 0);
 
+        //Copy the texture of the letter to the proper size
         Graphics.ConvertTexture(letterBaseResolution, output);
 
+        //Retrieves the pixels data from the GPU to the CPU
         output.ReadPixels(new Rect(0, 0, output.width, output.height), 0, 0);
 
         return output;
