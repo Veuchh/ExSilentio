@@ -14,6 +14,7 @@ namespace LW.Level
         [SerializeField] VisualEffect vfx;
         [SerializeField] AnimationCurve revealCurve = default;
         [SerializeField] float revealDuration = 1;
+        [SerializeField] bool isTextureVertical;
         [SerializeField] RevealableItemType type;
 
         MaterialPropertyBlock mpb;
@@ -23,6 +24,8 @@ namespace LW.Level
         bool isRevealing = false;
 
         public WordID ID => id;
+        public bool IsTextureVertical => isTextureVertical;
+
 
         public void Init(WordID newID, Renderer attachedRenderer)
         {
@@ -32,10 +35,11 @@ namespace LW.Level
             type = RevealableItemType.MeshRenderer;
         }
 
-        public void Init(WordID newID, VisualEffect vfx)
+        public void Init(WordID newID, VisualEffect vfx, bool isVertical)
         {
             this.vfx = vfx;
             Debug.Log("VFX " + vfx + " " + this.vfx);
+            isTextureVertical = isVertical;
             id = newID;
             revealCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
             type = RevealableItemType.VFXGraph;
