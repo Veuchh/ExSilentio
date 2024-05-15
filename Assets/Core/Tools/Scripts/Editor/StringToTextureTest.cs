@@ -1,16 +1,16 @@
+using LW.Data;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class StringToTextureConverter : MonoBehaviour
+public static class StringToTextureTest
 {
-    Texture2D sourceTexture;
+    const string ATLAS_REFERENCE_PATH = "Assets/Core/Tools/ScriptableObjects/LetterReferences.asset";
+    static Texture2D sourceTexture;
     const int CHARACTER_TEXTURE_WIDTH = 410;
 
-    public static StringToTextureConverter Instance;
-
-    [SerializeField] List<Sprite> spritesList;
-
-    List<char> charList = new List<char>()
+    static List<char> charList = new List<char>()
 {
     ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -18,14 +18,7 @@ public class StringToTextureConverter : MonoBehaviour
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
-    private void Start()
-    {
-        Instance = this;
-
-        GenerateDefaultTexture();
-    }
-
-    private void GenerateDefaultTexture()
+    private static void GenerateDefaultTexture()
     {
         //Create default black texture
         sourceTexture = new Texture2D(1, 1, TextureFormat.RGBA32, -1, false, false);
@@ -34,7 +27,7 @@ public class StringToTextureConverter : MonoBehaviour
         sourceTexture.Apply();
     }
 
-    public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0, bool isVertical = false)
+    public static Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0, bool isVertical = false)
     {
         GenerateDefaultTexture();
 
@@ -56,11 +49,20 @@ public class StringToTextureConverter : MonoBehaviour
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterTexture = GetCharacterTexture(input[characterIndex],characterWidth, characterHeight);
+                Texture2D characterColors = GetCharacterTexture(input[characterIndex], characterWidth, characterHeight);
 
-                Graphics.CopyTexture(characterTexture, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0,
+                Graphics.CopyTexture(characterColors,
+                    0,
+                    0,
+                    0,
+                    0,
+                    characterWidth,
+                    characterHeight,
+                    output,
+                    0,
+                    0,
                     dstX: letterWidthPos,
-                   dstY: (wordPadding + (input.Length - characterIndex - 1) * characterHeight));
+                    dstY: wordPadding + (input.Length - characterIndex - 1) * characterHeight);
             }
         }
 
@@ -84,13 +86,10 @@ public class StringToTextureConverter : MonoBehaviour
         return output;
     }
 
-    Texture2D GetCharacterTexture(char chr, int outputWidth, int outputHeight)
+    public static Texture2D GetCharacterTexture(char chr, int outputWidth, int outputHeight)
     {
-        if (!charList.Contains(chr))
-            return null;
-
         //retrieve the sprite of the character
-        Sprite characterSprite = spritesList[charList.IndexOf(chr)];
+        Sprite characterSprite = ((LetterAtlasReference)AssetDatabase.LoadAssetAtPath(ATLAS_REFERENCE_PATH, typeof(LetterAtlasReference))).SpritesList[charList.IndexOf(chr)];
 
         //retrieve the coordinates of the character texture within the atlas
         Rect textureRect = characterSprite.textureRect;

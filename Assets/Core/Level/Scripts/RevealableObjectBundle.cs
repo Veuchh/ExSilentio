@@ -17,6 +17,7 @@ namespace LW.Level
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
         [SerializeField] bool playWwiseEventOnReveal = false;
+        [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
 
         bool isRevealed = false;
@@ -37,7 +38,9 @@ namespace LW.Level
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
             Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
-            textureMaps.Add(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, wordTexture);
+            textureMaps.Add(
+                stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"), 
+                wordTexture);
 
             foreach (RevealableItem revealableItem in itemsInBundle)
             {
@@ -49,12 +52,12 @@ namespace LW.Level
 
                 string usedInput = stringTable.GetTable().GetEntry(revealableItem.ID.ToString()).LocalizedValue;
 
-                if (!textureMaps.Keys.Contains(usedInput))
+                if (!textureMaps.Keys.Contains(usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H")))
                 {
-                    textureMaps.Add(usedInput, StringToTextureConverter.Instance.GetTextureFromInput(usedInput));
+                    textureMaps.Add(usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H"), StringToTextureConverter.Instance.GetTextureFromInput(usedInput, isVertical : revealableItem.IsTextureVertical));
                 }
 
-                revealableItem.RevealItem(textureMaps[usedInput], usedInput.Length);
+                revealableItem.RevealItem(textureMaps[usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H")], usedInput.Length);
             }
 
             if (playWwiseEventOnReveal)
@@ -91,7 +94,7 @@ namespace LW.Level
                 if (reveleableItem == null)
                 {
                     reveleableItem = vfx.gameObject.AddComponent<RevealableItem>();
-                    reveleableItem.Init(awaitedID, vfx);
+                    reveleableItem.Init(awaitedID, vfx, isTextureVertical);
                 }
 
                 itemsInBundle.Add(reveleableItem);
