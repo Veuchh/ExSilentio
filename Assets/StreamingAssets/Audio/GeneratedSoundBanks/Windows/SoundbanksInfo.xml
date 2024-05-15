@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F3C3511B-221A-C715-063A-7BF5604CFA0A}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{4439EC9B-3836-9D55-3EB2-940DB3330EBA}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -30,6 +30,7 @@
 				<Bus Id="931952533" Name="AMB_OC_Wind" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind" GUID="{F4BC7F7D-7B73-41CF-B2C5-64093AF14AAC}"/>
 				<Bus Id="1117531639" Name="AMB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB" GUID="{6800E617-CFAC-446E-A0FD-6BEE02B9632E}"/>
 				<Bus Id="1551306167" Name="UI" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI" GUID="{19146DA6-77C0-499F-A028-474708E79385}"/>
+				<Bus Id="1685527054" Name="MX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX" GUID="{00D8AAD3-8E11-4AAC-BF38-D5FB8699999A}"/>
 				<Bus Id="1709551633" Name="AMB_OceanCIty" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty" GUID="{463B4679-E212-41A8-9F3A-C5371F368623}"/>
 				<Bus Id="2325878355" Name="AMB_OC_Ocean" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean" GUID="{18BD6074-3978-4F45-94DC-DF8887F10EA5}"/>
 				<Bus Id="2385628198" Name="FOOTSTEPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS" GUID="{80C99877-5536-4D0C-B535-98A28A945ABB}"/>
@@ -290,7 +291,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{D1DAFE20-437E-0CDD-7327-EBF78542EDE0}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{F68CBA59-E716-E85D-B757-0647534D7C87}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -803,9 +804,9 @@
 					<ShortName>AMB_OC_Seagull.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Seagull_FBA5136C.wem</CachePath>
 				</File>
-				<File Id="932489431" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>MX_OC_L_Sun.wav</ShortName>
-					<CachePath>SFX/MX_OC_L_Sun_56CEF360.wem</CachePath>
+				<File Id="920515765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_SunVoice.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_SunVoice_56CEF360.wem</CachePath>
 				</File>
 				<File Id="939036739" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Child3-009.wav</ShortName>
@@ -814,6 +815,10 @@
 				<File Id="939039254" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Childs.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Childs_56CEF360.wem</CachePath>
+				</File>
+				<File Id="941764204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_SunMain.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_SunMain_56CEF360.wem</CachePath>
 				</File>
 				<File Id="943779260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Child2-007.wav</ShortName>
@@ -1204,7 +1209,8 @@
 						<MediaRef Id="261144076"/>
 						<MediaRef Id="313375692"/>
 						<MediaRef Id="434975524"/>
-						<MediaRef Id="932489431"/>
+						<MediaRef Id="920515765"/>
+						<MediaRef Id="941764204"/>
 						<MediaRef Id="1054178735"/>
 					</MediaRefs>
 					<ActionSetState>
@@ -1227,7 +1233,11 @@
 					</ActionSetState>
 				</Event>
 				<Event Id="3404723406" Name="MX_OC_ST_ChildEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildEnter" GUID="{8CC355C0-FE57-48E1-B5AE-B0F69F5A3D97}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1217064079" Name="MX_OC_ST_FontainEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter" GUID="{4D4C051C-61A1-43D2-840D-D4ABB6B17E3B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="104216065" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
@@ -1365,5 +1375,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8B08E12E-16A5-3701-B099-475B655A76AA}</FileHash>
+	<FileHash>{0B076816-5DB9-58CF-9F30-E2B44A5C4656}</FileHash>
 </SoundBanksInfo>
