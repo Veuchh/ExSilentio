@@ -6,29 +6,45 @@ Switch	ID	Name	Switch Group			Notes
 	3462940353	SW_FT_OC_Ground	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
-	104216065	ST_MX_OC_Fontain			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain	
+	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
+	637628402	ST_MX_OC_Boat			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
 	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
+	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
+	3592851632	ST_MX_OC_ChildTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_ChildTrig	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
+	4205926058	ST_MX_OC_StationTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig	
 	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
 
 State	ID	Name	State Group			Notes
-	634183254	Reveal	ST_MX_OC_Fontain			
-	748895195	None	ST_MX_OC_Fontain			
-	3384621607	Unreveal	ST_MX_OC_Fontain			
+	645492555	Out	ST_MX_OC_FontainTrig			
+	748895195	None	ST_MX_OC_FontainTrig			
+	1752637612	In	ST_MX_OC_FontainTrig			
+	634183254	Reveal	ST_MX_OC_Boat			
+	748895195	None	ST_MX_OC_Boat			
+	3384621607	Unreveal	ST_MX_OC_Boat			
 	634183254	Reveal	ST_MX_OC_Buildings			
 	748895195	None	ST_MX_OC_Buildings			
 	3384621607	Unreveal	ST_MX_OC_Buildings			
 	634183254	Reveal	ST_MX_OC_Child			
 	748895195	None	ST_MX_OC_Child			
 	3384621607	Unreveal	ST_MX_OC_Child			
+	634183254	Reveal	ST_MX_OC_Train			
+	748895195	None	ST_MX_OC_Train			
+	3384621607	Unreveal	ST_MX_OC_Train			
+	645492555	Out	ST_MX_OC_ChildTrig			
+	748895195	None	ST_MX_OC_ChildTrig			
+	1752637612	In	ST_MX_OC_ChildTrig			
 	634183254	Reveal	ST_MX_OC_Ocean			
 	748895195	None	ST_MX_OC_Ocean			
 	3384621607	Unreveal	ST_MX_OC_Ocean			
 	634183254	Reveal	ST_MX_OC_Station			
 	748895195	None	ST_MX_OC_Station			
 	3384621607	Unreveal	ST_MX_OC_Station			
+	645492555	Out	ST_MX_OC_StationTrig			
+	748895195	None	ST_MX_OC_StationTrig			
+	1752637612	In	ST_MX_OC_StationTrig			
 	634183254	Reveal	ST_MX_OC_Sun			
 	748895195	None	ST_MX_OC_Sun			
 	3384621607	Unreveal	ST_MX_OC_Sun			

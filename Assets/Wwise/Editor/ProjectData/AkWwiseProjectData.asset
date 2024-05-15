@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584859174922867401
+    m_lastTime: -8584858288856250751
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -263,6 +263,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: MX
+      guid: d3aad800118eac4abf38d5fb8699999a
+      id: 1685527054
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MX
+        ObjectType: 2
+        guid: d3aad800118eac4abf38d5fb8699999a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX
     - name: Plains
       guid: daebd19b360aa44a80f85badd7676841
       id: 1519764506
@@ -956,7 +973,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584859169410171755
+    m_lastTime: -8584858256672796556
     List:
     - name: MX_OC_Awake
       guid: 862c6e688bf88949a69170649d89fc6a
@@ -978,6 +995,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MX_OC_ST_Boat
+      guid: c9574bf600900848a1c92a184441e4e2
+      id: 1388177508
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_Boat
+        ObjectType: 3
+        guid: c9574bf600900848a1c92a184441e4e2
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_Boat
+      maxAttenuation: 0
+      maxDuration: 4.8
+      minDuration: 4.8
     - name: MX_OC_ST_Buildings
       guid: f44f7bc8a67f314d976985f087957f71
       id: 2973427017
@@ -1031,10 +1068,13 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
       - ElementName: MX_OC_ST_ChildEnter
         ObjectType: 3
         guid: c055c38c57fee148b5aeb0f69f5a3d97
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_ChildEnter
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1051,10 +1091,13 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
       - ElementName: MX_OC_ST_ChildExit
         ObjectType: 3
         guid: ee1341616360e645b856f85789ac8c9c
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_ChildExit
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1071,10 +1114,13 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
       - ElementName: MX_OC_ST_FontainEnter
         ObjectType: 3
         guid: 1c054c4da161d243840dd4abb6b17e3b
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1091,10 +1137,13 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
       - ElementName: MX_OC_ST_FontainExit
         ObjectType: 3
         guid: 0297cbc3ed3fa94ca157353578e667ea
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_FontainExit
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1138,6 +1187,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_OC_ST_StationEnter
+      guid: 103677c08f352c4fb42c9fe1e7b99e7a
+      id: 1246921868
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
+      - ElementName: MX_OC_ST_StationEnter
+        ObjectType: 3
+        guid: 103677c08f352c4fb42c9fe1e7b99e7a
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationEnter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_StationExit
+      guid: a671dddb69f00749bd6a9b87ccbd7e51
+      id: 2867726670
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
+      - ElementName: MX_OC_ST_StationExit
+        ObjectType: 3
+        guid: a671dddb69f00749bd6a9b87ccbd7e51
+      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationExit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_OC_ST_Sun
       guid: 5a703e41a6d7ab46bd1f1d28a3807510
       id: 1317712632
@@ -1156,8 +1251,28 @@ MonoBehaviour:
         guid: 5a703e41a6d7ab46bd1f1d28a3807510
       Path: Events\MX\MX_OceanCity\MX_OC_ST_Sun
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 9.801354
+      minDuration: 9.801354
+    - name: MX_OC_ST_Train
+      guid: 7d869335d54d044f96f0aeae49977b9c
+      id: 3488676060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_Train
+        ObjectType: 3
+        guid: 7d869335d54d044f96f0aeae49977b9c
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_Train
+      maxAttenuation: 0
+      maxDuration: 69.6
+      minDuration: 69.6
     - name: MX_OceanCity
       guid: 16f08d1e62da6f41b2c4d75626b03a9c
       id: 1358232996
@@ -1172,6 +1287,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
       Path: Events\MX\MX_OceanCity
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Trigger
+      guid: 0a6d2b755e3b404396389f317dce77fc
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
+      Path: Events\MX\MX_OceanCity\Trigger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1537,7 +1672,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584860022724559318
+    m_lastTime: -8584858264696635265
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -1573,26 +1708,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 801db89d6f20e048aa1154dd89742376
       Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX
-    - name: GP_OC_MX_ChildExit
-      guid: 02ab3cc55ba7f34387a74b63e017326d
-      id: 3566296580
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Game Parameters
-        ObjectType: 12
-        guid: bab44e09d18d8841bf1f7a1ac201fe0e
-      - ElementName: GP_OceanCity
-        ObjectType: 4
-        guid: 1da2e570a6b65a468f458f76ba5d2e93
-      - ElementName: GP_OC_MX
-        ObjectType: 4
-        guid: 801db89d6f20e048aa1154dd89742376
-      - ElementName: GP_OC_MX_ChildExit
-        ObjectType: 13
-        guid: 02ab3cc55ba7f34387a74b63e017326d
-      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit
     - name: GP_OC_WaterHigh
       guid: 9d33a5faadbe2948b320c9d7a03bb665
       id: 3815697657
@@ -1649,8 +1764,98 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584860001105144387
+    m_lastTime: -8584858257236951883
     List:
+    - name: ST_MX_OC_Boat
+      guid: 6dc84f2eff06614f90536d3e05cdf706
+      id: 637628402
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: ST_MX_OC_Boat
+        ObjectType: 9
+        guid: 6dc84f2eff06614f90536d3e05cdf706
+      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat
+      values:
+      - name: None
+        guid: 6edb14de354f9240afc9b8d3e6f2a8f5
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Boat
+          ObjectType: 9
+          guid: 6dc84f2eff06614f90536d3e05cdf706
+        - ElementName: None
+          ObjectType: 8
+          guid: 6edb14de354f9240afc9b8d3e6f2a8f5
+      - name: Reveal
+        guid: 65cd3c49f27e6a4ea2e4446f24fb6f07
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Boat
+          ObjectType: 9
+          guid: 6dc84f2eff06614f90536d3e05cdf706
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 65cd3c49f27e6a4ea2e4446f24fb6f07
+      - name: Unreveal
+        guid: fa8b88ceacc5dc41807059a1c555238c
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Boat
+          ObjectType: 9
+          guid: 6dc84f2eff06614f90536d3e05cdf706
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: fa8b88ceacc5dc41807059a1c555238c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_MX_OC_Buildings
       guid: a5022f150a580645bfd46e8e89afcd13
       id: 719384611
@@ -1831,9 +2036,9 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: ST_MX_OC_Fontain
-      guid: 76563eae3ef48f469506520dff5022c4
-      id: 104216065
+    - name: ST_MX_OC_ChildTrig
+      guid: 7c7b4a1c1af2ba45b0092563aaf03288
+      id: 3592851632
       PathAndIcons:
       - ElementName: States
         ObjectType: 5
@@ -1847,13 +2052,41 @@ MonoBehaviour:
       - ElementName: ST_OC_MX
         ObjectType: 4
         guid: e97fd7f234764d43bd850da446753ec0
-      - ElementName: ST_MX_OC_Fontain
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 1fa9c2191c363848975b091bdce45dd3
+      - ElementName: ST_MX_OC_ChildTrig
         ObjectType: 9
-        guid: 76563eae3ef48f469506520dff5022c4
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain
+        guid: 7c7b4a1c1af2ba45b0092563aaf03288
+      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_ChildTrig
       values:
+      - name: In
+        guid: f607775a8389d341a4bcc4e23c06bf94
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_ChildTrig
+          ObjectType: 9
+          guid: 7c7b4a1c1af2ba45b0092563aaf03288
+        - ElementName: In
+          ObjectType: 8
+          guid: f607775a8389d341a4bcc4e23c06bf94
       - name: None
-        guid: d65b4aef229f03488a1ada64ccc87c83
+        guid: 21be16137282dd4a914643ed5c19fcfc
         id: 748895195
         PathAndIcons:
         - ElementName: States
@@ -1868,15 +2101,18 @@ MonoBehaviour:
         - ElementName: ST_OC_MX
           ObjectType: 4
           guid: e97fd7f234764d43bd850da446753ec0
-        - ElementName: ST_MX_OC_Fontain
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_ChildTrig
           ObjectType: 9
-          guid: 76563eae3ef48f469506520dff5022c4
+          guid: 7c7b4a1c1af2ba45b0092563aaf03288
         - ElementName: None
           ObjectType: 8
-          guid: d65b4aef229f03488a1ada64ccc87c83
-      - name: Reveal
-        guid: 1a9cd368adf1154b82d3477e1e83644c
-        id: 634183254
+          guid: 21be16137282dd4a914643ed5c19fcfc
+      - name: Out
+        guid: 000d516afd143d4c9582144a5a89aaff
+        id: 645492555
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -1890,15 +2126,45 @@ MonoBehaviour:
         - ElementName: ST_OC_MX
           ObjectType: 4
           guid: e97fd7f234764d43bd850da446753ec0
-        - ElementName: ST_MX_OC_Fontain
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_ChildTrig
           ObjectType: 9
-          guid: 76563eae3ef48f469506520dff5022c4
-        - ElementName: Reveal
+          guid: 7c7b4a1c1af2ba45b0092563aaf03288
+        - ElementName: Out
           ObjectType: 8
-          guid: 1a9cd368adf1154b82d3477e1e83644c
-      - name: Unreveal
-        guid: 60a033c4173ae347a704233c7701e1a5
-        id: 3384621607
+          guid: 000d516afd143d4c9582144a5a89aaff
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_MX_OC_FontainTrig
+      guid: c0193bfe7033f74790da0376fca09ba8
+      id: 272500339
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 1fa9c2191c363848975b091bdce45dd3
+      - ElementName: ST_MX_OC_FontainTrig
+        ObjectType: 9
+        guid: c0193bfe7033f74790da0376fca09ba8
+      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig
+      values:
+      - name: In
+        guid: aac9309e853fe248998064498a7a9f29
+        id: 1752637612
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -1912,12 +2178,65 @@ MonoBehaviour:
         - ElementName: ST_OC_MX
           ObjectType: 4
           guid: e97fd7f234764d43bd850da446753ec0
-        - ElementName: ST_MX_OC_Fontain
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_FontainTrig
           ObjectType: 9
-          guid: 76563eae3ef48f469506520dff5022c4
-        - ElementName: Unreveal
+          guid: c0193bfe7033f74790da0376fca09ba8
+        - ElementName: In
           ObjectType: 8
-          guid: 60a033c4173ae347a704233c7701e1a5
+          guid: aac9309e853fe248998064498a7a9f29
+      - name: None
+        guid: e21ee75836f41b4e9eabca6708730822
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_FontainTrig
+          ObjectType: 9
+          guid: c0193bfe7033f74790da0376fca09ba8
+        - ElementName: None
+          ObjectType: 8
+          guid: e21ee75836f41b4e9eabca6708730822
+      - name: Out
+        guid: e9832a6eeffc0c45906fd5f1a8427986
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_FontainTrig
+          ObjectType: 9
+          guid: c0193bfe7033f74790da0376fca09ba8
+        - ElementName: Out
+          ObjectType: 8
+          guid: e9832a6eeffc0c45906fd5f1a8427986
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -2101,6 +2420,108 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_MX_OC_StationTrig
+      guid: 45a650ef53087049a38ecd727872d00e
+      id: 4205926058
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 1fa9c2191c363848975b091bdce45dd3
+      - ElementName: ST_MX_OC_StationTrig
+        ObjectType: 9
+        guid: 45a650ef53087049a38ecd727872d00e
+      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig
+      values:
+      - name: In
+        guid: 7d3f99576d601b438cf5b31586ff06fc
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_StationTrig
+          ObjectType: 9
+          guid: 45a650ef53087049a38ecd727872d00e
+        - ElementName: In
+          ObjectType: 8
+          guid: 7d3f99576d601b438cf5b31586ff06fc
+      - name: None
+        guid: cde5d34c95945746ba3604be89f4e5dd
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_StationTrig
+          ObjectType: 9
+          guid: 45a650ef53087049a38ecd727872d00e
+        - ElementName: None
+          ObjectType: 8
+          guid: cde5d34c95945746ba3604be89f4e5dd
+      - name: Out
+        guid: 7111248d2847274aaa7154076b79d208
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_StationTrig
+          ObjectType: 9
+          guid: 45a650ef53087049a38ecd727872d00e
+        - ElementName: Out
+          ObjectType: 8
+          guid: 7111248d2847274aaa7154076b79d208
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_MX_OC_Sun
       guid: 593aa66fe452744989e4fc9e11fcb91e
       id: 4266710578
@@ -2191,6 +2612,96 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_MX_OC_Train
+      guid: 87ba9f4223118143b053349b63893fee
+      id: 2603209358
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: ST_MX_OC_Train
+        ObjectType: 9
+        guid: 87ba9f4223118143b053349b63893fee
+      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train
+      values:
+      - name: None
+        guid: 8d36e56eb0039d40a658350e4b20862f
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Train
+          ObjectType: 9
+          guid: 87ba9f4223118143b053349b63893fee
+        - ElementName: None
+          ObjectType: 8
+          guid: 8d36e56eb0039d40a658350e4b20862f
+      - name: Reveal
+        guid: cf1afd5efc87c040b9c2e8d4a17c74ea
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Train
+          ObjectType: 9
+          guid: 87ba9f4223118143b053349b63893fee
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: cf1afd5efc87c040b9c2e8d4a17c74ea
+      - name: Unreveal
+        guid: 99c60e63aeb68b47b7e9210b9eef6de1
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: ST_MX_OC_Train
+          ObjectType: 9
+          guid: 87ba9f4223118143b053349b63893fee
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 99c60e63aeb68b47b7e9210b9eef6de1
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_OC_MX
       guid: e97fd7f234764d43bd850da446753ec0
       id: 4198588639
@@ -2226,6 +2737,30 @@ MonoBehaviour:
         ObjectType: 4
         guid: 5d0c55818c3c8847a893d7c1da597f12
       Path: States\States\ST_OceanCity
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Trigger
+      guid: 1fa9c2191c363848975b091bdce45dd3
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 1fa9c2191c363848975b091bdce45dd3
+      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger
       values: []
       ValueGuids: []
       ValueIcons: []
