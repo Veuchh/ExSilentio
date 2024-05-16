@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: FX_RibbonTest
+  m_Name: FX_NewFountain
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -68,8 +68,8 @@ MonoBehaviour:
   m_UISuperCollapsed: 0
   m_UIInfos: {fileID: 114340500867371532}
   m_ParameterInfo:
-  - name: NumberOfLetters
-    path: NumberOfLetters
+  - name: _NumberOfLetters
+    path: _NumberOfLetters
     tooltip: 
     sheetType: m_Int
     realType: Int32
@@ -110,8 +110,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Main_Tex
-    path: Main_Tex
+  - name: _Main_Tex
+    path: _Main_Tex
     tooltip: 
     sheetType: m_NamedObject
     realType: Texture2D
@@ -135,7 +135,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FX_RibbonTest
+  m_Name: FX_NewFountain
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614646}
-  m_ExposedName: NumberOfLetters
+  m_ExposedName: _NumberOfLetters
   m_Exposed: 1
   m_Order: 0
   m_Category: 
@@ -10118,7 +10118,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614980}
-  m_ExposedName: Main_Tex
+  m_ExposedName: _Main_Tex
   m_Exposed: 1
   m_Order: 3
   m_Category: 
