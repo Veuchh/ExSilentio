@@ -20,7 +20,7 @@ MonoBehaviour:
     x: -171
     y: -486
     width: 1537
-    height: 2078
+    height: 2098
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,8 +66,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: NumberOfLetters
-    path: NumberOfLetters
+  - name: _NumberOfLetters
+    path: _NumberOfLetters
     tooltip: 
     sheetType: m_Float
     realType: Single
@@ -80,8 +80,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Main_Tex
-    path: Main_Tex
+  - name: _Main_Tex
+    path: _Main_Tex
     tooltip: 
     sheetType: m_NamedObject
     realType: Texture2D
@@ -3352,7 +3352,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614718}
-  m_ExposedName: NumberOfLetters
+  m_ExposedName: _NumberOfLetters
   m_Exposed: 1
   m_Order: 1
   m_Category: 
@@ -3606,7 +3606,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614726}
-  m_ExposedName: Main_Tex
+  m_ExposedName: _Main_Tex
   m_Exposed: 1
   m_Order: 2
   m_Category: 
