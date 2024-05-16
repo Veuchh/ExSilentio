@@ -30,7 +30,8 @@ public static class StringToTextureTest
     public static Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0, bool isVertical = false)
     {
         GenerateDefaultTexture();
-
+        //Quick and dirty fix : adapt texture size to input length
+        textureSize = 128 * input.Length * (isVertical ? 2 : 1);
         Texture2D output = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, -1, false, false);
 
         Graphics.ConvertTexture(sourceTexture, output);
