@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{4BC19C12-D4D2-D18B-FD37-1A9CAF95093E}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{BC4FE2D9-054B-986C-2EA4-2B8D30ECBA84}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -149,7 +149,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{CC404E07-5DB2-EBCA-F188-27E7F4DFDC99}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{9CAC83D5-A89F-E377-AF43-19770650C218}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -319,7 +319,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{41B4D58A-9E0F-3345-04FD-94E9C057DB60}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{E5A122ED-B6FF-5D26-7816-7807B510CDFA}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -335,6 +335,10 @@
 				<File Id="10051041" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
 					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_802ECE48.wem</CachePath>
+				</File>
+				<File Id="11273008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-005.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-005_8E324C96.wem</CachePath>
 				</File>
 				<File Id="16432664" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_ChildsSplash-003.wav</ShortName>
@@ -416,6 +420,10 @@
 					<ShortName>AMB_OC_TrainStationL1.wav</ShortName>
 					<CachePath>SFX/AMB_OC_TrainStationL1_46FBD884.wem</CachePath>
 				</File>
+				<File Id="150356678" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-001.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="152825524" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OC_TrainPlayerExit.wav</ShortName>
 					<CachePath>SFX/SFX_OC_TrainPlayerExit_8E324C96.wem</CachePath>
@@ -428,10 +436,6 @@
 					<ShortName>AMB_OC_FountainNoise.wav</ShortName>
 					<CachePath>SFX/AMB_OC_FountainNoise_56CEF360.wem</CachePath>
 				</File>
-				<File Id="167040663" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-004.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-004_8E324C96.wem</CachePath>
-				</File>
 				<File Id="168904959" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Child3-004.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Child3-004_8E324C96.wem</CachePath>
@@ -439,10 +443,6 @@
 				<File Id="186637457" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_St_Buildings_Drone.wav</ShortName>
 					<CachePath>SFX/MX_OC_St_Buildings_Drone_56CEF360.wem</CachePath>
-				</File>
-				<File Id="188203818" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-002.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="191788900" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Bell-003.wav</ShortName>
@@ -476,6 +476,10 @@
 					<ShortName>AMB_OC_Seagull.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Seagull_D9CFD57B.wem</CachePath>
 				</File>
+				<File Id="217040072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-006.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-006_8E324C96.wem</CachePath>
+				</File>
 				<File Id="227865930" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
 					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_E258F7CE.wem</CachePath>
@@ -487,6 +491,10 @@
 				<File Id="232701764" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Seagull.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Seagull_3E4C409D.wem</CachePath>
+				</File>
+				<File Id="235536350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-002.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="235929195" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_GroundL2-006.wav</ShortName>
@@ -532,13 +540,13 @@
 					<ShortName>AMB_OC_OceanFar.wav</ShortName>
 					<CachePath>SFX/AMB_OC_OceanFar_56CEF360.wem</CachePath>
 				</File>
-				<File Id="305395393" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-001.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-001_8E324C96.wem</CachePath>
-				</File>
 				<File Id="306825305" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_WoodL1-001.wav</ShortName>
 					<CachePath>SFX/FT_OC_WoodL1-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="310422611" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-004.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-004_8E324C96.wem</CachePath>
 				</File>
 				<File Id="310848925" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_WaterSplocBuilding.wav</ShortName>
@@ -596,10 +604,6 @@
 					<ShortName>AMB_OC_Child3-007.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Child3-007_8E324C96.wem</CachePath>
 				</File>
-				<File Id="389140331" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-003.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-003_8E324C96.wem</CachePath>
-				</File>
 				<File Id="391640501" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
 					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_D0D29EBD.wem</CachePath>
@@ -632,10 +636,6 @@
 					<ShortName>AMB_OC_ChildsSteps-007.wav</ShortName>
 					<CachePath>SFX/AMB_OC_ChildsSteps-007_8E324C96.wem</CachePath>
 				</File>
-				<File Id="449550874" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-006.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-006_8E324C96.wem</CachePath>
-				</File>
 				<File Id="451225773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
 					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_5E558D8D.wem</CachePath>
@@ -651,6 +651,10 @@
 				<File Id="476363762" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Child1-003.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Child1-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="477636905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-003.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-003_8E324C96.wem</CachePath>
 				</File>
 				<File Id="478432927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleWater.wav</ShortName>
@@ -896,9 +900,9 @@
 					<ShortName>AMB_OC_Child2-004.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Child2-004_8E324C96.wem</CachePath>
 				</File>
-				<File Id="863936781" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-007.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-007_8E324C96.wem</CachePath>
+				<File Id="872001279" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-007.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-007_8E324C96.wem</CachePath>
 				</File>
 				<File Id="882565897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Bell-002.wav</ShortName>
@@ -967,10 +971,6 @@
 				<File Id="951767702" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_WindChim.wav</ShortName>
 					<CachePath>SFX/AMB_OC_WindChim_56CEF360.wem</CachePath>
-				</File>
-				<File Id="967470611" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-005.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-005_8E324C96.wem</CachePath>
 				</File>
 				<File Id="970919596" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
@@ -1279,13 +1279,20 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="808606367" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
 							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
 								<MediaRef Id="289662958"/>
 								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
 								<MediaRef Id="347830925"/>
 								<MediaRef Id="372164024"/>
 								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
 								<MediaRef Id="589443354"/>
 								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1325,15 +1332,41 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="808606367" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
+							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
+								<MediaRef Id="289662958"/>
+								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
+								<MediaRef Id="347830925"/>
+								<MediaRef Id="372164024"/>
+								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
+								<MediaRef Id="589443354"/>
+								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="3462940353" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}" Default="true"/>
 							<MediaRefs>
-								<MediaRef Id="167040663"/>
-								<MediaRef Id="188203818"/>
-								<MediaRef Id="305395393"/>
-								<MediaRef Id="389140331"/>
-								<MediaRef Id="449550874"/>
-								<MediaRef Id="863936781"/>
-								<MediaRef Id="967470611"/>
+								<MediaRef Id="201111223"/>
+								<MediaRef Id="204599275"/>
+								<MediaRef Id="235929195"/>
+								<MediaRef Id="364319269"/>
+								<MediaRef Id="499488290"/>
+								<MediaRef Id="502800957"/>
+								<MediaRef Id="537232773"/>
+								<MediaRef Id="586293275"/>
+								<MediaRef Id="588408791"/>
+								<MediaRef Id="639647242"/>
+								<MediaRef Id="683703308"/>
+								<MediaRef Id="699441146"/>
+								<MediaRef Id="849294485"/>
+								<MediaRef Id="916818511"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -1542,7 +1575,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{92B2990B-6C15-260E-C5AC-E9004C4E948A}">
+		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{C366BD67-070F-7031-2022-788DDE7E858D}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Test</ObjectPath>
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
@@ -1573,5 +1606,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{19B309F8-982C-26DB-F8C0-3680A4FE0384}</FileHash>
+	<FileHash>{1E80CEAA-0C20-34C0-B6D5-B06B9BEEBFAB}</FileHash>
 </SoundBanksInfo>
