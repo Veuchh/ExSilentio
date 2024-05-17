@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584858288856250751
+    m_lastTime: -8584856536582653241
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -334,6 +334,49 @@ MonoBehaviour:
         ObjectType: 2
         guid: 9e979bad5052bd409a6a3fa989361e21
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+    - name: TrainError
+      guid: c26726e7b4624545a2bd412cae5ed1ca
+      id: 3705995597
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 9e979bad5052bd409a6a3fa989361e21
+      - ElementName: TrainError
+        ObjectType: 2
+        guid: c26726e7b4624545a2bd412cae5ed1ca
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError
+    - name: TrainErrorchild
+      guid: 07eeca3a70e553488b8f77de2718fb05
+      id: 837352445
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 9e979bad5052bd409a6a3fa989361e21
+      - ElementName: TrainError
+        ObjectType: 2
+        guid: c26726e7b4624545a2bd412cae5ed1ca
+      - ElementName: TrainErrorchild
+        ObjectType: 2
+        guid: 07eeca3a70e553488b8f77de2718fb05
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild
     - name: UI
       guid: a66d1419c0779f49a028474708e79385
       id: 1551306167
@@ -432,7 +475,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584856661729300932
+    m_lastTime: -8584856518685885824
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -528,7 +571,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 90385f2a81ef1a4eab2f16552d4fe633
       Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh2
-      maxAttenuation: 20
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_ChildLaugh3
@@ -591,7 +634,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: da2244b2e9a9f7458263f8d113fd3edc
       Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildsUnreaveal
-      maxAttenuation: 20
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Fountain
@@ -671,9 +714,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f52bd0bb7c700a45a476135c6cca451a
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish
-      maxAttenuation: 75
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 35
+      maxDuration: 7.743708
+      minDuration: 7.743708
     - name: AMB_OC_TrainLoop
       guid: d1a5cf92446cbc4cb03cb1c244b3e9a6
       id: 1049210069
@@ -771,7 +814,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1fc18eafb610ed48bdb89e80aa368dc9
       Path: Events\AMB\AMB_OceanCity\AMB_OC_WindCan
-      maxAttenuation: 30
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_WindChim
@@ -812,6 +855,29 @@ MonoBehaviour:
         guid: 018ab326c4257c4188ec004600b2145b
       Path: Events\AMB\AMB_OceanCity\AMB_OC_WindWisthling
       maxAttenuation: 13
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_WindWisthlingExit
+      guid: bf0b29198ee4e040bb275a15aa8c4ba6
+      id: 2132210552
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_WindWisthlingExit
+        ObjectType: 3
+        guid: bf0b29198ee4e040bb275a15aa8c4ba6
+      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_WindWisthlingExit
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: AMB_OceanCity
@@ -996,7 +1062,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584856695358326353
+    m_lastTime: -8584856540205118484
     List:
     - name: MX_OC_Awake
       guid: 862c6e688bf88949a69170649d89fc6a
@@ -1210,6 +1276,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_OC_ST_Rail
+      guid: 205e5663ff141846887d8887c2943217
+      id: 385246558
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_Rail
+        ObjectType: 3
+        guid: 205e5663ff141846887d8887c2943217
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_Rail
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_OC_ST_Seagull
       guid: a87111050cf7ef428d6f8d4635ebc097
       id: 2746267219
@@ -1402,6 +1488,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_OC_TrainAwake
+      guid: fb949b7d1d02f74c8758092371545c2a
+      id: 2517718513
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_TrainAwake
+        ObjectType: 3
+        guid: fb949b7d1d02f74c8758092371545c2a
+      Path: Events\MX\MX_OceanCity\MX_OC_TrainAwake
+      maxAttenuation: 75
+      maxDuration: -1
+      minDuration: -1
     - name: MX_OceanCity
       guid: 16f08d1e62da6f41b2c4d75626b03a9c
       id: 1358232996
@@ -1450,7 +1556,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584856596172041390
+    m_lastTime: -8584856542210554020
     List:
     - name: Global
       guid: 020af29bdac3c641ba3522f13e5975e8
@@ -1469,6 +1575,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SFX_Awake
+      guid: a4e5a939bb33b54aa2a7a93fc9680a77
+      id: 1149062830
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_OceanCity
+        ObjectType: 4
+        guid: cf900004579f444db5d16c1f9110932f
+      - ElementName: SFX_Awake
+        ObjectType: 3
+        guid: a4e5a939bb33b54aa2a7a93fc9680a77
+      Path: Events\SFX\SFX_OceanCity\SFX_Awake
+      maxAttenuation: 0
+      maxDuration: 58.368042
+      minDuration: 58.368042
     - name: SFX_G_ErrorMap
       guid: ca65f6a86c65c34c9cf61d643477030d
       id: 870376687
@@ -1529,9 +1655,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.363896
       minDuration: 2.363896
-    - name: SFX_OC_TrainPlayerImpact
+    - name: SFX_OC_TrainPlayerImpactIn
       guid: 9e6461593e869442a1fb8919daceeefd
-      id: 985419213
+      id: 82434068
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1542,13 +1668,33 @@ MonoBehaviour:
       - ElementName: SFX_OceanCity
         ObjectType: 4
         guid: cf900004579f444db5d16c1f9110932f
-      - ElementName: SFX_OC_TrainPlayerImpact
+      - ElementName: SFX_OC_TrainPlayerImpactIn
         ObjectType: 3
         guid: 9e6461593e869442a1fb8919daceeefd
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpact
+      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactIn
       maxAttenuation: 0
-      maxDuration: 2.6703959
-      minDuration: 2.6703959
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_OC_TrainPlayerImpactOut
+      guid: bb8260bcf0b95140a319d0774d04a0f8
+      id: 3339821491
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_OceanCity
+        ObjectType: 4
+        guid: cf900004579f444db5d16c1f9110932f
+      - ElementName: SFX_OC_TrainPlayerImpactOut
+        ObjectType: 3
+        guid: bb8260bcf0b95140a319d0774d04a0f8
+      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: SFX_OC_TrainStop
       guid: 00781b24c80c344db68c1e3149d1078d
       id: 341180760
@@ -1930,7 +2076,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584856695251447776
+    m_lastTime: -8584856543412946543
     List:
     - name: ST_MX_OC_Boat
       guid: 6dc84f2eff06614f90536d3e05cdf706
@@ -3261,6 +3407,84 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_OC_SFXTrainImpact
+      guid: 282e97e1acd3b24d97a2c92c8ce58aed
+      id: 3449563311
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_SFXTrainImpact
+        ObjectType: 9
+        guid: 282e97e1acd3b24d97a2c92c8ce58aed
+      Path: States\States\ST_OceanCity\ST_OC_SFXTrainImpact
+      values:
+      - name: In
+        guid: 6f5fcab8e9cb5b41ac56167ef28029ad
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_SFXTrainImpact
+          ObjectType: 9
+          guid: 282e97e1acd3b24d97a2c92c8ce58aed
+        - ElementName: In
+          ObjectType: 8
+          guid: 6f5fcab8e9cb5b41ac56167ef28029ad
+      - name: None
+        guid: 510b33ddfe9cbb49b4e6c8881312ac4d
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_SFXTrainImpact
+          ObjectType: 9
+          guid: 282e97e1acd3b24d97a2c92c8ce58aed
+        - ElementName: None
+          ObjectType: 8
+          guid: 510b33ddfe9cbb49b4e6c8881312ac4d
+      - name: Out
+        guid: 9822d9289ea5da4da0e6c0bad7ddc78d
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_SFXTrainImpact
+          ObjectType: 9
+          guid: 282e97e1acd3b24d97a2c92c8ce58aed
+        - ElementName: Out
+          ObjectType: 8
+          guid: 9822d9289ea5da4da0e6c0bad7ddc78d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_OceanCity
       guid: 5d0c55818c3c8847a893d7c1da597f12
       id: 700224282
@@ -3328,7 +3552,7 @@ MonoBehaviour:
     ParentPath: Switches\Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584858185314309191
+    m_lastTime: -8584856575090852163
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -3361,6 +3585,22 @@ MonoBehaviour:
         - ElementName: SW_FT_OC_Ground
           ObjectType: 10
           guid: df824b92cd3ff547b69e68f17d536e6b
+      - name: SW_FT_OC_Rail
+        guid: fd5e58626584364ca0aa0d67295a7ff9
+        id: 4046423520
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_OC_Rail
+          ObjectType: 10
+          guid: fd5e58626584364ca0aa0d67295a7ff9
       - name: SW_FT_OC_Water
         guid: 47c9af8420ab5f4b967cf76a51c8bf2a
         id: 2295428781
@@ -3410,7 +3650,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 02000000060000000b0000000d0000001300000014000000150000001600000017000000200000003700000038000000
+  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d0000001300000014000000150000001600000017000000200000002200000038000000390000003b000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

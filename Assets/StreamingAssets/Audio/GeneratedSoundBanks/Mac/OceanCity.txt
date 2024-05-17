@@ -1,17 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
+	82434068	SFX_OC_TrainPlayerImpactIn			\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactIn	
 	126894539	FT_OceanCityPlay			\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay	
 	321855098	AMB_OC_WindChim			\AMB\AMB_OceanCity\AMB_OC_WindChim	
 	341180760	SFX_OC_TrainStop			\SFX\SFX_OceanCity\SFX_OC_TrainStop	
 	355115256	AMB_OC_BoatFar			\AMB\AMB_OceanCity\AMB_OC_BoatFar	
 	380529525	AMB_OC_SeagullBarks			\AMB\AMB_OceanCity\AMB_OC_SeagullBarks	
+	385246558	MX_OC_ST_Rail			\MX\MX_OceanCity\MX_OC_ST_Rail	
 	438261988	MX_OC_ST_Ocean			\MX\MX_OceanCity\MX_OC_ST_Ocean	
 	561950100	AMB_OC_Train_Swish			\AMB\AMB_OceanCity\AMB_OC_Train_Swish	
 	638998895	AMB_OC_Fountain			\AMB\AMB_OceanCity\AMB_OC_Fountain	
 	864634897	AMB_OC_WindCan			\AMB\AMB_OceanCity\AMB_OC_WindCan	
 	931952533	AMB_OC_Wind			\AMB\AMB_OceanCity\AMB_OC_Wind	
-	985419213	SFX_OC_TrainPlayerImpact			\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpact	
 	1049210069	AMB_OC_TrainLoop			\AMB\AMB_OceanCity\AMB_OC_TrainLoop	
 	1113259158	MX_OC_ST_WindEnter			\MX\MX_OceanCity\Trigger\MX_OC_ST_WindEnter	
+	1149062830	SFX_Awake			\SFX\SFX_OceanCity\SFX_Awake	
 	1192067392	AMB_OC_Main			\AMB\AMB_OceanCity\AMB_OC_Main	
 	1217064079	MX_OC_ST_FontainEnter			\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainEnter	
 	1246921868	MX_OC_ST_StationEnter			\MX\MX_OceanCity\Trigger\MX_OC_ST_StationEnter	
@@ -19,10 +21,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1388177508	MX_OC_ST_Boat			\MX\MX_OceanCity\MX_OC_ST_Boat	
 	1772926457	AMB_OC_WaterSplocBuilding			\AMB\AMB_OceanCity\AMB_OC_WaterSplocBuilding	
 	2033445011	AMB_OC_BoatIdle			\AMB\AMB_OceanCity\AMB_OC_BoatIdle	
+	2132210552	AMB_OC_WindWisthlingExit			\AMB\AMB_OceanCity\Trigger\AMB_OC_WindWisthlingExit	
 	2171996891	MX_OC_Awake			\MX\MX_OceanCity\MX_OC_Awake	
 	2315091060	MX_OC_ST_ChildExit			\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildExit	
 	2383654854	MX_OC_ST_Station			\MX\MX_OceanCity\MX_OC_ST_Station	
 	2463885656	MX_OC_ST_Fish			\MX\MX_OceanCity\MX_OC_ST_Fish	
+	2517718513	MX_OC_TrainAwake			\MX\MX_OceanCity\MX_OC_TrainAwake	
 	2535946476	AMB_OC_ChildLaugh2			\AMB\AMB_OceanCity\AMB_OC_ChildLaugh2	
 	2535946477	AMB_OC_ChildLaugh3			\AMB\AMB_OceanCity\AMB_OC_ChildLaugh3	
 	2535946479	AMB_OC_ChildLaugh1			\AMB\AMB_OceanCity\AMB_OC_ChildLaugh1	
@@ -35,6 +39,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3286101857	FT_OceanCityStop			\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop	
 	3287519140	MX_OC_ST_Child			\MX\MX_OceanCity\MX_OC_ST_Child	
 	3333365000	AMB_OC_WindWisthling			\AMB\AMB_OceanCity\AMB_OC_WindWisthling	
+	3339821491	SFX_OC_TrainPlayerImpactOut			\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactOut	
 	3385110621	AMB_OC_ChildsUnreaveal			\AMB\AMB_OceanCity\AMB_OC_ChildsUnreaveal	
 	3404723406	MX_OC_ST_ChildEnter			\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildEnter	
 	3488676060	MX_OC_ST_Train			\MX\MX_OceanCity\MX_OC_ST_Train	
@@ -49,6 +54,7 @@ Switch	ID	Name	Switch Group			Notes
 	808606367	SW_FT_OC_Wood	SW_FT_OC			
 	2295428781	SW_FT_OC_Water	SW_FT_OC			
 	3462940353	SW_FT_OC_Ground	SW_FT_OC			
+	4046423520	SW_FT_OC_Rail	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
@@ -116,7 +122,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	223984183	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildsSteps\AMB_OC_Ki_Lgh_Silence\Silence	
 	807930756	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh3\AMB_OC_Ki_Lgh_Silence\Silence	
 	811535592	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_TrainLoop\AMB_OC_Tr_Siren\AMB_OC_Tr_Siren_Silence\Silence	
-	894331382	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\Silence\Silence	
 	930159812	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh1\AMB_OC_Ki_Lgh_Silence\Silence	
 	990694544	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildsSplash\AMB_OC_Ki_Lgh_Silence\Silence	
 
@@ -145,6 +150,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	94387493	AMB_OC_BoatIdleSqueak	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_BoatIdleSqueak_1461A19A.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Boat\AMB_OC_BoatIdle\AMB_OC_BoatIdleSqueak\AMB_OC_BoatIdleSqueak		63189
 	119802720	FT_OC_Water-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Water\FT_OC_Water\FT_OC_Water-002		11867
 	130851682	AMB_OC_TrainStationL1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_TrainStationL1_46FBD884.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_TrainStation\AMB_OC_TrainStationL1		4717098
+	133403431	SFX_G_ErrorMapCleak	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_G_ErrorMapCleak_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainPlayerImpact\SFX_G_ErrorMapCleak		42682
 	150356678	FT_OC_WoodL2-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL2-001_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Wood\FT_OC_WoodL2\FT_OC_WoodL2-001		8205
 	159859437	AMB_OC_Child2-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child2-003_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh2\AMB_OC_ChildLaugh2\AMB_OC_Child2-003		4993
 	165011252	AMB_OC_FountainNoise	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_FountainNoise_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Fountain\AMB_OC_FountainNoise		777610
@@ -217,12 +223,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	520777631	FT_OC_Water-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Water\FT_OC_Water\FT_OC_Water-007		8088
 	536429729	AMB_OC_FountainSplash	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_FountainSplash_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Fountain\AMB_OC_FountainSplash		1361523
 	537232773	FT_OC_GroundL2-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-005		5575
-	538045953	AMB_OC_Tr_Swish	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_Swish_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Train_Swish\AMB_OC_Tr_Swish		63241
+	538045953	AMB_OC_Tr_Swish	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_Swish_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Tr_Swish		63241
 	550170229	FT_OC_Water-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-004_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Water\FT_OC_Water\FT_OC_Water-004		10770
-	561673441	AMB_OC_Tr_WaterSplash	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_WaterSplash_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Train_Swish\AMB_OC_Tr_WaterSplash		26114
+	561487437	SFX_G_ErrorMapBug	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_G_ErrorMapBug_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainPlayerImpact\SFX_G_ErrorMapBug		263450
+	561673441	AMB_OC_Tr_WaterSplash_01	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_WaterSplash_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Tr_WaterSplash_01		26114
 	586293275	FT_OC_GroundL2-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-003		5550
 	588408791	FT_OC_GroundL2-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-007		5339
 	589443354	FT_OC_WoodL1-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL1-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Wood\FT_OC_WoodL1\FT_OC_WoodL1-005		4984
+	621814197	SFX_G_ErrorMapDrone	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_G_ErrorMapDrone_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainPlayerImpact\SFX_G_ErrorMapDrone		970267
 	622404005	AMB_OC_Tr_Loop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_Loop_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_TrainLoop\AMB_OC_Tr_Loop		827060
 	626895962	AMB_OC_BoatIdleSqueak_04	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_BoatIdleSqueak_562AC9AF.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Boat\AMB_OC_BoatIdle\AMB_OC_BoatIdleSqueak\AMB_OC_BoatIdleSqueak_04		34512
 	639647242	FT_OC_GroundL1-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Ground\FT_OC_GroundL1\FT_OC_GroundL1-006		3854
@@ -234,7 +242,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	667273339	SFX_OC_TrainStop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_OC_TrainStop_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainStop		17684
 	668449909	AMB_OC_Bo_Tug-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Bo_Tug-002_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Boat\AMB_OC_BoatFar\AMB_OC_Bo_Tug\AMB_OC_Bo_Tug-002		33752
 	673524519	AMB_OC_Child3-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child3-002_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh3\AMB_OC_ChildLaugh3\AMB_OC_Child3-002		5940
-	674881482	SFX_OC_TrainPlayerEnter	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_OC_TrainPlayerEnter_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_OceanCity\SFX_OC_Train\SFX_OC_TrainPlayerEnter		19247
 	675289214	AMB_OC_Child1Glitch-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child1Glitch-005_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh1\AMB_OC_ChildLaughGlitch1\AMB_OC_Child1Glitch-005		4019
 	679658574	AMB_OC_Child1Glitch-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child1Glitch-006_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh1\AMB_OC_ChildLaughGlitch1\AMB_OC_Child1Glitch-006		4882
 	679883512	AMB_OC_WindHigh	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Wind-002_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Water\AMB_OC_Ocean\AMB_OC_WindHigh		925251
@@ -259,7 +266,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	805784958	FT_OC_WoodL1-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL1-004_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Wood\FT_OC_WoodL1\FT_OC_WoodL1-004		4966
 	808506699	AMB_OC_Child1Glitch-010	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child1Glitch-010_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh1\AMB_OC_ChildLaughGlitch1\AMB_OC_Child1Glitch-010		11679
 	811535595	MX_OC_St_Boat	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_St_Boat_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_OceanCity\MX_OC_Stingers\MX_OC_St_Boat\MX_OC_St_Boat		83915
-	822449642	AMB_OC_Tr_WaterFill	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_WaterFill_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Train_Swish\AMB_OC_Tr_WaterFill		59697
+	822449642	AMB_OC_Tr_WaterFill	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Tr_WaterFill_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_Train_Swish\AMB_OC_Tr_WaterFill		59697
 	840689447	AMB_OC_SeagullBarks-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_SeagullBarks-004_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Seagull\AMB_OC_SeagullBarks\AMB_OC_SeagullBarks-004		28993
 	849294485	FT_OC_GroundL1-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-001_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Ground\FT_OC_GroundL1\FT_OC_GroundL1-001		3296
 	849561973	AMB_OC_Child3-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_OC_Child3-003_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh3\AMB_OC_ChildLaugh3\AMB_OC_Child3-003		6219
