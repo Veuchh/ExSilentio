@@ -20,6 +20,7 @@ namespace LW.Player
         [Header("Movement Settings")]
         [SerializeField] float movementSpeed = 60;
         [SerializeField] float gravity = -9.81f;
+        float currentYVelocity;
 
         [Header("RotationSettings Settings")]
         [SerializeField] float rotationSpeed = 10;
@@ -142,18 +143,18 @@ namespace LW.Player
 
         private Vector3 ComputeMovement()
         {
-            //movment
-            Vector3 movement = new Vector3(PlayerData.CurrentMoveInput.x, 0, PlayerData.CurrentMoveInput.y) * movementSpeed * Time.deltaTime;
-
             //gravity
             if (characterController.isGrounded)
             {
-                movement.y = DEFAULT_GRAVITY;
+                currentYVelocity = DEFAULT_GRAVITY;
             }
             else
             {
-                movement.y = movement.y + (gravity * Time.deltaTime);
+                currentYVelocity +=  gravity * Time.deltaTime;
             }
+
+            //movment
+            Vector3 movement = new Vector3(PlayerData.CurrentMoveInput.x, currentYVelocity, PlayerData.CurrentMoveInput.y) * movementSpeed * Time.deltaTime;
 
             //Rotates the movement input by the current rotation of the player
             return transform.rotation * movement;
