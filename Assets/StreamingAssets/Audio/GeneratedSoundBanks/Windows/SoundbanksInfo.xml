@@ -177,7 +177,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{E2E7F699-B16C-6C41-DE4F-00E776A7252B}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{35240969-3D7E-B43D-BA83-B9C476AD2381}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -380,7 +380,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{8B2B4A75-52BA-11D3-146F-D6A355E7FC20}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{4B9673F9-D483-21A3-8F3A-145C060B8767}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -1237,7 +1237,7 @@
 						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fountain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" DurationType="Infinite">
+				<Event Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fountain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="30" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="165011252"/>
 						<MediaRef Id="472988219"/>
@@ -1294,7 +1294,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="4149905421" Name="AMB_OC_TrainStation" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_TrainStation" GUID="{B1105A58-D2A3-4510-A860-59C56EBF9647}" DurationType="Infinite">
+				<Event Id="4149905421" Name="AMB_OC_TrainStation" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_TrainStation" GUID="{B1105A58-D2A3-4510-A860-59C56EBF9647}" MaxAttenuation="45" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="7249235"/>
 						<MediaRef Id="130851682"/>
@@ -1380,7 +1380,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3286101857" Name="FT_OceanCityStop" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop" GUID="{F6DEE515-4944-40C3-8E4C-2746A52FE714}" DurationType="Infinite">
+				<Event Id="3286101857" Name="FT_OceanCityStop" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop" GUID="{F6DEE515-4944-40C3-8E4C-2746A52FE714}" DurationType="OneShot" DurationMin="0.36577085" DurationMax="1.1255833">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="2295428781" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
@@ -1711,5 +1711,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{924F8253-4E2B-5F71-5304-8287902D20E2}</FileHash>
+	<FileHash>{1F078A05-D27F-9FEF-FDEF-6701E0EA9710}</FileHash>
 </SoundBanksInfo>
