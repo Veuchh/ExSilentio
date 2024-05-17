@@ -390,7 +390,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584883279579982524
+    m_lastTime: -8584856665437781357
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -432,7 +432,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584856680596075907
+    m_lastTime: -8584856661729300932
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -1450,8 +1450,65 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584895587284109176
+    m_lastTime: -8584856644359165362
     List:
+    - name: Global
+      guid: 020af29bdac3c641ba3522f13e5975e8
+      id: 1465331116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: Global
+        ObjectType: 4
+        guid: 020af29bdac3c641ba3522f13e5975e8
+      Path: Events\SFX\Global
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_G_ErrorMap
+      guid: ca65f6a86c65c34c9cf61d643477030d
+      id: 870376687
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: Global
+        ObjectType: 4
+        guid: 020af29bdac3c641ba3522f13e5975e8
+      - ElementName: SFX_G_ErrorMap
+        ObjectType: 3
+        guid: ca65f6a86c65c34c9cf61d643477030d
+      Path: Events\SFX\Global\SFX_G_ErrorMap
+      maxAttenuation: 25
+      maxDuration: 60.261166
+      minDuration: 60.261166
+    - name: SFX_G_ErrorTP
+      guid: 641e9defe4c5224681d7da21cbf91eb4
+      id: 1791538751
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: Global
+        ObjectType: 4
+        guid: 020af29bdac3c641ba3522f13e5975e8
+      - ElementName: SFX_G_ErrorTP
+        ObjectType: 3
+        guid: 641e9defe4c5224681d7da21cbf91eb4
+      Path: Events\SFX\Global\SFX_G_ErrorTP
+      maxAttenuation: 0
+      maxDuration: 1.9427084
+      minDuration: 1.9427084
     - name: SFX_OC_TrainExit
       guid: c127c221a7fa794698f5546ab936f2e5
       id: 3210636256
@@ -1472,9 +1529,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.363896
       minDuration: 2.363896
-    - name: SFX_OC_TrainPlayerEnter
+    - name: SFX_OC_TrainPlayerImpact
       guid: 9e6461593e869442a1fb8919daceeefd
-      id: 1031639743
+      id: 985419213
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1485,33 +1542,13 @@ MonoBehaviour:
       - ElementName: SFX_OceanCity
         ObjectType: 4
         guid: cf900004579f444db5d16c1f9110932f
-      - ElementName: SFX_OC_TrainPlayerEnter
+      - ElementName: SFX_OC_TrainPlayerImpact
         ObjectType: 3
         guid: 9e6461593e869442a1fb8919daceeefd
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerEnter
+      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpact
       maxAttenuation: 0
       maxDuration: 2.6703959
       minDuration: 2.6703959
-    - name: SFX_OC_TrainPlayerExit
-      guid: 92768167eddd07438ebbe496f7875df4
-      id: 1560947431
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: 76472c2a1bb628498d56368a6177b6ad
-      - ElementName: SFX_OceanCity
-        ObjectType: 4
-        guid: cf900004579f444db5d16c1f9110932f
-      - ElementName: SFX_OC_TrainPlayerExit
-        ObjectType: 3
-        guid: 92768167eddd07438ebbe496f7875df4
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerExit
-      maxAttenuation: 0
-      maxDuration: 2.7844791
-      minDuration: 2.7844791
     - name: SFX_OC_TrainStop
       guid: 00781b24c80c344db68c1e3149d1078d
       id: 341180760
