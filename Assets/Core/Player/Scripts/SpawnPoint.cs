@@ -13,6 +13,7 @@ public class SpawnPoint : MonoBehaviour
 
     [SerializeField] GameObject playerPrefab;
     [SerializeField] List<MeshRenderer> waterPlanes;
+    [SerializeField] AK.Wwise.Event events;
     [SerializeField] ComponentsToAddOnSpawn componentsToAddToPlayer;
 
     private void Start()
@@ -27,6 +28,7 @@ public class SpawnPoint : MonoBehaviour
                     player.AddComponent<ReflectionHandler>().Init(waterPlanes);
                     break;
                 case ComponentsToAddOnSpawn.DistanceToWater:
+                    player.AddComponent<WwiseDistanceToWater>().Init(0, 35);
                     break;
             }
         }
