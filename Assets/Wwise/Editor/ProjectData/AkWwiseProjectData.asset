@@ -475,7 +475,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584856518685885824
+    m_lastTime: -8584856453039266275
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -717,6 +717,52 @@ MonoBehaviour:
       maxAttenuation: 35
       maxDuration: 7.743708
       minDuration: 7.743708
+    - name: AMB_OC_TrainEnterStation
+      guid: 1b3b559b65c4e04e9882370b675ab9c2
+      id: 3205911533
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_TrainEnterStation
+        ObjectType: 3
+        guid: 1b3b559b65c4e04e9882370b675ab9c2
+      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_OC_TrainExitStation
+      guid: 9b00fe69a066104580d63e3a1d123d34
+      id: 3128280173
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_TrainExitStation
+        ObjectType: 3
+        guid: 9b00fe69a066104580d63e3a1d123d34
+      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainExitStation
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: AMB_OC_TrainLoop
       guid: d1a5cf92446cbc4cb03cb1c244b3e9a6
       id: 1049210069
@@ -854,7 +900,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 018ab326c4257c4188ec004600b2145b
       Path: Events\AMB\AMB_OceanCity\AMB_OC_WindWisthling
-      maxAttenuation: 13
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_WindWisthlingExit
@@ -878,8 +924,8 @@ MonoBehaviour:
         guid: bf0b29198ee4e040bb275a15aa8c4ba6
       Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_WindWisthlingExit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: AMB_OceanCity
       guid: 0b541abb7f3cb046bf8f351963be05e5
       id: 1709551633
@@ -1505,7 +1551,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: fb949b7d1d02f74c8758092371545c2a
       Path: Events\MX\MX_OceanCity\MX_OC_TrainAwake
-      maxAttenuation: 75
+      maxAttenuation: 95
       maxDuration: -1
       minDuration: -1
     - name: MX_OceanCity
@@ -1984,7 +2030,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584858264696635265
+    m_lastTime: -8584856460814105036
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -2076,7 +2122,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584856543412946543
+    m_lastTime: -8584856452743718518
     List:
     - name: ST_MX_OC_Boat
       guid: 6dc84f2eff06614f90536d3e05cdf706
@@ -3485,6 +3531,84 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_OC_TrainInsideStation
+      guid: cb66f91e160a464ab89577af63c6c7c9
+      id: 1231701662
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_TrainInsideStation
+        ObjectType: 9
+        guid: cb66f91e160a464ab89577af63c6c7c9
+      Path: States\States\ST_OceanCity\ST_OC_TrainInsideStation
+      values:
+      - name: In
+        guid: cb78e226ce86a8498b6ff040a616eb7f
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_TrainInsideStation
+          ObjectType: 9
+          guid: cb66f91e160a464ab89577af63c6c7c9
+        - ElementName: In
+          ObjectType: 8
+          guid: cb78e226ce86a8498b6ff040a616eb7f
+      - name: None
+        guid: 4052db261b579142b7654b90c154b4df
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_TrainInsideStation
+          ObjectType: 9
+          guid: cb66f91e160a464ab89577af63c6c7c9
+        - ElementName: None
+          ObjectType: 8
+          guid: 4052db261b579142b7654b90c154b4df
+      - name: out
+        guid: 7375ea35d3d91349a9d9b6ddc7abeb3e
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_TrainInsideStation
+          ObjectType: 9
+          guid: cb66f91e160a464ab89577af63c6c7c9
+        - ElementName: out
+          ObjectType: 8
+          guid: 7375ea35d3d91349a9d9b6ddc7abeb3e
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_OceanCity
       guid: 5d0c55818c3c8847a893d7c1da597f12
       id: 700224282
@@ -3650,7 +3774,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584904938860912808
     List: []
-  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d0000001300000014000000150000001600000017000000200000002200000038000000390000003b000000
+  ExpandedFileSystemItemIds: 020000000300000005000000060000000b0000000d00000013000000140000001500000016000000170000002000000038000000390000003a0000003c000000
   ExpandedWaapiItemIds: 06000000070000000b0000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

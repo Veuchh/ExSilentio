@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{61FB2618-2928-91EB-CACC-75FAAE6471B9}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{74D83D94-1B05-1668-BBFC-50542BB1E1C5}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -110,6 +110,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\None" GUID="{53DF029B-BBFB-474C-BE8B-502D0285A37F}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1231701662" Name="ST_OC_TrainInsideStation" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation" GUID="{1EF966CB-0A16-4A46-B895-77AF63C6C7C9}">
+					<States>
+						<State Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\None" GUID="{26DB5240-571B-4291-B765-4B90C154B4DF}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1244262989" Name="ST_MX_OC_Child_FishTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig" GUID="{1C4A7B7C-F21A-45BA-B009-2563AAF03288}">
@@ -390,7 +397,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{DCD80104-BB13-8517-EA76-AB96BD323A61}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{AF3C7ADD-A3D7-33F6-4F15-81D51BB847A1}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -1277,6 +1284,9 @@
 						<MediaRef Id="951458628"/>
 						<MediaRef Id="1033891144"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="380529525" Name="AMB_OC_SeagullBarks" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_SeagullBarks" GUID="{824A1E3F-31C4-4F8A-853B-5983AA60F401}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
@@ -1294,6 +1304,16 @@
 						<MediaRef Id="561673441"/>
 						<MediaRef Id="822449642"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="3205911533" Name="AMB_OC_TrainEnterStation" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation" GUID="{9B553B1B-C465-4EE0-9882-370B675AB9C2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3128280173" Name="AMB_OC_TrainExitStation" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainExitStation" GUID="{69FE009B-66A0-4510-80D6-3E3A1D123D34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="1049210069" Name="AMB_OC_TrainLoop" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_TrainLoop" GUID="{92CFA5D1-6C44-4CBC-B03C-B1C244B3E9A6}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
@@ -1602,7 +1622,7 @@
 				</Event>
 				<Event Id="1113259158" Name="MX_OC_ST_WindEnter" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindEnter" GUID="{3D49BBC6-50B8-4B66-A62A-645C37A117F3}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3053992220" Name="MX_OC_ST_WindExit" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindExit" GUID="{A27CA9AE-7B0B-4FB0-AB98-43361C94BB4F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2517718513" Name="MX_OC_TrainAwake" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_TrainAwake" GUID="{7D9B94FB-021D-4CF7-8758-092371545C2A}" MaxAttenuation="75" DurationType="Infinite">
+				<Event Id="2517718513" Name="MX_OC_TrainAwake" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_TrainAwake" GUID="{7D9B94FB-021D-4CF7-8758-092371545C2A}" MaxAttenuation="95" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="399235344"/>
 					</MediaRefs>
@@ -1682,6 +1702,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\None" GUID="{53DF029B-BBFB-474C-BE8B-502D0285A37F}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1231701662" Name="ST_OC_TrainInsideStation" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation" GUID="{1EF966CB-0A16-4A46-B895-77AF63C6C7C9}">
+					<States>
+						<State Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\None" GUID="{26DB5240-571B-4291-B765-4B90C154B4DF}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1244262989" Name="ST_MX_OC_Child_FishTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig" GUID="{1C4A7B7C-F21A-45BA-B009-2563AAF03288}">
@@ -1790,5 +1817,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DC0DF463-D0A8-E90C-9CEF-FC535AA63B36}</FileHash>
+	<FileHash>{29141918-CEF7-8DB5-5664-A223758B8902}</FileHash>
 </SoundBanksInfo>

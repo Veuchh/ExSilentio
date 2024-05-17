@@ -35,6 +35,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	2867726670	MX_OC_ST_StationExit			\MX\MX_OceanCity\Trigger\MX_OC_ST_StationExit	
 	2973427017	MX_OC_ST_Buildings			\MX\MX_OceanCity\MX_OC_ST_Buildings	
 	3053992220	MX_OC_ST_WindExit			\MX\MX_OceanCity\Trigger\MX_OC_ST_WindExit	
+	3128280173	AMB_OC_TrainExitStation			\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainExitStation	
+	3205911533	AMB_OC_TrainEnterStation			\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation	
 	3210636256	SFX_OC_TrainExit			\SFX\SFX_OceanCity\SFX_OC_TrainExit	
 	3286101857	FT_OceanCityStop			\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop	
 	3287519140	MX_OC_ST_Child			\MX\MX_OceanCity\MX_OC_ST_Child	
@@ -61,6 +63,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	637628402	ST_MX_OC_Boat			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
 	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
+	1231701662	ST_OC_TrainInsideStation			\States\ST_OceanCity\ST_OC_TrainInsideStation	
 	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
 	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
@@ -83,6 +86,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Child			
 	748895195	None	ST_MX_OC_Child			
 	3384621607	Unreveal	ST_MX_OC_Child			
+	645492555	out	ST_OC_TrainInsideStation			
+	748895195	None	ST_OC_TrainInsideStation			
+	1752637612	In	ST_OC_TrainInsideStation			
 	645492555	Out	ST_MX_OC_Child_FishTrig			
 	748895195	None	ST_MX_OC_Child_FishTrig			
 	1752637612	In	ST_MX_OC_Child_FishTrig			
