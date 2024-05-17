@@ -79,19 +79,6 @@ namespace LW.Audio
 
         public void UpdateRTPC(string rtpcName, float rtpcValue, GameObject origin = null)
         {
-            if (origin == null)
-            {
-                if (playerCamera != null)
-                {
-                    origin = playerCamera;
-                }
-                else
-                {
-                    Debug.LogError("No camera was set");
-                    return;
-                }
-            }
-
             AkSoundEngine.SetRTPCValue(rtpcName, rtpcValue, origin);
         }
     }
