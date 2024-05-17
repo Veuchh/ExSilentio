@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
@@ -74,6 +75,24 @@ namespace LW.Audio
 
             currentLevelBank = newBankName;
             AkBankManager.LoadBankAsync(currentLevelBank);
+        }
+
+        public void UpdateRTPC(string rtpcName, float rtpcValue, GameObject origin = null)
+        {
+            if (origin == null)
+            {
+                if (playerCamera != null)
+                {
+                    origin = playerCamera;
+                }
+                else
+                {
+                    Debug.LogError("No camera was set");
+                    return;
+                }
+            }
+
+            AkSoundEngine.SetRTPCValue(rtpcName, rtpcValue, origin);
         }
     }
 }
