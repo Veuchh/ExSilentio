@@ -142,7 +142,7 @@ namespace LW.Level
             ConsoleUI.Instance.AddToHistory($"{translatedID}{consoleFeedback}");
         }
 
-        public List<RevealableObjectBundle> GetBundleOfImportnce(ObjectImportance objectImportance)
+        public List<RevealableObjectBundle> GetBundlesOfImportance(ObjectImportance objectImportance)
         {
             List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
 
@@ -156,6 +156,8 @@ namespace LW.Level
 
             return bundles;
         }
+
+        public List<RevealableObjectBundle> GetBundles() => bundles;
 
         public void OnParseFailed(string failedToParseString)
         {

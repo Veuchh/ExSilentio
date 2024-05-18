@@ -22,7 +22,10 @@ namespace LW.Level
 
         bool isRevealed = false;
         WordDatabaseEntry entry;
+        Dictionary<string, bool> hints = new Dictionary<string, bool>();
 
+
+        public Dictionary<string, bool> Hints => hints;
         public WordID ID => awaitedID;
         public ObjectImportance ObjectImportance => objectImportance;
         public bool IsRevealed => isRevealed;
@@ -31,6 +34,9 @@ namespace LW.Level
         private void Start()
         {
             RevealableObjectHandler.Instance.RegisterBundle(this);
+            
+            foreach (string hintID in entry.HintsID)
+                hints.Add(hintID, false);
         }
 
         public void RevealBundle(WordID usedID, LocalizedStringTable stringTable)
