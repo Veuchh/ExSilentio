@@ -111,5 +111,17 @@ namespace LW.Level
         {
             entry = assignedEntry;
         }
+
+        public void RevealHint()
+        {
+            foreach (string hintID in entry.HintsID)
+            {
+                if (hints[hintID] == false)
+                {
+                    hints[hintID] = true;
+                    break;
+                }
+            }
+        }
     }
 }

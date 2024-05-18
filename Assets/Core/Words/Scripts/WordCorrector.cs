@@ -10,12 +10,31 @@ namespace LW.Word
         [SerializeField] LocalizedStringTable wordStringTable;
         [SerializeField] LocalizedStringTable commandStringTable;
 
-        public bool AttemptParsingToCommand(string currentWordInput, Action<CommandID> onSuccesfullCommandParse)
+        public bool AttemptParsingToCommand(string currentWordInput, Action<CommandID, string> onSuccesfullCommandParse)
         {
             var table = commandStringTable.GetTable();
 
             CommandID bestCandidate = (CommandID)(-1);
             int bestCandidateScore = int.MaxValue;
+
+            string[] separatedInput = currentWordInput.Split(" ");
+            int firstWordID = 0;
+
+            for (int i = 0; i < separatedInput.Length; i++)
+            {
+                if (!string.IsNullOrEmpty(separatedInput[i]))
+                {
+                    firstWordID = i;
+                    break;
+                }
+            }
+
+            string arguments = string.Empty;
+
+            for (int i = firstWordID + 1; i < separatedInput.Length; i++)
+            {
+                arguments += separatedInput[i] + " ";
+            }
 
             foreach (CommandID id in Enum.GetValues(typeof(CommandID)))
             {
@@ -29,7 +48,7 @@ namespace LW.Word
 
                 if (NormalizeString(table.GetEntry(stringID).LocalizedValue) == NormalizeString(currentWordInput))
                 {
-                    onSuccesfullCommandParse?.Invoke(id);
+                    onSuccesfullCommandParse?.Invoke(id, arguments);
                     return true;
                 }
                 else
@@ -46,7 +65,7 @@ namespace LW.Word
 
             if (bestCandidateScore <= currentWordInput.Length / 3)
             {
-                onSuccesfullCommandParse?.Invoke(bestCandidate);
+                onSuccesfullCommandParse?.Invoke(bestCandidate, arguments);
                 return true;
             }
 
@@ -55,8 +74,6 @@ namespace LW.Word
 
         public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action<string> OnFailedParse)
         {
-            Debug.LogWarning("TODO : MISSING AUTOCORRECT");
-
             var table = wordStringTable.GetTable();
 
             WordID bestCandidate = (WordID)(-1);

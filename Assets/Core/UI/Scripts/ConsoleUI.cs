@@ -34,7 +34,7 @@ namespace LW.UI
         [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClClick;
 
-        public static event Action<CommandID> onCommandClicked;
+        public static event Action<CommandID, string> onCommandClicked;
 
         bool isEntryEven = true;
         string currentInput = string.Empty;
@@ -104,7 +104,7 @@ namespace LW.UI
 
         public void OnCommandClicked(CommandID commandID)
         {
-            onCommandClicked?.Invoke(commandID);
+            onCommandClicked?.Invoke(commandID, "");
             WwiseInterface.Instance.PlayEvent(uiClClick);
         }
 
