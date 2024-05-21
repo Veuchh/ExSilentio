@@ -11,6 +11,7 @@ using UnityEngine.VFX;
 
 namespace LW.Level
 {
+    [Serializable]
     public class RevealableObjectBundle : MonoBehaviour
     {
         [SerializeField, FormerlySerializedAs("itemsRevealed")] List<RevealableItem> itemsInBundle;
@@ -20,13 +21,19 @@ namespace LW.Level
         [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
         [SerializeField] HintDatabase hintDatabse;
-        [SerializeField] List<string> hintsBase;
+        [SerializeField, HideInInspector] List<string> hintsBase;
         bool isRevealed = false;
         WordDatabaseEntry entry;
         Dictionary<string, bool> hints = new Dictionary<string, bool>();
 
 
-        public List<string> HintsBase => hintsBase;
+        public List<string> HintsBase
+        {
+            get {
+                if (hintsBase == null) hintsBase = new List<string>();
+                return hintsBase; 
+            }
+        }
         public Dictionary<string, bool> Hints => hints;
         public WordID ID => awaitedID;
         public ObjectImportance ObjectImportance => objectImportance;
@@ -37,7 +44,7 @@ namespace LW.Level
         {
             RevealableObjectHandler.Instance.RegisterBundle(this);
 
-            foreach (string hintID in hintsBase)
+            foreach (string hintID in HintsBase)
                 hints.Add(hintID, false);
         }
 
@@ -116,7 +123,7 @@ namespace LW.Level
 
         public void RevealHint()
         {
-            foreach (string hintID in hintsBase)
+            foreach (string hintID in HintsBase)
             {
                 if (hints[hintID] == false)
                 {
