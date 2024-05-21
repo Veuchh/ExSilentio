@@ -22,6 +22,7 @@ namespace LW.Level
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
         [SerializeField] HintDatabase hintDatabse;
         [SerializeField, HideInInspector] List<string> hintsBase;
+
         bool isRevealed = false;
         WordDatabaseEntry entry;
         Dictionary<string, bool> hints = new Dictionary<string, bool>();

@@ -1,4 +1,5 @@
 using LW.Data;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Localization;
@@ -40,6 +41,18 @@ namespace LW.Editor.Tools
             for (int hintIndex = 0; hintIndex < Database.HintKeys.Count; hintIndex++)
                 DisplayEntry(hintIndex);
 
+            if (GUILayout.Button("Add new hint") && !Database.HintKeys.Contains("NewEntry"))
+            {
+                Database.HintKeys.Add("NewEntry");
+                var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
+                foreach (Locale locale in LocalizationEditorSettings.GetLocales())
+                {
+                    var localTable = collection.GetTable(locale.Identifier) as StringTable;
+
+                    localTable.AddEntry("NewEntry", "");
+                }
+
+            }
             GUILayout.EndScrollView();
         }
 
@@ -52,9 +65,18 @@ namespace LW.Editor.Tools
             var collection = LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME);
             string hintTranslationKey = ((StringTable)collection.GetTable(LocalizationEditorSettings.GetLocales()[0].Identifier)).GetEntry(Database.HintKeys[hintIndex].ToString())?.Key;
 
+            List<string> allKeyss = new List<string>();
+            foreach (var item in collection.GetRowEnumeratorUnsorted())
+            {
+                allKeyss.Add(item.KeyEntry.Key);
+            }
+
             hintTranslationKey = (string.IsNullOrEmpty(hintTranslationKey) ? "" : hintTranslationKey);
 
-            if (keyBuffer != keyNewValue && !IsValueAlreadyInDB(keyNewValue) && hintTranslationKey != keyNewValue)
+            bool removeEntry = false;
+            string entryToRemove = "";
+
+            if (keyBuffer != keyNewValue && !IsValueAlreadyInDB(keyNewValue) && hintTranslationKey != keyNewValue && !allKeyss.Contains(keyNewValue))
             {
                 Database.HintKeys[hintIndex] = keyNewValue;
 
@@ -64,18 +86,24 @@ namespace LW.Editor.Tools
                     //Create entry
                     if (localTable.GetEntry(keyBuffer) == null)
                         localTable.AddEntry(keyNewValue, "");
-                //Update entry
+                    //Update entry
                     else
                     {
                         localTable.AddEntry(keyNewValue, localTable.GetEntry(keyBuffer).LocalizedValue);
-                        localTable.RemoveEntry(keyBuffer);
+                        removeEntry = true;
+                        entryToRemove = keyBuffer;
                     }
                     EditorUtility.SetDirty(localTable);
                 }
             }
-            else if (keyBuffer != keyNewValue && (IsValueAlreadyInDB(keyNewValue) || hintTranslationKey == keyNewValue))
+            else if (keyBuffer != keyNewValue && (IsValueAlreadyInDB(keyNewValue) || hintTranslationKey == keyNewValue)||!allKeyss.Contains(keyNewValue))
             {
                 Debug.LogWarning("An item of this name already exists");
+            }
+
+            if (removeEntry)
+            {
+                LocalizationEditorSettings.GetStringTableCollection(STRING_TABLE_NAME).RemoveEntry(entryToRemove);
             }
 
             foreach (Locale locale in LocalizationEditorSettings.GetLocales())

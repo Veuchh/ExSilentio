@@ -29,14 +29,15 @@ public class Bundle_Inspector : Editor
         for (int i = 0; i < targetBundle.HintsBase.Count; i++)
         {
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("-", GUILayout.Width(50)))
+            if (GUILayout.Button("-", GUILayout.Width(50)) 
+                || !Database.HintKeys.Contains((targetBundle.HintsBase[i])))
             {
                 targetBundle.HintsBase.RemoveAt(i);
                 i--;
             }
 
             targetBundle.HintsBase[i] = Database.HintKeys[EditorGUILayout.Popup(Database.HintKeys.IndexOf(targetBundle.HintsBase[i]),
-                                                              Database.HintKeys.ToArray())];
+                                                                          Database.HintKeys.ToArray())];
             GUILayout.EndHorizontal();
         }
 
