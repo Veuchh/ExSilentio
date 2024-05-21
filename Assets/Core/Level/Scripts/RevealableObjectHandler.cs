@@ -17,6 +17,7 @@ namespace LW.Level
         public static RevealableObjectHandler Instance { get; private set; }
 
         [SerializeField] WordDatabase database;
+        [SerializeField] HintDatabase hintDatabase;
         [SerializeField] LocalizedStringTable stringTable;
 
 
@@ -41,7 +42,7 @@ namespace LW.Level
             if (!bundles.Contains(newBundle))
             {
                 bundles.Add(newBundle);
-                newBundle.AssignEntry(database.GetEntry(newBundle.ID));
+                newBundle.Init(database.GetEntry(newBundle.ID));
             }
             else
             {

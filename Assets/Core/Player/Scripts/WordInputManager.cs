@@ -196,7 +196,7 @@ namespace LW.Player
                 for (int hintIndex = 0; hintIndex < bundle.Hints.Count; hintIndex++)
                 {
                     consoleOutput += $"\n\t- ";
-                    string hintKey = bundle.Entry.HintsID[hintIndex];
+                    string hintKey = bundle.HintsBase[hintIndex];
                     if (bundle.Hints[hintKey])
                     {
                         string translatedHint = translatedWordsTable.GetEntry(hintKey).LocalizedValue;

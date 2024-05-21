@@ -19,12 +19,14 @@ namespace LW.Level
         [SerializeField] bool playWwiseEventOnReveal = false;
         [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
-
+        [SerializeField] HintDatabase hintDatabse;
+        [SerializeField] List<string> hintsBase;
         bool isRevealed = false;
         WordDatabaseEntry entry;
         Dictionary<string, bool> hints = new Dictionary<string, bool>();
 
 
+        public List<string> HintsBase => hintsBase;
         public Dictionary<string, bool> Hints => hints;
         public WordID ID => awaitedID;
         public ObjectImportance ObjectImportance => objectImportance;
@@ -34,8 +36,8 @@ namespace LW.Level
         private void Start()
         {
             RevealableObjectHandler.Instance.RegisterBundle(this);
-            
-            foreach (string hintID in entry.HintsID)
+
+            foreach (string hintID in hintsBase)
                 hints.Add(hintID, false);
         }
 
@@ -45,7 +47,7 @@ namespace LW.Level
             //Get texture from input
             Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
             textureMaps.Add(
-                stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"), 
+                stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);
 
             foreach (RevealableItem revealableItem in itemsInBundle)
@@ -60,7 +62,7 @@ namespace LW.Level
 
                 if (!textureMaps.Keys.Contains(usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H")))
                 {
-                    textureMaps.Add(usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H"), StringToTextureConverter.Instance.GetTextureFromInput(usedInput, isVertical : revealableItem.IsTextureVertical));
+                    textureMaps.Add(usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H"), StringToTextureConverter.Instance.GetTextureFromInput(usedInput, isVertical: revealableItem.IsTextureVertical));
                 }
 
                 revealableItem.RevealItem(textureMaps[usedInput + "_" + (revealableItem.IsTextureVertical ? "V" : "H")], usedInput.Length);
@@ -107,14 +109,14 @@ namespace LW.Level
             }
         }
 
-        public void AssignEntry(WordDatabaseEntry assignedEntry)
+        public void Init(WordDatabaseEntry assignedEntry)
         {
             entry = assignedEntry;
         }
 
         public void RevealHint()
         {
-            foreach (string hintID in entry.HintsID)
+            foreach (string hintID in hintsBase)
             {
                 if (hints[hintID] == false)
                 {
