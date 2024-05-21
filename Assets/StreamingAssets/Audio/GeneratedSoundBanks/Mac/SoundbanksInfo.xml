@@ -9,30 +9,93 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F0FA09A3-EE93-25B4-1612-A22AB6BC06FE}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{74D83D94-1B05-1668-BBFC-50542BB1E1C5}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="281885668" Name="Have_U_Ever_Been_Outside (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Plains\[Effect Slot [0]: (RoomVerb)]\Have_U_Ever_Been_Outside (Custom)" GUID="{EE14FE7F-D6B5-4B84-9439-A0F488775A45}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="602546716" Name="Room_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Large" GUID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{71D2E600-0242-46CB-AFF2-89568830AF77}" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{06E7D91D-4434-4414-8FC3-ACC5247E2347}" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX" GUID="{AD9B979E-5250-40BD-9A6A-3FA989361E21}"/>
+				<Bus Id="837352445" Name="TrainErrorchild" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild" GUID="{3ACAEE07-E570-4853-8B8F-77DE2718FB05}"/>
+				<Bus Id="931952533" Name="AMB_OC_Wind" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind" GUID="{F4BC7F7D-7B73-41CF-B2C5-64093AF14AAC}"/>
+				<Bus Id="1117531639" Name="AMB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB" GUID="{6800E617-CFAC-446E-A0FD-6BEE02B9632E}"/>
+				<Bus Id="1551306167" Name="UI" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI" GUID="{19146DA6-77C0-499F-A028-474708E79385}"/>
+				<Bus Id="1685527054" Name="MX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX" GUID="{00D8AAD3-8E11-4AAC-BF38-D5FB8699999A}"/>
+				<Bus Id="1709551633" Name="AMB_OceanCIty" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty" GUID="{463B4679-E212-41A8-9F3A-C5371F368623}"/>
+				<Bus Id="2325878355" Name="AMB_OC_Ocean" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean" GUID="{18BD6074-3978-4F45-94DC-DF8887F10EA5}"/>
+				<Bus Id="2385628198" Name="FOOTSTEPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS" GUID="{80C99877-5536-4D0C-B535-98A28A945ABB}"/>
+				<Bus Id="2482450727" Name="AMB_OC_Child" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child" GUID="{843D8B46-86BB-49CA-BDE3-A05DFB4DBE62}"/>
+				<Bus Id="2826138305" Name="AMB_OC_Boat" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat" GUID="{6C8BFB1F-90B3-4A28-A1D3-135AAD44E1D0}"/>
+				<Bus Id="3705995597" Name="TrainError" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError" GUID="{E72667C2-62B4-4545-A2BD-412CAE5ED1CA}"/>
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="3886422523" Name="AMB_OC_Train" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train" GUID="{42C3E5E5-FD84-4ABD-9EBA-989E2AFF62A3}"/>
+				<Bus Id="4026521433" Name="FT_OceanCity" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity" GUID="{AB0B9FB0-091D-4A26-AD4B-94DFED63191E}"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="1519764506" Name="Plains" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Plains" GUID="{9BD1EBDA-0A36-4AA4-80F8-5BADD7676841}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="281885668"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{44D82C6B-E6E6-41F7-A299-7BD88D88A5BF}"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{44D82C6B-E6E6-41F7-A299-7BD88D88A5BF}"/>
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave" GUID="{F2C2024A-B4D6-422A-9A21-7AF50963510B}">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="602546716"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs" GUID="{44D82C6B-E6E6-41F7-A299-7BD88D88A5BF}"/>
+					</AuxBusRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
-				<GameParameter Id="3566296580" Name="GP_OC_MX_ChildExit" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit" GUID="{C53CAB02-A75B-43F3-87A7-4B63E017326D}"/>
 				<GameParameter Id="3815697657" Name="GP_OC_WaterHigh" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh" GUID="{FAA5339D-BEAD-4829-B320-C9D7A03BB665}"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
+				<StateGroup Id="272500339" Name="ST_MX_OC_FontainTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig" GUID="{FE3B19C0-3370-47F7-90DA-0376FCA09BA8}">
 					<States>
-						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\None" GUID="{EF4A5BD6-9F22-4803-8A1A-DA64CCC87C83}"/>
-						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\Out" GUID="{6E2A83E9-FCEF-450C-906F-D5F1A8427986}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\None" GUID="{58E71EE2-F436-4E1B-9EAB-CA6708730822}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\In" GUID="{9E30C9AA-3F85-48E2-9980-64498A7A9F29}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="274315000" Name="ST_MX_OC_WindTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig" GUID="{2D5AD57E-BF46-401C-A9A6-BE217DD4CAA3}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\Out" GUID="{015833D3-A510-4520-98E3-F5177334ACAF}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\None" GUID="{CCCEE804-25CF-45DA-B756-4D168F729F7E}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\In" GUID="{206F1B93-931D-4A23-B0F4-5051C1A6D852}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="533948994" Name="ST_MX_OC_Wind" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind" GUID="{E2EF137C-26D1-4E8E-8362-05BB80842108}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\Reveal" GUID="{64448318-5D1D-43E3-B6EE-BEF8C6734764}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\None" GUID="{1CA63F34-A83F-42EF-936B-3CE0A86E9340}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\Unreveal" GUID="{6DFA6435-2E4A-4360-874A-2607045A80DB}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="637628402" Name="ST_MX_OC_Boat" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat" GUID="{2E4FC86D-06FF-4F61-9053-6D3E05CDF706}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\Reveal" GUID="{493CCD65-7EF2-4E6A-A2E4-446F24FB6F07}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\None" GUID="{DE14DB6E-4F35-4092-AFC9-B8D3E6F2A8F5}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\Unreveal" GUID="{CE888BFA-C5AC-41DC-8070-59A1C555238C}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="719384611" Name="ST_MX_OC_Buildings" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings" GUID="{152F02A5-580A-4506-BFD4-6E8E89AFCD13}">
@@ -49,6 +112,41 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1231701662" Name="ST_OC_TrainInsideStation" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation" GUID="{1EF966CB-0A16-4A46-B895-77AF63C6C7C9}">
+					<States>
+						<State Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\None" GUID="{26DB5240-571B-4291-B765-4B90C154B4DF}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1244262989" Name="ST_MX_OC_Child_FishTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig" GUID="{1C4A7B7C-F21A-45BA-B009-2563AAF03288}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\Out" GUID="{6A510D00-14FD-4C3D-9582-144A5A89AAFF}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\None" GUID="{1316BE21-8272-4ADD-9146-43ED5C19FCFC}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\In" GUID="{5A7707F6-8983-41D3-A4BC-C4E23C06BF94}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1621923877" Name="ST_MX_OC_Seagull" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull" GUID="{DF7074A4-3849-463A-9807-1AF74161091B}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\Reveal" GUID="{38D69731-F9BF-41AA-AAFC-3A2FF8287DB4}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\None" GUID="{3DC217C0-BBFC-4CD8-9C43-CC2847AEBD4A}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\Unreveal" GUID="{735DBF47-EB7A-4F9F-964B-1633D3F366DA}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2603209358" Name="ST_MX_OC_Train" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train" GUID="{429FBA87-1123-4381-B053-349B63893FEE}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\Reveal" GUID="{5EFD1ACF-87FC-40C0-B9C2-E8D4A17C74EA}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\None" GUID="{6EE5368D-03B0-409D-A658-350E4B20862F}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\Unreveal" GUID="{630EC699-B6AE-478B-B7E9-210B9EEF6DE1}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3449563311" Name="ST_OC_SFXTrainImpact" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact" GUID="{E1972E28-D3AC-4DB2-97A2-C92C8CE58AED}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\Out" GUID="{28D92298-A59E-4DDA-A0E6-C0BAD7DDC78D}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\None" GUID="{DD330B51-9CFE-49BB-B4E6-C8881312AC4D}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\In" GUID="{B8CA5F6F-CBE9-415B-AC56-167EF28029AD}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3608668146" Name="ST_MX_OC_Ocean" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean" GUID="{78FBFE60-C56B-4ABB-8677-AF8F1E02F1D2}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Reveal" GUID="{98CD5FED-4762-453F-AE0B-554EB9CA6E7B}"/>
@@ -63,6 +161,20 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station\Unreveal" GUID="{2FA87383-FBE8-409B-B537-EFCE675A5F3F}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="4165626038" Name="ST_MX_OC_Fish" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish" GUID="{079004F2-67A5-4114-998A-C3C7027597FA}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Reveal" GUID="{9FB841E3-DC7B-4F20-A97C-D449D6624FCD}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\None" GUID="{5FB7B8CE-0696-4449-93E3-06A3C42F2552}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Unreveal" GUID="{8B7A5AA0-3CB0-4538-BD8B-956032377B82}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4205926058" Name="ST_MX_OC_StationTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig" GUID="{EF50A645-0853-4970-A38E-CD727872D00E}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\Out" GUID="{8D241171-4728-4A27-AA71-54076B79D208}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\None" GUID="{4CD3E5CD-9495-4657-BA36-04BE89F4E5DD}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\In" GUID="{57993F7D-606D-431B-8CF5-B31586FF06FC}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4266710578" Name="ST_MX_OC_Sun" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun" GUID="{6FA63A59-52E4-4974-89E4-FC9E11FCB91E}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun\Reveal" GUID="{17B80B90-6BA7-4A38-8189-12BD35CFA645}"/>
@@ -74,13 +186,15 @@
 			<SwitchGroups>
 				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\Switch\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
 					<Switches>
+						<Switch Id="808606367" Name="SW_FT_OC_Wood" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Wood" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
 						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
+						<Switch Id="4046423520" Name="SW_FT_OC_Rail" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Rail" GUID="{62585EFD-8465-4C36-A0AA-0D67295A7FF9}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{CC404E07-5DB2-EBCA-F188-27E7F4DFDC99}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{35240969-3D7E-B43D-BA83-B9C476AD2381}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -96,6 +210,14 @@
 				<File Id="72377590" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_CLick L2.wav</ShortName>
 					<CachePath>SFX/UI_CL_CLick L2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="133403431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapCleak.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapCleak_8E324C96.wem</CachePath>
+				</File>
+				<File Id="246322530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorTP.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorTP_8E324C96.wem</CachePath>
 				</File>
 				<File Id="330022282" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_WriteText L1-002.wav</ShortName>
@@ -137,6 +259,14 @@
 					<ShortName>UI_CL_WriteText L2-005.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L2-005_8E324C96.wem</CachePath>
 				</File>
+				<File Id="561487437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapBug.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapBug_8E324C96.wem</CachePath>
+				</File>
+				<File Id="621814197" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapDrone.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapDrone_8E324C96.wem</CachePath>
+				</File>
 				<File Id="685662307" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_WriteText L1-006.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L1-006_8E324C96.wem</CachePath>
@@ -169,6 +299,10 @@
 					<ShortName>UI_CL_WriteText L1-005.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L1-005_8E324C96.wem</CachePath>
 				</File>
+				<File Id="927008413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapWind.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapWind_8E324C96.wem</CachePath>
+				</File>
 				<File Id="944222257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_CLick L1-002.wav</ShortName>
 					<CachePath>SFX/UI_CL_CLick L1-002_8E324C96.wem</CachePath>
@@ -187,6 +321,19 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="870376687" Name="SFX_G_ErrorMap" ObjectPath="\Events\SFX\Global\SFX_G_ErrorMap" GUID="{A8F665CA-656C-4CC3-9CF6-1D643477030D}" MaxAttenuation="25" DurationType="OneShot" DurationMin="60.261166" DurationMax="60.261166">
+					<MediaRefs>
+						<MediaRef Id="133403431"/>
+						<MediaRef Id="561487437"/>
+						<MediaRef Id="621814197"/>
+						<MediaRef Id="927008413"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1791538751" Name="SFX_G_ErrorTP" ObjectPath="\Events\SFX\Global\SFX_G_ErrorTP" GUID="{EF9D1E64-C5E4-4622-81D7-DA21CBF91EB4}" DurationType="OneShot" DurationMin="1.9427084" DurationMax="1.9427084">
+					<MediaRefs>
+						<MediaRef Id="246322530"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2266750638" Name="UI_CL_CLick" ObjectPath="\Events\UI\UI_Consol\UI_CL_CLick" GUID="{76936BFC-85AC-4543-A1B2-543D9250E5ED}" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
 					<MediaRefs>
 						<MediaRef Id="19911218"/>
@@ -250,22 +397,98 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{33CF88C8-6B03-9D3B-C6C2-B80F5033721F}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{3FE49208-B7EC-E99C-52E6-6A769C83483C}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
 			<Media>
+				<File Id="2671175" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_EED988FF.wem</CachePath>
+				</File>
 				<File Id="7249235" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_TrainStationL2.wav</ShortName>
 					<CachePath>SFX/AMB_OC_TrainStationL2_38D53287.wem</CachePath>
+				</File>
+				<File Id="10051041" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_802ECE48.wem</CachePath>
+				</File>
+				<File Id="11273008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-005.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="16432664" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="17051376" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="20017345" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_09A3ADF1.wem</CachePath>
+				</File>
+				<File Id="26936111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Wind-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Wind-001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="29831157" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleSqueak_0D02FC8B.wem</CachePath>
+				</File>
+				<File Id="34383955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="41467455" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_L_Ocean.wav</ShortName>
 					<CachePath>SFX/MX_OC_L_Ocean_56CEF360.wem</CachePath>
 				</File>
+				<File Id="45425514" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="49313952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-008.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-008_8E324C96.wem</CachePath>
+				</File>
+				<File Id="50606454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="53711308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_F8D7318C.wem</CachePath>
+				</File>
+				<File Id="59688322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_58B2DA74.wem</CachePath>
+				</File>
+				<File Id="59824447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="62425343" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="67442085" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_77AAC781.wem</CachePath>
+				</File>
 				<File Id="78976199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-008.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-008_8E324C96.wem</CachePath>
+				</File>
+				<File Id="87524503" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_0508FB45.wem</CachePath>
+				</File>
+				<File Id="94387493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleSqueak_1461A19A.wem</CachePath>
 				</File>
 				<File Id="119802720" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-002.wav</ShortName>
@@ -275,69 +498,209 @@
 					<ShortName>AMB_OC_TrainStationL1.wav</ShortName>
 					<CachePath>SFX/AMB_OC_TrainStationL1_46FBD884.wem</CachePath>
 				</File>
-				<File Id="152825524" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_OC_TrainPlayerExit.wav</ShortName>
-					<CachePath>SFX/SFX_OC_TrainPlayerExit_8E324C96.wem</CachePath>
+				<File Id="133403431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapCleak.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapCleak_8E324C96.wem</CachePath>
 				</File>
-				<File Id="167040663" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-004.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-004_8E324C96.wem</CachePath>
+				<File Id="150356678" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-001.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="159859437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="165011252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_FountainNoise.wav</ShortName>
+					<CachePath>SFX/AMB_OC_FountainNoise_56CEF360.wem</CachePath>
+				</File>
+				<File Id="168904959" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-004_8E324C96.wem</CachePath>
 				</File>
 				<File Id="186637457" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_St_Buildings_Drone.wav</ShortName>
 					<CachePath>SFX/MX_OC_St_Buildings_Drone_56CEF360.wem</CachePath>
 				</File>
-				<File Id="188203818" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-002.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-002_8E324C96.wem</CachePath>
-				</File>
 				<File Id="191788900" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Bell-003.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Bo_Bell-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="192251871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-005_8E324C96.wem</CachePath>
 				</File>
 				<File Id="192593148" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-005.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-005_8E324C96.wem</CachePath>
 				</File>
+				<File Id="196299436" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-009.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="201111223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-003.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="202688565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleClick.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleClick_56CEF360.wem</CachePath>
+				</File>
+				<File Id="204599275" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-001.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="212073533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_D9CFD57B.wem</CachePath>
+				</File>
+				<File Id="217040072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-006.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="227865930" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_E258F7CE.wem</CachePath>
+				</File>
+				<File Id="228116482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pulse V1.wav</ShortName>
+					<CachePath>SFX/Pulse V1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="231345691" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_70EB0E6B.wem</CachePath>
+				</File>
+				<File Id="232701764" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_3E4C409D.wem</CachePath>
+				</File>
+				<File Id="235536350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-002.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="235929195" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-006.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="247886558" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="252362480" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-004_8E324C96.wem</CachePath>
+				</File>
 				<File Id="261144076" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_L_Fountain.wav</ShortName>
 					<CachePath>SFX/MX_OC_L_Fountain_56CEF360.wem</CachePath>
+				</File>
+				<File Id="264469819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-004_8E324C96.wem</CachePath>
 				</File>
 				<File Id="274005601" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Tug-001.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Bo_Tug-001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="284079519" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-002_8E324C96.wem</CachePath>
+				</File>
 				<File Id="286609776" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OC_TrainExit.wav</ShortName>
 					<CachePath>SFX/SFX_OC_TrainExit_8E324C96.wem</CachePath>
+				</File>
+				<File Id="289662958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-007.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-007_8E324C96.wem</CachePath>
 				</File>
 				<File Id="289865734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-003.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-003_8E324C96.wem</CachePath>
 				</File>
-				<File Id="305395393" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-001.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-001_8E324C96.wem</CachePath>
+				<File Id="300476416" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_OceanFar.wav</ShortName>
+					<CachePath>SFX/AMB_OC_OceanFar_56CEF360.wem</CachePath>
+				</File>
+				<File Id="306825305" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-001.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="310422611" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-004.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="310848925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_WaterSplocBuilding.wav</ShortName>
+					<CachePath>SFX/AMB_OC_WaterSplocBuilding_56CEF360.wem</CachePath>
 				</File>
 				<File Id="313375692" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_L_Buildings.wav</ShortName>
 					<CachePath>SFX/MX_OC_L_Buildings_56CEF360.wem</CachePath>
 				</File>
+				<File Id="327995543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="328683216" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsGlitch.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsGlitch_56CEF360.wem</CachePath>
+				</File>
 				<File Id="335515617" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-001.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-001_8E324C96.wem</CachePath>
 				</File>
-				<File Id="389140331" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-003.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-003_8E324C96.wem</CachePath>
+				<File Id="337107546" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_98ACBEF7.wem</CachePath>
 				</File>
-				<File Id="395810104" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_Water.wav</ShortName>
-					<CachePath>SFX/AMB_OC_Water_56CEF360.wem</CachePath>
+				<File Id="337733145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_80190521.wem</CachePath>
 				</File>
-				<File Id="403234293" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_M_Waves.wav</ShortName>
-					<CachePath>SFX/AMB_OC_M_Waves_56CEF360.wem</CachePath>
+				<File Id="337921314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_5647968A.wem</CachePath>
+				</File>
+				<File Id="347830925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-003.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="364319269" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-004.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="370909751" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_3D96003C.wem</CachePath>
+				</File>
+				<File Id="372164024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-002.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="382782081" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-009.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="385775663" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="391640501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_D0D29EBD.wem</CachePath>
+				</File>
+				<File Id="393083771" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-008.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-008_8E324C96.wem</CachePath>
+				</File>
+				<File Id="399235344" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_Train.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_Train_56CEF360.wem</CachePath>
+				</File>
+				<File Id="408427775" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-004_8E324C96.wem</CachePath>
 				</File>
 				<File Id="409613268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-006.wav</ShortName>
@@ -347,25 +710,85 @@
 					<ShortName>MX_OC_L_Station.wav</ShortName>
 					<CachePath>SFX/MX_OC_L_Station_56CEF360.wem</CachePath>
 				</File>
-				<File Id="449550874" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-006.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-006_8E324C96.wem</CachePath>
+				<File Id="435356534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-006.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-006_8E324C96.wem</CachePath>
 				</File>
-				<File Id="503104760" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_M_Wind.wav</ShortName>
-					<CachePath>SFX/AMB_OC_M_Wind_56CEF360.wem</CachePath>
+				<File Id="444990616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-007_8E324C96.wem</CachePath>
 				</File>
-				<File Id="515997920" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_Ki_Laugh.wav</ShortName>
-					<CachePath>SFX/AMB_OC_Ki_Laugh_8E324C96.wem</CachePath>
+				<File Id="451225773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_5E558D8D.wem</CachePath>
+				</File>
+				<File Id="472988219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_FountainSploc.wav</ShortName>
+					<CachePath>SFX/AMB_OC_FountainSploc_56CEF360.wem</CachePath>
+				</File>
+				<File Id="475598243" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_WindWisthling.wav</ShortName>
+					<CachePath>SFX/AMB_OC_WindWisthling_56CEF360.wem</CachePath>
+				</File>
+				<File Id="476363762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="477636905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-003.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="478432927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleWater.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleWater_56CEF360.wem</CachePath>
+				</File>
+				<File Id="485744216" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="494241271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-008.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-008_8E324C96.wem</CachePath>
+				</File>
+				<File Id="498446531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="499488290" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-005.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="502800957" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-002.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="508636800" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="512540837" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_CF5C83F2.wem</CachePath>
 				</File>
 				<File Id="516885620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_St_Buildings_Foghorn.wav</ShortName>
 					<CachePath>SFX/MX_OC_St_Buildings_Foghorn_56CEF360.wem</CachePath>
 				</File>
+				<File Id="518454600" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-005_8E324C96.wem</CachePath>
+				</File>
 				<File Id="520777631" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-007.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="536429729" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_FountainSplash.wav</ShortName>
+					<CachePath>SFX/AMB_OC_FountainSplash_56CEF360.wem</CachePath>
+				</File>
+				<File Id="537232773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-005.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-005_8E324C96.wem</CachePath>
 				</File>
 				<File Id="538045953" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Tr_Swish.wav</ShortName>
@@ -375,13 +798,61 @@
 					<ShortName>FT_OC_Water-004.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-004_8E324C96.wem</CachePath>
 				</File>
+				<File Id="561487437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapBug.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapBug_8E324C96.wem</CachePath>
+				</File>
 				<File Id="561673441" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Tr_WaterSplash.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Tr_WaterSplash_8E324C96.wem</CachePath>
 				</File>
+				<File Id="586293275" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-003.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="588408791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-007.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="589443354" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-005.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="621814197" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorMapDrone.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorMapDrone_8E324C96.wem</CachePath>
+				</File>
 				<File Id="622404005" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Tr_Loop.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Tr_Loop_56CEF360.wem</CachePath>
+				</File>
+				<File Id="626895962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleSqueak_562AC9AF.wem</CachePath>
+				</File>
+				<File Id="639647242" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-006.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="649707380" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="656060335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="658672843" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_St_Sun.wav</ShortName>
+					<CachePath>SFX/MX_OC_St_Sun_56CEF360.wem</CachePath>
+				</File>
+				<File Id="661708185" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="664651088" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="667273339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_OC_TrainStop.wav</ShortName>
@@ -391,45 +862,245 @@
 					<ShortName>AMB_OC_Bo_Tug-002.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Bo_Tug-002_8E324C96.wem</CachePath>
 				</File>
-				<File Id="674881482" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_OC_TrainPlayerEnter.wav</ShortName>
-					<CachePath>SFX/SFX_OC_TrainPlayerEnter_8E324C96.wem</CachePath>
+				<File Id="673524519" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-002_8E324C96.wem</CachePath>
 				</File>
-				<File Id="821535745" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_Fontain.wav</ShortName>
-					<CachePath>SFX/AMB_OC_Fontain_56CEF360.wem</CachePath>
+				<File Id="675289214" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="679658574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="679883512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Wind-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Wind-002_56CEF360.wem</CachePath>
+				</File>
+				<File Id="681628047" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_AB4E3B5A.wem</CachePath>
+				</File>
+				<File Id="683703308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-007.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="691345590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapMain.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapMain_8E324C96.wem</CachePath>
+				</File>
+				<File Id="697554824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-009.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="698851701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="699441146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-004.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="710133066" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-002.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="718038205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_F2CF27E1.wem</CachePath>
+				</File>
+				<File Id="748520927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_99DF776D.wem</CachePath>
+				</File>
+				<File Id="753993663" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="756784898" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_WindCan.wav</ShortName>
+					<CachePath>SFX/AMB_OC_WindCan_56CEF360.wem</CachePath>
+				</File>
+				<File Id="766136350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-008.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-008_8E324C96.wem</CachePath>
+				</File>
+				<File Id="781000075" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="782164466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="782594919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleSqueak_5E36E019.wem</CachePath>
+				</File>
+				<File Id="788535109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-005.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="789244830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="789989496" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSplash-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSplash-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="805784958" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL1-004.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL1-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="808506699" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-010.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-010_8E324C96.wem</CachePath>
+				</File>
+				<File Id="811535595" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_St_Boat.wav</ShortName>
+					<CachePath>SFX/MX_OC_St_Boat_56CEF360.wem</CachePath>
 				</File>
 				<File Id="822449642" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Tr_WaterFill.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Tr_WaterFill_8E324C96.wem</CachePath>
 				</File>
+				<File Id="840689447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="849294485" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL1-001.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL1-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="849561973" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-003_8E324C96.wem</CachePath>
+				</File>
 				<File Id="852095958" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Bell-001.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Bo_Bell-001_8E324C96.wem</CachePath>
 				</File>
-				<File Id="863936781" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-007.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-007_8E324C96.wem</CachePath>
+				<File Id="857294194" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-004_8E324C96.wem</CachePath>
 				</File>
-				<File Id="867719482" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AMB_OC_Ki_Crowd.wav</ShortName>
-					<CachePath>SFX/AMB_OC_Ki_Crowd_56CEF360.wem</CachePath>
+				<File Id="872001279" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_WoodL2-007.wav</ShortName>
+					<CachePath>SFX/FT_OC_WoodL2-007_8E324C96.wem</CachePath>
 				</File>
 				<File Id="882565897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Bo_Bell-002.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Bo_Bell-002_8E324C96.wem</CachePath>
 				</File>
-				<File Id="932489431" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>MX_OC_L_Sun.wav</ShortName>
-					<CachePath>SFX/MX_OC_L_Sun_56CEF360.wem</CachePath>
+				<File Id="895955634" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_1A1C50F2.wem</CachePath>
 				</File>
-				<File Id="967470611" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FT_OC_Ground-005.wav</ShortName>
-					<CachePath>SFX/FT_OC_Ground-005_8E324C96.wem</CachePath>
+				<File Id="898747943" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_6A455B18.wem</CachePath>
+				</File>
+				<File Id="899111353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_4D2809EE.wem</CachePath>
+				</File>
+				<File Id="907887339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-006.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="916818511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FT_OC_GroundL2-002.wav</ShortName>
+					<CachePath>SFX/FT_OC_GroundL2-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="917533886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Seagull.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Seagull_FBA5136C.wem</CachePath>
+				</File>
+				<File Id="920515765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_SunVoice.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_SunVoice_56CEF360.wem</CachePath>
+				</File>
+				<File Id="939036739" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-009.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="939039254" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Childs.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Childs_56CEF360.wem</CachePath>
+				</File>
+				<File Id="941764204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_SunMain.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_SunMain_56CEF360.wem</CachePath>
+				</File>
+				<File Id="943779260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child2-007.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child2-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="943902507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL2.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL2_7A4EC9EF.wem</CachePath>
+				</File>
+				<File Id="944757426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="946143790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_OC_L_Boat.wav</ShortName>
+					<CachePath>SFX/MX_OC_L_Boat_56CEF360.wem</CachePath>
+				</File>
+				<File Id="951458628" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_WindCalm.wav</ShortName>
+					<CachePath>SFX/AMB_OC_WindCalm_56CEF360.wem</CachePath>
+				</File>
+				<File Id="951767702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_WindChim.wav</ShortName>
+					<CachePath>SFX/AMB_OC_WindChim_56CEF360.wem</CachePath>
+				</File>
+				<File Id="970919596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleSqueak.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleSqueak_7D323D3E.wem</CachePath>
+				</File>
+				<File Id="977834417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_D2A79460.wem</CachePath>
 				</File>
 				<File Id="985438458" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_OC_Tr_Siren.wav</ShortName>
 					<CachePath>SFX/AMB_OC_Tr_Siren_8E324C96.wem</CachePath>
+				</File>
+				<File Id="987495035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_ChildsSteps-004.wav</ShortName>
+					<CachePath>SFX/AMB_OC_ChildsSteps-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1005118142" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL4.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL4_4A947A2E.wem</CachePath>
+				</File>
+				<File Id="1016545843" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child3-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child3-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1031853127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_BoatIdleFlapL3.wav</ShortName>
+					<CachePath>SFX/AMB_OC_BoatIdleFlapL3_2BE20FE5.wem</CachePath>
+				</File>
+				<File Id="1033891144" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_OceanClose.wav</ShortName>
+					<CachePath>SFX/AMB_OC_OceanClose_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1042387891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1Glitch-001.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1Glitch-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1045928897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_SeagullBarks-003.wav</ShortName>
+					<CachePath>SFX/AMB_OC_SeagullBarks-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1052522258" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AMB_OC_Child1-010.wav</ShortName>
+					<CachePath>SFX/AMB_OC_Child1-010_8E324C96.wem</CachePath>
 				</File>
 				<File Id="1054178735" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_OC_L_Child.wav</ShortName>
@@ -438,13 +1109,19 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="811535592" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_TrainLoop\AMB_OC_Tr_Siren\AMB_OC_Tr_Siren_Silence\Silence" GUID="{A43D6AC0-FBCE-4E2B-AC86-C16C649245B9}" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="894331382" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train_Swish\Silence\Silence" GUID="{72C8A5A9-892D-4487-8E9E-D3D844287163}" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="930159812" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Kids\AMB_OC_Ki_Laugh\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{E4D35E7A-4416-4DDC-BE9F-C298A841E30B}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="54106288" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh2\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{99136DC1-8DC5-43CF-AE17-E35C4538B3FB}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="223984183" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildsSteps\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{5B781C51-60C4-4FB8-AD64-8788725954F0}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="807930756" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh3\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{791AA251-AEE5-4576-88F3-D25731809FD2}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="811535592" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Train\AMB_OC_TrainLoop\AMB_OC_Tr_Siren\AMB_OC_Tr_Siren_Silence\Silence" GUID="{A43D6AC0-FBCE-4E2B-AC86-C16C649245B9}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="930159812" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildLaugh1\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{E4D35E7A-4416-4DDC-BE9F-C298A841E30B}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="990694544" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_OceanCity\AMB_OC_Childs\AMB_OC_ChildsSplash\AMB_OC_Ki_Lgh_Silence\Silence" GUID="{4D2687C1-0510-48FA-9F90-44DAFFB31603}" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="3025917178" Name="Standard" ObjectPath="\Effects\Factory Effects\Flanger\Flanging\Standard" GUID="{1A2EAB31-6283-4C0D-89B2-F050DF89D421}" LibName="Wwise Flanger" LibId="8192003"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="2826138305" Name="AMB_OC_Boat" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Boat" GUID="{00C9D133-7D17-48A2-BF08-E9CA701ED5C4}" MaxAttenuation="156" DurationType="OneShot" DurationMin="11.602" DurationMax="22.438917">
+				<Event Id="355115256" Name="AMB_OC_BoatFar" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_BoatFar" GUID="{00C9D133-7D17-48A2-BF08-E9CA701ED5C4}" MaxAttenuation="156" DurationType="OneShot" DurationMin="11.602" DurationMax="22.438917">
 					<MediaRefs>
 						<MediaRef Id="191788900"/>
 						<MediaRef Id="274005601"/>
@@ -453,15 +1130,60 @@
 						<MediaRef Id="882565897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="740376728" Name="AMB_OC_Fontain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fontain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="40" DurationType="Infinite">
+				<Event Id="2033445011" Name="AMB_OC_BoatIdle" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_BoatIdle" GUID="{A56BECCE-977A-4B2C-AC1F-1C7600DB23FF}" MaxAttenuation="26" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="821535745"/>
+						<MediaRef Id="2671175"/>
+						<MediaRef Id="10051041"/>
+						<MediaRef Id="20017345"/>
+						<MediaRef Id="29831157"/>
+						<MediaRef Id="53711308"/>
+						<MediaRef Id="59688322"/>
+						<MediaRef Id="67442085"/>
+						<MediaRef Id="87524503"/>
+						<MediaRef Id="94387493"/>
+						<MediaRef Id="202688565"/>
+						<MediaRef Id="227865930"/>
+						<MediaRef Id="231345691"/>
+						<MediaRef Id="337733145"/>
+						<MediaRef Id="370909751"/>
+						<MediaRef Id="391640501"/>
+						<MediaRef Id="451225773"/>
+						<MediaRef Id="478432927"/>
+						<MediaRef Id="512540837"/>
+						<MediaRef Id="626895962"/>
+						<MediaRef Id="691345590"/>
+						<MediaRef Id="718038205"/>
+						<MediaRef Id="782594919"/>
+						<MediaRef Id="898747943"/>
+						<MediaRef Id="943902507"/>
+						<MediaRef Id="970919596"/>
+						<MediaRef Id="977834417"/>
+						<MediaRef Id="1005118142"/>
+						<MediaRef Id="1031853127"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2880313612" Name="AMB_OC_Kids" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Kids" GUID="{B24422DA-A9E9-45F7-8263-F8D113FD3EDC}" MaxAttenuation="21" DurationType="Infinite">
+				<Event Id="2535946479" Name="AMB_OC_ChildLaugh1" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh1" GUID="{A59B1642-112E-4E1F-BBE7-BB9CCB7CE8DC}" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="515997920"/>
-						<MediaRef Id="867719482"/>
+						<MediaRef Id="49313952"/>
+						<MediaRef Id="196299436"/>
+						<MediaRef Id="247886558"/>
+						<MediaRef Id="252362480"/>
+						<MediaRef Id="264469819"/>
+						<MediaRef Id="284079519"/>
+						<MediaRef Id="382782081"/>
+						<MediaRef Id="476363762"/>
+						<MediaRef Id="494241271"/>
+						<MediaRef Id="498446531"/>
+						<MediaRef Id="508636800"/>
+						<MediaRef Id="649707380"/>
+						<MediaRef Id="656060335"/>
+						<MediaRef Id="675289214"/>
+						<MediaRef Id="679658574"/>
+						<MediaRef Id="781000075"/>
+						<MediaRef Id="788535109"/>
+						<MediaRef Id="808506699"/>
+						<MediaRef Id="1042387891"/>
+						<MediaRef Id="1052522258"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -469,23 +1191,129 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="1192067392" Name="AMB_OC_Main" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Main" GUID="{33F6C63F-5123-4F9B-8EE8-672419DB62E6}" DurationType="Infinite">
+				<Event Id="2535946476" Name="AMB_OC_ChildLaugh2" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh2" GUID="{2A5F3890-EF81-4E1A-AB2F-16552D4FE633}" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="403234293"/>
-						<MediaRef Id="503104760"/>
+						<MediaRef Id="59824447"/>
+						<MediaRef Id="159859437"/>
+						<MediaRef Id="327995543"/>
+						<MediaRef Id="661708185"/>
+						<MediaRef Id="697554824"/>
+						<MediaRef Id="710133066"/>
+						<MediaRef Id="766136350"/>
+						<MediaRef Id="857294194"/>
+						<MediaRef Id="943779260"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="54106288"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2535946477" Name="AMB_OC_ChildLaugh3" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh3" GUID="{806852AF-D849-473D-B277-7F800B86D689}" MaxAttenuation="20" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="168904959"/>
+						<MediaRef Id="192251871"/>
+						<MediaRef Id="385775663"/>
+						<MediaRef Id="393083771"/>
+						<MediaRef Id="673524519"/>
+						<MediaRef Id="789244830"/>
+						<MediaRef Id="849561973"/>
+						<MediaRef Id="939036739"/>
+						<MediaRef Id="1016545843"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="807930756"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3630637613" Name="AMB_OC_ChildsReveal" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_ChildsReveal" GUID="{82A6D827-22CC-49C0-8372-16404CA5DDE9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="867132074" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3385110621" Name="AMB_OC_ChildsUnreaveal" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_ChildsUnreaveal" GUID="{B24422DA-A9E9-45F7-8263-F8D113FD3EDC}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="16432664"/>
+						<MediaRef Id="17051376"/>
+						<MediaRef Id="45425514"/>
+						<MediaRef Id="62425343"/>
+						<MediaRef Id="328683216"/>
+						<MediaRef Id="408427775"/>
+						<MediaRef Id="444990616"/>
+						<MediaRef Id="485744216"/>
+						<MediaRef Id="664651088"/>
+						<MediaRef Id="698851701"/>
+						<MediaRef Id="753993663"/>
+						<MediaRef Id="782164466"/>
+						<MediaRef Id="789989496"/>
+						<MediaRef Id="939039254"/>
+						<MediaRef Id="944757426"/>
+						<MediaRef Id="987495035"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="223984183"/>
+							<PluginRef Id="990694544"/>
+						</Custom>
+					</PluginRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fountain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="165011252"/>
+						<MediaRef Id="472988219"/>
+						<MediaRef Id="536429729"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="561950100" Name="AMB_OC_Train_Swish" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish" GUID="{BBD02BF5-707C-450A-A476-135C6CCA451A}" MaxAttenuation="75" DurationType="Infinite">
+				<Event Id="1192067392" Name="AMB_OC_Main" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Main" GUID="{33F6C63F-5123-4F9B-8EE8-672419DB62E6}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="212073533"/>
+						<MediaRef Id="232701764"/>
+						<MediaRef Id="300476416"/>
+						<MediaRef Id="337107546"/>
+						<MediaRef Id="337921314"/>
+						<MediaRef Id="679883512"/>
+						<MediaRef Id="681628047"/>
+						<MediaRef Id="748520927"/>
+						<MediaRef Id="895955634"/>
+						<MediaRef Id="899111353"/>
+						<MediaRef Id="917533886"/>
+						<MediaRef Id="951458628"/>
+						<MediaRef Id="1033891144"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="380529525" Name="AMB_OC_SeagullBarks" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_SeagullBarks" GUID="{824A1E3F-31C4-4F8A-853B-5983AA60F401}" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="34383955"/>
+						<MediaRef Id="50606454"/>
+						<MediaRef Id="518454600"/>
+						<MediaRef Id="840689447"/>
+						<MediaRef Id="907887339"/>
+						<MediaRef Id="1045928897"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="561950100" Name="AMB_OC_Train_Swish" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish" GUID="{BBD02BF5-707C-450A-A476-135C6CCA451A}" MaxAttenuation="35" DurationType="OneShot" DurationMin="7.743708" DurationMax="7.743708">
 					<MediaRefs>
 						<MediaRef Id="538045953"/>
 						<MediaRef Id="561673441"/>
 						<MediaRef Id="822449642"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="894331382"/>
-						</Custom>
-					</PluginRefs>
+				</Event>
+				<Event Id="3205911533" Name="AMB_OC_TrainEnterStation" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation" GUID="{9B553B1B-C465-4EE0-9882-370B675AB9C2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3128280173" Name="AMB_OC_TrainExitStation" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainExitStation" GUID="{69FE009B-66A0-4510-80D6-3E3A1D123D34}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1231701662" Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="1049210069" Name="AMB_OC_TrainLoop" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_TrainLoop" GUID="{92CFA5D1-6C44-4CBC-B03C-B1C244B3E9A6}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
@@ -504,11 +1332,32 @@
 						<MediaRef Id="130851682"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1628818968" Name="AMB_OC_Water" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Water" GUID="{CD1E23CB-C735-432F-854F-C2962EC3FE3D}" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="1772926457" Name="AMB_OC_WaterSplocBuilding" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_WaterSplocBuilding" GUID="{B2C842DA-51CB-47D8-B285-9DC0A1DB50AA}" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="395810104"/>
+						<MediaRef Id="310848925"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="931952533" Name="AMB_OC_Wind" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Wind" GUID="{43F27F7F-CD59-450B-A1AA-26E32A52AD3F}" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="26936111"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="864634897" Name="AMB_OC_WindCan" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_WindCan" GUID="{AF8EC11F-10B6-48ED-BDB8-9E80AA368DC9}" MaxAttenuation="20" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="756784898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="321855098" Name="AMB_OC_WindChim" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_WindChim" GUID="{D5E4D942-E62E-4D2B-907C-54B25DC465A7}" MaxAttenuation="30" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="951767702"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3333365000" Name="AMB_OC_WindWisthling" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_WindWisthling" GUID="{26B38A01-25C4-417C-88EC-004600B2145B}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="475598243"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2132210552" Name="AMB_OC_WindWisthlingExit" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_WindWisthlingExit" GUID="{19290BBF-E48E-40E0-BB27-5A15AA8C4BA6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="126894539" Name="FT_OceanCityPlay" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay" GUID="{D0B2B762-3554-4CC3-9DE3-DBECEA1B77C6}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -525,20 +1374,65 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="808606367" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
+							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
+								<MediaRef Id="289662958"/>
+								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
+								<MediaRef Id="347830925"/>
+								<MediaRef Id="372164024"/>
+								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
+								<MediaRef Id="589443354"/>
+								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="3462940353" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}" Default="true"/>
 							<MediaRefs>
-								<MediaRef Id="167040663"/>
-								<MediaRef Id="188203818"/>
-								<MediaRef Id="305395393"/>
-								<MediaRef Id="389140331"/>
-								<MediaRef Id="449550874"/>
-								<MediaRef Id="863936781"/>
-								<MediaRef Id="967470611"/>
+								<MediaRef Id="201111223"/>
+								<MediaRef Id="204599275"/>
+								<MediaRef Id="235929195"/>
+								<MediaRef Id="364319269"/>
+								<MediaRef Id="499488290"/>
+								<MediaRef Id="502800957"/>
+								<MediaRef Id="537232773"/>
+								<MediaRef Id="586293275"/>
+								<MediaRef Id="588408791"/>
+								<MediaRef Id="639647242"/>
+								<MediaRef Id="683703308"/>
+								<MediaRef Id="699441146"/>
+								<MediaRef Id="849294485"/>
+								<MediaRef Id="916818511"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="4046423520" GUID="{62585EFD-8465-4C36-A0AA-0D67295A7FF9}"/>
+							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
+								<MediaRef Id="289662958"/>
+								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
+								<MediaRef Id="347830925"/>
+								<MediaRef Id="372164024"/>
+								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
+								<MediaRef Id="589443354"/>
+								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3286101857" Name="FT_OceanCityStop" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop" GUID="{F6DEE515-4944-40C3-8E4C-2746A52FE714}" DurationType="Infinite">
+				<Event Id="3286101857" Name="FT_OceanCityStop" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop" GUID="{F6DEE515-4944-40C3-8E4C-2746A52FE714}" DurationType="OneShot" DurationMin="0.36577085" DurationMax="1.1255833">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="2295428781" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
@@ -554,15 +1448,60 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="808606367" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
+							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
+								<MediaRef Id="289662958"/>
+								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
+								<MediaRef Id="347830925"/>
+								<MediaRef Id="372164024"/>
+								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
+								<MediaRef Id="589443354"/>
+								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="3462940353" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}" Default="true"/>
 							<MediaRefs>
-								<MediaRef Id="167040663"/>
-								<MediaRef Id="188203818"/>
-								<MediaRef Id="305395393"/>
-								<MediaRef Id="389140331"/>
-								<MediaRef Id="449550874"/>
-								<MediaRef Id="863936781"/>
-								<MediaRef Id="967470611"/>
+								<MediaRef Id="201111223"/>
+								<MediaRef Id="204599275"/>
+								<MediaRef Id="235929195"/>
+								<MediaRef Id="364319269"/>
+								<MediaRef Id="499488290"/>
+								<MediaRef Id="502800957"/>
+								<MediaRef Id="537232773"/>
+								<MediaRef Id="586293275"/>
+								<MediaRef Id="588408791"/>
+								<MediaRef Id="639647242"/>
+								<MediaRef Id="683703308"/>
+								<MediaRef Id="699441146"/>
+								<MediaRef Id="849294485"/>
+								<MediaRef Id="916818511"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="4046423520" GUID="{62585EFD-8465-4C36-A0AA-0D67295A7FF9}"/>
+							<MediaRefs>
+								<MediaRef Id="11273008"/>
+								<MediaRef Id="150356678"/>
+								<MediaRef Id="217040072"/>
+								<MediaRef Id="235536350"/>
+								<MediaRef Id="289662958"/>
+								<MediaRef Id="306825305"/>
+								<MediaRef Id="310422611"/>
+								<MediaRef Id="347830925"/>
+								<MediaRef Id="372164024"/>
+								<MediaRef Id="435356534"/>
+								<MediaRef Id="477636905"/>
+								<MediaRef Id="589443354"/>
+								<MediaRef Id="805784958"/>
+								<MediaRef Id="872001279"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -570,14 +1509,26 @@
 				<Event Id="2171996891" Name="MX_OC_Awake" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_Awake" GUID="{686E2C86-F88B-4989-A691-70649D89FC6A}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="41467455"/>
+						<MediaRef Id="228116482"/>
 						<MediaRef Id="261144076"/>
 						<MediaRef Id="313375692"/>
 						<MediaRef Id="434975524"/>
-						<MediaRef Id="932489431"/>
+						<MediaRef Id="920515765"/>
+						<MediaRef Id="941764204"/>
+						<MediaRef Id="946143790"/>
 						<MediaRef Id="1054178735"/>
 					</MediaRefs>
 					<ActionSetState>
+						<ActionSetStateEntry GroupId="1244262989" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\Out" GUID="{6A510D00-14FD-4C3D-9582-144A5A89AAFF}"/>
 						<ActionSetStateEntry GroupId="719384611" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1388177508" Name="MX_OC_ST_Boat" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Boat" GUID="{F64B57C9-9000-4808-A1C9-2A184441E4E2}" DurationType="OneShot" DurationMin="4.8" DurationMax="4.8">
+					<MediaRefs>
+						<MediaRef Id="811535595"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="637628402" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\Reveal" GUID="{493CCD65-7EF2-4E6A-A2E4-446F24FB6F07}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="2973427017" Name="MX_OC_ST_Buildings" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Buildings" GUID="{C87B4FF4-7FA6-4D31-9769-85F087957F71}" DurationType="OneShot" DurationMin="38.4" DurationMax="38.4">
@@ -595,18 +1546,30 @@
 						<ActionSetStateEntry GroupId="867132074" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3404723406" Name="MX_OC_ST_ChildEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildEnter" GUID="{8CC355C0-FE57-48E1-B5AE-B0F69F5A3D97}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1217064079" Name="MX_OC_ST_FontainEnter" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainEnter" GUID="{4D4C051C-61A1-43D2-840D-D4ABB6B17E3B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3404723406" Name="MX_OC_ST_ChildEnter" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildEnter" GUID="{8CC355C0-FE57-48E1-B5AE-B0F69F5A3D97}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
-						<ActionSetStateEntry GroupId="104216065" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
-						<ActionSetStateEntry GroupId="3608668146" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Unreveal" GUID="{69C75521-8486-46CA-BBC4-77EE6CD4CFCC}"/>
+						<ActionSetStateEntry GroupId="1244262989" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\In" GUID="{5A7707F6-8983-41D3-A4BC-C4E23C06BF94}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2668009623" Name="MX_OC_ST_FontainExit" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_FontainExit" GUID="{C3CB9702-3FED-4CA9-A157-353578E667EA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="2315091060" Name="MX_OC_ST_ChildExit" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildExit" GUID="{614113EE-6063-45E6-B856-F85789AC8C9C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
-						<ActionSetStateEntry GroupId="3608668146" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Reveal" GUID="{98CD5FED-4762-453F-AE0B-554EB9CA6E7B}"/>
-						<ActionSetStateEntry GroupId="104216065" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
+						<ActionSetStateEntry GroupId="1244262989" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\Out" GUID="{6A510D00-14FD-4C3D-9582-144A5A89AAFF}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2463885656" Name="MX_OC_ST_Fish" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Fish" GUID="{9FA86C94-6AF5-41AB-8D86-22EC43E9F626}" DurationType="OneShot" DurationMin="2.0764031" DurationMax="2.0764031">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4165626038" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Reveal" GUID="{9FB841E3-DC7B-4F20-A97C-D449D6624FCD}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1217064079" Name="MX_OC_ST_FontainEnter" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainEnter" GUID="{4D4C051C-61A1-43D2-840D-D4ABB6B17E3B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="272500339" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\In" GUID="{9E30C9AA-3F85-48E2-9980-64498A7A9F29}"/>
+						<ActionSetStateEntry GroupId="719384611" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2668009623" Name="MX_OC_ST_FontainExit" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainExit" GUID="{C3CB9702-3FED-4CA9-A157-353578E667EA}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="272500339" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\Out" GUID="{6E2A83E9-FCEF-450C-906F-D5F1A8427986}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="438261988" Name="MX_OC_ST_Ocean" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Ocean" GUID="{22C36B1E-4BE6-4028-8C73-01E92B1517D4}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -614,15 +1577,64 @@
 						<ActionSetStateEntry GroupId="3608668146" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Reveal" GUID="{98CD5FED-4762-453F-AE0B-554EB9CA6E7B}"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="385246558" Name="MX_OC_ST_Rail" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Rail" GUID="{63565E20-14FF-4618-887D-8887C2943217}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2746267219" Name="MX_OC_ST_Seagull" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Seagull" GUID="{051171A8-F70C-42EF-8D6F-8D4635EBC097}" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1621923877" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\Reveal" GUID="{38D69731-F9BF-41AA-AAFC-3A2FF8287DB4}"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="2383654854" Name="MX_OC_ST_Station" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Station" GUID="{A6AE9E45-019F-43EB-A1C8-7A7241AF4312}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="3640304444" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station\Reveal" GUID="{2810D04C-C75E-44F7-9155-66AA7CEF93FA}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1317712632" Name="MX_OC_ST_Sun" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Sun" GUID="{413E705A-D7A6-46AB-BD1F-1D28A3807510}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="1246921868" Name="MX_OC_ST_StationEnter" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationEnter" GUID="{C0773610-358F-4F2C-B42C-9FE1E7B99E7A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4205926058" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\In" GUID="{57993F7D-606D-431B-8CF5-B31586FF06FC}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2867726670" Name="MX_OC_ST_StationExit" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationExit" GUID="{DBDD71A6-F069-4907-BD6A-9B87CCBD7E51}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4205926058" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\Out" GUID="{8D241171-4728-4A27-AA71-54076B79D208}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1317712632" Name="MX_OC_ST_Sun" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Sun" GUID="{413E705A-D7A6-46AB-BD1F-1D28A3807510}" DurationType="OneShot" DurationMin="9.801354" DurationMax="9.801354">
+					<MediaRefs>
+						<MediaRef Id="658672843"/>
+					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4266710578" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun\Reveal" GUID="{17B80B90-6BA7-4A38-8189-12BD35CFA645}"/>
 						<ActionSetStateEntry GroupId="4266710578" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun\Unreveal" GUID="{F0D45662-5908-4F9D-8D8C-2F8D4F075969}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3488676060" Name="MX_OC_ST_Train" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Train" GUID="{3593867D-4DD5-4F04-96F0-AEAE49977B9C}" DurationType="OneShot" DurationMin="69.6" DurationMax="69.6">
+					<MediaRefs>
+						<MediaRef Id="399235344"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2603209358" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\Reveal" GUID="{5EFD1ACF-87FC-40C0-B9C2-E8D4A17C74EA}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3891028076" Name="MX_OC_ST_Wind" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_ST_Wind" GUID="{8FB65859-D27B-49ED-9F3B-83B04B53289C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="533948994" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\Reveal" GUID="{64448318-5D1D-43E3-B6EE-BEF8C6734764}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1113259158" Name="MX_OC_ST_WindEnter" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindEnter" GUID="{3D49BBC6-50B8-4B66-A62A-645C37A117F3}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3053992220" Name="MX_OC_ST_WindExit" ObjectPath="\Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindExit" GUID="{A27CA9AE-7B0B-4FB0-AB98-43361C94BB4F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2517718513" Name="MX_OC_TrainAwake" ObjectPath="\Events\MX\MX_OceanCity\MX_OC_TrainAwake" GUID="{7D9B94FB-021D-4CF7-8758-092371545C2A}" MaxAttenuation="95" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="399235344"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1149062830" Name="SFX_Awake" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_Awake" GUID="{39A9E5A4-33BB-4AB5-A2A7-A93FC9680A77}" DurationType="OneShot" DurationMin="61.368042" DurationMax="61.368042">
+					<MediaRefs>
+						<MediaRef Id="133403431"/>
+						<MediaRef Id="561487437"/>
+						<MediaRef Id="621814197"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3449563311" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\Out" GUID="{28D92298-A59E-4DDA-A0E6-C0BAD7DDC78D}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="3210636256" Name="SFX_OC_TrainExit" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainExit" GUID="{21C227C1-FAA7-4679-98F5-546AB936F2E5}" DurationType="OneShot" DurationMin="2.363896" DurationMax="2.363896">
@@ -630,15 +1642,15 @@
 						<MediaRef Id="286609776"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1031639743" Name="SFX_OC_TrainPlayerEnter" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerEnter" GUID="{5961649E-863E-4294-A1FB-8919DACEEEFD}" DurationType="OneShot" DurationMin="2.6703959" DurationMax="2.6703959">
-					<MediaRefs>
-						<MediaRef Id="674881482"/>
-					</MediaRefs>
+				<Event Id="82434068" Name="SFX_OC_TrainPlayerImpactIn" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactIn" GUID="{5961649E-863E-4294-A1FB-8919DACEEEFD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3449563311" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\In" GUID="{B8CA5F6F-CBE9-415B-AC56-167EF28029AD}"/>
+					</ActionSetState>
 				</Event>
-				<Event Id="1560947431" Name="SFX_OC_TrainPlayerExit" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerExit" GUID="{67817692-DDED-4307-8EBB-E496F7875DF4}" DurationType="OneShot" DurationMin="2.7844791" DurationMax="2.7844791">
-					<MediaRefs>
-						<MediaRef Id="152825524"/>
-					</MediaRefs>
+				<Event Id="3339821491" Name="SFX_OC_TrainPlayerImpactOut" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactOut" GUID="{BC6082BB-B9F0-4051-A319-D0774D04A0F8}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3449563311" Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\Out" GUID="{28D92298-A59E-4DDA-A0E6-C0BAD7DDC78D}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="341180760" Name="SFX_OC_TrainStop" ObjectPath="\Events\SFX\SFX_OceanCity\SFX_OC_TrainStop" GUID="{241B7800-0CC8-4D34-B68C-1E3149D1078D}" DurationType="OneShot" DurationMin="2.370375" DurationMax="2.370375">
 					<MediaRefs>
@@ -647,14 +1659,35 @@
 				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="3566296580" Name="GP_OC_MX_ChildExit" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_ChildExit" GUID="{C53CAB02-A75B-43F3-87A7-4B63E017326D}"/>
+				<GameParameter Id="3815697657" Name="GP_OC_WaterHigh" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh" GUID="{FAA5339D-BEAD-4829-B320-C9D7A03BB665}"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="104216065" Name="ST_MX_OC_Fontain" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain" GUID="{AE3E5676-F43E-468F-9506-520DFF5022C4}">
+				<StateGroup Id="272500339" Name="ST_MX_OC_FontainTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig" GUID="{FE3B19C0-3370-47F7-90DA-0376FCA09BA8}">
 					<States>
-						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Reveal" GUID="{68D39C1A-F1AD-4B15-82D3-477E1E83644C}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\None" GUID="{EF4A5BD6-9F22-4803-8A1A-DA64CCC87C83}"/>
-						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain\Unreveal" GUID="{C433A060-3A17-47E3-A704-233C7701E1A5}"/>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\Out" GUID="{6E2A83E9-FCEF-450C-906F-D5F1A8427986}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\None" GUID="{58E71EE2-F436-4E1B-9EAB-CA6708730822}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig\In" GUID="{9E30C9AA-3F85-48E2-9980-64498A7A9F29}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="274315000" Name="ST_MX_OC_WindTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig" GUID="{2D5AD57E-BF46-401C-A9A6-BE217DD4CAA3}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\Out" GUID="{015833D3-A510-4520-98E3-F5177334ACAF}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\None" GUID="{CCCEE804-25CF-45DA-B756-4D168F729F7E}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig\In" GUID="{206F1B93-931D-4A23-B0F4-5051C1A6D852}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="533948994" Name="ST_MX_OC_Wind" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind" GUID="{E2EF137C-26D1-4E8E-8362-05BB80842108}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\Reveal" GUID="{64448318-5D1D-43E3-B6EE-BEF8C6734764}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\None" GUID="{1CA63F34-A83F-42EF-936B-3CE0A86E9340}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind\Unreveal" GUID="{6DFA6435-2E4A-4360-874A-2607045A80DB}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="637628402" Name="ST_MX_OC_Boat" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat" GUID="{2E4FC86D-06FF-4F61-9053-6D3E05CDF706}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\Reveal" GUID="{493CCD65-7EF2-4E6A-A2E4-446F24FB6F07}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\None" GUID="{DE14DB6E-4F35-4092-AFC9-B8D3E6F2A8F5}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat\Unreveal" GUID="{CE888BFA-C5AC-41DC-8070-59A1C555238C}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="719384611" Name="ST_MX_OC_Buildings" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings" GUID="{152F02A5-580A-4506-BFD4-6E8E89AFCD13}">
@@ -671,6 +1704,41 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1231701662" Name="ST_OC_TrainInsideStation" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation" GUID="{1EF966CB-0A16-4A46-B895-77AF63C6C7C9}">
+					<States>
+						<State Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\None" GUID="{26DB5240-571B-4291-B765-4B90C154B4DF}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1244262989" Name="ST_MX_OC_Child_FishTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig" GUID="{1C4A7B7C-F21A-45BA-B009-2563AAF03288}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\Out" GUID="{6A510D00-14FD-4C3D-9582-144A5A89AAFF}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\None" GUID="{1316BE21-8272-4ADD-9146-43ED5C19FCFC}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig\In" GUID="{5A7707F6-8983-41D3-A4BC-C4E23C06BF94}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1621923877" Name="ST_MX_OC_Seagull" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull" GUID="{DF7074A4-3849-463A-9807-1AF74161091B}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\Reveal" GUID="{38D69731-F9BF-41AA-AAFC-3A2FF8287DB4}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\None" GUID="{3DC217C0-BBFC-4CD8-9C43-CC2847AEBD4A}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull\Unreveal" GUID="{735DBF47-EB7A-4F9F-964B-1633D3F366DA}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2603209358" Name="ST_MX_OC_Train" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train" GUID="{429FBA87-1123-4381-B053-349B63893FEE}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\Reveal" GUID="{5EFD1ACF-87FC-40C0-B9C2-E8D4A17C74EA}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\None" GUID="{6EE5368D-03B0-409D-A658-350E4B20862F}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train\Unreveal" GUID="{630EC699-B6AE-478B-B7E9-210B9EEF6DE1}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3449563311" Name="ST_OC_SFXTrainImpact" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact" GUID="{E1972E28-D3AC-4DB2-97A2-C92C8CE58AED}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\Out" GUID="{28D92298-A59E-4DDA-A0E6-C0BAD7DDC78D}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\None" GUID="{DD330B51-9CFE-49BB-B4E6-C8881312AC4D}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\In" GUID="{B8CA5F6F-CBE9-415B-AC56-167EF28029AD}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3608668146" Name="ST_MX_OC_Ocean" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean" GUID="{78FBFE60-C56B-4ABB-8677-AF8F1E02F1D2}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean\Reveal" GUID="{98CD5FED-4762-453F-AE0B-554EB9CA6E7B}"/>
@@ -685,6 +1753,20 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station\Unreveal" GUID="{2FA87383-FBE8-409B-B537-EFCE675A5F3F}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="4165626038" Name="ST_MX_OC_Fish" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish" GUID="{079004F2-67A5-4114-998A-C3C7027597FA}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Reveal" GUID="{9FB841E3-DC7B-4F20-A97C-D449D6624FCD}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\None" GUID="{5FB7B8CE-0696-4449-93E3-06A3C42F2552}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Unreveal" GUID="{8B7A5AA0-3CB0-4538-BD8B-956032377B82}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4205926058" Name="ST_MX_OC_StationTrig" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig" GUID="{EF50A645-0853-4970-A38E-CD727872D00E}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\Out" GUID="{8D241171-4728-4A27-AA71-54076B79D208}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\None" GUID="{4CD3E5CD-9495-4657-BA36-04BE89F4E5DD}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig\In" GUID="{57993F7D-606D-431B-8CF5-B31586FF06FC}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4266710578" Name="ST_MX_OC_Sun" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun" GUID="{6FA63A59-52E4-4974-89E4-FC9E11FCB91E}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun\Reveal" GUID="{17B80B90-6BA7-4A38-8189-12BD35CFA645}"/>
@@ -696,13 +1778,15 @@
 			<SwitchGroups>
 				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\Switch\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
 					<Switches>
+						<Switch Id="808606367" Name="SW_FT_OC_Wood" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Wood" GUID="{92343F55-AD0A-46EA-876F-12D3AD9A35B6}"/>
 						<Switch Id="2295428781" Name="SW_FT_OC_Water" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Water" GUID="{84AFC947-AB20-4B5F-967C-F76A51C8BF2A}"/>
 						<Switch Id="3462940353" Name="SW_FT_OC_Ground" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Ground" GUID="{924B82DF-3FCD-47F5-B69E-68F17D536E6B}"/>
+						<Switch Id="4046423520" Name="SW_FT_OC_Rail" ObjectPath="\Switches\Switch\SW_FT_OC\SW_FT_OC_Rail" GUID="{62585EFD-8465-4C36-A0AA-0D67295A7FF9}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{92B2990B-6C15-260E-C5AC-E9004C4E948A}">
+		<SoundBank Id="3157003241" Type="User" GUID="{F385E065-FD62-44D0-B37D-4CD82D364D6A}" Language="SFX" Hash="{C366BD67-070F-7031-2022-788DDE7E858D}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Test</ObjectPath>
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
@@ -733,5 +1817,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1CB8230C-AF2E-B1EB-AD51-4C97580CF18F}</FileHash>
+	<FileHash>{3C3B0D52-9F5F-D2E6-40CD-57C7E345B2B8}</FileHash>
 </SoundBanksInfo>

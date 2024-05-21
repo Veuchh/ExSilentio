@@ -2,39 +2,104 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	1218704685	SW_FT_OC			\Switch\SW_FT_OC	
 
 Switch	ID	Name	Switch Group			Notes
+	808606367	SW_FT_OC_Wood	SW_FT_OC			
 	2295428781	SW_FT_OC_Water	SW_FT_OC			
 	3462940353	SW_FT_OC_Ground	SW_FT_OC			
+	4046423520	SW_FT_OC_Rail	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
-	104216065	ST_MX_OC_Fontain			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fontain	
+	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
+	274315000	ST_MX_OC_WindTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig	
+	533948994	ST_MX_OC_Wind			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind	
+	637628402	ST_MX_OC_Boat			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
 	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
+	1231701662	ST_OC_TrainInsideStation			\States\ST_OceanCity\ST_OC_TrainInsideStation	
+	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
+	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
+	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
+	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
+	4165626038	ST_MX_OC_Fish			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish	
+	4205926058	ST_MX_OC_StationTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig	
 	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
 
 State	ID	Name	State Group			Notes
-	634183254	Reveal	ST_MX_OC_Fontain			
-	748895195	None	ST_MX_OC_Fontain			
-	3384621607	Unreveal	ST_MX_OC_Fontain			
+	645492555	Out	ST_MX_OC_FontainTrig			
+	748895195	None	ST_MX_OC_FontainTrig			
+	1752637612	In	ST_MX_OC_FontainTrig			
+	645492555	Out	ST_MX_OC_WindTrig			
+	748895195	None	ST_MX_OC_WindTrig			
+	1752637612	In	ST_MX_OC_WindTrig			
+	634183254	Reveal	ST_MX_OC_Wind			
+	748895195	None	ST_MX_OC_Wind			
+	3384621607	Unreveal	ST_MX_OC_Wind			
+	634183254	Reveal	ST_MX_OC_Boat			
+	748895195	None	ST_MX_OC_Boat			
+	3384621607	Unreveal	ST_MX_OC_Boat			
 	634183254	Reveal	ST_MX_OC_Buildings			
 	748895195	None	ST_MX_OC_Buildings			
 	3384621607	Unreveal	ST_MX_OC_Buildings			
 	634183254	Reveal	ST_MX_OC_Child			
 	748895195	None	ST_MX_OC_Child			
 	3384621607	Unreveal	ST_MX_OC_Child			
+	645492555	out	ST_OC_TrainInsideStation			
+	748895195	None	ST_OC_TrainInsideStation			
+	1752637612	In	ST_OC_TrainInsideStation			
+	645492555	Out	ST_MX_OC_Child_FishTrig			
+	748895195	None	ST_MX_OC_Child_FishTrig			
+	1752637612	In	ST_MX_OC_Child_FishTrig			
+	634183254	Reveal	ST_MX_OC_Seagull			
+	748895195	None	ST_MX_OC_Seagull			
+	3384621607	Unreveal	ST_MX_OC_Seagull			
+	634183254	Reveal	ST_MX_OC_Train			
+	748895195	None	ST_MX_OC_Train			
+	3384621607	Unreveal	ST_MX_OC_Train			
+	645492555	Out	ST_OC_SFXTrainImpact			
+	748895195	None	ST_OC_SFXTrainImpact			
+	1752637612	In	ST_OC_SFXTrainImpact			
 	634183254	Reveal	ST_MX_OC_Ocean			
 	748895195	None	ST_MX_OC_Ocean			
 	3384621607	Unreveal	ST_MX_OC_Ocean			
 	634183254	Reveal	ST_MX_OC_Station			
 	748895195	None	ST_MX_OC_Station			
 	3384621607	Unreveal	ST_MX_OC_Station			
+	634183254	Reveal	ST_MX_OC_Fish			
+	748895195	None	ST_MX_OC_Fish			
+	3384621607	Unreveal	ST_MX_OC_Fish			
+	645492555	Out	ST_MX_OC_StationTrig			
+	748895195	None	ST_MX_OC_StationTrig			
+	1752637612	In	ST_MX_OC_StationTrig			
 	634183254	Reveal	ST_MX_OC_Sun			
 	748895195	None	ST_MX_OC_Sun			
 	3384621607	Unreveal	ST_MX_OC_Sun			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	837352445	TrainErrorchild			\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild	
+	931952533	AMB_OC_Wind			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind	
+	1117531639	AMB			\Default Work Unit\Master Audio Bus\AMB	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	1685527054	MX			\Default Work Unit\Master Audio Bus\MX	
+	1709551633	AMB_OceanCIty			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty	
+	2325878355	AMB_OC_Ocean			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean	
+	2385628198	FOOTSTEPS			\Default Work Unit\Master Audio Bus\FOOTSTEPS	
+	2482450727	AMB_OC_Child			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child	
+	2826138305	AMB_OC_Boat			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat	
+	3705995597	TrainError			\Default Work Unit\Master Audio Bus\SFX\TrainError	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3886422523	AMB_OC_Train			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train	
+	4026521433	FT_OceanCity			\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1519764506	Plains			\Default Work Unit\Master Audio Bus\Reverbs\Plains	
+	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
+	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
+
+Effect plug-ins	ID	Name	Type				Notes
+	281885668	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	602546716	Room_Large	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

@@ -13,7 +13,6 @@ public class SpawnPoint : MonoBehaviour
 
     [SerializeField] GameObject playerPrefab;
     [SerializeField] List<MeshRenderer> waterPlanes;
-    [SerializeField] AK.Wwise.Event events;
     [SerializeField] ComponentsToAddOnSpawn componentsToAddToPlayer;
 
     private void Start()
