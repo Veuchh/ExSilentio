@@ -1,7 +1,4 @@
-using System;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 namespace LW.Audio
 {

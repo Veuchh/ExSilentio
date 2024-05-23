@@ -17,6 +17,7 @@ namespace LW.Level
         public static RevealableObjectHandler Instance { get; private set; }
 
         [SerializeField] WordDatabase database;
+        [SerializeField] HintDatabase hintDatabase;
         [SerializeField] LocalizedStringTable stringTable;
 
 
@@ -41,7 +42,7 @@ namespace LW.Level
             if (!bundles.Contains(newBundle))
             {
                 bundles.Add(newBundle);
-                newBundle.AssignEntry(database.GetEntry(newBundle.ID));
+                newBundle.Init(database.GetEntry(newBundle.ID));
             }
             else
             {
@@ -142,7 +143,7 @@ namespace LW.Level
             ConsoleUI.Instance.AddToHistory($"{translatedID}{consoleFeedback}");
         }
 
-        public List<RevealableObjectBundle> GetBundleOfImportnce(ObjectImportance objectImportance)
+        public List<RevealableObjectBundle> GetBundlesOfImportance(ObjectImportance objectImportance)
         {
             List<RevealableObjectBundle> bundles = new List<RevealableObjectBundle>();
 
@@ -156,6 +157,8 @@ namespace LW.Level
 
             return bundles;
         }
+
+        public List<RevealableObjectBundle> GetBundles() => bundles;
 
         public void OnParseFailed(string failedToParseString)
         {

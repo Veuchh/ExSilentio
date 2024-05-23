@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -18,11 +19,13 @@ namespace LW.Player
     public class WordInputManager : MonoBehaviour
     {
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
+        const string HINT_COMMAND_FEEDBACK_ID = "hintCommandFeedbackID";
         const string REVEALED_ITEMS_LOCALIZATION_ID = "revealedItems";
         const string CORE_LOCALIZATION_ID = "Core";
         const string SECONDARY_LOCALIZATION_ID = "Secondary";
         const string BONUS_LOCALIZATION_ID = "Bonus";
 
+        [SerializeField] LocalizedStringTable wordsTable;
         [SerializeField] LocalizedStringTable commandsTable;
         [SerializeField] WordDatabase wordDatabase;
         [SerializeField] WordCorrector wordCorrector;
@@ -154,12 +157,12 @@ namespace LW.Player
             ConsoleUI.Instance.UpdateInput(currentWordInput);
         }
 
-        private void OnUseCommand(CommandID id)
+        private void OnUseCommand(CommandID id, string arguments = "")
         {
             switch (id)
             {
                 case CommandID.hint:
-                    OnHintCommand();
+                    OnHintCommand(arguments);
                     break;
                 case CommandID.progress:
                     OnProgressCommand();
@@ -170,9 +173,43 @@ namespace LW.Player
             }
         }
 
-        void OnHintCommand()
+        void OnHintCommand(string arguments)
         {
-            ConsoleUI.Instance.AddToHistory("Hint command is not implemented yet.");
+            var translatedWordsTable = wordsTable.GetTable();
+            var translatedCommandsTable = commandsTable.GetTable();
+            string consoleOutput = translatedCommandsTable.GetEntry(HINT_COMMAND_FEEDBACK_ID).LocalizedValue;
+            List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundles();
+            arguments = arguments.Replace(" ", "");
+            arguments.Normalize();
+
+            if (!string.IsNullOrEmpty(arguments) && int.TryParse(arguments, out int bundleToRevealIndex) && bundleToRevealIndex < bundles.Count)
+                bundles[bundleToRevealIndex].RevealHint();
+
+
+            foreach (RevealableObjectBundle bundle in bundles)
+            {
+                consoleOutput += $"\n{bundles.IndexOf(bundle)}. " +
+                    (bundle.IsRevealed ?
+                    translatedWordsTable.GetEntry(bundle.ID.ToString()).LocalizedValue
+                    : " ?????????")
+                    + " : ";
+                for (int hintIndex = 0; hintIndex < bundle.Hints.Count; hintIndex++)
+                {
+                    consoleOutput += $"\n\t- ";
+                    string hintKey = bundle.HintsBase[hintIndex];
+                    if (bundle.Hints[hintKey])
+                    {
+                        string translatedHint = translatedWordsTable.GetEntry(hintKey).LocalizedValue;
+                        consoleOutput += translatedHint;
+                    }
+                    else
+                    {
+                        consoleOutput += "??????????";
+                    }
+                }
+            }
+
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
         }
 
         void OnProgressCommand()
@@ -186,7 +223,7 @@ namespace LW.Player
             string consoleOutput = translatedTable.GetEntry(REVEALED_ITEMS_LOCALIZATION_ID).LocalizedValue + " :";
             foreach (ObjectImportance importance in Enum.GetValues(typeof(ObjectImportance)))
             {
-                List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundleOfImportnce(importance);
+                List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundlesOfImportance(importance);
                 consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString().ToLower()).LocalizedValue
                     + " : " + bundles.Where(i => i.IsRevealed).Count().ToString()
                     + " / " + bundles.Count();
