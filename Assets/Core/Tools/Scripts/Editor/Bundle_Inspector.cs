@@ -25,7 +25,7 @@ public class Bundle_Inspector : Editor
     {
         RevealableObjectBundle targetBundle = (RevealableObjectBundle)target;
         DrawDefaultInspector();
-
+        EditorGUI.indentLevel++;
         for (int i = 0; i < targetBundle.HintsBase.Count; i++)
         {
             GUILayout.BeginHorizontal();
@@ -44,6 +44,12 @@ public class Bundle_Inspector : Editor
         if (GUILayout.Button("+"))
         {
             targetBundle.HintsBase.Add(Database.HintKeys[0]);
+        }
+        EditorGUI.indentLevel--;
+
+        if (GUILayout.Button("Setup Bundle"))
+        {
+            targetBundle.SetupElements();
         }
 
         if (GUI.changed)
