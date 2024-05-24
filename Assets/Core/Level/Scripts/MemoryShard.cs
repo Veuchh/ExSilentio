@@ -11,8 +11,9 @@ public class MemoryShard : MonoBehaviour
     [SerializeField] CanvasGroup textToSpawn;
     [SerializeField] Transform rotatingArrow;
     [SerializeField] float arrowDefaultRotationSpeed = 60f;
-    [SerializeField] float arrowLockRotationSpeed = 60f;
+    [SerializeField] float arrowLockDuration = 60f;
     [SerializeField] float durationInColliderToLock = .5f;
+    [SerializeField] float textFadeDuration = 1.5f;
 
     float remainingTimeInCollider;
     bool isLocked = false;
@@ -20,14 +21,14 @@ public class MemoryShard : MonoBehaviour
     private void Start()
     {
         remainingTimeInCollider = durationInColliderToLock;
+        textToSpawn.alpha = 0;
     }
 
     private void Update()
     {
         if (isLocked)
             return;
-        
-        
+
         DelockedBehaviour();
     }
 
@@ -54,7 +55,11 @@ public class MemoryShard : MonoBehaviour
                 Vector3.up).eulerAngles.y;
 
             isLocked = true;
-            rotatingArrow.transform.DORotate(Vector3.up * lookRotationAngle, arrowLockRotationSpeed);
+
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(rotatingArrow.transform.DORotate(Vector3.up * lookRotationAngle, arrowLockDuration));
+            sequence.Append(textToSpawn.DOFade(1, textFadeDuration));
         }
     }
 
