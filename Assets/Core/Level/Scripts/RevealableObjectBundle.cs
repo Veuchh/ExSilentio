@@ -82,8 +82,7 @@ namespace LW.Level
             isRevealed = true;
         }
 
-        [Button]
-        void SetupElements()
+        public void SetupElements()
         {
             itemsInBundle = new List<RevealableItem>();
 
