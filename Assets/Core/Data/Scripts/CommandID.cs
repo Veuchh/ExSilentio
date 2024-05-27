@@ -4,6 +4,7 @@ namespace LW.Data
     {
         hint,
         progress,
-        help
+        help,
+        setSpeed
     }
 }

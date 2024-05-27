@@ -166,7 +166,18 @@ namespace LW.Player
                 case CommandID.help:
                     OnHelpCommand();
                     break;
+                case CommandID.setSpeed:
+                    OnSetSpeedCommand(arguments);
+                    break;
             }
+        }
+
+        private void OnSetSpeedCommand(string arguments)
+        {
+            PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
+
+            if (playerMovement != null && int.TryParse(arguments, out int newSpeed))
+                playerMovement.SetNewSpeed(newSpeed);
         }
 
         void OnHintCommand(string arguments)

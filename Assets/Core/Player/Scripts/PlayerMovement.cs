@@ -170,5 +170,10 @@ namespace LW.Player
         {
             PlayerData.CurrentLookInput = newInput;
         }
+
+        public void SetNewSpeed(int newSpeed)
+        {
+            movementSpeed = newSpeed;
+        }
     }
 }
