@@ -46,14 +46,14 @@ namespace LW.Word
                     continue;
                 }
 
-                if (NormalizeString(table.GetEntry(stringID).LocalizedValue) == NormalizeString(currentWordInput))
+                if (NormalizeString(table.GetEntry(stringID).LocalizedValue) == NormalizeString(separatedInput[firstWordID]))
                 {
                     onSuccesfullCommandParse?.Invoke(id, arguments);
                     return true;
                 }
                 else
                 {
-                    int levensteinDistance = LevensteinDistance.Calculate(NormalizeString(table.GetEntry(stringID).LocalizedValue), NormalizeString(currentWordInput));
+                    int levensteinDistance = LevensteinDistance.Calculate(NormalizeString(table.GetEntry(stringID).LocalizedValue), NormalizeString(separatedInput[firstWordID]));
 
                     if (levensteinDistance < bestCandidateScore)
                     {
