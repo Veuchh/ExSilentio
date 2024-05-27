@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Vegetation
+  m_Name: M_Flower
   m_Shader: {fileID: -6465566751694194690, guid: 19d9801991dd06942998d9bb740342e6,
     type: 3}
   m_Parent: {fileID: 0}
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Main_Tex:
-        m_Texture: {fileID: 2800000, guid: 40c196994dea2734daf7c44d9aaa6316, type: 3}
+        m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SGDissolve_fa9a834d28cf49a087261f80f81b4017_DissolveTex_2798294983_Texture2D:
@@ -53,19 +53,19 @@ Material:
     - _Dissolve_Amount: 1
     - _Distance: 0
     - _DistanceToFlat: 0
-    - _FlowerScale: 0.5
-    - _Gradient: -0.69
+    - _FlowerScale: 0.47
+    - _Gradient: 0.07
     - _NumberOfLetters: 4
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _is_Flower: 0
+    - _is_Flower: 1
     - _is_Liane: 0
     m_Colors:
-    - _Main_BottomColor: {r: 0, g: 0.84313726, b: 0, a: 0}
+    - _Main_BottomColor: {r: 0.8666667, g: 0.28235292, b: 0.2930292, a: 0}
     - _Main_Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Main_TopColor: {r: 0.15338063, g: 1, b: 0, a: 0}
+    - _Main_TopColor: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &890907067925166325
+--- !u!114 &3263118778509968491
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
