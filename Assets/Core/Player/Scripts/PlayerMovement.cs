@@ -27,11 +27,11 @@ namespace LW.Player
         [SerializeField, MinMaxSlider(-180, 180)] Vector2 verticalLookClamp;
 
         [Header("Audio Settings")]
-        [SerializeField] AK.Wwise.Event footstepEvent;
+        [SerializeField] AK.Wwise.Event startFootstepEvent;
+        [SerializeField] AK.Wwise.Event stopFootstepEvent;
         [SerializeField] AK.Wwise.Switch concreteSwitch;
         [SerializeField] AK.Wwise.Switch waterSwitch;
 
-        uint footstepEventID;
         bool isFootstepPlaying = false;
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
@@ -79,28 +79,29 @@ namespace LW.Player
 
         private void Footsteps(Vector3 currentMovement)
         {
-           Vector2 horizontalMovement = new Vector2(currentMovement.x, currentMovement.z);
+            Vector2 horizontalMovement = new Vector2(currentMovement.x, currentMovement.z);
+
+            float maxRayDistance = 1f;
+            bool isPlayerGrounded = Physics.Raycast(transform.position + Vector3.up * .1f, Vector3.down, out RaycastHit hit, maxRayDistance)
+                || characterController.isGrounded;
 
             //Play footstep event
-            if (!isFootstepPlaying && characterController.isGrounded && horizontalMovement.sqrMagnitude > 0)
+            if (!isFootstepPlaying && isPlayerGrounded && horizontalMovement.sqrMagnitude > 0)
             {
-                footstepEventID = WwiseInterface.Instance.PlayEvent(footstepEvent, gameObject);
+                WwiseInterface.Instance.PlayEvent(startFootstepEvent, gameObject);
                 isFootstepPlaying = true;
             }
 
             //Stop footstep event
-            if (isFootstepPlaying && (horizontalMovement.sqrMagnitude == 0 || !characterController.isGrounded))
+            if (isFootstepPlaying && (horizontalMovement.sqrMagnitude == 0 || !isPlayerGrounded))
             {
-                WwiseInterface.Instance.StopEvent(footstepEventID);
+                WwiseInterface.Instance.PlayEvent(stopFootstepEvent, gameObject);
                 isFootstepPlaying = false;
-                footstepEventID = 0;
             }
 
+            //Handle surface type
             if (characterController.isGrounded)
             {
-                float maxRayDistance = 1f;
-                Physics.Raycast(transform.position + Vector3.up * .1f, Vector3.down, out RaycastHit hit, maxRayDistance);
-
                 if (hit.collider == null)
                     return;
 
@@ -150,7 +151,7 @@ namespace LW.Player
             }
             else
             {
-                currentYVelocity +=  gravity * Time.deltaTime;
+                currentYVelocity += gravity * Time.deltaTime;
             }
 
             //movment
