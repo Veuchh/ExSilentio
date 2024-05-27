@@ -53,7 +53,7 @@ namespace LW.Level
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
-            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical : isTextureVertical);
             textureMaps.Add(
                 stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);

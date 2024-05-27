@@ -37,10 +37,8 @@ public class StringToTextureConverter : MonoBehaviour
     public Texture2D GetTextureFromInput(string input, int textureSize = 1024, int wordPadding = 0, bool isVertical = false)
     {
         GenerateDefaultTexture();
-
         //Quick and dirty fix : adapt texture size to input length
         textureSize = 128 * input.Length * (isVertical ? 2 : 1);
-
         Texture2D output = new Texture2D(textureSize, textureSize, TextureFormat.RGBA32, -1, false, false);
 
         Graphics.ConvertTexture(sourceTexture, output);
@@ -59,11 +57,20 @@ public class StringToTextureConverter : MonoBehaviour
 
             for (int characterIndex = 0; characterIndex < input.Length; characterIndex++)
             {
-                Texture2D characterTexture = GetCharacterTexture(input[characterIndex],characterWidth, characterHeight);
+                Texture2D characterColors = GetCharacterTexture(input[characterIndex], characterWidth, characterHeight);
 
-                Graphics.CopyTexture(characterTexture, 0, 0, 0, 0, characterWidth, characterHeight, output, 0, 0,
+                Graphics.CopyTexture(characterColors,
+                    0,
+                    0,
+                    0,
+                    0,
+                    characterWidth,
+                    characterHeight,
+                    output,
+                    0,
+                    0,
                     dstX: letterWidthPos,
-                   dstY: (wordPadding + (input.Length - characterIndex - 1) * characterHeight));
+                    dstY: wordPadding + (input.Length - characterIndex - 1) * characterHeight);
             }
         }
 
