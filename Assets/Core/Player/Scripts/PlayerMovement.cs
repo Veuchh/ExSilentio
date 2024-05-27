@@ -95,10 +95,11 @@ namespace LW.Player
             //Stop footstep event
             if (isFootstepPlaying && (horizontalMovement.sqrMagnitude == 0 || !isPlayerGrounded))
             {
-                WwiseInterface.Instance.PlayEvent(stopFootstepEvent);
+                WwiseInterface.Instance.PlayEvent(stopFootstepEvent, gameObject);
                 isFootstepPlaying = false;
             }
 
+            //Handle surface type
             if (characterController.isGrounded)
             {
                 if (hit.collider == null)
