@@ -362,6 +362,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevatorDuration: 10
+  onPlatformStartMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlatformStopMoving:
+    m_PersistentCalls:
+      m_Calls: []
   platform: {fileID: 8838327112744056463}
   sideColliders: {fileID: 8575497086475758111}
   startPosition: {x: 0, y: 10.432, z: 0}

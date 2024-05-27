@@ -1,6 +1,7 @@
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace LW.Level
 {
@@ -9,6 +10,8 @@ namespace LW.Level
         const string PLAYER_TAG = "Player";
 
         [SerializeField] float elevatorDuration = 20;
+        [SerializeField] UnityEvent onPlatformMovingUp;
+        [SerializeField] UnityEvent onPlatformMovingDown;
         [SerializeField] Transform platform;
         [SerializeField] GameObject sideColliders;
         [SerializeField] Vector3 startPosition;
@@ -40,7 +43,7 @@ namespace LW.Level
 
             if (targetPos == endPosition)
                 platform.position = Vector3.Lerp(startPosition, endPosition, Mathf.InverseLerp(startTime, endTime, Time.time));
-            else 
+            else
                 platform.position = Vector3.Lerp(endPosition, startPosition, Mathf.InverseLerp(startTime, endTime, Time.time));
         }
 
@@ -67,7 +70,14 @@ namespace LW.Level
 
             sequence.AppendCallback(() => sideColliders.SetActive(true));
             sequence.AppendCallback(() => player.SetParent(platform));
-            sequence.AppendInterval(elevatorDuration);
+            sequence.AppendInterval(elevatorDuration / 2);
+
+            if (targetPos == startPosition)
+                sequence.AppendCallback(() => onPlatformMovingUp?.Invoke());
+            else
+                sequence.AppendCallback(() => onPlatformMovingDown?.Invoke());
+
+            sequence.AppendInterval(elevatorDuration / 2);
             sequence.AppendCallback(() => sideColliders.SetActive(false));
             sequence.AppendCallback(() => player.SetParent(null));
             sequence.Play();
