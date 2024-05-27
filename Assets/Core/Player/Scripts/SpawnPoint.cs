@@ -5,7 +5,8 @@ using UnityEngine;
 [SelectionBase]
 public class SpawnPoint : MonoBehaviour
 {
-    [Flags]enum ComponentsToAddOnSpawn
+    [Flags]
+    enum ComponentsToAddOnSpawn
     {
         ReflectionHandler = 2,
         DistanceToWater = 3,
@@ -21,15 +22,16 @@ public class SpawnPoint : MonoBehaviour
 
         foreach (ComponentsToAddOnSpawn componentType in Enum.GetValues(typeof(ComponentsToAddOnSpawn)))
         {
-            switch (componentType)
-            {
-                case ComponentsToAddOnSpawn.ReflectionHandler:
-                    player.AddComponent<ReflectionHandler>().Init(waterPlanes);
-                    break;
-                case ComponentsToAddOnSpawn.DistanceToWater:
-                    player.AddComponent<WwiseDistanceToWater>().Init(0, 35);
-                    break;
-            }
+            if (componentsToAddToPlayer.HasFlag(componentType))
+                switch (componentType)
+                {
+                    case ComponentsToAddOnSpawn.ReflectionHandler:
+                        player.AddComponent<ReflectionHandler>().Init(waterPlanes);
+                        break;
+                    case ComponentsToAddOnSpawn.DistanceToWater:
+                        player.AddComponent<WwiseDistanceToWater>().Init(0, 35);
+                        break;
+                }
         }
 
         Destroy(gameObject);
