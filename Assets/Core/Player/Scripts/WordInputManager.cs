@@ -17,6 +17,7 @@ namespace LW.Player
     public class WordInputManager : MonoBehaviour
     {
         const string RESET_POSITION_COMMAND_FEEDBACK_ID = "resetPositionCommandFeedbackID";
+        const string COMMANDS_COMMAND_FEEDBACK_ID = "commandsCommandFeedbackID";
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
         const string HINT_COMMAND_FEEDBACK_ID = "hintCommandFeedbackID";
         const string REVEALED_ITEMS_LOCALIZATION_ID = "revealedItems";
@@ -180,7 +181,17 @@ namespace LW.Player
                 case CommandID.resetPosition:
                     OnResetPositionCommand();
                     break;
+                case CommandID.commands:
+                    OnCommandsCommand();
+                    break;
             }
+        }
+
+        private void OnCommandsCommand()
+        {
+            var translatedTable = commandsTable.GetTable();
+            string consoleOutput = translatedTable.GetEntry(COMMANDS_COMMAND_FEEDBACK_ID).LocalizedValue;
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
         }
 
         private void OnResetPositionCommand()

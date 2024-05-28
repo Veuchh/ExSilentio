@@ -16,8 +16,7 @@ MonoBehaviour:
     m_Code: fr
   m_SharedData: {fileID: 11400000, guid: ecb5f576e54c1e84c845ee20a321dfc3, type: 2}
   m_Metadata:
-    m_Items:
-    - rid: 8014726810433748994
+    m_Items: []
   m_TableData:
   - m_Id: 12442214400
     m_Localized: aide
@@ -26,8 +25,7 @@ MonoBehaviour:
   - m_Id: 179438428160
     m_Localized: "progr\xE8s"
     m_Metadata:
-      m_Items:
-      - rid: 8014726810433748994
+      m_Items: []
   - m_Id: 235268808704
     m_Localized: indice
     m_Metadata:
@@ -35,7 +33,8 @@ MonoBehaviour:
   - m_Id: 3012921466880
     m_Localized: "Essayez de deviner ce qu\u2019il y a dans la m\xE9moire que vous
       explorez. Devinez ce qu\u2019il y a ici en utilisant le son et les silouhette
-      des objets, puis tapez le nom de l'objet dans la console."
+      des objets, puis tapez le nom de l'objet dans la console.\nTapez\"commandes\"
+      pour voir la liste de commandes."
     m_Metadata:
       m_Items: []
   - m_Id: 3308829614080
@@ -71,10 +70,22 @@ MonoBehaviour:
     m_Localized: screenshot
     m_Metadata:
       m_Items: []
+  - m_Id: 8009872593199104
+    m_Localized: reposition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8013277977976832
+    m_Localized: "Retour \xE0 la position de d\xE9part."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8018363298947072
+    m_Localized: "<u>commandes</u> : Affiche la liste des commandes\n<u>aide</u>
+      : Affiche une explication de la console et des objectifs\n<u>progr\xE8s</u>
+      : Affiche le nombre de mots qu'il reste \xE0 trouver\n<u>indice</u> : Permet
+      d'avoir des indices pour un mot\n<u>reposition</u> : Ram\xE8ne \xE0 la position
+      de d\xE9part\n<u>screenshot</u> : Prend une capture d'\xE9cran"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds:
-    - rid: 8014726810433748994
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 00205dc729000000
+    RefIds: []

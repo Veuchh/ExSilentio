@@ -7,6 +7,7 @@ namespace LW.Data
         help,
         setSpeed,
         screenshot,
-        resetPosition
+        resetPosition,
+        commands
     }
 }
