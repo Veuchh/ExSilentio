@@ -4,7 +4,6 @@ using NaughtyAttributes;
 using UnityEngine.UI;
 using System;
 using LW.Data;
-using System.Globalization;
 using LW.Audio;
 
 namespace LW.UI
@@ -72,13 +71,13 @@ namespace LW.UI
             UpdateInput("");
         }
 
-        public void AddToHistory(string newHistory)
+        public void AddToHistory(string newHistory, bool isClickablePath = false)
         {
             if (separateWithDashes)
                 Instantiate(consoleEntryPrefab, historyParent.transform).UpdateText("------------------------------------");
 
             ConsoleEntry newEntry = Instantiate(consoleEntryPrefab, historyParent.transform);
-            newEntry.UpdateText(newHistory);
+            newEntry.UpdateText(newHistory, isClickablePath);
 
             if (changeTextColor)
                 newEntry.UpdateTextColor(isEntryEven ? textColor2 : textColor1);

@@ -5,7 +5,9 @@ using LW.Logger;
 using LW.UI;
 using LW.Word;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -14,6 +16,8 @@ namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
+        const string RESET_POSITION_COMMAND_FEEDBACK_ID = "resetPositionCommandFeedbackID";
+        const string COMMANDS_COMMAND_FEEDBACK_ID = "commandsCommandFeedbackID";
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
         const string HINT_COMMAND_FEEDBACK_ID = "hintCommandFeedbackID";
         const string REVEALED_ITEMS_LOCALIZATION_ID = "revealedItems";
@@ -43,6 +47,8 @@ namespace LW.Player
         //Console navigation
         List<string> previousInputs = new List<string>();
         int currentNavigationIndex;
+
+        public static event Action onResetPlayerPos;
 
         private void Awake()
         {
@@ -166,7 +172,68 @@ namespace LW.Player
                 case CommandID.help:
                     OnHelpCommand();
                     break;
+                case CommandID.setSpeed:
+                    OnSetSpeedCommand(arguments);
+                    break;
+                case CommandID.screenshot:
+                    StartCoroutine(TakeScreenShotRoutine());
+                    break;
+                case CommandID.resetPosition:
+                    OnResetPositionCommand();
+                    break;
+                case CommandID.commands:
+                    OnCommandsCommand();
+                    break;
             }
+        }
+
+        private void OnCommandsCommand()
+        {
+            var translatedTable = commandsTable.GetTable();
+            string consoleOutput = translatedTable.GetEntry(COMMANDS_COMMAND_FEEDBACK_ID).LocalizedValue;
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
+        }
+
+        private void OnResetPositionCommand()
+        {
+            var translatedTable = commandsTable.GetTable();
+            string consoleOutput = translatedTable.GetEntry(RESET_POSITION_COMMAND_FEEDBACK_ID).LocalizedValue;
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
+
+            onResetPlayerPos?.Invoke();
+        }
+
+        IEnumerator TakeScreenShotRoutine()
+        {
+            ConsoleUI.Instance.ToggleConsole(false);
+            yield return new WaitForEndOfFrame();
+            string path = Application.dataPath;
+
+#if UNITY_EDITOR
+            path += "/Assets";
+#endif
+
+            path += "/Screenshots";
+            if (!Directory.Exists(path.Replace("/", @"\")))
+                Directory.CreateDirectory(Application.dataPath.Replace("/", @"\") + @"\Screenshots");
+
+            string screenNameBase = "";
+
+#if UNITY_EDITOR
+            screenNameBase += "Assets/";
+#endif
+
+            ScreenCapture.CaptureScreenshot(screenNameBase+"Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
+            ConsoleUI.Instance.ToggleConsole(true);
+            ConsoleUI.Instance.AddToHistory(path, true);
+        }
+
+        private void OnSetSpeedCommand(string arguments)
+        {
+            PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
+
+            if (playerMovement != null && int.TryParse(arguments, out int newSpeed))
+                playerMovement.SetNewSpeed(newSpeed);
         }
 
         void OnHintCommand(string arguments)

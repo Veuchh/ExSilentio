@@ -53,9 +53,14 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 1
     - _Cull: 2
+    - _DepthTest: 2.25
     - _Dissolve: 0
+    - _Dissolve_Amount: 1
     - _Dissolve_MaskHorizontal: 0
     - _Dissolve_MaskStrength: 1
+    - _Dissolve_Steps: 2
+    - _Distance: 5
+    - _DistanceToFlat: 0
     - _DstBlend: 0
     - _Lighting_Ambient: 0
     - _Lighting_Smoothness: 0
@@ -79,6 +84,8 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
+    - _Dissolve_NamesTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Dissolve_SplattingTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Dissolve_Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Lighting_ToonRampTinting: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
     - _MainColor: {r: 1, g: 1, b: 1, a: 0}
