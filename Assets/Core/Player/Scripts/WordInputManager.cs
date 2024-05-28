@@ -7,6 +7,7 @@ using LW.Word;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -180,10 +181,25 @@ namespace LW.Player
         {
             ConsoleUI.Instance.ToggleConsole(false);
             yield return new WaitForEndOfFrame();
-            System.IO.Directory.CreateDirectory(Application.persistentDataPath + "/Screenshots");
-            ScreenCapture.CaptureScreenshot("Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
+            string path = Application.dataPath;
+
+#if UNITY_EDITOR
+            path += "/Assets";
+#endif
+
+            path += "/Screenshots";
+            if (!Directory.Exists(path.Replace("/", @"\")))
+                Directory.CreateDirectory(Application.dataPath.Replace("/", @"\") + @"\Screenshots");
+
+            string screenNameBase = "";
+
+#if UNITY_EDITOR
+            screenNameBase += "Assets/";
+#endif
+
+            ScreenCapture.CaptureScreenshot(screenNameBase+"Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
             ConsoleUI.Instance.ToggleConsole(true);
-            ConsoleUI.Instance.AddToHistory("Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
+            ConsoleUI.Instance.AddToHistory(path, true);
         }
 
         private void OnSetSpeedCommand(string arguments)
