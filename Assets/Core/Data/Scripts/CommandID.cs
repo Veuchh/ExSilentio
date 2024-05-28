@@ -6,6 +6,7 @@ namespace LW.Data
         progress,
         help,
         setSpeed,
-        screenshot
+        screenshot,
+        resetPosition
     }
 }

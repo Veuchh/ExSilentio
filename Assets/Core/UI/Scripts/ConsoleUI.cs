@@ -4,7 +4,6 @@ using NaughtyAttributes;
 using UnityEngine.UI;
 using System;
 using LW.Data;
-using System.Globalization;
 using LW.Audio;
 
 namespace LW.UI

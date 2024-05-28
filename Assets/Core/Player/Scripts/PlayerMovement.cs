@@ -39,17 +39,27 @@ namespace LW.Player
 
         private float nextUpdateTime;
         private float updateTick = 1;
+        
+        Vector3 startPositon;
+        Quaternion startRotation;
+
         Vector3 storedPosition;
 
         private void Start()
         {
+            startPositon = transform.position;
+            startRotation = transform.rotation;
+
             storedPosition = transform.position;
             PlayerInputsHandler.Instance.SetPlayerMovementScript(this);
             WwiseInterface.Instance.UpdatePlayerCamera(GetComponentInChildren<Camera>().gameObject);
+
+            WordInputManager.onResetPlayerPos += ResetPosition;
         }
 
         private void OnDestroy()
         {
+            WordInputManager.onResetPlayerPos -= ResetPosition;
             WwiseInterface.Instance.RemovePlayerCameraIfCameraIsThis(GetComponentInChildren<Camera>().gameObject);
         }
 
@@ -75,6 +85,17 @@ namespace LW.Player
             }
 
             Footsteps(movement);
+        }
+
+        public void ResetPosition()
+        {
+            characterController.enabled = false;
+
+            transform.position = startPositon;
+            transform.rotation = startRotation;
+            cameraTransform.localRotation = Quaternion.identity;
+
+            characterController.enabled = true;
         }
 
         private void Footsteps(Vector3 currentMovement)

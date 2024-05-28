@@ -16,6 +16,7 @@ namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
+        const string RESET_POSITION_COMMAND_FEEDBACK_ID = "resetPositionCommandFeedbackID";
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
         const string HINT_COMMAND_FEEDBACK_ID = "hintCommandFeedbackID";
         const string REVEALED_ITEMS_LOCALIZATION_ID = "revealedItems";
@@ -45,6 +46,8 @@ namespace LW.Player
         //Console navigation
         List<string> previousInputs = new List<string>();
         int currentNavigationIndex;
+
+        public static event Action onResetPlayerPos;
 
         private void Awake()
         {
@@ -174,7 +177,19 @@ namespace LW.Player
                 case CommandID.screenshot:
                     StartCoroutine(TakeScreenShotRoutine());
                     break;
+                case CommandID.resetPosition:
+                    OnResetPositionCommand();
+                    break;
             }
+        }
+
+        private void OnResetPositionCommand()
+        {
+            var translatedTable = commandsTable.GetTable();
+            string consoleOutput = translatedTable.GetEntry(RESET_POSITION_COMMAND_FEEDBACK_ID).LocalizedValue;
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
+
+            onResetPlayerPos?.Invoke();
         }
 
         IEnumerator TakeScreenShotRoutine()
