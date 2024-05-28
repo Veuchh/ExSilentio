@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5619847771750206806, guid: 09a2e5c060b7a10488e594623ad6dd2f,
     type: 3}
-  waterMaterial: {fileID: 2100000, guid: 6b56664bd2950fa418b935086827f8c6, type: 2}
+  waterPlanes: []
   componentsToAddToPlayer: 0
 --- !u!1 &7966448824499705726
 GameObject:
@@ -77,7 +77,7 @@ Transform:
   m_GameObject: {fileID: 7966448824499705726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

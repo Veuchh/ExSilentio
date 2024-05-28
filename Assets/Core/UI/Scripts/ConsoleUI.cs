@@ -16,9 +16,12 @@ namespace LW.UI
         [SerializeField] TextMeshProUGUI input;
         [SerializeField] ConsoleEntry consoleEntryPrefab;
         [SerializeField] GameObject commandPannel;
+        [SerializeField] Button commandsCommand;
         [SerializeField] Button helpCommand;
-        [SerializeField] Button hintCommand;
         [SerializeField] Button progressCommand;
+        [SerializeField] Button hintCommand;
+        [SerializeField] Button respawnCommand;
+        [SerializeField] Button screenshotCommand;
         [SerializeField] Button togglePannelButton;
 
         [SerializeField] float cursorFlashingSpeed = 1;
@@ -45,9 +48,12 @@ namespace LW.UI
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            commandsCommand.onClick.AddListener(() => OnCommandClicked(CommandID.commands));
             helpCommand.onClick.AddListener(() => OnCommandClicked(CommandID.help));
-            hintCommand.onClick.AddListener(() => OnCommandClicked(CommandID.hint));
             progressCommand.onClick.AddListener(() => OnCommandClicked(CommandID.progress));
+            hintCommand.onClick.AddListener(() => OnCommandClicked(CommandID.hint));
+            respawnCommand.onClick.AddListener(() => OnCommandClicked(CommandID.resetPosition));
+            screenshotCommand.onClick.AddListener(() => OnCommandClicked(CommandID.screenshot));
             togglePannelButton.onClick.AddListener(() => TogglePannel());
         }
 
@@ -59,10 +65,13 @@ namespace LW.UI
 
         private void OnDestroy()
         {
-            helpCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.help));
-            hintCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.hint));
-            progressCommand.onClick.RemoveListener(() => OnCommandClicked(CommandID.progress));
-            togglePannelButton.onClick.RemoveListener(() => TogglePannel());
+            commandsCommand.onClick.RemoveAllListeners();
+            helpCommand.onClick.RemoveAllListeners();
+            hintCommand.onClick.RemoveAllListeners();
+            progressCommand.onClick.RemoveAllListeners();
+            respawnCommand.onClick.RemoveAllListeners();
+            screenshotCommand.onClick.RemoveAllListeners();
+            togglePannelButton.onClick.RemoveAllListeners();
         }
 
         public void ToggleConsole(bool toggle)
@@ -113,7 +122,7 @@ namespace LW.UI
 
             WwiseInterface.Instance.PlayEvent(uiClClick);
 
-            togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 90f : -90f);
+            togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 0 : 180);
         }
     }
 }
