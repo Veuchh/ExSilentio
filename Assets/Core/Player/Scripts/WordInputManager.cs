@@ -5,6 +5,7 @@ using LW.Logger;
 using LW.UI;
 using LW.Word;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -169,7 +170,20 @@ namespace LW.Player
                 case CommandID.setSpeed:
                     OnSetSpeedCommand(arguments);
                     break;
+                case CommandID.screenshot:
+                    StartCoroutine(TakeScreenShotRoutine());
+                    break;
             }
+        }
+
+        IEnumerator TakeScreenShotRoutine()
+        {
+            ConsoleUI.Instance.ToggleConsole(false);
+            yield return new WaitForEndOfFrame();
+            System.IO.Directory.CreateDirectory(Application.persistentDataPath + "/Screenshots");
+            ScreenCapture.CaptureScreenshot("Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
+            ConsoleUI.Instance.ToggleConsole(true);
+            ConsoleUI.Instance.AddToHistory("Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
         }
 
         private void OnSetSpeedCommand(string arguments)

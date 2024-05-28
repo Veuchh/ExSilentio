@@ -5,6 +5,7 @@ namespace LW.Data
         hint,
         progress,
         help,
-        setSpeed
+        setSpeed,
+        screenshot
     }
 }

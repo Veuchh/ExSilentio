@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: fr
   m_SharedData: {fileID: 11400000, guid: ecb5f576e54c1e84c845ee20a321dfc3, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 8014726810433748994
   m_TableData:
   - m_Id: 12442214400
     m_Localized: aide
@@ -25,7 +26,8 @@ MonoBehaviour:
   - m_Id: 179438428160
     m_Localized: "progr\xE8s"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 8014726810433748994
   - m_Id: 235268808704
     m_Localized: indice
     m_Metadata:
@@ -65,6 +67,14 @@ MonoBehaviour:
     m_Localized: setSpeed
     m_Metadata:
       m_Items: []
+  - m_Id: 7726575061377024
+    m_Localized: screenshot
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8014726810433748994
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00205dc729000000
