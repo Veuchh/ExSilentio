@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_WaterGrotte
+  m_Shader: {fileID: -6465566751694194690, guid: 334bb32839bb5af4a89e71534d3225ff,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  - SHADOWCASTER
+  m_LockedProperties: :m_CustomRenderQueue
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ColoredWave_Gradient:
+        m_Texture: {fileID: 2800000, guid: 614315dfef9285d4d988d4c1c1455bfd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dissolve_Tex:
+        m_Texture: {fileID: 2800000, guid: 718641744dcefef49b191e7ddeda1f6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: 278cd4c27ade86c4b82f3be001a9f7ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SGFlooredGradient_1516cef16875407899ce874454e27bed_Gradient_4086124264_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 5bbe802347dd35e458e83ced2d521382, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureWaves_Gradient:
+        m_Texture: {fileID: 2800000, guid: 0375dbdde30eaa6439fbcb2aaddc278f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _CastShadows: 0
+    - _ColoredWave_Intensity: 0.29
+    - _ColoredWave_Speed: 0.1
+    - _Cull: 2
+    - _Dissolve_Amount: 1
+    - _Dissolve_Steps: 2
+    - _Distance: -72
+    - _DistanceToFlat: 0
+    - _DistanceUX_Distance: 141.6
+    - _DistanceUX_Gradient: 11.5
+    - _DstBlend: 10
+    - _MainSmoothness: 0.515
+    - _Main_DistanceFade: 1.84
+    - _Main_StrengthFade: 1.25
+    - _MouvementScale: 1
+    - _NumberOfLetters: 5
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Reflection_Size: 24.7
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _TextureWaves_Speed: 0.8
+    - _Wave_Height: 5.41
+    - _Wave_Length: 9.57
+    - _Wave_Sharpness: 2.4
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
+    m_Colors:
+    - _ColoredWave_Color: {r: 0.45759168, g: 0.7102794, b: 0.8584906, a: 1}
+    - _Dissolve_Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _MainColor: {r: 0.081573464, g: 0.29556888, b: 0.6452829, a: 0}
+    - _MainTiling: {r: 50, g: 50, b: 0, a: 0}
+    - _MainWaveColor: {r: 0.42168027, g: 0.66853887, b: 0.8679245, a: 0}
+    - _Main_Color: {r: 0.28635636, g: 0.46506634, b: 0.6132076, a: 0}
+    - _Main_Tiling: {r: 55, g: 55, b: 0, a: 0}
+    - _Reflection_Color: {r: 1, g: 0.92166173, b: 0.11792451, a: 0}
+    - _Reflection_Pos: {r: 3.3, g: 3.2, b: -233.5, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &7422425664416726847
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
