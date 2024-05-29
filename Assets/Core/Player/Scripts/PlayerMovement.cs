@@ -36,7 +36,6 @@ namespace LW.Player
 
         float horizontalRotationMultiplier => 360 / (Mathf.Abs(verticalLookClamp.x) + verticalLookClamp.y);
 
-
         private float nextUpdateTime;
         private float updateTick = 1;
         
@@ -158,7 +157,6 @@ namespace LW.Player
 
 
             //Horizontal rotation
-            //  float newCamYRotation = transform.localRotation.eulerAngles.y + (PlayerData.CurrentLookInput.y * Time.deltaTime * rotationSpeed * -1);
             Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
         }
