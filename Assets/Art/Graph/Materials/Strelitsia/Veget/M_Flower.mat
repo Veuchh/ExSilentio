@@ -12,14 +12,17 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -50,16 +53,28 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 0
     - _Dissolve_Amount: 1
     - _Distance: 0
     - _DistanceToFlat: 0
+    - _DstBlend: 10
     - _FlowerScale: 0.47
     - _Gradient: 0.07
     - _NumberOfLetters: 4
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     - _is_Flower: 1
     - _is_Liane: 0
+    - _is_Splatting: 0
     m_Colors:
     - _Main_BottomColor: {r: 0.8666667, g: 0.28235292, b: 0.2930292, a: 0}
     - _Main_Tiling: {r: 1, g: 1, b: 0, a: 0}
