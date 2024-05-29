@@ -9,6 +9,7 @@ public class MemoryShard : MonoBehaviour
     const string PLAYER_TAG = "Player";
 
     [SerializeField] CanvasGroup textToSpawn;
+    [SerializeField] Transform trigger;
     [SerializeField] Transform rotatingArrow;
     [SerializeField] float arrowDefaultRotationSpeed = 60f;
     [SerializeField] float arrowLockDuration = 60f;
@@ -51,7 +52,7 @@ public class MemoryShard : MonoBehaviour
         {
             //  rotatingArrow towards target
             float lookRotationAngle = Quaternion.LookRotation(
-                transform.position - textToSpawn.transform.position,
+                trigger.transform.position - textToSpawn.transform.position,
                 Vector3.up).eulerAngles.y;
 
             isLocked = true;
