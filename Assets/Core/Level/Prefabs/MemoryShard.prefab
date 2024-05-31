@@ -169,6 +169,9 @@ MonoBehaviour:
   arrowLockDuration: 1
   durationInColliderToLock: 0.5
   textFadeDuration: 1.5
+  onRevealText:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &5476707388124445603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -264,8 +267,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TestMessage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a931abfad346fec45a3650159747852e, type: 2}
-  m_sharedMaterial: {fileID: 5448193084053644044, guid: a931abfad346fec45a3650159747852e,
+  m_fontAsset: {fileID: 11400000, guid: 6e516143398b2a943851b11a946cda37, type: 2}
+  m_sharedMaterial: {fileID: 1186941533253821025, guid: 6e516143398b2a943851b11a946cda37,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
