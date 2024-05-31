@@ -11,11 +11,13 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
 
 namespace LW.Player
 {
     public class WordInputManager : MonoBehaviour
     {
+        const string LEVEL_COMMAND_FEEDBACK_ID = "levelCommandFeedbackID";
         const string RESET_POSITION_COMMAND_FEEDBACK_ID = "resetPositionCommandFeedbackID";
         const string COMMANDS_COMMAND_FEEDBACK_ID = "commandsCommandFeedbackID";
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
@@ -184,7 +186,44 @@ namespace LW.Player
                 case CommandID.commands:
                     OnCommandsCommand();
                     break;
+                case CommandID.level:
+                    OnLevelCommand(arguments);
+                    break;
             }
+        }
+
+        private void OnLevelCommand(string args)
+        {
+            var translatedTable = commandsTable.GetTable();
+            string consoleOutput = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(args))
+            {
+                foreach (string level in LevelLoader.Instance.Levels)
+                {
+                    consoleOutput += "- " + translatedTable.GetEntry(level).LocalizedValue + "\n";
+                }
+
+                consoleOutput += translatedTable.GetEntry(LEVEL_COMMAND_FEEDBACK_ID).LocalizedValue;
+            }
+
+            else
+            {
+                ICollection<StringTableEntry> entries = translatedTable.Values;
+                string levelName = string.Empty;
+                foreach (var item in entries)
+                {
+                    if (item.LocalizedValue == args.Replace(" ", ""))
+                    {
+                        levelName = item.Key;
+                        break;
+                    }
+                }
+
+                LevelLoader.Instance.ChangeLevel(levelName);
+            }
+
+            ConsoleUI.Instance.AddToHistory(consoleOutput);
         }
 
         private void OnCommandsCommand()
@@ -223,7 +262,7 @@ namespace LW.Player
             screenNameBase += "Assets/";
 #endif
 
-            ScreenCapture.CaptureScreenshot(screenNameBase+"Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
+            ScreenCapture.CaptureScreenshot(screenNameBase + "Screenshots/Ex_Silentio_" + DateTime.Now.ToString().Replace(" ", "_").Replace(":", "_").Replace("/", "_") + ".png");
             ConsoleUI.Instance.ToggleConsole(true);
             ConsoleUI.Instance.AddToHistory(path, true);
         }
@@ -240,7 +279,7 @@ namespace LW.Player
         {
             var translatedWordsTable = wordsTable.GetTable();
             var translatedCommandsTable = commandsTable.GetTable();
-            string consoleOutput = translatedCommandsTable.GetEntry(HINT_COMMAND_FEEDBACK_ID).LocalizedValue;
+            string consoleOutput = string.Empty;
             List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundles();
             arguments = arguments.Replace(" ", "");
             arguments.Normalize();
@@ -251,7 +290,7 @@ namespace LW.Player
 
             foreach (RevealableObjectBundle bundle in bundles)
             {
-                consoleOutput += $"\n{bundles.IndexOf(bundle)}. " +
+                consoleOutput += $"{bundles.IndexOf(bundle)}. " +
                     (bundle.IsRevealed ?
                     translatedWordsTable.GetEntry(bundle.ID.ToString()).LocalizedValue
                     : " ?????????")
@@ -270,8 +309,10 @@ namespace LW.Player
                         consoleOutput += "??????????";
                     }
                 }
+                consoleOutput += "\n";
             }
 
+            consoleOutput += translatedCommandsTable.GetEntry(HINT_COMMAND_FEEDBACK_ID).LocalizedValue;
             ConsoleUI.Instance.AddToHistory(consoleOutput);
         }
 

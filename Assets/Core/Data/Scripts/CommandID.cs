@@ -8,6 +8,7 @@ namespace LW.Data
         setSpeed,
         screenshot,
         resetPosition,
-        commands
+        commands,
+        level
     }
 }
