@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class MemoryShard : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MemoryShard : MonoBehaviour
     [SerializeField] float arrowLockDuration = 60f;
     [SerializeField] float durationInColliderToLock = .5f;
     [SerializeField] float textFadeDuration = 1.5f;
+    [SerializeField] UnityEvent onRevealText;
 
     float remainingTimeInCollider;
     bool isLocked = false;
@@ -60,6 +62,7 @@ public class MemoryShard : MonoBehaviour
             Sequence sequence = DOTween.Sequence();
 
             sequence.Append(rotatingArrow.transform.DORotate(Vector3.up * lookRotationAngle, arrowLockDuration));
+            sequence.AppendCallback(() => onRevealText?.Invoke());
             sequence.Append(textToSpawn.DOFade(1, textFadeDuration));
         }
     }
