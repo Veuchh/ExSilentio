@@ -63,7 +63,7 @@ namespace LW.Word
                 }
             }
 
-            if (bestCandidateScore <= currentWordInput.Length / 3)
+            if (bestCandidateScore <= Mathf.Max(1,currentWordInput.Length / 5))
             {
                 onSuccesfullCommandParse?.Invoke(bestCandidate, arguments);
                 return true;
