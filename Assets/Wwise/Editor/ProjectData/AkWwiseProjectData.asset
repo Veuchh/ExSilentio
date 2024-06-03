@@ -433,7 +433,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584856665437781357
+    m_lastTime: -8584841973777634940
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -1095,8 +1095,8 @@ MonoBehaviour:
         guid: 15e5def64449c3408e4c2746a52fe714
       Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop
       maxAttenuation: 0
-      maxDuration: 1.1255833
-      minDuration: 0.36577085
+      maxDuration: 1.5938789
+      minDuration: 0.33595833
   - PhysicalPath: Events\MX.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3676,7 +3676,7 @@ MonoBehaviour:
     ParentPath: Switches\Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584856575090852163
+    m_lastTime: -8584841965178778322
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -3757,6 +3757,134 @@ MonoBehaviour:
         - ElementName: SW_FT_OC_Wood
           ObjectType: 10
           guid: 553f34920aadea46876f12d3ad9a35b6
+      - name: SW_FT_SL_Cave
+        guid: 5e5917108879954a95b2bf5879dbf841
+        id: 227860702
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Cave
+          ObjectType: 10
+          guid: 5e5917108879954a95b2bf5879dbf841
+      - name: SW_FT_SL_Concrete
+        guid: 9cdf7251f9bcd34bbd332150ccd67d45
+        id: 3102083180
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Concrete
+          ObjectType: 10
+          guid: 9cdf7251f9bcd34bbd332150ccd67d45
+      - name: SW_FT_SL_Glass
+        guid: bc967d0132c5b34aa887599457b528ed
+        id: 2763720287
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Glass
+          ObjectType: 10
+          guid: bc967d0132c5b34aa887599457b528ed
+      - name: SW_FT_SL_Grass
+        guid: 3fbb2b674192b045a1d3c654dd98b2fd
+        id: 267428953
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Grass
+          ObjectType: 10
+          guid: 3fbb2b674192b045a1d3c654dd98b2fd
+      - name: SW_FT_SL_Jungle
+        guid: ae38124971d7ab429defb903ca9706d7
+        id: 4254353870
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Jungle
+          ObjectType: 10
+          guid: ae38124971d7ab429defb903ca9706d7
+      - name: SW_FT_SL_River
+        guid: 75b045b3dbfc03499b0867122d3f3435
+        id: 3919538561
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_River
+          ObjectType: 10
+          guid: 75b045b3dbfc03499b0867122d3f3435
+      - name: SW_FT_SL_Sand
+        guid: cd063e79fbf21440b6cd29fec9b281b0
+        id: 1204272039
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Sand
+          ObjectType: 10
+          guid: cd063e79fbf21440b6cd29fec9b281b0
+      - name: SW_FT_SL_Wood
+        guid: 6a065005deab5d42bc14888749bb4b41
+        id: 2458483978
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switch
+          ObjectType: 12
+          guid: ec7f80df76c16843ad435dd5726a9c1e
+        - ElementName: SW_FT_OC
+          ObjectType: 11
+          guid: 9f48e04beda94a4090ed8e76610a0fac
+        - ElementName: SW_FT_SL_Wood
+          ObjectType: 10
+          guid: 6a065005deab5d42bc14888749bb4b41
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
