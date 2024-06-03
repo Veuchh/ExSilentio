@@ -213,7 +213,7 @@ namespace LW.Player
                 string levelName = string.Empty;
                 foreach (var item in entries)
                 {
-                    if (item.LocalizedValue == args.Replace(" ", ""))
+                    if (item.LocalizedValue.ToLower() == args.Replace(" ", "").ToLower())
                     {
                         levelName = item.Key;
                         break;
