@@ -18,7 +18,7 @@ public class StringToTextureConverter : MonoBehaviour
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
 

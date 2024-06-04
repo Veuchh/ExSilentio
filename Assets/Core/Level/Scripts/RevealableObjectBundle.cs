@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.VFX;
 
@@ -41,6 +42,8 @@ namespace LW.Level
         public bool IsRevealed => isRevealed;
         public WordDatabaseEntry Entry => entry;
 
+        public string GetBundleKey => SceneManager.GetActiveScene().name + "_" + gameObject.name;
+
         private void Start()
         {
             RevealableObjectHandler.Instance.RegisterBundle(this);
@@ -49,7 +52,7 @@ namespace LW.Level
                 hints.Add(hintID, false);
         }
 
-        public void RevealBundle(WordID usedID, LocalizedStringTable stringTable)
+        public void RevealBundle(WordID usedID, LocalizedStringTable stringTable, bool saveToPlayerPrefs = true)
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
@@ -80,6 +83,11 @@ namespace LW.Level
                 WwiseInterface.Instance.PlayEvent(eventToPlay);
 
             isRevealed = true;
+
+            if (saveToPlayerPrefs)
+                SaveLoad.SaveWordToPlayerPrefs(
+                    GetBundleKey, 
+                    stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
         }
 
         public void SetupElements()
