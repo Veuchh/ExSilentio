@@ -186,7 +186,7 @@ namespace LW.Player
                 case CommandID.commands:
                     OnCommandsCommand();
                     break;
-                case CommandID.level:
+                case CommandID.load:
                     OnLevelCommand(arguments);
                     break;
             }

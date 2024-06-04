@@ -9,6 +9,6 @@ namespace LW.Data
         screenshot,
         resetPosition,
         commands,
-        level
+        load
     }
 }
