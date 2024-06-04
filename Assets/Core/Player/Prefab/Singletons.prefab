@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 85882193839517980}
   - component: {fileID: 1616906314153863399}
   - component: {fileID: 5369070425929500776}
+  - component: {fileID: 8045321140896981471}
   m_Layer: 0
-  m_Name: InputsHandler
+  m_Name: Singletons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,3 +145,18 @@ MonoBehaviour:
   commandStringTable:
     m_TableReference:
       m_TableCollectionName: GUID:ecb5f576e54c1e84c845ee20a321dfc3
+--- !u!114 &8045321140896981471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439468828921275471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65feeb044abdcb643a29738b4b767f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - OceanCity
+  - Strelitzia

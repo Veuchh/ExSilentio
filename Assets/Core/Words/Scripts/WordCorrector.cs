@@ -33,8 +33,11 @@ namespace LW.Word
 
             for (int i = firstWordID + 1; i < separatedInput.Length; i++)
             {
-                arguments += separatedInput[i] + " ";
+                arguments += separatedInput[i] + (i == separatedInput.Length - 1 ? "":" ");
             }
+
+            if (arguments.Length > 0)
+                arguments.Remove(arguments.Length - 1);
 
             foreach (CommandID id in Enum.GetValues(typeof(CommandID)))
             {
@@ -63,7 +66,7 @@ namespace LW.Word
                 }
             }
 
-            if (bestCandidateScore <= currentWordInput.Length / 3)
+            if (bestCandidateScore <= Mathf.Max(1,currentWordInput.Length / 5))
             {
                 onSuccesfullCommandParse?.Invoke(bestCandidate, arguments);
                 return true;
