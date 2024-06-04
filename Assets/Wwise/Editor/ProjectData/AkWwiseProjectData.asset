@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: c16cb70131cf4146b7a73c8801e203d4
     GuidInternal: 
-    m_lastTime: -8584904938860150927
+    m_lastTime: -8584841169485475808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584856536582653241
+    m_lastTime: -8584841169477375808
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -406,7 +406,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 3ae079bc8ac3e74ea06242fbec9ec8d3
     GuidInternal: 
-    m_lastTime: -8584904917628287466
+    m_lastTime: -8584841169476675808
     List:
     - name: Test
       guid: 65e085f362fdd044b37d4cd82d364d6a
@@ -433,7 +433,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584841973777634940
+    m_lastTime: -8584841169476675808
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -463,6 +463,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: e119ced5ab6b7a4a8e25731a958027cd
       Path: SoundBanks\Ex_Silencio\OceanCity
+    - name: Strelitzia
+      guid: 6bece264c3154945a53ad9d0f37a2ca8
+      id: 757101314
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ex_Silencio
+        ObjectType: 12
+        guid: 99df0cf2de40bd46b9fb8c2995637adf
+      - ElementName: Strelitzia
+        ObjectType: 7
+        guid: 6bece264c3154945a53ad9d0f37a2ca8
+      Path: SoundBanks\Ex_Silencio\Strelitzia
   EventWwu:
   - PhysicalPath: Events\AMB.wwu
     PathAndIcons:
@@ -475,7 +489,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584856453039266275
+    m_lastTime: -8584840979595546585
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -943,6 +957,415 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: AMB_SL_Balise
+      guid: 6d31fd4525bd6b43a1425895d0f5bb92
+      id: 2510762832
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_Balise
+        ObjectType: 3
+        guid: 6d31fd4525bd6b43a1425895d0f5bb92
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_Balise
+      maxAttenuation: 200
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_CaveDrop
+      guid: d66f33981379d246b3371f514c6872d4
+      id: 1376076762
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_CaveDrop
+        ObjectType: 3
+        guid: d66f33981379d246b3371f514c6872d4
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveDrop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_CaveFireCamp
+      guid: 886ee8c2ec2fcd46b36596ee982b3bec
+      id: 3596741274
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_CaveFireCamp
+        ObjectType: 3
+        guid: 886ee8c2ec2fcd46b36596ee982b3bec
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveFireCamp
+      maxAttenuation: 100
+      maxDuration: 88
+      minDuration: 88
+    - name: AMB_SL_CaveMain
+      guid: 217d21e71a540e4a8f8251a116946f60
+      id: 1848239986
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_CaveMain
+        ObjectType: 3
+        guid: 217d21e71a540e4a8f8251a116946f60
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveMain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_CaveWater
+      guid: 1de8cfd867b39743891c19a7395a11b4
+      id: 2027462034
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_CaveWater
+        ObjectType: 3
+        guid: 1de8cfd867b39743891c19a7395a11b4
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveWater
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_Desert
+      guid: e0c7c7dda3dbbb4d9768ded47faec753
+      id: 3134725817
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_Desert
+        ObjectType: 3
+        guid: e0c7c7dda3dbbb4d9768ded47faec753
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_Desert
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_JunleBird
+      guid: 264814935270f842a82bb2533d6af84e
+      id: 2071076257
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_JunleBird
+        ObjectType: 3
+        guid: 264814935270f842a82bb2533d6af84e
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird
+      maxAttenuation: 0
+      maxDuration: 136.87923
+      minDuration: 136.87923
+    - name: AMB_SL_JunleFakeRain
+      guid: d844f6a81966f44c8255587daeb1b64d
+      id: 2246380605
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_JunleFakeRain
+        ObjectType: 3
+        guid: d844f6a81966f44c8255587daeb1b64d
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_JunleFrog
+      guid: 9050691e9f26d14eba4f157f13730aee
+      id: 585081890
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_JunleFrog
+        ObjectType: 3
+        guid: 9050691e9f26d14eba4f157f13730aee
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog
+      maxAttenuation: 25
+      maxDuration: 39
+      minDuration: 39
+    - name: AMB_SL_JunleMain
+      guid: efb7ee12952dac409d0db7ab744f2448
+      id: 1843064999
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_JunleMain
+        ObjectType: 3
+        guid: efb7ee12952dac409d0db7ab744f2448
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleMain
+      maxAttenuation: 0
+      maxDuration: 121.00267
+      minDuration: 121.00267
+    - name: AMB_SL_LabMecaniques
+      guid: 4479ad2bbe6d1a4ba51912f7b45d04a3
+      id: 3095653304
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_LabMecaniques
+        ObjectType: 3
+        guid: 4479ad2bbe6d1a4ba51912f7b45d04a3
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_SiloBird
+      guid: addc6f5d077a2d4a85eb8a66909879d7
+      id: 3406394736
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_SiloBird
+        ObjectType: 3
+        guid: addc6f5d077a2d4a85eb8a66909879d7
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloBird
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_SiloMain
+      guid: 7993bc83825f81419e0b43a3779240f5
+      id: 1370622790
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_SiloMain
+        ObjectType: 3
+        guid: 7993bc83825f81419e0b43a3779240f5
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloMain
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_SiloRiver
+      guid: 621768256638d74d912ad79b72fd0f2d
+      id: 916999477
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_SiloRiver
+        ObjectType: 3
+        guid: 621768256638d74d912ad79b72fd0f2d
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver
+      maxAttenuation: 100
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_SiloWaterfall
+      guid: ef0e11b506076242826a3fab88b09805
+      id: 3804608685
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_SiloWaterfall
+        ObjectType: 3
+        guid: ef0e11b506076242826a3fab88b09805
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloWaterfall
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_Tr_BunkerIn
+      guid: 563dd9ff45bc1f4e94e8a203d850169c
+      id: 775363125
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_BunkerIn
+        ObjectType: 3
+        guid: 563dd9ff45bc1f4e94e8a203d850169c
+      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerIn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_BunkerOut
+      guid: 4f47ca1449193e4eab6e7559ab04719d
+      id: 3939318492
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_BunkerOut
+        ObjectType: 3
+        guid: 4f47ca1449193e4eab6e7559ab04719d
+      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_DeMuteDesert
+      guid: 89f16e6b3e9e6344a76201955b7462bd
+      id: 245788182
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_DeMuteDesert
+        ObjectType: 3
+        guid: 89f16e6b3e9e6344a76201955b7462bd
+      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteDesert
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_MuteDesert
+      guid: 33d69ac2b131bf42a39d170348544856
+      id: 951601607
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_MuteDesert
+        ObjectType: 3
+        guid: 33d69ac2b131bf42a39d170348544856
+      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteDesert
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_Strelitzia
+      guid: 22547c169459f8469d3eb24a109739d7
+      id: 3000346181
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      Path: Events\AMB\AMB_Strelitzia
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Trigger
       guid: 60640b7280ccd749852a4fa6507a1675
       id: 3571255931
@@ -963,6 +1386,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Trigger
+      guid: 73b7740a05731743aa9f74b189258ae7
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      Path: Events\AMB\AMB_Strelitzia\Trigger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -974,7 +1417,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b74c2a65d53e854bb513b47eb47eae78
     GuidInternal: 
-    m_lastTime: -8584884098881067111
+    m_lastTime: -8584841169476775808
     List:
     - name: Enfer
       guid: 446f45525833d248b87c11d7fba23aa8
@@ -1038,7 +1481,7 @@ MonoBehaviour:
     ParentPath: Events\FOOTSTEPS
     guid: 8aa0b113ff87cd41827a9050ed54407c
     GuidInternal: 
-    m_lastTime: -8584856587729121221
+    m_lastTime: -8584841169476875808
     List:
     - name: FT_OceanCity
       guid: 8a3bada84552514696cf9d980a2323c3
@@ -1108,8 +1551,45 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584856540205118484
+    m_lastTime: -8584841028287767251
     List:
+    - name: MX_M_Main
+      guid: a52d1462c7460249abdf1f17e0ffcf7c
+      id: 1704951998
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Menu
+        ObjectType: 4
+        guid: 65e1c96e72f7bc4abfaf34967995b638
+      - ElementName: MX_M_Main
+        ObjectType: 3
+        guid: a52d1462c7460249abdf1f17e0ffcf7c
+      Path: Events\MX\MX_Menu\MX_M_Main
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_Menu
+      guid: 65e1c96e72f7bc4abfaf34967995b638
+      id: 2103702368
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Menu
+        ObjectType: 4
+        guid: 65e1c96e72f7bc4abfaf34967995b638
+      Path: Events\MX\MX_Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MX_OC_Awake
       guid: 862c6e688bf88949a69170649d89fc6a
       id: 2171996891
@@ -1127,6 +1607,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 862c6e688bf88949a69170649d89fc6a
       Path: Events\MX\MX_OceanCity\MX_OC_Awake
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MX_OC_L_Seagull
+      guid: 280e709ee6b3944f8c694f9ab5690d70
+      id: 4288443622
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_L_Seagull
+        ObjectType: 3
+        guid: 280e709ee6b3944f8c694f9ab5690d70
+      Path: Events\MX\MX_OceanCity\MX_OC_L_Seagull
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1299,6 +1799,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0297cbc3ed3fa94ca157353578e667ea
       Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainExit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_MemoryFoam
+      guid: eaa3c1d8482a214f8ae711758ef11149
+      id: 3477121400
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_MemoryFoam
+        ObjectType: 3
+        guid: eaa3c1d8482a214f8ae711758ef11149
+      Path: Events\MX\MX_OceanCity\MX_OC_ST_MemoryFoam
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1571,6 +2091,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MX_SL_Awake
+      guid: 89a1801351b7344da9b7cb3ef631ed12
+      id: 2174404996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_Awake
+        ObjectType: 3
+        guid: 89a1801351b7344da9b7cb3ef631ed12
+      Path: Events\MX\MX_Strelitzia\MX_SL_Awake
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_Strelitzia
+      guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      id: 1169946674
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      Path: Events\MX\MX_Strelitzia
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Trigger
       guid: 0a6d2b755e3b404396389f317dce77fc
       id: 3571255931
@@ -1602,7 +2159,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584856542210554020
+    m_lastTime: -8584841169476875808
     List:
     - name: Global
       guid: 020af29bdac3c641ba3522f13e5975e8
@@ -1778,6 +2335,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SFX_Strelitzia
+      guid: 5908197d3841c34ea9b286c094202447
+      id: 169309698
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Strelitzia
+        ObjectType: 4
+        guid: 5908197d3841c34ea9b286c094202447
+      Path: Events\SFX\SFX_Strelitzia
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\UI.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1789,7 +2363,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: fa2e1f5bc91c3e4b90a5575f46eb1991
     GuidInternal: 
-    m_lastTime: -8584856589793994917
+    m_lastTime: -8584841169476775808
     List:
     - name: UI_CL_CLick
       guid: fc6b9376ac854345a1b2543d9250e5ed
@@ -2017,7 +2591,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 2cac5718ebd285428379ba00779cf157
     GuidInternal: 
-    m_lastTime: -8584904938861068860
+    m_lastTime: -8584841169479375808
     List: []
   - PhysicalPath: Game Parameters\Game Parameters.wwu
     PathAndIcons:
@@ -2030,7 +2604,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584856437863007845
+    m_lastTime: -8584840998555859808
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -2097,6 +2671,71 @@ MonoBehaviour:
         ObjectType: 4
         guid: 1da2e570a6b65a468f458f76ba5d2e93
       Path: Game Parameters\Game Parameters\GP_OceanCity
+    - name: GP_SL_DesertWind
+      guid: 9f23e7c7e001964790e70708d12f50bb
+      id: 919542588
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Strelitzia
+        ObjectType: 4
+        guid: d3e0923578a9f9439da65a0032f0865c
+      - ElementName: GP_SL_DesertWind
+        ObjectType: 13
+        guid: 9f23e7c7e001964790e70708d12f50bb
+      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind
+    - name: GP_SL_DistantRiver
+      guid: 070488aec886f34aaf6ab0afd1d1b6f8
+      id: 1263410310
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Strelitzia
+        ObjectType: 4
+        guid: d3e0923578a9f9439da65a0032f0865c
+      - ElementName: GP_SL_DistantRiver
+        ObjectType: 13
+        guid: 070488aec886f34aaf6ab0afd1d1b6f8
+      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver
+    - name: GP_SL_FireCampDistance
+      guid: aa1b0e9f9f31ea4c9446b2328241db5a
+      id: 3954811855
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Strelitzia
+        ObjectType: 4
+        guid: d3e0923578a9f9439da65a0032f0865c
+      - ElementName: GP_SL_FireCampDistance
+        ObjectType: 13
+        guid: aa1b0e9f9f31ea4c9446b2328241db5a
+      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance
+    - name: GP_Strelitzia
+      guid: d3e0923578a9f9439da65a0032f0865c
+      id: 3361372928
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Strelitzia
+        ObjectType: 4
+        guid: d3e0923578a9f9439da65a0032f0865c
+      Path: Game Parameters\Game Parameters\GP_Strelitzia
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -2109,7 +2748,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 3d97068d9f4f69478c0dcf400d82e250
     GuidInternal: 
-    m_lastTime: -8584904938860412240
+    m_lastTime: -8584841169477775808
     List: []
   - PhysicalPath: States\States.wwu
     PathAndIcons:
@@ -2122,7 +2761,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584856452743718518
+    m_lastTime: -8584840976990343130
     List:
     - name: ST_MX_OC_Boat
       guid: 6dc84f2eff06614f90536d3e05cdf706
@@ -3627,6 +4266,180 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_SL_AMB_DesertWind
+      guid: 145e3ebbdc35a549bf75b6f82f994928
+      id: 1775344635
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB_DesertWind
+        ObjectType: 9
+        guid: 145e3ebbdc35a549bf75b6f82f994928
+      Path: States\States\ST_Strelitzia\ST_SL_AMB_DesertWind
+      values:
+      - name: In
+        guid: 04aa8608a5d25945b210048eac48ae66
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_DesertWind
+          ObjectType: 9
+          guid: 145e3ebbdc35a549bf75b6f82f994928
+        - ElementName: In
+          ObjectType: 8
+          guid: 04aa8608a5d25945b210048eac48ae66
+      - name: None
+        guid: fcf5aeb04492df4d81e8e3b873bd143a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_DesertWind
+          ObjectType: 9
+          guid: 145e3ebbdc35a549bf75b6f82f994928
+        - ElementName: None
+          ObjectType: 8
+          guid: fcf5aeb04492df4d81e8e3b873bd143a
+      - name: Out
+        guid: fa85324a0ad9c44ab6d29e6982725cc0
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_DesertWind
+          ObjectType: 9
+          guid: 145e3ebbdc35a549bf75b6f82f994928
+        - ElementName: Out
+          ObjectType: 8
+          guid: fa85324a0ad9c44ab6d29e6982725cc0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB_MuteDesert
+      guid: be8ddcc6ec132e4a8252f8b11a431ac7
+      id: 2466189218
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB_MuteDesert
+        ObjectType: 9
+        guid: be8ddcc6ec132e4a8252f8b11a431ac7
+      Path: States\States\ST_Strelitzia\ST_SL_AMB_MuteDesert
+      values:
+      - name: In
+        guid: ec640d713953644e97dd8f73bc4eb3f0
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_MuteDesert
+          ObjectType: 9
+          guid: be8ddcc6ec132e4a8252f8b11a431ac7
+        - ElementName: In
+          ObjectType: 8
+          guid: ec640d713953644e97dd8f73bc4eb3f0
+      - name: None
+        guid: bbe4c4f0b05ef8439ec7222d4c42b020
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_MuteDesert
+          ObjectType: 9
+          guid: be8ddcc6ec132e4a8252f8b11a431ac7
+        - ElementName: None
+          ObjectType: 8
+          guid: bbe4c4f0b05ef8439ec7222d4c42b020
+      - name: Out
+        guid: 859250dc91d5324580f89ce7a3fb9b43
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB_MuteDesert
+          ObjectType: 9
+          guid: be8ddcc6ec132e4a8252f8b11a431ac7
+        - ElementName: Out
+          ObjectType: 8
+          guid: 859250dc91d5324580f89ce7a3fb9b43
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_Strelitzia
+      guid: eaa2a829350d754e9212becd33eedce8
+      id: 3312104440
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      Path: States\States\ST_Strelitzia
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Trigger
       guid: 1fa9c2191c363848975b091bdce45dd3
       id: 3571255931
@@ -3663,7 +4476,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a80bb048c613e044aca6b1ce1d2b909b
     GuidInternal: 
-    m_lastTime: -8584884123027843066
+    m_lastTime: -8584841169596075808
     List: []
   - PhysicalPath: Switches\Switch.wwu
     PathAndIcons:
@@ -3676,7 +4489,7 @@ MonoBehaviour:
     ParentPath: Switches\Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584841965178778322
+    m_lastTime: -8584841169596075808
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -3900,9 +4713,9 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 1ec1b561a74fdc4eb1a0d2d1128b54a0
     GuidInternal: 
-    m_lastTime: -8584904938860912808
+    m_lastTime: -8584841169595875808
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 0100000002000000030000000b0000001c0000001d000000220000002500000026000000280000002c0000004100000042000000430000004c0000004d000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

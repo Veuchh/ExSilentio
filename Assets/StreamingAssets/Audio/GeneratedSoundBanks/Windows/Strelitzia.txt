@@ -1,0 +1,68 @@
+Event	ID	Name			Wwise Object Path	Notes
+	245788182	AMB_SL_Tr_DeMuteDesert			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteDesert	
+	585081890	AMB_SL_JunleFrog			\AMB\AMB_Strelitzia\AMB_SL_JunleFrog	
+	775363125	AMB_SL_Tr_BunkerIn			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerIn	
+	916999477	AMB_SL_SiloRiver			\AMB\AMB_Strelitzia\AMB_SL_SiloRiver	
+	951601607	AMB_SL_Tr_MuteDesert			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteDesert	
+	1370622790	AMB_SL_SiloMain			\AMB\AMB_Strelitzia\AMB_SL_SiloMain	
+	1376076762	AMB_SL_CaveDrop			\AMB\AMB_Strelitzia\AMB_SL_CaveDrop	
+	1843064999	AMB_SL_JunleMain			\AMB\AMB_Strelitzia\AMB_SL_JunleMain	
+	1848239986	AMB_SL_CaveMain			\AMB\AMB_Strelitzia\AMB_SL_CaveMain	
+	2027462034	AMB_SL_CaveWater			\AMB\AMB_Strelitzia\AMB_SL_CaveWater	
+	2071076257	AMB_SL_JunleBird			\AMB\AMB_Strelitzia\AMB_SL_JunleBird	
+	2174404996	MX_SL_Awake			\MX\MX_Strelitzia\MX_SL_Awake	
+	2246380605	AMB_SL_JunleFakeRain			\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain	
+	2510762832	AMB_SL_Balise			\AMB\AMB_Strelitzia\AMB_SL_Balise	
+	3095653304	AMB_SL_LabMecaniques			\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques	
+	3134725817	AMB_SL_Desert			\AMB\AMB_Strelitzia\AMB_SL_Desert	
+	3406394736	AMB_SL_SiloBird			\AMB\AMB_Strelitzia\AMB_SL_SiloBird	
+	3596741274	AMB_SL_CaveFireCamp			\AMB\AMB_Strelitzia\AMB_SL_CaveFireCamp	
+	3804608685	AMB_SL_SiloWaterfall			\AMB\AMB_Strelitzia\AMB_SL_SiloWaterfall	
+	3939318492	AMB_SL_Tr_BunkerOut			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerOut	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB_DesertWind	
+	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB_MuteDesert	
+
+State	ID	Name	State Group			Notes
+	645492555	Out	ST_SL_AMB_DesertWind			
+	748895195	None	ST_SL_AMB_DesertWind			
+	1752637612	In	ST_SL_AMB_DesertWind			
+	645492555	Out	ST_SL_AMB_MuteDesert			
+	748895195	None	ST_SL_AMB_MuteDesert			
+	1752637612	In	ST_SL_AMB_MuteDesert			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	919542588	GP_SL_DesertWind			\Game Parameters\GP_Strelitzia\GP_SL_DesertWind	
+	3954811855	GP_SL_FireCampDistance			\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance	
+
+Effect plug-ins	ID	Name	Type				Notes
+	781208086	Parametric EQ (Custom)	Wwise Parametric EQ			
+	999051101	Parametric EQ (Custom)	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	677083878	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_Silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	73752858	AMB_SL_JunleBird	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_JunleBird_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleBird		2137994
+	259377318	AMB_SL_SiloRiversmall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloRiversmall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiversmall		1867259
+	287394984	AMB_SL_CaveDrop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveDrop_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop		1081806
+	301683489	AMB_SL_SiloRiver	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloRiver_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiver		1115959
+	343290069	AMB_SL_CaveDrop fast	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveDrop fast_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop fast		1212650
+	363295246	AMB_SL_Balise	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_Balise_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise		304687
+	472466916	AMB_SL_CaveFireCampFar	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveFireCampFar_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampFar		1586595
+	517652420	AMB_SL_SiloWaterfallrumble	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloWaterfallrumble_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloWaterfall\AMB_SL_SiloWaterfallrumble		1036836
+	522162625	AMB_SL_Balise chelou	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_Balise chelou_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise chelou		515311
+	548828459	AMB_SL_CaveFireCampClose	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveFireCampClose_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampClose		1607348
+	650248975	AMB_SL_CaveMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveMain		1749847
+	653017450	AMB_SL_DesertWindShimmerring	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindShimmerring_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindShimmerring		2947597
+	714917065	AMB_SL_DesertWindrumble	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindrumble_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindrumble		2992296
+	751414899	AMB_SL_CaveWaterCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveWaterCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveWaterCalm		3716419
+	753117707	AMB_SL_DesertSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertSand		1315946
+	763726669	AMB_SL_DesertWindCalmSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindCalmSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalmSand		1044123
+	843470390	AMB_SL_DesertWindCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalm		1027237
+	850388099	AMB_SL_SiloWaterfall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloWaterfall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloWaterfall\AMB_SL_SiloWaterfall		936197
+	893978070	AMB_SL_JunleMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_JunleMain_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleMain		1639747
+	1056833438	AMB_SL_JunleFrog	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_JunleFrog_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleFrog		509741
+	1060224785	AMB_SL_SiloBird	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloBird_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloBird		1796798
+

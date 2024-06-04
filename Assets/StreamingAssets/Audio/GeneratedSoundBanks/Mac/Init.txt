@@ -2,10 +2,18 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	1218704685	SW_FT_OC			\Switch\SW_FT_OC	
 
 Switch	ID	Name	Switch Group			Notes
+	227860702	SW_FT_SL_Cave	SW_FT_OC			
+	267428953	SW_FT_SL_Grass	SW_FT_OC			
 	808606367	SW_FT_OC_Wood	SW_FT_OC			
+	1204272039	SW_FT_SL_Sand	SW_FT_OC			
 	2295428781	SW_FT_OC_Water	SW_FT_OC			
+	2458483978	SW_FT_SL_Wood	SW_FT_OC			
+	2763720287	SW_FT_SL_Glass	SW_FT_OC			
+	3102083180	SW_FT_SL_Concrete	SW_FT_OC			
 	3462940353	SW_FT_OC_Ground	SW_FT_OC			
+	3919538561	SW_FT_SL_River	SW_FT_OC			
 	4046423520	SW_FT_OC_Rail	SW_FT_OC			
+	4254353870	SW_FT_SL_Jungle	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
@@ -17,6 +25,8 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1231701662	ST_OC_TrainInsideStation			\States\ST_OceanCity\ST_OC_TrainInsideStation	
 	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
+	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB_DesertWind	
+	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB_MuteDesert	
 	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
@@ -53,6 +63,12 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Seagull			
 	748895195	None	ST_MX_OC_Seagull			
 	3384621607	Unreveal	ST_MX_OC_Seagull			
+	645492555	Out	ST_SL_AMB_DesertWind			
+	748895195	None	ST_SL_AMB_DesertWind			
+	1752637612	In	ST_SL_AMB_DesertWind			
+	645492555	Out	ST_SL_AMB_MuteDesert			
+	748895195	None	ST_SL_AMB_MuteDesert			
+	1752637612	In	ST_SL_AMB_MuteDesert			
 	634183254	Reveal	ST_MX_OC_Train			
 	748895195	None	ST_MX_OC_Train			
 	3384621607	Unreveal	ST_MX_OC_Train			
