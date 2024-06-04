@@ -78,5 +78,10 @@ namespace LW.Audio
         {
             AkSoundEngine.SetRTPCValue(rtpcName, rtpcValue, origin);
         }
+
+        public void StopAll()
+        {
+            AkSoundEngine.StopAll();
+        }
     }
 }

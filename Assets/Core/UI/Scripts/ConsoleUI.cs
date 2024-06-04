@@ -18,6 +18,7 @@ namespace LW.UI
         [SerializeField] GameObject commandPannel;
         [SerializeField] Button commandsCommand;
         [SerializeField] Button helpCommand;
+        [SerializeField] Button loadCommand;
         [SerializeField] Button progressCommand;
         [SerializeField] Button hintCommand;
         [SerializeField] Button respawnCommand;
@@ -52,6 +53,7 @@ namespace LW.UI
             helpCommand.onClick.AddListener(() => OnCommandClicked(CommandID.help));
             progressCommand.onClick.AddListener(() => OnCommandClicked(CommandID.progress));
             hintCommand.onClick.AddListener(() => OnCommandClicked(CommandID.hint));
+            loadCommand.onClick.AddListener(() => OnCommandClicked(CommandID.load));
             respawnCommand.onClick.AddListener(() => OnCommandClicked(CommandID.resetPosition));
             screenshotCommand.onClick.AddListener(() => OnCommandClicked(CommandID.screenshot));
             togglePannelButton.onClick.AddListener(() => TogglePannel());
@@ -67,6 +69,7 @@ namespace LW.UI
         {
             commandsCommand.onClick.RemoveAllListeners();
             helpCommand.onClick.RemoveAllListeners();
+            loadCommand.onClick.RemoveAllListeners();
             hintCommand.onClick.RemoveAllListeners();
             progressCommand.onClick.RemoveAllListeners();
             respawnCommand.onClick.RemoveAllListeners();
