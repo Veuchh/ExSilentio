@@ -9,6 +9,11 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{9886DC89-7026-DD8C-7246-DB29B5240EE3}">
+			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
+			<ShortName>Strelitzia</ShortName>
+			<Path>Strelitzia.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{B8FB311A-FC8B-A0B5-27C7-14A3983063F4}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -202,7 +207,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{A37C5BEF-77D0-0682-7D8A-156D27159B28}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{3FB84DA9-B922-1787-9539-2E2BC9003B55}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -1696,6 +1701,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1704951998" Name="MX_M_Main" ObjectPath="\Events\MX\MX_Menu\MX_M_Main" GUID="{62142DA5-46C7-4902-ABDF-1F17E0FFCF7C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="870376687" Name="SFX_G_ErrorMap" ObjectPath="\Events\SFX\Global\SFX_G_ErrorMap" GUID="{A8F665CA-656C-4CC3-9CF6-1D643477030D}" MaxAttenuation="25" DurationType="OneShot" DurationMin="60.261166" DurationMax="60.261166">
 					<MediaRefs>
 						<MediaRef Id="133403431"/>
@@ -2908,5 +2914,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{95365E8B-61CB-92EC-4126-FA455944835B}</FileHash>
+	<FileHash>{75887D83-848D-EBA5-7774-01AF2115C17E}</FileHash>
 </SoundBanksInfo>
