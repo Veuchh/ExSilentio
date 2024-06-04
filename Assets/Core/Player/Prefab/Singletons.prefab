@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5369070425929500776}
   - component: {fileID: 8045321140896981471}
   m_Layer: 0
-  m_Name: InputsHandler
+  m_Name: Singletons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,6 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65feeb044abdcb643a29738b4b767f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - OceanCity
-  - Strelitzia
+  database: {fileID: 11400000, guid: b39150d4f0b90304185a250dec28f8b3, type: 2}

@@ -1,3 +1,4 @@
+using LW.Audio;
 using NaughtyAttributes;
 using System;
 using System.Collections;
@@ -30,6 +31,7 @@ public class LevelLoader : MonoBehaviour
 
             if (sceneName == args.ToLower())
             {
+                WwiseInterface.Instance.StopAll();
                 SceneManager.LoadSceneAsync(i);
                 return;
             }
