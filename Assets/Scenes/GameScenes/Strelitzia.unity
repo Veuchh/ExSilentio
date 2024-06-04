@@ -1995,6 +1995,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d38bef1cb9805134d915a2488d9af52f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 812763215}
     - targetCorrespondingSourceObject: {fileID: -8140499575222096, guid: d38bef1cb9805134d915a2488d9af52f,
         type: 3}
       insertIndex: -1
@@ -4198,6 +4202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414483292}
+  - component: {fileID: 414483293}
   m_Layer: 0
   m_Name: LucioleBundle
   m_TagString: Untagged
@@ -4223,6 +4228,29 @@ Transform:
   - {fileID: 848121466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &414483293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414483291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 55
+  objectImportance: 2
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &419273875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,6 +5953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505721729}
+  - component: {fileID: 505721730}
   m_Layer: 0
   m_Name: OrdinateurBundle
   m_TagString: Untagged
@@ -5979,6 +6008,29 @@ Transform:
   - {fileID: 1530023793}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505721730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505721728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 46
+  objectImportance: 1
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &506181742
 GameObject:
   m_ObjectHideFlags: 0
@@ -8489,6 +8541,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1125382674}
   m_LocalEulerAnglesHint: {x: 0, y: 94.126, z: 0}
+--- !u!1 &812763213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d38bef1cb9805134d915a2488d9af52f,
+    type: 3}
+  m_PrefabInstance: {fileID: 181135287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &812763215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812763213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 30
+  objectImportance: 1
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &823303069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e561d2b59cd377d468779da4c4fc80c8,
@@ -11466,6 +11547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128733790}
+  - component: {fileID: 1128733791}
   m_Layer: 0
   m_Name: BatimentBundle
   m_TagString: Untagged
@@ -11498,6 +11580,29 @@ Transform:
   - {fileID: 242729747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128733791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128733789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 31
+  objectImportance: 0
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &1134228517
 GameObject:
   m_ObjectHideFlags: 0
@@ -13068,6 +13173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330371622}
+  - component: {fileID: 1330371623}
   m_Layer: 0
   m_Name: VegetationBundle
   m_TagString: Untagged
@@ -13142,6 +13248,29 @@ Transform:
   - {fileID: 4146283767778201569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330371623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330371621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 34
+  objectImportance: 0
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &1331372487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e561d2b59cd377d468779da4c4fc80c8,
@@ -13191,6 +13320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1353731768}
+  - component: {fileID: 1353731769}
   m_Layer: 0
   m_Name: RiviereBundle
   m_TagString: Untagged
@@ -13216,6 +13346,29 @@ Transform:
   - {fileID: 1372279638}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353731769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353731767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 41
+  objectImportance: 1
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1001 &1360165711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15157,6 +15310,7 @@ GameObject:
   - component: {fileID: 1550734252}
   - component: {fileID: 1550734251}
   - component: {fileID: 1550734250}
+  - component: {fileID: 1550734253}
   m_Layer: 0
   m_Name: FX_FireCamp
   m_TagString: Untagged
@@ -15257,6 +15411,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550734253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550734249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 50
+  objectImportance: 1
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1001 &1551589546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15462,6 +15639,10 @@ PrefabInstance:
     - {fileID: 4570117094763654233, guid: 075ae50a99c10ed46b26134f3bbcb1b9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 075ae50a99c10ed46b26134f3bbcb1b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1905035852}
     - targetCorrespondingSourceObject: {fileID: 1748166722981094817, guid: 075ae50a99c10ed46b26134f3bbcb1b9,
         type: 3}
       insertIndex: -1
@@ -17860,6 +18041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1809328416}
+  - component: {fileID: 1809328417}
   m_Layer: 0
   m_Name: DunesBundle
   m_TagString: Untagged
@@ -17907,6 +18089,29 @@ Transform:
   - {fileID: 1729448247}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809328417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809328415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 29
+  objectImportance: 0
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1001 &1814197152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18913,6 +19118,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1881371389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1905035850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 075ae50a99c10ed46b26134f3bbcb1b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553866926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1905035852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905035850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 45
+  objectImportance: 1
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!1 &1906700461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e561d2b59cd377d468779da4c4fc80c8,
@@ -21118,6 +21352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2259149340967574240}
+  - component: {fileID: 2259149340967574241}
   m_Layer: 0
   m_Name: RuinesBundle
   m_TagString: Untagged
@@ -21157,6 +21392,29 @@ Transform:
   - {fileID: 262008678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2259149340967574241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446162319550595162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInBundle: []
+  awaitedID: 32
+  objectImportance: 0
+  playWwiseEventOnReveal: 0
+  isTextureVertical: 0
+  eventToPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
+  hintsBase: []
 --- !u!4 &2347401546980371070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5043791524746625253, guid: d0f8c2bc7da11c94a9d83aac50857e1c,
