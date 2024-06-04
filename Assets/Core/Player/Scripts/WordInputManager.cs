@@ -18,6 +18,9 @@ namespace LW.Player
     public class WordInputManager : MonoBehaviour
     {
         const string LEVEL_COMMAND_FEEDBACK_ID = "levelCommandFeedbackID";
+        const string LEVELFAILED_COMMAND_FEEDBACK_ID = "levelFailedCommandFeedbackID";
+        const string LEVELINTERRUPTED_COMMAND_FEEDBACK_ID = "levelInterruptedCommandFeedbackID";
+        const string LEVELSUCCESS_COMMAND_FEEDBACK_ID = "levelSuccessCommandFeedbackID";
         const string RESET_POSITION_COMMAND_FEEDBACK_ID = "resetPositionCommandFeedbackID";
         const string COMMANDS_COMMAND_FEEDBACK_ID = "commandsCommandFeedbackID";
         const string HELP_COMMAND_FEEDBACK_ID = "helpCommandFeedbackID";
@@ -210,17 +213,35 @@ namespace LW.Player
             else
             {
                 ICollection<StringTableEntry> entries = translatedTable.Values;
+                string sceneName = string.Empty;
                 string levelName = string.Empty;
                 foreach (var item in entries)
                 {
                     if (item.LocalizedValue.ToLower() == args.Replace(" ", "").ToLower())
                     {
-                        levelName = item.Key;
+                        sceneName = item.Key;
+                        levelName = item.Value;
                         break;
                     }
                 }
 
-                LevelLoader.Instance.ChangeLevel(levelName);
+                switch (LevelLoader.Instance.ChangeLevel(sceneName, levelName))
+                {
+                    case FunctionResult.Success:
+                        //loading scene
+                        consoleOutput = translatedTable.GetEntry(LEVELSUCCESS_COMMAND_FEEDBACK_ID).LocalizedValue + levelName;
+                        //close console
+                        PlayerInputsHandler.Instance.ToggleWordMode();
+                        break;
+                    case FunctionResult.Failed:
+                        //level doesn't exist
+                        consoleOutput = args + translatedTable.GetEntry(LEVELFAILED_COMMAND_FEEDBACK_ID).LocalizedValue;
+                        break;
+                    case FunctionResult.Interrupted:
+                        //already here
+                        consoleOutput = translatedTable.GetEntry(LEVELINTERRUPTED_COMMAND_FEEDBACK_ID).LocalizedValue;
+                        break;
+                }
             }
 
             ConsoleUI.Instance.AddToHistory(consoleOutput);

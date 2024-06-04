@@ -1,4 +1,5 @@
 using LW.Audio;
+using LW.Data;
 using NaughtyAttributes;
 using System;
 using System.Collections;
@@ -20,8 +21,11 @@ public class LevelLoader : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void ChangeLevel(string args)
+    public FunctionResult ChangeLevel(string args, string baseInput)
     {
+        if (SceneManager.GetActiveScene().name.ToLower() == args.ToLower())
+            return FunctionResult.Interrupted;
+
         // Get build scenes
         var sceneNumber = SceneManager.sceneCountInBuildSettings;
 
@@ -32,11 +36,28 @@ public class LevelLoader : MonoBehaviour
             if (sceneName == args.ToLower())
             {
                 WwiseInterface.Instance.StopAll();
-                SceneManager.LoadSceneAsync(i);
-                return;
+                StartCoroutine(LoadScene(i, baseInput));
+                return FunctionResult.Success;
             }
         }
 
         Debug.Log("No scene with that name exists");
+        return FunctionResult.Failed;
+    }
+
+    IEnumerator LoadScene(int sceneIndex, string translatedSceneName)
+    {
+        var asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
+        LoadingScreen.Instance.ToggleLoadingScreen(true, translatedSceneName);
+
+        while (asyncOperation.progress < 1)
+        {
+            yield return null;
+            LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
+        }
+
+        yield return null;
+
+        LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);
     }
 }
