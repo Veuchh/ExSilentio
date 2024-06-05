@@ -2,6 +2,7 @@ using LW.Audio;
 using LW.Data;
 using NaughtyAttributes;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -31,9 +32,10 @@ namespace LW.Level
 
         public List<string> HintsBase
         {
-            get {
+            get
+            {
                 if (hintsBase == null) hintsBase = new List<string>();
-                return hintsBase; 
+                return hintsBase;
             }
         }
         public Dictionary<string, bool> Hints => hints;
@@ -46,6 +48,13 @@ namespace LW.Level
 
         private void Start()
         {
+            StartCoroutine(StartRoutine());
+        }
+
+        IEnumerator StartRoutine()
+        {
+            yield return null;
+
             RevealableObjectHandler.Instance.RegisterBundle(this);
 
             foreach (string hintID in HintsBase)
@@ -56,7 +65,7 @@ namespace LW.Level
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
-            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical : isTextureVertical);
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical: isTextureVertical);
             textureMaps.Add(
                 stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);
@@ -86,8 +95,8 @@ namespace LW.Level
 
             if (saveToPlayerPrefs)
                 SaveLoad.SaveWordToPlayerPrefs(
-                    GetBundleKey, 
-                    stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue);
+                    GetBundleKey,
+                    usedID.ToString());
         }
 
         public void SetupElements()
