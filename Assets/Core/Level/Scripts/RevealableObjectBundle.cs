@@ -64,8 +64,13 @@ namespace LW.Level
         public void RevealBundle(WordID usedID, LocalizedStringTable stringTable, bool saveToPlayerPrefs = true)
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
+
             //Get texture from input
-            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical: isTextureVertical);
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(
+                stringTable.GetTable().GetEntry(
+                    usedID.ToString()).LocalizedValue, 
+                    isVertical: isTextureVertical);
+
             textureMaps.Add(
                 stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);

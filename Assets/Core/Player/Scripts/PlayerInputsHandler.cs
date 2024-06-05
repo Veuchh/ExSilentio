@@ -20,8 +20,15 @@ namespace LW.Player
             wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
+        }
 
-            LockMouse(defaultToLockedCursorMode);
+        private void Update()
+        {
+            if ((StaticData.OpenWindowsAmount > 0 && Cursor.lockState == CursorLockMode.Locked)
+                || (StaticData.OpenWindowsAmount <= 0 && Cursor.lockState == CursorLockMode.None))
+            {
+                LockMouse(StaticData.OpenWindowsAmount <= 0);
+            }
         }
 
         public void LockMouse(bool locked)
@@ -83,8 +90,6 @@ namespace LW.Player
         public void ToggleWordMode()
         {
             isWordModeEnabled = !isWordModeEnabled;
-
-            LockMouse(!isWordModeEnabled);
 
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
