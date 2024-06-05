@@ -1,7 +1,7 @@
 using LW.Audio;
 using LW.Data;
+using LW.Level;
 using NaughtyAttributes;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -56,7 +56,7 @@ public class LevelLoader : MonoBehaviour
             LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
         }
 
-        yield return null;
+        yield return new WaitForSeconds(.2f);
 
         LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);
     }

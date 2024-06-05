@@ -50,9 +50,14 @@ namespace LW.Audio
                 {
                     origin = playerCamera;
                 }
+                else if (Camera.main != null)
+                {
+                    Debug.LogWarning("Using main camera as player camera since none was set");
+                    playerCamera = Camera.main.gameObject;
+                }
                 else
                 {
-                    Debug.LogError("No camera was set");
+                    Debug.LogError("No camera was in the scene");
                     return 0;
                 }
             }

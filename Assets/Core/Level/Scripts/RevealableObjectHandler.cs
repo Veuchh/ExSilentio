@@ -43,6 +43,15 @@ namespace LW.Level
             {
                 bundles.Add(newBundle);
                 newBundle.Init(database.GetEntry(newBundle.ID));
+
+                //reveal the bundle if it is saved
+                string savedWord = SaveLoad.GetWordFromPlayerPrefs(newBundle.GetBundleKey);
+
+                if (!string.IsNullOrEmpty(savedWord))
+                {
+                    WordID id = (WordID)Enum.Parse(typeof(WordID), savedWord);
+                    newBundle.RevealBundle(id, stringTable, false);
+                }
             }
             else
             {
@@ -172,6 +181,11 @@ namespace LW.Level
             foreach (RevealableObjectBundle bundle in bundles)
                 if (!bundle.IsRevealed && bundle.ObjectImportance == importance)
                     bundle.RevealBundle(bundle.ID, stringTable);
+        }
+
+        internal void RevealSavedBundles()
+        {
+            throw new NotImplementedException();
         }
     }
 }
