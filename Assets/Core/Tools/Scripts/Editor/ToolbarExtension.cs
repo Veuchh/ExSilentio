@@ -80,5 +80,10 @@ public class ToolbarExtension
             Selection.activeGameObject = handler;
 
         }
+
+        if (GUILayout.Button(new GUIContent("Clear saved words")))
+        {
+            SaveLoad.ClearSavedWords();
+        }
     }
 }

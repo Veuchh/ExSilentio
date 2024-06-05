@@ -11,4 +11,15 @@ public static class SaveLoad
     {
         return PlayerPrefs.GetString(bundleKey);
     }
+
+    public static void ClearSavedWords()
+    {
+        //Add settings to a buffer
+        Debug.LogWarning("Clear all words is not fully implemented and will also delete all your settings");
+
+        //Clear all playerPrefs
+        PlayerPrefs.DeleteAll();
+
+        //Add buffer back to playerPrefs
+    }
 }
