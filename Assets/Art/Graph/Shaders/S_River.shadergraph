@@ -527,6 +527,9 @@
         },
         {
             "m_Id": "2a334904d8fc4711adb4553746992e2f"
+        },
+        {
+            "m_Id": "6d2031f5c14f46f6b12d759a706e19e6"
         }
     ],
     "m_GroupDatas": [
@@ -2776,6 +2779,9 @@
             },
             {
                 "m_Id": "3ed2554109e642daabb31387ef7f05fe"
+            },
+            {
+                "m_Id": "6d2031f5c14f46f6b12d759a706e19e6"
             }
         ]
     },
@@ -9572,6 +9578,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "6d2031f5c14f46f6b12d759a706e19e6",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.AlphaClipThreshold",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "763cf905e5764f44804aadf5f99dd3d8"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.AlphaClipThreshold"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "6dbdd67bf4434e4bb87bde2abc5734da",
     "m_Id": 0,
@@ -10207,6 +10247,21 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "763cf905e5764f44804aadf5f99dd3d8",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha Clip Threshold",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "AlphaClipThreshold",
+    "m_StageCapability": 2,
+    "m_Value": 0.5,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
 }
 
 {
@@ -16168,7 +16223,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "21b17ddeef9f47678c86c50f9351bebd"
     },
-    "m_AllowMaterialOverride": false,
+    "m_AllowMaterialOverride": true,
     "m_SurfaceType": 1,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
