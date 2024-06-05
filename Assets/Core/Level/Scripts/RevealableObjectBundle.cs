@@ -2,10 +2,12 @@ using LW.Audio;
 using LW.Data;
 using NaughtyAttributes;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.VFX;
 
@@ -30,9 +32,10 @@ namespace LW.Level
 
         public List<string> HintsBase
         {
-            get {
+            get
+            {
                 if (hintsBase == null) hintsBase = new List<string>();
-                return hintsBase; 
+                return hintsBase;
             }
         }
         public Dictionary<string, bool> Hints => hints;
@@ -41,19 +44,28 @@ namespace LW.Level
         public bool IsRevealed => isRevealed;
         public WordDatabaseEntry Entry => entry;
 
+        public string GetBundleKey => SceneManager.GetActiveScene().name + "_" + gameObject.name;
+
         private void Start()
         {
+            StartCoroutine(StartRoutine());
+        }
+
+        IEnumerator StartRoutine()
+        {
+            yield return null;
+
             RevealableObjectHandler.Instance.RegisterBundle(this);
 
             foreach (string hintID in HintsBase)
                 hints.Add(hintID, false);
         }
 
-        public void RevealBundle(WordID usedID, LocalizedStringTable stringTable)
+        public void RevealBundle(WordID usedID, LocalizedStringTable stringTable, bool saveToPlayerPrefs = true)
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
             //Get texture from input
-            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical : isTextureVertical);
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical: isTextureVertical);
             textureMaps.Add(
                 stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);
@@ -80,6 +92,11 @@ namespace LW.Level
                 WwiseInterface.Instance.PlayEvent(eventToPlay);
 
             isRevealed = true;
+
+            if (saveToPlayerPrefs)
+                SaveLoad.SaveWordToPlayerPrefs(
+                    GetBundleKey,
+                    usedID.ToString());
         }
 
         public void SetupElements()
