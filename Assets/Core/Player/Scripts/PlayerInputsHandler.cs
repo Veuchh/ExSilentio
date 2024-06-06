@@ -2,6 +2,7 @@ using LW.Data;
 using LW.Logger;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace LW.Player
 {
@@ -108,6 +109,18 @@ namespace LW.Player
 
             if (playerMovement != null)
                 PlayerData.IsWordModeEnabled = isWordModeEnabled;
+        }
+
+        public void OnEscape(InputValue value)
+        {
+            if (isWordModeEnabled)
+            {
+                ToggleWordMode();
+            }
+            else if (MainMenu.Instance.IsPauseMenu)
+            {
+                MainMenu.Instance.ToggleMenu();
+            }
         }
 
         public void OnOutputLog(InputValue value)

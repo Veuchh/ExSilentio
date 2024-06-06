@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
 
     public static MainMenu Instance;
 
+    public bool IsPauseMenu => isPauseMenu;
+
     private void Awake()
     {
         Instance = this;
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
         optionsButton.onClick.AddListener(OnOptionsButton);
         quitButton.onClick.AddListener(OnQuitButton);
 
-        ToggleMenu(!isPauseMenu);
+        ToggleMenu(!IsPauseMenu);
     }
 
     private void OnDestroy()
@@ -32,6 +34,11 @@ public class MainMenu : MonoBehaviour
         playButton.onClick.RemoveAllListeners();
         optionsButton.onClick.RemoveAllListeners();
         quitButton.onClick.RemoveAllListeners();
+    }
+
+    public void ToggleMenu()
+    {
+        ToggleMenu(!canvasGroup.interactable);
     }
 
     public void ToggleMenu(bool isToggled)
@@ -46,7 +53,7 @@ public class MainMenu : MonoBehaviour
     {
         ToggleMenu(false);
 
-        if (isPauseMenu)
+        if (IsPauseMenu)
         {
             onPauseMenuPressPlay?.Invoke();
         }
