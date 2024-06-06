@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] Canvas canvas;
     [SerializeField] Button playButton;
     [SerializeField] Button optionsButton;
     [SerializeField] Button quitButton;
@@ -43,6 +44,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToggleMenu(bool isToggled)
     {
+        canvas.sortingOrder = isToggled ? 1 : -1;
         canvasGroup.alpha = isToggled ? 1 : 0;
         canvasGroup.interactable = isToggled;
         canvasGroup.blocksRaycasts = isToggled;

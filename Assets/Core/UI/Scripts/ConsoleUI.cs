@@ -10,12 +10,14 @@ namespace LW.UI
 {
     public class ConsoleUI : MonoBehaviour
     {
+        [SerializeField] Canvas canvas;
         [SerializeField] CanvasGroup canvasGroup;
         [SerializeField] ScrollRect scrollRect;
         [SerializeField] VerticalLayoutGroup historyParent;
         [SerializeField] TextMeshProUGUI input;
         [SerializeField] ConsoleEntry consoleEntryPrefab;
         [SerializeField] GameObject commandPannel;
+        [SerializeField] Button closeButton;
         [SerializeField] Button commandsCommand;
         [SerializeField] Button helpCommand;
         [SerializeField] Button loadCommand;
@@ -24,6 +26,7 @@ namespace LW.UI
         [SerializeField] Button respawnCommand;
         [SerializeField] Button screenshotCommand;
         [SerializeField] Button togglePannelButton;
+        [SerializeField] Vector2 toggleButtonPositions = new Vector2(-535, -838);
 
         [SerializeField] float cursorFlashingSpeed = 1;
         [SerializeField] bool separateWithDashes = false;
@@ -37,6 +40,7 @@ namespace LW.UI
         [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClClick;
 
+        public static event Action onCloseClicked;
         public static event Action<CommandID, string> onCommandClicked;
 
         bool isEntryEven = true;
@@ -49,6 +53,7 @@ namespace LW.UI
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            closeButton.onClick.AddListener(() => onCloseClicked?.Invoke());
             commandsCommand.onClick.AddListener(() => OnCommandClicked(CommandID.commands));
             helpCommand.onClick.AddListener(() => OnCommandClicked(CommandID.help));
             progressCommand.onClick.AddListener(() => OnCommandClicked(CommandID.progress));
@@ -67,6 +72,7 @@ namespace LW.UI
 
         private void OnDestroy()
         {
+            closeButton.onClick.RemoveAllListeners();
             commandsCommand.onClick.RemoveAllListeners();
             helpCommand.onClick.RemoveAllListeners();
             loadCommand.onClick.RemoveAllListeners();
@@ -79,6 +85,7 @@ namespace LW.UI
 
         public void ToggleConsole(bool toggle)
         {
+            canvas.sortingOrder = toggle ? 1 : -1;
             canvasGroup.alpha = toggle ? 1 : 0; 
             UpdateInput("");
         }
@@ -126,6 +133,12 @@ namespace LW.UI
             WwiseInterface.Instance.PlayEvent(uiClClick);
 
             togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 0 : 180);
+
+            Vector3 buttonPosition = togglePannelButton.transform.localPosition;
+
+            buttonPosition.x = commandPannel.activeSelf ? toggleButtonPositions.y : toggleButtonPositions.x;
+
+            togglePannelButton.transform.localPosition = buttonPosition;
         }
     }
 }

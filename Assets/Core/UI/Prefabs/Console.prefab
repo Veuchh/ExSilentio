@@ -1933,7 +1933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435.4, y: 274}
+  m_AnchoredPosition: {x: 440.3, y: 276.7}
   m_SizeDelta: {x: 45.2871, y: 45.2871}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4315592899345256681
@@ -2148,6 +2148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecbbcf77ec56124a89104c74409c069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 6311464468608861131}
   canvasGroup: {fileID: 4628120008559500515}
   scrollRect: {fileID: 2556920762836979264}
   historyParent: {fileID: 5892995742041660613}
@@ -2155,6 +2156,7 @@ MonoBehaviour:
   consoleEntryPrefab: {fileID: 5019088990588199138, guid: d687db256cfc3e44db2872c39d391f20,
     type: 3}
   commandPannel: {fileID: 8000779226961681178}
+  closeButton: {fileID: 7359637048353472914}
   commandsCommand: {fileID: 2025375444242375706}
   helpCommand: {fileID: 8267164272322741058}
   loadCommand: {fileID: 3321829612408173871}
@@ -2163,6 +2165,7 @@ MonoBehaviour:
   respawnCommand: {fileID: 8164826574632575969}
   screenshotCommand: {fileID: 8410881148977592538}
   togglePannelButton: {fileID: 133961638583134871}
+  toggleButtonPositions: {x: -535, y: -838}
   cursorFlashingSpeed: 7
   separateWithDashes: 0
   changeBackground: 1
@@ -2320,7 +2323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -838.9, y: 275}
+  m_AnchoredPosition: {x: -838, y: 275}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5307394701983470296

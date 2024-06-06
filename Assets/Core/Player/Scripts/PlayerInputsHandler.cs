@@ -1,5 +1,6 @@
 using LW.Data;
 using LW.Logger;
+using LW.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -18,6 +19,7 @@ namespace LW.Player
 
         private void Awake()
         {
+            ConsoleUI.onCloseClicked += ToggleWordMode;
             wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
