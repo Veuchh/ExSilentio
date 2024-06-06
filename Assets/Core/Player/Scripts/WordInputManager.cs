@@ -80,6 +80,8 @@ namespace LW.Player
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
             WwiseInterface.Instance.PlayEvent((isToggled ? uiClOpen : uiClClose));
+
+            StaticData.OpenWindowsAmount += isToggled ? 1 : -1;
         }
 
         public void ClearWord()
