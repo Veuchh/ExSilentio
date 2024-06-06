@@ -14,8 +14,6 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
     [SerializeField] Sprite defaultSprite;
     [SerializeField] Sprite selectedSprite;
 
-    Tween currentTween;
-
     bool isHighlighted = false;
 
     private void Awake()
@@ -66,12 +64,6 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
             return;
 
         isHighlighted = hightLight;
-
-        if (currentTween != null)
-        {
-            currentTween.Kill();
-            currentTween = null;
-        }
 
         backGroundText.text = backGroundText.text.Replace(">  ", (hightLight ? ">" : ">    "));
 
