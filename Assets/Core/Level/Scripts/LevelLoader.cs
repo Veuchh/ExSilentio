@@ -21,7 +21,7 @@ namespace LW.Level
             Instance = this;
             DontDestroyOnLoad(this);
             Debug.LogWarning("TODO : make it load mycelium instead of ocean city");
-            MainMenu.onMainMenuPressPlay += () => ChangeLevel("OceanCity", "OceanCity");
+            MainMenu.onMainMenuPressPlay += () => ChangeLevel("Mycelium", "Mycelium");
         }
 
         public FunctionResult ChangeLevel(string args, string baseInput)
