@@ -60,6 +60,11 @@ namespace LW.Player
             ConsoleUI.onCommandClicked += OnUseCommand;
         }
 
+        private void Start()
+        {
+            OnHelpCommand();
+        }
+
         private void OnDestroy()
         {
             ConsoleUI.onCommandClicked -= OnUseCommand;
@@ -267,7 +272,7 @@ namespace LW.Player
 
         IEnumerator TakeScreenShotRoutine()
         {
-            ConsoleUI.Instance.ToggleConsole(false);
+            ConsoleUI.Instance.ToggleConsole(false, true);
             yield return new WaitForEndOfFrame();
             string path = Application.dataPath;
 

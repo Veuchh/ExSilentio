@@ -10,8 +10,9 @@ namespace LW.UI
 {
     public class ConsoleUI : MonoBehaviour
     {
+        [Header("Console")]
         [SerializeField] Canvas canvas;
-        [SerializeField] CanvasGroup canvasGroup;
+        [SerializeField] CanvasGroup consoleCanvasGroup;
         [SerializeField] ScrollRect scrollRect;
         [SerializeField] VerticalLayoutGroup historyParent;
         [SerializeField] TextMeshProUGUI input;
@@ -28,6 +29,8 @@ namespace LW.UI
         [SerializeField] Button togglePannelButton;
         [SerializeField] Vector2 toggleButtonPositions = new Vector2(-535, -838);
 
+
+
         [SerializeField] float cursorFlashingSpeed = 1;
         [SerializeField] bool separateWithDashes = false;
         [SerializeField] bool changeBackground = false;
@@ -37,6 +40,12 @@ namespace LW.UI
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor1;
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor2;
 
+        [Header("Notifications")]
+        [SerializeField] CanvasGroup notificationCanvasGroup;
+        [SerializeField] CanvasGroup notificationGlowCanvasGroup;
+        [SerializeField] Image notificationIcon;
+        [SerializeField] float notificationGlowSpeed;
+
         [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClClick;
 
@@ -45,10 +54,12 @@ namespace LW.UI
 
         bool isEntryEven = true;
         string currentInput = string.Empty;
-
         float elapsedTime = 0;
+        bool isConsoleShown = false;
+        bool hasNotification = false;
 
         public static ConsoleUI Instance;
+
         private void Awake()
         {
             Instance = this;
@@ -68,6 +79,11 @@ namespace LW.UI
         {
             elapsedTime += Time.deltaTime;
             input.text = currentInput + (Mathf.Sin(elapsedTime * cursorFlashingSpeed) < 0 ? "" : "|");
+
+            if (hasNotification)
+            {
+                notificationGlowCanvasGroup.alpha = Mathf.Abs(Mathf.Sin(Time.time * notificationGlowSpeed));
+            }
         }
 
         private void OnDestroy()
@@ -83,11 +99,27 @@ namespace LW.UI
             togglePannelButton.onClick.RemoveAllListeners();
         }
 
-        public void ToggleConsole(bool toggle)
+        public void ToggleConsole(bool toggle, bool applyToAll = false)
         {
             canvas.sortingOrder = toggle ? 1 : -1;
-            canvasGroup.alpha = toggle ? 1 : 0; 
+            consoleCanvasGroup.alpha = toggle ? 1 : 0;
+
+            if (applyToAll)
+            {
+                notificationCanvasGroup.alpha = toggle ? 1 : 0;
+            }
+            else
+            {
+                notificationCanvasGroup.alpha = toggle ? 0 : 1;
+            }
+
+            notificationGlowCanvasGroup.alpha = 0;
             UpdateInput("");
+            isConsoleShown = toggle;
+            notificationIcon.gameObject.SetActive(false);
+
+            if (toggle)
+                hasNotification = false;
         }
 
         public void AddToHistory(string newHistory, bool isClickablePath = false)
@@ -109,9 +141,15 @@ namespace LW.UI
             Canvas.ForceUpdateCanvases();
 
             historyParent.CalculateLayoutInputVertical();
-            historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical(); 
-            
+            historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
             scrollRect.verticalNormalizedPosition = 0;
+
+            if (!isConsoleShown)
+            {
+                hasNotification = true;
+                notificationIcon.gameObject.SetActive(true);
+            }
         }
 
         public void UpdateInput(string newInput)
