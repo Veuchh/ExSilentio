@@ -20,11 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_BuildingsSplatsAndName
+  m_Name: M_DoorFullSplats
   m_Shader: {fileID: -6465566751694194690, guid: 3d86710bf0d69fb49b31c2ab8a14b562,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: a45d30c240e00e34bbb86bf6166aef06, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_Parent: {fileID: 2100000, guid: 6af3c657d1649ce489ad803fcaa4ab67, type: 2}
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -37,16 +37,26 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dissolve_Test: 0
-    - _Distance: 35
-    - _Lighting_ToonRampOffsetPoint: 0
-    - _OnlySplatting: 0
-    - _SplattingAndName: 1
-    - _Splatting_VertexColorMask: 0.27
+    - _CastShadows: 1
+    - _Dissolve_MaskStrength: 1
+    - _Lighting_ToonRampOffset: 0.13
+    - _Lighting_ToonRampSmoothness: 0.06
+    - _OnlySplatting: 1
+    - _ReceiveShadows: 1
+    - _Splatting: 1
+    - _SplattingAndName: 0
+    - _Splatting_NoiseByPos: 0
+    - _Splatting_Rotated: 0
+    - _Splatting_VertexColorMask: 0.35
     m_Colors:
     - _Lighting_ToonRampTinting: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
-    - _Main_Tiling: {r: 1.84, g: 0.86, b: 0, a: 0}
+    - _Main_Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Splatting_Tiling: {r: -20, g: -88.97, b: 0, a: 0}
   m_BuildTextureStacks: []
