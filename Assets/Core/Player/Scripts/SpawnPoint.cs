@@ -13,6 +13,7 @@ public class SpawnPoint : MonoBehaviour
     }
 
     [SerializeField] GameObject playerPrefab;
+    [SerializeField] List<GameObject> instantiateAsPlayerChild;
     [SerializeField] List<MeshRenderer> waterPlanes;
     [SerializeField] ComponentsToAddOnSpawn componentsToAddToPlayer;
 
@@ -32,6 +33,11 @@ public class SpawnPoint : MonoBehaviour
                         player.AddComponent<WwiseDistanceToWater>().Init(0, 35);
                         break;
                 }
+        }
+
+        foreach (GameObject prefab in instantiateAsPlayerChild)
+        {
+            Instantiate(prefab, player.transform.position, player.transform.rotation, player.transform);
         }
 
         Destroy(gameObject);
