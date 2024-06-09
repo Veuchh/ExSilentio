@@ -10,12 +10,15 @@ namespace LW.UI
 {
     public class ConsoleUI : MonoBehaviour
     {
-        [SerializeField] CanvasGroup canvasGroup;
+        [Header("Console")]
+        [SerializeField] Canvas canvas;
+        [SerializeField] CanvasGroup consoleCanvasGroup;
         [SerializeField] ScrollRect scrollRect;
         [SerializeField] VerticalLayoutGroup historyParent;
         [SerializeField] TextMeshProUGUI input;
         [SerializeField] ConsoleEntry consoleEntryPrefab;
         [SerializeField] GameObject commandPannel;
+        [SerializeField] Button closeButton;
         [SerializeField] Button commandsCommand;
         [SerializeField] Button helpCommand;
         [SerializeField] Button loadCommand;
@@ -24,6 +27,9 @@ namespace LW.UI
         [SerializeField] Button respawnCommand;
         [SerializeField] Button screenshotCommand;
         [SerializeField] Button togglePannelButton;
+        [SerializeField] Vector2 toggleButtonPositions = new Vector2(-535, -838);
+
+
 
         [SerializeField] float cursorFlashingSpeed = 1;
         [SerializeField] bool separateWithDashes = false;
@@ -34,21 +40,31 @@ namespace LW.UI
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor1;
         [SerializeField, ShowIf(nameof(changeTextColor))] Color textColor2;
 
+        [Header("Notifications")]
+        [SerializeField] CanvasGroup notificationCanvasGroup;
+        [SerializeField] CanvasGroup notificationGlowCanvasGroup;
+        [SerializeField] Image notificationIcon;
+        [SerializeField] float notificationGlowSpeed;
+
         [Header("Wwise Events")]
         [SerializeField] AK.Wwise.Event uiClClick;
 
+        public static event Action onCloseClicked;
         public static event Action<CommandID, string> onCommandClicked;
 
         bool isEntryEven = true;
         string currentInput = string.Empty;
-
         float elapsedTime = 0;
+        bool isConsoleShown = false;
+        bool hasNotification = false;
 
         public static ConsoleUI Instance;
+
         private void Awake()
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            closeButton.onClick.AddListener(() => onCloseClicked?.Invoke());
             commandsCommand.onClick.AddListener(() => OnCommandClicked(CommandID.commands));
             helpCommand.onClick.AddListener(() => OnCommandClicked(CommandID.help));
             progressCommand.onClick.AddListener(() => OnCommandClicked(CommandID.progress));
@@ -63,10 +79,16 @@ namespace LW.UI
         {
             elapsedTime += Time.deltaTime;
             input.text = currentInput + (Mathf.Sin(elapsedTime * cursorFlashingSpeed) < 0 ? "" : "|");
+
+            if (hasNotification)
+            {
+                notificationGlowCanvasGroup.alpha = Mathf.Abs(Mathf.Sin(Time.time * notificationGlowSpeed));
+            }
         }
 
         private void OnDestroy()
         {
+            closeButton.onClick.RemoveAllListeners();
             commandsCommand.onClick.RemoveAllListeners();
             helpCommand.onClick.RemoveAllListeners();
             loadCommand.onClick.RemoveAllListeners();
@@ -77,10 +99,27 @@ namespace LW.UI
             togglePannelButton.onClick.RemoveAllListeners();
         }
 
-        public void ToggleConsole(bool toggle)
+        public void ToggleConsole(bool toggle, bool applyToAll = false)
         {
-            canvasGroup.alpha = toggle ? 1 : 0; 
+            canvas.sortingOrder = toggle ? 1 : -1;
+            consoleCanvasGroup.alpha = toggle ? 1 : 0;
+
+            if (applyToAll)
+            {
+                notificationCanvasGroup.alpha = toggle ? 1 : 0;
+            }
+            else
+            {
+                notificationCanvasGroup.alpha = toggle ? 0 : 1;
+            }
+
+            notificationGlowCanvasGroup.alpha = 0;
             UpdateInput("");
+            isConsoleShown = toggle;
+            notificationIcon.gameObject.SetActive(false);
+
+            if (toggle)
+                hasNotification = false;
         }
 
         public void AddToHistory(string newHistory, bool isClickablePath = false)
@@ -102,9 +141,15 @@ namespace LW.UI
             Canvas.ForceUpdateCanvases();
 
             historyParent.CalculateLayoutInputVertical();
-            historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical(); 
-            
+            historyParent.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
             scrollRect.verticalNormalizedPosition = 0;
+
+            if (!isConsoleShown)
+            {
+                hasNotification = true;
+                notificationIcon.gameObject.SetActive(true);
+            }
         }
 
         public void UpdateInput(string newInput)
@@ -126,6 +171,12 @@ namespace LW.UI
             WwiseInterface.Instance.PlayEvent(uiClClick);
 
             togglePannelButton.transform.rotation = Quaternion.Euler(0, 0, commandPannel.activeSelf ? 0 : 180);
+
+            Vector3 buttonPosition = togglePannelButton.transform.localPosition;
+
+            buttonPosition.x = commandPannel.activeSelf ? toggleButtonPositions.y : toggleButtonPositions.x;
+
+            togglePannelButton.transform.localPosition = buttonPosition;
         }
     }
 }

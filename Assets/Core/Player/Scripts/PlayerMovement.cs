@@ -10,7 +10,7 @@ namespace LW.Player
     [SelectionBase]
     public class PlayerMovement : MonoBehaviour
     {
-        const float DEFAULT_GRAVITY = -.5f;
+        const float DEFAULT_GRAVITY = -.05f;
         const string CONRETE_GROUND_TAG = "Concrete";
         const string WATER_GROUND_TAG = "Water";
 
@@ -38,7 +38,7 @@ namespace LW.Player
 
         private float nextUpdateTime;
         private float updateTick = 1;
-        
+
         Vector3 startPositon;
         Quaternion startRotation;
 
@@ -64,15 +64,22 @@ namespace LW.Player
 
         private void Update()
         {
-            if (!PlayerData.CanMove)
-                return;
+            Vector3 movement = Vector3.zero;
 
-            ComputeRotation();
+            if (PlayerData.CanMove)
+            {
+                ComputeRotation();
+                movement = ComputeMovement();
+            }
 
-            Vector3 movement = ComputeMovement();
+            ComputeGravity();
+            movement.y = currentYVelocity;
 
             characterController.Move(movement);
 
+            Footsteps(movement);
+
+            //Debug
             CustomLogger.IncrementTraveledDistance((transform.position - storedPosition).magnitude);
 
             storedPosition = transform.position;
@@ -82,8 +89,6 @@ namespace LW.Player
                 nextUpdateTime += updateTick;
                 CustomLogger.AddToTrajectoryHistory(transform.position);
             }
-
-            Footsteps(movement);
         }
 
         public void ResetPosition()
@@ -161,9 +166,8 @@ namespace LW.Player
             transform.Rotate(playerRotation);
         }
 
-        private Vector3 ComputeMovement()
+        private void ComputeGravity()
         {
-            //gravity
             if (characterController.isGrounded)
             {
                 currentYVelocity = DEFAULT_GRAVITY;
@@ -172,7 +176,10 @@ namespace LW.Player
             {
                 currentYVelocity += gravity * Time.deltaTime;
             }
+        }
 
+        private Vector3 ComputeMovement()
+        {
             //movment
             Vector3 movement = new Vector3(PlayerData.CurrentMoveInput.x, currentYVelocity, PlayerData.CurrentMoveInput.y) * movementSpeed * Time.deltaTime;
 

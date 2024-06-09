@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7822917551957427139
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_DomesPlateauFullSplats
+  m_Shader: {fileID: -6465566751694194690, guid: 3d86710bf0d69fb49b31c2ab8a14b562,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: 6af3c657d1649ce489ad803fcaa4ab67, type: 2}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: ab264a44614f7464781b46f3a00e953e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CastShadows: 1
+    - _Dissolve_MaskStrength: 1
+    - _Lighting_ToonRampOffset: 0.13
+    - _Lighting_ToonRampSmoothness: 0.06
+    - _OnlySplatting: 1
+    - _ReceiveShadows: 1
+    - _Splatting: 1
+    - _SplattingAndName: 1
+    - _Splatting_NoiseByPos: 1
+    - _Splatting_VertexColorMask: 0.27
+    m_Colors:
+    - _Lighting_ToonRampTinting: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
+    - _Main_Tiling: {r: 1.84, g: 0.86, b: 0, a: 0}
+    - _Splatting_Tiling: {r: 1000, g: 1000, b: 0, a: 0}
+  m_BuildTextureStacks: []

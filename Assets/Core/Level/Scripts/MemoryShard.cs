@@ -1,14 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 public class MemoryShard : MonoBehaviour
 {
     const string PLAYER_TAG = "Player";
+    const string MEMORYSHARD_ID = "MemoryShard";
+    const string TEXTURE_ID = "_Main_Tex";
 
+    [SerializeField] LocalizedStringTable memoryShardTable;
+    [SerializeField] MeshRenderer meshRenderer;
     [SerializeField] CanvasGroup textToSpawn;
     [SerializeField] Transform trigger;
     [SerializeField] Transform rotatingArrow;
@@ -25,6 +27,18 @@ public class MemoryShard : MonoBehaviour
     {
         remainingTimeInCollider = durationInColliderToLock;
         textToSpawn.alpha = 0;
+
+        string textToWrite = memoryShardTable.GetTable().GetEntry(MEMORYSHARD_ID).LocalizedValue;
+
+        Texture2D texture = StringToTextureConverter.Instance.GetTextureFromInput(textToWrite);
+
+        texture.Apply();
+
+        MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+
+        meshRenderer.GetPropertyBlock(mpb);
+        mpb.SetTexture(TEXTURE_ID, texture);
+        meshRenderer.SetPropertyBlock(mpb);
     }
 
     private void Update()

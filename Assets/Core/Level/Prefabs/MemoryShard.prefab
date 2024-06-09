@@ -382,6 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348c287d5ad86ee45ad7b09729f662e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  memoryShardTable:
+    m_TableReference:
+      m_TableCollectionName: GUID:01339d7cb251b32418aa77e922e731a8
+  meshRenderer: {fileID: 296480250540873013}
   textToSpawn: {fileID: 826258147600158235}
   trigger: {fileID: 4437974411749470593}
   rotatingArrow: {fileID: 5586692296228887963}
@@ -864,6 +868,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4260cd3ba793a84a9d2b7cf767d080e, type: 3}
+--- !u!23 &296480250540873013 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c4260cd3ba793a84a9d2b7cf767d080e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1431259120497510833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1465468590738615898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4260cd3ba793a84a9d2b7cf767d080e,

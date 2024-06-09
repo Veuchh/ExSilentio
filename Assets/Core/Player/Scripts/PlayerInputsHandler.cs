@@ -1,7 +1,9 @@
 using LW.Data;
 using LW.Logger;
+using LW.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace LW.Player
 {
@@ -17,11 +19,19 @@ namespace LW.Player
 
         private void Awake()
         {
+            ConsoleUI.onCloseClicked += ToggleWordMode;
             wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
+        }
 
-            LockMouse(defaultToLockedCursorMode);
+        private void Update()
+        {
+            if ((StaticData.OpenWindowsAmount > 0 && Cursor.lockState == CursorLockMode.Locked)
+                || (StaticData.OpenWindowsAmount <= 0 && Cursor.lockState == CursorLockMode.None))
+            {
+                LockMouse(StaticData.OpenWindowsAmount <= 0);
+            }
         }
 
         public void LockMouse(bool locked)
@@ -84,8 +94,6 @@ namespace LW.Player
         {
             isWordModeEnabled = !isWordModeEnabled;
 
-            LockMouse(!isWordModeEnabled);
-
             wordManager.ToggleConsole(isWordModeEnabled);
             Debug.Log((isWordModeEnabled ? "Enabling" : "Disabling ") + "WordMode");
 
@@ -103,6 +111,18 @@ namespace LW.Player
 
             if (playerMovement != null)
                 PlayerData.IsWordModeEnabled = isWordModeEnabled;
+        }
+
+        public void OnEscape(InputValue value)
+        {
+            if (isWordModeEnabled)
+            {
+                ToggleWordMode();
+            }
+            else if (MainMenu.Instance.IsPauseMenu)
+            {
+                MainMenu.Instance.ToggleMenu();
+            }
         }
 
         public void OnOutputLog(InputValue value)
