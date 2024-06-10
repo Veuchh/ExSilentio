@@ -85,7 +85,7 @@ namespace LW.Player
 
         public void OnBackspace(InputValue value)
         {
-            if (isWordModeEnabled && StaticData.OpenWindowsAmount == 0)
+            if (isWordModeEnabled)
                 wordManager.ToggleDelete(value.Get<float>() > .5f);
         }
 
