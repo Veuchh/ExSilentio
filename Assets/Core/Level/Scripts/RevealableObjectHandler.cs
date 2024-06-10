@@ -47,16 +47,16 @@ namespace LW.Level
                 //reveal the bundle if it is saved
                 string savedWord = SaveLoad.GetWordFromPlayerPrefs(newBundle.GetBundleKey);
 
-                WordID id = (WordID)Enum.Parse(typeof(WordID), savedWord);
                 if (revealByDefault)
                 {
-                    id = newBundle.ID;
+                    WordID id = newBundle.ID;
+                    newBundle.RevealBundle(id, stringTable, false);
                 }
                 else if (!string.IsNullOrEmpty(savedWord))
                 {
-                    id = (WordID)Enum.Parse(typeof(WordID), savedWord);
+                    WordID id = (WordID)Enum.Parse(typeof(WordID), savedWord);
+                    newBundle.RevealBundle(id, stringTable, false);
                 }
-                newBundle.RevealBundle(id, stringTable, false);
             }
             else
             {
@@ -132,6 +132,27 @@ namespace LW.Level
 
                 translatedID = "[!] " + translatedID;
 
+                //checking if all core objects were discovered
+                if (bundleToReveal.ObjectImportance == ObjectImportance.Core)
+                {
+                    bool allCoreRevealed = true;
+
+                    foreach (var item in GetBundlesOfImportance(ObjectImportance.Core))
+                    {
+                        if (!item.IsRevealed)
+                        {
+                            allCoreRevealed = false;
+                            break;
+                        }
+                    }
+
+                    if (allCoreRevealed)
+                    {
+                        SaveLoad.SaveIntToPlayerPrefs(
+                            SaveLoad.SCENE_WITH_ALL_CORE_REVEALED,
+                            SaveLoad.GetIntFromPlayerPrefs(SaveLoad.SCENE_WITH_ALL_CORE_REVEALED) + 1);
+                    }
+                }
 
                 WwiseInterface.Instance.PlayEvent(uiClGoodWord);
             }
