@@ -17,7 +17,7 @@ public class Mycelium_Dome : MonoBehaviour
     {
         //TODO : this piece of code uses a magic number. In the future, we should have a way to know how many totoal level we have.
         if (isOpened
-            || SaveLoad.GetIntFromPlayerPrefs(SaveLoad.SCENE_WITH_ALL_CORE_REVEALED) != 2
+            || SaveLoad.GetIntFromPlayerPrefs(SaveLoad.SCENE_WITH_ALL_CORE_REVEALED) < 2
             || !other.CompareTag(PLAYER_TAG))
             return;
 
