@@ -19,6 +19,7 @@ namespace LW.Level
         [SerializeField, FormerlySerializedAs("itemsRevealed")] List<RevealableItem> itemsInBundle;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
+        [SerializeField] bool revealByDefault;
         [SerializeField] bool playWwiseEventOnReveal = false;
         [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
@@ -55,7 +56,7 @@ namespace LW.Level
         {
             yield return null;
 
-            RevealableObjectHandler.Instance.RegisterBundle(this);
+            RevealableObjectHandler.Instance.RegisterBundle(this, revealByDefault);
 
             foreach (string hintID in HintsBase)
                 hints.Add(hintID, false);
