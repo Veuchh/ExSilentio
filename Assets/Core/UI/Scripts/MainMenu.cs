@@ -28,6 +28,11 @@ public class MainMenu : MonoBehaviour
         quitButton.onClick.AddListener(OnQuitButton);
 
         ToggleMenu(!IsPauseMenu);
+
+        if (isPauseMenu)
+        {
+            StaticData.OpenWindowsAmount = 0;
+        }
     }
 
     private void OnDestroy()

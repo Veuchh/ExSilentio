@@ -3,7 +3,6 @@ using LW.Logger;
 using LW.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 namespace LW.Player
 {
@@ -78,7 +77,7 @@ namespace LW.Player
 
         public void OnStartWordMode(InputValue value)
         {
-            if (isWordModeEnabled)
+            if (isWordModeEnabled || StaticData.OpenWindowsAmount > 0)
                 return;
 
             ToggleWordMode();
@@ -86,7 +85,7 @@ namespace LW.Player
 
         public void OnBackspace(InputValue value)
         {
-            if (isWordModeEnabled)
+            if (isWordModeEnabled && StaticData.OpenWindowsAmount == 0)
                 wordManager.ToggleDelete(value.Get<float>() > .5f);
         }
 
