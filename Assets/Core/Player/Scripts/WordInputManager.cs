@@ -268,6 +268,9 @@ namespace LW.Player
             ConsoleUI.Instance.AddToHistory(consoleOutput);
 
             onResetPlayerPos?.Invoke();
+
+            if (RespawnCommandCallbackHandler.Instance != null)
+                RespawnCommandCallbackHandler.Instance.OnRespawnCommand();
         }
 
         IEnumerator TakeScreenShotRoutine()

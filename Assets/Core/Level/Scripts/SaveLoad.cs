@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class SaveLoad
 {
+    public const string SCENE_WITH_ALL_CORE_REVEALED = "scenesWithAllCoreRevealed";
     public static void SaveWordToPlayerPrefs(string bundleKey, string word)
     {
         PlayerPrefs.SetString(bundleKey, word);
@@ -21,5 +22,15 @@ public static class SaveLoad
         PlayerPrefs.DeleteAll();
 
         //Add buffer back to playerPrefs
+    }
+
+    public static void SaveIntToPlayerPrefs(string bundleKey, int integer)
+    {
+        PlayerPrefs.SetInt(bundleKey, integer);
+    }
+
+    public static int GetIntFromPlayerPrefs(string bundleKey)
+    {
+        return PlayerPrefs.GetInt(bundleKey);
     }
 }
