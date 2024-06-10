@@ -4116,6 +4116,7 @@ MonoBehaviour:
   - {fileID: 969614059}
   awaitedID: 34
   objectImportance: 0
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 1
   eventToPlay:
@@ -4923,6 +4924,7 @@ MonoBehaviour:
   itemsInBundle: []
   awaitedID: 45
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -8879,6 +8881,7 @@ GameObject:
   - component: {fileID: 258767662}
   - component: {fileID: 258767664}
   - component: {fileID: 258767663}
+  - component: {fileID: 258767665}
   m_Layer: 0
   m_Name: PlayMusicAtStart
   m_TagString: Untagged
@@ -8953,6 +8956,36 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &258767665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258767661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c982fcf319e81945a89a13ec97276e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 84568f00d68bf4a87be87ab8689ecf85,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &262653014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9777,6 +9810,7 @@ MonoBehaviour:
   - {fileID: 287202364}
   awaitedID: 50
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 1
   eventToPlay:
@@ -13147,6 +13181,7 @@ MonoBehaviour:
   - {fileID: 847605196}
   awaitedID: 55
   objectImportance: 2
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -17983,6 +18018,7 @@ MonoBehaviour:
   - {fileID: 149009242}
   awaitedID: 41
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -19027,6 +19063,7 @@ MonoBehaviour:
   - {fileID: 589004211}
   awaitedID: 30
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -25234,6 +25271,7 @@ MonoBehaviour:
   - {fileID: 344308306}
   awaitedID: 32
   objectImportance: 0
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -33036,6 +33074,7 @@ MonoBehaviour:
   - {fileID: 1467477274}
   awaitedID: 29
   objectImportance: 0
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -44393,6 +44432,7 @@ MonoBehaviour:
   - {fileID: 2010202800}
   awaitedID: 31
   objectImportance: 0
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -48071,6 +48111,7 @@ MonoBehaviour:
   - {fileID: 1742318136}
   awaitedID: 46
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -67672,6 +67713,7 @@ MonoBehaviour:
   - {fileID: 1983770959}
   awaitedID: 56
   objectImportance: 1
+  revealByDefault: 0
   playWwiseEventOnReveal: 0
   isTextureVertical: 0
   eventToPlay:
@@ -73002,12 +73044,24 @@ PrefabInstance:
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 83848941}
-    - target: {fileID: 2156440079965029588, guid: e078972b2211afc4aac2d94ce2d09e44,
+    - target: {fileID: 1318276048193681060, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c7ba7f727b01044c39ad734b0ad20ec0,
+        type: 2}
+    - target: {fileID: 2987118192607374544, guid: e078972b2211afc4aac2d94ce2d09e44,
         type: 3}
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 83848941}
-    - target: {fileID: 2987118192607374544, guid: e078972b2211afc4aac2d94ce2d09e44,
+    - target: {fileID: 3002078799085328260, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ca00c0928f0514d3aa84035f85761615,
+        type: 2}
+    - target: {fileID: 3516899871859498391, guid: e078972b2211afc4aac2d94ce2d09e44,
         type: 3}
       propertyPath: triggerObject
       value: 
@@ -73022,6 +73076,12 @@ PrefabInstance:
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 83848941}
+    - target: {fileID: 4182124382970049099, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: deaed82dd3bf94b5f86dfdf59003b2b0,
+        type: 2}
     - target: {fileID: 4543924137228478897, guid: e078972b2211afc4aac2d94ce2d09e44,
         type: 3}
       propertyPath: triggerObject
@@ -73037,6 +73097,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio_Strelitzia
       objectReference: {fileID: 0}
+    - target: {fileID: 5603209879778595113, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 83848941}
+    - target: {fileID: 5613615191913889742, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 83848941}
+    - target: {fileID: 6228781696047682915, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bc5104e23bf0249ad9aa73f81a6688fa,
+        type: 2}
+    - target: {fileID: 6452506626952194080, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 83848941}
     - target: {fileID: 6465341977482053101, guid: e078972b2211afc4aac2d94ce2d09e44,
         type: 3}
       propertyPath: triggerObject
@@ -73092,7 +73173,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8681354656628487041, guid: e078972b2211afc4aac2d94ce2d09e44,
+    - target: {fileID: 8571342217700476316, guid: e078972b2211afc4aac2d94ce2d09e44,
+        type: 3}
+      propertyPath: triggerObject
+      value: 
+      objectReference: {fileID: 83848941}
+    - target: {fileID: 8916907909502327981, guid: e078972b2211afc4aac2d94ce2d09e44,
         type: 3}
       propertyPath: triggerObject
       value: 

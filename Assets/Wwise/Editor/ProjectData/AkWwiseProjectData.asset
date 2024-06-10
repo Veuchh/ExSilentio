@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,13 +21,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: c16cb70131cf4146b7a73c8801e203d4
-    ParentPath: Virtual Acoustics\Default Work Unit
+    ParentPath: Virtual Acoustics/Default Work Unit
     guid: c16cb70131cf4146b7a73c8801e203d4
     GuidInternal: 
-    m_lastTime: -8584841169485475808
+    m_lastTime: -8584841169474775808
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -35,10 +35,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: d61985cf09a10a4990eafeb0bc047465
-    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584841169477375808
+    m_lastTime: -8584835971627497955
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -56,7 +56,7 @@ MonoBehaviour:
       - ElementName: AMB
         ObjectType: 2
         guid: 17e60068accf6e44a0fd6bee02b9632e
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB
     - name: AMB_OC_Boat
       guid: 1ffb8b6cb390284aa1d3135aad44e1d0
       id: 2826138305
@@ -79,7 +79,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Boat
         ObjectType: 2
         guid: 1ffb8b6cb390284aa1d3135aad44e1d0
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty/AMB_OC_Boat
     - name: AMB_OC_Child
       guid: 468b3d84bb86ca49bde3a05dfb4dbe62
       id: 2482450727
@@ -102,7 +102,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Child
         ObjectType: 2
         guid: 468b3d84bb86ca49bde3a05dfb4dbe62
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty/AMB_OC_Child
     - name: AMB_OC_Ocean
       guid: 7460bd187839454f94dcdf8887f10ea5
       id: 2325878355
@@ -125,7 +125,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Ocean
         ObjectType: 2
         guid: 7460bd187839454f94dcdf8887f10ea5
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty/AMB_OC_Ocean
     - name: AMB_OC_Train
       guid: e5e5c34284fdbd4a9eba989e2aff62a3
       id: 3886422523
@@ -148,7 +148,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Train
         ObjectType: 2
         guid: e5e5c34284fdbd4a9eba989e2aff62a3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty/AMB_OC_Train
     - name: AMB_OC_Wind
       guid: 7d7fbcf4737bcf41b2c564093af14aac
       id: 931952533
@@ -171,7 +171,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Wind
         ObjectType: 2
         guid: 7d7fbcf4737bcf41b2c564093af14aac
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty/AMB_OC_Wind
     - name: AMB_OceanCIty
       guid: 79463b4612e2a8419f3ac5371f368623
       id: 1709551633
@@ -191,9 +191,9 @@ MonoBehaviour:
       - ElementName: AMB_OceanCIty
         ObjectType: 2
         guid: 79463b4612e2a8419f3ac5371f368623
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/AMB/AMB_OceanCIty
     - name: Cave
-      guid: 4a02c2f2d6b42a429a217af50963510b
+      guid: 138fb9d57bf5304995737dbbae014a1d
       id: 4122393694
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -206,12 +206,12 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Reverbs
-        ObjectType: 1
-        guid: 6b2cd844e6e6f741a2997bd88d88a5bf
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
       - ElementName: Cave
         ObjectType: 1
-        guid: 4a02c2f2d6b42a429a217af50963510b
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Cave
+        guid: 138fb9d57bf5304995737dbbae014a1d
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs/Cave
     - name: FOOTSTEPS
       guid: 7798c98036550c4db53598a28a945abb
       id: 2385628198
@@ -228,7 +228,7 @@ MonoBehaviour:
       - ElementName: FOOTSTEPS
         ObjectType: 2
         guid: 7798c98036550c4db53598a28a945abb
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/FOOTSTEPS
     - name: FT_OceanCity
       guid: b09f0bab1d09264aad4b94dfed63191e
       id: 4026521433
@@ -248,7 +248,47 @@ MonoBehaviour:
       - ElementName: FT_OceanCity
         ObjectType: 2
         guid: b09f0bab1d09264aad4b94dfed63191e
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/FOOTSTEPS/FT_OceanCity
+    - name: Inside
+      guid: a7df65c3fdf8994592a3858e24114c3b
+      id: 3553349781
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverbs
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
+      - ElementName: Inside
+        ObjectType: 1
+        guid: a7df65c3fdf8994592a3858e24114c3b
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs/Inside
+    - name: Jungle
+      guid: 416c333ca32eb64d9c665c9c98d583fc
+      id: 219304270
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverbs
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
+      - ElementName: Jungle
+        ObjectType: 1
+        guid: 416c333ca32eb64d9c665c9c98d583fc
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs/Jungle
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -262,7 +302,7 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
     - name: MX
       guid: d3aad800118eac4abf38d5fb8699999a
       id: 1685527054
@@ -279,9 +319,9 @@ MonoBehaviour:
       - ElementName: MX
         ObjectType: 2
         guid: d3aad800118eac4abf38d5fb8699999a
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/MX
     - name: Plains
-      guid: daebd19b360aa44a80f85badd7676841
+      guid: 4658f0e737318842850655d9edd1b995
       id: 1519764506
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -294,14 +334,14 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Reverbs
-        ObjectType: 1
-        guid: 6b2cd844e6e6f741a2997bd88d88a5bf
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
       - ElementName: Plains
         ObjectType: 1
-        guid: daebd19b360aa44a80f85badd7676841
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Plains
+        guid: 4658f0e737318842850655d9edd1b995
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs/Plains
     - name: Reverbs
-      guid: 6b2cd844e6e6f741a2997bd88d88a5bf
+      guid: 4bfed087a21a324684dc7aeafd2d1bcf
       id: 3545700988
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -314,9 +354,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Reverbs
-        ObjectType: 1
-        guid: 6b2cd844e6e6f741a2997bd88d88a5bf
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs
     - name: SFX
       guid: 9e979bad5052bd409a6a3fa989361e21
       id: 393239870
@@ -333,7 +373,27 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 2
         guid: 9e979bad5052bd409a6a3fa989361e21
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX
+    - name: Silo
+      guid: 428f2ae8346d93479314d85dfdf78f4a
+      id: 838776142
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverbs
+        ObjectType: 2
+        guid: 4bfed087a21a324684dc7aeafd2d1bcf
+      - ElementName: Silo
+        ObjectType: 1
+        guid: 428f2ae8346d93479314d85dfdf78f4a
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Reverbs/Silo
     - name: TrainError
       guid: c26726e7b4624545a2bd412cae5ed1ca
       id: 3705995597
@@ -353,7 +413,7 @@ MonoBehaviour:
       - ElementName: TrainError
         ObjectType: 2
         guid: c26726e7b4624545a2bd412cae5ed1ca
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX/TrainError
     - name: TrainErrorchild
       guid: 07eeca3a70e553488b8f77de2718fb05
       id: 837352445
@@ -376,7 +436,7 @@ MonoBehaviour:
       - ElementName: TrainErrorchild
         ObjectType: 2
         guid: 07eeca3a70e553488b8f77de2718fb05
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/SFX/TrainError/TrainErrorchild
     - name: UI
       guid: a66d1419c0779f49a028474708e79385
       id: 1551306167
@@ -393,9 +453,9 @@ MonoBehaviour:
       - ElementName: UI
         ObjectType: 2
         guid: a66d1419c0779f49a028474708e79385
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/UI
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -403,10 +463,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 3ae079bc8ac3e74ea06242fbec9ec8d3
-    ParentPath: SoundBanks\Default Work Unit
+    ParentPath: SoundBanks/Default Work Unit
     guid: 3ae079bc8ac3e74ea06242fbec9ec8d3
     GuidInternal: 
-    m_lastTime: -8584841169476675808
+    m_lastTime: -8584841169474775808
     List:
     - name: Test
       guid: 65e085f362fdd044b37d4cd82d364d6a
@@ -421,8 +481,8 @@ MonoBehaviour:
       - ElementName: Test
         ObjectType: 7
         guid: 65e085f362fdd044b37d4cd82d364d6a
-      Path: SoundBanks\Default Work Unit\Test
-  - PhysicalPath: SoundBanks\Ex_Silencio.wwu
+      Path: SoundBanks/Default Work Unit/Test
+  - PhysicalPath: SoundBanks/Ex_Silencio.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -430,10 +490,10 @@ MonoBehaviour:
     - ElementName: Ex_Silencio
       ObjectType: 12
       guid: 99df0cf2de40bd46b9fb8c2995637adf
-    ParentPath: SoundBanks\Ex_Silencio
+    ParentPath: SoundBanks/Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584841169476675808
+    m_lastTime: -8584841169474775808
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -448,7 +508,7 @@ MonoBehaviour:
       - ElementName: Global
         ObjectType: 7
         guid: d06acd887504c946b336e86a99380790
-      Path: SoundBanks\Ex_Silencio\Global
+      Path: SoundBanks/Ex_Silencio/Global
     - name: OceanCity
       guid: e119ced5ab6b7a4a8e25731a958027cd
       id: 2321219508
@@ -462,7 +522,7 @@ MonoBehaviour:
       - ElementName: OceanCity
         ObjectType: 7
         guid: e119ced5ab6b7a4a8e25731a958027cd
-      Path: SoundBanks\Ex_Silencio\OceanCity
+      Path: SoundBanks/Ex_Silencio/OceanCity
     - name: Strelitzia
       guid: 6bece264c3154945a53ad9d0f37a2ca8
       id: 757101314
@@ -476,9 +536,9 @@ MonoBehaviour:
       - ElementName: Strelitzia
         ObjectType: 7
         guid: 6bece264c3154945a53ad9d0f37a2ca8
-      Path: SoundBanks\Ex_Silencio\Strelitzia
+      Path: SoundBanks/Ex_Silencio/Strelitzia
   EventWwu:
-  - PhysicalPath: Events\AMB.wwu
+  - PhysicalPath: Events/AMB.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -486,10 +546,10 @@ MonoBehaviour:
     - ElementName: AMB
       ObjectType: 12
       guid: 90f9e10d7a2f78498de32deeabae2699
-    ParentPath: Events\AMB
+    ParentPath: Events/AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584840979595546585
+    m_lastTime: -8584835765669432490
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -504,7 +564,7 @@ MonoBehaviour:
       - ElementName: AMB_Menu
         ObjectType: 4
         guid: be1104a850176942b3b353fb254c6e68
-      Path: Events\AMB\AMB_Menu
+      Path: Events/AMB/AMB_Menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -524,7 +584,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_BoatFar
         ObjectType: 3
         guid: 33d1c900177da248bf08e9ca701ed5c4
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_BoatFar
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_BoatFar
       maxAttenuation: 156
       maxDuration: 22.438917
       minDuration: 11.602
@@ -544,7 +604,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_BoatIdle
         ObjectType: 3
         guid: ceec6ba57a972c4bac1f1c7600db23ff
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_BoatIdle
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_BoatIdle
       maxAttenuation: 26
       maxDuration: -1
       minDuration: -1
@@ -564,7 +624,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_ChildLaugh1
         ObjectType: 3
         guid: 42169ba52e111f4ebbe7bb9ccb7ce8dc
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh1
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_ChildLaugh1
       maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
@@ -584,7 +644,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_ChildLaugh2
         ObjectType: 3
         guid: 90385f2a81ef1a4eab2f16552d4fe633
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh2
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_ChildLaugh2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -604,7 +664,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_ChildLaugh3
         ObjectType: 3
         guid: af52688049d83d47b2777f800b86d689
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildLaugh3
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_ChildLaugh3
       maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
@@ -627,7 +687,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_ChildsReveal
         ObjectType: 3
         guid: 27d8a682cc22c049837216404ca5dde9
-      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_ChildsReveal
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_ChildsReveal
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -647,7 +707,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_ChildsUnreaveal
         ObjectType: 3
         guid: da2244b2e9a9f7458263f8d113fd3edc
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_ChildsUnreaveal
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_ChildsUnreaveal
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -667,7 +727,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Fountain
         ObjectType: 3
         guid: 8b6eaaa12618be4380c40f56cbfeecde
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Fountain
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_Fountain
       maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
@@ -687,7 +747,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Main
         ObjectType: 3
         guid: 3fc6f63323519b4f8ee8672419db62e6
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Main
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_Main
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -707,10 +767,56 @@ MonoBehaviour:
       - ElementName: AMB_OC_SeagullBarks
         ObjectType: 3
         guid: 3f1e4a82c4318a4f853b5983aa60f401
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_SeagullBarks
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_SeagullBarks
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
+    - name: AMB_OC_Tr_OcclusionIn
+      guid: 61ed5bcd4745194b9d20ebe673708415
+      id: 3089793850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_Tr_OcclusionIn
+        ObjectType: 3
+        guid: 61ed5bcd4745194b9d20ebe673708415
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_Tr_OcclusionIn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_OC_Tr_OcclusionOut
+      guid: fd44f661024fa4489a3b047286d2856b
+      id: 535301941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_Tr_OcclusionOut
+        ObjectType: 3
+        guid: fd44f661024fa4489a3b047286d2856b
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_Tr_OcclusionOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: AMB_OC_Train_Swish
       guid: f52bd0bb7c700a45a476135c6cca451a
       id: 561950100
@@ -727,7 +833,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Train_Swish
         ObjectType: 3
         guid: f52bd0bb7c700a45a476135c6cca451a
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Train_Swish
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_Train_Swish
       maxAttenuation: 35
       maxDuration: 7.743708
       minDuration: 7.743708
@@ -750,7 +856,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_TrainEnterStation
         ObjectType: 3
         guid: 1b3b559b65c4e04e9882370b675ab9c2
-      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_TrainEnterStation
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -773,7 +879,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_TrainExitStation
         ObjectType: 3
         guid: 9b00fe69a066104580d63e3a1d123d34
-      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainExitStation
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_TrainExitStation
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -793,7 +899,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_TrainLoop
         ObjectType: 3
         guid: d1a5cf92446cbc4cb03cb1c244b3e9a6
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_TrainLoop
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_TrainLoop
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
@@ -813,8 +919,28 @@ MonoBehaviour:
       - ElementName: AMB_OC_TrainStation
         ObjectType: 3
         guid: 585a10b1a3d21045a86059c56ebf9647
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_TrainStation
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_TrainStation
       maxAttenuation: 45
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_OC_WaterLap
+      guid: e0d1843a62f99f46bb25fafd83cbe860
+      id: 1924474439
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: AMB_OC_WaterLap
+        ObjectType: 3
+        guid: e0d1843a62f99f46bb25fafd83cbe860
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_WaterLap
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_WaterSplocBuilding
@@ -833,7 +959,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_WaterSplocBuilding
         ObjectType: 3
         guid: da42c8b2cb51d847b2859dc0a1db50aa
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_WaterSplocBuilding
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_WaterSplocBuilding
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
@@ -853,7 +979,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_Wind
         ObjectType: 3
         guid: 7f7ff24359cd0b45a1aa26e32a52ad3f
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_Wind
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_Wind
       maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
@@ -873,7 +999,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_WindCan
         ObjectType: 3
         guid: 1fc18eafb610ed48bdb89e80aa368dc9
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindCan
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_WindCan
       maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
@@ -893,7 +1019,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_WindChim
         ObjectType: 3
         guid: 42d9e4d52ee62b4d907c54b25dc465a7
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindChim
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_WindChim
       maxAttenuation: 30
       maxDuration: -1
       minDuration: -1
@@ -913,7 +1039,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_WindWisthling
         ObjectType: 3
         guid: 018ab326c4257c4188ec004600b2145b
-      Path: Events\AMB\AMB_OceanCity\AMB_OC_WindWisthling
+      Path: Events/AMB/AMB_OceanCity/AMB_OC_WindWisthling
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -936,7 +1062,7 @@ MonoBehaviour:
       - ElementName: AMB_OC_WindWisthlingExit
         ObjectType: 3
         guid: bf0b29198ee4e040bb275a15aa8c4ba6
-      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_WindWisthlingExit
+      Path: Events/AMB/AMB_OceanCity/Trigger/AMB_OC_WindWisthlingExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -953,7 +1079,27 @@ MonoBehaviour:
       - ElementName: AMB_OceanCity
         ObjectType: 4
         guid: 0b541abb7f3cb046bf8f351963be05e5
-      Path: Events\AMB\AMB_OceanCity
+      Path: Events/AMB/AMB_OceanCity
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_Awake
+      guid: 3a4935f98fdf724aa64f0fbd0498c152
+      id: 2342327891
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_Awake
+        ObjectType: 3
+        guid: 3a4935f98fdf724aa64f0fbd0498c152
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_Awake
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -973,7 +1119,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_Balise
         ObjectType: 3
         guid: 6d31fd4525bd6b43a1425895d0f5bb92
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_Balise
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_Balise
       maxAttenuation: 200
       maxDuration: -1
       minDuration: -1
@@ -993,7 +1139,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_CaveDrop
         ObjectType: 3
         guid: d66f33981379d246b3371f514c6872d4
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveDrop
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_CaveDrop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1013,30 +1159,10 @@ MonoBehaviour:
       - ElementName: AMB_SL_CaveFireCamp
         ObjectType: 3
         guid: 886ee8c2ec2fcd46b36596ee982b3bec
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveFireCamp
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_CaveFireCamp
       maxAttenuation: 100
       maxDuration: 88
       minDuration: 88
-    - name: AMB_SL_CaveMain
-      guid: 217d21e71a540e4a8f8251a116946f60
-      id: 1848239986
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: AMB
-        ObjectType: 12
-        guid: 90f9e10d7a2f78498de32deeabae2699
-      - ElementName: AMB_Strelitzia
-        ObjectType: 4
-        guid: 22547c169459f8469d3eb24a109739d7
-      - ElementName: AMB_SL_CaveMain
-        ObjectType: 3
-        guid: 217d21e71a540e4a8f8251a116946f60
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveMain
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: AMB_SL_CaveWater
       guid: 1de8cfd867b39743891c19a7395a11b4
       id: 2027462034
@@ -1053,8 +1179,8 @@ MonoBehaviour:
       - ElementName: AMB_SL_CaveWater
         ObjectType: 3
         guid: 1de8cfd867b39743891c19a7395a11b4
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveWater
-      maxAttenuation: 100
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_CaveWater
+      maxAttenuation: 45
       maxDuration: -1
       minDuration: -1
     - name: AMB_SL_Desert
@@ -1073,7 +1199,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_Desert
         ObjectType: 3
         guid: e0c7c7dda3dbbb4d9768ded47faec753
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_Desert
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_Desert
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1093,7 +1219,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_JunleBird
         ObjectType: 3
         guid: 264814935270f842a82bb2533d6af84e
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_JunleBird
       maxAttenuation: 0
       maxDuration: 136.87923
       minDuration: 136.87923
@@ -1113,7 +1239,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_JunleFakeRain
         ObjectType: 3
         guid: d844f6a81966f44c8255587daeb1b64d
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_JunleFakeRain
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1133,30 +1259,10 @@ MonoBehaviour:
       - ElementName: AMB_SL_JunleFrog
         ObjectType: 3
         guid: 9050691e9f26d14eba4f157f13730aee
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_JunleFrog
       maxAttenuation: 25
       maxDuration: 39
       minDuration: 39
-    - name: AMB_SL_JunleMain
-      guid: efb7ee12952dac409d0db7ab744f2448
-      id: 1843064999
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: AMB
-        ObjectType: 12
-        guid: 90f9e10d7a2f78498de32deeabae2699
-      - ElementName: AMB_Strelitzia
-        ObjectType: 4
-        guid: 22547c169459f8469d3eb24a109739d7
-      - ElementName: AMB_SL_JunleMain
-        ObjectType: 3
-        guid: efb7ee12952dac409d0db7ab744f2448
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleMain
-      maxAttenuation: 0
-      maxDuration: 121.00267
-      minDuration: 121.00267
     - name: AMB_SL_LabMecaniques
       guid: 4479ad2bbe6d1a4ba51912f7b45d04a3
       id: 3095653304
@@ -1173,7 +1279,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_LabMecaniques
         ObjectType: 3
         guid: 4479ad2bbe6d1a4ba51912f7b45d04a3
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_LabMecaniques
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1193,7 +1299,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_SiloBird
         ObjectType: 3
         guid: addc6f5d077a2d4a85eb8a66909879d7
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloBird
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_SiloBird
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1213,7 +1319,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_SiloMain
         ObjectType: 3
         guid: 7993bc83825f81419e0b43a3779240f5
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloMain
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_SiloMain
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1233,7 +1339,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_SiloRiver
         ObjectType: 3
         guid: 621768256638d74d912ad79b72fd0f2d
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_SiloRiver
       maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
@@ -1253,8 +1359,8 @@ MonoBehaviour:
       - ElementName: AMB_SL_SiloWaterfall
         ObjectType: 3
         guid: ef0e11b506076242826a3fab88b09805
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloWaterfall
-      maxAttenuation: 0
+      Path: Events/AMB/AMB_Strelitzia/AMB_SL_SiloWaterfall
+      maxAttenuation: 70
       maxDuration: -1
       minDuration: -1
     - name: AMB_SL_Tr_BunkerIn
@@ -1276,7 +1382,7 @@ MonoBehaviour:
       - ElementName: AMB_SL_Tr_BunkerIn
         ObjectType: 3
         guid: 563dd9ff45bc1f4e94e8a203d850169c
-      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerIn
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_BunkerIn
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1299,7 +1405,30 @@ MonoBehaviour:
       - ElementName: AMB_SL_Tr_BunkerOut
         ObjectType: 3
         guid: 4f47ca1449193e4eab6e7559ab04719d
-      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerOut
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_BunkerOut
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_DeMuteCave
+      guid: f63e1d857b993e4e9559f7cd861743c7
+      id: 732772474
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_DeMuteCave
+        ObjectType: 3
+        guid: f63e1d857b993e4e9559f7cd861743c7
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_DeMuteCave
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1322,7 +1451,99 @@ MonoBehaviour:
       - ElementName: AMB_SL_Tr_DeMuteDesert
         ObjectType: 3
         guid: 89f16e6b3e9e6344a76201955b7462bd
-      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteDesert
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_DeMuteDesert
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_DeMuteJungle
+      guid: 90cae401d75ef848a4822b23637f1db7
+      id: 501430514
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_DeMuteJungle
+        ObjectType: 3
+        guid: 90cae401d75ef848a4822b23637f1db7
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_DeMuteJungle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_DeMuteLab
+      guid: c4bfcc717462134f849aac817af21107
+      id: 1255301078
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_DeMuteLab
+        ObjectType: 3
+        guid: c4bfcc717462134f849aac817af21107
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_DeMuteLab
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_DeMuteSilo
+      guid: 1369389c8cf9aa48a2de3c2d656fb56e
+      id: 328079930
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_DeMuteSilo
+        ObjectType: 3
+        guid: 1369389c8cf9aa48a2de3c2d656fb56e
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_DeMuteSilo
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_MuteCave
+      guid: 78303d9e02a3f54b822cb7571ef06394
+      id: 3568524555
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_MuteCave
+        ObjectType: 3
+        guid: 78303d9e02a3f54b822cb7571ef06394
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_MuteCave
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1345,7 +1566,76 @@ MonoBehaviour:
       - ElementName: AMB_SL_Tr_MuteDesert
         ObjectType: 3
         guid: 33d69ac2b131bf42a39d170348544856
-      Path: Events\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteDesert
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_MuteDesert
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_MuteJungle
+      guid: 641b1c7120745e44b25b47cbd37b2778
+      id: 3457049799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_MuteJungle
+        ObjectType: 3
+        guid: 641b1c7120745e44b25b47cbd37b2778
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_MuteJungle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_MuteLab
+      guid: 8e9a371a9873d143a08aa49194bda010
+      id: 1249199897
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_MuteLab
+        ObjectType: 3
+        guid: 8e9a371a9873d143a08aa49194bda010
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_MuteLab
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_SL_Tr_MuteSilo
+      guid: 0ade337fcfe105468e0e41b8fbf649d6
+      id: 2828279879
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 73b7740a05731743aa9f74b189258ae7
+      - ElementName: AMB_SL_Tr_MuteSilo
+        ObjectType: 3
+        guid: 0ade337fcfe105468e0e41b8fbf649d6
+      Path: Events/AMB/AMB_Strelitzia/Trigger/AMB_SL_Tr_MuteSilo
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1362,27 +1652,7 @@ MonoBehaviour:
       - ElementName: AMB_Strelitzia
         ObjectType: 4
         guid: 22547c169459f8469d3eb24a109739d7
-      Path: Events\AMB\AMB_Strelitzia
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Trigger
-      guid: 60640b7280ccd749852a4fa6507a1675
-      id: 3571255931
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: AMB
-        ObjectType: 12
-        guid: 90f9e10d7a2f78498de32deeabae2699
-      - ElementName: AMB_OceanCity
-        ObjectType: 4
-        guid: 0b541abb7f3cb046bf8f351963be05e5
-      - ElementName: Trigger
-        ObjectType: 4
-        guid: 60640b7280ccd749852a4fa6507a1675
-      Path: Events\AMB\AMB_OceanCity\Trigger
+      Path: Events/AMB/AMB_Strelitzia
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1402,11 +1672,31 @@ MonoBehaviour:
       - ElementName: Trigger
         ObjectType: 4
         guid: 73b7740a05731743aa9f74b189258ae7
-      Path: Events\AMB\AMB_Strelitzia\Trigger
+      Path: Events/AMB/AMB_Strelitzia/Trigger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-  - PhysicalPath: Events\Default Work Unit.wwu
+    - name: Trigger
+      guid: 60640b7280ccd749852a4fa6507a1675
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      Path: Events/AMB/AMB_OceanCity/Trigger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -1414,10 +1704,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: b74c2a65d53e854bb513b47eb47eae78
-    ParentPath: Events\Default Work Unit
+    ParentPath: Events/Default Work Unit
     guid: b74c2a65d53e854bb513b47eb47eae78
     GuidInternal: 
-    m_lastTime: -8584841169476775808
+    m_lastTime: -8584841169474775808
     List:
     - name: Enfer
       guid: 446f45525833d248b87c11d7fba23aa8
@@ -1432,7 +1722,7 @@ MonoBehaviour:
       - ElementName: Enfer
         ObjectType: 3
         guid: 446f45525833d248b87c11d7fba23aa8
-      Path: Events\Default Work Unit\Enfer
+      Path: Events/Default Work Unit/Enfer
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1449,7 +1739,7 @@ MonoBehaviour:
       - ElementName: Play_MX_OC_L_Child
         ObjectType: 3
         guid: 9dbacfa66e1cb34586d0c20fabd2a615
-      Path: Events\Default Work Unit\Play_MX_OC_L_Child
+      Path: Events/Default Work Unit/Play_MX_OC_L_Child
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1466,11 +1756,11 @@ MonoBehaviour:
       - ElementName: Test
         ObjectType: 3
         guid: e59dc4500f496b46903f1c842b1f700b
-      Path: Events\Default Work Unit\Test
+      Path: Events/Default Work Unit/Test
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-  - PhysicalPath: Events\FOOTSTEPS.wwu
+  - PhysicalPath: Events/FOOTSTEPS.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -1478,10 +1768,10 @@ MonoBehaviour:
     - ElementName: FOOTSTEPS
       ObjectType: 12
       guid: 8aa0b113ff87cd41827a9050ed54407c
-    ParentPath: Events\FOOTSTEPS
+    ParentPath: Events/FOOTSTEPS
     guid: 8aa0b113ff87cd41827a9050ed54407c
     GuidInternal: 
-    m_lastTime: -8584841169476875808
+    m_lastTime: -8584841169474775808
     List:
     - name: FT_OceanCity
       guid: 8a3bada84552514696cf9d980a2323c3
@@ -1496,7 +1786,7 @@ MonoBehaviour:
       - ElementName: FT_OceanCity
         ObjectType: 4
         guid: 8a3bada84552514696cf9d980a2323c3
-      Path: Events\FOOTSTEPS\FT_OceanCity
+      Path: Events/FOOTSTEPS/FT_OceanCity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1516,7 +1806,7 @@ MonoBehaviour:
       - ElementName: FT_OceanCityPlay
         ObjectType: 3
         guid: 62b7b2d05435c34c9de3dbecea1b77c6
-      Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay
+      Path: Events/FOOTSTEPS/FT_OceanCity/FT_OceanCityPlay
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1536,11 +1826,11 @@ MonoBehaviour:
       - ElementName: FT_OceanCityStop
         ObjectType: 3
         guid: 15e5def64449c3408e4c2746a52fe714
-      Path: Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop
+      Path: Events/FOOTSTEPS/FT_OceanCity/FT_OceanCityStop
       maxAttenuation: 0
       maxDuration: 1.5938789
       minDuration: 0.33595833
-  - PhysicalPath: Events\MX.wwu
+  - PhysicalPath: Events/MX.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -1548,10 +1838,10 @@ MonoBehaviour:
     - ElementName: MX
       ObjectType: 12
       guid: 67012ec0e2ce5e42abc047769215ac15
-    ParentPath: Events\MX
+    ParentPath: Events/MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584841028287767251
+    m_lastTime: -8584840199522842309
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -1569,7 +1859,7 @@ MonoBehaviour:
       - ElementName: MX_M_Main
         ObjectType: 3
         guid: a52d1462c7460249abdf1f17e0ffcf7c
-      Path: Events\MX\MX_Menu\MX_M_Main
+      Path: Events/MX/MX_Menu/MX_M_Main
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1586,7 +1876,7 @@ MonoBehaviour:
       - ElementName: MX_Menu
         ObjectType: 4
         guid: 65e1c96e72f7bc4abfaf34967995b638
-      Path: Events\MX\MX_Menu
+      Path: Events/MX/MX_Menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1606,7 +1896,7 @@ MonoBehaviour:
       - ElementName: MX_OC_Awake
         ObjectType: 3
         guid: 862c6e688bf88949a69170649d89fc6a
-      Path: Events\MX\MX_OceanCity\MX_OC_Awake
+      Path: Events/MX/MX_OceanCity/MX_OC_Awake
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1626,8 +1916,8 @@ MonoBehaviour:
       - ElementName: MX_OC_L_Seagull
         ObjectType: 3
         guid: 280e709ee6b3944f8c694f9ab5690d70
-      Path: Events\MX\MX_OceanCity\MX_OC_L_Seagull
-      maxAttenuation: 0
+      Path: Events/MX/MX_OceanCity/MX_OC_L_Seagull
+      maxAttenuation: 120
       maxDuration: -1
       minDuration: -1
     - name: MX_OC_ST_Boat
@@ -1646,7 +1936,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Boat
         ObjectType: 3
         guid: c9574bf600900848a1c92a184441e4e2
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Boat
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Boat
       maxAttenuation: 0
       maxDuration: 4.8
       minDuration: 4.8
@@ -1666,7 +1956,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Buildings
         ObjectType: 3
         guid: f44f7bc8a67f314d976985f087957f71
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Buildings
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Buildings
       maxAttenuation: 0
       maxDuration: 38.4
       minDuration: 38.4
@@ -1686,7 +1976,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Child
         ObjectType: 3
         guid: b0072b4e568f4942aedd7f6ea8432f29
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Child
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Child
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1709,7 +1999,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_ChildEnter
         ObjectType: 3
         guid: c055c38c57fee148b5aeb0f69f5a3d97
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildEnter
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_ChildEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1732,7 +2022,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_ChildExit
         ObjectType: 3
         guid: ee1341616360e645b856f85789ac8c9c
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_ChildExit
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_ChildExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1752,7 +2042,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Fish
         ObjectType: 3
         guid: 946ca89ff56aab418d8622ec43e9f626
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Fish
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Fish
       maxAttenuation: 0
       maxDuration: 2.0764031
       minDuration: 2.0764031
@@ -1775,7 +2065,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_FontainEnter
         ObjectType: 3
         guid: 1c054c4da161d243840dd4abb6b17e3b
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainEnter
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_FontainEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1798,13 +2088,13 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_FontainExit
         ObjectType: 3
         guid: 0297cbc3ed3fa94ca157353578e667ea
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_FontainExit
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_FontainExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: MX_OC_ST_MemoryFoam
+    - name: MX_OC_ST_MemoryFoamMelodyEnter
       guid: eaa3c1d8482a214f8ae711758ef11149
-      id: 3477121400
+      id: 2566253998
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1815,13 +2105,59 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      - ElementName: MX_OC_ST_MemoryFoam
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
+      - ElementName: MX_OC_ST_MemoryFoamMelodyEnter
         ObjectType: 3
         guid: eaa3c1d8482a214f8ae711758ef11149
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_MemoryFoam
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_MemoryFoamMelodyEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_OC_ST_MemoryFoamMelodyExit
+      guid: 350fe9a497accd41a51986b73000e534
+      id: 1296655828
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 0a6d2b755e3b404396389f317dce77fc
+      - ElementName: MX_OC_ST_MemoryFoamMelodyExit
+        ObjectType: 3
+        guid: 350fe9a497accd41a51986b73000e534
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_MemoryFoamMelodyExit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_OC_ST_MemoryFoamOct
+      guid: 4b306c8d27fd184988d3ff59d9d788e7
+      id: 978371942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_OceanCity
+        ObjectType: 4
+        guid: 16f08d1e62da6f41b2c4d75626b03a9c
+      - ElementName: MX_OC_ST_MemoryFoamOct
+        ObjectType: 3
+        guid: 4b306c8d27fd184988d3ff59d9d788e7
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_MemoryFoamOct
+      maxAttenuation: 15
+      maxDuration: -1
+      minDuration: -1
     - name: MX_OC_ST_Ocean
       guid: 1e6bc322e64b28408c7301e92b1517d4
       id: 438261988
@@ -1838,7 +2174,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Ocean
         ObjectType: 3
         guid: 1e6bc322e64b28408c7301e92b1517d4
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Ocean
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Ocean
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1858,7 +2194,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Rail
         ObjectType: 3
         guid: 205e5663ff141846887d8887c2943217
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Rail
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Rail
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1878,7 +2214,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Seagull
         ObjectType: 3
         guid: a87111050cf7ef428d6f8d4635ebc097
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Seagull
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Seagull
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
@@ -1898,7 +2234,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Station
         ObjectType: 3
         guid: 459eaea69f01eb43a1c87a7241af4312
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Station
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Station
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1921,7 +2257,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_StationEnter
         ObjectType: 3
         guid: 103677c08f352c4fb42c9fe1e7b99e7a
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationEnter
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_StationEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1944,7 +2280,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_StationExit
         ObjectType: 3
         guid: a671dddb69f00749bd6a9b87ccbd7e51
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_StationExit
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_StationExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1964,7 +2300,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Sun
         ObjectType: 3
         guid: 5a703e41a6d7ab46bd1f1d28a3807510
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Sun
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Sun
       maxAttenuation: 0
       maxDuration: 9.801354
       minDuration: 9.801354
@@ -1984,7 +2320,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Train
         ObjectType: 3
         guid: 7d869335d54d044f96f0aeae49977b9c
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Train
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Train
       maxAttenuation: 0
       maxDuration: 69.6
       minDuration: 69.6
@@ -2004,7 +2340,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_Wind
         ObjectType: 3
         guid: 5958b68f7bd2ed499f3b83b04b53289c
-      Path: Events\MX\MX_OceanCity\MX_OC_ST_Wind
+      Path: Events/MX/MX_OceanCity/MX_OC_ST_Wind
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2027,7 +2363,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_WindEnter
         ObjectType: 3
         guid: c6bb493db850664ba62a645c37a117f3
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindEnter
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_WindEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2050,7 +2386,7 @@ MonoBehaviour:
       - ElementName: MX_OC_ST_WindExit
         ObjectType: 3
         guid: aea97ca20b7bb04fab9843361c94bb4f
-      Path: Events\MX\MX_OceanCity\Trigger\MX_OC_ST_WindExit
+      Path: Events/MX/MX_OceanCity/Trigger/MX_OC_ST_WindExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2070,7 +2406,7 @@ MonoBehaviour:
       - ElementName: MX_OC_TrainAwake
         ObjectType: 3
         guid: fb949b7d1d02f74c8758092371545c2a
-      Path: Events\MX\MX_OceanCity\MX_OC_TrainAwake
+      Path: Events/MX/MX_OceanCity/MX_OC_TrainAwake
       maxAttenuation: 95
       maxDuration: -1
       minDuration: -1
@@ -2087,7 +2423,7 @@ MonoBehaviour:
       - ElementName: MX_OceanCity
         ObjectType: 4
         guid: 16f08d1e62da6f41b2c4d75626b03a9c
-      Path: Events\MX\MX_OceanCity
+      Path: Events/MX/MX_OceanCity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2107,7 +2443,7 @@ MonoBehaviour:
       - ElementName: MX_SL_Awake
         ObjectType: 3
         guid: 89a1801351b7344da9b7cb3ef631ed12
-      Path: Events\MX\MX_Strelitzia\MX_SL_Awake
+      Path: Events/MX/MX_Strelitzia/MX_SL_Awake
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2124,7 +2460,7 @@ MonoBehaviour:
       - ElementName: MX_Strelitzia
         ObjectType: 4
         guid: 9ae1595873b3a148a1ecd5bb4d524bcc
-      Path: Events\MX\MX_Strelitzia
+      Path: Events/MX/MX_Strelitzia
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2144,11 +2480,11 @@ MonoBehaviour:
       - ElementName: Trigger
         ObjectType: 4
         guid: 0a6d2b755e3b404396389f317dce77fc
-      Path: Events\MX\MX_OceanCity\Trigger
+      Path: Events/MX/MX_OceanCity/Trigger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-  - PhysicalPath: Events\SFX.wwu
+  - PhysicalPath: Events/SFX.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -2156,10 +2492,10 @@ MonoBehaviour:
     - ElementName: SFX
       ObjectType: 12
       guid: 76472c2a1bb628498d56368a6177b6ad
-    ParentPath: Events\SFX
+    ParentPath: Events/SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584841169476875808
+    m_lastTime: -8584840270299235752
     List:
     - name: Global
       guid: 020af29bdac3c641ba3522f13e5975e8
@@ -2174,7 +2510,7 @@ MonoBehaviour:
       - ElementName: Global
         ObjectType: 4
         guid: 020af29bdac3c641ba3522f13e5975e8
-      Path: Events\SFX\Global
+      Path: Events/SFX/Global
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2194,7 +2530,7 @@ MonoBehaviour:
       - ElementName: SFX_Awake
         ObjectType: 3
         guid: a4e5a939bb33b54aa2a7a93fc9680a77
-      Path: Events\SFX\SFX_OceanCity\SFX_Awake
+      Path: Events/SFX/SFX_OceanCity/SFX_Awake
       maxAttenuation: 0
       maxDuration: 61.368042
       minDuration: 61.368042
@@ -2214,7 +2550,7 @@ MonoBehaviour:
       - ElementName: SFX_G_ErrorMap
         ObjectType: 3
         guid: ca65f6a86c65c34c9cf61d643477030d
-      Path: Events\SFX\Global\SFX_G_ErrorMap
+      Path: Events/SFX/Global/SFX_G_ErrorMap
       maxAttenuation: 25
       maxDuration: 60.261166
       minDuration: 60.261166
@@ -2234,7 +2570,7 @@ MonoBehaviour:
       - ElementName: SFX_G_ErrorTP
         ObjectType: 3
         guid: 641e9defe4c5224681d7da21cbf91eb4
-      Path: Events\SFX\Global\SFX_G_ErrorTP
+      Path: Events/SFX/Global/SFX_G_ErrorTP
       maxAttenuation: 0
       maxDuration: 1.9427084
       minDuration: 1.9427084
@@ -2254,7 +2590,7 @@ MonoBehaviour:
       - ElementName: SFX_OC_TrainExit
         ObjectType: 3
         guid: c127c221a7fa794698f5546ab936f2e5
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainExit
+      Path: Events/SFX/SFX_OceanCity/SFX_OC_TrainExit
       maxAttenuation: 0
       maxDuration: 2.363896
       minDuration: 2.363896
@@ -2274,7 +2610,7 @@ MonoBehaviour:
       - ElementName: SFX_OC_TrainPlayerImpactIn
         ObjectType: 3
         guid: 9e6461593e869442a1fb8919daceeefd
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactIn
+      Path: Events/SFX/SFX_OceanCity/SFX_OC_TrainPlayerImpactIn
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2294,7 +2630,7 @@ MonoBehaviour:
       - ElementName: SFX_OC_TrainPlayerImpactOut
         ObjectType: 3
         guid: bb8260bcf0b95140a319d0774d04a0f8
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainPlayerImpactOut
+      Path: Events/SFX/SFX_OceanCity/SFX_OC_TrainPlayerImpactOut
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2314,7 +2650,7 @@ MonoBehaviour:
       - ElementName: SFX_OC_TrainStop
         ObjectType: 3
         guid: 00781b24c80c344db68c1e3149d1078d
-      Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainStop
+      Path: Events/SFX/SFX_OceanCity/SFX_OC_TrainStop
       maxAttenuation: 0
       maxDuration: 2.370375
       minDuration: 2.370375
@@ -2331,7 +2667,7 @@ MonoBehaviour:
       - ElementName: SFX_OceanCity
         ObjectType: 4
         guid: cf900004579f444db5d16c1f9110932f
-      Path: Events\SFX\SFX_OceanCity
+      Path: Events/SFX/SFX_OceanCity
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2348,11 +2684,11 @@ MonoBehaviour:
       - ElementName: SFX_Strelitzia
         ObjectType: 4
         guid: 5908197d3841c34ea9b286c094202447
-      Path: Events\SFX\SFX_Strelitzia
+      Path: Events/SFX/SFX_Strelitzia
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-  - PhysicalPath: Events\UI.wwu
+  - PhysicalPath: Events/UI.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -2360,10 +2696,10 @@ MonoBehaviour:
     - ElementName: UI
       ObjectType: 12
       guid: fa2e1f5bc91c3e4b90a5575f46eb1991
-    ParentPath: Events\UI
+    ParentPath: Events/UI
     guid: fa2e1f5bc91c3e4b90a5575f46eb1991
     GuidInternal: 
-    m_lastTime: -8584841169476775808
+    m_lastTime: -8584841169474775808
     List:
     - name: UI_CL_CLick
       guid: fc6b9376ac854345a1b2543d9250e5ed
@@ -2381,7 +2717,7 @@ MonoBehaviour:
       - ElementName: UI_CL_CLick
         ObjectType: 3
         guid: fc6b9376ac854345a1b2543d9250e5ed
-      Path: Events\UI\UI_Consol\UI_CL_CLick
+      Path: Events/UI/UI_Consol/UI_CL_CLick
       maxAttenuation: 0
       maxDuration: 0.3363125
       minDuration: 0.27108333
@@ -2401,7 +2737,7 @@ MonoBehaviour:
       - ElementName: UI_CL_Close
         ObjectType: 3
         guid: 8b73e806913bb14fa0d4954d8fc65bb0
-      Path: Events\UI\UI_Consol\UI_CL_Close
+      Path: Events/UI/UI_Consol/UI_CL_Close
       maxAttenuation: 0
       maxDuration: 0.41833106
       minDuration: 0.41833106
@@ -2421,7 +2757,7 @@ MonoBehaviour:
       - ElementName: UI_CL_DeleteText
         ObjectType: 3
         guid: c5d36c7e89eca44eac3a0a4e39c1acc4
-      Path: Events\UI\UI_Consol\UI_CL_DeleteText
+      Path: Events/UI/UI_Consol/UI_CL_DeleteText
       maxAttenuation: 0
       maxDuration: 0.14491667
       minDuration: 0.14491667
@@ -2441,7 +2777,7 @@ MonoBehaviour:
       - ElementName: UI_CL_GoodWord
         ObjectType: 3
         guid: a38af34e7412604a9fed3b0ac9bffa20
-      Path: Events\UI\UI_Consol\UI_CL_GoodWord
+      Path: Events/UI/UI_Consol/UI_CL_GoodWord
       maxAttenuation: 0
       maxDuration: 2.1165833
       minDuration: 2.1165833
@@ -2461,7 +2797,7 @@ MonoBehaviour:
       - ElementName: UI_CL_Line
         ObjectType: 3
         guid: 7a5fa10d0b46ec4dac2850f7fdf63faf
-      Path: Events\UI\UI_Consol\UI_CL_Line
+      Path: Events/UI/UI_Consol/UI_CL_Line
       maxAttenuation: 0
       maxDuration: 0.34452575
       minDuration: 0.34452575
@@ -2481,7 +2817,7 @@ MonoBehaviour:
       - ElementName: UI_CL_Open
         ObjectType: 3
         guid: b9b205ac4e9ff04db23e67430a0cd88d
-      Path: Events\UI\UI_Consol\UI_CL_Open
+      Path: Events/UI/UI_Consol/UI_CL_Open
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2501,7 +2837,7 @@ MonoBehaviour:
       - ElementName: UI_CL_WordEnter
         ObjectType: 3
         guid: 392ba20b5fad4b408dedb6a93aab59b5
-      Path: Events\UI\UI_Consol\UI_CL_WordEnter
+      Path: Events/UI/UI_Consol/UI_CL_WordEnter
       maxAttenuation: 0
       maxDuration: 0.4160625
       minDuration: 0.4160625
@@ -2521,7 +2857,7 @@ MonoBehaviour:
       - ElementName: UI_CL_WriteText
         ObjectType: 3
         guid: 9a73eb5f464b3949ac2c76353be079ea
-      Path: Events\UI\UI_Consol\UI_CL_WriteText
+      Path: Events/UI/UI_Consol/UI_CL_WriteText
       maxAttenuation: 0
       maxDuration: 0.15652083
       minDuration: 0.105791666
@@ -2541,7 +2877,7 @@ MonoBehaviour:
       - ElementName: UI_CL_WrongWord
         ObjectType: 3
         guid: cbde0371b562f1429484e060001e7cb2
-      Path: Events\UI\UI_Consol\UI_CL_WrongWord
+      Path: Events/UI/UI_Consol/UI_CL_WrongWord
       maxAttenuation: 0
       maxDuration: 0.48052084
       minDuration: 0.48052084
@@ -2558,7 +2894,7 @@ MonoBehaviour:
       - ElementName: UI_Consol
         ObjectType: 4
         guid: f2e34cdbfb13654d86bdec6dc7a2ddd4
-      Path: Events\UI\UI_Consol
+      Path: Events/UI/UI_Consol
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2575,12 +2911,12 @@ MonoBehaviour:
       - ElementName: UI_Menu
         ObjectType: 4
         guid: 46ede95e3882264f895b0fe49ee3df0b
-      Path: Events\UI\UI_Menu
+      Path: Events/UI/UI_Menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -2588,12 +2924,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 2cac5718ebd285428379ba00779cf157
-    ParentPath: Game Parameters\Default Work Unit
+    ParentPath: Game Parameters/Default Work Unit
     guid: 2cac5718ebd285428379ba00779cf157
     GuidInternal: 
-    m_lastTime: -8584841169479375808
+    m_lastTime: -8584841169474775808
     List: []
-  - PhysicalPath: Game Parameters\Game Parameters.wwu
+  - PhysicalPath: Game Parameters/Game Parameters.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -2601,10 +2937,10 @@ MonoBehaviour:
     - ElementName: Game Parameters
       ObjectType: 12
       guid: bab44e09d18d8841bf1f7a1ac201fe0e
-    ParentPath: Game Parameters\Game Parameters
+    ParentPath: Game Parameters/Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584840998555859808
+    m_lastTime: -8584840195003962659
     List:
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
@@ -2622,7 +2958,7 @@ MonoBehaviour:
       - ElementName: GP_OC_FT
         ObjectType: 13
         guid: ce681717342c57409452e90da9cf38af
-      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT
+      Path: Game Parameters/Game Parameters/GP_OceanCity/GP_OC_FT
     - name: GP_OC_MX
       guid: 801db89d6f20e048aa1154dd89742376
       id: 75168183
@@ -2639,7 +2975,27 @@ MonoBehaviour:
       - ElementName: GP_OC_MX
         ObjectType: 4
         guid: 801db89d6f20e048aa1154dd89742376
-      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX
+      Path: Game Parameters/Game Parameters/GP_OceanCity/GP_OC_MX
+    - name: GP_OC_MX_MemoryFoamOctDistance
+      guid: 949345a05b1a614783c0fc3a1f875970
+      id: 3471781427
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      - ElementName: GP_OC_MX_MemoryFoamOctDistance
+        ObjectType: 13
+        guid: 949345a05b1a614783c0fc3a1f875970
+      Path: Game Parameters/Game Parameters/GP_OceanCity/GP_OC_MX/GP_OC_MX_MemoryFoamOctDistance
     - name: GP_OC_WaterHigh
       guid: 9d33a5faadbe2948b320c9d7a03bb665
       id: 3815697657
@@ -2656,7 +3012,7 @@ MonoBehaviour:
       - ElementName: GP_OC_WaterHigh
         ObjectType: 13
         guid: 9d33a5faadbe2948b320c9d7a03bb665
-      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh
+      Path: Game Parameters/Game Parameters/GP_OceanCity/GP_OC_WaterHigh
     - name: GP_OceanCity
       guid: 1da2e570a6b65a468f458f76ba5d2e93
       id: 2861474034
@@ -2670,7 +3026,7 @@ MonoBehaviour:
       - ElementName: GP_OceanCity
         ObjectType: 4
         guid: 1da2e570a6b65a468f458f76ba5d2e93
-      Path: Game Parameters\Game Parameters\GP_OceanCity
+      Path: Game Parameters/Game Parameters/GP_OceanCity
     - name: GP_SL_DesertWind
       guid: 9f23e7c7e001964790e70708d12f50bb
       id: 919542588
@@ -2687,7 +3043,7 @@ MonoBehaviour:
       - ElementName: GP_SL_DesertWind
         ObjectType: 13
         guid: 9f23e7c7e001964790e70708d12f50bb
-      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind
+      Path: Game Parameters/Game Parameters/GP_Strelitzia/GP_SL_DesertWind
     - name: GP_SL_DistantRiver
       guid: 070488aec886f34aaf6ab0afd1d1b6f8
       id: 1263410310
@@ -2704,7 +3060,7 @@ MonoBehaviour:
       - ElementName: GP_SL_DistantRiver
         ObjectType: 13
         guid: 070488aec886f34aaf6ab0afd1d1b6f8
-      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver
+      Path: Game Parameters/Game Parameters/GP_Strelitzia/GP_SL_DistantRiver
     - name: GP_SL_FireCampDistance
       guid: aa1b0e9f9f31ea4c9446b2328241db5a
       id: 3954811855
@@ -2721,7 +3077,7 @@ MonoBehaviour:
       - ElementName: GP_SL_FireCampDistance
         ObjectType: 13
         guid: aa1b0e9f9f31ea4c9446b2328241db5a
-      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance
+      Path: Game Parameters/Game Parameters/GP_Strelitzia/GP_SL_FireCampDistance
     - name: GP_Strelitzia
       guid: d3e0923578a9f9439da65a0032f0865c
       id: 3361372928
@@ -2735,9 +3091,9 @@ MonoBehaviour:
       - ElementName: GP_Strelitzia
         ObjectType: 4
         guid: d3e0923578a9f9439da65a0032f0865c
-      Path: Game Parameters\Game Parameters\GP_Strelitzia
+      Path: Game Parameters/Game Parameters/GP_Strelitzia
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -2745,12 +3101,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 3d97068d9f4f69478c0dcf400d82e250
-    ParentPath: States\Default Work Unit
+    ParentPath: States/Default Work Unit
     guid: 3d97068d9f4f69478c0dcf400d82e250
     GuidInternal: 
-    m_lastTime: -8584841169477775808
+    m_lastTime: -8584841169474775808
     List: []
-  - PhysicalPath: States\States.wwu
+  - PhysicalPath: States/States.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -2758,10 +3114,10 @@ MonoBehaviour:
     - ElementName: States
       ObjectType: 12
       guid: 12f7b7ed918fd640be4092cb10051c61
-    ParentPath: States\States
+    ParentPath: States/States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584840976990343130
+    m_lastTime: -8584835768758150055
     List:
     - name: ST_MX_OC_Boat
       guid: 6dc84f2eff06614f90536d3e05cdf706
@@ -2782,7 +3138,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Boat
         ObjectType: 9
         guid: 6dc84f2eff06614f90536d3e05cdf706
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Boat
       values:
       - name: None
         guid: 6edb14de354f9240afc9b8d3e6f2a8f5
@@ -2872,7 +3228,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Buildings
         ObjectType: 9
         guid: a5022f150a580645bfd46e8e89afcd13
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Buildings
       values:
       - name: None
         guid: 6af993b0242b9346ba5fc4b9dbcec5c7
@@ -2962,7 +3318,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Child
         ObjectType: 9
         guid: ab5fb26ef56cc54693865badf9a75695
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Child
       values:
       - name: None
         guid: 9b02df53fbbb4c47be8b502d0285a37f
@@ -3055,7 +3411,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Child_FishTrig
         ObjectType: 9
         guid: 7c7b4a1c1af2ba45b0092563aaf03288
-      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger/ST_MX_OC_Child_FishTrig
       values:
       - name: In
         guid: f607775a8389d341a4bcc4e23c06bf94
@@ -3154,7 +3510,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Fish
         ObjectType: 9
         guid: f2049007a5671441998ac3c7027597fa
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Fish
       values:
       - name: None
         guid: ceb8b75f9606494493e306a3c42f2552
@@ -3247,7 +3603,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_FontainTrig
         ObjectType: 9
         guid: c0193bfe7033f74790da0376fca09ba8
-      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger/ST_MX_OC_FontainTrig
       values:
       - name: In
         guid: aac9309e853fe248998064498a7a9f29
@@ -3327,6 +3683,108 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_MX_OC_MemoryFoam
+      guid: 2e94758c78b2154099e18bcd33bbeef2
+      id: 2015358534
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_MX
+        ObjectType: 4
+        guid: e97fd7f234764d43bd850da446753ec0
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 1fa9c2191c363848975b091bdce45dd3
+      - ElementName: ST_MX_OC_MemoryFoam
+        ObjectType: 9
+        guid: 2e94758c78b2154099e18bcd33bbeef2
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger/ST_MX_OC_MemoryFoam
+      values:
+      - name: In
+        guid: 3c3f6551abb79c4dad715a878371da84
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_MemoryFoam
+          ObjectType: 9
+          guid: 2e94758c78b2154099e18bcd33bbeef2
+        - ElementName: In
+          ObjectType: 8
+          guid: 3c3f6551abb79c4dad715a878371da84
+      - name: None
+        guid: e32ac65ddf2dcc4e9c1f901ae534f372
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_MemoryFoam
+          ObjectType: 9
+          guid: 2e94758c78b2154099e18bcd33bbeef2
+        - ElementName: None
+          ObjectType: 8
+          guid: e32ac65ddf2dcc4e9c1f901ae534f372
+      - name: Out
+        guid: ce259db77e4dc24583c21bf7a20c0111
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_MX
+          ObjectType: 4
+          guid: e97fd7f234764d43bd850da446753ec0
+        - ElementName: Trigger
+          ObjectType: 4
+          guid: 1fa9c2191c363848975b091bdce45dd3
+        - ElementName: ST_MX_OC_MemoryFoam
+          ObjectType: 9
+          guid: 2e94758c78b2154099e18bcd33bbeef2
+        - ElementName: Out
+          ObjectType: 8
+          guid: ce259db77e4dc24583c21bf7a20c0111
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_MX_OC_Ocean
       guid: 60fefb786bc5bb4a8677af8f1e02f1d2
       id: 3608668146
@@ -3346,7 +3804,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Ocean
         ObjectType: 9
         guid: 60fefb786bc5bb4a8677af8f1e02f1d2
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Ocean
       values:
       - name: None
         guid: daa5c0933dcb7b468990175f96e85088
@@ -3436,7 +3894,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Seagull
         ObjectType: 9
         guid: a47470df49383a4698071af74161091b
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Seagull
       values:
       - name: None
         guid: c017c23dfcbbd84c9c43cc2847aebd4a
@@ -3526,7 +3984,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Station
         ObjectType: 9
         guid: 81c4c421e5e7404ebbc6e65f6f311901
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Station
       values:
       - name: None
         guid: 45fe67ab331425459ded9a2c5f061cf2
@@ -3619,7 +4077,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_StationTrig
         ObjectType: 9
         guid: 45a650ef53087049a38ecd727872d00e
-      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger/ST_MX_OC_StationTrig
       values:
       - name: In
         guid: 7d3f99576d601b438cf5b31586ff06fc
@@ -3718,7 +4176,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Sun
         ObjectType: 9
         guid: 593aa66fe452744989e4fc9e11fcb91e
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Sun
       values:
       - name: None
         guid: 2ed18bf4e4024b438da3947667b302be
@@ -3808,7 +4266,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Train
         ObjectType: 9
         guid: 87ba9f4223118143b053349b63893fee
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Train
       values:
       - name: None
         guid: 8d36e56eb0039d40a658350e4b20862f
@@ -3898,7 +4356,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_Wind
         ObjectType: 9
         guid: 7c13efe2d1268e4e836205bb80842108
-      Path: States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind
+      Path: States/States/ST_OceanCity/ST_OC_MX/ST_MX_OC_Wind
       values:
       - name: None
         guid: 343fa61c3fa8ef42936b3ce0a86e9340
@@ -3991,7 +4449,7 @@ MonoBehaviour:
       - ElementName: ST_MX_OC_WindTrig
         ObjectType: 9
         guid: 7ed55a2d46bf1c40a9a6be217dd4caa3
-      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger/ST_MX_OC_WindTrig
       values:
       - name: In
         guid: 931b6f201d93234ab0f45051c1a6d852
@@ -4087,8 +4545,86 @@ MonoBehaviour:
       - ElementName: ST_OC_MX
         ObjectType: 4
         guid: e97fd7f234764d43bd850da446753ec0
-      Path: States\States\ST_OceanCity\ST_OC_MX
+      Path: States/States/ST_OceanCity/ST_OC_MX
       values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_OC_Occlusion
+      guid: cbcd1e84d0747047a994c36559f7d3c4
+      id: 2352230403
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_Occlusion
+        ObjectType: 9
+        guid: cbcd1e84d0747047a994c36559f7d3c4
+      Path: States/States/ST_OceanCity/ST_OC_Occlusion
+      values:
+      - name: In
+        guid: c7df686b1de9844dabaf76a218ace4bd
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Occlusion
+          ObjectType: 9
+          guid: cbcd1e84d0747047a994c36559f7d3c4
+        - ElementName: In
+          ObjectType: 8
+          guid: c7df686b1de9844dabaf76a218ace4bd
+      - name: None
+        guid: 27ab314af028b942a8b319b7aefd1df9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Occlusion
+          ObjectType: 9
+          guid: cbcd1e84d0747047a994c36559f7d3c4
+        - ElementName: None
+          ObjectType: 8
+          guid: 27ab314af028b942a8b319b7aefd1df9
+      - name: Out
+        guid: 86ea29f63e0d66469e71fb4850b3c1db
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Occlusion
+          ObjectType: 9
+          guid: cbcd1e84d0747047a994c36559f7d3c4
+        - ElementName: Out
+          ObjectType: 8
+          guid: 86ea29f63e0d66469e71fb4850b3c1db
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -4108,7 +4644,7 @@ MonoBehaviour:
       - ElementName: ST_OC_SFXTrainImpact
         ObjectType: 9
         guid: 282e97e1acd3b24d97a2c92c8ce58aed
-      Path: States\States\ST_OceanCity\ST_OC_SFXTrainImpact
+      Path: States/States/ST_OceanCity/ST_OC_SFXTrainImpact
       values:
       - name: In
         guid: 6f5fcab8e9cb5b41ac56167ef28029ad
@@ -4186,7 +4722,7 @@ MonoBehaviour:
       - ElementName: ST_OC_TrainInsideStation
         ObjectType: 9
         guid: cb66f91e160a464ab89577af63c6c7c9
-      Path: States\States\ST_OceanCity\ST_OC_TrainInsideStation
+      Path: States/States/ST_OceanCity/ST_OC_TrainInsideStation
       values:
       - name: In
         guid: cb78e226ce86a8498b6ff040a616eb7f
@@ -4261,7 +4797,28 @@ MonoBehaviour:
       - ElementName: ST_OceanCity
         ObjectType: 4
         guid: 5d0c55818c3c8847a893d7c1da597f12
-      Path: States\States\ST_OceanCity
+      Path: States/States/ST_OceanCity
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB
+      guid: af218771d29b7444a39dd742e316db06
+      id: 2285477407
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      Path: States/States/ST_Strelitzia/ST_SL_AMB
       values: []
       ValueGuids: []
       ValueIcons: []
@@ -4279,10 +4836,13 @@ MonoBehaviour:
       - ElementName: ST_Strelitzia
         ObjectType: 4
         guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
       - ElementName: ST_SL_AMB_DesertWind
         ObjectType: 9
         guid: 145e3ebbdc35a549bf75b6f82f994928
-      Path: States\States\ST_Strelitzia\ST_SL_AMB_DesertWind
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_DesertWind
       values:
       - name: In
         guid: 04aa8608a5d25945b210048eac48ae66
@@ -4297,6 +4857,9 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_DesertWind
           ObjectType: 9
           guid: 145e3ebbdc35a549bf75b6f82f994928
@@ -4316,6 +4879,9 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_DesertWind
           ObjectType: 9
           guid: 145e3ebbdc35a549bf75b6f82f994928
@@ -4335,12 +4901,105 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_DesertWind
           ObjectType: 9
           guid: 145e3ebbdc35a549bf75b6f82f994928
         - ElementName: Out
           ObjectType: 8
           guid: fa85324a0ad9c44ab6d29e6982725cc0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB_MuteCave
+      guid: 14adac8964e42a4287835c51381ed4ea
+      id: 19052470
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      - ElementName: ST_SL_AMB_MuteCave
+        ObjectType: 9
+        guid: 14adac8964e42a4287835c51381ed4ea
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_MuteCave
+      values:
+      - name: In
+        guid: c484d78a51d7e5429f8e504b4cfaecee
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteCave
+          ObjectType: 9
+          guid: 14adac8964e42a4287835c51381ed4ea
+        - ElementName: In
+          ObjectType: 8
+          guid: c484d78a51d7e5429f8e504b4cfaecee
+      - name: None
+        guid: 4b9549cf4669eb41b3fba3a9c29fe84e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteCave
+          ObjectType: 9
+          guid: 14adac8964e42a4287835c51381ed4ea
+        - ElementName: None
+          ObjectType: 8
+          guid: 4b9549cf4669eb41b3fba3a9c29fe84e
+      - name: Out
+        guid: d4e7305b46fcc34a9309710df1164734
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteCave
+          ObjectType: 9
+          guid: 14adac8964e42a4287835c51381ed4ea
+        - ElementName: Out
+          ObjectType: 8
+          guid: d4e7305b46fcc34a9309710df1164734
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -4357,10 +5016,13 @@ MonoBehaviour:
       - ElementName: ST_Strelitzia
         ObjectType: 4
         guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
       - ElementName: ST_SL_AMB_MuteDesert
         ObjectType: 9
         guid: be8ddcc6ec132e4a8252f8b11a431ac7
-      Path: States\States\ST_Strelitzia\ST_SL_AMB_MuteDesert
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_MuteDesert
       values:
       - name: In
         guid: ec640d713953644e97dd8f73bc4eb3f0
@@ -4375,6 +5037,9 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_MuteDesert
           ObjectType: 9
           guid: be8ddcc6ec132e4a8252f8b11a431ac7
@@ -4394,6 +5059,9 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_MuteDesert
           ObjectType: 9
           guid: be8ddcc6ec132e4a8252f8b11a431ac7
@@ -4413,12 +5081,285 @@ MonoBehaviour:
         - ElementName: ST_Strelitzia
           ObjectType: 4
           guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
         - ElementName: ST_SL_AMB_MuteDesert
           ObjectType: 9
           guid: be8ddcc6ec132e4a8252f8b11a431ac7
         - ElementName: Out
           ObjectType: 8
           guid: 859250dc91d5324580f89ce7a3fb9b43
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB_MuteJungle
+      guid: c3a337520e43804eb958c6e6177593a9
+      id: 254875094
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      - ElementName: ST_SL_AMB_MuteJungle
+        ObjectType: 9
+        guid: c3a337520e43804eb958c6e6177593a9
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_MuteJungle
+      values:
+      - name: In
+        guid: 36fcdb77c740e5458b186c3507fa7f2c
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteJungle
+          ObjectType: 9
+          guid: c3a337520e43804eb958c6e6177593a9
+        - ElementName: In
+          ObjectType: 8
+          guid: 36fcdb77c740e5458b186c3507fa7f2c
+      - name: None
+        guid: 40dae889d950af45b06a9f952c1d4267
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteJungle
+          ObjectType: 9
+          guid: c3a337520e43804eb958c6e6177593a9
+        - ElementName: None
+          ObjectType: 8
+          guid: 40dae889d950af45b06a9f952c1d4267
+      - name: Out
+        guid: 1b87fda407ea8f44a357144c5579a850
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteJungle
+          ObjectType: 9
+          guid: c3a337520e43804eb958c6e6177593a9
+        - ElementName: Out
+          ObjectType: 8
+          guid: 1b87fda407ea8f44a357144c5579a850
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB_MuteLab
+      guid: 26fa78165d4f8648a6adc516608cc9b6
+      id: 2759765522
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      - ElementName: ST_SL_AMB_MuteLab
+        ObjectType: 9
+        guid: 26fa78165d4f8648a6adc516608cc9b6
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_MuteLab
+      values:
+      - name: In
+        guid: d9ebc4143e20494f931083e260412b5e
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteLab
+          ObjectType: 9
+          guid: 26fa78165d4f8648a6adc516608cc9b6
+        - ElementName: In
+          ObjectType: 8
+          guid: d9ebc4143e20494f931083e260412b5e
+      - name: None
+        guid: e2bc6a5d3d8a0a4097ce6a8c44a7da60
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteLab
+          ObjectType: 9
+          guid: 26fa78165d4f8648a6adc516608cc9b6
+        - ElementName: None
+          ObjectType: 8
+          guid: e2bc6a5d3d8a0a4097ce6a8c44a7da60
+      - name: Out
+        guid: 6ab64bc1175624419694f5a1f9b5e3ba
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteLab
+          ObjectType: 9
+          guid: 26fa78165d4f8648a6adc516608cc9b6
+        - ElementName: Out
+          ObjectType: 8
+          guid: 6ab64bc1175624419694f5a1f9b5e3ba
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_SL_AMB_MuteSilo
+      guid: 30e8e3e547a82f4ea2ffc36cb4590504
+      id: 3369780566
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      - ElementName: ST_SL_AMB_MuteSilo
+        ObjectType: 9
+        guid: 30e8e3e547a82f4ea2ffc36cb4590504
+      Path: States/States/ST_Strelitzia/ST_SL_AMB/ST_SL_AMB_MuteSilo
+      values:
+      - name: In
+        guid: 1784e8542a20864aa7b70a06a10cfda8
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteSilo
+          ObjectType: 9
+          guid: 30e8e3e547a82f4ea2ffc36cb4590504
+        - ElementName: In
+          ObjectType: 8
+          guid: 1784e8542a20864aa7b70a06a10cfda8
+      - name: None
+        guid: a36a7e9c2b4f0b4394752405b01f1428
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteSilo
+          ObjectType: 9
+          guid: 30e8e3e547a82f4ea2ffc36cb4590504
+        - ElementName: None
+          ObjectType: 8
+          guid: a36a7e9c2b4f0b4394752405b01f1428
+      - name: Out
+        guid: 04b6ae6ea511e24e8da89b44e5b338e6
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_MuteSilo
+          ObjectType: 9
+          guid: 30e8e3e547a82f4ea2ffc36cb4590504
+        - ElementName: Out
+          ObjectType: 8
+          guid: 04b6ae6ea511e24e8da89b44e5b338e6
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -4435,7 +5376,7 @@ MonoBehaviour:
       - ElementName: ST_Strelitzia
         ObjectType: 4
         guid: eaa2a829350d754e9212becd33eedce8
-      Path: States\States\ST_Strelitzia
+      Path: States/States/ST_Strelitzia
       values: []
       ValueGuids: []
       ValueIcons: []
@@ -4459,13 +5400,13 @@ MonoBehaviour:
       - ElementName: Trigger
         ObjectType: 4
         guid: 1fa9c2191c363848975b091bdce45dd3
-      Path: States\States\ST_OceanCity\ST_OC_MX\Trigger
+      Path: States/States/ST_OceanCity/ST_OC_MX/Trigger
       values: []
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -4473,12 +5414,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: a80bb048c613e044aca6b1ce1d2b909b
-    ParentPath: Switches\Default Work Unit
+    ParentPath: Switches/Default Work Unit
     guid: a80bb048c613e044aca6b1ce1d2b909b
     GuidInternal: 
-    m_lastTime: -8584841169596075808
+    m_lastTime: -8584841169594775808
     List: []
-  - PhysicalPath: Switches\Switch.wwu
+  - PhysicalPath: Switches/Switch.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -4486,10 +5427,10 @@ MonoBehaviour:
     - ElementName: Switch
       ObjectType: 12
       guid: ec7f80df76c16843ad435dd5726a9c1e
-    ParentPath: Switches\Switch
+    ParentPath: Switches/Switch
     guid: ec7f80df76c16843ad435dd5726a9c1e
     GuidInternal: 
-    m_lastTime: -8584841169596075808
+    m_lastTime: -8584841169594775808
     List:
     - name: SW_FT_OC
       guid: 9f48e04beda94a4090ed8e76610a0fac
@@ -4504,7 +5445,7 @@ MonoBehaviour:
       - ElementName: SW_FT_OC
         ObjectType: 11
         guid: 9f48e04beda94a4090ed8e76610a0fac
-      Path: Switches\Switch\SW_FT_OC
+      Path: Switches/Switch/SW_FT_OC
       values:
       - name: SW_FT_OC_Ground
         guid: df824b92cd3ff547b69e68f17d536e6b
@@ -4702,7 +5643,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -4710,14 +5651,14 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 1ec1b561a74fdc4eb1a0d2d1128b54a0
-    ParentPath: Triggers\Default Work Unit
+    ParentPath: Triggers/Default Work Unit
     guid: 1ec1b561a74fdc4eb1a0d2d1128b54a0
     GuidInternal: 
-    m_lastTime: -8584841169595875808
+    m_lastTime: -8584841169594775808
     List: []
-  ExpandedFileSystemItemIds: 0100000002000000030000000b0000001c0000001d000000220000002500000026000000280000002c0000004100000042000000430000004c0000004d000000
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 010000000200000003000000060000001c0000001d0000001f000000220000002500000026000000280000002c0000004100000042000000430000004c0000004d0000007f000000fa000000fb000000fc00000004010000
+  ExpandedWaapiItemIds: 01000000020000000300000006000000070000000a0000001c0000001d0000001f000000220000002500000026000000280000002c0000004100000042000000430000004c0000004d0000005f0000007f000000fa000000fb000000fc00000004010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
