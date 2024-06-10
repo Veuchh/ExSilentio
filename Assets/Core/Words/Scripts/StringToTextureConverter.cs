@@ -21,8 +21,6 @@ public class StringToTextureConverter : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
-        GenerateDefaultTexture();
     }
 
     private void GenerateDefaultTexture()
