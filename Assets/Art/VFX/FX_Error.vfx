@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 325
     y: -252
     width: 1040
-    height: 1517
+    height: 1497
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,8 +64,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Main_Tex
-    path: Main_Tex
+  - name: _Main_Tex
+    path: _Main_Tex
     tooltip: 
     sheetType: m_NamedObject
     realType: Texture2D
@@ -566,7 +566,7 @@ MonoBehaviour:
   particlePerStripCount: 16
   needsComputeBounds: 0
   boundsMode: 0
-  m_Space: 0
+  m_Space: 1
 --- !u!114 &8926484042661614580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,7 +2587,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614671}
-  m_ExposedName: Main_Tex
+  m_ExposedName: _Main_Tex
   m_Exposed: 1
   m_Order: 1
   m_Category: 

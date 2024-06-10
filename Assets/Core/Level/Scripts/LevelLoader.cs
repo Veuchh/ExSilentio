@@ -1,6 +1,5 @@
 using LW.Audio;
 using LW.Data;
-using LW.Level;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,56 +7,61 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+namespace LW.Level
 {
-    [SerializeField, Scene] List<string> levels;
-
-    public static LevelLoader Instance;
-    public List<string> Levels => levels;
-
-    void Awake()
+    public class LevelLoader : MonoBehaviour
     {
-        Instance = this;
-        DontDestroyOnLoad(this);
-    }
+        [SerializeField, Scene] List<string> levels;
 
-    public FunctionResult ChangeLevel(string args, string baseInput)
-    {
-        if (SceneManager.GetActiveScene().name.ToLower() == args.ToLower())
-            return FunctionResult.Interrupted;
+        public static LevelLoader Instance;
+        public List<string> Levels => levels;
 
-        // Get build scenes
-        var sceneNumber = SceneManager.sceneCountInBuildSettings;
-
-        for (int i = 0; i < sceneNumber; i++)
+        void Awake()
         {
-            string sceneName = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i).ToLower());
+            Instance = this;
+            DontDestroyOnLoad(this);
+            Debug.LogWarning("TODO : make it load mycelium instead of ocean city");
+            MainMenu.onMainMenuPressPlay += () => ChangeLevel("Mycelium", "Mycelium");
+        }
 
-            if (sceneName == args.ToLower())
+        public FunctionResult ChangeLevel(string args, string baseInput)
+        {
+            if (SceneManager.GetActiveScene().name.ToLower() == args.ToLower())
+                return FunctionResult.Interrupted;
+
+            // Get build scenes
+            var sceneNumber = SceneManager.sceneCountInBuildSettings;
+
+            for (int i = 0; i < sceneNumber; i++)
             {
-                WwiseInterface.Instance.StopAll();
-                StartCoroutine(LoadScene(i, baseInput));
-                return FunctionResult.Success;
+                string sceneName = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i).ToLower());
+
+                if (sceneName == args.ToLower())
+                {
+                    WwiseInterface.Instance.StopAll();
+                    StartCoroutine(LoadScene(i, baseInput));
+                    return FunctionResult.Success;
+                }
             }
+
+            Debug.Log("No scene with that name exists");
+            return FunctionResult.Failed;
         }
 
-        Debug.Log("No scene with that name exists");
-        return FunctionResult.Failed;
-    }
-
-    IEnumerator LoadScene(int sceneIndex, string translatedSceneName)
-    {
-        var asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
-        LoadingScreen.Instance.ToggleLoadingScreen(true, translatedSceneName);
-
-        while (asyncOperation.progress < 1)
+        IEnumerator LoadScene(int sceneIndex, string translatedSceneName)
         {
-            yield return null;
-            LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
+            var asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
+            LoadingScreen.Instance.ToggleLoadingScreen(true, translatedSceneName);
+
+            while (asyncOperation.progress < 1)
+            {
+                yield return null;
+                LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
+            }
+
+            yield return new WaitForSeconds(.2f);
+
+            LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);
         }
-
-        yield return new WaitForSeconds(.2f);
-
-        LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);
     }
 }

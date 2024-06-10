@@ -121,6 +121,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6180933224758124957}
+    - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: b26cb81dedcacb84386c75a5ae491bfe,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7640308551536901143}
     - targetCorrespondingSourceObject: {fileID: 3779745573541866595, guid: b26cb81dedcacb84386c75a5ae491bfe,
         type: 3}
       insertIndex: -1
@@ -158,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   attachedRenderer: {fileID: 3561541910814846058}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -183,6 +188,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  isTextureVertical: 0
+  type: 0
 --- !u!23 &1592632659322488559 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3901992563441801604, guid: b26cb81dedcacb84386c75a5ae491bfe,
@@ -209,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   attachedRenderer: {fileID: 7035070571898595329}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -234,6 +242,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  isTextureVertical: 0
+  type: 0
 --- !u!23 &3561541910814846058 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -1247954597880312583, guid: b26cb81dedcacb84386c75a5ae491bfe,
@@ -260,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   attachedRenderer: {fileID: 8362756183604374002}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -285,6 +296,30 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  isTextureVertical: 0
+  type: 0
+--- !u!64 &7640308551536901143
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6204061460945061312}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: b26cb81dedcacb84386c75a5ae491bfe, type: 3}
 --- !u!23 &7035070571898595329 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4495414801083549842, guid: b26cb81dedcacb84386c75a5ae491bfe,
@@ -311,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   attachedRenderer: {fileID: 1592632659322488559}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -336,6 +372,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  isTextureVertical: 0
+  type: 0
 --- !u!1 &7761714309253483760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3779745573541866595, guid: b26cb81dedcacb84386c75a5ae491bfe,
@@ -356,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   attachedRenderer: {fileID: 7979569635782315926}
+  vfx: {fileID: 0}
   revealCurve:
     serializedVersion: 2
     m_Curve:
@@ -381,6 +420,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   revealDuration: 1
+  isTextureVertical: 0
+  type: 0
 --- !u!23 &7979569635782315926 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3566390031902043909, guid: b26cb81dedcacb84386c75a5ae491bfe,

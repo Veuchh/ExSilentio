@@ -173,6 +173,8 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  hintDatabse: {fileID: 0}
+  hintsBase: []
 --- !u!1001 &5215014768345035338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,6 +262,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2679675687036043646}
+    - targetCorrespondingSourceObject: {fileID: 3013644446323254477, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2566647950726941665}
     - targetCorrespondingSourceObject: {fileID: 5309786613205019107, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,
         type: 3}
       insertIndex: -1
@@ -599,6 +605,28 @@ MonoBehaviour:
   revealDuration: 1
   isTextureVertical: 0
   type: 0
+--- !u!64 &2566647950726941665
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029531763218192007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7545831556655825222, guid: 018b7d115884eb641bf486e147d822ff, type: 3}
 --- !u!4 &7693900001675725885 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2493108551335902839, guid: 8943cd0df36e8fd48aeec2e6f9d5dd45,

@@ -37,7 +37,7 @@ namespace LW.Level
             Instance = null;
         }
 
-        public void RegisterBundle(RevealableObjectBundle newBundle)
+        public void RegisterBundle(RevealableObjectBundle newBundle, bool revealByDefault)
         {
             if (!bundles.Contains(newBundle))
             {
@@ -47,11 +47,16 @@ namespace LW.Level
                 //reveal the bundle if it is saved
                 string savedWord = SaveLoad.GetWordFromPlayerPrefs(newBundle.GetBundleKey);
 
-                if (!string.IsNullOrEmpty(savedWord))
+                WordID id = (WordID)Enum.Parse(typeof(WordID), savedWord);
+                if (revealByDefault)
                 {
-                    WordID id = (WordID)Enum.Parse(typeof(WordID), savedWord);
-                    newBundle.RevealBundle(id, stringTable, false);
+                    id = newBundle.ID;
                 }
+                else if (!string.IsNullOrEmpty(savedWord))
+                {
+                    id = (WordID)Enum.Parse(typeof(WordID), savedWord);
+                }
+                newBundle.RevealBundle(id, stringTable, false);
             }
             else
             {

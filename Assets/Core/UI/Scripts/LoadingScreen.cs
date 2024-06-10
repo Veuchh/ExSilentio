@@ -8,6 +8,7 @@ public class LoadingScreen : MonoBehaviour
 {
     public static LoadingScreen Instance;
 
+    [SerializeField] Canvas canvas;
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] Image mask;
     [SerializeField] TextMeshProUGUI backgroundText;
@@ -22,7 +23,7 @@ public class LoadingScreen : MonoBehaviour
     public void ToggleLoadingScreen(bool toggle, string levelName = "")
     {
         mask.fillAmount = 0;
-
+        canvas.sortingOrder = toggle ? 2 : -1;
         canvasGroup.alpha = toggle ? 1 : 0;
 
         levelName = levelName.ToUpper();

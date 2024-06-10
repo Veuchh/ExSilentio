@@ -16,8 +16,11 @@ namespace LW.Level
         [SerializeField] GameObject sideColliders;
         [SerializeField] Vector3 startPosition;
         [SerializeField] Vector3 endPosition;
+        [SerializeField] float cooldownAfterUse = 3f;
+
         float startTime;
         float endTime;
+        float cooldownTime;
         bool isMoving = false;
         Vector3 targetPos;
 
@@ -49,7 +52,7 @@ namespace LW.Level
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.CompareTag(PLAYER_TAG))
+            if (Time.time < cooldownTime || !other.CompareTag(PLAYER_TAG))
                 return;
 
             if (platform.position == startPosition && !isMoving)
@@ -85,6 +88,8 @@ namespace LW.Level
             startTime = Time.time;
             endTime = Time.time + elevatorDuration;
             isMoving = true;
+
+            cooldownTime = endTime + cooldownAfterUse;
         }
     }
 }

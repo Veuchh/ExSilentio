@@ -19,6 +19,7 @@ namespace LW.Level
         [SerializeField, FormerlySerializedAs("itemsRevealed")] List<RevealableItem> itemsInBundle;
         [SerializeField] WordID awaitedID;
         [SerializeField] ObjectImportance objectImportance;
+        [SerializeField] bool revealByDefault;
         [SerializeField] bool playWwiseEventOnReveal = false;
         [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
@@ -55,7 +56,7 @@ namespace LW.Level
         {
             yield return null;
 
-            RevealableObjectHandler.Instance.RegisterBundle(this);
+            RevealableObjectHandler.Instance.RegisterBundle(this, revealByDefault);
 
             foreach (string hintID in HintsBase)
                 hints.Add(hintID, false);
@@ -64,8 +65,13 @@ namespace LW.Level
         public void RevealBundle(WordID usedID, LocalizedStringTable stringTable, bool saveToPlayerPrefs = true)
         {
             Dictionary<string, Texture2D> textureMaps = new Dictionary<string, Texture2D>();
+
             //Get texture from input
-            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue, isVertical: isTextureVertical);
+            Texture2D wordTexture = StringToTextureConverter.Instance.GetTextureFromInput(
+                stringTable.GetTable().GetEntry(
+                    usedID.ToString()).LocalizedValue, 
+                    isVertical: isTextureVertical);
+
             textureMaps.Add(
                 stringTable.GetTable().GetEntry(usedID.ToString()).LocalizedValue + "_" + (isTextureVertical ? "V" : "H"),
                 wordTexture);

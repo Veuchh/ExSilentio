@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace LW.Data
@@ -14,6 +12,6 @@ namespace LW.Data
         public static Vector2 CurrentLookInput { get => currentCameraInput; set => currentCameraInput = value; }
         public static bool IsWordModeEnabled { get => isWordModeEnabled; set => isWordModeEnabled = value; }
 
-        public static bool CanMove => !isWordModeEnabled;
+        public static bool CanMove => !isWordModeEnabled && StaticData.OpenWindowsAmount == 0;
     }
 }
