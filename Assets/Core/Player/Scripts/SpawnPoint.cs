@@ -53,6 +53,16 @@ namespace LW.Player
                 go.transform.localRotation = Quaternion.identity;
             }
 
+            foreach (var item in FindObjectsOfType<AkTriggerEnter>())
+            {
+                item.triggerObject = player;
+            }
+
+            foreach (var item in FindObjectsOfType<AkTriggerExit>())
+            {
+                item.triggerObject = player;
+            }
+
             Destroy(gameObject);
         }
     }
