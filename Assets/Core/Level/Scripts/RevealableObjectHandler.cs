@@ -81,6 +81,14 @@ namespace LW.Level
                     if (bundle.ID == queryResult.MainResult.ID)
                         isAlreadyRevealed = true;
 
+                    else
+                        foreach (WordDatabaseEntry entry in queryResult.SecondaryResults)
+                            if (entry.ID == bundle.ID)
+                            {
+                                isAlreadyRevealed = true;
+                                break;
+                            }
+
                     continue;
                 }
 
