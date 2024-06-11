@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{05AEF913-CCCB-7D37-137F-F23A63FA4E05}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{11075FA8-3D14-A682-4EC6-4250CB61F397}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -40,7 +40,7 @@
 				</File>
 				<File Id="155348933" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabMain.wav</ShortName>
-					<CachePath>SFX/AMB_SL_LabMain_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_LabMain_56CEF360.wem</CachePath>
 				</File>
 				<File Id="159779369" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_SiloMain.wav</ShortName>
@@ -48,7 +48,7 @@
 				</File>
 				<File Id="167603772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabElectricitySparks.wav</ShortName>
-					<CachePath>SFX/AMB_SL_LabElectricitySparks_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_LabElectricitySparks_56CEF360.wem</CachePath>
 				</File>
 				<File Id="174142118" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabElectricityBuzz-003.wav</ShortName>
@@ -192,7 +192,7 @@
 				</File>
 				<File Id="913542370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabScreenGlitch.wav</ShortName>
-					<CachePath>SFX/AMB_SL_LabScreenGlitch_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_LabScreenGlitch_56CEF360.wem</CachePath>
 				</File>
 				<File Id="914647982" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_SL_St_BaliseWind.wav</ShortName>
@@ -221,6 +221,8 @@
 			<Events>
 				<Event Id="2342327891" Name="AMB_SL_Awake" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_Awake" GUID="{F935493A-DF8F-4A72-A64F-0FBD0498C152}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="155348933"/>
+						<MediaRef Id="159779369"/>
 						<MediaRef Id="287394984"/>
 						<MediaRef Id="650248975"/>
 						<MediaRef Id="893978070"/>
@@ -300,18 +302,13 @@
 						<MediaRef Id="437893352"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="331303300" Name="AMB_SL_LabElectricitySparks" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabElectricitySparks" GUID="{424A92A5-DAFE-4341-B32A-A081F3426B4E}" MaxAttenuation="35" DurationType="OneShot" DurationMin="82.43915" DurationMax="82.43915">
+				<Event Id="331303300" Name="AMB_SL_LabElectricitySparks" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabElectricitySparks" GUID="{424A92A5-DAFE-4341-B32A-A081F3426B4E}" MaxAttenuation="35" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="167603772"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1642519436" Name="AMB_SL_LabMain" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabMain" GUID="{6524398C-1B13-454C-88B6-63D99CFAE282}" DurationType="OneShot" DurationMin="106.48511" DurationMax="106.48511">
-					<MediaRefs>
-						<MediaRef Id="155348933"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3095653304" Name="AMB_SL_LabMecaniques" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques" GUID="{2BAD7944-6DBE-4B1A-A519-12F7B45D04A3}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3515774120" Name="AMB_SL_LabScreenGlitch" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabScreenGlitch" GUID="{04DBF836-76FD-47AA-9C04-FC9C26647479}" MaxAttenuation="25" DurationType="OneShot" DurationMin="34.491062" DurationMax="34.491062">
+				<Event Id="3515774120" Name="AMB_SL_LabScreenGlitch" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_LabScreenGlitch" GUID="{04DBF836-76FD-47AA-9C04-FC9C26647479}" MaxAttenuation="25" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="913542370"/>
 					</MediaRefs>
@@ -319,11 +316,6 @@
 				<Event Id="3406394736" Name="AMB_SL_SiloBird" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_SiloBird" GUID="{5D6FDCAD-7A07-4A2D-85EB-8A66909879D7}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1060224785"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1370622790" Name="AMB_SL_SiloMain" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_SiloMain" GUID="{83BC9379-5F82-4181-9E0B-43A3779240F5}" DurationType="OneShot" DurationMin="60.303604" DurationMax="60.303604">
-					<MediaRefs>
-						<MediaRef Id="159779369"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="916999477" Name="AMB_SL_SiloRiver" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver" GUID="{25681762-3866-4DD7-912A-D79B72FD0F2D}" MaxAttenuation="100" DurationType="Infinite">
@@ -638,7 +630,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{15095B57-AD05-395F-2116-DE3FCFA23108}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{7372B3B2-BB37-158E-06EA-687EB144B2D9}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -647,9 +639,9 @@
 					<Plugin Id="622518601" Name="Have_U_Ever_Been_Outside (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Plains\[Effect Slot [0]: (RoomVerb)]\Have_U_Ever_Been_Outside (Custom)" GUID="{EDA24689-317C-41D5-94B3-00CFF37B60E2}" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</Custom>
 				<ShareSets>
-					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" ObjectPath="\Effects\Factory Effects\RoomVerb\Exteriors\Have_U_Ever_Been_Outside" GUID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="602546716" Name="Room_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Large" GUID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1990128658" Name="Room_Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium" GUID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2849147824" Name="Medium" ObjectPath="\Effects\Factory Effects\RoomVerb\Cathedrals\Medium" GUID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Medium_High_Absorbtion" GUID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2995775460" Name="Room_Small" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Small" GUID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="3900114836" Name="Metal_Hangar" ObjectPath="\Effects\Factory Effects\RoomVerb\Huge Spaces\Metal_Hangar" GUID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -686,7 +678,7 @@
 				<AuxBus Id="219304270" Name="Jungle" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Jungle" GUID="{3C336C41-2EA3-4DB6-9C66-5C9C98D583FC}">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="48620415"/>
+							<PluginRef Id="2849147824"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -4163,5 +4155,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{277C4386-4040-CCF2-0000-CC4C9F242371}</FileHash>
+	<FileHash>{5CF3924A-A10B-38E3-A964-D4F873C5297A}</FileHash>
 </SoundBanksInfo>

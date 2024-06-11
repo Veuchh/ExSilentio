@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584834882792402478
+    m_lastTime: -8584834776801382369
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -633,7 +633,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584834959165399435
+    m_lastTime: -8584834792603324205
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -689,7 +689,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584835680214675808
+    m_lastTime: -8584834783279842710
     List:
     - name: AMB_Menu
       guid: be1104a850176942b3b353fb254c6e68
@@ -1318,8 +1318,8 @@ MonoBehaviour:
         guid: 886ee8c2ec2fcd46b36596ee982b3bec
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_CaveFireCamp
       maxAttenuation: 100
-      maxDuration: 88
-      minDuration: 88
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_SL_CaveWater
       guid: 1de8cfd867b39743891c19a7395a11b4
       id: 2027462034
@@ -1420,6 +1420,66 @@ MonoBehaviour:
       maxAttenuation: 25
       maxDuration: 39
       minDuration: 39
+    - name: AMB_SL_LabComputerGlitch
+      guid: d64e92d99b2bfb4f8895a81d8aee9c27
+      id: 1056831651
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_LabComputerGlitch
+        ObjectType: 3
+        guid: d64e92d99b2bfb4f8895a81d8aee9c27
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabComputerGlitch
+      maxAttenuation: 25
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_SL_LabElectricityBuzz
+      guid: 07ea3b39fb9a4e40bd5fdb2eb3b811f8
+      id: 44617005
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_LabElectricityBuzz
+        ObjectType: 3
+        guid: 07ea3b39fb9a4e40bd5fdb2eb3b811f8
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabElectricityBuzz
+      maxAttenuation: 20
+      maxDuration: 47.60321
+      minDuration: 23.603209
+    - name: AMB_SL_LabElectricitySparks
+      guid: a5924a42feda4143b32aa081f3426b4e
+      id: 331303300
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_LabElectricitySparks
+        ObjectType: 3
+        guid: a5924a42feda4143b32aa081f3426b4e
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabElectricitySparks
+      maxAttenuation: 35
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_SL_LabMecaniques
       guid: 4479ad2bbe6d1a4ba51912f7b45d04a3
       id: 3095653304
@@ -1440,6 +1500,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: AMB_SL_LabScreenGlitch
+      guid: 36f8db04fd76aa479c04fc9c26647479
+      id: 3515774120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_Strelitzia
+        ObjectType: 4
+        guid: 22547c169459f8469d3eb24a109739d7
+      - ElementName: AMB_SL_LabScreenGlitch
+        ObjectType: 3
+        guid: 36f8db04fd76aa479c04fc9c26647479
+      Path: Events\AMB\AMB_Strelitzia\AMB_SL_LabScreenGlitch
+      maxAttenuation: 25
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_SL_SiloBird
       guid: addc6f5d077a2d4a85eb8a66909879d7
       id: 3406394736
@@ -1460,26 +1540,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: AMB_SL_SiloMain
-      guid: 7993bc83825f81419e0b43a3779240f5
-      id: 1370622790
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: AMB
-        ObjectType: 12
-        guid: 90f9e10d7a2f78498de32deeabae2699
-      - ElementName: AMB_Strelitzia
-        ObjectType: 4
-        guid: 22547c169459f8469d3eb24a109739d7
-      - ElementName: AMB_SL_SiloMain
-        ObjectType: 3
-        guid: 7993bc83825f81419e0b43a3779240f5
-      Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloMain
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: AMB_SL_SiloRiver
       guid: 621768256638d74d912ad79b72fd0f2d
       id: 916999477
@@ -1998,7 +2058,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584834986779209184
+    m_lastTime: -8584834794957866126
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -2661,6 +2721,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 6.857146
       minDuration: 6.857146
+    - name: MX_SL_ST_Cave
+      guid: d45c034f4bdafa4db375ee1c5f6f1e8d
+      id: 2289571526
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Cave
+        ObjectType: 3
+        guid: d45c034f4bdafa4db375ee1c5f6f1e8d
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Cave
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_Computer
+      guid: 9490111b4823634fb2ffaeace5b387fc
+      id: 1993091346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Computer
+        ObjectType: 3
+        guid: 9490111b4823634fb2ffaeace5b387fc
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Computer
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_SL_ST_Desert
       guid: a6130c6dfa7ba84492e1e3faad4f4789
       id: 1780281394
@@ -2678,6 +2778,106 @@ MonoBehaviour:
         ObjectType: 3
         guid: a6130c6dfa7ba84492e1e3faad4f4789
       Path: Events\MX\MX_Strelitzia\MX_SL_ST_Desert
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_FireCamp
+      guid: bb44478cbf1f3d4f83f4dd7d7d7c8a7e
+      id: 4211601786
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_FireCamp
+        ObjectType: 3
+        guid: bb44478cbf1f3d4f83f4dd7d7d7c8a7e
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_FireCamp
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_Firefly
+      guid: c87175a7a199164aae260a1d77df1731
+      id: 4277713600
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Firefly
+        ObjectType: 3
+        guid: c87175a7a199164aae260a1d77df1731
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Firefly
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_Frog
+      guid: f35b771e1601ae4e9678d63fdf9e0811
+      id: 923296675
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Frog
+        ObjectType: 3
+        guid: f35b771e1601ae4e9678d63fdf9e0811
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Frog
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_Jungle
+      guid: cf45f01c798d324bb8524f22f9fd2901
+      id: 1011090278
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Jungle
+        ObjectType: 3
+        guid: cf45f01c798d324bb8524f22f9fd2901
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Jungle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_SL_ST_River
+      guid: 529806eef822f847a65166ddc9d0e65f
+      id: 4045214441
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_River
+        ObjectType: 3
+        guid: 529806eef822f847a65166ddc9d0e65f
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_River
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2721,6 +2921,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 17.142853
       minDuration: 17.142853
+    - name: MX_SL_ST_Tent
+      guid: 4fb5ca84f74ebe4d9f79898029a3cc64
+      id: 1642955674
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_Tent
+        ObjectType: 3
+        guid: 4fb5ca84f74ebe4d9f79898029a3cc64
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_Tent
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_Strelitzia
       guid: 9ae1595873b3a148a1ecd5bb4d524bcc
       id: 1169946674
@@ -2769,25 +2989,8 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584834979748615973
+    m_lastTime: -8584834799458877384
     List:
-    - name: Mycelium
-      guid: e5d654e76cabde4493534ca7e3fc10b8
-      id: 2121747212
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: SFX
-        ObjectType: 12
-        guid: 76472c2a1bb628498d56368a6177b6ad
-      - ElementName: Mycelium
-        ObjectType: 4
-        guid: e5d654e76cabde4493534ca7e3fc10b8
-      Path: Events\SFX\Mycelium
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
       id: 1149062830
@@ -2862,6 +3065,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 020af29bdac3c641ba3522f13e5975e8
       Path: Events\SFX\SFX_Global
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Mycelium
+      guid: e5d654e76cabde4493534ca7e3fc10b8
+      id: 1324865036
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Mycelium
+        ObjectType: 4
+        guid: e5d654e76cabde4493534ca7e3fc10b8
+      Path: Events\SFX\SFX_Mycelium
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2962,6 +3182,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SFX_SL_ElevatorGo
+      guid: 782f638ba3b0464cb8d15f00e65bf63a
+      id: 1682849471
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Strelitzia
+        ObjectType: 4
+        guid: 5908197d3841c34ea9b286c094202447
+      - ElementName: SFX_SL_ElevatorGo
+        ObjectType: 3
+        guid: 782f638ba3b0464cb8d15f00e65bf63a
+      Path: Events\SFX\SFX_Strelitzia\SFX_SL_ElevatorGo
+      maxAttenuation: 0
+      maxDuration: 8.833187
+      minDuration: 8.833187
+    - name: SFX_SL_ElevatorStinger
+      guid: 43e76ae451e3c4408ba4bc95ebaeacc7
+      id: 885673933
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Strelitzia
+        ObjectType: 4
+        guid: 5908197d3841c34ea9b286c094202447
+      - ElementName: SFX_SL_ElevatorStinger
+        ObjectType: 3
+        guid: 43e76ae451e3c4408ba4bc95ebaeacc7
+      Path: Events\SFX\SFX_Strelitzia\SFX_SL_ElevatorStinger
+      maxAttenuation: 0
+      maxDuration: 9.164667
+      minDuration: 9.164667
     - name: SFX_Strelitzia
       guid: 5908197d3841c34ea9b286c094202447
       id: 169309698
@@ -3707,8 +3967,728 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584834990861256529
+    m_lastTime: -8584834795731707615
     List:
+    - name: MX_SL_ST_Cave
+      guid: ab2d4ba05274f64782692eae8a43a38f
+      id: 2289571526
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Cave
+        ObjectType: 9
+        guid: ab2d4ba05274f64782692eae8a43a38f
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Cave
+      values:
+      - name: None
+        guid: 642bcebec3b25046907e8b09998c5858
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Cave
+          ObjectType: 9
+          guid: ab2d4ba05274f64782692eae8a43a38f
+        - ElementName: None
+          ObjectType: 8
+          guid: 642bcebec3b25046907e8b09998c5858
+      - name: Reveal
+        guid: 015d45abcfa2654dabc770fd8ad81a14
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Cave
+          ObjectType: 9
+          guid: ab2d4ba05274f64782692eae8a43a38f
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 015d45abcfa2654dabc770fd8ad81a14
+      - name: Unreveal
+        guid: acb0b189f862564594e5717d74497f55
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Cave
+          ObjectType: 9
+          guid: ab2d4ba05274f64782692eae8a43a38f
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: acb0b189f862564594e5717d74497f55
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_Computer
+      guid: af104243d8872b4daeb9006d0e99819c
+      id: 1993091346
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Computer
+        ObjectType: 9
+        guid: af104243d8872b4daeb9006d0e99819c
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer
+      values:
+      - name: None
+        guid: 0c58e9f336e16a4a975f8014ba708564
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Computer
+          ObjectType: 9
+          guid: af104243d8872b4daeb9006d0e99819c
+        - ElementName: None
+          ObjectType: 8
+          guid: 0c58e9f336e16a4a975f8014ba708564
+      - name: Reveal
+        guid: 3c14ea2573d2bc4b8151cb7c42709830
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Computer
+          ObjectType: 9
+          guid: af104243d8872b4daeb9006d0e99819c
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 3c14ea2573d2bc4b8151cb7c42709830
+      - name: Unreveal
+        guid: bfd8756eb900f84cafff2703e4dce4ca
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Computer
+          ObjectType: 9
+          guid: af104243d8872b4daeb9006d0e99819c
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: bfd8756eb900f84cafff2703e4dce4ca
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_FireCamp
+      guid: 2711db2224b22943bef990b5925e0d45
+      id: 4211601786
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_FireCamp
+        ObjectType: 9
+        guid: 2711db2224b22943bef990b5925e0d45
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_FireCamp
+      values:
+      - name: None
+        guid: 6a6e6bf4a3691446a21ec22557eb5d66
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_FireCamp
+          ObjectType: 9
+          guid: 2711db2224b22943bef990b5925e0d45
+        - ElementName: None
+          ObjectType: 8
+          guid: 6a6e6bf4a3691446a21ec22557eb5d66
+      - name: Reveal
+        guid: 43c2f8e7f41e084f8e09ce88242d2386
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_FireCamp
+          ObjectType: 9
+          guid: 2711db2224b22943bef990b5925e0d45
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 43c2f8e7f41e084f8e09ce88242d2386
+      - name: Unreveal
+        guid: 67b0b449d7dc2f4db8bcc0c771cb1e7d
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_FireCamp
+          ObjectType: 9
+          guid: 2711db2224b22943bef990b5925e0d45
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 67b0b449d7dc2f4db8bcc0c771cb1e7d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_Firefly
+      guid: e62815aa7f8f094ca2c892636bbabfda
+      id: 4277713600
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Firefly
+        ObjectType: 9
+        guid: e62815aa7f8f094ca2c892636bbabfda
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Firefly
+      values:
+      - name: None
+        guid: 5f2e61030c71ea47bceecda9842656a1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Firefly
+          ObjectType: 9
+          guid: e62815aa7f8f094ca2c892636bbabfda
+        - ElementName: None
+          ObjectType: 8
+          guid: 5f2e61030c71ea47bceecda9842656a1
+      - name: Reveal
+        guid: 9b1f4cf41906b24b9ce2c0a8bb920590
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Firefly
+          ObjectType: 9
+          guid: e62815aa7f8f094ca2c892636bbabfda
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 9b1f4cf41906b24b9ce2c0a8bb920590
+      - name: Unreveal
+        guid: 85c80f3424820049bcf1db7a97680706
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Firefly
+          ObjectType: 9
+          guid: e62815aa7f8f094ca2c892636bbabfda
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 85c80f3424820049bcf1db7a97680706
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_Frog
+      guid: fc1cf29c917a7a4f9acb27f4f7098deb
+      id: 923296675
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Frog
+        ObjectType: 9
+        guid: fc1cf29c917a7a4f9acb27f4f7098deb
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Frog
+      values:
+      - name: None
+        guid: e74027afce613b4bbef5e3b2db70b884
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Frog
+          ObjectType: 9
+          guid: fc1cf29c917a7a4f9acb27f4f7098deb
+        - ElementName: None
+          ObjectType: 8
+          guid: e74027afce613b4bbef5e3b2db70b884
+      - name: Reveal
+        guid: c12ec563fe691441816fc39a0b03d8b1
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Frog
+          ObjectType: 9
+          guid: fc1cf29c917a7a4f9acb27f4f7098deb
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: c12ec563fe691441816fc39a0b03d8b1
+      - name: Unreveal
+        guid: 22ca10a3e1680b49afafc5b5576bd07d
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Frog
+          ObjectType: 9
+          guid: fc1cf29c917a7a4f9acb27f4f7098deb
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 22ca10a3e1680b49afafc5b5576bd07d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_Jungle
+      guid: 1ace7afb9d3e4d4ab0b8d0e5008b1d2e
+      id: 1011090278
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Jungle
+        ObjectType: 9
+        guid: 1ace7afb9d3e4d4ab0b8d0e5008b1d2e
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle
+      values:
+      - name: None
+        guid: d1873f9529ce74488eece29f21168f28
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Jungle
+          ObjectType: 9
+          guid: 1ace7afb9d3e4d4ab0b8d0e5008b1d2e
+        - ElementName: None
+          ObjectType: 8
+          guid: d1873f9529ce74488eece29f21168f28
+      - name: Reveal
+        guid: e93b374436be934993656ed3b56328fb
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Jungle
+          ObjectType: 9
+          guid: 1ace7afb9d3e4d4ab0b8d0e5008b1d2e
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: e93b374436be934993656ed3b56328fb
+      - name: Unreveal
+        guid: 04668b2bec1193479177680946b94a6f
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Jungle
+          ObjectType: 9
+          guid: 1ace7afb9d3e4d4ab0b8d0e5008b1d2e
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 04668b2bec1193479177680946b94a6f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_River
+      guid: b2cfabf8ecce834f8f2ae8573eafe985
+      id: 4045214441
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_River
+        ObjectType: 9
+        guid: b2cfabf8ecce834f8f2ae8573eafe985
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River
+      values:
+      - name: None
+        guid: 96ba0521cd9cff46b420d8a8968c1419
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_River
+          ObjectType: 9
+          guid: b2cfabf8ecce834f8f2ae8573eafe985
+        - ElementName: None
+          ObjectType: 8
+          guid: 96ba0521cd9cff46b420d8a8968c1419
+      - name: Reveal
+        guid: cd7667ba20dde148a7b659ada509152c
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_River
+          ObjectType: 9
+          guid: b2cfabf8ecce834f8f2ae8573eafe985
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: cd7667ba20dde148a7b659ada509152c
+      - name: Unreveal
+        guid: 33d2ca9a46b8c14d96b2a82a71b83b76
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_River
+          ObjectType: 9
+          guid: b2cfabf8ecce834f8f2ae8573eafe985
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 33d2ca9a46b8c14d96b2a82a71b83b76
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_ST_Tent
+      guid: ba5c67ac219b294795a69e42fbcf6254
+      id: 1642955674
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: MX_SL_ST_Tent
+        ObjectType: 9
+        guid: ba5c67ac219b294795a69e42fbcf6254
+      Path: States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent
+      values:
+      - name: None
+        guid: d003f2a526e9514bb8e215872f081927
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Tent
+          ObjectType: 9
+          guid: ba5c67ac219b294795a69e42fbcf6254
+        - ElementName: None
+          ObjectType: 8
+          guid: d003f2a526e9514bb8e215872f081927
+      - name: Reveal
+        guid: 3a33c535e7666e49a75020ef2800761b
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Tent
+          ObjectType: 9
+          guid: ba5c67ac219b294795a69e42fbcf6254
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 3a33c535e7666e49a75020ef2800761b
+      - name: Unreveal
+        guid: 29f007ba55e591498d108b42dd5373b0
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: MX_SL_ST_Tent
+          ObjectType: 9
+          guid: ba5c67ac219b294795a69e42fbcf6254
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 29f007ba55e591498d108b42dd5373b0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_MX_OC_Boat
       guid: 6dc84f2eff06614f90536d3e05cdf706
       id: 637628402
@@ -5863,6 +6843,96 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ST_SL_AMB_Elevator
+      guid: 5f28b5187ef5c346a8fc040100528914
+      id: 2432701204
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_AMB
+        ObjectType: 4
+        guid: af218771d29b7444a39dd742e316db06
+      - ElementName: ST_SL_AMB_Elevator
+        ObjectType: 9
+        guid: 5f28b5187ef5c346a8fc040100528914
+      Path: States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_Elevator
+      values:
+      - name: First
+        guid: 5a482ec06d712d41b4ef4c2fa36166eb
+        id: 998496889
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_Elevator
+          ObjectType: 9
+          guid: 5f28b5187ef5c346a8fc040100528914
+        - ElementName: First
+          ObjectType: 8
+          guid: 5a482ec06d712d41b4ef4c2fa36166eb
+      - name: None
+        guid: 042035ef4e3cfe4298f0fab033522043
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_Elevator
+          ObjectType: 9
+          guid: 5f28b5187ef5c346a8fc040100528914
+        - ElementName: None
+          ObjectType: 8
+          guid: 042035ef4e3cfe4298f0fab033522043
+      - name: Second
+        guid: a9846d6eb5449c4297de9e3982066646
+        id: 3476314365
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_AMB
+          ObjectType: 4
+          guid: af218771d29b7444a39dd742e316db06
+        - ElementName: ST_SL_AMB_Elevator
+          ObjectType: 9
+          guid: 5f28b5187ef5c346a8fc040100528914
+        - ElementName: Second
+          ObjectType: 8
+          guid: a9846d6eb5449c4297de9e3982066646
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: ST_SL_AMB_MuteCave
       guid: 14adac8964e42a4287835c51381ed4ea
       id: 19052470
@@ -6627,7 +7697,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584835161147875808
     List: []
-  ExpandedFileSystemItemIds: 0100000002000000040000000500000006000000070000001c0000001d0000001f000000220000002500000026000000280000002c00000042000000460000004d0000005f0000007f000000fa000000fb000000fc00000004010000
+  ExpandedFileSystemItemIds: 0100000002000000030000000400000005000000070000001c0000001d0000001f00000020000000220000002500000026000000280000002c00000042000000460000004d0000005f0000007f00000082000000fa000000fb000000fc00000004010000
   ExpandedWaapiItemIds: 0100000002000000040000000500000006000000070000001c0000001d0000001f000000220000002500000026000000280000002c00000042000000460000004d0000005f0000007f000000fa000000fb000000fc00000004010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
