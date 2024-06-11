@@ -10,8 +10,17 @@ namespace LW.Player
     public class PlayerMovement : MonoBehaviour
     {
         const float DEFAULT_GRAVITY = -.05f;
-        const string CONRETE_GROUND_TAG = "Concrete";
+        const string CONCRETE_OC_GROUND_TAG = "Concrete_OC";
+        const string CONCRETE_ST_GROUND_TAG = "Concrete_ST";
         const string WATER_GROUND_TAG = "Water";
+        const string RAIL_GROUND_TAG = "Rail";
+        const string WOOD_GROUND_TAG = "Wood";
+        const string GLASS_GROUND_TAG = "Glass";
+        const string GRASS_GROUND_TAG = "Grass";
+        const string JUNGLE_GROUND_TAG = "Jungle";
+        const string RIVER_GROUND_TAG = "River";
+        const string SAND_GROUND_TAG = "Sand";
+        const string CAVE_GROUND_TAG = "Cave";
 
         [SerializeField] CharacterController characterController;
         [SerializeField] Transform cameraTransform;
@@ -28,8 +37,17 @@ namespace LW.Player
         [Header("Audio Settings")]
         [SerializeField] AK.Wwise.Event startFootstepEvent;
         [SerializeField] AK.Wwise.Event stopFootstepEvent;
-        [SerializeField] AK.Wwise.Switch concreteSwitch;
+        [SerializeField] AK.Wwise.Switch concreteOCSwitch;
+        [SerializeField] AK.Wwise.Switch concreteSTSwitch;
         [SerializeField] AK.Wwise.Switch waterSwitch;
+        [SerializeField] AK.Wwise.Switch woodSwitch;
+        [SerializeField] AK.Wwise.Switch railSwitch;
+        [SerializeField] AK.Wwise.Switch glassSwitch;
+        [SerializeField] AK.Wwise.Switch grassSwitch;
+        [SerializeField] AK.Wwise.Switch jungleSwitch;
+        [SerializeField] AK.Wwise.Switch riverSwitch;
+        [SerializeField] AK.Wwise.Switch sandSwitch;
+        [SerializeField] AK.Wwise.Switch caveSwitch;
 
         bool isFootstepPlaying = false;
 
@@ -131,11 +149,38 @@ namespace LW.Player
 
                 switch (hit.collider.tag)
                 {
-                    case CONRETE_GROUND_TAG:
-                        WwiseInterface.Instance.ChangeSwitch(concreteSwitch, gameObject);
+                    case CONCRETE_OC_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(concreteOCSwitch, gameObject);
+                        break;
+                    case CONCRETE_ST_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(concreteSTSwitch, gameObject);
                         break;
                     case WATER_GROUND_TAG:
                         WwiseInterface.Instance.ChangeSwitch(waterSwitch, gameObject);
+                        break;
+                    case RAIL_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(railSwitch, gameObject);
+                        break;
+                    case WOOD_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(woodSwitch, gameObject);
+                        break;
+                    case GLASS_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(glassSwitch, gameObject);
+                        break;
+                    case GRASS_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(grassSwitch, gameObject);
+                        break;
+                    case JUNGLE_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(jungleSwitch, gameObject);
+                        break;
+                    case RIVER_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(riverSwitch, gameObject);
+                        break;
+                    case SAND_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(sandSwitch, gameObject);
+                        break;
+                    case CAVE_GROUND_TAG:
+                        WwiseInterface.Instance.ChangeSwitch(caveSwitch, gameObject);
                         break;
                 }
             }
