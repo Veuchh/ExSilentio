@@ -25,12 +25,18 @@ State Group	ID	Name			Wwise Object Path	Notes
 	637628402	ST_MX_OC_Boat			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
 	867132074	ST_MX_OC_Child			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child	
+	923296675	MX_SL_ST_Frog			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Frog	
+	1011090278	MX_SL_ST_Jungle			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle	
 	1231701662	ST_OC_TrainInsideStation			\States\ST_OceanCity\ST_OC_TrainInsideStation	
 	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
+	1642955674	MX_SL_ST_Tent			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
+	1993091346	MX_SL_ST_Computer			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer	
 	2015358534	ST_MX_OC_MemoryFoam			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_MemoryFoam	
+	2289571526	MX_SL_ST_Cave			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Cave	
 	2352230403	ST_OC_Occlusion			\States\ST_OceanCity\ST_OC_Occlusion	
+	2432701204	ST_SL_AMB_Elevator			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_Elevator	
 	2446983323	ST_MX_SL_Balise			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Balise	
 	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
 	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
@@ -41,9 +47,12 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
+	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
 	4165626038	ST_MX_OC_Fish			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish	
 	4205926058	ST_MX_OC_StationTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig	
+	4211601786	MX_SL_ST_FireCamp			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_FireCamp	
 	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
+	4277713600	MX_SL_ST_Firefly			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Firefly	
 
 State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteCave			
@@ -73,6 +82,12 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Child			
 	748895195	None	ST_MX_OC_Child			
 	3384621607	Unreveal	ST_MX_OC_Child			
+	634183254	Reveal	MX_SL_ST_Frog			
+	748895195	None	MX_SL_ST_Frog			
+	3384621607	Unreveal	MX_SL_ST_Frog			
+	634183254	Reveal	MX_SL_ST_Jungle			
+	748895195	None	MX_SL_ST_Jungle			
+	3384621607	Unreveal	MX_SL_ST_Jungle			
 	645492555	out	ST_OC_TrainInsideStation			
 	748895195	None	ST_OC_TrainInsideStation			
 	1752637612	In	ST_OC_TrainInsideStation			
@@ -82,15 +97,27 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Seagull			
 	748895195	None	ST_MX_OC_Seagull			
 	3384621607	Unreveal	ST_MX_OC_Seagull			
+	634183254	Reveal	MX_SL_ST_Tent			
+	748895195	None	MX_SL_ST_Tent			
+	3384621607	Unreveal	MX_SL_ST_Tent			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
+	634183254	Reveal	MX_SL_ST_Computer			
+	748895195	None	MX_SL_ST_Computer			
+	3384621607	Unreveal	MX_SL_ST_Computer			
 	645492555	Out	ST_MX_OC_MemoryFoam			
 	748895195	None	ST_MX_OC_MemoryFoam			
 	1752637612	In	ST_MX_OC_MemoryFoam			
+	634183254	Reveal	MX_SL_ST_Cave			
+	748895195	None	MX_SL_ST_Cave			
+	3384621607	Unreveal	MX_SL_ST_Cave			
 	645492555	Out	ST_OC_Occlusion			
 	748895195	None	ST_OC_Occlusion			
 	1752637612	In	ST_OC_Occlusion			
+	748895195	None	ST_SL_AMB_Elevator			
+	998496889	First	ST_SL_AMB_Elevator			
+	3476314365	Second	ST_SL_AMB_Elevator			
 	634183254	Reveal	ST_MX_SL_Balise			
 	748895195	None	ST_MX_SL_Balise			
 	3384621607	Unreveal	ST_MX_SL_Balise			
@@ -121,15 +148,24 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Station			
 	748895195	None	ST_MX_OC_Station			
 	3384621607	Unreveal	ST_MX_OC_Station			
+	634183254	Reveal	MX_SL_ST_River			
+	748895195	None	MX_SL_ST_River			
+	3384621607	Unreveal	MX_SL_ST_River			
 	634183254	Reveal	ST_MX_OC_Fish			
 	748895195	None	ST_MX_OC_Fish			
 	3384621607	Unreveal	ST_MX_OC_Fish			
 	645492555	Out	ST_MX_OC_StationTrig			
 	748895195	None	ST_MX_OC_StationTrig			
 	1752637612	In	ST_MX_OC_StationTrig			
+	634183254	Reveal	MX_SL_ST_FireCamp			
+	748895195	None	MX_SL_ST_FireCamp			
+	3384621607	Unreveal	MX_SL_ST_FireCamp			
 	634183254	Reveal	ST_MX_OC_Sun			
 	748895195	None	ST_MX_OC_Sun			
 	3384621607	Unreveal	ST_MX_OC_Sun			
+	634183254	Reveal	MX_SL_ST_Firefly			
+	748895195	None	MX_SL_ST_Firefly			
+	3384621607	Unreveal	MX_SL_ST_Firefly			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1922876521	GP_M_UI			\Game Parameters\GP_Menu\GP_M_UI	
@@ -171,9 +207,13 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	602546716	Room_Large	Wwise RoomVerb			
 	622518601	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	1990128658	Room_Medium	Wwise RoomVerb			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 	2995775460	Room_Small	Wwise RoomVerb			
+	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
