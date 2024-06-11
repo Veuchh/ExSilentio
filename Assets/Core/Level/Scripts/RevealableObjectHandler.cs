@@ -19,6 +19,7 @@ namespace LW.Level
         [SerializeField] WordDatabase database;
         [SerializeField] HintDatabase hintDatabase;
         [SerializeField] LocalizedStringTable stringTable;
+        [SerializeField] bool countsTowardsTotalLevelToGuess = true;
 
 
         [Header("Wwise Events")]
@@ -133,7 +134,7 @@ namespace LW.Level
                 translatedID = "[!] " + translatedID;
 
                 //checking if all core objects were discovered
-                if (bundleToReveal.ObjectImportance == ObjectImportance.Core)
+                if (countsTowardsTotalLevelToGuess && bundleToReveal.ObjectImportance == ObjectImportance.Core)
                 {
                     bool allCoreRevealed = true;
 

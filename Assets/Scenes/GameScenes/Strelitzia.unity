@@ -1016,7 +1016,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_milkyway1
 --- !u!1 &38450033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,7 +4400,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_tent1
+  - hint_tent2
 --- !u!114 &160816574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13266,7 +13269,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_firefly1
 --- !u!1 &414600138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4341382898346148340, guid: d0f8c2bc7da11c94a9d83aac50857e1c,
@@ -16482,12 +16486,12 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
@@ -16507,6 +16511,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
@@ -16531,6 +16540,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1782801715}
@@ -16549,6 +16563,11 @@ PrefabInstance:
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1446162319550595162}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1735189404}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16571,6 +16590,11 @@ PrefabInstance:
       objectReference: {fileID: 1446162319550595162}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1735189404}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -16587,6 +16611,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
@@ -16611,6 +16640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -16627,6 +16661,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
@@ -16651,6 +16690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -16667,6 +16711,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
@@ -16691,6 +16740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -16707,6 +16761,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
@@ -16741,6 +16800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
+      propertyPath: onPlatformMovingUp.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -16757,6 +16821,11 @@ PrefabInstance:
     - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
         type: 3}
       propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273179964929570250, guid: 2627117564eb13242896a4f153b45405,
+        type: 3}
+      propertyPath: onPlatformMovingDown.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4553451858184565614, guid: 2627117564eb13242896a4f153b45405,
@@ -17309,7 +17378,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_computer1
+  - hint_computer2
 --- !u!1 &506181742
 GameObject:
   m_ObjectHideFlags: 0
@@ -22787,6 +22858,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1735189404}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &657399424
 Transform:
   m_ObjectHideFlags: 0
@@ -27498,7 +27581,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_beacon1
+  - hint_beacon3
 --- !u!1 &813422989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -514784289558030489, guid: 51c6ff007df71b547a65df6cc1991445,
@@ -32333,7 +32418,6 @@ Transform:
   - {fileID: 1353731768}
   - {fileID: 1330371622}
   - {fileID: 505721729}
-  - {fileID: 2259149340967574240}
   - {fileID: 414483292}
   - {fileID: 1550734252}
   - {fileID: 1863635589}
@@ -38091,6 +38175,7 @@ Transform:
   - {fileID: 2091960188}
   - {fileID: 1014195146}
   - {fileID: 528028418}
+  - {fileID: 2259149340967574240}
   m_Father: {fileID: 967582154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1128733791
@@ -38137,6 +38222,17 @@ MonoBehaviour:
   - {fileID: 1357289389}
   - {fileID: 1317819561}
   - {fileID: 642970613}
+  - {fileID: 5353385986260487080}
+  - {fileID: 5891698857203691627}
+  - {fileID: 1866863680}
+  - {fileID: 1790793304}
+  - {fileID: 5263677908208465603}
+  - {fileID: 180057771}
+  - {fileID: 506181747}
+  - {fileID: 7199425366501092070}
+  - {fileID: 842459422}
+  - {fileID: 7300480621820998162}
+  - {fileID: 262008682}
   awaitedID: 31
   objectImportance: 0
   revealByDefault: 0
@@ -38147,7 +38243,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_bunker1
+  - hint_bunker2
+  - hint_bunker3
 --- !u!1 &1134228517
 GameObject:
   m_ObjectHideFlags: 0
@@ -44939,7 +45038,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_vegetation1
+  - hint_vegetation2
+  - hint_vegetation3
 --- !u!1 &1331372487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e561d2b59cd377d468779da4c4fc80c8,
@@ -46013,7 +46115,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_waterfall1
+  - hint_waterfall2
 --- !u!1 &1353732480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9152984070255328770, guid: 51c6ff007df71b547a65df6cc1991445,
@@ -52466,7 +52570,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_firecamp1
+  - hint_firecamp2
 --- !u!114 &1550734254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52882,6 +52988,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1553866928}
+    - targetCorrespondingSourceObject: {fileID: 1748166722981094817, guid: 075ae50a99c10ed46b26134f3bbcb1b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1553866933}
   m_SourcePrefab: {fileID: 100100000, guid: 075ae50a99c10ed46b26134f3bbcb1b9, type: 3}
 --- !u!1 &1553866927 stripped
 GameObject:
@@ -52917,6 +53027,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1553866926}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1553866931 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6638134665520507356, guid: 075ae50a99c10ed46b26134f3bbcb1b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553866926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1553866933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553866927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 45
+  attachedRenderer: {fileID: 1553866931}
+  vfx: {fileID: 0}
+  revealCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealDuration: 1
+  isTextureVertical: 0
+  type: 0
 --- !u!1 &1555160293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9210192957547287555, guid: 51c6ff007df71b547a65df6cc1991445,
@@ -60294,7 +60452,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_desert1
+  - hint_desert2
+  - hint_desert3
 --- !u!1001 &1814197152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64288,7 +64449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsInBundle: []
+  itemsInBundle:
+  - {fileID: 1553866933}
   awaitedID: 45
   objectImportance: 1
   revealByDefault: 0
@@ -64299,7 +64461,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_cave1
+  - hint_cave2
 --- !u!1 &1906700461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e561d2b59cd377d468779da4c4fc80c8,
@@ -73225,9 +73389,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2259149340967574240}
-  - component: {fileID: 2259149340967574241}
   m_Layer: 0
-  m_Name: RuinesBundle
+  m_Name: Ruins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73250,7 +73413,7 @@ Transform:
   m_GameObject: {fileID: 1446162319550595162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.730568, y: -70.41791, z: 59.05966}
+  m_LocalPosition: {x: 34.08923, y: 83.40312, z: 53.735058}
   m_LocalScale: {x: 0.54039, y: 0.54039, z: 0.54039}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -73263,43 +73426,8 @@ Transform:
   - {fileID: 842459418}
   - {fileID: 7300480621820998160}
   - {fileID: 262008678}
-  m_Father: {fileID: 967582154}
+  m_Father: {fileID: 1128733790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2259149340967574241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446162319550595162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4fd52d56be94e74aacff550c3efe619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemsInBundle:
-  - {fileID: 5353385986260487080}
-  - {fileID: 5891698857203691627}
-  - {fileID: 1866863680}
-  - {fileID: 1790793304}
-  - {fileID: 5263677908208465603}
-  - {fileID: 180057771}
-  - {fileID: 506181747}
-  - {fileID: 7199425366501092070}
-  - {fileID: 842459422}
-  - {fileID: 7300480621820998162}
-  - {fileID: 262008682}
-  awaitedID: 32
-  objectImportance: 0
-  revealByDefault: 0
-  playWwiseEventOnReveal: 0
-  isTextureVertical: 0
-  eventToPlay:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
 --- !u!4 &2347401546980371070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5043791524746625253, guid: d0f8c2bc7da11c94a9d83aac50857e1c,

@@ -311,7 +311,11 @@ namespace LW.Player
             var translatedWordsTable = wordsTable.GetTable();
             var translatedCommandsTable = commandsTable.GetTable();
             string consoleOutput = string.Empty;
-            List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundles();
+
+            List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundles()
+                    .Where(x => !x.RevealByDefault)
+                    .ToList();
+
             arguments = arguments.Replace(" ", "");
             arguments.Normalize();
 
@@ -324,7 +328,7 @@ namespace LW.Player
                 consoleOutput += $"{bundles.IndexOf(bundle)}. " +
                     (bundle.IsRevealed ?
                     translatedWordsTable.GetEntry(bundle.ID.ToString()).LocalizedValue
-                    : " ?????????")
+                    : "?????????")
                     + " : ";
                 for (int hintIndex = 0; hintIndex < bundle.Hints.Count; hintIndex++)
                 {
@@ -358,7 +362,11 @@ namespace LW.Player
             string consoleOutput = translatedTable.GetEntry(REVEALED_ITEMS_LOCALIZATION_ID).LocalizedValue + " :";
             foreach (ObjectImportance importance in Enum.GetValues(typeof(ObjectImportance)))
             {
-                List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundlesOfImportance(importance);
+                List<RevealableObjectBundle> bundles = 
+                    RevealableObjectHandler.Instance.GetBundlesOfImportance(importance)
+                    .Where(x => !x.RevealByDefault)
+                    .ToList();
+
                 consoleOutput += "\n" + translatedTable.GetEntry(importance.ToString().ToLower()).LocalizedValue
                     + " : " + bundles.Where(i => i.IsRevealed).Count().ToString()
                     + " / " + bundles.Count();
