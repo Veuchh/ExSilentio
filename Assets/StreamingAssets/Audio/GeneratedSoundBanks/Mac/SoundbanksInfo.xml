@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{11075FA8-3D14-A682-4EC6-4250CB61F397}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{EADD5573-F2A8-ECC8-ACF2-1B48AC8B4903}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -392,6 +392,7 @@
 				</Event>
 				<Event Id="2174404996" Name="MX_SL_Awake" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_Awake" GUID="{1380A189-B751-4D34-A9B7-CB3EF631ED12}" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="42709118"/>
 						<MediaRef Id="80647876"/>
 						<MediaRef Id="310708101"/>
 						<MediaRef Id="536048362"/>
@@ -4155,5 +4156,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E0DCE857-ED72-0DB7-D473-8576C162BC8C}</FileHash>
+	<FileHash>{8690AAAD-BDD0-E4E9-DBBA-43824F6AB82A}</FileHash>
 </SoundBanksInfo>
