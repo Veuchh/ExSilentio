@@ -16,6 +16,8 @@ Switch	ID	Name	Switch Group			Notes
 	4254353870	SW_FT_SL_Jungle	SW_FT_OC			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
+	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
 	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
 	274315000	ST_MX_OC_WindTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig	
 	533948994	ST_MX_OC_Wind			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind	
@@ -25,9 +27,13 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1231701662	ST_OC_TrainInsideStation			\States\ST_OceanCity\ST_OC_TrainInsideStation	
 	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
-	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB_DesertWind	
-	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB_MuteDesert	
+	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
+	2015358534	ST_MX_OC_MemoryFoam			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_MemoryFoam	
+	2352230403	ST_OC_Occlusion			\States\ST_OceanCity\ST_OC_Occlusion	
+	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
 	2603209358	ST_MX_OC_Train			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Train	
+	2759765522	ST_SL_AMB_MuteLab			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteLab	
+	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
@@ -36,6 +42,12 @@ State Group	ID	Name			Wwise Object Path	Notes
 	4266710578	ST_MX_OC_Sun			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Sun	
 
 State	ID	Name	State Group			Notes
+	645492555	Out	ST_SL_AMB_MuteCave			
+	748895195	None	ST_SL_AMB_MuteCave			
+	1752637612	In	ST_SL_AMB_MuteCave			
+	645492555	Out	ST_SL_AMB_MuteJungle			
+	748895195	None	ST_SL_AMB_MuteJungle			
+	1752637612	In	ST_SL_AMB_MuteJungle			
 	645492555	Out	ST_MX_OC_FontainTrig			
 	748895195	None	ST_MX_OC_FontainTrig			
 	1752637612	In	ST_MX_OC_FontainTrig			
@@ -66,12 +78,24 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
+	645492555	Out	ST_MX_OC_MemoryFoam			
+	748895195	None	ST_MX_OC_MemoryFoam			
+	1752637612	In	ST_MX_OC_MemoryFoam			
+	645492555	Out	ST_OC_Occlusion			
+	748895195	None	ST_OC_Occlusion			
+	1752637612	In	ST_OC_Occlusion			
 	645492555	Out	ST_SL_AMB_MuteDesert			
 	748895195	None	ST_SL_AMB_MuteDesert			
 	1752637612	In	ST_SL_AMB_MuteDesert			
 	634183254	Reveal	ST_MX_OC_Train			
 	748895195	None	ST_MX_OC_Train			
 	3384621607	Unreveal	ST_MX_OC_Train			
+	645492555	Out	ST_SL_AMB_MuteLab			
+	748895195	None	ST_SL_AMB_MuteLab			
+	1752637612	In	ST_SL_AMB_MuteLab			
+	645492555	Out	ST_SL_AMB_MuteSilo			
+	748895195	None	ST_SL_AMB_MuteSilo			
+	1752637612	In	ST_SL_AMB_MuteSilo			
 	645492555	Out	ST_OC_SFXTrainImpact			
 	748895195	None	ST_OC_SFXTrainImpact			
 	1752637612	In	ST_OC_SFXTrainImpact			
@@ -103,19 +127,23 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2385628198	FOOTSTEPS			\Default Work Unit\Master Audio Bus\FOOTSTEPS	
 	2482450727	AMB_OC_Child			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child	
 	2826138305	AMB_OC_Boat			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat	
+	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
 	3705995597	TrainError			\Default Work Unit\Master Audio Bus\SFX\TrainError	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3886422523	AMB_OC_Train			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train	
 	4026521433	FT_OceanCity			\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	219304270	Jungle			\Default Work Unit\Master Audio Bus\Reverbs\Jungle	
+	838776142	Silo			\Default Work Unit\Master Audio Bus\Reverbs\Silo	
 	1519764506	Plains			\Default Work Unit\Master Audio Bus\Reverbs\Plains	
-	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
+	3553349781	Inside			\Default Work Unit\Master Audio Bus\Reverbs\Inside	
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
-	281885668	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
 	602546716	Room_Large	Wwise RoomVerb			
+	622518601	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	2995775460	Room_Small	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

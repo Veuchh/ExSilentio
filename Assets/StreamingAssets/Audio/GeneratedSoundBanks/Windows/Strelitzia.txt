@@ -1,36 +1,55 @@
 Event	ID	Name			Wwise Object Path	Notes
 	245788182	AMB_SL_Tr_DeMuteDesert			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteDesert	
+	328079930	AMB_SL_Tr_DeMuteSilo			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteSilo	
+	501430514	AMB_SL_Tr_DeMuteJungle			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteJungle	
 	585081890	AMB_SL_JunleFrog			\AMB\AMB_Strelitzia\AMB_SL_JunleFrog	
+	732772474	AMB_SL_Tr_DeMuteCave			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteCave	
 	775363125	AMB_SL_Tr_BunkerIn			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerIn	
 	916999477	AMB_SL_SiloRiver			\AMB\AMB_Strelitzia\AMB_SL_SiloRiver	
 	951601607	AMB_SL_Tr_MuteDesert			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteDesert	
+	1249199897	AMB_SL_Tr_MuteLab			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteLab	
+	1255301078	AMB_SL_Tr_DeMuteLab			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteLab	
 	1370622790	AMB_SL_SiloMain			\AMB\AMB_Strelitzia\AMB_SL_SiloMain	
 	1376076762	AMB_SL_CaveDrop			\AMB\AMB_Strelitzia\AMB_SL_CaveDrop	
-	1843064999	AMB_SL_JunleMain			\AMB\AMB_Strelitzia\AMB_SL_JunleMain	
-	1848239986	AMB_SL_CaveMain			\AMB\AMB_Strelitzia\AMB_SL_CaveMain	
 	2027462034	AMB_SL_CaveWater			\AMB\AMB_Strelitzia\AMB_SL_CaveWater	
 	2071076257	AMB_SL_JunleBird			\AMB\AMB_Strelitzia\AMB_SL_JunleBird	
 	2174404996	MX_SL_Awake			\MX\MX_Strelitzia\MX_SL_Awake	
 	2246380605	AMB_SL_JunleFakeRain			\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain	
+	2342327891	AMB_SL_Awake			\AMB\AMB_Strelitzia\AMB_SL_Awake	
 	2510762832	AMB_SL_Balise			\AMB\AMB_Strelitzia\AMB_SL_Balise	
+	2828279879	AMB_SL_Tr_MuteSilo			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteSilo	
 	3095653304	AMB_SL_LabMecaniques			\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques	
 	3134725817	AMB_SL_Desert			\AMB\AMB_Strelitzia\AMB_SL_Desert	
 	3406394736	AMB_SL_SiloBird			\AMB\AMB_Strelitzia\AMB_SL_SiloBird	
+	3457049799	AMB_SL_Tr_MuteJungle			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteJungle	
+	3568524555	AMB_SL_Tr_MuteCave			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteCave	
 	3596741274	AMB_SL_CaveFireCamp			\AMB\AMB_Strelitzia\AMB_SL_CaveFireCamp	
 	3804608685	AMB_SL_SiloWaterfall			\AMB\AMB_Strelitzia\AMB_SL_SiloWaterfall	
 	3939318492	AMB_SL_Tr_BunkerOut			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_BunkerOut	
 
 State Group	ID	Name			Wwise Object Path	Notes
-	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB_DesertWind	
-	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB_MuteDesert	
+	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
+	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
+	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
+	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
+	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 
 State	ID	Name	State Group			Notes
+	645492555	Out	ST_SL_AMB_MuteCave			
+	748895195	None	ST_SL_AMB_MuteCave			
+	1752637612	In	ST_SL_AMB_MuteCave			
+	645492555	Out	ST_SL_AMB_MuteJungle			
+	748895195	None	ST_SL_AMB_MuteJungle			
+	1752637612	In	ST_SL_AMB_MuteJungle			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
 	645492555	Out	ST_SL_AMB_MuteDesert			
 	748895195	None	ST_SL_AMB_MuteDesert			
 	1752637612	In	ST_SL_AMB_MuteDesert			
+	645492555	Out	ST_SL_AMB_MuteSilo			
+	748895195	None	ST_SL_AMB_MuteSilo			
+	1752637612	In	ST_SL_AMB_MuteSilo			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	919542588	GP_SL_DesertWind			\Game Parameters\GP_Strelitzia\GP_SL_DesertWind	
