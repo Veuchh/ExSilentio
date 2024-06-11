@@ -1,4 +1,5 @@
 using DG.Tweening;
+using LW.Audio;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,6 +18,7 @@ namespace LW.Level
         [SerializeField] Vector3 startPosition;
         [SerializeField] Vector3 endPosition;
         [SerializeField] float cooldownAfterUse = 3f;
+        [SerializeField] AK.Wwise.Event elevatorStartEvent;
 
         float startTime;
         float endTime;
@@ -71,6 +73,7 @@ namespace LW.Level
 
             Sequence sequence = DOTween.Sequence();
 
+            sequence.AppendCallback(() => WwiseInterface.Instance.PlayEvent(elevatorStartEvent, platform.gameObject));
             sequence.AppendCallback(() => sideColliders.SetActive(true));
             sequence.AppendCallback(() => player.SetParent(platform));
             sequence.AppendInterval(elevatorDuration / 2);
