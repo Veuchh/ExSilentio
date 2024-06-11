@@ -2,8 +2,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	84328085	UI_CL_GoodWord			\UI\UI_Consol\UI_CL_GoodWord	
 	126894539	FT_OceanCityPlay			\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay	
 	767596870	UI_CL_Open			\UI\UI_Consol\UI_CL_Open	
+	790248566	UI_M_Click			\UI\UI_Menu\UI_M_Click	
 	870376687	SFX_G_ErrorMap			\SFX\SFX_Global\SFX_G_ErrorMap	
+	1336747374	UI_M_LoadData			\UI\UI_Menu\UI_M_LoadData	
+	1612319303	UI_M_SliderMaster			\UI\UI_Menu\UI_M_SliderMaster	
 	1704951998	MX_M_Main			\MX\MX_Menu\MX_M_Main	
+	1749630015	UI_M_OpenMenu			\UI\UI_Menu\UI_M_OpenMenu	
 	1791538751	SFX_G_ErrorTP			\SFX\SFX_Global\SFX_G_ErrorTP	
 	1967546360	UI_CL_Line			\UI\UI_Consol\UI_CL_Line	
 	2143859642	UI_CL_WriteText			\UI\UI_Consol\UI_CL_WriteText	
@@ -12,7 +16,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	2292383016	UI_CL_WordEnter			\UI\UI_Consol\UI_CL_WordEnter	
 	2442725498	UI_CL_DeleteText			\UI\UI_Consol\UI_CL_DeleteText	
 	2803237010	UI_CL_Close			\UI\UI_Consol\UI_CL_Close	
+	2835872183	UI_M_SliderAMB			\UI\UI_Menu\UI_M_SliderAMB	
+	3103570039	UI_M_SliderUI			\UI\UI_Menu\UI_M_SliderUI	
+	3156397790	UI_M_Toggle			\UI\UI_Menu\UI_M_Toggle	
+	3237790926	UI_M_SliderMX			\UI\UI_Menu\UI_M_SliderMX	
 	3286101857	FT_OceanCityStop			\FOOTSTEPS\FT_OceanCity\FT_OceanCityStop	
+	3296945275	UI_M_Back			\UI\UI_Menu\UI_M_Back	
+	3692611052	UI_M_Hover			\UI\UI_Menu\UI_M_Hover	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1218704685	SW_FT_OC			\Switch\SW_FT_OC	
@@ -75,6 +85,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	201111223	FT_OC_GroundL1-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Concrete\FT_OC_GroundL1\FT_OC_GroundL1-003		5380
 	204599275	FT_OC_GroundL2-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-001_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-001		5571
 	210619497	FT_SL_River-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_River-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_River\FT_SL_River\FT_SL_River-007		19730
+	210896011	UI_M_PH_Hover	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 4_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Hover		24684
 	217040072	FT_OC_WoodL2-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL2-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Wood\FT_OC_WoodL2\FT_OC_WoodL2-006		6885
 	231538578	FT_SL_Boots-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Boots-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Concrete\FT_SL_Boots\FT_SL_Boots-002		9701
 	235536350	FT_OC_WoodL2-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL2-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Wood\FT_OC_WoodL2\FT_OC_WoodL2-002		7872
@@ -111,6 +122,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	430192418	FT_SL_River-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_River-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_River\FT_SL_River\FT_SL_River-005		20931
 	431057401	UI_CL_WriteText L1-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_WriteText L1-004_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_WriteText\UI_CL_WriteText L1\UI_CL_WriteText L1-004		1674
 	432174329	UI_CL_WriteText L1-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_WriteText L1-001_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_WriteText\UI_CL_WriteText L1\UI_CL_WriteText L1-001		1751
+	432307899	UI_M_PH_Open	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 6_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Open		26067
 	435356534	FT_OC_WoodL1-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_WoodL1-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Wood\FT_OC_WoodL1\FT_OC_WoodL1-006		4469
 	438067879	FT_SL_Boots-009	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Boots-009_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Grass\FT_SL_Boots\FT_SL_Boots-009		8405
 	442459537	FT_SL_River-009	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_River-009_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_River\FT_SL_River\FT_SL_River-009		19278
@@ -126,15 +138,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	494260762	FT_OC_Rail-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Rail-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Rail\FT_OC_Rail\FT_OC_Rail-006		5534
 	494314841	FT_SL_Glass-013	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Glass-013_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Glass\FT_SL_Glass\FT_SL_Glass-013		15391
 	499488290	FT_OC_GroundL1-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Concrete\FT_OC_GroundL1\FT_OC_GroundL1-005		4584
+	501030203	UI_M_PH_Click	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber_AC907161.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Click		12725
 	501268183	UI_CL_DeleteText L1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_DeleteText L1_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_DeleteText\UI_CL_DeleteText L1		2059
 	502800957	FT_OC_GroundL1-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-002_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Cave\FT_OC_GroundL1\FT_OC_GroundL1-002		3497
 	520777631	FT_OC_Water-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_River\FT_OC_Water\FT_OC_Water-007		8088
 	521201645	FT_SL_Sand-L1-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Sand-L1-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Sand\FT_SL_Sand-L1\FT_SL_Sand-L1-005		6453
+	533901080	UI_M_PH_Toggle	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 2_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Toggle		26221
 	537232773	FT_OC_GroundL2-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-005_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-005		5575
 	548112328	UI_CL_Line	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_Line_42B9A1D3.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_Line		3771
 	550170229	FT_OC_Water-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Water-004_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Water\FT_OC_Water\FT_OC_Water-004		10770
 	555107989	UI_CL_WriteText L2-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_WriteText L2-005_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_WriteText\UI_CL_WriteText L2\UI_CL_WriteText L2-005		1481
 	561487437	SFX_G_ErrorMapBug	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_G_ErrorMapBug_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\Global\SFX_G_Error\SFX_G_ErrorMap\SFX_G_ErrorMapBug		263450
+	562058958	UI_M_PH_Back	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 1_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Back		24253
 	585234451	FT_SL_Sand-L2-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Sand-L2-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Sand\FT_SL_Sand-L2\FT_SL_Sand-L2-006		7970
 	586293275	FT_OC_GroundL2-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-003		5550
 	588408791	FT_OC_GroundL2-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL2-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_OC_Ground\FT_OC_GroundL2\FT_OC_GroundL2-007		5339
@@ -149,6 +164,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	633905806	FT_SL_Jungle L1-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Jungle L1-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Grass\FT_SL_Jungle L1\FT_SL_Jungle L1-003		11679
 	639647242	FT_OC_GroundL1-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Ground\FT_OC_GroundL1\FT_OC_GroundL1-006		3854
 	641904535	FT_SL_Jungle L2-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Jungle L2-003_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Jungle\FT_SL_Jungle L2\FT_SL_Jungle L2-003		7826
+	649077144	UI_M_PH_Slider	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 3_52AB607E.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_Slider		5145
 	658907417	FT_SL_Jungle L1-008	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Jungle L1-008_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Jungle\FT_SL_Jungle L1\FT_SL_Jungle L1-008		13393
 	666785899	FT_SL_Glass-010	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Glass-010_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Glass\FT_SL_Glass\FT_SL_Glass-010		11458
 	683703308	FT_OC_GroundL1-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_GroundL1-007_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Glass\FT_OC_GroundL1\FT_OC_GroundL1-007		3937
@@ -216,6 +232,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1033515114	FT_SL_Sand-L1-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Sand-L1-006_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Sand\FT_SL_Sand-L1\FT_SL_Sand-L1-006		6336
 	1042334394	FT_SL_Grass L1-011	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Grass L1-011_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_SL_Jungle\FT_SL_Grass L1\FT_SL_Grass L1-011		6711
 	1044608264	FT_OC_Rail-010	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_OC_Rail-010_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Stop\FT_OC_Rail\FT_OC_Rail\FT_OC_Rail-010		6069
+	1049633942	UI_M_PH_LoadData	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Soundly Voice Designer, Amber 5_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Menu\UI_M_PH_LoadData		29885
 	1057119317	UI_CL_CLick L1-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\UI_CL_CLick L1-003_8E324C96.wem		\Actor-Mixer Hierarchy\UI\UI_Consol\UI_CL_CLick\UI_CL_CLick L1\UI_CL_CLick L1-003		3254
 	1068541316	FT_SL_Jungle L1-009	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\FT_SL_Jungle L1-009_8E324C96.wem		\Actor-Mixer Hierarchy\FOOTSTEPS\FT_OceanCity\FT_OC_Play\FT_SL_Jungle\FT_SL_Jungle L1\FT_SL_Jungle L1-009		7719
 
