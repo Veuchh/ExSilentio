@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 107592985}
   vfx: {fileID: 0}
   revealCurve:
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 301160700}
   vfx: {fileID: 0}
   revealCurve:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 335796383}
   vfx: {fileID: 0}
   revealCurve:
@@ -1338,6 +1338,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3523741756136734379, guid: b10f4b3e38bbda8429aca8ac0d52d320,
+        type: 3}
+      propertyPath: countsTowardsTotalLevelToGuess
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4460751551943824879, guid: b10f4b3e38bbda8429aca8ac0d52d320,
         type: 3}
       propertyPath: m_Name
@@ -1602,7 +1607,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   hintDatabse: {fileID: 11400000, guid: c2433648b13f84a4eada5d3b6f63ab1e, type: 2}
-  hintsBase: []
+  hintsBase:
+  - hint_door1
+  - hint_door2
+  - hint_door3
 --- !u!114 &517926271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 532420109}
   vfx: {fileID: 0}
   revealCurve:
@@ -1927,7 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsInBundle:
   - {fileID: 1619355087}
-  awaitedID: 64
+  awaitedID: 67
   objectImportance: 0
   revealByDefault: 1
   playWwiseEventOnReveal: 0
@@ -2040,7 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 798003248}
   vfx: {fileID: 0}
   revealCurve:
@@ -3394,7 +3402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 1598650188}
   vfx: {fileID: 0}
   revealCurve:
@@ -3464,7 +3472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 64
+  id: 67
   attachedRenderer: {fileID: 1619355084}
   vfx: {fileID: 0}
   revealCurve:
@@ -3540,7 +3548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 1652569517}
   vfx: {fileID: 0}
   revealCurve:
@@ -3936,7 +3944,7 @@ MonoBehaviour:
   - {fileID: 301160702}
   - {fileID: 107592987}
   - {fileID: 798003250}
-  awaitedID: 63
+  awaitedID: 67
   objectImportance: 0
   revealByDefault: 1
   playWwiseEventOnReveal: 0
@@ -3993,7 +4001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 1953736744}
   vfx: {fileID: 0}
   revealCurve:
@@ -4069,7 +4077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c999c0844a1892f4185c4314122b19b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 63
+  id: 67
   attachedRenderer: {fileID: 1986502512}
   vfx: {fileID: 0}
   revealCurve:

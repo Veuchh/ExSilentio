@@ -39,6 +39,7 @@ namespace LW.Level
                 return hintsBase;
             }
         }
+        public bool RevealByDefault => revealByDefault;
         public Dictionary<string, bool> Hints => hints;
         public WordID ID => awaitedID;
         public ObjectImportance ObjectImportance => objectImportance;
