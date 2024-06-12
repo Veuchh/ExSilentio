@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{C7BF02F7-6435-EB0B-6DA8-7ACE3AD780EF}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{C9742453-7134-AACC-BABA-E7B3DDA3FF2C}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -76,7 +76,7 @@
 				</File>
 				<File Id="301193163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_SL_ElevatorLoopAmb1.wav</ShortName>
-					<CachePath>SFX/SFX_SL_ElevatorLoopAmb1_19A1FBE2.wem</CachePath>
+					<CachePath>SFX/SFX_SL_ElevatorLoopAmb1_D4CB4784.wem</CachePath>
 				</File>
 				<File Id="301683489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_SiloRiver.wav</ShortName>
@@ -1068,7 +1068,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{63598707-19AB-F4D7-B543-B23D1C7AA643}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{5E501758-81DE-DA9B-DC20-7361126887F5}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -1245,13 +1245,13 @@
 					<ShortName>FT_SL_River-007.wav</ShortName>
 					<CachePath>SFX/FT_SL_River-007_8E324C96.wem</CachePath>
 				</File>
-				<File Id="210896011" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 4.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 4_8E324C96.wem</CachePath>
-				</File>
 				<File Id="217040072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_WoodL2-006.wav</ShortName>
 					<CachePath>SFX/FT_OC_WoodL2-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="226850501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_LoadMycellium.wav</ShortName>
+					<CachePath>SFX/UI_M_LoadMycellium_8E324C96.wem</CachePath>
 				</File>
 				<File Id="231538578" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Boots-002.wav</ShortName>
@@ -1381,6 +1381,10 @@
 					<ShortName>FT_SL_Sand-L1-007.wav</ShortName>
 					<CachePath>SFX/FT_SL_Sand-L1-007_8E324C96.wem</CachePath>
 				</File>
+				<File Id="428112580" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Slider-001.wav</ShortName>
+					<CachePath>SFX/UI_M_Slider-001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="430192418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_River-005.wav</ShortName>
 					<CachePath>SFX/FT_SL_River-005_8E324C96.wem</CachePath>
@@ -1392,10 +1396,6 @@
 				<File Id="432174329" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_WriteText L1-001.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L1-001_8E324C96.wem</CachePath>
-				</File>
-				<File Id="432307899" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 6.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 6_8E324C96.wem</CachePath>
 				</File>
 				<File Id="435356534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_WoodL1-006.wav</ShortName>
@@ -1433,6 +1433,10 @@
 					<ShortName>FT_SL_Grass L1-006.wav</ShortName>
 					<CachePath>SFX/FT_SL_Grass L1-006_8E324C96.wem</CachePath>
 				</File>
+				<File Id="480615604" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Click.wav</ShortName>
+					<CachePath>SFX/UI_M_Click_8E324C96.wem</CachePath>
+				</File>
 				<File Id="482828038" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Sand-L2-010.wav</ShortName>
 					<CachePath>SFX/FT_SL_Sand-L2-010_8E324C96.wem</CachePath>
@@ -1457,10 +1461,6 @@
 					<ShortName>FT_OC_GroundL1-005.wav</ShortName>
 					<CachePath>SFX/FT_OC_GroundL1-005_8E324C96.wem</CachePath>
 				</File>
-				<File Id="501030203" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber_7500D5CD.wem</CachePath>
-				</File>
 				<File Id="501268183" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_DeleteText L1.wav</ShortName>
 					<CachePath>SFX/UI_CL_DeleteText L1_8E324C96.wem</CachePath>
@@ -1476,10 +1476,6 @@
 				<File Id="521201645" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Sand-L1-005.wav</ShortName>
 					<CachePath>SFX/FT_SL_Sand-L1-005_8E324C96.wem</CachePath>
-				</File>
-				<File Id="533901080" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 2.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="535375494" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX Menu Test.wav</ShortName>
@@ -1505,9 +1501,9 @@
 					<ShortName>SFX_G_ErrorMapBug.wav</ShortName>
 					<CachePath>SFX/SFX_G_ErrorMapBug_8E324C96.wem</CachePath>
 				</File>
-				<File Id="562058958" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 1.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 1_8E324C96.wem</CachePath>
+				<File Id="583113551" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Toggle.wav</ShortName>
+					<CachePath>SFX/UI_M_Toggle_8E324C96.wem</CachePath>
 				</File>
 				<File Id="585234451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Sand-L2-006.wav</ShortName>
@@ -1528,6 +1524,10 @@
 				<File Id="589641580" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Grass L1-010.wav</ShortName>
 					<CachePath>SFX/FT_SL_Grass L1-010_8E324C96.wem</CachePath>
+				</File>
+				<File Id="589999145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_CloseMenu.wav</ShortName>
+					<CachePath>SFX/UI_M_CloseMenu_8E324C96.wem</CachePath>
 				</File>
 				<File Id="591190284" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Jungle L2-010.wav</ShortName>
@@ -1565,9 +1565,9 @@
 					<ShortName>FT_SL_Jungle L2-003.wav</ShortName>
 					<CachePath>SFX/FT_SL_Jungle L2-003_8E324C96.wem</CachePath>
 				</File>
-				<File Id="649077144" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 3.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 3_BFD6F8F9.wem</CachePath>
+				<File Id="649082779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Slider-002.wav</ShortName>
+					<CachePath>SFX/UI_M_Slider-002_8E324C96.wem</CachePath>
 				</File>
 				<File Id="658907417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Jungle L1-008.wav</ShortName>
@@ -1621,6 +1621,10 @@
 					<ShortName>FT_SL_Jungle L2-009.wav</ShortName>
 					<CachePath>SFX/FT_SL_Jungle L2-009_8E324C96.wem</CachePath>
 				</File>
+				<File Id="747665696" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Hover.wav</ShortName>
+					<CachePath>SFX/UI_M_Hover_8E324C96.wem</CachePath>
+				</File>
 				<File Id="749615342" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Grass L2-012.wav</ShortName>
 					<CachePath>SFX/FT_SL_Grass L2-012_8E324C96.wem</CachePath>
@@ -1640,6 +1644,10 @@
 				<File Id="773935871" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_WriteText L2-003.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L2-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="790201205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Slider-003.wav</ShortName>
+					<CachePath>SFX/UI_M_Slider-003_8E324C96.wem</CachePath>
 				</File>
 				<File Id="805784958" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_WoodL1-004.wav</ShortName>
@@ -1676,6 +1684,10 @@
 				<File Id="822963830" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Grass L1-005.wav</ShortName>
 					<CachePath>SFX/FT_SL_Grass L1-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="828101322" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Op_Static.wav</ShortName>
+					<CachePath>SFX/UI_CL_Op_Static_56CEF360.wem</CachePath>
 				</File>
 				<File Id="832166177" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Sand-L2-003.wav</ShortName>
@@ -1777,6 +1789,10 @@
 					<ShortName>FT_SL_Grass L2-008.wav</ShortName>
 					<CachePath>SFX/FT_SL_Grass L2-008_8E324C96.wem</CachePath>
 				</File>
+				<File Id="960380483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_LoadData.wav</ShortName>
+					<CachePath>SFX/UI_M_LoadData_8E324C96.wem</CachePath>
+				</File>
 				<File Id="963205015" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Glass-009.wav</ShortName>
 					<CachePath>SFX/FT_SL_Glass-009_8E324C96.wem</CachePath>
@@ -1789,6 +1805,10 @@
 					<ShortName>FT_SL_Jungle L2-006.wav</ShortName>
 					<CachePath>SFX/FT_SL_Jungle L2-006_8E324C96.wem</CachePath>
 				</File>
+				<File Id="973711423" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Back.wav</ShortName>
+					<CachePath>SFX/UI_M_Back_8E324C96.wem</CachePath>
+				</File>
 				<File Id="974261811" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Rail-004.wav</ShortName>
 					<CachePath>SFX/FT_OC_Rail-004_8E324C96.wem</CachePath>
@@ -1800,6 +1820,10 @@
 				<File Id="981665145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_WriteText L1-003.wav</ShortName>
 					<CachePath>SFX/UI_CL_WriteText L1-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="987677328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_Slider-004.wav</ShortName>
+					<CachePath>SFX/UI_M_Slider-004_8E324C96.wem</CachePath>
 				</File>
 				<File Id="997181713" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Sand-L2-001.wav</ShortName>
@@ -1837,9 +1861,9 @@
 					<ShortName>FT_OC_Rail-010.wav</ShortName>
 					<CachePath>SFX/FT_OC_Rail-010_8E324C96.wem</CachePath>
 				</File>
-				<File Id="1049633942" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Voice Designer, Amber 5.wav</ShortName>
-					<CachePath>SFX/Soundly Voice Designer, Amber 5_8E324C96.wem</CachePath>
+				<File Id="1046765752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_M_OpenMenu.wav</ShortName>
+					<CachePath>SFX/UI_M_OpenMenu_8E324C96.wem</CachePath>
 				</File>
 				<File Id="1057119317" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_CLick L1-003.wav</ShortName>
@@ -1852,9 +1876,6 @@
 			</Media>
 			<Events>
 				<Event Id="126894539" Name="FT_OceanCityPlay" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay" GUID="{D0B2B762-3554-4CC3-9DE3-DBECEA1B77C6}" DurationType="Infinite">
-					<AuxBusRefs>
-						<AuxBusRef Id="3705378287" Name="Elevator" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Elevator" GUID="{6357A204-E3B5-4622-8EC5-91282DF05275}"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="267428953" GUID="{672BBB3F-9241-45B0-A1D3-C654DD98B2FD}"/>
@@ -2628,7 +2649,7 @@
 						<MediaRef Id="462162919"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2442725498" Name="UI_CL_DeleteText" ObjectPath="\Events\UI\UI_Consol\UI_CL_DeleteText" GUID="{7E6CD3C5-EC89-4EA4-AC3A-0A4E39C1ACC4}" DurationType="OneShot" DurationMin="0.14491667" DurationMax="0.14491667">
+				<Event Id="2442725498" Name="UI_CL_DeleteText" ObjectPath="\Events\UI\UI_Consol\UI_CL_DeleteText" GUID="{7E6CD3C5-EC89-4EA4-AC3A-0A4E39C1ACC4}" DurationType="OneShot" DurationMin="0.25632238" DurationMax="0.25632238">
 					<MediaRefs>
 						<MediaRef Id="501268183"/>
 						<MediaRef Id="806993475"/>
@@ -2648,6 +2669,7 @@
 					<MediaRefs>
 						<MediaRef Id="52600204"/>
 						<MediaRef Id="346834434"/>
+						<MediaRef Id="828101322"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2292383016" Name="UI_CL_WordEnter" ObjectPath="\Events\UI\UI_Consol\UI_CL_WordEnter" GUID="{0BA22B39-AD5F-404B-8DED-B6A93AAB59B5}" DurationType="OneShot" DurationMin="0.4160625" DurationMax="0.4160625">
@@ -2676,54 +2698,76 @@
 						<MediaRef Id="694773789"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3296945275" Name="UI_M_Back" ObjectPath="\Events\UI\UI_Menu\UI_M_Back" GUID="{503AAAB9-4B69-44E0-89A5-119B626272E8}" DurationType="OneShot" DurationMin="1.8467083" DurationMax="1.8467083">
+				<Event Id="3296945275" Name="UI_M_Back" ObjectPath="\Events\UI\UI_Menu\UI_M_Back" GUID="{503AAAB9-4B69-44E0-89A5-119B626272E8}" DurationType="OneShot" DurationMin="0.38116667" DurationMax="0.38116667">
 					<MediaRefs>
-						<MediaRef Id="562058958"/>
+						<MediaRef Id="973711423"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="790248566" Name="UI_M_Click" ObjectPath="\Events\UI\UI_Menu\UI_M_Click" GUID="{4A17845E-8856-4DFA-885F-287601D5CBFE}" DurationType="OneShot" DurationMin="0.81906724" DurationMax="0.81906724">
+				<Event Id="790248566" Name="UI_M_Click" ObjectPath="\Events\UI\UI_Menu\UI_M_Click" GUID="{4A17845E-8856-4DFA-885F-287601D5CBFE}" DurationType="OneShot" DurationMin="0.24391666" DurationMax="0.24391666">
 					<MediaRefs>
-						<MediaRef Id="501030203"/>
+						<MediaRef Id="480615604"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3692611052" Name="UI_M_Hover" ObjectPath="\Events\UI\UI_Menu\UI_M_Hover" GUID="{B10A4CB2-D6AD-4BAD-9923-A27E79B3ADE4}" DurationType="OneShot" DurationMin="1.83025" DurationMax="1.83025">
+				<Event Id="3679537675" Name="UI_M_CloseMenu" ObjectPath="\Events\UI\UI_Menu\UI_M_CloseMenu" GUID="{92223825-8A2D-4488-B926-F491BF256403}" DurationType="OneShot" DurationMin="0.38725" DurationMax="0.38725">
 					<MediaRefs>
-						<MediaRef Id="210896011"/>
+						<MediaRef Id="589999145"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1336747374" Name="UI_M_LoadData" ObjectPath="\Events\UI\UI_Menu\UI_M_LoadData" GUID="{B61B82CF-2BFF-46AA-A3BB-CE1FBEB978BC}" DurationType="OneShot" DurationMin="2.1679375" DurationMax="2.1679375">
+				<Event Id="3692611052" Name="UI_M_Hover" ObjectPath="\Events\UI\UI_Menu\UI_M_Hover" GUID="{B10A4CB2-D6AD-4BAD-9923-A27E79B3ADE4}" DurationType="OneShot" DurationMin="0.115625" DurationMax="0.115625">
 					<MediaRefs>
-						<MediaRef Id="1049633942"/>
+						<MediaRef Id="747665696"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1749630015" Name="UI_M_OpenMenu" ObjectPath="\Events\UI\UI_Menu\UI_M_OpenMenu" GUID="{FAEF5D2A-15D8-4A91-B06C-7915AFB6AA8C}" DurationType="OneShot" DurationMin="2.0350208" DurationMax="2.0350208">
+				<Event Id="1336747374" Name="UI_M_LoadData" ObjectPath="\Events\UI\UI_Menu\UI_M_LoadData" GUID="{446C31F0-6647-40AB-A958-5B1371267327}" DurationType="OneShot" DurationMin="0.7264583" DurationMax="0.7264583">
 					<MediaRefs>
-						<MediaRef Id="432307899"/>
+						<MediaRef Id="226850501"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2835872183" Name="UI_M_SliderAMB" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderAMB" GUID="{A743A4AF-AB01-4F5E-B16D-B7C0D937AC51}" DurationType="OneShot" DurationMin="0.31756505" DurationMax="0.31756505">
+				<Event Id="1192986808" Name="UI_M_LoadDataLevel" ObjectPath="\Events\UI\UI_Menu\UI_M_LoadDataLevel" GUID="{B61B82CF-2BFF-46AA-A3BB-CE1FBEB978BC}" DurationType="OneShot" DurationMin="2.5192084" DurationMax="2.5192084">
 					<MediaRefs>
-						<MediaRef Id="649077144"/>
+						<MediaRef Id="960380483"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1612319303" Name="UI_M_SliderMaster" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderMaster" GUID="{CB385447-78FB-40CE-9FD0-E63FF7BEA3A7}" DurationType="OneShot" DurationMin="0.31756505" DurationMax="0.31756505">
+				<Event Id="1749630015" Name="UI_M_OpenMenu" ObjectPath="\Events\UI\UI_Menu\UI_M_OpenMenu" GUID="{FAEF5D2A-15D8-4A91-B06C-7915AFB6AA8C}" DurationType="OneShot" DurationMin="0.49433333" DurationMax="0.49433333">
 					<MediaRefs>
-						<MediaRef Id="649077144"/>
+						<MediaRef Id="1046765752"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3237790926" Name="UI_M_SliderMX" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderMX" GUID="{EF517E74-DB8B-4657-8A4B-E2DAF1704D19}" DurationType="OneShot" DurationMin="0.31756505" DurationMax="0.31756505">
+				<Event Id="2835872183" Name="UI_M_SliderAMB" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderAMB" GUID="{A743A4AF-AB01-4F5E-B16D-B7C0D937AC51}" DurationType="OneShot" DurationMin="0.13575" DurationMax="0.19547917">
 					<MediaRefs>
-						<MediaRef Id="649077144"/>
+						<MediaRef Id="428112580"/>
+						<MediaRef Id="649082779"/>
+						<MediaRef Id="790201205"/>
+						<MediaRef Id="987677328"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3103570039" Name="UI_M_SliderUI" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderUI" GUID="{0CC09ED1-D352-4B9F-8A51-817117DE0094}" DurationType="OneShot" DurationMin="0.31756505" DurationMax="0.31756505">
+				<Event Id="1612319303" Name="UI_M_SliderMaster" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderMaster" GUID="{CB385447-78FB-40CE-9FD0-E63FF7BEA3A7}" DurationType="OneShot" DurationMin="0.13575" DurationMax="0.19547917">
 					<MediaRefs>
-						<MediaRef Id="649077144"/>
+						<MediaRef Id="428112580"/>
+						<MediaRef Id="649082779"/>
+						<MediaRef Id="790201205"/>
+						<MediaRef Id="987677328"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3156397790" Name="UI_M_Toggle" ObjectPath="\Events\UI\UI_Menu\UI_M_Toggle" GUID="{CD366B8D-9355-4D02-A4F5-90D7FC0FED5C}" DurationType="OneShot" DurationMin="1.8445834" DurationMax="1.8445834">
+				<Event Id="3237790926" Name="UI_M_SliderMX" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderMX" GUID="{EF517E74-DB8B-4657-8A4B-E2DAF1704D19}" DurationType="OneShot" DurationMin="0.13575" DurationMax="0.19547917">
 					<MediaRefs>
-						<MediaRef Id="533901080"/>
+						<MediaRef Id="428112580"/>
+						<MediaRef Id="649082779"/>
+						<MediaRef Id="790201205"/>
+						<MediaRef Id="987677328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3103570039" Name="UI_M_SliderUI" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderUI" GUID="{0CC09ED1-D352-4B9F-8A51-817117DE0094}" DurationType="OneShot" DurationMin="0.13575" DurationMax="0.19547917">
+					<MediaRefs>
+						<MediaRef Id="428112580"/>
+						<MediaRef Id="649082779"/>
+						<MediaRef Id="790201205"/>
+						<MediaRef Id="987677328"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3156397790" Name="UI_M_Toggle" ObjectPath="\Events\UI\UI_Menu\UI_M_Toggle" GUID="{CD366B8D-9355-4D02-A4F5-90D7FC0FED5C}" DurationType="OneShot" DurationMin="0.049583334" DurationMax="0.049583334">
+					<MediaRefs>
+						<MediaRef Id="583113551"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -4224,5 +4268,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{932761E0-3826-A71F-7B0A-8163353ADD34}</FileHash>
+	<FileHash>{926CE75B-9870-B101-024F-BF3423ED064C}</FileHash>
 </SoundBanksInfo>
