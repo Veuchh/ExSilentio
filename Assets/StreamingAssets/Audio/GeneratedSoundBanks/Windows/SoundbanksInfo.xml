@@ -680,7 +680,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2A790223-FB6F-20F1-5731-9777D9209F63}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{39DD563B-973F-4080-FFDF-D580B3ECBFA6}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1027,6 +1027,13 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Unreveal" GUID="{9ACAD233-B846-4DC1-96B2-A82A71B83B76}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="4136079247" Name="ST_G_MuteMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu" GUID="{61017A4B-715D-415E-A761-6FDCAFEB9088}">
+					<States>
+						<State Id="67980898" Name="OutMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\OutMenu" GUID="{F93B1DF9-7458-4FD6-AC8D-7930663E5D72}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\None" GUID="{2FB82E9F-3C7B-48E0-88B5-AD7490DF01C0}"/>
+						<State Id="3374585465" Name="InMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\InMenu" GUID="{11D0FB5F-9C68-42E1-8F09-70CF5CE1A94F}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4165626038" Name="ST_MX_OC_Fish" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish" GUID="{079004F2-67A5-4114-998A-C3C7027597FA}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish\Reveal" GUID="{9FB841E3-DC7B-4F20-A97C-D449D6624FCD}"/>
@@ -1082,7 +1089,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{C8A05EA7-495E-7656-F07C-21D691F9EA03}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{BC648A8F-3FDE-1493-EE0C-DB1E2A2C5A77}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -2636,6 +2643,9 @@
 					<MediaRefs>
 						<MediaRef Id="535375494"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4136079247" Id="67980898" Name="OutMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\OutMenu" GUID="{F93B1DF9-7458-4FD6-AC8D-7930663E5D72}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="870376687" Name="SFX_G_ErrorMap" ObjectPath="\Events\SFX\SFX_Global\SFX_G_ErrorMap" GUID="{A8F665CA-656C-4CC3-9CF6-1D643477030D}" MaxAttenuation="25" DurationType="OneShot" DurationMin="60.261166" DurationMax="60.261166">
 					<MediaRefs>
@@ -2726,6 +2736,9 @@
 					<MediaRefs>
 						<MediaRef Id="589999145"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4136079247" Id="67980898" Name="OutMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\OutMenu" GUID="{F93B1DF9-7458-4FD6-AC8D-7930663E5D72}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="3692611052" Name="UI_M_Hover" ObjectPath="\Events\UI\UI_Menu\UI_M_Hover" GUID="{B10A4CB2-D6AD-4BAD-9923-A27E79B3ADE4}" DurationType="OneShot" DurationMin="0.115625" DurationMax="0.115625">
 					<MediaRefs>
@@ -2746,6 +2759,9 @@
 					<MediaRefs>
 						<MediaRef Id="1046765752"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4136079247" Id="3374585465" Name="InMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\InMenu" GUID="{11D0FB5F-9C68-42E1-8F09-70CF5CE1A94F}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="2835872183" Name="UI_M_SliderAMB" ObjectPath="\Events\UI\UI_Menu\UI_M_SliderAMB" GUID="{A743A4AF-AB01-4F5E-B16D-B7C0D937AC51}" DurationType="OneShot" DurationMin="0.13575" DurationMax="0.19547917">
 					<MediaRefs>
@@ -2785,6 +2801,15 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4136079247" Name="ST_G_MuteMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu" GUID="{61017A4B-715D-415E-A761-6FDCAFEB9088}">
+					<States>
+						<State Id="67980898" Name="OutMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\OutMenu" GUID="{F93B1DF9-7458-4FD6-AC8D-7930663E5D72}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\None" GUID="{2FB82E9F-3C7B-48E0-88B5-AD7490DF01C0}"/>
+						<State Id="3374585465" Name="InMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\InMenu" GUID="{11D0FB5F-9C68-42E1-8F09-70CF5CE1A94F}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1218704685" Name="SW_FT_OC" ObjectPath="\Switches\Switch\SW_FT_OC" GUID="{4BE0489F-A9ED-404A-90ED-8E76610A0FAC}">
 					<Switches>
@@ -4329,5 +4354,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{23E72108-099E-5BFD-1219-8021E8EFA2AF}</FileHash>
+	<FileHash>{3583FA92-C9B9-77BE-8BFC-7F5969DF3F5E}</FileHash>
 </SoundBanksInfo>
