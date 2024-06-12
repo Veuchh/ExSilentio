@@ -1082,7 +1082,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{C6BEF5B8-63EC-9FD3-84C6-F9747279A151}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{C8A05EA7-495E-7656-F07C-21D691F9EA03}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -1278,6 +1278,10 @@
 				<File Id="235929195" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_GroundL2-006.wav</ShortName>
 					<CachePath>SFX/FT_OC_GroundL2-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="246322530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_G_ErrorTP.wav</ShortName>
+					<CachePath>SFX/SFX_G_ErrorTP_8E324C96.wem</CachePath>
 				</File>
 				<File Id="249651705" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Boots-011.wav</ShortName>
@@ -2641,6 +2645,11 @@
 						<MediaRef Id="927008413"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2173978357" Name="SFX_G_Respawn" ObjectPath="\Events\SFX\SFX_Global\SFX_G_Respawn" GUID="{C504EF1B-E87F-4811-BED8-71714AE23551}" DurationType="OneShot" DurationMin="1.9427084" DurationMax="1.9427084">
+					<MediaRefs>
+						<MediaRef Id="246322530"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2266750638" Name="UI_CL_CLick" ObjectPath="\Events\UI\UI_Consol\UI_CL_CLick" GUID="{76936BFC-85AC-4543-A1B2-543D9250E5ED}" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
 					<MediaRefs>
 						<MediaRef Id="19911218"/>
@@ -2795,7 +2804,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{360997F6-EC6E-DD68-7E64-46C03ED2FF08}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{88AACD77-831E-14E4-D909-7C852DA3B7E7}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -2826,9 +2835,9 @@
 					</ActionSetState>
 				</Event>
 				<Event Id="546842145" Name="MX_MY_End" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_End" GUID="{41509410-47C7-485F-B9AB-952BD7F713E0}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="244693958" Name="MX_MY_ST_MemoryFoamMelodyOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyOct" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3766624338" Name="MX_MY_ST_MemoryFoamIdle" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamIdle" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="48776809" Name="SFX_MY_Doors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_Doors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2927351608" Name="SFX_MY_PannelOpen" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_PannelOpen" GUID="{35069E82-2EC3-4C0B-B5DD-068A5D018A7C}" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
@@ -4320,5 +4329,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6B4FD278-4BBD-B286-EFC6-E0A405A8E89C}</FileHash>
+	<FileHash>{40E5F0F1-F35E-0683-E8CA-9501F6AE5F81}</FileHash>
 </SoundBanksInfo>

@@ -1478,8 +1478,8 @@ MonoBehaviour:
         guid: 264814935270f842a82bb2533d6af84e
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 136.87923
+      minDuration: 136.87923
     - name: AMB_SL_JunleFakeRain
       guid: d844f6a81966f44c8255587daeb1b64d
       id: 2246380605
@@ -1518,8 +1518,8 @@ MonoBehaviour:
         guid: 9050691e9f26d14eba4f157f13730aee
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog
       maxAttenuation: 25
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 39
+      minDuration: 39
     - name: AMB_SL_LabComputerGlitch
       guid: d64e92d99b2bfb4f8895a81d8aee9c27
       id: 1056831651
@@ -2178,7 +2178,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584834278840426060
+    m_lastTime: -8584834104153298516
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -2237,6 +2237,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_MY_ST_MemoryFoamIdle
+      guid: 49eead7716ff2d4db373759d3f1d3a3c
+      id: 3766624338
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: MX_MY_ST_MemoryFoamIdle
+        ObjectType: 3
+        guid: 49eead7716ff2d4db373759d3f1d3a3c
+      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamIdle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_MY_ST_MemoryFoamMelodyEnter
       guid: 9ac32b4677dd9a408bbe9b0b896c6b1d
       id: 1708309274
@@ -2250,10 +2270,13 @@ MonoBehaviour:
       - ElementName: MX_Mycelium
         ObjectType: 4
         guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
       - ElementName: MX_MY_ST_MemoryFoamMelodyEnter
         ObjectType: 3
         guid: 9ac32b4677dd9a408bbe9b0b896c6b1d
-      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyEnter
+      Path: Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2270,30 +2293,13 @@ MonoBehaviour:
       - ElementName: MX_Mycelium
         ObjectType: 4
         guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
       - ElementName: MX_MY_ST_MemoryFoamMelodyExit
         ObjectType: 3
         guid: ed2630cec869614badb23d651d5d634d
-      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyExit
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: MX_MY_ST_MemoryFoamMelodyOct
-      guid: 49eead7716ff2d4db373759d3f1d3a3c
-      id: 244693958
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_Mycelium
-        ObjectType: 4
-        guid: 15af895817a32b4eae917cc35943ace1
-      - ElementName: MX_MY_ST_MemoryFoamMelodyOct
-        ObjectType: 3
-        guid: 49eead7716ff2d4db373759d3f1d3a3c
-      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyOct
+      Path: Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyExit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3244,6 +3250,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Trigger
+      guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      Path: Events\MX\MX_Mycelium\Trigger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\SFX.wwu
     PathAndIcons:
     - ElementName: Events
@@ -3255,7 +3281,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584834131160912953
+    m_lastTime: -8584834110763797674
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
@@ -3297,6 +3323,26 @@ MonoBehaviour:
       maxAttenuation: 25
       maxDuration: 60.261166
       minDuration: 60.261166
+    - name: SFX_G_Respawn
+      guid: 1bef04c57fe81148bed871714ae23551
+      id: 2173978357
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Global
+        ObjectType: 4
+        guid: 020af29bdac3c641ba3522f13e5975e8
+      - ElementName: SFX_G_Respawn
+        ObjectType: 3
+        guid: 1bef04c57fe81148bed871714ae23551
+      Path: Events\SFX\SFX_Global\SFX_G_Respawn
+      maxAttenuation: 0
+      maxDuration: 1.9427084
+      minDuration: 1.9427084
     - name: SFX_Global
       guid: 020af29bdac3c641ba3522f13e5975e8
       id: 613679276
@@ -8197,9 +8243,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584835161147875808
     List: []
-  ExpandedFileSystemItemIds: 010000000200000003000000050000000600000007000000080000001c0000001d0000001f00000020000000220000002500000026000000280000002c00000042000000460000004d0000005f0000007f00000082000000fa000000fb000000fc000000040100005f01000060010000610100006a010000
-  ExpandedWaapiItemIds: 0100000002000000040000000500000006000000070000001c0000001d0000001f000000220000002500000026000000280000002c00000042000000460000004d0000005f0000007f000000fa000000fb000000fc00000004010000
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
