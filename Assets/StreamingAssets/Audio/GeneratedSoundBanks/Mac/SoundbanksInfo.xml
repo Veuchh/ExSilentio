@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{2B863AC3-8D81-0705-01C8-B00949233941}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{FCBB0232-A876-1350-211D-859D3B4FEEC1}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -246,6 +246,7 @@
 			<Plugins>
 				<Custom>
 					<Plugin Id="677083878" Name="Silence" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_Silence\Silence" GUID="{9249FB75-A8B0-4A8F-8F06-12C66FDD4A48}" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="743163767" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopBzzz\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{C1F7CEF6-A683-4537-97FB-0DAD8BCFFB6F}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="781208086" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{5980C3D5-B33C-4C4E-B7CE-96B15729462F}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="999051101" Name="Parametric EQ (Custom)" ObjectPath="\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_DesertWindInt\[Effect Slot [0]: (Parametric EQ)]\Parametric EQ (Custom)" GUID="{E0BFDD13-F9A5-4BE3-A2CE-F0393ED40C05}" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
@@ -488,6 +489,9 @@
 						<ActionSetStateEntry GroupId="1011090278" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle\Reveal" GUID="{44373BE9-BE36-4993-9365-6ED3B56328FB}"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2415996523" Name="MX_SL_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit" GUID="{E44B385B-5C76-4F86-B1A6-1519033709D6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3715859067" Name="MX_SL_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct" GUID="{6AFE993C-9BE8-4176-9B0F-E1F7E1F29C00}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4045214441" Name="MX_SL_ST_River" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_River" GUID="{EE069852-22F8-47F8-A651-66DDC9D0E65F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4045214441" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Reveal" GUID="{BA6776CD-DD20-48E1-A7B6-59ADA509152C}"/>
@@ -521,6 +525,11 @@
 						<MediaRef Id="522481254"/>
 						<MediaRef Id="758395994"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="743163767"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="885673933" Name="SFX_SL_ElevatorStinger" ObjectPath="\Events\SFX\SFX_Strelitzia\SFX_SL_ElevatorStinger" GUID="{E46AE743-E351-40C4-8BA4-BC95EBAEACC7}" DurationType="OneShot" DurationMin="9.164667" DurationMax="9.164667">
 					<MediaRefs>
@@ -1059,7 +1068,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{E49B43A2-8787-73A3-1894-72134F0D69A9}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{63598707-19AB-F4D7-B543-B23D1C7AA643}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -1471,6 +1480,10 @@
 				<File Id="533901080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Voice Designer, Amber 2.wav</ShortName>
 					<CachePath>SFX/Soundly Voice Designer, Amber 2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="535375494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX Menu Test.wav</ShortName>
+					<CachePath>SFX/MX Menu Test_56CEF360.wem</CachePath>
 				</File>
 				<File Id="537232773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_GroundL2-005.wav</ShortName>
@@ -2584,7 +2597,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1704951998" Name="MX_M_Main" ObjectPath="\Events\MX\MX_Menu\MX_M_Main" GUID="{62142DA5-46C7-4902-ABDF-1F17E0FFCF7C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1704951998" Name="MX_M_Main" ObjectPath="\Events\MX\MX_Menu\MX_M_Main" GUID="{62142DA5-46C7-4902-ABDF-1F17E0FFCF7C}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="535375494"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="870376687" Name="SFX_G_ErrorMap" ObjectPath="\Events\SFX\SFX_Global\SFX_G_ErrorMap" GUID="{A8F665CA-656C-4CC3-9CF6-1D643477030D}" MaxAttenuation="25" DurationType="OneShot" DurationMin="60.261166" DurationMax="60.261166">
 					<MediaRefs>
 						<MediaRef Id="133403431"/>
@@ -2728,6 +2745,17 @@
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{C1C1B27F-D3D2-4583-045E-2C4D1E0748AE}">
+			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
+			<ShortName>Mycelium</ShortName>
+			<Path>Mycelium.bnk</Path>
+			<Events>
+				<Event Id="546842145" Name="MX_MY_End" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_End" GUID="{41509410-47C7-485F-B9AB-952BD7F713E0}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="244693958" Name="MX_MY_ST_MemoryFoamMelodyOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyOct" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{8DE8A6E3-5978-6AD5-1B09-E42DEAD43824}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
@@ -4196,5 +4224,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1B29CD10-B926-9BAB-FB25-E542126CE6F2}</FileHash>
+	<FileHash>{F663CEB8-9402-8767-2F3E-B89F6D034441}</FileHash>
 </SoundBanksInfo>
