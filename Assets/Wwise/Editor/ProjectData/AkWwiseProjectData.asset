@@ -633,7 +633,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Ex_Silencio
     guid: 99df0cf2de40bd46b9fb8c2995637adf
     GuidInternal: 
-    m_lastTime: -8584834792603324205
+    m_lastTime: -8584834279210887792
     List:
     - name: Global
       guid: d06acd887504c946b336e86a99380790
@@ -649,6 +649,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: d06acd887504c946b336e86a99380790
       Path: SoundBanks\Ex_Silencio\Global
+    - name: Mycelium
+      guid: 360eee3239fb2f4094c292287ed37a7d
+      id: 2121747212
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ex_Silencio
+        ObjectType: 12
+        guid: 99df0cf2de40bd46b9fb8c2995637adf
+      - ElementName: Mycelium
+        ObjectType: 7
+        guid: 360eee3239fb2f4094c292287ed37a7d
+      Path: SoundBanks\Ex_Silencio\Mycelium
     - name: OceanCity
       guid: e119ced5ab6b7a4a8e25731a958027cd
       id: 2321219508
@@ -2058,7 +2072,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584834301459146060
+    m_lastTime: -8584834278840426060
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -2078,8 +2092,8 @@ MonoBehaviour:
         guid: a52d1462c7460249abdf1f17e0ffcf7c
       Path: Events\MX\MX_Menu\MX_M_Main
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MX_Menu
       guid: 65e1c96e72f7bc4abfaf34967995b638
       id: 2103702368
@@ -2115,8 +2129,68 @@ MonoBehaviour:
         guid: 10945041c7475f48b9ab952bd7f713e0
       Path: Events\MX\MX_Mycelium\MX_MY_End
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_MY_ST_MemoryFoamMelodyEnter
+      guid: 9ac32b4677dd9a408bbe9b0b896c6b1d
+      id: 1708309274
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: MX_MY_ST_MemoryFoamMelodyEnter
+        ObjectType: 3
+        guid: 9ac32b4677dd9a408bbe9b0b896c6b1d
+      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyEnter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_MY_ST_MemoryFoamMelodyExit
+      guid: ed2630cec869614badb23d651d5d634d
+      id: 1655119304
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: MX_MY_ST_MemoryFoamMelodyExit
+        ObjectType: 3
+        guid: ed2630cec869614badb23d651d5d634d
+      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyExit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_MY_ST_MemoryFoamMelodyOct
+      guid: 49eead7716ff2d4db373759d3f1d3a3c
+      id: 244693958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: MX_MY_ST_MemoryFoamMelodyOct
+        ObjectType: 3
+        guid: 49eead7716ff2d4db373759d3f1d3a3c
+      Path: Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyOct
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: MX_Mycelium
       guid: 15af895817a32b4eae917cc35943ace1
       id: 2870356188
@@ -2861,6 +2935,72 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_SL_ST_MemoryFoamMelodyEnter
+      guid: f857e032e2fec247927355b53c5a45b9
+      id: 4032337355
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 7257427b46b38845815459927cc9b52a
+      - ElementName: MX_SL_ST_MemoryFoamMelodyEnter
+        ObjectType: 3
+        guid: f857e032e2fec247927355b53c5a45b9
+      Path: Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: MX_SL_ST_MemoryFoamMelodyExit
+      guid: 5b384be4765c864fb1a61519033709d6
+      id: 2415996523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 7257427b46b38845815459927cc9b52a
+      - ElementName: MX_SL_ST_MemoryFoamMelodyExit
+        ObjectType: 3
+        guid: 5b384be4765c864fb1a61519033709d6
+      Path: Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: MX_SL_ST_MemoryFoamOct
+      guid: 3c99fe6ae89b76419b0fe1f7e1f29c00
+      id: 3715859067
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: MX_SL_ST_MemoryFoamOct
+        ObjectType: 3
+        guid: 3c99fe6ae89b76419b0fe1f7e1f29c00
+      Path: Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: MX_SL_ST_River
       guid: 529806eef822f847a65166ddc9d0e65f
       id: 4045214441
@@ -2959,6 +3099,26 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Trigger
+      guid: 7257427b46b38845815459927cc9b52a
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Strelitzia
+        ObjectType: 4
+        guid: 9ae1595873b3a148a1ecd5bb4d524bcc
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 7257427b46b38845815459927cc9b52a
+      Path: Events\MX\MX_Strelitzia\Trigger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Trigger
       guid: 0a6d2b755e3b404396389f317dce77fc
       id: 3571255931
       PathAndIcons:
@@ -2989,7 +3149,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584834296867075812
+    m_lastTime: -8584834292501188996
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
