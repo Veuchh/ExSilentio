@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{EADD5573-F2A8-ECC8-ACF2-1B48AC8B4903}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{2B863AC3-8D81-0705-01C8-B00949233941}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -46,6 +46,10 @@
 					<ShortName>AMB_SL_SiloMain.wav</ShortName>
 					<CachePath>SFX/AMB_SL_SiloMain_8E324C96.wem</CachePath>
 				</File>
+				<File Id="165150337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Ph_Silo.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Ph_Silo_56CEF360.wem</CachePath>
+				</File>
 				<File Id="167603772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabElectricitySparks.wav</ShortName>
 					<CachePath>SFX/AMB_SL_LabElectricitySparks_56CEF360.wem</CachePath>
@@ -70,6 +74,10 @@
 					<ShortName>AMB_SL_CaveDrop.wav</ShortName>
 					<CachePath>SFX/AMB_SL_CaveDrop_56CEF360.wem</CachePath>
 				</File>
+				<File Id="301193163" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_SL_ElevatorLoopAmb1.wav</ShortName>
+					<CachePath>SFX/SFX_SL_ElevatorLoopAmb1_19A1FBE2.wem</CachePath>
+				</File>
 				<File Id="301683489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_SiloRiver.wav</ShortName>
 					<CachePath>SFX/AMB_SL_SiloRiver_56CEF360.wem</CachePath>
@@ -81,6 +89,10 @@
 				<File Id="312852544" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabElectricityBuzz-001.wav</ShortName>
 					<CachePath>SFX/AMB_SL_LabElectricityBuzz-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="313827201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Ph_Cave.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Ph_Cave_56CEF360.wem</CachePath>
 				</File>
 				<File Id="343290069" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_CaveDrop fast.wav</ShortName>
@@ -130,6 +142,10 @@
 					<ShortName>AMB_SL_CaveFireCampClose.wav</ShortName>
 					<CachePath>SFX/AMB_SL_CaveFireCampClose_56CEF360.wem</CachePath>
 				</File>
+				<File Id="586504016" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Ph_JungleIlde.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Ph_JungleIlde_56CEF360.wem</CachePath>
+				</File>
 				<File Id="650248975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_CaveMain.wav</ShortName>
 					<CachePath>SFX/AMB_SL_CaveMain_56CEF360.wem</CachePath>
@@ -137,6 +153,10 @@
 				<File Id="653017450" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_DesertWindShimmerring.wav</ShortName>
 					<CachePath>SFX/AMB_SL_DesertWindShimmerring_56CEF360.wem</CachePath>
+				</File>
+				<File Id="706303143" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Computer.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Computer_56CEF360.wem</CachePath>
 				</File>
 				<File Id="714917065" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_DesertWindrumble.wav</ShortName>
@@ -166,6 +186,10 @@
 					<ShortName>MX_SL_L_Ruins.wav</ShortName>
 					<CachePath>SFX/MX_SL_L_Ruins_56CEF360.wem</CachePath>
 				</File>
+				<File Id="776328722" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Ph_Jungle.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Ph_Jungle_56CEF360.wem</CachePath>
+				</File>
 				<File Id="790156763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_SL_L_BaliseStrings.wav</ShortName>
 					<CachePath>SFX/MX_SL_L_BaliseStrings_56CEF360.wem</CachePath>
@@ -178,9 +202,17 @@
 					<ShortName>AMB_SL_DesertWindCalm.wav</ShortName>
 					<CachePath>SFX/AMB_SL_DesertWindCalm_56CEF360.wem</CachePath>
 				</File>
+				<File Id="843486018" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Ph_River.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Ph_River_56CEF360.wem</CachePath>
+				</File>
 				<File Id="850388099" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_SiloWaterfall.wav</ShortName>
 					<CachePath>SFX/AMB_SL_SiloWaterfall_56CEF360.wem</CachePath>
+				</File>
+				<File Id="854002697" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MX_SL_L_Clickpulse.wav</ShortName>
+					<CachePath>SFX/MX_SL_L_Clickpulse_56CEF360.wem</CachePath>
 				</File>
 				<File Id="893077939" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_SL_St_BaliseBass.wav</ShortName>
@@ -394,10 +426,17 @@
 					<MediaRefs>
 						<MediaRef Id="42709118"/>
 						<MediaRef Id="80647876"/>
+						<MediaRef Id="165150337"/>
 						<MediaRef Id="310708101"/>
+						<MediaRef Id="313827201"/>
 						<MediaRef Id="536048362"/>
+						<MediaRef Id="586504016"/>
+						<MediaRef Id="706303143"/>
 						<MediaRef Id="772524158"/>
+						<MediaRef Id="776328722"/>
 						<MediaRef Id="790156763"/>
+						<MediaRef Id="843486018"/>
+						<MediaRef Id="854002697"/>
 					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2446983323" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Balise\Unreveal" GUID="{A7416D43-1959-47C4-AE5A-DAB3A3D0027F}"/>
@@ -472,10 +511,11 @@
 						<ActionSetStateEntry GroupId="1642955674" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent\Reveal" GUID="{35C5333A-66E7-496E-A750-20EF2800761B}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1682849471" Name="SFX_SL_ElevatorGo" ObjectPath="\Events\SFX\SFX_Strelitzia\SFX_SL_ElevatorGo" GUID="{8B632F78-B0A3-4C46-B8D1-5F00E65BF63A}" DurationType="OneShot" DurationMin="8.833187" DurationMax="8.833187">
+				<Event Id="1682849471" Name="SFX_SL_ElevatorGo" ObjectPath="\Events\SFX\SFX_Strelitzia\SFX_SL_ElevatorGo" GUID="{8B632F78-B0A3-4C46-B8D1-5F00E65BF63A}" DurationType="OneShot" DurationMin="10.89451" DurationMax="10.89451">
 					<MediaRefs>
 						<MediaRef Id="123926478"/>
 						<MediaRef Id="137463096"/>
+						<MediaRef Id="301193163"/>
 						<MediaRef Id="398883003"/>
 						<MediaRef Id="504591710"/>
 						<MediaRef Id="522481254"/>
@@ -4156,5 +4196,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{507F5209-333B-6148-D661-7A89C7E97FDF}</FileHash>
+	<FileHash>{F3056DD4-B812-2FA5-B39A-5FF0A5944351}</FileHash>
 </SoundBanksInfo>

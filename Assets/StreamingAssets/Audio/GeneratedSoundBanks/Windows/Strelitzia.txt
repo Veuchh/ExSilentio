@@ -48,7 +48,10 @@ State Group	ID	Name			Wwise Object Path	Notes
 	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
 	146427616	ST_MX_SL_Stars			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars	
 	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
+	1011090278	MX_SL_ST_Jungle			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
+	1993091346	MX_SL_ST_Computer			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer	
+	2289571526	MX_SL_ST_Cave			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Cave	
 	2432701204	ST_SL_AMB_Elevator			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_Elevator	
 	2446983323	ST_MX_SL_Balise			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Balise	
 	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
@@ -56,6 +59,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
+	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
 
 State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteCave			
@@ -67,9 +71,18 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteJungle			
 	748895195	None	ST_SL_AMB_MuteJungle			
 	1752637612	In	ST_SL_AMB_MuteJungle			
+	634183254	Reveal	MX_SL_ST_Jungle			
+	748895195	None	MX_SL_ST_Jungle			
+	3384621607	Unreveal	MX_SL_ST_Jungle			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
+	634183254	Reveal	MX_SL_ST_Computer			
+	748895195	None	MX_SL_ST_Computer			
+	3384621607	Unreveal	MX_SL_ST_Computer			
+	634183254	Reveal	MX_SL_ST_Cave			
+	748895195	None	MX_SL_ST_Cave			
+	3384621607	Unreveal	MX_SL_ST_Cave			
 	748895195	None	ST_SL_AMB_Elevator			
 	998496889	First	ST_SL_AMB_Elevator			
 	3476314365	Second	ST_SL_AMB_Elevator			
@@ -91,6 +104,9 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteSilo			
 	748895195	None	ST_SL_AMB_MuteSilo			
 	1752637612	In	ST_SL_AMB_MuteSilo			
+	634183254	Reveal	MX_SL_ST_River			
+	748895195	None	MX_SL_ST_River			
+	3384621607	Unreveal	MX_SL_ST_River			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	919542588	GP_SL_DesertWind			\Game Parameters\GP_Strelitzia\GP_SL_DesertWind	
@@ -112,15 +128,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	137463096	SFX_SL_ElevatorLoopAmb1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\SFX_SL_ElevatorLoopAmb1_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopAmb1		112467
 	155348933	AMB_SL_LabMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabMain		1713271
 	159779369	AMB_SL_SiloMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloMain_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloMain		341125
+	165150337	MX_SL_L_Ph_Silo	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ph_Silo_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ph_SiloIlde\MX_SL_L_Ph_SiloIlde\MX_SL_L_Ph_Silo		1415645
 	167603772	AMB_SL_LabElectricitySparks	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabElectricitySparks_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricitySparks		1535387
 	174142118	AMB_SL_LabElectricityBuzz-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabElectricityBuzz-003_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-003		160383
 	207523860	MX_SL_St_Stars	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_St_Stars_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_Stars\MX_SL_St_Stars		202164
 	259377318	AMB_SL_SiloRiversmall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloRiversmall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiversmall		1867259
 	276543992	AMB_SL_CaveFireCampFar	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveFireCampFar_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampFar		1586595
 	287394984	AMB_SL_CaveDrop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveDrop_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop		1081806
+	301193163	SFX_SL_ElevatorLoopAmb1_01	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\SFX_SL_ElevatorLoopAmb1_19A1FBE2.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopAmb1_01		60968
 	301683489	AMB_SL_SiloRiver	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloRiver_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiver		1115959
 	310708101	MX_SL_L_Stars	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Stars_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Stars\MX_SL_L_Stars\MX_SL_L_Stars		1300249
 	312852544	AMB_SL_LabElectricityBuzz-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabElectricityBuzz-001_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-001		379950
+	313827201	MX_SL_L_Ph_Cave	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ph_Cave_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Cave\MX_SL_L_Ph_Cave\MX_SL_L_Ph_Cave		1091818
 	343290069	AMB_SL_CaveDrop fast	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveDrop fast_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop fast		1212650
 	357901903	AMB_SL_LabElectricityBuzz-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabElectricityBuzz-004_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-004		187736
 	363295246	AMB_SL_Balise	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_Balise_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise		304687
@@ -133,8 +152,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	522481254	SFX_SL_ElevatorGo	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\SFX_SL_ElevatorGo_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorGo		31931
 	536048362	MX_SL_L_BaliseBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_BaliseBass_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Balise\MX_SL_St_PulseBass\MX_SL_L_BaliseBass		1298049
 	548828459	AMB_SL_CaveFireCampClose	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveFireCampClose_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampClose		1607348
+	586504016	MX_SL_L_Ph_JungleIlde	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ph_JungleIlde_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ph_JungleIlde\MX_SL_L_Ph_JungleIlde\MX_SL_L_Ph_JungleIlde		966455
 	650248975	AMB_SL_CaveMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveMain		1749847
 	653017450	AMB_SL_DesertWindShimmerring	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindShimmerring_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindShimmerring		2947597
+	706303143	MX_SL_L_Computer	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Computer_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Computer\MX_SL_L_Computer\MX_SL_L_Computer		183555
 	714917065	AMB_SL_DesertWindrumble	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindrumble_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindrumble		2992296
 	751414899	AMB_SL_CaveWaterCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_CaveWaterCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveWaterCalm		3716419
 	753117707	AMB_SL_DesertSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertSand		1315946
@@ -142,10 +163,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	763726669	AMB_SL_DesertWindCalmSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindCalmSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalmSand		1044123
 	767807071	AMB_SL_LabComputerGlitch3	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabComputerGlitch3_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabComputerGlitch\AMB_SL_LabComputerGlitch3		148941
 	772524158	MX_SL_L_Ruins	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ruins_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ruins\MX_SL_L_Ruins\MX_SL_L_Ruins		1461732
+	776328722	MX_SL_L_Ph_Jungle	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ph_Jungle_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Jungle\MX_SL_L_Ph_Jungle\MX_SL_L_Ph_Jungle		1185757
 	790156763	MX_SL_L_BaliseStrings	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_BaliseStrings_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Balise\MX_SL_St_PulseBass\MX_SL_L_BaliseStrings		1032601
 	794799802	SFX_SL_ElevatorStingerBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\SFX_SL_ElevatorStingerBass_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorStingerBass		150218
 	843470390	AMB_SL_DesertWindCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_DesertWindCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalm		1027237
+	843486018	MX_SL_L_Ph_River	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Ph_River_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_River\MX_SL_L_Ph_River\MX_SL_L_Ph_River		1014998
 	850388099	AMB_SL_SiloWaterfall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_SiloWaterfall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloWaterfall\AMB_SL_SiloWaterfall		936197
+	854002697	MX_SL_L_Clickpulse	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_L_Clickpulse_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Clickpulse\MX_SL_L_Clickpulse\MX_SL_L_Clickpulse		2583030
 	893077939	MX_SL_St_BaliseBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\MX_SL_St_BaliseBass_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_BaliseBass\MX_SL_St_BaliseBass		88806
 	893978070	AMB_SL_JunleMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_JunleMain_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleMain		1639747
 	913542370	AMB_SL_LabScreenGlitch	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Windows\SFX\AMB_SL_LabScreenGlitch_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabScreenGlitch		665050
