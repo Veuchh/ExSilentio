@@ -91,6 +91,9 @@ namespace LW.Player
 
         public void ToggleWordMode()
         {
+            if (!isWordModeEnabled && StaticData.OpenWindowsAmount > 0)
+                return;
+
             isWordModeEnabled = !isWordModeEnabled;
 
             wordManager.ToggleConsole(isWordModeEnabled);
