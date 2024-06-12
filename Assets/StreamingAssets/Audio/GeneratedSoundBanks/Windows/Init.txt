@@ -31,6 +31,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1244262989	ST_MX_OC_Child_FishTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_Child_FishTrig	
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
 	1642955674	MX_SL_ST_Tent			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent	
+	1722516999	EarthOpen			\States\ST_Mycelium\EarthOpen	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
 	1993091346	MX_SL_ST_Computer			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer	
 	2015358534	ST_MX_OC_MemoryFoam			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_MemoryFoam	
@@ -43,6 +44,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	2759765522	ST_SL_AMB_MuteLab			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteLab	
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
+	3171034840	EarthPlace			\States\ST_Mycelium\EarthPlace	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
@@ -100,6 +102,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	MX_SL_ST_Tent			
 	748895195	None	MX_SL_ST_Tent			
 	3384621607	Unreveal	MX_SL_ST_Tent			
+	748895195	None	EarthOpen			
+	1451272583	Close	EarthOpen			
+	3072142513	Open	EarthOpen			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
@@ -136,6 +141,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_SL_Ruins			
 	748895195	None	ST_MX_SL_Ruins			
 	3384621607	Unreveal	ST_MX_SL_Ruins			
+	645492555	Out	EarthPlace			
+	748895195	None	EarthPlace			
+	1752637612	In	EarthPlace			
 	645492555	Out	ST_SL_AMB_MuteSilo			
 	748895195	None	ST_SL_AMB_MuteSilo			
 	1752637612	In	ST_SL_AMB_MuteSilo			

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{C9742453-7134-AACC-BABA-E7B3DDA3FF2C}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{FC29D0C8-895E-3E73-CBD0-439340732E06}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -20,7 +20,7 @@
 				</File>
 				<File Id="73752858" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_JunleBird.wav</ShortName>
-					<CachePath>SFX/AMB_SL_JunleBird_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_JunleBird_56CEF360.wem</CachePath>
 				</File>
 				<File Id="80647876" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_SL_L_Desert.wav</ShortName>
@@ -220,7 +220,7 @@
 				</File>
 				<File Id="893978070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_JunleMain.wav</ShortName>
-					<CachePath>SFX/AMB_SL_JunleMain_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_JunleMain_56CEF360.wem</CachePath>
 				</File>
 				<File Id="913542370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_LabScreenGlitch.wav</ShortName>
@@ -236,7 +236,7 @@
 				</File>
 				<File Id="1056833438" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_JunleFrog.wav</ShortName>
-					<CachePath>SFX/AMB_SL_JunleFrog_8E324C96.wem</CachePath>
+					<CachePath>SFX/AMB_SL_JunleFrog_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1060224785" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_SL_SiloBird.wav</ShortName>
@@ -309,13 +309,13 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="2071076257" Name="AMB_SL_JunleBird" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird" GUID="{93144826-7052-42F8-A82B-B2533D6AF84E}" DurationType="OneShot" DurationMin="136.87923" DurationMax="136.87923">
+				<Event Id="2071076257" Name="AMB_SL_JunleBird" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird" GUID="{93144826-7052-42F8-A82B-B2533D6AF84E}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="73752858"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2246380605" Name="AMB_SL_JunleFakeRain" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain" GUID="{A8F644D8-6619-4CF4-8255-587DAEB1B64D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="585081890" Name="AMB_SL_JunleFrog" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog" GUID="{1E695090-269F-4ED1-BA4F-157F13730AEE}" MaxAttenuation="25" DurationType="OneShot" DurationMin="39" DurationMax="39">
+				<Event Id="585081890" Name="AMB_SL_JunleFrog" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog" GUID="{1E695090-269F-4ED1-BA4F-157F13730AEE}" MaxAttenuation="25" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1056833438"/>
 					</MediaRefs>
@@ -680,7 +680,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{224189D9-AF28-F8F2-F30B-6DE420CE215D}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{131AC266-5D72-13C8-BA58-69D813F69568}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -894,6 +894,13 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent\Unreveal" GUID="{BA07F029-E555-4991-8D10-8B42DD5373B0}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1722516999" Name="EarthOpen" ObjectPath="\States\States\ST_Mycelium\EarthOpen" GUID="{92D0A9AE-AC7B-4958-A00A-48B9C6ACD69C}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\EarthOpen\None" GUID="{0B494138-EA7D-442E-BB21-76F0C941F51A}"/>
+						<State Id="1451272583" Name="Close" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Close" GUID="{D36B347A-07B0-4030-9906-2EBC1D800B9F}"/>
+						<State Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1775344635" Name="ST_SL_AMB_DesertWind" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind" GUID="{BB3E5E14-35DC-49A5-BF75-B6F82F994928}">
 					<States>
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind\Out" GUID="{4A3285FA-D90A-4AC4-B6D2-9E6982725CC0}"/>
@@ -976,6 +983,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins\Reveal" GUID="{2024324E-C3EA-4A08-9CF3-5BCFA092DC91}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins\None" GUID="{E1E94ABF-CA2A-42EC-8021-B3863C1E34DD}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins\Unreveal" GUID="{965C417F-6899-4C7A-B91E-51DC97112629}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3171034840" Name="EarthPlace" ObjectPath="\States\States\ST_Mycelium\EarthPlace" GUID="{30431B71-0344-42F4-BB87-8CB2B89E588B}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\EarthPlace\None" GUID="{548DE17A-A972-46F3-8442-F017C9BD04FC}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_Mycelium\EarthPlace\In" GUID="{5A764668-AA72-4A6F-B549-C549EB5EBF48}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3369780566" Name="ST_SL_AMB_MuteSilo" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo" GUID="{E5E3E830-A847-4E2F-A2FF-C36CB4590504}">
@@ -1068,7 +1082,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{5E501758-81DE-DA9B-DC20-7361126887F5}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{C6BEF5B8-63EC-9FD3-84C6-F9747279A151}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -1264,10 +1278,6 @@
 				<File Id="235929195" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_GroundL2-006.wav</ShortName>
 					<CachePath>SFX/FT_OC_GroundL2-006_8E324C96.wem</CachePath>
-				</File>
-				<File Id="246322530" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_G_ErrorTP.wav</ShortName>
-					<CachePath>SFX/SFX_G_ErrorTP_8E324C96.wem</CachePath>
 				</File>
 				<File Id="249651705" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_SL_Boots-011.wav</ShortName>
@@ -2631,11 +2641,6 @@
 						<MediaRef Id="927008413"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1791538751" Name="SFX_G_ErrorTP" ObjectPath="\Events\SFX\SFX_Global\SFX_G_ErrorTP" GUID="{EF9D1E64-C5E4-4622-81D7-DA21CBF91EB4}" DurationType="OneShot" DurationMin="1.9427084" DurationMax="1.9427084">
-					<MediaRefs>
-						<MediaRef Id="246322530"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2266750638" Name="UI_CL_CLick" ObjectPath="\Events\UI\UI_Consol\UI_CL_CLick" GUID="{76936BFC-85AC-4543-A1B2-543D9250E5ED}" DurationType="OneShot" DurationMin="0.27108333" DurationMax="0.3363125">
 					<MediaRefs>
 						<MediaRef Id="19911218"/>
@@ -2790,18 +2795,65 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{22137E23-5275-2D17-9BD5-3EB08A6406D3}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{360997F6-EC6E-DD68-7E64-46C03ED2FF08}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
+			<Media>
+				<File Id="19827504" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rumble Drone In C3 by AudioMarauder Id-733461.wav</ShortName>
+					<CachePath>SFX/Rumble Drone In C3 by AudioMarauder Id-733461_8E324C96.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
+				<Event Id="3462791964" Name="AMB_MY_Awake" ObjectPath="\Events\AMB\AMB_Mycelium\AMB_MY_Awake" GUID="{5AA27641-7326-411B-9AFB-CF6E5FCCEF8B}" DurationType="OneShot" DurationMin="67.694565" DurationMax="67.694565">
+					<MediaRefs>
+						<MediaRef Id="19827504"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3171034840" Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
+						<ActionSetStateEntry GroupId="1722516999" Id="1451272583" Name="Close" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Close" GUID="{D36B347A-07B0-4030-9906-2EBC1D800B9F}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1849026105" Name="AMB_MY_EarthEnter" ObjectPath="\Events\AMB\AMB_Mycelium\Trigger\AMB_MY_EarthEnter" GUID="{77437BDA-A29C-444B-ACF3-05CA635D7641}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3171034840" Id="1752637612" Name="In" ObjectPath="\States\States\ST_Mycelium\EarthPlace\In" GUID="{5A764668-AA72-4A6F-B549-C549EB5EBF48}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="23653109" Name="AMB_MY_EarthExit" ObjectPath="\Events\AMB\AMB_Mycelium\Trigger\AMB_MY_EarthExit" GUID="{9EFA0DEE-33FE-4DCE-AC87-F67F7D2BA628}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3171034840" Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="546842145" Name="MX_MY_End" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_End" GUID="{41509410-47C7-485F-B9AB-952BD7F713E0}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="244693958" Name="MX_MY_ST_MemoryFoamMelodyOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamMelodyOct" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="48776809" Name="SFX_MY_Doors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_Doors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2927351608" Name="SFX_MY_PannelOpen" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_PannelOpen" GUID="{35069E82-2EC3-4C0B-B5DD-068A5D018A7C}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1722516999" Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
+					</ActionSetState>
+				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="1722516999" Name="EarthOpen" ObjectPath="\States\States\ST_Mycelium\EarthOpen" GUID="{92D0A9AE-AC7B-4958-A00A-48B9C6ACD69C}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\EarthOpen\None" GUID="{0B494138-EA7D-442E-BB21-76F0C941F51A}"/>
+						<State Id="1451272583" Name="Close" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Close" GUID="{D36B347A-07B0-4030-9906-2EBC1D800B9F}"/>
+						<State Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3171034840" Name="EarthPlace" ObjectPath="\States\States\ST_Mycelium\EarthPlace" GUID="{30431B71-0344-42F4-BB87-8CB2B89E588B}">
+					<States>
+						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\EarthPlace\None" GUID="{548DE17A-A972-46F3-8442-F017C9BD04FC}"/>
+						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_Mycelium\EarthPlace\In" GUID="{5A764668-AA72-4A6F-B549-C549EB5EBF48}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{8DE8A6E3-5978-6AD5-1B09-E42DEAD43824}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{38F5EC44-346E-C1EF-FEA4-9F61432D43A2}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -4268,5 +4320,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{81FEB56C-DD54-9BD8-62CA-E5F35B44CCFD}</FileHash>
+	<FileHash>{6B4FD278-4BBD-B286-EFC6-E0A405A8E89C}</FileHash>
 </SoundBanksInfo>
