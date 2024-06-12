@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{FCBB0232-A876-1350-211D-859D3B4FEEC1}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{C7BF02F7-6435-EB0B-6DA8-7ACE3AD780EF}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -489,9 +489,9 @@
 						<ActionSetStateEntry GroupId="1011090278" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle\Reveal" GUID="{44373BE9-BE36-4993-9365-6ED3B56328FB}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2415996523" Name="MX_SL_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit" GUID="{E44B385B-5C76-4F86-B1A6-1519033709D6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3715859067" Name="MX_SL_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct" GUID="{6AFE993C-9BE8-4176-9B0F-E1F7E1F29C00}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
+				<Event Id="2415996523" Name="MX_SL_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit" GUID="{E44B385B-5C76-4F86-B1A6-1519033709D6}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
+				<Event Id="3715859067" Name="MX_SL_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct" GUID="{6AFE993C-9BE8-4176-9B0F-E1F7E1F29C00}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
 				<Event Id="4045214441" Name="MX_SL_ST_River" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_River" GUID="{EE069852-22F8-47F8-A651-66DDC9D0E65F}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4045214441" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Reveal" GUID="{BA6776CD-DD20-48E1-A7B6-59ADA509152C}"/>
@@ -2746,7 +2746,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{C1C1B27F-D3D2-4583-045E-2C4D1E0748AE}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{22137E23-5275-2D17-9BD5-3EB08A6406D3}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -4224,5 +4224,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F663CEB8-9402-8767-2F3E-B89F6D034441}</FileHash>
+	<FileHash>{DEA57C87-F6E1-EED3-B193-69D3F2919495}</FileHash>
 </SoundBanksInfo>
