@@ -1,4 +1,6 @@
 using LW.Data;
+using LW.UI;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +24,9 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] CanvasGroup graphicsPannel;
     [SerializeField] CanvasGroup audioPannel;
     [SerializeField] CanvasGroup resetPannel;
+    
+    [Space]
+    [SerializeField] List<OptionBase> options;
 
     public static OptionsMenu Instance;
 
@@ -37,6 +42,12 @@ public class OptionsMenu : MonoBehaviour
         graphicsButton.onClick.AddListener(() => TogglePannel(graphicsPannel));
         audioButton.onClick.AddListener(() => TogglePannel(audioPannel));
         resetButton.onClick.AddListener(() => TogglePannel(resetPannel));
+    }
+
+    private void Start()
+    {
+        //Load settings
+        //Apply settings
     }
 
     private void OnDestroy()

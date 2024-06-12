@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace LW.UI
 {
@@ -9,6 +10,31 @@ namespace LW.UI
         protected override void OnValueChanged()
         {
             throw new System.NotImplementedException();
+        }
+
+        protected override void ToggleHighlight(bool ishighlighted)
+        {
+            base.ToggleHighlight(ishighlighted);
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            ToggleHighlight(true);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+                ToggleHighlight(false);
+        }
+
+        public void OnSelect(BaseEventData eventData)
+        {
+            ToggleHighlight(true);
+        }
+
+        public void OnDeselect(BaseEventData eventData)
+        {
+            ToggleHighlight(false);
         }
     }
 }

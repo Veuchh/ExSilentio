@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace LW.UI
@@ -10,6 +10,8 @@ namespace LW.UI
     {
         [SerializeField] Slider slider;
         [SerializeField] TextMeshProUGUI sliderValueLabel;
+
+        bool isSelected = false;
 
         private void Awake()
         {
@@ -31,6 +33,12 @@ namespace LW.UI
                 newText = slider.value.ToString("F2");
 
             sliderValueLabel.text = newText;
+        }
+
+        protected override void ToggleHighlight(bool ishighlighted)
+        {
+            //TODO : change label & slider color
+            base.ToggleHighlight(ishighlighted);
         }
     }
 }
