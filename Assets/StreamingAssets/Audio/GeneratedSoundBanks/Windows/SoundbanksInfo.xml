@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{FC29D0C8-895E-3E73-CBD0-439340732E06}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{416B23BC-6326-F733-97C7-FFDD20312C43}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -267,7 +267,7 @@
 						<ActionSetStateEntry GroupId="2466189218" Id="1752637612" Name="In" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert\In" GUID="{710D64EC-5339-4E64-97DD-8F73BC4EB3F0}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2510762832" Name="AMB_SL_Balise" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_Balise" GUID="{45FD316D-BD25-436B-A142-5895D0F5BB92}" MaxAttenuation="200" DurationType="Infinite">
+				<Event Id="2510762832" Name="AMB_SL_Balise" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_Balise" GUID="{45FD316D-BD25-436B-A142-5895D0F5BB92}" MaxAttenuation="250" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="363295246"/>
 						<MediaRef Id="522162625"/>
@@ -4329,5 +4329,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6472434F-0CB9-E6FB-E934-D1C27A542108}</FileHash>
+	<FileHash>{23E72108-099E-5BFD-1219-8021E8EFA2AF}</FileHash>
 </SoundBanksInfo>
