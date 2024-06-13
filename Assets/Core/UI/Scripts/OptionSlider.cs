@@ -11,7 +11,7 @@ namespace LW.UI
         [SerializeField] Slider slider;
         [SerializeField] TextMeshProUGUI sliderValueLabel;
 
-        bool isSelected = false;
+        public float Value => slider.value;
 
         private void Awake()
         {

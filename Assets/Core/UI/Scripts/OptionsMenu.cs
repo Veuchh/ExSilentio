@@ -26,14 +26,52 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] CanvasGroup graphicsPannel;
     [SerializeField] CanvasGroup audioPannel;
     [SerializeField] CanvasGroup resetPannel;
-    
-    [Header("Options")]
+
+    [Header("Options - Access")]
     [SerializeField] OptionDropdown languageOption;
+    [SerializeField] OptionSlider animationStrengthOption;
+    [SerializeField] OptionToggle distanceToFlatOption;
+    [SerializeField] OptionToggle consoleDashesStrengthOption;
+    [SerializeField] OptionDropdown consoleBackgroundColor1Option;
+    [SerializeField] OptionDropdown consoleBackgroundColor2Option;
+    [SerializeField] OptionDropdown consoleTextColor1Option;
+    [SerializeField] OptionDropdown consoleTextColor2Option;
+
+    [Header("Options - Controls")]
+    [SerializeField] OptionToggle invertYOption;
+    [SerializeField] OptionSlider mouseSensitivityOption;
+
+    [Header("Options - Graphics")]
+    [SerializeField] OptionToggle fullscreenOption;
+    [SerializeField] OptionToggle vSyncOption;
+
+    [Header("Options - Audio")]
+    [SerializeField] OptionSlider masterVolumeOption;
+    [SerializeField] OptionSlider ambianceVolumeOption;
+    [SerializeField] OptionSlider sfxVolumeOption;
+    [SerializeField] OptionSlider musicVolumeOption;
 
     public static OptionsMenu Instance;
 
     //events
-    public static event Action<string> onLanguageChanged;
+    //  Access
+    public static event Action<string, string> onLanguageChanged;
+    public static event Action<string, float> onAnimationStrengthChanged;
+    public static event Action<string, bool> onDistanceToFlatChanged;
+    public static event Action<string, bool> onConsolDashesChanged;
+    public static event Action<List<string>, List<string>> onConsolColorsChanged;
+    //  Controls
+    public static event Action<string, bool> onInvertYChanged;
+    public static event Action<string, float> onLookSensitivityChanged;
+    //  Graphics
+    public static event Action<string, bool> onFullscreenChanged;
+    public static event Action<string, bool> onVSyncChanged;
+    //  Graphics
+    public static event Action<string, float> onMasterVolumeChanged;
+    public static event Action<string, float> onAmbianceVolumeChanged;
+    public static event Action<string, float> onSFXVolumeChanged;
+    public static event Action<string, float> onMusicVolumeChanged;
+
 
     private void Awake()
     {
@@ -50,14 +88,29 @@ public class OptionsMenu : MonoBehaviour
         resetButton.onClick.AddListener(() => TogglePannel(resetPannel));
 
         //Option base
+        //  Access
         languageOption.onValueChanged += OnLanguageChange;
-    }
+        animationStrengthOption.onValueChanged += OnAnimationStrengthChanged;
+        distanceToFlatOption.onValueChanged += OnDistanceToFlatChanged;
+        consoleDashesStrengthOption.onValueChanged += OnConsoleDashesChanged;
+        consoleBackgroundColor1Option.onValueChanged += OnConsoleColorChange;
+        consoleBackgroundColor2Option.onValueChanged += OnConsoleColorChange;
+        consoleTextColor1Option.onValueChanged += OnConsoleColorChange;
+        consoleTextColor2Option.onValueChanged += OnConsoleColorChange;
 
-    private void Start()
-    {
-        rebindSaveLoad.LoadRebinds();
-        //Load settings
-        //Apply settings
+        //  Controls
+        invertYOption.onValueChanged += OnInvertYChange;
+        mouseSensitivityOption.onValueChanged += OnMouseSensitivityChange;
+
+        //  Graphics
+        fullscreenOption.onValueChanged += OnFullscreenChange;
+        vSyncOption.onValueChanged += OnVSyncChange;
+
+        //  Audio
+        masterVolumeOption.onValueChanged += OnMasterVolumeChange;
+        ambianceVolumeOption.onValueChanged += OnAmbianceVolumeChange;
+        sfxVolumeOption.onValueChanged += OnSFXVolumeChange;
+        musicVolumeOption.onValueChanged += OnMusicVolumeChange;
     }
 
     private void OnDestroy()
@@ -69,9 +122,45 @@ public class OptionsMenu : MonoBehaviour
         graphicsButton.onClick.RemoveAllListeners();
         audioButton.onClick.RemoveAllListeners();
         resetButton.onClick.RemoveAllListeners();
-        
+
         //Option base
+        //  Access
         languageOption.onValueChanged -= OnLanguageChange;
+        animationStrengthOption.onValueChanged -= OnAnimationStrengthChanged;
+        distanceToFlatOption.onValueChanged -= OnDistanceToFlatChanged;
+        consoleDashesStrengthOption.onValueChanged -= OnConsoleDashesChanged;
+        consoleBackgroundColor1Option.onValueChanged -= OnConsoleColorChange;
+        consoleBackgroundColor2Option.onValueChanged -= OnConsoleColorChange;
+        consoleTextColor1Option.onValueChanged -= OnConsoleColorChange;
+        consoleTextColor2Option.onValueChanged -= OnConsoleColorChange;
+
+        //  Controls
+        invertYOption.onValueChanged -= OnInvertYChange;
+        mouseSensitivityOption.onValueChanged -= OnMouseSensitivityChange;
+
+        //  Graphics
+        fullscreenOption.onValueChanged -= OnFullscreenChange;
+        vSyncOption.onValueChanged -= OnVSyncChange;
+    }
+
+    public void InitializeAccessibilitySettings()
+    {
+
+    }
+
+    public void InitializeControlsSettings()
+    {
+        rebindSaveLoad.LoadRebinds();
+    }
+
+    public void InitializeGraphicsSettings()
+    {
+
+    }
+
+    public void InitializeAudioSettings()
+    {
+
     }
 
     public void ToggleMenu()
@@ -119,7 +208,79 @@ public class OptionsMenu : MonoBehaviour
     #region OptionsCallback
     void OnLanguageChange()
     {
-        onLanguageChanged?.Invoke(languageOption.CurrentlySelectedString);
+        onLanguageChanged?.Invoke(languageOption.ParameterName, languageOption.CurrentlySelectedString);
+    }
+
+    void OnAnimationStrengthChanged()
+    {
+        onAnimationStrengthChanged?.Invoke(animationStrengthOption.ParameterName, animationStrengthOption.Value);
+    }
+
+    void OnDistanceToFlatChanged()
+    {
+        onDistanceToFlatChanged?.Invoke(distanceToFlatOption.ParameterName, distanceToFlatOption.isToggled);
+    }
+
+    void OnConsoleDashesChanged()
+    {
+        onConsolDashesChanged?.Invoke(consoleDashesStrengthOption.ParameterName, consoleDashesStrengthOption.isToggled);
+    }
+
+    void OnConsoleColorChange()
+    {
+        List<string> keys = new List<string>(new string[] {
+            consoleBackgroundColor1Option.ParameterName,
+            consoleBackgroundColor2Option.ParameterName,
+            consoleTextColor1Option.ParameterName,
+            consoleTextColor2Option.ParameterName});
+
+        List<string> colors = new List<string>(new string[] {
+            consoleBackgroundColor1Option.CurrentlySelectedString,
+            consoleBackgroundColor2Option.CurrentlySelectedString,
+            consoleTextColor1Option.CurrentlySelectedString,
+            consoleTextColor2Option.CurrentlySelectedString});
+
+        onConsolColorsChanged?.Invoke(keys, colors);
+    }
+
+    void OnInvertYChange()
+    {
+        onInvertYChanged?.Invoke(invertYOption.ParameterName, invertYOption.isToggled);
+    }
+
+    void OnMouseSensitivityChange()
+    {
+        onLookSensitivityChanged?.Invoke(mouseSensitivityOption.ParameterName, mouseSensitivityOption.Value);
+    }
+
+    void OnFullscreenChange()
+    {
+        onFullscreenChanged?.Invoke(fullscreenOption.ParameterName, fullscreenOption.isToggled);
+    }
+
+    void OnVSyncChange()
+    {
+        onVSyncChanged?.Invoke(vSyncOption.ParameterName, vSyncOption.isToggled);
+    }
+
+    private void OnMasterVolumeChange()
+    {
+        onMasterVolumeChanged?.Invoke(masterVolumeOption.ParameterName, masterVolumeOption.Value);
+    }
+
+    private void OnAmbianceVolumeChange()
+    {
+        onAmbianceVolumeChanged?.Invoke(ambianceVolumeOption.ParameterName, ambianceVolumeOption.Value);
+    }
+
+    private void OnSFXVolumeChange()
+    {
+        onSFXVolumeChanged?.Invoke(sfxVolumeOption.ParameterName, sfxVolumeOption.Value);
+    }
+
+    private void OnMusicVolumeChange()
+    {
+        onMusicVolumeChanged?.Invoke(musicVolumeOption.ParameterName, musicVolumeOption.Value);
     }
     #endregion OptionsCallback
 }
