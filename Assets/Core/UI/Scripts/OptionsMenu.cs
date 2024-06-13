@@ -1,5 +1,6 @@
 using LW.Data;
 using LW.UI;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class OptionsMenu : MonoBehaviour
     [Header("Basic Settings")]
     [SerializeField] Canvas canvas;
     [SerializeField] CanvasGroup optionsCanvasGroup;
+    [SerializeField] RebindSaveLoad rebindSaveLoad;
 
     [Header("Buttons")]
     [SerializeField] Button returnButton;
@@ -46,6 +48,7 @@ public class OptionsMenu : MonoBehaviour
 
     private void Start()
     {
+        rebindSaveLoad.LoadRebinds();
         //Load settings
         //Apply settings
     }
@@ -72,6 +75,9 @@ public class OptionsMenu : MonoBehaviour
         optionsCanvasGroup.blocksRaycasts = isToggled;
         StaticData.OpenWindowsAmount += isToggled ? 1 : -1;
         canvas.sortingOrder = isToggled ? StaticData.OpenWindowsAmount : -1;
+
+        Action rebindAction = isToggled ? rebindSaveLoad.LoadRebinds : rebindSaveLoad.SaveRebinds;
+        rebindAction?.Invoke();
     }
 
     #region ButtonCallbacks
