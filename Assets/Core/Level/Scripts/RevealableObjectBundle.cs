@@ -101,7 +101,7 @@ namespace LW.Level
             isRevealed = true;
 
             if (saveToPlayerPrefs)
-                SaveLoad.SaveWordToPlayerPrefs(
+                SaveLoad.SaveStringToPlayerPrefs(
                     GetBundleKey,
                     usedID.ToString());
         }

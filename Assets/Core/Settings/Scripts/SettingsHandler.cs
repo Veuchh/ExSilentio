@@ -1,3 +1,4 @@
+using LW.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class SettingsHandler : MonoBehaviour
 
     void Start()
     {
-        //TODO : Load and apply settings
+        LoadSettings();
 
         OptionsMenu.Instance.InitializeAccessibilitySettings();
         OptionsMenu.Instance.InitializeControlsSettings();
@@ -69,7 +70,15 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onMusicVolumeChanged -= OnMusicVolumeChanged;
     }
 
-    private void OnLanguageChanged(string key, string newLanguage)
+    void LoadSettings()
+    {
+        foreach (OptionBase option in OptionsMenu.Instance.AllOptions)
+        {
+
+        }
+    }
+
+    private void ChangeLanguage(string newLanguage)
     {
         switch (newLanguage.ToLower())
         {
@@ -82,63 +91,97 @@ public class SettingsHandler : MonoBehaviour
         }
     }
 
+    private void OnLanguageChanged(string key, string newLanguage)
+    {
+        SaveLoad.SaveStringToPlayerPrefs(key, newLanguage);
+
+        ChangeLanguage(newLanguage);
+    }
+
     private void OnAnimStrengthChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : CHANGE ANIM STRENGTH");
     }
 
     private void OnDistanceToFlatChanged(string key, bool newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        Debug.LogWarning("TODO : DistanceToFlat");
     }
 
     private void OnConsoleDashesChanged(string key, bool newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        Debug.LogWarning("TODO : ConsoleDashes");
     }
 
     private void OnConsoleColorsChanged(List<string> keys, List<string> newValues)
     {
-        Debug.LogWarning("TODO");
+        for (int i = 0; i < keys.Count; i++)
+        {
+            SaveLoad.SaveStringToPlayerPrefs(keys[i], newValues[i]);
+        }
+
+        Debug.LogWarning("TODO : Console Colors");
     }
 
     private void OnInvertYChanged(string key, bool newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        Debug.LogWarning("TODO : InvertY");
     }
 
     private void OnLookSensitivityChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : LookSensitivity");
     }
 
     private void OnFullScreenChanged(string key, bool newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        Debug.LogWarning("TODO : Fullscreen");
     }
 
     private void OnVSyncChanged(string key, bool newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        Debug.LogWarning("TODO : VSync");
     }
 
     private void OnMasterVolumeChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : SLIDERS AUDIO");
     }
 
     private void OnAmbianceVolumeChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
     }
 
     private void OnSFXVolumeChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
     }
 
     private void OnMusicVolumeChanged(string key, float newValue)
     {
-        Debug.LogWarning("TODO");
+        SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
+
+        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
     }
 }

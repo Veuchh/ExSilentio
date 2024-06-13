@@ -83,7 +83,7 @@ public class ToolbarExtension
 
         if (GUILayout.Button(new GUIContent("Clear saved words")))
         {
-            SaveLoad.ClearSavedWords();
+            SaveLoad.ClearSavedWords(null);
         }
     }
 }
