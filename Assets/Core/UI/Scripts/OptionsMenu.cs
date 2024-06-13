@@ -27,10 +27,13 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] CanvasGroup audioPannel;
     [SerializeField] CanvasGroup resetPannel;
     
-    [Space]
-    [SerializeField] List<OptionBase> options;
+    [Header("Options")]
+    [SerializeField] OptionDropdown languageOption;
 
     public static OptionsMenu Instance;
+
+    //events
+    public static event Action<string> onLanguageChanged;
 
     private void Awake()
     {
@@ -38,12 +41,16 @@ public class OptionsMenu : MonoBehaviour
 
         TogglePannel(acessibilityPannel);
 
+        //Buttons
         returnButton.onClick.AddListener(() => ToggleMenu(false));
         accessibilityButton.onClick.AddListener(() => TogglePannel(acessibilityPannel));
         controlsButton.onClick.AddListener(() => TogglePannel(controlsPannel));
         graphicsButton.onClick.AddListener(() => TogglePannel(graphicsPannel));
         audioButton.onClick.AddListener(() => TogglePannel(audioPannel));
         resetButton.onClick.AddListener(() => TogglePannel(resetPannel));
+
+        //Option base
+        languageOption.onValueChanged += OnLanguageChange;
     }
 
     private void Start()
@@ -55,12 +62,16 @@ public class OptionsMenu : MonoBehaviour
 
     private void OnDestroy()
     {
+        //Buttons
         returnButton.onClick.RemoveAllListeners();
         accessibilityButton.onClick.RemoveAllListeners();
         controlsButton.onClick.RemoveAllListeners();
         graphicsButton.onClick.RemoveAllListeners();
         audioButton.onClick.RemoveAllListeners();
         resetButton.onClick.RemoveAllListeners();
+        
+        //Option base
+        languageOption.onValueChanged -= OnLanguageChange;
     }
 
     public void ToggleMenu()
@@ -104,4 +115,11 @@ public class OptionsMenu : MonoBehaviour
         pannelToToggle.interactable = true;
         pannelToToggle.blocksRaycasts = true;
     }
+
+    #region OptionsCallback
+    void OnLanguageChange()
+    {
+        onLanguageChanged?.Invoke(languageOption.CurrentlySelectedString);
+    }
+    #endregion OptionsCallback
 }
