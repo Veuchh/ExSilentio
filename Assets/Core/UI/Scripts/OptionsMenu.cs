@@ -80,8 +80,6 @@ public class OptionsMenu : MonoBehaviour
         rebindAction?.Invoke();
     }
 
-    #region ButtonCallbacks
-
     void TogglePannel(CanvasGroup pannelToToggle)
     {
         acessibilityPannel.alpha = 0;
@@ -106,6 +104,4 @@ public class OptionsMenu : MonoBehaviour
         pannelToToggle.interactable = true;
         pannelToToggle.blocksRaycasts = true;
     }
-
-    #endregion ButtonCallbacks
 }

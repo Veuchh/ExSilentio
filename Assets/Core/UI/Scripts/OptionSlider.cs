@@ -33,6 +33,8 @@ namespace LW.UI
                 newText = slider.value.ToString("F2");
 
             sliderValueLabel.text = newText;
+
+            base.OnValueChanged();
         }
 
         protected override void ToggleHighlight(bool ishighlighted)

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +12,8 @@ namespace LW.UI
         [SerializeField] TextMeshProUGUI optionName;
         [SerializeField] string parameterName;
 
+        public event Action onValueChanged;
+
         public string ParameterName => parameterName;
 
         protected virtual void ToggleHighlight(bool ishighlighted)
@@ -18,7 +21,10 @@ namespace LW.UI
             optionName.color = ishighlighted ? highlightedColor : defaultColor;
         }
 
-        protected abstract void OnValueChanged();
+        protected virtual void OnValueChanged()
+        {
+            onValueChanged?.Invoke();
+        }
 
         public void OnPointerEnter(PointerEventData eventData)
         {

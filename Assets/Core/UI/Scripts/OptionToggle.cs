@@ -7,11 +7,6 @@ namespace LW.UI
 {
     public class OptionToggle : OptionBase
     {
-        protected override void OnValueChanged()
-        {
-            throw new System.NotImplementedException();
-        }
-
         protected override void ToggleHighlight(bool ishighlighted)
         {
             base.ToggleHighlight(ishighlighted);
