@@ -46,7 +46,7 @@ namespace LW.Level
                 newBundle.Init(database.GetEntry(newBundle.ID));
 
                 //reveal the bundle if it is saved
-                string savedWord = SaveLoad.GetWordFromPlayerPrefs(newBundle.GetBundleKey);
+                string savedWord = SaveLoad.GetStringFromPlayerPrefs(newBundle.GetBundleKey);
 
                 if (revealByDefault)
                 {

@@ -1,6 +1,8 @@
 using LW.UI;
+using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -18,11 +20,6 @@ public class SettingsHandler : MonoBehaviour
     void Start()
     {
         LoadSettings();
-
-        OptionsMenu.Instance.InitializeAccessibilitySettings();
-        OptionsMenu.Instance.InitializeControlsSettings();
-        OptionsMenu.Instance.InitializeGraphicsSettings();
-        OptionsMenu.Instance.InitializeAudioSettings();
 
         //  Access
         OptionsMenu.onLanguageChanged += OnLanguageChanged;
@@ -72,10 +69,59 @@ public class SettingsHandler : MonoBehaviour
 
     void LoadSettings()
     {
+        Dictionary<string, int> intOptions = new Dictionary<string, int>();
+        Dictionary<string, float> floatOptions = new Dictionary<string, float>();
+        Dictionary<string, string> stringOptions = new Dictionary<string, string>();
+
         foreach (OptionBase option in OptionsMenu.Instance.AllOptions)
         {
-
+            if (SaveLoad.IsValueSaved(option.ParameterName))
+            {
+                switch (option)
+                {
+                    case OptionSlider slider:
+                        floatOptions.Add(option.ParameterName, SaveLoad.GetFloatFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionDropdown dropdown:
+                        stringOptions.Add(option.ParameterName, SaveLoad.GetStringFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionToggle toggle:
+                        intOptions.Add(option.ParameterName, SaveLoad.GetIntFromPlayerPrefs(option.ParameterName));
+                        break;
+                }
+            }
         }
+
+        //Acess
+        OptionsMenu.Instance.InitializeAccessibilitySettings(
+            selectedLanguage: (stringOptions.Keys.Contains("language") ? stringOptions["language"] : "English"),
+            animationStrength: (floatOptions.Keys.Contains("animationStrength") ? floatOptions["animationStrength"] : 1),
+            useDistanceToFlat: (intOptions.Keys.Contains("distanceToFlat") ? intOptions["distanceToFlat"] == 1 : false),
+            useConsoleDashes: (intOptions.Keys.Contains("consoleDashes") ? intOptions["consoleDashes"] == 1 : false),
+            colorBG1: (stringOptions.Keys.Contains("colorBG1") ? stringOptions["colorBG1"] : "Black"),
+            colorBG2: (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "Grey"),
+            colorTxt1: (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
+            colorTxt2: (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green"));
+
+        //Controls
+        OptionsMenu.Instance.InitializeControlsSettings(
+            invertY: (intOptions.Keys.Contains("invertY") ? intOptions["invertY"] == 1 : false),
+            lookSensitivity: (floatOptions.Keys.Contains("lookSensitivity") ? floatOptions["lookSensitivity"] : 1));
+
+        //Graphics
+        OptionsMenu.Instance.InitializeGraphicsSettings(
+            fullscreen: (intOptions.Keys.Contains("fullscreen") ? intOptions["fullscreen"] == 1 : true),
+            vSync: (intOptions.Keys.Contains("vsync") ? intOptions["vsync"] == 1 : false));
+
+        //Audio
+        OptionsMenu.Instance.InitializeAudioSettings(
+            masterVolume: floatOptions.Keys.Contains("masterVolume") ? floatOptions["masterVolume"] : 50,
+            ambianceVolume: floatOptions.Keys.Contains("ambianceVolume") ? floatOptions["ambianceVolume"] : 50,
+            sfxVolume: floatOptions.Keys.Contains("sfxVolume") ? floatOptions["sfxVolume"] : 50,
+            musicVolume: floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
+
+        //Apply settings
+        ChangeLanguage(stringOptions.Keys.Contains("language") ? stringOptions["language"] : "English");
     }
 
     private void ChangeLanguage(string newLanguage)

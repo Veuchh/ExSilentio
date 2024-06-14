@@ -149,24 +149,55 @@ namespace LW.UI
             vSyncOption.onValueChanged -= OnVSyncChange;
         }
 
-        public void InitializeAccessibilitySettings()
+        public void InitializeAccessibilitySettings(
+            string selectedLanguage,
+            float animationStrength,
+            bool useDistanceToFlat,
+            bool useConsoleDashes,
+            string colorBG1,
+            string colorBG2,
+            string colorTxt1,
+            string colorTxt2
+            )
         {
-
+            languageOption.Init(selectedLanguage);
+            animationStrengthOption.Init(animationStrength);
+            distanceToFlatOption.Init(useDistanceToFlat);
+            consoleDashesStrengthOption.Init(useConsoleDashes);
+            consoleBackgroundColor1Option.Init(colorBG1);
+            consoleBackgroundColor2Option.Init(colorBG2);
+            consoleTextColor1Option.Init(colorTxt1);
+            consoleTextColor2Option.Init(colorTxt2);
         }
 
-        public void InitializeControlsSettings()
+        public void InitializeControlsSettings(
+            bool invertY,
+            float lookSensitivity)
         {
             rebindSaveLoad.LoadRebinds();
+
+            invertYOption.Init(invertY);
+            mouseSensitivityOption.Init(lookSensitivity);
         }
 
-        public void InitializeGraphicsSettings()
+        public void InitializeGraphicsSettings(
+            bool fullscreen,
+            bool vSync)
         {
-
+            fullscreenOption.Init(fullscreen);
+            vSyncOption.Init(vSync);
         }
 
-        public void InitializeAudioSettings()
+        public void InitializeAudioSettings(
+            float masterVolume,
+            float ambianceVolume,
+            float sfxVolume,
+            float musicVolume)
         {
-
+            masterVolumeOption.Init(masterVolume);
+            ambianceVolumeOption.Init(ambianceVolume);
+            sfxVolumeOption.Init(sfxVolume);
+            musicVolumeOption.Init(musicVolume);
         }
 
         public void ToggleMenu()

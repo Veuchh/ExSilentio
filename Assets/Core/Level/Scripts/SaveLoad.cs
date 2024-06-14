@@ -8,19 +8,33 @@ public static class SaveLoad
 
     public static bool IsValueSaved(string key) => PlayerPrefs.HasKey(key);
 
-    public static void SaveStringToPlayerPrefs(string bundleKey, string word)
+    public static void SaveStringToPlayerPrefs(string key, string word)
     {
-        PlayerPrefs.SetString(bundleKey, word);
+        PlayerPrefs.SetString(key, word);
     }
-
-    public static string GetWordFromPlayerPrefs(string bundleKey)
-    {
-        return PlayerPrefs.GetString(bundleKey);
-    }
-
     public static void SaveFloatToPlayerPrefs(string key, float newValue)
     {
         PlayerPrefs.SetFloat(key, newValue);
+    }
+
+    public static void SaveIntToPlayerPrefs(string key, int newValue)
+    {
+        PlayerPrefs.SetInt(key, newValue);
+    }
+
+    public static int GetIntFromPlayerPrefs(string key)
+    {
+        return PlayerPrefs.GetInt(key);
+    }
+
+    public static string GetStringFromPlayerPrefs(string key)
+    {
+        return PlayerPrefs.GetString(key);
+    }
+
+    public static float GetFloatFromPlayerPrefs(string key)
+    {
+        return PlayerPrefs.GetFloat(key);
     }
 
     public static void ClearSavedWords(List<string> keysToKeep)
@@ -33,14 +47,4 @@ public static class SaveLoad
 
         //Add buffer back to playerPrefs
     }
-
-    public static void SaveIntToPlayerPrefs(string bundleKey, int newValue)
-    {
-        PlayerPrefs.SetInt(bundleKey, newValue);
     }
-
-    public static int GetIntFromPlayerPrefs(string bundleKey)
-    {
-        return PlayerPrefs.GetInt(bundleKey);
-    }
-}

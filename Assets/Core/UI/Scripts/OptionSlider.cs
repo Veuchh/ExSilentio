@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -12,6 +13,12 @@ namespace LW.UI
         [SerializeField] TextMeshProUGUI sliderValueLabel;
 
         public float Value => slider.value;
+
+        public void Init(float newValue)
+        {
+            slider.value = newValue;
+            OnValueChanged();
+        }
 
         private void Awake()
         {
