@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584832396069521008
+    m_lastTime: -8584832365790181709
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -956,7 +956,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584834127453004404
+    m_lastTime: -8584832375882072150
     List:
     - name: AMB_M_Main
       guid: a94c25a65f3e8d4aa396e8c4263692b6
@@ -1731,8 +1731,8 @@ MonoBehaviour:
         guid: 264814935270f842a82bb2533d6af84e
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleBird
       maxAttenuation: 0
-      maxDuration: 136.87923
-      minDuration: 136.87923
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_SL_JunleFakeRain
       guid: d844f6a81966f44c8255587daeb1b64d
       id: 2246380605
@@ -1771,8 +1771,8 @@ MonoBehaviour:
         guid: 9050691e9f26d14eba4f157f13730aee
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_JunleFrog
       maxAttenuation: 25
-      maxDuration: 39
-      minDuration: 39
+      maxDuration: -1
+      minDuration: -1
     - name: AMB_SL_LabComputerGlitch
       guid: d64e92d99b2bfb4f8895a81d8aee9c27
       id: 1056831651
@@ -2431,7 +2431,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584834082918312856
+    m_lastTime: -8584832377702221933
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -3534,7 +3534,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584834110763797674
+    m_lastTime: -8584832359991973295
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
@@ -3835,7 +3835,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: fa2e1f5bc91c3e4b90a5575f46eb1991
     GuidInternal: 
-    m_lastTime: -8584832472193809213
+    m_lastTime: -8584832380806144532
     List:
     - name: UI_CL_CLick
       guid: fc6b9376ac854345a1b2543d9250e5ed
@@ -4274,6 +4274,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.049583334
       minDuration: 0.049583334
+    - name: UI_M_Tr_HighFrequencyFilterOff
+      guid: 566b3f0d020aa2489eb7e68e32ad4e4e
+      id: 779520400
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: fa2e1f5bc91c3e4b90a5575f46eb1991
+      - ElementName: UI_Menu
+        ObjectType: 4
+        guid: 46ede95e3882264f895b0fe49ee3df0b
+      - ElementName: UI_M_Tr_HighFrequencyFilterOff
+        ObjectType: 3
+        guid: 566b3f0d020aa2489eb7e68e32ad4e4e
+      Path: Events\UI\UI_Menu\UI_M_Tr_HighFrequencyFilterOff
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI_M_Tr_HighFrequencyFilterOn
+      guid: 9b17cccd50c4974f9ebddcb100ab61e3
+      id: 2656231418
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: UI
+        ObjectType: 12
+        guid: fa2e1f5bc91c3e4b90a5575f46eb1991
+      - ElementName: UI_Menu
+        ObjectType: 4
+        guid: 46ede95e3882264f895b0fe49ee3df0b
+      - ElementName: UI_M_Tr_HighFrequencyFilterOn
+        ObjectType: 3
+        guid: 9b17cccd50c4974f9ebddcb100ab61e3
+      Path: Events\UI\UI_Menu\UI_M_Tr_HighFrequencyFilterOn
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI_Menu
       guid: 46ede95e3882264f895b0fe49ee3df0b
       id: 2511555531
@@ -4592,7 +4632,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584834084147211260
+    m_lastTime: -8584832381669748896
     List:
     - name: EarthOpen
       guid: aea9d0927bac5849a00a48b9c6acd69c
@@ -5467,6 +5507,84 @@ MonoBehaviour:
         - ElementName: Unreveal
           ObjectType: 8
           guid: 29f007ba55e591498d108b42dd5373b0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_G_HighFrequencyFilter
+      guid: 1dca9c90d310614c9eceed3d06d579d4
+      id: 1759635723
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Global
+        ObjectType: 4
+        guid: cef24f64796037468a1f155fc151576c
+      - ElementName: ST_G_HighFrequencyFilter
+        ObjectType: 9
+        guid: 1dca9c90d310614c9eceed3d06d579d4
+      Path: States\States\ST_Global\ST_G_HighFrequencyFilter
+      values:
+      - name: None
+        guid: 0607519922cdc341a804e24c2860b360
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_HighFrequencyFilter
+          ObjectType: 9
+          guid: 1dca9c90d310614c9eceed3d06d579d4
+        - ElementName: None
+          ObjectType: 8
+          guid: 0607519922cdc341a804e24c2860b360
+      - name: Off
+        guid: 118fbcdb64f6814b97b621a7ffe46eb4
+        id: 930712164
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_HighFrequencyFilter
+          ObjectType: 9
+          guid: 1dca9c90d310614c9eceed3d06d579d4
+        - ElementName: Off
+          ObjectType: 8
+          guid: 118fbcdb64f6814b97b621a7ffe46eb4
+      - name: On
+        guid: 1e54a7e82cc3194594f85f869932822f
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_HighFrequencyFilter
+          ObjectType: 9
+          guid: 1dca9c90d310614c9eceed3d06d579d4
+        - ElementName: On
+          ObjectType: 8
+          guid: 1e54a7e82cc3194594f85f869932822f
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
