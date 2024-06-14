@@ -74,7 +74,7 @@ public class MainMenu : MonoBehaviour
 
     void OnOptionsButton()
     {
-        OptionsMenu.Instance.ToggleMenu(true);
+        OptionsMenu.Instance.ToggleMenu(true, isPauseMenu);
     }
 
     void OnQuitButton()

@@ -36,6 +36,7 @@ namespace LW.UI
 
         [Header("Options - Access")]
         [SerializeField] OptionDropdown languageOption;
+        [SerializeField] GameObject languageWarningText;
         [SerializeField] OptionSlider animationStrengthOption;
         [SerializeField] OptionToggle distanceToFlatOption;
         [SerializeField] OptionToggle consoleDashesStrengthOption;
@@ -47,6 +48,7 @@ namespace LW.UI
         [Header("Options - Controls")]
         [SerializeField] OptionToggle invertYOption;
         [SerializeField] OptionSlider mouseSensitivityOption;
+        [SerializeField] GameObject deleteConfirmationText;
 
         [Header("Options - Graphics")]
         [SerializeField] OptionToggle fullscreenOption;
@@ -225,8 +227,11 @@ namespace LW.UI
             ToggleMenu(!optionsCanvasGroup.interactable);
         }
 
-        public void ToggleMenu(bool isToggled)
+        public void ToggleMenu(bool isToggled, bool openedFromPauseMenu = true)
         {
+            deleteConfirmationText.SetActive(false);
+            languageWarningText.SetActive(openedFromPauseMenu);
+
             optionsCanvasGroup.alpha = isToggled ? 1 : 0;
             optionsCanvasGroup.interactable = isToggled;
             optionsCanvasGroup.blocksRaycasts = isToggled;
@@ -342,6 +347,7 @@ namespace LW.UI
         private void OnClickResetButton()
         {
             onResetButtonClicked?.Invoke();
+            deleteConfirmationText.SetActive(true);
         }
 
         void OnMouseSensitivityChange()
