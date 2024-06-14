@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584834776801382369
+    m_lastTime: -8584834083622164497
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -1377,7 +1377,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6d31fd4525bd6b43a1425895d0f5bb92
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_Balise
-      maxAttenuation: 200
+      maxAttenuation: 250
       maxDuration: -1
       minDuration: -1
     - name: AMB_SL_CaveDrop
@@ -2178,7 +2178,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584834104153298516
+    m_lastTime: -8584834082918312856
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -3582,7 +3582,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: fa2e1f5bc91c3e4b90a5575f46eb1991
     GuidInternal: 
-    m_lastTime: -8584834248501587103
+    m_lastTime: -8584832472193809213
     List:
     - name: UI_CL_CLick
       guid: fc6b9376ac854345a1b2543d9250e5ed
@@ -4339,7 +4339,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584834131669268747
+    m_lastTime: -8584834084147211260
     List:
     - name: EarthOpen
       guid: aea9d0927bac5849a00a48b9c6acd69c
@@ -5214,6 +5214,102 @@ MonoBehaviour:
         - ElementName: Unreveal
           ObjectType: 8
           guid: 29f007ba55e591498d108b42dd5373b0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_G_MuteMenu
+      guid: 4b7a01615d715e41a7616fdcafeb9088
+      id: 4136079247
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Global
+        ObjectType: 4
+        guid: cef24f64796037468a1f155fc151576c
+      - ElementName: ST_G_MuteMenu
+        ObjectType: 9
+        guid: 4b7a01615d715e41a7616fdcafeb9088
+      Path: States\States\ST_Global\ST_G_MuteMenu
+      values:
+      - name: InMenu
+        guid: 5ffbd011689ce1428f0970cf5ce1a94f
+        id: 3374585465
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_MuteMenu
+          ObjectType: 9
+          guid: 4b7a01615d715e41a7616fdcafeb9088
+        - ElementName: InMenu
+          ObjectType: 8
+          guid: 5ffbd011689ce1428f0970cf5ce1a94f
+      - name: None
+        guid: 9f2eb82f7b3ce04888b5ad7490df01c0
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_MuteMenu
+          ObjectType: 9
+          guid: 4b7a01615d715e41a7616fdcafeb9088
+        - ElementName: None
+          ObjectType: 8
+          guid: 9f2eb82f7b3ce04888b5ad7490df01c0
+      - name: OutMenu
+        guid: f91d3bf95874d64fac8d7930663e5d72
+        id: 67980898
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Global
+          ObjectType: 4
+          guid: cef24f64796037468a1f155fc151576c
+        - ElementName: ST_G_MuteMenu
+          ObjectType: 9
+          guid: 4b7a01615d715e41a7616fdcafeb9088
+        - ElementName: OutMenu
+          ObjectType: 8
+          guid: f91d3bf95874d64fac8d7930663e5d72
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_Global
+      guid: cef24f64796037468a1f155fc151576c
+      id: 2389611890
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Global
+        ObjectType: 4
+        guid: cef24f64796037468a1f155fc151576c
+      Path: States\States\ST_Global
+      values: []
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -8244,7 +8340,7 @@ MonoBehaviour:
     m_lastTime: -8584835161147875808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a0000006a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
