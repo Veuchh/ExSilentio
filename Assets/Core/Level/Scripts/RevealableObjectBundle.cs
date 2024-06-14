@@ -30,6 +30,7 @@ namespace LW.Level
         WordDatabaseEntry entry;
         Dictionary<string, bool> hints = new Dictionary<string, bool>();
 
+        public static event Action<RevealableObjectBundle> requestSettings;
 
         public List<string> HintsBase
         {
@@ -61,6 +62,8 @@ namespace LW.Level
 
             foreach (string hintID in HintsBase)
                 hints.Add(hintID, false);
+
+            requestSettings?.Invoke(this);
         }
 
         public void RevealBundle(WordID usedID, LocalizedStringTable stringTable, bool saveToPlayerPrefs = true)
@@ -154,6 +157,30 @@ namespace LW.Level
                     hints[hintID] = true;
                     break;
                 }
+            }
+        }
+
+        public void ApplySettings(float newAnimationStrength, bool useDistanceToFlat)
+        {
+            foreach (var item in itemsInBundle)
+            {
+                item.UpdateSettings(newAnimationStrength, useDistanceToFlat);
+            }
+        }
+
+        public void UpdateDistanceToFlat(bool useDistanceToFloat)
+        {
+            foreach (var item in itemsInBundle)
+            {
+                item.UpdateDistanceToFlat(useDistanceToFloat);
+            }
+        }
+
+        public void UpdateAnimationStrength(float newAnimationStrength)
+        {
+            foreach (var item in itemsInBundle)
+            {
+                item.UpdateAnimationStrength(newAnimationStrength);
             }
         }
     }

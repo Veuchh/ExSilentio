@@ -1,5 +1,7 @@
 using AK.Wwise;
+using DG.Tweening.Plugins.Options;
 using LW.Audio;
+using LW.Level;
 using LW.Player;
 using LW.UI;
 using System;
@@ -53,6 +55,7 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onDistanceToFlatChanged += OnDistanceToFlatChanged;
         OptionsMenu.onConsolDashesChanged += OnConsoleDashesChanged;
         OptionsMenu.onConsolColorsChanged += OnConsoleColorsChanged;
+        RevealableObjectBundle.requestSettings += OnBundleReqestSettings;
 
         //  Controls
         OptionsMenu.onLookSensitivityChanged += OnLookSensitivityChanged;
@@ -78,6 +81,7 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onDistanceToFlatChanged -= OnDistanceToFlatChanged;
         OptionsMenu.onConsolDashesChanged -= OnConsoleDashesChanged;
         OptionsMenu.onConsolColorsChanged -= OnConsoleColorsChanged;
+        RevealableObjectBundle.requestSettings -= OnBundleReqestSettings;
 
         //  Controls
         OptionsMenu.onLookSensitivityChanged -= OnLookSensitivityChanged;
@@ -206,8 +210,6 @@ public class SettingsHandler : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            Color color = Color.black;
-
             switch (colors[i])
             {
                 case "Black":
@@ -288,6 +290,29 @@ public class SettingsHandler : MonoBehaviour
         WwiseInterface.Instance.SetGlobalRTPCValue(musicRTPC, newValue);
     }
 
+    void OnBundleReqestSettings(RevealableObjectBundle bundle)
+    {
+        bundle.ApplySettings(
+            newAnimationStrength : SaveLoad.IsValueSaved("animationStrength") ? SaveLoad.GetFloatFromPlayerPrefs("animationStrength") : 1,
+            useDistanceToFlat : SaveLoad.IsValueSaved("distanceToFlat") ? SaveLoad.GetIntFromPlayerPrefs("distanceToFlat") == 1 : false);
+    }
+
+    void ChangeAnimStrength(float newValue)
+    {
+        foreach (var bundle in FindObjectsOfType<RevealableObjectBundle>())
+        {
+            bundle.UpdateAnimationStrength(newValue);
+        }
+    }
+
+    void ChangeDistanceToFlat(bool newValue)
+    {
+        foreach (var bundle in FindObjectsOfType<RevealableObjectBundle>())
+        {
+            bundle.UpdateDistanceToFlat(newValue);
+        }
+    }
+
     private void OnLanguageChanged(string key, string newLanguage)
     {
         SaveLoad.SaveStringToPlayerPrefs(key, newLanguage);
@@ -300,14 +325,14 @@ public class SettingsHandler : MonoBehaviour
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : CHANGE ANIM STRENGTH");
+        ChangeAnimStrength(newValue);
     }
 
     private void OnDistanceToFlatChanged(string key, bool newValue)
     {
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
-        Debug.LogWarning("TODO : DistanceToFlat");
+        ChangeDistanceToFlat(newValue);
     }
 
     private void OnConsoleDashesChanged(string key, bool newValue)
@@ -337,7 +362,7 @@ public class SettingsHandler : MonoBehaviour
 
         player.ApplySettings(
             SaveLoad.IsValueSaved("invertY") ? SaveLoad.GetIntFromPlayerPrefs("invertY") == 1 : false,
-             SaveLoad.IsValueSaved("lookSensitivity") ? SaveLoad.GetFloatFromPlayerPrefs("lookSensitivity") : 1);
+            SaveLoad.IsValueSaved("lookSensitivity") ? SaveLoad.GetFloatFromPlayerPrefs("lookSensitivity") : 1);
     }
 
     private void OnInvertYChanged(string key, bool newValue)
