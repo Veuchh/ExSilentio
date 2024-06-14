@@ -1,5 +1,6 @@
+using AK.Wwise;
+using LW.Audio;
 using LW.UI;
-using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,30 @@ public class SettingsHandler : MonoBehaviour
     [Header("Language")]
     [SerializeField] Locale english;
     [SerializeField] Locale french;
+
+    [Header("Audio")]
+    [SerializeField] RTPC masterRTPC;
+    [SerializeField] RTPC ambianceRTPC;
+    [SerializeField] RTPC sfxRTPC;
+    [SerializeField] RTPC musicRTPC;
+
+    [Header("Colors")]
+    [SerializeField] private Color blackColor;
+    [SerializeField] private Color greyColor;
+    [SerializeField] private Color darkGreyColor;
+    [SerializeField] private Color whiteColor;
+    [SerializeField] private Color redColor;
+    [SerializeField] private Color darkRedColor;
+    [SerializeField] private Color blueColor;
+    [SerializeField] private Color darkBlueColor;
+    [SerializeField] private Color greenColor;
+    [SerializeField] private Color darkGreenColor;
+    [SerializeField] private Color yellowColor;
+    [SerializeField] private Color darkYellowColor;
+    [SerializeField] private Color magentaColor;
+    [SerializeField] private Color darkMagentaColor;
+    [SerializeField] private Color cyanColor;
+    [SerializeField] private Color darkCyanColor;
 
     void Start()
     {
@@ -92,28 +117,29 @@ public class SettingsHandler : MonoBehaviour
             }
         }
 
-        //Acess
+        //Set proper values to optins menu
+        //  Access
         OptionsMenu.Instance.InitializeAccessibilitySettings(
             selectedLanguage: (stringOptions.Keys.Contains("language") ? stringOptions["language"] : "English"),
             animationStrength: (floatOptions.Keys.Contains("animationStrength") ? floatOptions["animationStrength"] : 1),
             useDistanceToFlat: (intOptions.Keys.Contains("distanceToFlat") ? intOptions["distanceToFlat"] == 1 : false),
             useConsoleDashes: (intOptions.Keys.Contains("consoleDashes") ? intOptions["consoleDashes"] == 1 : false),
             colorBG1: (stringOptions.Keys.Contains("colorBG1") ? stringOptions["colorBG1"] : "Black"),
-            colorBG2: (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "Grey"),
+            colorBG2: (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "DarkGrey"),
             colorTxt1: (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
             colorTxt2: (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green"));
 
-        //Controls
+        //  Controls
         OptionsMenu.Instance.InitializeControlsSettings(
             invertY: (intOptions.Keys.Contains("invertY") ? intOptions["invertY"] == 1 : false),
             lookSensitivity: (floatOptions.Keys.Contains("lookSensitivity") ? floatOptions["lookSensitivity"] : 1));
 
-        //Graphics
+        //  Graphics
         OptionsMenu.Instance.InitializeGraphicsSettings(
             fullscreen: (intOptions.Keys.Contains("fullscreen") ? intOptions["fullscreen"] == 1 : true),
             vSync: (intOptions.Keys.Contains("vsync") ? intOptions["vsync"] == 1 : false));
 
-        //Audio
+        //  Audio
         OptionsMenu.Instance.InitializeAudioSettings(
             masterVolume: floatOptions.Keys.Contains("masterVolume") ? floatOptions["masterVolume"] : 50,
             ambianceVolume: floatOptions.Keys.Contains("ambianceVolume") ? floatOptions["ambianceVolume"] : 50,
@@ -121,7 +147,26 @@ public class SettingsHandler : MonoBehaviour
             musicVolume: floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
 
         //Apply settings
+        //  Access
         ChangeLanguage(stringOptions.Keys.Contains("language") ? stringOptions["language"] : "English");
+        List<string> consoleColors = new List<string> {
+            (stringOptions.Keys.Contains("colorBG1") ? stringOptions["colorBG1"] : "Black"),
+            (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "DarkGrey"),
+             (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
+             (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green")
+        };
+        ChangeConsoleColors(consoleColors);
+        ChangeConsoleDashes(intOptions.Keys.Contains("consoleDashes") ? intOptions["consoleDashes"] == 1 : false);
+
+        //  Graphics
+        ChangeFullscreen(intOptions.Keys.Contains("fullscreen") ? intOptions["fullscreen"] == 1 : true);
+        ChangeVSync(intOptions.Keys.Contains("vsync") ? intOptions["vsync"] == 1 : false);
+
+        //  Audio
+        ChangeMasterVolume(floatOptions.Keys.Contains("masterVolume") ? floatOptions["masterVolume"] : 50);
+        ChangeAmbainceVolume(floatOptions.Keys.Contains("ambianceVolume") ? floatOptions["ambianceVolume"] : 50);
+        ChangeSFXVolume(floatOptions.Keys.Contains("sfxVolume") ? floatOptions["sfxVolume"] : 50);
+        ChangeMusicVolume(floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
     }
 
     private void ChangeLanguage(string newLanguage)
@@ -137,12 +182,116 @@ public class SettingsHandler : MonoBehaviour
         }
     }
 
+    private void ChangeFullscreen(bool isToggled)
+    {
+        Screen.fullScreen = isToggled;
+    }
+
+    private void ChangeVSync(bool isToggled)
+    {
+        QualitySettings.vSyncCount = isToggled ? 1 : 0;
+    }
+
+    private void ChangeConsoleDashes(bool isToggled)
+    {
+        ConsoleUI.Instance.UpdateConsoleDashes(isToggled);
+    }
+
+    private void ChangeConsoleColors(List<string> colors)
+    {
+        List<Color> newColors = new List<Color>();
+
+        for (int i = 0; i < 4; i++)
+        {
+            Color color = Color.black;
+
+            switch (colors[i])
+            {
+                case "Black":
+                    newColors.Add(blackColor);
+                    break;
+                case "Grey":
+                    newColors.Add(greyColor);
+                    break;
+                case "DarkGrey":
+                    newColors.Add(darkGreyColor);
+                    break;
+                case "White":
+                    newColors.Add(whiteColor);
+                    break;
+                case "Red":
+                    newColors.Add(redColor);
+                    break;
+                case "DarkRed":
+                    newColors.Add(darkRedColor);
+                    break;
+                case "Blue":
+                    newColors.Add(blueColor);
+                    break;
+                case "DarkBlue":
+                    newColors.Add(darkBlueColor);
+                    break;
+                case "Green":
+                    newColors.Add(greenColor);
+                    break;
+                case "DarkGreen":
+                    newColors.Add(darkGreenColor);
+                    break;
+                case "Yellow":
+                    newColors.Add(yellowColor);
+                    break;
+                case "DarkYellow":
+                    newColors.Add(darkYellowColor);
+                    break;
+                case "Magenta":
+                    newColors.Add(magentaColor);
+                    break;
+                case "DarkMagenta":
+                    newColors.Add(darkMagentaColor);
+                    break;
+                case "Cyan":
+                    newColors.Add(cyanColor);
+                    break;
+                case "DarkCyan":
+                    newColors.Add(darkCyanColor);
+                    break;
+                default:
+                    Debug.LogError($"Wrong color specified : {colors[i]}");
+                    newColors.Add(Color.black);
+                    break;
+            }
+        }
+
+        ConsoleUI.Instance.UpdateConsoleColor(newColors);
+    }
+
+    void ChangeMasterVolume(float newValue)
+    {
+        WwiseInterface.Instance.SetGlobalRTPCValue(masterRTPC, newValue);
+    }
+
+    void ChangeAmbainceVolume(float newValue)
+    {
+        WwiseInterface.Instance.SetGlobalRTPCValue(ambianceRTPC, newValue);
+    }
+
+    void ChangeSFXVolume(float newValue)
+    {
+        WwiseInterface.Instance.SetGlobalRTPCValue(sfxRTPC, newValue);
+    }
+
+    void ChangeMusicVolume(float newValue)
+    {
+        WwiseInterface.Instance.SetGlobalRTPCValue(musicRTPC, newValue);
+    }
+
     private void OnLanguageChanged(string key, string newLanguage)
     {
         SaveLoad.SaveStringToPlayerPrefs(key, newLanguage);
 
         ChangeLanguage(newLanguage);
     }
+
 
     private void OnAnimStrengthChanged(string key, float newValue)
     {
@@ -162,7 +311,7 @@ public class SettingsHandler : MonoBehaviour
     {
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
-        Debug.LogWarning("TODO : ConsoleDashes");
+        ChangeConsoleDashes(newValue);
     }
 
     private void OnConsoleColorsChanged(List<string> keys, List<string> newValues)
@@ -172,7 +321,7 @@ public class SettingsHandler : MonoBehaviour
             SaveLoad.SaveStringToPlayerPrefs(keys[i], newValues[i]);
         }
 
-        Debug.LogWarning("TODO : Console Colors");
+        ChangeConsoleColors(newValues);
     }
 
     private void OnInvertYChanged(string key, bool newValue)
@@ -193,41 +342,49 @@ public class SettingsHandler : MonoBehaviour
     {
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
-        Debug.LogWarning("TODO : Fullscreen");
+        ChangeFullscreen(newValue);
     }
 
     private void OnVSyncChanged(string key, bool newValue)
     {
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
-        Debug.LogWarning("TODO : VSync");
+        ChangeVSync(newValue);
     }
 
     private void OnMasterVolumeChanged(string key, float newValue)
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : SLIDERS AUDIO");
+        ChangeMasterVolume(newValue);
+
+        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnAmbianceVolumeChanged(string key, float newValue)
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
+        ChangeAmbainceVolume(newValue);
+
+        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnSFXVolumeChanged(string key, float newValue)
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
+        ChangeSFXVolume(newValue);
+
+        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnMusicVolumeChanged(string key, float newValue)
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : SLIDERS AUDIO\"");
+        ChangeMusicVolume(newValue);
+
+        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 }

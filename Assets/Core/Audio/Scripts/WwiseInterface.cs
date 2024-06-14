@@ -1,3 +1,4 @@
+using AK.Wwise;
 using UnityEngine;
 
 namespace LW.Audio
@@ -87,6 +88,11 @@ namespace LW.Audio
         public void StopAll()
         {
             AkSoundEngine.StopAll();
+        }
+
+        public void SetGlobalRTPCValue(RTPC rtpcToSet, float newValue)
+        {
+            rtpcToSet.SetGlobalValue(newValue);
         }
     }
 }
