@@ -1,6 +1,7 @@
 using LW.Data;
 using LW.Logger;
 using LW.UI;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,21 +17,49 @@ namespace LW.Player
         PlayerMovement playerMovement;
         bool isWordModeEnabled = false;
 
+        [SerializeField] PlayerInput playerInput;
+
+        private InputAction moveAction;
+        private InputAction lookAction;
+        private InputAction toggleWordModeAction;
+        private InputAction submitWordAction;
+        private InputAction backspaceAction;
+        private InputAction outpoutLogAction;
+        private InputAction consoleUpAction;
+        private InputAction consoleDownAction;
+        private InputAction escapeAction;
+
         private void Awake()
         {
             ConsoleUI.onCloseClicked += ToggleWordMode;
             wordManager = GetComponent<WordInputManager>();
             Instance = this;
             DontDestroyOnLoad(this);
+
+            SetupInputActions();
         }
 
         private void Update()
         {
+
             if ((StaticData.OpenWindowsAmount > 0 && Cursor.lockState == CursorLockMode.Locked)
                 || (StaticData.OpenWindowsAmount <= 0 && Cursor.lockState == CursorLockMode.None))
             {
                 LockMouse(StaticData.OpenWindowsAmount <= 0);
             }
+        }
+
+        private void SetupInputActions()
+        {
+            moveAction = playerInput.actions["Move"];
+            lookAction = playerInput.actions["Look"];
+            toggleWordModeAction = playerInput.actions["ToggleWordMode"];
+            submitWordAction = playerInput.actions["SubmitWord"];
+            backspaceAction = playerInput.actions["Backspace"];
+            outpoutLogAction = playerInput.actions["OutputLog"];
+            consoleUpAction = playerInput.actions["NavigateConsoleUp"];
+            consoleDownAction = playerInput.actions["NavigateConsoleDown"];
+            escapeAction = playerInput.actions["Escape"];
         }
 
         public void LockMouse(bool locked)

@@ -73,7 +73,7 @@ public class MainMenu : MonoBehaviour
 
     void OnOptionsButton()
     {
-        Debug.LogWarning("TODO : Add options menu");
+        OptionsMenu.Instance.ToggleMenu(true);
     }
 
     void OnQuitButton()
