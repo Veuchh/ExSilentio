@@ -246,9 +246,7 @@ namespace LW.UI
 
             Action rebindAction = isToggled ? rebindSaveLoad.LoadRebinds : rebindSaveLoad.SaveRebinds;
 
-            //For some god forsaken reason, I have to do this to refresh the layout group
-            sampleConsolLayoutGroup.enabled = false;
-            sampleConsolLayoutGroup.enabled = true;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(sampleConsolLayoutGroup.GetComponent<RectTransform>());
 
             rebindAction?.Invoke();
         }
@@ -366,7 +364,8 @@ namespace LW.UI
         public void UpdateSampleConsoleDashes(bool toggleDashes)
         {
             dashes1.SetActive(toggleDashes);
-            dashes2.SetActive(toggleDashes);
+            dashes2.SetActive(toggleDashes); 
+            LayoutRebuilder.ForceRebuildLayoutImmediate(sampleConsolLayoutGroup.GetComponent<RectTransform>());
         }
 
         void OnInvertYChange()

@@ -1,8 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Tables;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 namespace LW.UI
 {
@@ -11,6 +15,8 @@ namespace LW.UI
         [SerializeField] Button leftButton;
         [SerializeField] Button rightButton;
         [SerializeField] TextMeshProUGUI display;
+        [SerializeField] LocalizeStringEvent stringEvent;
+        [SerializeField] LocalizedStringTable stringTable;
         [SerializeField] List<string> options;
 
         int currentIndex = 0;
@@ -48,20 +54,19 @@ namespace LW.UI
                 return;
 
             currentIndex += delta;
-            
+
             if (currentIndex < 0)
                 currentIndex = options.Count - 1;
             else if (currentIndex >= options.Count)
                 currentIndex = 0;
 
             UpdateText();
-
             OnValueChanged();
         }
 
         void UpdateText()
         {
-            display.text = options[currentIndex];
+            stringEvent.StringReference = new LocalizedString(stringTable.GetTable().SharedData.TableCollectionNameGuid, stringTable.GetTable().GetEntry(options[currentIndex]).KeyId);
         }
     }
 }
