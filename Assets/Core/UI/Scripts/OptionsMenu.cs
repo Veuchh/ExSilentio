@@ -51,6 +51,7 @@ namespace LW.UI
         [SerializeField] OptionSlider ambianceVolumeOption;
         [SerializeField] OptionSlider sfxVolumeOption;
         [SerializeField] OptionSlider musicVolumeOption;
+        [SerializeField] OptionToggle highFreqFilterOption;
 
         [Header("All Options")]
         [SerializeField] List<OptionBase> allOptions;
@@ -77,6 +78,7 @@ namespace LW.UI
         public static event Action<string, float> onAmbianceVolumeChanged;
         public static event Action<string, float> onSFXVolumeChanged;
         public static event Action<string, float> onMusicVolumeChanged;
+        public static event Action<string, bool> onHighFreqFilterChange;
 
 
         private void Awake()
@@ -117,6 +119,7 @@ namespace LW.UI
             ambianceVolumeOption.onValueChanged += OnAmbianceVolumeChange;
             sfxVolumeOption.onValueChanged += OnSFXVolumeChange;
             musicVolumeOption.onValueChanged += OnMusicVolumeChange;
+            highFreqFilterOption.onValueChanged += OnHighFreqFilterChange;
         }
 
         private void OnDestroy()
@@ -147,6 +150,13 @@ namespace LW.UI
             //  Graphics
             fullscreenOption.onValueChanged -= OnFullscreenChange;
             vSyncOption.onValueChanged -= OnVSyncChange;
+
+            //  Audio
+            masterVolumeOption.onValueChanged -= OnMasterVolumeChange;
+            ambianceVolumeOption.onValueChanged -= OnAmbianceVolumeChange;
+            sfxVolumeOption.onValueChanged -= OnSFXVolumeChange;
+            musicVolumeOption.onValueChanged -= OnMusicVolumeChange;
+            highFreqFilterOption.onValueChanged -= OnHighFreqFilterChange;
         }
 
         public void InitializeAccessibilitySettings(
@@ -318,6 +328,11 @@ namespace LW.UI
         private void OnMusicVolumeChange()
         {
             onMusicVolumeChanged?.Invoke(musicVolumeOption.ParameterName, musicVolumeOption.Value);
+        }
+
+        private void OnHighFreqFilterChange()
+        {
+            onHighFreqFilterChange?.Invoke(highFreqFilterOption.ParameterName, highFreqFilterOption.isToggled);
         }
         #endregion OptionsCallback
     }

@@ -26,6 +26,8 @@ public class SettingsHandler : MonoBehaviour
     [SerializeField] RTPC ambianceRTPC;
     [SerializeField] RTPC sfxRTPC;
     [SerializeField] RTPC musicRTPC;
+    [SerializeField] AK.Wwise.Event highFreqOn;
+    [SerializeField] AK.Wwise.Event highFreqOff;
 
     [Header("Colors")]
     [SerializeField] private Color blackColor;
@@ -71,6 +73,7 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onAmbianceVolumeChanged += OnAmbianceVolumeChanged;
         OptionsMenu.onSFXVolumeChanged += OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged += OnMusicVolumeChanged;
+        OptionsMenu.onHighFreqFilterChange += OnHighFreqFilterChanged;
     }
 
     private void OnDestroy()
@@ -97,6 +100,7 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onAmbianceVolumeChanged -= OnAmbianceVolumeChanged;
         OptionsMenu.onSFXVolumeChanged -= OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged -= OnMusicVolumeChanged;
+        OptionsMenu.onHighFreqFilterChange -= OnHighFreqFilterChanged;
     }
 
     void LoadSettings()
@@ -174,6 +178,7 @@ public class SettingsHandler : MonoBehaviour
         ChangeAmbainceVolume(floatOptions.Keys.Contains("ambianceVolume") ? floatOptions["ambianceVolume"] : 50);
         ChangeSFXVolume(floatOptions.Keys.Contains("sfxVolume") ? floatOptions["sfxVolume"] : 50);
         ChangeMusicVolume(floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
+        ChangeHighFreqFilter(floatOptions.Keys.Contains("highFrequenciesFilter") ? intOptions["highFrequenciesFilter"] == 1 : false);
     }
 
     private void ChangeLanguage(string newLanguage)
@@ -288,6 +293,11 @@ public class SettingsHandler : MonoBehaviour
     void ChangeMusicVolume(float newValue)
     {
         WwiseInterface.Instance.SetGlobalRTPCValue(musicRTPC, newValue);
+    }
+
+    void ChangeHighFreqFilter(bool newValue)
+    {
+        Debug.LogWarning("TODO : call high freq event");
     }
 
     void OnBundleReqestSettings(RevealableObjectBundle bundle)
@@ -437,5 +447,12 @@ public class SettingsHandler : MonoBehaviour
         ChangeMusicVolume(newValue);
 
         Debug.LogWarning("TODO : PLAY AUDIO");
+    }
+
+    private void OnHighFreqFilterChanged(string key, bool newValue)
+    {
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        ChangeHighFreqFilter(newValue);
     }
 }
