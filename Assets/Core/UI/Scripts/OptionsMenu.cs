@@ -19,6 +19,7 @@ namespace LW.UI
         [SerializeField] Button controlsButton;
         [SerializeField] Button graphicsButton;
         [SerializeField] Button audioButton;
+        [SerializeField] Button resetCategoryButton;
         [SerializeField] Button resetButton;
 
         [Header("Pannels")]
@@ -51,6 +52,7 @@ namespace LW.UI
         [SerializeField] OptionSlider ambianceVolumeOption;
         [SerializeField] OptionSlider sfxVolumeOption;
         [SerializeField] OptionSlider musicVolumeOption;
+        [SerializeField] OptionToggle highFreqFilterOption;
 
         [Header("All Options")]
         [SerializeField] List<OptionBase> allOptions;
@@ -77,6 +79,9 @@ namespace LW.UI
         public static event Action<string, float> onAmbianceVolumeChanged;
         public static event Action<string, float> onSFXVolumeChanged;
         public static event Action<string, float> onMusicVolumeChanged;
+        public static event Action<string, bool> onHighFreqFilterChange;
+        //  Reset
+        public static event Action onResetButtonClicked;
 
 
         private void Awake()
@@ -91,7 +96,8 @@ namespace LW.UI
             controlsButton.onClick.AddListener(() => TogglePannel(controlsPannel));
             graphicsButton.onClick.AddListener(() => TogglePannel(graphicsPannel));
             audioButton.onClick.AddListener(() => TogglePannel(audioPannel));
-            resetButton.onClick.AddListener(() => TogglePannel(resetPannel));
+            resetCategoryButton.onClick.AddListener(() => TogglePannel(resetPannel));
+            resetButton.onClick.AddListener(() => OnClickResetButton());
 
             //Option base
             //  Access
@@ -117,6 +123,7 @@ namespace LW.UI
             ambianceVolumeOption.onValueChanged += OnAmbianceVolumeChange;
             sfxVolumeOption.onValueChanged += OnSFXVolumeChange;
             musicVolumeOption.onValueChanged += OnMusicVolumeChange;
+            highFreqFilterOption.onValueChanged += OnHighFreqFilterChange;
         }
 
         private void OnDestroy()
@@ -127,6 +134,7 @@ namespace LW.UI
             controlsButton.onClick.RemoveAllListeners();
             graphicsButton.onClick.RemoveAllListeners();
             audioButton.onClick.RemoveAllListeners();
+            resetCategoryButton.onClick.RemoveAllListeners();
             resetButton.onClick.RemoveAllListeners();
 
             //Option base
@@ -147,6 +155,13 @@ namespace LW.UI
             //  Graphics
             fullscreenOption.onValueChanged -= OnFullscreenChange;
             vSyncOption.onValueChanged -= OnVSyncChange;
+
+            //  Audio
+            masterVolumeOption.onValueChanged -= OnMasterVolumeChange;
+            ambianceVolumeOption.onValueChanged -= OnAmbianceVolumeChange;
+            sfxVolumeOption.onValueChanged -= OnSFXVolumeChange;
+            musicVolumeOption.onValueChanged -= OnMusicVolumeChange;
+            highFreqFilterOption.onValueChanged -= OnHighFreqFilterChange;
         }
 
         public void InitializeAccessibilitySettings(
@@ -285,6 +300,11 @@ namespace LW.UI
             onInvertYChanged?.Invoke(invertYOption.ParameterName, invertYOption.isToggled);
         }
 
+        private void OnClickResetButton()
+        {
+            onResetButtonClicked?.Invoke();
+        }
+
         void OnMouseSensitivityChange()
         {
             onLookSensitivityChanged?.Invoke(mouseSensitivityOption.ParameterName, mouseSensitivityOption.Value);
@@ -318,6 +338,11 @@ namespace LW.UI
         private void OnMusicVolumeChange()
         {
             onMusicVolumeChanged?.Invoke(musicVolumeOption.ParameterName, musicVolumeOption.Value);
+        }
+
+        private void OnHighFreqFilterChange()
+        {
+            onHighFreqFilterChange?.Invoke(highFreqFilterOption.ParameterName, highFreqFilterOption.isToggled);
         }
         #endregion OptionsCallback
     }

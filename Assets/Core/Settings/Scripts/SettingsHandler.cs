@@ -1,5 +1,4 @@
 using AK.Wwise;
-using DG.Tweening.Plugins.Options;
 using LW.Audio;
 using LW.Level;
 using LW.Player;
@@ -26,6 +25,8 @@ public class SettingsHandler : MonoBehaviour
     [SerializeField] RTPC ambianceRTPC;
     [SerializeField] RTPC sfxRTPC;
     [SerializeField] RTPC musicRTPC;
+    [SerializeField] AK.Wwise.Event highFreqOn;
+    [SerializeField] AK.Wwise.Event highFreqOff;
 
     [Header("Colors")]
     [SerializeField] private Color blackColor;
@@ -71,6 +72,10 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onAmbianceVolumeChanged += OnAmbianceVolumeChanged;
         OptionsMenu.onSFXVolumeChanged += OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged += OnMusicVolumeChanged;
+        OptionsMenu.onHighFreqFilterChange += OnHighFreqFilterChanged;
+
+        //  Reset
+        OptionsMenu.onResetButtonClicked += OnResetButtonClicked;
     }
 
     private void OnDestroy()
@@ -97,6 +102,10 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onAmbianceVolumeChanged -= OnAmbianceVolumeChanged;
         OptionsMenu.onSFXVolumeChanged -= OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged -= OnMusicVolumeChanged;
+        OptionsMenu.onHighFreqFilterChange -= OnHighFreqFilterChanged;
+
+        //  Reset
+        OptionsMenu.onResetButtonClicked -= OnResetButtonClicked;
     }
 
     void LoadSettings()
@@ -174,6 +183,7 @@ public class SettingsHandler : MonoBehaviour
         ChangeAmbainceVolume(floatOptions.Keys.Contains("ambianceVolume") ? floatOptions["ambianceVolume"] : 50);
         ChangeSFXVolume(floatOptions.Keys.Contains("sfxVolume") ? floatOptions["sfxVolume"] : 50);
         ChangeMusicVolume(floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
+        ChangeHighFreqFilter(floatOptions.Keys.Contains("highFrequenciesFilter") ? intOptions["highFrequenciesFilter"] == 1 : false);
     }
 
     private void ChangeLanguage(string newLanguage)
@@ -288,6 +298,11 @@ public class SettingsHandler : MonoBehaviour
     void ChangeMusicVolume(float newValue)
     {
         WwiseInterface.Instance.SetGlobalRTPCValue(musicRTPC, newValue);
+    }
+
+    void ChangeHighFreqFilter(bool newValue)
+    {
+        Debug.LogWarning("TODO : call high freq event");
     }
 
     void OnBundleReqestSettings(RevealableObjectBundle bundle)
@@ -437,5 +452,43 @@ public class SettingsHandler : MonoBehaviour
         ChangeMusicVolume(newValue);
 
         Debug.LogWarning("TODO : PLAY AUDIO");
+    }
+
+    private void OnHighFreqFilterChanged(string key, bool newValue)
+    {
+        SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
+
+        ChangeHighFreqFilter(newValue);
+    }
+
+    private void OnResetButtonClicked()
+    {
+        Dictionary<string, int> intOptions = new Dictionary<string, int>();
+        Dictionary<string, float> floatOptions = new Dictionary<string, float>();
+        Dictionary<string, string> stringOptions = new Dictionary<string, string>();
+
+        foreach (OptionBase option in OptionsMenu.Instance.AllOptions)
+        {
+            if (SaveLoad.IsValueSaved(option.ParameterName))
+            {
+                switch (option)
+                {
+                    case OptionSlider slider:
+                        floatOptions.Add(option.ParameterName, SaveLoad.GetFloatFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionDropdown dropdown:
+                        stringOptions.Add(option.ParameterName, SaveLoad.GetStringFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionToggle toggle:
+                        intOptions.Add(option.ParameterName, SaveLoad.GetIntFromPlayerPrefs(option.ParameterName));
+                        break;
+                }
+            }
+        }
+
+        SaveLoad.ClearSavedWords(intOptions,
+            floatOptions,
+            stringOptions,
+            "rebind");
     }
 }
