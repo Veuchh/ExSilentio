@@ -1,5 +1,4 @@
 using AK.Wwise;
-using DG.Tweening.Plugins.Options;
 using LW.Audio;
 using LW.Level;
 using LW.Player;
@@ -74,6 +73,9 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onSFXVolumeChanged += OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged += OnMusicVolumeChanged;
         OptionsMenu.onHighFreqFilterChange += OnHighFreqFilterChanged;
+
+        //  Reset
+        OptionsMenu.onResetButtonClicked += OnResetButtonClicked;
     }
 
     private void OnDestroy()
@@ -101,6 +103,9 @@ public class SettingsHandler : MonoBehaviour
         OptionsMenu.onSFXVolumeChanged -= OnSFXVolumeChanged;
         OptionsMenu.onMusicVolumeChanged -= OnMusicVolumeChanged;
         OptionsMenu.onHighFreqFilterChange -= OnHighFreqFilterChanged;
+
+        //  Reset
+        OptionsMenu.onResetButtonClicked -= OnResetButtonClicked;
     }
 
     void LoadSettings()
@@ -454,5 +459,36 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
         ChangeHighFreqFilter(newValue);
+    }
+
+    private void OnResetButtonClicked()
+    {
+        Dictionary<string, int> intOptions = new Dictionary<string, int>();
+        Dictionary<string, float> floatOptions = new Dictionary<string, float>();
+        Dictionary<string, string> stringOptions = new Dictionary<string, string>();
+
+        foreach (OptionBase option in OptionsMenu.Instance.AllOptions)
+        {
+            if (SaveLoad.IsValueSaved(option.ParameterName))
+            {
+                switch (option)
+                {
+                    case OptionSlider slider:
+                        floatOptions.Add(option.ParameterName, SaveLoad.GetFloatFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionDropdown dropdown:
+                        stringOptions.Add(option.ParameterName, SaveLoad.GetStringFromPlayerPrefs(option.ParameterName));
+                        break;
+                    case OptionToggle toggle:
+                        intOptions.Add(option.ParameterName, SaveLoad.GetIntFromPlayerPrefs(option.ParameterName));
+                        break;
+                }
+            }
+        }
+
+        SaveLoad.ClearSavedWords(intOptions,
+            floatOptions,
+            stringOptions,
+            "rebind");
     }
 }

@@ -37,14 +37,31 @@ public static class SaveLoad
         return PlayerPrefs.GetFloat(key);
     }
 
-    public static void ClearSavedWords(List<string> keysToKeep)
+    public static void ClearSavedWords(Dictionary<string, int> intOptions,
+        Dictionary<string, float> floatOptions,
+        Dictionary<string, string> stringOptions,
+        string bindingsSettingsKey)
     {
-        //Add settings to a buffer
-        Debug.LogWarning("Clear all words is not fully implemented and will also delete all your settings");
+        string bindingsSettings = PlayerPrefs.GetString(bindingsSettingsKey);
 
         //Clear all playerPrefs
         PlayerPrefs.DeleteAll();
 
+        PlayerPrefs.SetString(bindingsSettingsKey, bindingsSettings);
+
         //Add buffer back to playerPrefs
+        foreach (var item in intOptions.Keys)
+            SaveIntToPlayerPrefs(item, intOptions[item]);
+
+        foreach (var item in floatOptions.Keys)
+            SaveFloatToPlayerPrefs(item, floatOptions[item]);
+
+        foreach (var item in stringOptions.Keys)
+            SaveStringToPlayerPrefs(item, stringOptions[item]);
     }
+
+    public static void ClearAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
+}

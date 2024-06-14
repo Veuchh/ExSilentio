@@ -19,6 +19,7 @@ namespace LW.UI
         [SerializeField] Button controlsButton;
         [SerializeField] Button graphicsButton;
         [SerializeField] Button audioButton;
+        [SerializeField] Button resetCategoryButton;
         [SerializeField] Button resetButton;
 
         [Header("Pannels")]
@@ -79,6 +80,8 @@ namespace LW.UI
         public static event Action<string, float> onSFXVolumeChanged;
         public static event Action<string, float> onMusicVolumeChanged;
         public static event Action<string, bool> onHighFreqFilterChange;
+        //  Reset
+        public static event Action onResetButtonClicked;
 
 
         private void Awake()
@@ -93,7 +96,8 @@ namespace LW.UI
             controlsButton.onClick.AddListener(() => TogglePannel(controlsPannel));
             graphicsButton.onClick.AddListener(() => TogglePannel(graphicsPannel));
             audioButton.onClick.AddListener(() => TogglePannel(audioPannel));
-            resetButton.onClick.AddListener(() => TogglePannel(resetPannel));
+            resetCategoryButton.onClick.AddListener(() => TogglePannel(resetPannel));
+            resetButton.onClick.AddListener(() => OnClickResetButton());
 
             //Option base
             //  Access
@@ -130,6 +134,7 @@ namespace LW.UI
             controlsButton.onClick.RemoveAllListeners();
             graphicsButton.onClick.RemoveAllListeners();
             audioButton.onClick.RemoveAllListeners();
+            resetCategoryButton.onClick.RemoveAllListeners();
             resetButton.onClick.RemoveAllListeners();
 
             //Option base
@@ -293,6 +298,11 @@ namespace LW.UI
         void OnInvertYChange()
         {
             onInvertYChanged?.Invoke(invertYOption.ParameterName, invertYOption.isToggled);
+        }
+
+        private void OnClickResetButton()
+        {
+            onResetButtonClicked?.Invoke();
         }
 
         void OnMouseSensitivityChange()
