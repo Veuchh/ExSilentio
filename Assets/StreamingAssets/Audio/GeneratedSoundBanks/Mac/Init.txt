@@ -32,6 +32,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
 	1642955674	MX_SL_ST_Tent			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent	
 	1722516999	EarthOpen			\States\ST_Mycelium\EarthOpen	
+	1759635723	ST_G_HighFrequencyFilter			\States\ST_Global\ST_G_HighFrequencyFilter	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
 	1993091346	MX_SL_ST_Computer			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer	
 	2015358534	ST_MX_OC_MemoryFoam			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_MemoryFoam	
@@ -106,6 +107,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	EarthOpen			
 	1451272583	Close	EarthOpen			
 	3072142513	Open	EarthOpen			
+	748895195	None	ST_G_HighFrequencyFilter			
+	930712164	Off	ST_G_HighFrequencyFilter			
+	1651971902	On	ST_G_HighFrequencyFilter			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
@@ -187,24 +191,35 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4193874849	GP_M_AMB			\Game Parameters\GP_Menu\GP_M_AMB	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	29147324	MX_OC_Fish			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fish	
+	271147962	MX_OC_Station			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Station	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	571143695	MX_OC_Seagull			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Seagull	
+	614128357	MX_OC_Buildings			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Buildings	
+	684371408	MX_OC_Ocean			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Ocean	
 	837352445	TrainErrorchild			\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild	
 	931952533	AMB_OC_Wind			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind	
+	991637072	MX_OC_Boat			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Boat	
 	1117531639	AMB			\Default Work Unit\Master Audio Bus\AMB	
 	1169946674	MX_Strelitzia			\Default Work Unit\Master Audio Bus\MX\MX_Strelitzia	
 	1358232996	MX_OceanCity			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity	
 	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	1685527054	MX			\Default Work Unit\Master Audio Bus\MX	
 	1709551633	AMB_OceanCIty			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty	
+	2105642076	MX_OC_Sun			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Sun	
 	2325878355	AMB_OC_Ocean			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean	
 	2385628198	FOOTSTEPS			\Default Work Unit\Master Audio Bus\FOOTSTEPS	
 	2482450727	AMB_OC_Child			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child	
 	2511555531	UI_Menu			\Default Work Unit\Master Audio Bus\UI\UI_Menu	
+	2561704480	MX_OC_Train			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Train	
 	2826138305	AMB_OC_Boat			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat	
+	2991871507	MX_OC_Fontain			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fontain	
 	3000346181	AMB_Strelitzia			\Default Work Unit\Master Audio Bus\AMB\AMB_Strelitzia	
 	3271047048	UI_Consol			\Default Work Unit\Master Audio Bus\UI\UI_Consol	
 	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\Reverbs	
+	3647966568	MX_OC_Child			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Child	
 	3705995597	TrainError			\Default Work Unit\Master Audio Bus\SFX\TrainError	
+	3780511004	MX_OC_MemoryFoam			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_MemoryFoam	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3886422523	AMB_OC_Train			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train	
 	4026521433	FT_OceanCity			\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity	
@@ -219,8 +234,19 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
+	64124103	Gain (Custom)	Wwise Gain			
+	118112207	Gain (Custom)	Wwise Gain			
+	168674470	Gain (Custom)	Wwise Gain			
+	221118179	Gain (Custom)	Wwise Gain			
+	239935119	Gain (Custom)	Wwise Gain			
+	312004653	Gain (Custom)	Wwise Gain			
+	337941856	Gain (Custom)	Wwise Gain			
+	424873602	Gain (Custom)	Wwise Gain			
 	602546716	Room_Large	Wwise RoomVerb			
+	604573370	Gain (Custom)	Wwise Gain			
 	622518601	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	676601770	Gain (Custom)	Wwise Gain			
+	866175649	Gain (Custom)	Wwise Gain			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2849147824	Medium	Wwise RoomVerb			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
