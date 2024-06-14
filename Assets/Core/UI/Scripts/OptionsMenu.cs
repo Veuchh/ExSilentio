@@ -22,6 +22,11 @@ namespace LW.UI
         [SerializeField] Button resetCategoryButton;
         [SerializeField] Button resetButton;
 
+        [Header("ButtonsColor")]
+        [SerializeField] Color defaultButtonColor;
+        [SerializeField] Color highlightedButtonColor;
+        [SerializeField] Color clickedButtonColor;
+
         [Header("Pannels")]
         [SerializeField] CanvasGroup acessibilityPannel;
         [SerializeField] CanvasGroup controlsPannel;
@@ -255,6 +260,40 @@ namespace LW.UI
             pannelToToggle.alpha = 1;
             pannelToToggle.interactable = true;
             pannelToToggle.blocksRaycasts = true;
+
+            ColorBlock colorBlock = new ColorBlock();
+            colorBlock.normalColor = defaultButtonColor;
+            colorBlock.highlightedColor = highlightedButtonColor;
+            colorBlock.selectedColor = highlightedButtonColor;
+            colorBlock.disabledColor = defaultButtonColor;
+            colorBlock.pressedColor = clickedButtonColor;
+            colorBlock.colorMultiplier = 1;
+
+            accessibilityButton.colors = colorBlock;
+            controlsButton.colors = colorBlock;
+            graphicsButton.colors = colorBlock;
+            audioButton.colors = colorBlock;
+            resetCategoryButton.colors = colorBlock;
+
+
+            ColorBlock clickedButtonColorBlock = new ColorBlock();
+            clickedButtonColorBlock.normalColor = highlightedButtonColor;
+            clickedButtonColorBlock.selectedColor = highlightedButtonColor;
+            clickedButtonColorBlock.highlightedColor = highlightedButtonColor;
+            clickedButtonColorBlock.disabledColor = defaultButtonColor;
+            clickedButtonColorBlock.pressedColor = clickedButtonColor;
+            clickedButtonColorBlock.colorMultiplier = 1;
+
+            if (pannelToToggle == acessibilityPannel)
+                accessibilityButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == controlsPannel)
+                controlsButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == graphicsPannel)
+                graphicsButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == audioPannel)
+                audioButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == resetPannel)
+                resetCategoryButton.colors = clickedButtonColorBlock;
         }
 
         #region OptionsCallback

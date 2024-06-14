@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 ////TODO: localization support
 
@@ -13,8 +14,42 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
     /// <summary>
     /// A reusable component with a self-contained UI for rebinding a single action.
     /// </summary>
-    public class RebindActionUI : MonoBehaviour
+    public class RebindActionUI : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerEnterHandler, IPointerExitHandler
     {
+        [SerializeField] Color defaultColor = new Color(1, 1, 1, .8f);
+        [SerializeField] Color highlightedColor = new Color(1, 1, 1, 1);
+        [SerializeField] TextMeshProUGUI optionName;
+
+        protected virtual void Awake()
+        {
+            ToggleHighlight(false);
+        }
+
+        protected virtual void ToggleHighlight(bool ishighlighted)
+        {
+            optionName.color = ishighlighted ? highlightedColor : defaultColor;
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            ToggleHighlight(true);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            ToggleHighlight(false);
+        }
+
+        public void OnSelect(BaseEventData eventData)
+        {
+            ToggleHighlight(true);
+        }
+
+        public void OnDeselect(BaseEventData eventData)
+        {
+            ToggleHighlight(false);
+        }
+
         /// <summary>
         /// Reference to the action that is to be rebound.
         /// </summary>
