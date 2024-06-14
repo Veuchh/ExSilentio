@@ -314,7 +314,6 @@ public class SettingsHandler : MonoBehaviour
 
     void ChangeHighFreqFilter(bool newValue)
     {
-        Debug.LogWarning("TODO : call high freq event");
     }
 
     void OnBundleReqestSettings(RevealableObjectBundle bundle)
@@ -436,8 +435,6 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
         ChangeMasterVolume(newValue);
-
-        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnAmbianceVolumeChanged(string key, float newValue)
@@ -445,8 +442,6 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
         ChangeAmbainceVolume(newValue);
-
-        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnSFXVolumeChanged(string key, float newValue)
@@ -454,8 +449,6 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
         ChangeSFXVolume(newValue);
-
-        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnMusicVolumeChanged(string key, float newValue)
@@ -463,8 +456,6 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
         ChangeMusicVolume(newValue);
-
-        Debug.LogWarning("TODO : PLAY AUDIO");
     }
 
     private void OnHighFreqFilterChanged(string key, bool newValue)
