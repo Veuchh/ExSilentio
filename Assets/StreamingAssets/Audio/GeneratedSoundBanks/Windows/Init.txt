@@ -184,9 +184,11 @@ State	ID	Name	State Group			Notes
 	3384621607	Unreveal	MX_SL_ST_Firefly			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	437935957	GP_OC_MX_Sd_Buildings			\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_Buildings	
 	1922876521	GP_M_UI			\Game Parameters\GP_Menu\GP_M_UI	
 	2325539248	GP_M_MX			\Game Parameters\GP_Menu\GP_M_MX	
 	2809572625	GP_M_Master			\Game Parameters\GP_Menu\GP_M_Master	
+	3259652844	GP_OC_MX_Sd_MemoryFoam			\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_MemoryFoam	
 	4074165764	GP_M_SFX			\Game Parameters\GP_Menu\GP_M_SFX	
 	4193874849	GP_M_AMB			\Game Parameters\GP_Menu\GP_M_AMB	
 
@@ -196,6 +198,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	571143695	MX_OC_Seagull			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Seagull	
 	614128357	MX_OC_Buildings			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Buildings	
+	638998895	AMB_OC_Fountain			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Fountain	
 	684371408	MX_OC_Ocean			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Ocean	
 	837352445	TrainErrorchild			\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild	
 	931952533	AMB_OC_Wind			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind	
@@ -223,6 +226,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3886422523	AMB_OC_Train			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train	
 	4026521433	FT_OceanCity			\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity	
+	4149905421	AMB_OC_TrainStation			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_TrainStation	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	219304270	Jungle			\Default Work Unit\Master Audio Bus\Reverbs\Jungle	
@@ -234,19 +238,38 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4122393694	Cave			\Default Work Unit\Master Audio Bus\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
+	21605363	Gain (Custom)	Wwise Gain			
 	64124103	Gain (Custom)	Wwise Gain			
+	67057404	Gain (Custom)	Wwise Gain			
+	84452480	Gain (Custom)	Wwise Gain			
 	118112207	Gain (Custom)	Wwise Gain			
+	139238373	Gain (Custom)	Wwise Gain			
 	168674470	Gain (Custom)	Wwise Gain			
+	182403518	Gain (Custom)	Wwise Gain			
+	198582444	Gain (Custom)	Wwise Gain			
 	221118179	Gain (Custom)	Wwise Gain			
 	239935119	Gain (Custom)	Wwise Gain			
+	240724197	Gain (Custom)	Wwise Gain			
+	302978344	Meter (Custom)	Wwise Meter			
 	312004653	Gain (Custom)	Wwise Gain			
 	337941856	Gain (Custom)	Wwise Gain			
+	371656166	Gain (Custom)	Wwise Gain			
 	424873602	Gain (Custom)	Wwise Gain			
+	480092705	Gain (Custom)	Wwise Gain			
+	583291391	Gain (Custom)	Wwise Gain			
 	602546716	Room_Large	Wwise RoomVerb			
 	604573370	Gain (Custom)	Wwise Gain			
 	622518601	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	650429119	Gain (Custom)	Wwise Gain			
+	663509883	Gain (Custom)	Wwise Gain			
 	676601770	Gain (Custom)	Wwise Gain			
+	691202415	Gain (Custom)	Wwise Gain			
+	729374217	Gain (Custom)	Wwise Gain			
+	729897762	Gain (Custom)	Wwise Gain			
+	832181151	Gain (Custom)	Wwise Gain			
+	851025202	Meter (Custom)	Wwise Meter			
 	866175649	Gain (Custom)	Wwise Gain			
+	942917865	Gain (Custom)	Wwise Gain			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2849147824	Medium	Wwise RoomVerb			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			

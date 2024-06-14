@@ -688,24 +688,43 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{2E039C53-7DC6-5F23-50AB-A5FE7A725130}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{6C1BEC13-C4C4-23D4-5A28-101E95A15999}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
+					<Plugin Id="21605363" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{F07431E8-E556-4E54-AD4D-DD838FE33006}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="64124103" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_MemoryFoam\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{9C6D81AE-C071-4395-A16C-735552EBA982}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="67057404" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{4D20D0DB-618F-4AA9-A7C6-0480B8257CCA}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="84452480" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{B487A090-9A7F-44C5-9950-496EFA103178}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="118112207" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Child\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{3FACD984-9229-480D-B0B9-4FB032C21012}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="139238373" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Fountain\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{FA0AAC7C-E277-4CB8-9F74-457E7EEC060B}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="168674470" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Boat\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{0EF865B3-E7A8-4428-9755-8DA289EC60F7}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="182403518" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_TrainStation\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{9CBBCB07-8BAA-4DB3-B8CF-0416D3570305}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="198582444" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{6A2FF049-2998-4835-9BBF-432BB0867B9C}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="221118179" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Train\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{8AAC8964-D517-48B7-BE7F-F1FED6BF390E}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="239935119" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Sun\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{FE3A3570-796C-4E09-A784-C2CA25B2E909}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="240724197" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_Strelitzia\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{2DB45640-0FB6-44B7-87B2-2B3135D12F55}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="302978344" Name="Meter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Buildings\[Effect Slot [1]: (Meter)]\Meter (Custom)" GUID="{486C77DF-2702-4F78-A7DB-F456A8BE769F}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="312004653" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Station\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{48226ABD-A8EB-4DEB-B90E-673D685E4E97}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="337941856" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Ocean\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{5BA6062D-FBBC-4026-8513-A2D85EA53221}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="371656166" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{8A09642B-5552-4F03-B1D7-8207C136B479}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="424873602" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fish\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{F416EAB9-C0F2-4D91-8B8B-993798148F2C}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="480092705" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{1D53FF8D-FD0B-4C0E-B137-67EAE35BAD16}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="583291391" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{85CCD653-A01D-4E0B-AE5F-7A36CDDD01F3}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="604573370" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Seagull\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{27554510-9412-4AE9-857C-7C5A5B50453B}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="622518601" Name="Have_U_Ever_Been_Outside (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Plains\[Effect Slot [0]: (RoomVerb)]\Have_U_Ever_Been_Outside (Custom)" GUID="{EDA24689-317C-41D5-94B3-00CFF37B60E2}" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="650429119" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{383457EF-776E-40C4-9503-1003D655B098}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="663509883" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{F0C67342-5E59-4477-9A02-BB2E71E9753E}" LibName="Wwise Gain" LibId="9109507"/>
 					<Plugin Id="676601770" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Buildings\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{CAFC084F-D15B-4EA3-9EDE-5EE4C4B6543E}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="691202415" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{070F9AAF-BFD9-46EB-BF6E-F5BBFE819DA7}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="729374217" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{31A1557E-8198-46C1-993B-7540DFF0C28B}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="729897762" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{390B3F2E-1B7C-4294-86CD-0231677DE7B4}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="832181151" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{8E39583E-D28B-493E-B079-AACE6BEB2116}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="851025202" Name="Meter (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_MemoryFoam\[Effect Slot [1]: (Meter)]\Meter (Custom)" GUID="{B4BDE0A8-824E-4E43-A1D9-B60E85EE17E4}" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="866175649" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fontain\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{80B6D38C-41C8-4207-AA3D-19B067B22705}" LibName="Wwise Gain" LibId="9109507"/>
+					<Plugin Id="942917865" Name="Gain (Custom)" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\[Effect Slot [0]: (Gain)]\Gain (Custom)" GUID="{B1F1F80D-C8E9-4C8A-8DAE-D4B588CD683F}" LibName="Wwise Gain" LibId="9109507"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="602546716" Name="Room_Large" ObjectPath="\Effects\Factory Effects\RoomVerb\Rooms\Room_Large" GUID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -735,7 +754,13 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX" GUID="{AD9B979E-5250-40BD-9A6A-3FA989361E21}"/>
+				<Bus Id="393239870" Name="SFX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX" GUID="{AD9B979E-5250-40BD-9A6A-3FA989361E21}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="942917865"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="571143695" Name="MX_OC_Seagull" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Seagull" GUID="{EEC7422D-2D06-4710-9435-FE0D2BCA2738}">
 					<PluginRefs>
 						<Custom>
@@ -746,7 +771,15 @@
 				<Bus Id="614128357" Name="MX_OC_Buildings" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Buildings" GUID="{CAE79D52-04E2-406A-9884-0CF2F2F51DED}">
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="302978344"/>
 							<PluginRef Id="676601770"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Fountain" GUID="{F04340A8-DFB1-4883-8FCC-C678642F48D7}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="139238373"/>
 						</Custom>
 					</PluginRefs>
 				</Bus>
@@ -758,7 +791,13 @@
 					</PluginRefs>
 				</Bus>
 				<Bus Id="837352445" Name="TrainErrorchild" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\TrainError\TrainErrorchild" GUID="{3ACAEE07-E570-4853-8B8F-77DE2718FB05}"/>
-				<Bus Id="931952533" Name="AMB_OC_Wind" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind" GUID="{F4BC7F7D-7B73-41CF-B2C5-64093AF14AAC}"/>
+				<Bus Id="931952533" Name="AMB_OC_Wind" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Wind" GUID="{F4BC7F7D-7B73-41CF-B2C5-64093AF14AAC}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="21605363"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="991637072" Name="MX_OC_Boat" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Boat" GUID="{001D3FAB-952F-441C-9743-5A30B0170177}">
 					<PluginRefs>
 						<Custom>
@@ -766,12 +805,48 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="1117531639" Name="AMB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB" GUID="{6800E617-CFAC-446E-A0FD-6BEE02B9632E}"/>
-				<Bus Id="1169946674" Name="MX_Strelitzia" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_Strelitzia" GUID="{4DA52585-FE78-4E06-AA70-D1EE1CDAFEAF}"/>
-				<Bus Id="1358232996" Name="MX_OceanCity" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity" GUID="{494856A7-7260-4285-ACAC-13B4D6D33B8B}"/>
-				<Bus Id="1551306167" Name="UI" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI" GUID="{19146DA6-77C0-499F-A028-474708E79385}"/>
-				<Bus Id="1685527054" Name="MX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX" GUID="{00D8AAD3-8E11-4AAC-BF38-D5FB8699999A}"/>
-				<Bus Id="1709551633" Name="AMB_OceanCIty" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty" GUID="{463B4679-E212-41A8-9F3A-C5371F368623}"/>
+				<Bus Id="1117531639" Name="AMB" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB" GUID="{6800E617-CFAC-446E-A0FD-6BEE02B9632E}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="583291391"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1169946674" Name="MX_Strelitzia" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_Strelitzia" GUID="{4DA52585-FE78-4E06-AA70-D1EE1CDAFEAF}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="240724197"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1358232996" Name="MX_OceanCity" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity" GUID="{494856A7-7260-4285-ACAC-13B4D6D33B8B}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="729897762"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1551306167" Name="UI" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI" GUID="{19146DA6-77C0-499F-A028-474708E79385}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="67057404"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1685527054" Name="MX" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX" GUID="{00D8AAD3-8E11-4AAC-BF38-D5FB8699999A}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="691202415"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="1709551633" Name="AMB_OceanCIty" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty" GUID="{463B4679-E212-41A8-9F3A-C5371F368623}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="663509883"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2105642076" Name="MX_OC_Sun" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Sun" GUID="{997DB985-1A32-47BA-AE33-0D3505C8EECC}">
 					<PluginRefs>
 						<Custom>
@@ -779,9 +854,27 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="2325878355" Name="AMB_OC_Ocean" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean" GUID="{18BD6074-3978-4F45-94DC-DF8887F10EA5}"/>
-				<Bus Id="2385628198" Name="FOOTSTEPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS" GUID="{80C99877-5536-4D0C-B535-98A28A945ABB}"/>
-				<Bus Id="2482450727" Name="AMB_OC_Child" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child" GUID="{843D8B46-86BB-49CA-BDE3-A05DFB4DBE62}"/>
+				<Bus Id="2325878355" Name="AMB_OC_Ocean" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Ocean" GUID="{18BD6074-3978-4F45-94DC-DF8887F10EA5}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="84452480"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="2385628198" Name="FOOTSTEPS" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS" GUID="{80C99877-5536-4D0C-B535-98A28A945ABB}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="371656166"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="2482450727" Name="AMB_OC_Child" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Child" GUID="{843D8B46-86BB-49CA-BDE3-A05DFB4DBE62}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="832181151"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2511555531" Name="UI_Menu" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI\UI_Menu" GUID="{C748F366-1A12-483A-95AD-3FFCBE68A990}"/>
 				<Bus Id="2561704480" Name="MX_OC_Train" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Train" GUID="{1BFF76FB-EB28-4A3A-82F4-D652501A69BF}">
 					<PluginRefs>
@@ -790,7 +883,13 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="2826138305" Name="AMB_OC_Boat" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat" GUID="{6C8BFB1F-90B3-4A28-A1D3-135AAD44E1D0}"/>
+				<Bus Id="2826138305" Name="AMB_OC_Boat" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat" GUID="{6C8BFB1F-90B3-4A28-A1D3-135AAD44E1D0}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="650429119"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2991871507" Name="MX_OC_Fontain" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fontain" GUID="{96084141-002F-40F2-987A-23F883F6880C}">
 					<PluginRefs>
 						<Custom>
@@ -813,12 +912,38 @@
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="64124103"/>
+							<PluginRef Id="851025202"/>
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
-				<Bus Id="3886422523" Name="AMB_OC_Train" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train" GUID="{42C3E5E5-FD84-4ABD-9EBA-989E2AFF62A3}"/>
-				<Bus Id="4026521433" Name="FT_OceanCity" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity" GUID="{AB0B9FB0-091D-4A26-AD4B-94DFED63191E}"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="480092705"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3886422523" Name="AMB_OC_Train" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Train" GUID="{42C3E5E5-FD84-4ABD-9EBA-989E2AFF62A3}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="729374217"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="4026521433" Name="FT_OceanCity" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\FOOTSTEPS\FT_OceanCity" GUID="{AB0B9FB0-091D-4A26-AD4B-94DFED63191E}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="198582444"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="4149905421" Name="AMB_OC_TrainStation" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_TrainStation" GUID="{0886CFB5-43D8-48FA-B163-8E45BE70552C}">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="182403518"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="219304270" Name="Jungle" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Jungle" GUID="{3C336C41-2EA3-4DB6-9C66-5C9C98D583FC}">
@@ -873,11 +998,13 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
+				<GameParameter Id="437935957" Name="GP_OC_MX_Sd_Buildings" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_Buildings" GUID="{23848B40-B6AB-4E5D-9FEE-C6494CF34FC5}"/>
 				<GameParameter Id="919542588" Name="GP_SL_DesertWind" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind" GUID="{C7E7239F-01E0-4796-90E7-0708D12F50BB}"/>
 				<GameParameter Id="1263410310" Name="GP_SL_DistantRiver" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver" GUID="{AE880407-86C8-4AF3-AF6A-B0AFD1D1B6F8}"/>
 				<GameParameter Id="1922876521" Name="GP_M_UI" ObjectPath="\Game Parameters\Game Parameters\GP_Menu\GP_M_UI" GUID="{ADD450F2-939C-481A-94D7-96A8A5666E1F}"/>
 				<GameParameter Id="2325539248" Name="GP_M_MX" ObjectPath="\Game Parameters\Game Parameters\GP_Menu\GP_M_MX" GUID="{4E7C6990-F5EB-4DB1-9F03-834D0BEFD4D0}"/>
 				<GameParameter Id="2809572625" Name="GP_M_Master" ObjectPath="\Game Parameters\Game Parameters\GP_Menu\GP_M_Master" GUID="{CCEE96A6-F550-49CD-827F-EB716527D585}"/>
+				<GameParameter Id="3259652844" Name="GP_OC_MX_Sd_MemoryFoam" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_MemoryFoam" GUID="{F96EFCAC-D310-41B6-875E-F2F4ECBFBBEC}"/>
 				<GameParameter Id="3471781427" Name="GP_OC_MX_MemoryFoamOctDistance" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_MemoryFoamOctDistance" GUID="{A0459394-1A5B-4761-83C0-FC3A1F875970}"/>
 				<GameParameter Id="3815697657" Name="GP_OC_WaterHigh" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh" GUID="{FAA5339D-BEAD-4829-B320-C9D7A03BB665}"/>
 				<GameParameter Id="3954811855" Name="GP_SL_FireCampDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance" GUID="{9F0E1BAA-319F-4CEA-9446-B2328241DB5A}"/>
@@ -1192,7 +1319,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{86E6A3BA-27E0-E042-EFAA-509E05337B90}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{B494044B-2B46-40CC-4C42-CFE191358126}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -3007,7 +3134,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{27123C01-7639-F3D6-8391-0056C1C0EE6A}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{CDF74682-5E35-6DF9-F50A-149B5CDF7AE0}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -3939,7 +4066,7 @@
 						<ActionSetStateEntry GroupId="867132074" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Unreveal" GUID="{A49E2183-4529-4C40-8BCD-3AF5AC7FB00F}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fountain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="30" DurationType="Infinite">
+				<Event Id="638998895" Name="AMB_OC_Fountain" ObjectPath="\Events\AMB\AMB_OceanCity\AMB_OC_Fountain" GUID="{A1AA6E8B-1826-43BE-80C4-0F56CBFEECDE}" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="165011252"/>
 						<MediaRef Id="472988219"/>
@@ -4474,5 +4601,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D4C839AC-AC97-1B80-36DF-413E1C39CB07}</FileHash>
+	<FileHash>{3248F2B2-0450-8F85-8544-94F615359FEF}</FileHash>
 </SoundBanksInfo>
