@@ -30,7 +30,7 @@ namespace LW.UI
             rightButton.onClick.RemoveAllListeners();
         }
 
-        private void Init(string currentlySelectedString)
+        public void Init(string currentlySelectedString)
         {
             currentIndex = 0;
 

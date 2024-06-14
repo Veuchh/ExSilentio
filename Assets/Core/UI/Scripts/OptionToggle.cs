@@ -1,35 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace LW.UI
 {
     public class OptionToggle : OptionBase
     {
-        protected override void ToggleHighlight(bool ishighlighted)
+        [SerializeField] Toggle toggle;
+
+        public bool isToggled => toggle.isOn;
+
+        private void Awake()
         {
-            base.ToggleHighlight(ishighlighted);
+            toggle.onValueChanged.AddListener((_) => OnValueChanged());
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        private void OnDestroy()
         {
-            ToggleHighlight(true);
+            toggle.onValueChanged.RemoveAllListeners();
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        public void Init(bool isToggled)
         {
-                ToggleHighlight(false);
-        }
-
-        public void OnSelect(BaseEventData eventData)
-        {
-            ToggleHighlight(true);
-        }
-
-        public void OnDeselect(BaseEventData eventData)
-        {
-            ToggleHighlight(false);
+            toggle.isOn = isToggled;
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using LW.Data;
 using LW.Audio;
+using System.Collections.Generic;
 
 namespace LW.UI
 {
@@ -177,6 +178,25 @@ namespace LW.UI
             buttonPosition.x = commandPannel.activeSelf ? toggleButtonPositions.y : toggleButtonPositions.x;
 
             togglePannelButton.transform.localPosition = buttonPosition;
+        }
+
+        public void UpdateConsoleColor(List<Color> newColors)
+        {
+            if (newColors.Count != 4)
+            {
+                Debug.LogError($"newColors should have 4 values. It has {newColors.Count}");
+                return;
+            }
+
+            backgroundColor1 = newColors[0];
+            backgroundColor2 = newColors[1];
+            textColor1 = newColors[2];
+            textColor2 = newColors[3];
+        }
+
+        public void UpdateConsoleDashes(bool useDashes)
+        {
+            separateWithDashes = useDashes;
         }
     }
 }

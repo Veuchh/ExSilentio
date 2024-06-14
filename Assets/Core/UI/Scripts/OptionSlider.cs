@@ -1,7 +1,5 @@
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace LW.UI
@@ -11,7 +9,13 @@ namespace LW.UI
         [SerializeField] Slider slider;
         [SerializeField] TextMeshProUGUI sliderValueLabel;
 
-        bool isSelected = false;
+        public float Value => slider.value;
+
+        public void Init(float newValue)
+        {
+            slider.value = newValue;
+            OnValueChanged();
+        }
 
         private void Awake()
         {
