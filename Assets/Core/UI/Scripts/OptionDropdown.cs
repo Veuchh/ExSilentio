@@ -17,8 +17,10 @@ namespace LW.UI
 
         public string CurrentlySelectedString => options[currentIndex];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             leftButton.onClick.AddListener(() => OnButtonCliked(-1));
             rightButton.onClick.AddListener(() => OnButtonCliked(1));
             UpdateText();
