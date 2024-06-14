@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584832339857069928
+    m_lastTime: -8584832319036634285
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -1284,7 +1284,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8b6eaaa12618be4380c40f56cbfeecde
       Path: Events\AMB\AMB_OceanCity\AMB_OC_Fountain
-      maxAttenuation: 30
+      maxAttenuation: 20
       maxDuration: -1
       minDuration: -1
     - name: AMB_OC_Main
@@ -2477,7 +2477,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584832377702221933
+    m_lastTime: -8584832334026150679
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -4402,7 +4402,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584834935470868481
+    m_lastTime: -8584832323712984911
     List:
     - name: GP_M_AMB
       guid: 31118e06c9c6e641b57545921eca7323
@@ -4557,6 +4557,52 @@ MonoBehaviour:
         ObjectType: 13
         guid: 949345a05b1a614783c0fc3a1f875970
       Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_MemoryFoamOctDistance
+    - name: GP_OC_MX_Sd_Buildings
+      guid: 408b8423abb65d4e9feec6494cf34fc5
+      id: 437935957
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      - ElementName: SideChain
+        ObjectType: 4
+        guid: f8220768ea28444abf80a2965f409c10
+      - ElementName: GP_OC_MX_Sd_Buildings
+        ObjectType: 13
+        guid: 408b8423abb65d4e9feec6494cf34fc5
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_Buildings
+    - name: GP_OC_MX_Sd_MemoryFoam
+      guid: acfc6ef910d3b641875ef2f4ecbfbbec
+      id: 3259652844
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      - ElementName: SideChain
+        ObjectType: 4
+        guid: f8220768ea28444abf80a2965f409c10
+      - ElementName: GP_OC_MX_Sd_MemoryFoam
+        ObjectType: 13
+        guid: acfc6ef910d3b641875ef2f4ecbfbbec
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_MemoryFoam
     - name: GP_OC_WaterHigh
       guid: 9d33a5faadbe2948b320c9d7a03bb665
       id: 3815697657
@@ -4653,6 +4699,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: d3e0923578a9f9439da65a0032f0865c
       Path: Game Parameters\Game Parameters\GP_Strelitzia
+    - name: SideChain
+      guid: f8220768ea28444abf80a2965f409c10
+      id: 1883033791
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_OceanCity
+        ObjectType: 4
+        guid: 1da2e570a6b65a468f458f76ba5d2e93
+      - ElementName: GP_OC_MX
+        ObjectType: 4
+        guid: 801db89d6f20e048aa1154dd89742376
+      - ElementName: SideChain
+        ObjectType: 4
+        guid: f8220768ea28444abf80a2965f409c10
+      Path: Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -4678,7 +4744,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584832381669748896
+    m_lastTime: -8584832334887181539
     List:
     - name: EarthOpen
       guid: aea9d0927bac5849a00a48b9c6acd69c
