@@ -1,5 +1,6 @@
 using AK.Wwise;
 using LW.Audio;
+using LW.Player;
 using LW.UI;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,7 @@ public class SettingsHandler : MonoBehaviour
         //  Controls
         OptionsMenu.onLookSensitivityChanged += OnLookSensitivityChanged;
         OptionsMenu.onInvertYChanged += OnInvertYChanged;
+        PlayerMovement.requestSettings += OnPlayerRequestSettings;
 
         //  Graphics
         OptionsMenu.onFullscreenChanged += OnFullScreenChanged;
@@ -80,6 +82,7 @@ public class SettingsHandler : MonoBehaviour
         //  Controls
         OptionsMenu.onLookSensitivityChanged -= OnLookSensitivityChanged;
         OptionsMenu.onInvertYChanged -= OnInvertYChanged;
+        PlayerMovement.requestSettings -= OnPlayerRequestSettings;
 
         //  Graphics
         OptionsMenu.onFullscreenChanged -= OnFullScreenChanged;
@@ -324,18 +327,41 @@ public class SettingsHandler : MonoBehaviour
         ChangeConsoleColors(newValues);
     }
 
+    private void OnPlayerRequestSettings()
+    {
+
+        PlayerMovement player = FindObjectOfType<PlayerMovement>();
+
+        if (player == null)
+            return;
+
+        player.ApplySettings(
+            SaveLoad.IsValueSaved("invertY") ? SaveLoad.GetIntFromPlayerPrefs("invertY") == 1 : false,
+             SaveLoad.IsValueSaved("lookSensitivity") ? SaveLoad.GetFloatFromPlayerPrefs("lookSensitivity") : 1);
+    }
+
     private void OnInvertYChanged(string key, bool newValue)
     {
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
-        Debug.LogWarning("TODO : InvertY");
+        PlayerMovement player = FindObjectOfType<PlayerMovement>();
+
+        if (player == null)
+            return;
+
+        player.SetInvertY(newValue);
     }
 
     private void OnLookSensitivityChanged(string key, float newValue)
     {
         SaveLoad.SaveFloatToPlayerPrefs(key, newValue);
 
-        Debug.LogWarning("TODO : LookSensitivity");
+        PlayerMovement player = FindObjectOfType<PlayerMovement>();
+
+        if (player == null)
+            return;
+
+        player.SetLookSensitivityMultiplier(newValue);
     }
 
     private void OnFullScreenChanged(string key, bool newValue)
