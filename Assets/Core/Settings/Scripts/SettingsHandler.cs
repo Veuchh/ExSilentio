@@ -133,6 +133,14 @@ public class SettingsHandler : MonoBehaviour
             }
         }
 
+        List<string> consoleColors = new List<string> {
+            (stringOptions.Keys.Contains("colorBG1") ? stringOptions["colorBG1"] : "Black"),
+            (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "DarkGrey"),
+             (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
+             (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green")
+        };
+
+
         //Set proper values to optins menu
         //  Access
         OptionsMenu.Instance.InitializeAccessibilitySettings(
@@ -144,6 +152,9 @@ public class SettingsHandler : MonoBehaviour
             colorBG2: (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "DarkGrey"),
             colorTxt1: (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
             colorTxt2: (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green"));
+
+        OptionsMenu.Instance.UpdateSampleConsoleDashes(intOptions.Keys.Contains("consoleDashes") ? intOptions["consoleDashes"] == 1 : false);
+        OptionsMenu.Instance.UpdateSampleConsoleColor(GetColorListFromStringList(consoleColors));
 
         //  Controls
         OptionsMenu.Instance.InitializeControlsSettings(
@@ -165,12 +176,6 @@ public class SettingsHandler : MonoBehaviour
         //Apply settings
         //  Access
         ChangeLanguage(stringOptions.Keys.Contains("language") ? stringOptions["language"] : "English");
-        List<string> consoleColors = new List<string> {
-            (stringOptions.Keys.Contains("colorBG1") ? stringOptions["colorBG1"] : "Black"),
-            (stringOptions.Keys.Contains("colorBG2") ? stringOptions["colorBG2"] : "DarkGrey"),
-             (stringOptions.Keys.Contains("colorTxt1") ? stringOptions["colorTxt1"] : "Green"),
-             (stringOptions.Keys.Contains("colorTxt2") ? stringOptions["colorTxt2"] : "Green")
-        };
         ChangeConsoleColors(consoleColors);
         ChangeConsoleDashes(intOptions.Keys.Contains("consoleDashes") ? intOptions["consoleDashes"] == 1 : false);
 
@@ -215,6 +220,13 @@ public class SettingsHandler : MonoBehaviour
     }
 
     private void ChangeConsoleColors(List<string> colors)
+    {
+        List<Color> newColors = GetColorListFromStringList(colors);
+
+        ConsoleUI.Instance.UpdateConsoleColor(newColors);
+    }
+
+    private List<Color> GetColorListFromStringList(List<string> colors)
     {
         List<Color> newColors = new List<Color>();
 
@@ -277,7 +289,7 @@ public class SettingsHandler : MonoBehaviour
             }
         }
 
-        ConsoleUI.Instance.UpdateConsoleColor(newColors);
+        return newColors;
     }
 
     void ChangeMasterVolume(float newValue)
@@ -355,6 +367,7 @@ public class SettingsHandler : MonoBehaviour
         SaveLoad.SaveIntToPlayerPrefs(key, newValue == true ? 1 : 0);
 
         ChangeConsoleDashes(newValue);
+        OptionsMenu.Instance.UpdateSampleConsoleDashes(newValue);
     }
 
     private void OnConsoleColorsChanged(List<string> keys, List<string> newValues)
@@ -365,11 +378,11 @@ public class SettingsHandler : MonoBehaviour
         }
 
         ChangeConsoleColors(newValues);
+        OptionsMenu.Instance.UpdateSampleConsoleColor(GetColorListFromStringList(newValues));
     }
 
     private void OnPlayerRequestSettings()
     {
-
         PlayerMovement player = FindObjectOfType<PlayerMovement>();
 
         if (player == null)

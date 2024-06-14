@@ -44,6 +44,12 @@ namespace LW.UI
         [SerializeField] OptionDropdown consoleBackgroundColor2Option;
         [SerializeField] OptionDropdown consoleTextColor1Option;
         [SerializeField] OptionDropdown consoleTextColor2Option;
+        [SerializeField] LayoutGroup sampleConsolLayoutGroup;
+        [SerializeField] GameObject dashes1;
+        [SerializeField] GameObject dashes2;
+        [SerializeField] ConsoleEntry entry1;
+        [SerializeField] ConsoleEntry entry2;
+        [SerializeField] ConsoleEntry entry3;
 
         [Header("Options - Controls")]
         [SerializeField] OptionToggle invertYOption;
@@ -239,6 +245,11 @@ namespace LW.UI
             canvas.sortingOrder = isToggled ? StaticData.OpenWindowsAmount : -1;
 
             Action rebindAction = isToggled ? rebindSaveLoad.LoadRebinds : rebindSaveLoad.SaveRebinds;
+
+            //For some god forsaken reason, I have to do this to refresh the layout group
+            sampleConsolLayoutGroup.enabled = false;
+            sampleConsolLayoutGroup.enabled = true;
+
             rebindAction?.Invoke();
         }
 
@@ -337,6 +348,25 @@ namespace LW.UI
             consoleTextColor2Option.CurrentlySelectedString});
 
             onConsolColorsChanged?.Invoke(keys, colors);
+        }
+
+        public void UpdateSampleConsoleColor(List<Color> colors)
+        {
+            if (colors.Count != 4)
+                return;
+
+            entry1.UpdateBackgroundColor(colors[0]);
+            entry1.UpdateTextColor(colors[2]);
+            entry3.UpdateBackgroundColor(colors[0]);
+            entry3.UpdateTextColor(colors[2]);
+            entry2.UpdateBackgroundColor(colors[1]);
+            entry2.UpdateTextColor(colors[3]);
+        }
+
+        public void UpdateSampleConsoleDashes(bool toggleDashes)
+        {
+            dashes1.SetActive(toggleDashes);
+            dashes2.SetActive(toggleDashes);
         }
 
         void OnInvertYChange()
