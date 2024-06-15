@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 
 ////TODO: localization support
 
@@ -19,6 +21,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [SerializeField] Color defaultColor = new Color(1, 1, 1, .8f);
         [SerializeField] Color highlightedColor = new Color(1, 1, 1, 1);
         [SerializeField] TextMeshProUGUI optionName;
+        [SerializeField] LocalizeStringEvent stringEvent;
+        [SerializeField] LocalizedStringTable stringTable;
 
         protected virtual void Awake()
         {
@@ -332,9 +336,9 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                     });
 
             // If it's a part binding, show the name of the part in the UI.
-            var partName = default(string);
+            var partName = string.Empty;
             if (action.bindings[bindingIndex].isPartOfComposite)
-                partName = $"Binding '{action.bindings[bindingIndex].name}'. ";
+                partName = action.bindings[bindingIndex].name;
 
             // Bring up rebind overlay, if we have one.
             m_RebindOverlay?.SetActive(true);
@@ -344,6 +348,13 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                     ? $"{partName}Waiting for {m_RebindOperation.expectedControlType} input..."
                     : $"{partName}Waiting for input...";
                 m_RebindText.text = text;
+                try
+                {
+                    m_RebindOverlay.GetComponent<LocalizeStringEvent>().StringReference = new LocalizedString(stringTable.GetTable().SharedData.TableCollectionNameGuid, stringTable.GetTable().GetEntry(action.name + partName).KeyId);
+                }
+                catch
+                {
+                }
             }
 
             // If we have no rebind overlay and no callback but we have a binding text label,
@@ -465,10 +476,21 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
         private void UpdateActionLabel()
         {
+            var action = m_Action?.action;
             if (m_ActionLabel != null)
             {
-                var action = m_Action?.action;
                 m_ActionLabel.text = action != null ? action.name : string.Empty;
+            }
+            if (stringEvent != null && action != null)
+            {
+                try
+                {
+                    stringEvent.StringReference = new LocalizedString(stringTable.GetTable().SharedData.TableCollectionNameGuid, stringTable.GetTable().GetEntry(action.name).KeyId);
+                }
+                catch
+                {
+
+                }
             }
         }
 
