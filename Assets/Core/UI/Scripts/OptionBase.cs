@@ -16,6 +16,11 @@ namespace LW.UI
 
         public string ParameterName => parameterName;
 
+        protected virtual void Awake()
+        {
+            ToggleHighlight(false);
+        }
+
         protected virtual void ToggleHighlight(bool ishighlighted)
         {
             optionName.color = ishighlighted ? highlightedColor : defaultColor;
