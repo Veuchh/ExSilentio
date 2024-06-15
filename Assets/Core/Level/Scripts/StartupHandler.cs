@@ -11,9 +11,6 @@ namespace LW.Level
         void Start()
         {
             SceneManager.LoadScene(mainMenuScene);
-
-            //TODO Remove stub
-            SaveLoad.ClearSavedWords();
         }
     }
 }

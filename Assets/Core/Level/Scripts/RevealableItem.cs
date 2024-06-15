@@ -1,4 +1,5 @@
 using LW.Data;
+using System;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -8,6 +9,8 @@ namespace LW.Level
     {
         const string DISSOLVE_PARAMETER_NAME = "_Dissolve_Amount";
         const string LETTER_NUMBER_PARAMETER_NAME = "_NumberOfLetters";
+        const string DISTANCE_TO_FLAT_PARAMETER_NAME = "_DistanceToFlat";
+        const string ANIM_STRENGTH_PARAMETER_NAME = "_MouvementScale";
         const string TEXTURE_PARAMETER_NAME = "_Main_Tex";
         [SerializeField] WordID id;
         [SerializeField] Renderer attachedRenderer;
@@ -122,6 +125,44 @@ namespace LW.Level
             vfx.Play();
             vfx.SetTexture(TEXTURE_PARAMETER_NAME, texture);
             vfx.SetFloat(LETTER_NUMBER_PARAMETER_NAME, letterAmount);
+        }
+
+        public void UpdateSettings(float newAnimationStrength, bool useDistanceToFloat)
+        {
+            if (type != RevealableItemType.MeshRenderer)
+                return;
+
+            attachedRenderer.GetPropertyBlock(mpb);
+
+            mpb.SetFloat(ANIM_STRENGTH_PARAMETER_NAME, newAnimationStrength);
+
+            mpb.SetFloat(DISTANCE_TO_FLAT_PARAMETER_NAME, useDistanceToFloat ? 1f : 0f);
+
+            attachedRenderer.SetPropertyBlock(mpb);
+        }
+
+        public void UpdateDistanceToFlat(bool useDistanceToFloat)
+        {
+            if (type != RevealableItemType.MeshRenderer)
+                return;
+
+            attachedRenderer.GetPropertyBlock(mpb);
+
+            mpb.SetFloat(DISTANCE_TO_FLAT_PARAMETER_NAME, useDistanceToFloat ? 1f : 0f);
+
+            attachedRenderer.SetPropertyBlock(mpb);
+        }
+
+        public void UpdateAnimationStrength(float newAnimationStrength)
+        {
+            if (type != RevealableItemType.MeshRenderer)
+                return;
+
+            attachedRenderer.GetPropertyBlock(mpb);
+
+            mpb.SetFloat(ANIM_STRENGTH_PARAMETER_NAME, newAnimationStrength);
+
+            attachedRenderer.SetPropertyBlock(mpb);
         }
     }
 }

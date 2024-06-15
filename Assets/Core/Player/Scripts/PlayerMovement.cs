@@ -3,6 +3,7 @@ using LW.Data;
 using UnityEngine;
 using NaughtyAttributes;
 using LW.Logger;
+using System;
 
 namespace LW.Player
 {
@@ -61,6 +62,11 @@ namespace LW.Player
 
         Vector3 storedPosition;
 
+        bool invertY = false;
+        float lookSensitivityMuliplier = 1;
+
+        public static event Action requestSettings;
+
         private void Start()
         {
             startPositon = transform.position;
@@ -71,6 +77,7 @@ namespace LW.Player
             WwiseInterface.Instance.UpdatePlayerCamera(GetComponentInChildren<Camera>().gameObject);
 
             WordInputManager.onResetPlayerPos += ResetPosition;
+            requestSettings?.Invoke();
         }
 
         private void OnDestroy()
@@ -189,7 +196,8 @@ namespace LW.Player
         private void ComputeRotation()
         {
             //cameraMovement
-            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x + (PlayerData.CurrentLookInput.y * rotationSpeed * -1);
+            float newCamXRotation = cameraTransform.localRotation.eulerAngles.x 
+                + (PlayerData.CurrentLookInput.y * rotationSpeed * lookSensitivityMuliplier * (invertY ? 1 : -1));
 
             //rotation clamping
             if (newCamXRotation > 180 && newCamXRotation < 360 + verticalLookClamp.x)
@@ -206,7 +214,7 @@ namespace LW.Player
 
 
             //Horizontal rotation
-            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * rotationSpeed / horizontalRotationMultiplier), 0);
+            Vector3 playerRotation = new Vector3(0, (PlayerData.CurrentLookInput.x * lookSensitivityMuliplier * rotationSpeed / horizontalRotationMultiplier), 0);
             transform.Rotate(playerRotation);
         }
 
@@ -244,6 +252,22 @@ namespace LW.Player
         public void SetNewSpeed(int newSpeed)
         {
             movementSpeed = newSpeed;
+        }
+
+        public void ApplySettings(bool invertY, float newLookSensitivityMultiplier)
+        {
+            this.invertY = invertY;
+            lookSensitivityMuliplier = newLookSensitivityMultiplier;
+        }
+
+        public void SetInvertY(bool invertY)
+        {
+            this.invertY = invertY;
+        }
+
+        public void SetLookSensitivityMultiplier(float newLookSensitivityMultiplier)
+        {
+            lookSensitivityMuliplier = newLookSensitivityMultiplier;
         }
     }
 }
