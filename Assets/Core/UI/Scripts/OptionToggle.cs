@@ -10,8 +10,9 @@ namespace LW.UI
 
         public bool isToggled => toggle.isOn;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             toggle.onValueChanged.AddListener((_) => OnValueChanged());
         }
 

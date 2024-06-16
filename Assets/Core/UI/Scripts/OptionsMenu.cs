@@ -22,6 +22,11 @@ namespace LW.UI
         [SerializeField] Button resetCategoryButton;
         [SerializeField] Button resetButton;
 
+        [Header("ButtonsColor")]
+        [SerializeField] Color defaultButtonColor;
+        [SerializeField] Color highlightedButtonColor;
+        [SerializeField] Color clickedButtonColor;
+
         [Header("Pannels")]
         [SerializeField] CanvasGroup acessibilityPannel;
         [SerializeField] CanvasGroup controlsPannel;
@@ -31,6 +36,7 @@ namespace LW.UI
 
         [Header("Options - Access")]
         [SerializeField] OptionDropdown languageOption;
+        [SerializeField] GameObject languageWarningText;
         [SerializeField] OptionSlider animationStrengthOption;
         [SerializeField] OptionToggle distanceToFlatOption;
         [SerializeField] OptionToggle consoleDashesStrengthOption;
@@ -38,10 +44,17 @@ namespace LW.UI
         [SerializeField] OptionDropdown consoleBackgroundColor2Option;
         [SerializeField] OptionDropdown consoleTextColor1Option;
         [SerializeField] OptionDropdown consoleTextColor2Option;
+        [SerializeField] LayoutGroup sampleConsolLayoutGroup;
+        [SerializeField] GameObject dashes1;
+        [SerializeField] GameObject dashes2;
+        [SerializeField] ConsoleEntry entry1;
+        [SerializeField] ConsoleEntry entry2;
+        [SerializeField] ConsoleEntry entry3;
 
         [Header("Options - Controls")]
         [SerializeField] OptionToggle invertYOption;
         [SerializeField] OptionSlider mouseSensitivityOption;
+        [SerializeField] GameObject deleteConfirmationText;
 
         [Header("Options - Graphics")]
         [SerializeField] OptionToggle fullscreenOption;
@@ -220,8 +233,11 @@ namespace LW.UI
             ToggleMenu(!optionsCanvasGroup.interactable);
         }
 
-        public void ToggleMenu(bool isToggled)
+        public void ToggleMenu(bool isToggled, bool openedFromPauseMenu = true)
         {
+            deleteConfirmationText.SetActive(false);
+            languageWarningText.SetActive(openedFromPauseMenu);
+
             optionsCanvasGroup.alpha = isToggled ? 1 : 0;
             optionsCanvasGroup.interactable = isToggled;
             optionsCanvasGroup.blocksRaycasts = isToggled;
@@ -229,6 +245,9 @@ namespace LW.UI
             canvas.sortingOrder = isToggled ? StaticData.OpenWindowsAmount : -1;
 
             Action rebindAction = isToggled ? rebindSaveLoad.LoadRebinds : rebindSaveLoad.SaveRebinds;
+
+            LayoutRebuilder.ForceRebuildLayoutImmediate(sampleConsolLayoutGroup.GetComponent<RectTransform>());
+
             rebindAction?.Invoke();
         }
 
@@ -255,6 +274,40 @@ namespace LW.UI
             pannelToToggle.alpha = 1;
             pannelToToggle.interactable = true;
             pannelToToggle.blocksRaycasts = true;
+
+            ColorBlock colorBlock = new ColorBlock();
+            colorBlock.normalColor = defaultButtonColor;
+            colorBlock.highlightedColor = highlightedButtonColor;
+            colorBlock.selectedColor = highlightedButtonColor;
+            colorBlock.disabledColor = defaultButtonColor;
+            colorBlock.pressedColor = clickedButtonColor;
+            colorBlock.colorMultiplier = 1;
+
+            accessibilityButton.colors = colorBlock;
+            controlsButton.colors = colorBlock;
+            graphicsButton.colors = colorBlock;
+            audioButton.colors = colorBlock;
+            resetCategoryButton.colors = colorBlock;
+
+
+            ColorBlock clickedButtonColorBlock = new ColorBlock();
+            clickedButtonColorBlock.normalColor = highlightedButtonColor;
+            clickedButtonColorBlock.selectedColor = highlightedButtonColor;
+            clickedButtonColorBlock.highlightedColor = highlightedButtonColor;
+            clickedButtonColorBlock.disabledColor = defaultButtonColor;
+            clickedButtonColorBlock.pressedColor = clickedButtonColor;
+            clickedButtonColorBlock.colorMultiplier = 1;
+
+            if (pannelToToggle == acessibilityPannel)
+                accessibilityButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == controlsPannel)
+                controlsButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == graphicsPannel)
+                graphicsButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == audioPannel)
+                audioButton.colors = clickedButtonColorBlock;
+            else if (pannelToToggle == resetPannel)
+                resetCategoryButton.colors = clickedButtonColorBlock;
         }
 
         #region OptionsCallback
@@ -295,6 +348,26 @@ namespace LW.UI
             onConsolColorsChanged?.Invoke(keys, colors);
         }
 
+        public void UpdateSampleConsoleColor(List<Color> colors)
+        {
+            if (colors.Count != 4)
+                return;
+
+            entry1.UpdateBackgroundColor(colors[0]);
+            entry1.UpdateTextColor(colors[2]);
+            entry3.UpdateBackgroundColor(colors[0]);
+            entry3.UpdateTextColor(colors[2]);
+            entry2.UpdateBackgroundColor(colors[1]);
+            entry2.UpdateTextColor(colors[3]);
+        }
+
+        public void UpdateSampleConsoleDashes(bool toggleDashes)
+        {
+            dashes1.SetActive(toggleDashes);
+            dashes2.SetActive(toggleDashes); 
+            LayoutRebuilder.ForceRebuildLayoutImmediate(sampleConsolLayoutGroup.GetComponent<RectTransform>());
+        }
+
         void OnInvertYChange()
         {
             onInvertYChanged?.Invoke(invertYOption.ParameterName, invertYOption.isToggled);
@@ -303,6 +376,7 @@ namespace LW.UI
         private void OnClickResetButton()
         {
             onResetButtonClicked?.Invoke();
+            deleteConfirmationText.SetActive(true);
         }
 
         void OnMouseSensitivityChange()

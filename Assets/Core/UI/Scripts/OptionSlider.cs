@@ -17,8 +17,10 @@ namespace LW.UI
             OnValueChanged();
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             slider.onValueChanged.AddListener((_) => OnValueChanged());
         }
 
