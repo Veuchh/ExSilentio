@@ -320,35 +320,47 @@ namespace LW.Player
             arguments.Normalize();
 
             if (!string.IsNullOrEmpty(arguments) && int.TryParse(arguments, out int bundleToRevealIndex) && bundleToRevealIndex < bundles.Count)
+            {
                 bundles[bundleToRevealIndex].RevealHint();
 
-
-            foreach (RevealableObjectBundle bundle in bundles)
-            {
-                consoleOutput += $"{bundles.IndexOf(bundle)}. " +
-                    (bundle.IsRevealed ?
-                    translatedWordsTable.GetEntry(bundle.ID.ToString()).LocalizedValue
-                    : "?????????")
-                    + " : ";
-                for (int hintIndex = 0; hintIndex < bundle.Hints.Count; hintIndex++)
-                {
-                    consoleOutput += $"\n\t- ";
-                    string hintKey = bundle.HintsBase[hintIndex];
-                    if (bundle.Hints[hintKey])
-                    {
-                        string translatedHint = translatedWordsTable.GetEntry(hintKey).LocalizedValue;
-                        consoleOutput += translatedHint;
-                    }
-                    else
-                    {
-                        consoleOutput += "??????????";
-                    }
-                }
-                consoleOutput += "\n";
+                consoleOutput = AddHintToConsoleOutput(translatedWordsTable, consoleOutput, bundleToRevealIndex, bundles[bundleToRevealIndex]);
             }
 
-            consoleOutput += translatedCommandsTable.GetEntry(HINT_COMMAND_FEEDBACK_ID).LocalizedValue;
+            else
+            {
+                foreach (RevealableObjectBundle bundle in bundles)
+                {
+                    consoleOutput = AddHintToConsoleOutput(translatedWordsTable, consoleOutput, bundles.IndexOf(bundle), bundle);
+                }
+                consoleOutput += "\n" + translatedCommandsTable.GetEntry(HINT_COMMAND_FEEDBACK_ID).LocalizedValue;
+            }
+
             ConsoleUI.Instance.AddToHistory(consoleOutput);
+        }
+
+        private static string AddHintToConsoleOutput(StringTable translatedWordsTable, string consoleOutput, int index, RevealableObjectBundle bundle)
+        {
+            consoleOutput += $"{index}. " +
+                                    (bundle.IsRevealed ?
+                                    translatedWordsTable.GetEntry(bundle.ID.ToString()).LocalizedValue
+                                    : "?????????")
+                                    + " : ";
+            for (int hintIndex = 0; hintIndex < bundle.Hints.Count; hintIndex++)
+            {
+                consoleOutput += $"\n\t- ";
+                string hintKey = bundle.HintsBase[hintIndex];
+                if (bundle.Hints[hintKey])
+                {
+                    string translatedHint = translatedWordsTable.GetEntry(hintKey).LocalizedValue;
+                    consoleOutput += translatedHint;
+                }
+                else
+                {
+                    consoleOutput += "??????????";
+                }
+            }
+            consoleOutput += "\n";
+            return consoleOutput;
         }
 
         void OnProgressCommand()
@@ -362,7 +374,7 @@ namespace LW.Player
             string consoleOutput = translatedTable.GetEntry(REVEALED_ITEMS_LOCALIZATION_ID).LocalizedValue + " :";
             foreach (ObjectImportance importance in Enum.GetValues(typeof(ObjectImportance)))
             {
-                List<RevealableObjectBundle> bundles = 
+                List<RevealableObjectBundle> bundles =
                     RevealableObjectHandler.Instance.GetBundlesOfImportance(importance)
                     .Where(x => !x.RevealByDefault)
                     .ToList();
