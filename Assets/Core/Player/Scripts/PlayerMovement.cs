@@ -249,7 +249,7 @@ namespace LW.Player
             PlayerData.CurrentLookInput = newInput;
         }
 
-        public void SetNewSpeed(int newSpeed)
+        public void SetNewSpeed(float newSpeed)
         {
             movementSpeed = newSpeed;
         }

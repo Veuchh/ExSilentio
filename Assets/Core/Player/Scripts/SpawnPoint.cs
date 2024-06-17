@@ -1,4 +1,5 @@
 using LW.Data;
+using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,10 @@ namespace LW.Player
         [SerializeField] List<GameObject> setAsPlayerChild;
         [SerializeField] List<MeshRenderer> waterPlanes;
         [SerializeField] ComponentsToAddOnSpawn componentsToAddToPlayer;
+        [SerializeField] bool changePlayer;
+        [SerializeField, ShowIf(nameof(changePlayer))] float playerSpeed = 8;
+        [SerializeField, ShowIf(nameof(changePlayer))] float playerHeight = 2;
+        [SerializeField, ShowIf(nameof(changePlayer))] float playerWidth = .5f;
 
         private void Start()
         {
@@ -61,6 +66,15 @@ namespace LW.Player
             foreach (var item in FindObjectsOfType<AkTriggerExit>())
             {
                 item.triggerObject = player;
+            }
+
+            if (changePlayer)
+            {
+                CharacterController controller = player.GetComponent<CharacterController>();
+                controller.height = playerHeight;
+                controller.radius= playerWidth;
+
+                player.GetComponent<PlayerMovement>().SetNewSpeed(playerSpeed);
             }
 
             Destroy(gameObject);
