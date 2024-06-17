@@ -12,6 +12,7 @@ namespace LW.Level
     public class LevelLoader : MonoBehaviour
     {
         [SerializeField, Scene] List<string> levels;
+        [SerializeField] AK.Wwise.Event loadLevelAudio;
 
         public static LevelLoader Instance;
         public List<string> Levels => levels;
@@ -39,6 +40,7 @@ namespace LW.Level
                 if (sceneName == args.ToLower())
                 {
                     WwiseInterface.Instance.StopAll();
+                    WwiseInterface.Instance.PlayEvent(loadLevelAudio, gameObject);
                     StartCoroutine(LoadScene(i, baseInput));
                     return FunctionResult.Success;
                 }
@@ -59,6 +61,7 @@ namespace LW.Level
                 LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
             }
 
+            yield return null;
             yield return new WaitForSeconds(.2f);
 
             LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);

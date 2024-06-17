@@ -1,3 +1,4 @@
+using LW.Audio;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,12 +7,15 @@ using UnityEngine.UI;
 
 public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] Button button;
     [SerializeField] Image buttonGraphics;
     [SerializeField] TextMeshProUGUI backGroundText;
     [SerializeField] TextMeshProUGUI frontText;
     [SerializeField] LocalizeStringEvent localizeEvent;
     [SerializeField] Sprite defaultSprite;
     [SerializeField] Sprite selectedSprite;
+    [SerializeField] AK.Wwise.Event highlightEvent;
+    [SerializeField] AK.Wwise.Event clickEvent;
 
     bool isHighlighted = false;
 
@@ -23,8 +27,8 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
     private void Start()
     {
         UpdateBGText(frontText.text);
+        button.onClick.AddListener(OnButtonClicked);
     }
-
     private void OnDestroy()
     {
         localizeEvent.OnUpdateString.RemoveListener(UpdateBGText);
@@ -41,6 +45,12 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
 
         backGroundText.text = "> " + backGroundText.text + " <";
     }
+
+    private void OnButtonClicked()
+    {
+        WwiseInterface.Instance.PlayEvent(clickEvent);
+    }
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -62,17 +72,20 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
         HighlightButton(false);
     }
 
-    void HighlightButton(bool hightLight)
+    void HighlightButton(bool highlight)
     {
-        if (isHighlighted == hightLight)
+        if (isHighlighted == highlight)
             return;
 
-        isHighlighted = hightLight;
+        isHighlighted = highlight;
 
-        backGroundText.text = backGroundText.text.Replace(">  ", (hightLight ? ">" : ">    "));
+        backGroundText.text = backGroundText.text.Replace(">  ", (highlight ? ">" : ">    "));
 
-        buttonGraphics.sprite = hightLight ? selectedSprite : defaultSprite;
-        frontText.color = hightLight ? Color.black : Color.white;
-        backGroundText.color = hightLight ? Color.black : Color.white;
+        buttonGraphics.sprite = highlight ? selectedSprite : defaultSprite;
+        frontText.color = highlight ? Color.black : Color.white;
+        backGroundText.color = highlight ? Color.black : Color.white;
+
+        if (highlight)
+            WwiseInterface.Instance.PlayEvent(highlightEvent);
     }
 }

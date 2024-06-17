@@ -1,3 +1,4 @@
+using LW.Audio;
 using System;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,8 @@ namespace LW.UI
         [SerializeField] Color defaultColor = new Color(1, 1, 1, .8f);
         [SerializeField] Color highlightedColor = new Color(1, 1, 1, 1);
         [SerializeField] TextMeshProUGUI optionName;
+        [SerializeField] AK.Wwise.Event hoverEvent;
+        [SerializeField] AK.Wwise.Event clickEvent;
         [SerializeField] string parameterName;
 
         public event Action onValueChanged;
@@ -24,11 +27,15 @@ namespace LW.UI
         protected virtual void ToggleHighlight(bool ishighlighted)
         {
             optionName.color = ishighlighted ? highlightedColor : defaultColor;
+
+            if (ishighlighted)
+                WwiseInterface.Instance.PlayEvent(hoverEvent);
         }
 
         protected virtual void OnValueChanged()
         {
             onValueChanged?.Invoke();
+            WwiseInterface.Instance.PlayEvent(clickEvent);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
