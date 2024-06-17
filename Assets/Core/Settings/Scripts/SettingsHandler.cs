@@ -320,6 +320,7 @@ public class SettingsHandler : MonoBehaviour
 
     void ChangeHighFreqFilter(bool newValue)
     {
+        WwiseInterface.Instance.PlayEvent(newValue ? highFreqOn : highFreqOff);
     }
 
     void OnBundleReqestSettings(RevealableObjectBundle bundle)

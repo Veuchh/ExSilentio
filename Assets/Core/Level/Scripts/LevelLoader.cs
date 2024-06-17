@@ -11,8 +11,11 @@ namespace LW.Level
 {
     public class LevelLoader : MonoBehaviour
     {
+        const string DISSOLVE_ID = "_EffectAmount";
         [SerializeField, Scene] List<string> levels;
         [SerializeField] AK.Wwise.Event loadLevelAudio;
+        [SerializeField] Material screenMaterial;
+        [SerializeField] float fadeDuration = .5f;
 
         public static LevelLoader Instance;
         public List<string> Levels => levels;
@@ -23,6 +26,7 @@ namespace LW.Level
             DontDestroyOnLoad(this);
             Debug.LogWarning("TODO : make it load mycelium instead of ocean city");
             MainMenu.onMainMenuPressPlay += () => ChangeLevel("Mycelium", "Mycelium");
+            screenMaterial.SetFloat(DISSOLVE_ID, 1);
         }
 
         public FunctionResult ChangeLevel(string args, string baseInput)
@@ -52,6 +56,17 @@ namespace LW.Level
 
         IEnumerator LoadScene(int sceneIndex, string translatedSceneName)
         {
+            float startFadeTime = Time.time;
+            float endFadeTime = Time.time + fadeDuration;
+
+            while (Time.time < endFadeTime)
+            {
+                screenMaterial.SetFloat(DISSOLVE_ID, Mathf.InverseLerp(endFadeTime, startFadeTime, Time.time));
+                yield return null;
+            }
+
+            screenMaterial.SetFloat(DISSOLVE_ID, 0);
+
             var asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
             LoadingScreen.Instance.ToggleLoadingScreen(true, translatedSceneName);
 
@@ -61,8 +76,16 @@ namespace LW.Level
                 LoadingScreen.Instance.UpdateProgress(asyncOperation.progress);
             }
 
-            yield return null;
-            yield return new WaitForSeconds(.2f);
+            startFadeTime = Time.time;
+            endFadeTime = Time.time + fadeDuration;
+
+            while (Time.time < endFadeTime)
+            {
+                screenMaterial.SetFloat(DISSOLVE_ID, Mathf.InverseLerp(startFadeTime, endFadeTime, Time.time));
+                yield return null;
+            }
+
+            screenMaterial.SetFloat(DISSOLVE_ID, 1);
 
             LoadingScreen.Instance.ToggleLoadingScreen(false, translatedSceneName);
         }
