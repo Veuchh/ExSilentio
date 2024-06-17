@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584830547154775808
+    m_lastTime: -8584829631925615082
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -2931,7 +2931,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584829913625901063
+    m_lastTime: -8584829610676529706
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -4186,7 +4186,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584829911464881504
+    m_lastTime: -8584829610501089656
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
@@ -4302,9 +4302,29 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2c91c9e4b2666e4185839e044bbcfe46
       Path: Events\SFX\SFX_Mycelium\SFX_MY_CloseDoors
+      maxAttenuation: 10
+      maxDuration: 0.9808958
+      minDuration: 0.9808958
+    - name: SFX_MY_MemoryFoamEnter
+      guid: e9b52d686effc748b9b41282db2ff3b2
+      id: 559616322
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 76472c2a1bb628498d56368a6177b6ad
+      - ElementName: SFX_Mycelium
+        ObjectType: 4
+        guid: e5d654e76cabde4493534ca7e3fc10b8
+      - ElementName: SFX_MY_MemoryFoamEnter
+        ObjectType: 3
+        guid: e9b52d686effc748b9b41282db2ff3b2
+      Path: Events\SFX\SFX_Mycelium\SFX_MY_MemoryFoamEnter
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.4636201
+      minDuration: 0.94711494
     - name: SFX_MY_OpenDoors
       guid: a6736c5dcc9241439f496f85010c29ce
       id: 2361831529
@@ -4322,9 +4342,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: a6736c5dcc9241439f496f85010c29ce
       Path: Events\SFX\SFX_Mycelium\SFX_MY_OpenDoors
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 10
+      maxDuration: 2.5661874
+      minDuration: 2.5661874
     - name: SFX_MY_PannelOpen
       guid: 829e0635c32e0b4cb5dd068a5d018a7c
       id: 2927351608
@@ -4527,7 +4547,7 @@ MonoBehaviour:
     ParentPath: Events\UI
     guid: fa2e1f5bc91c3e4b90a5575f46eb1991
     GuidInternal: 
-    m_lastTime: -8584832380794775808
+    m_lastTime: -8584829621948336670
     List:
     - name: UI_CL_CLick
       guid: fc6b9376ac854345a1b2543d9250e5ed
@@ -4627,8 +4647,8 @@ MonoBehaviour:
         guid: 7a5fa10d0b46ec4dac2850f7fdf63faf
       Path: Events\UI\UI_Consol\UI_CL_Line
       maxAttenuation: 0
-      maxDuration: 0.34452575
-      minDuration: 0.34452575
+      maxDuration: 1.1807721
+      minDuration: 1.1807721
     - name: UI_CL_Open
       guid: b9b205ac4e9ff04db23e67430a0cd88d
       id: 767596870
@@ -5407,7 +5427,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584830334454775808
+    m_lastTime: -8584829611804134849
     List:
     - name: EarthOpen
       guid: aea9d0927bac5849a00a48b9c6acd69c
@@ -6282,6 +6302,312 @@ MonoBehaviour:
         - ElementName: Unreveal
           ObjectType: 8
           guid: 29f007ba55e591498d108b42dd5373b0
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_StmuteFirefly
+      guid: 906cfc708979d04295c9295dd3845283
+      id: 3291738556
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: StingerMute
+        ObjectType: 4
+        guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+      - ElementName: MX_SL_StmuteFirefly
+        ObjectType: 9
+        guid: 906cfc708979d04295c9295dd3845283
+      Path: States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly
+      values:
+      - name: First
+        guid: 5d6335bc9f5f8f47b33bd668e5f4cb1c
+        id: 998496889
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteFirefly
+          ObjectType: 9
+          guid: 906cfc708979d04295c9295dd3845283
+        - ElementName: First
+          ObjectType: 8
+          guid: 5d6335bc9f5f8f47b33bd668e5f4cb1c
+      - name: None
+        guid: 0b0a8a2f7db41947991e925e26f4ff96
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteFirefly
+          ObjectType: 9
+          guid: 906cfc708979d04295c9295dd3845283
+        - ElementName: None
+          ObjectType: 8
+          guid: 0b0a8a2f7db41947991e925e26f4ff96
+      - name: Second
+        guid: 109304d40170d84a9a68f9d6d964c8f6
+        id: 3476314365
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteFirefly
+          ObjectType: 9
+          guid: 906cfc708979d04295c9295dd3845283
+        - ElementName: Second
+          ObjectType: 8
+          guid: 109304d40170d84a9a68f9d6d964c8f6
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_StmuteJungle
+      guid: 23812797f943f24e8d9f01137a5a8aba
+      id: 4118992754
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: StingerMute
+        ObjectType: 4
+        guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+      - ElementName: MX_SL_StmuteJungle
+        ObjectType: 9
+        guid: 23812797f943f24e8d9f01137a5a8aba
+      Path: States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle
+      values:
+      - name: First
+        guid: f65d2e233037e4429dff006ef921b36f
+        id: 998496889
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteJungle
+          ObjectType: 9
+          guid: 23812797f943f24e8d9f01137a5a8aba
+        - ElementName: First
+          ObjectType: 8
+          guid: f65d2e233037e4429dff006ef921b36f
+      - name: None
+        guid: 540d4995154b284f87a6316f645833f1
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteJungle
+          ObjectType: 9
+          guid: 23812797f943f24e8d9f01137a5a8aba
+        - ElementName: None
+          ObjectType: 8
+          guid: 540d4995154b284f87a6316f645833f1
+      - name: Second
+        guid: 66921c2958141b4e9de562deb679778d
+        id: 3476314365
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteJungle
+          ObjectType: 9
+          guid: 23812797f943f24e8d9f01137a5a8aba
+        - ElementName: Second
+          ObjectType: 8
+          guid: 66921c2958141b4e9de562deb679778d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MX_SL_StmuteStars
+      guid: 22f613f56f27044a823a7b05b397a76f
+      id: 177378444
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: StingerMute
+        ObjectType: 4
+        guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+      - ElementName: MX_SL_StmuteStars
+        ObjectType: 9
+        guid: 22f613f56f27044a823a7b05b397a76f
+      Path: States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars
+      values:
+      - name: First
+        guid: 233b91277fbe5745910b4811d7f1f616
+        id: 998496889
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteStars
+          ObjectType: 9
+          guid: 22f613f56f27044a823a7b05b397a76f
+        - ElementName: First
+          ObjectType: 8
+          guid: 233b91277fbe5745910b4811d7f1f616
+      - name: None
+        guid: 8416f9639b630c49a0f36272b9694453
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteStars
+          ObjectType: 9
+          guid: 22f613f56f27044a823a7b05b397a76f
+        - ElementName: None
+          ObjectType: 8
+          guid: 8416f9639b630c49a0f36272b9694453
+      - name: Second
+        guid: dd55670ffe6ffa48957d9a4b8a2589ba
+        id: 3476314365
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Strelitzia
+          ObjectType: 4
+          guid: eaa2a829350d754e9212becd33eedce8
+        - ElementName: ST_SL_MX
+          ObjectType: 4
+          guid: 0bf539260640ff478b9b891c32b75ff4
+        - ElementName: StingerMute
+          ObjectType: 4
+          guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+        - ElementName: MX_SL_StmuteStars
+          ObjectType: 9
+          guid: 22f613f56f27044a823a7b05b397a76f
+        - ElementName: Second
+          ObjectType: 8
+          guid: dd55670ffe6ffa48957d9a4b8a2589ba
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -9794,6 +10120,30 @@ MonoBehaviour:
         ObjectType: 4
         guid: eaa2a829350d754e9212becd33eedce8
       Path: States\States\ST_Strelitzia
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: StingerMute
+      guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+      id: 2859126690
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Strelitzia
+        ObjectType: 4
+        guid: eaa2a829350d754e9212becd33eedce8
+      - ElementName: ST_SL_MX
+        ObjectType: 4
+        guid: 0bf539260640ff478b9b891c32b75ff4
+      - ElementName: StingerMute
+        ObjectType: 4
+        guid: e6c0cd47d6536f4cbe3f35ec8a68cd37
+      Path: States\States\ST_Strelitzia\ST_SL_MX\StingerMute
       values: []
       ValueGuids: []
       ValueIcons: []
