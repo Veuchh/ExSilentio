@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using System.Collections.Generic;
+using System.Collections;
 
 public class MemoryShard : MonoBehaviour
 {
@@ -36,6 +37,12 @@ public class MemoryShard : MonoBehaviour
         remainingTimeInCollider = durationInColliderToLock;
         textToSpawn.alpha = 0;
 
+        StartCoroutine(StartRoutine());
+    }
+
+    IEnumerator StartRoutine()
+    {
+        yield return null;
         string textToWrite = memoryShardTable.GetTable().GetEntry(MEMORYSHARD_ID).LocalizedValue;
 
         Texture2D texture = StringToTextureConverter.Instance.GetTextureFromInput(textToWrite);
