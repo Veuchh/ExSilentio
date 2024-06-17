@@ -174,6 +174,8 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 3655bdb07503b194cba7558bb7d96ca8,
       type: 2}
+  screenMaterial: {fileID: 2100000, guid: 16830d3795549aa45b076aad2c9d846c, type: 2}
+  fadeDuration: 0.5
 --- !u!114 &377991158204440865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,11 +279,13 @@ MonoBehaviour:
   highFreqOn:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: fa6c47fb132844941bcd868b8d34610e,
+      type: 2}
   highFreqOff:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ac6c1a0b3f8da4e40a1be2edbfdb9a1e,
+      type: 2}
   blackColor: {r: 0, g: 0, b: 0, a: 1}
   greyColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   darkGreyColor: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}

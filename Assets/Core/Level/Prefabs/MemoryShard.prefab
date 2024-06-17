@@ -643,6 +643,7 @@ MonoBehaviour:
   arrowLockDuration: 1
   durationInColliderToLock: 0.5
   textFadeDuration: 1.5
+  textureDissolveTime: 0.4
   onRevealText:
     m_PersistentCalls:
       m_Calls:
@@ -658,6 +659,9 @@ MonoBehaviour:
           m_StringArgument: Stop
           m_BoolArgument: 0
         m_CallState: 2
+  ringsToDissolve:
+  - {fileID: 1616601224537690940}
+  - {fileID: 4651665115119595441}
 --- !u!54 &5476707388124445603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1108,6 +1112,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4260cd3ba793a84a9d2b7cf767d080e, type: 3}
+--- !u!23 &4651665115119595441 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c4260cd3ba793a84a9d2b7cf767d080e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6291420270207251253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5820097789628536030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4260cd3ba793a84a9d2b7cf767d080e,
