@@ -26,13 +26,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	2071076257	AMB_SL_JunleBird			\AMB\AMB_Strelitzia\AMB_SL_JunleBird	
 	2174404996	MX_SL_Awake			\MX\MX_Strelitzia\MX_SL_Awake	
 	2246380605	AMB_SL_JunleFakeRain			\AMB\AMB_Strelitzia\AMB_SL_JunleFakeRain	
+	2272438046	AMB_SL_Tr_DeMuteHighJungle			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_DeMuteHighJungle	
 	2289571526	MX_SL_ST_Cave			\MX\MX_Strelitzia\MX_SL_ST_Cave	
 	2342327891	AMB_SL_Awake			\AMB\AMB_Strelitzia\AMB_SL_Awake	
 	2415996523	MX_SL_ST_MemoryFoamMelodyExit			\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit	
 	2510762832	AMB_SL_Balise			\AMB\AMB_Strelitzia\AMB_SL_Balise	
+	2662261147	AMB_SL_Tr_MuteHighJungle			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteHighJungle	
 	2828279879	AMB_SL_Tr_MuteSilo			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteSilo	
 	3095653304	AMB_SL_LabMecaniques			\AMB\AMB_Strelitzia\AMB_SL_LabMecaniques	
 	3134725817	AMB_SL_Desert			\AMB\AMB_Strelitzia\AMB_SL_Desert	
+	3342852950	MX_SL_L_Frog			\MX\MX_Strelitzia\MX_SL_L_Frog	
 	3406394736	AMB_SL_SiloBird			\AMB\AMB_Strelitzia\AMB_SL_SiloBird	
 	3457049799	AMB_SL_Tr_MuteJungle			\AMB\AMB_Strelitzia\Trigger\AMB_SL_Tr_MuteJungle	
 	3507354610	MX_SL_ST_Ruins			\MX\MX_Strelitzia\MX_SL_ST_Ruins	
@@ -51,18 +54,24 @@ State Group	ID	Name			Wwise Object Path	Notes
 	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
 	146427616	ST_MX_SL_Stars			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars	
 	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
+	923296675	MX_SL_ST_Frog			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Frog	
 	1011090278	MX_SL_ST_Jungle			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle	
+	1642955674	MX_SL_ST_Tent			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
+	1890713911	ST_MX_SL_MemoryFoam			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_MemoryFoam	
 	1993091346	MX_SL_ST_Computer			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Computer	
 	2289571526	MX_SL_ST_Cave			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Cave	
 	2432701204	ST_SL_AMB_Elevator			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_Elevator	
 	2446983323	ST_MX_SL_Balise			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Balise	
 	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
 	2759765522	ST_SL_AMB_MuteLab			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteLab	
+	2905957914	ST_SL_AMB_MuteHighJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteHighJungle	
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
+	4211601786	MX_SL_ST_FireCamp			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_FireCamp	
+	4277713600	MX_SL_ST_Firefly			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Firefly	
 
 State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteCave			
@@ -74,12 +83,21 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteJungle			
 	748895195	None	ST_SL_AMB_MuteJungle			
 	1752637612	In	ST_SL_AMB_MuteJungle			
+	634183254	Reveal	MX_SL_ST_Frog			
+	748895195	None	MX_SL_ST_Frog			
+	3384621607	Unreveal	MX_SL_ST_Frog			
 	634183254	Reveal	MX_SL_ST_Jungle			
 	748895195	None	MX_SL_ST_Jungle			
 	3384621607	Unreveal	MX_SL_ST_Jungle			
+	634183254	Reveal	MX_SL_ST_Tent			
+	748895195	None	MX_SL_ST_Tent			
+	3384621607	Unreveal	MX_SL_ST_Tent			
 	645492555	Out	ST_SL_AMB_DesertWind			
 	748895195	None	ST_SL_AMB_DesertWind			
 	1752637612	In	ST_SL_AMB_DesertWind			
+	645492555	Out	ST_MX_SL_MemoryFoam			
+	748895195	None	ST_MX_SL_MemoryFoam			
+	1752637612	In	ST_MX_SL_MemoryFoam			
 	634183254	Reveal	MX_SL_ST_Computer			
 	748895195	None	MX_SL_ST_Computer			
 	3384621607	Unreveal	MX_SL_ST_Computer			
@@ -98,6 +116,9 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_SL_AMB_MuteLab			
 	748895195	None	ST_SL_AMB_MuteLab			
 	1752637612	In	ST_SL_AMB_MuteLab			
+	645492555	Out	ST_SL_AMB_MuteHighJungle			
+	748895195	None	ST_SL_AMB_MuteHighJungle			
+	1752637612	In	ST_SL_AMB_MuteHighJungle			
 	634183254	Reveal	ST_MX_SL_Desert			
 	748895195	None	ST_MX_SL_Desert			
 	3384621607	Unreveal	ST_MX_SL_Desert			
@@ -110,8 +131,15 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	MX_SL_ST_River			
 	748895195	None	MX_SL_ST_River			
 	3384621607	Unreveal	MX_SL_ST_River			
+	634183254	Reveal	MX_SL_ST_FireCamp			
+	748895195	None	MX_SL_ST_FireCamp			
+	3384621607	Unreveal	MX_SL_ST_FireCamp			
+	634183254	Reveal	MX_SL_ST_Firefly			
+	748895195	None	MX_SL_ST_Firefly			
+	3384621607	Unreveal	MX_SL_ST_Firefly			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	420790418	GP_SL_MX_MemoryFoamOctDistance			\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance	
 	919542588	GP_SL_DesertWind			\Game Parameters\GP_Strelitzia\GP_SL_DesertWind	
 	3954811855	GP_SL_FireCampDistance			\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance	
 
@@ -125,60 +153,96 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	677083878	Silence	Wwise Silence		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_Silence\Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11099297	MX_OC_L_MemoryFoam VoiceMelody Clean-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-005_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-005\MX_OC_L_MemoryFoam VoiceMelody Clean-005		76352
+	28834962	MX_OC_L_MemoryFoam VoiceMelody Clean-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-004_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-004\MX_OC_L_MemoryFoam VoiceMelody Clean-004		99779
 	42709118	MX_SL_St_PulseBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_St_PulseBass_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_BaliseBass\MX_SL_St_PulseBass		43326
+	59589097	MX_OC_L_MemoryFoam VoiceMelody Satur-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-004_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-004\MX_OC_L_MemoryFoam VoiceMelody Satur-004		112006
+	60116580	MX_OC_L_MemoryFoam VoiceMelody Clean-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-007_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-007\MX_OC_L_MemoryFoam VoiceMelody Clean-007		128913
+	60848718	MX_OC_L_MemoryFoam VoiceMelody Satur-009	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-009_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-009\MX_OC_L_MemoryFoam VoiceMelody Satur-009		150462
 	73752858	AMB_SL_JunleBird	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_JunleBird_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleBird		2137994
 	80647876	MX_SL_L_Desert	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Desert_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Desert\MX_SL_L_Desert\MX_SL_L_Desert		1668262
 	87542527	AMB_SL_LabComputerGlitch2	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabComputerGlitch2_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabComputerGlitch\AMB_SL_LabComputerGlitch2		118133
+	94474271	MX_OC_L_MemoryFoam VoiceMelody Clean-009	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-009_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-009\MX_OC_L_MemoryFoam VoiceMelody Clean-009		136924
+	105021822	- Frog	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Frog_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Frog\- Frog\- Frog		1839336
+	110710232	- Forest Idle	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Forest Idle_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_JungleIlde\- Forest Idle\- Forest Idle		1589661
 	123926478	SFX_SL_ElevatorLoopNormal	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorLoopNormal_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopNormal		126872
 	137463096	SFX_SL_ElevatorLoopAmb1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorLoopAmb1_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopAmb1		112467
+	150657256	- Cave	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Cave_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Cave\- Cave\- Cave		1809911
 	155348933	AMB_SL_LabMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabMain		1713271
 	159779369	AMB_SL_SiloMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloMain_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloMain		341125
-	165150337	MX_SL_L_Ph_Silo	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_Silo_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ph_SiloIlde\MX_SL_L_Ph_SiloIlde\MX_SL_L_Ph_Silo		1415645
+	162580022	MX_OC_L_MemoryFoam VoiceMelody Satur-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-002_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-002\MX_OC_L_MemoryFoam VoiceMelody Satur-002		148482
+	165150337	MX_SL_L_Ph_Silo	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_Silo_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_SiloIldeForest\MX_SL_L_Ph_SiloIlde\MX_SL_L_Ph_Silo		1415645
 	167603772	AMB_SL_LabElectricitySparks	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabElectricitySparks_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricitySparks		1535387
 	174142118	AMB_SL_LabElectricityBuzz-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabElectricityBuzz-003_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-003		160383
+	177214882	- FireCamp	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- FireCamp_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_FireCamp\- FireCamp\- FireCamp		1578274
+	186027026	MX_OC_L_MemoryFoam VoiceMelody Satur-005	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-005_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-005\MX_OC_L_MemoryFoam VoiceMelody Satur-005		82829
+	198034255	MX_OC_L_MemoryFoam VoiceMelody Satur-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-006_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-006\MX_OC_L_MemoryFoam VoiceMelody Satur-006		180802
+	198316422	- Tent	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Tent_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Tent\MX_SL_L_Tent\- Tent		1619199
+	199545025	MX_OC_L_MemoryFoam VoiceMelody Clean-010	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-010_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-010\MX_OC_L_MemoryFoam VoiceMelody Clean-010		133215
 	207523860	MX_SL_St_Stars	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_St_Stars_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_Stars\MX_SL_St_Stars		202164
+	258087090	MX_OC_L_MemoryFoam VoiceMelody Satur-012	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-012_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-012\MX_OC_L_MemoryFoam VoiceMelody Satur-012		120383
 	259377318	AMB_SL_SiloRiversmall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloRiversmall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiversmall		1867259
 	276543992	AMB_SL_CaveFireCampFar	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveFireCampFar_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampFar		1586595
+	281512875	Stinger forest	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Stinger forest_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_Jungle\Stinger forest		116722
 	287394984	AMB_SL_CaveDrop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveDrop_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop		1081806
+	297864128	MX_OC_L_MemoryFoam VoiceMelody Clean-011	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-011_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-011\MX_OC_L_MemoryFoam VoiceMelody Clean-011		96170
 	301193163	SFX_SL_ElevatorLoopAmb1_01	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorLoopAmb1_D4CB4784.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopAmb1_01		60968
 	301683489	AMB_SL_SiloRiver	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloRiver_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloRiver\AMB_SL_SiloRiver		1115959
 	310708101	MX_SL_L_Stars	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Stars_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Stars\MX_SL_L_Stars\MX_SL_L_Stars		1300249
+	311199938	MX_OC_L_MemoryFoam VoiceMelody Satur-013	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-013_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceChord-001\MX_OC_L_MemoryFoam VoiceMelody Satur-013		207386
 	312852544	AMB_SL_LabElectricityBuzz-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabElectricityBuzz-001_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-001		379950
-	313827201	MX_SL_L_Ph_Cave	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_Cave_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Cave\MX_SL_L_Ph_Cave\MX_SL_L_Ph_Cave		1091818
+	324536786	MX_OC_L_MemoryFoam VoiceMelody Clean-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-001_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-001\MX_OC_L_MemoryFoam VoiceMelody Clean-001		121819
 	343290069	AMB_SL_CaveDrop fast	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveDrop fast_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveDrop fast		1212650
 	357901903	AMB_SL_LabElectricityBuzz-004	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabElectricityBuzz-004_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-004		187736
 	363295246	AMB_SL_Balise	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_Balise_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise		304687
+	382722858	MX_OC_L_MemoryFoam VoiceMelody Satur-001	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-001_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-001\MX_OC_L_MemoryFoam VoiceMelody Satur-001		141465
 	398883003	SFX_SL_ElevatorStop	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorStop_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorStop		38192
 	418919123	AMB_SL_LabComputerGlitch1	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabComputerGlitch1_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabComputerGlitch\AMB_SL_LabComputerGlitch1		138904
 	437893352	AMB_SL_LabElectricityBuzz-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabElectricityBuzz-002_8E324C96.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabElectricityBuzz\AMB_SL_LabElectricityBuzz-002		258387
+	437936260	Stinger Luciole	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Stinger Luciole_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_Firefly\Stinger Luciole		114848
 	504591710	SFX_SL_ElevatorLoopBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorLoopBass_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopBass		33862
+	513884118	MX_OC_L_MemoryFoam VoiceMelody Satur-014	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-014_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceChord-002\MX_OC_L_MemoryFoam VoiceMelody Satur-014		183786
 	517652420	AMB_SL_SiloWaterfallrumble	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloWaterfallrumble_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloWaterfall\AMB_SL_SiloWaterfallrumble		1036836
 	522162625	AMB_SL_Balise chelou	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_Balise chelou_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Balise\AMB_SL_Balise chelou		515311
 	522481254	SFX_SL_ElevatorGo	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorGo_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorGo		31931
+	523745125	MX_OC_L_MemoryFoam VoiceMelody Clean-002	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-002_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-002\MX_OC_L_MemoryFoam VoiceMelody Clean-002		113295
 	536048362	MX_SL_L_BaliseBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_BaliseBass_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Balise\MX_SL_St_PulseBass\MX_SL_L_BaliseBass		1298049
 	548828459	AMB_SL_CaveFireCampClose	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveFireCampClose_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveFireCamp\AMB_SL_CaveFireCampClose\AMB_SL_CaveFireCampClose		1607348
-	586504016	MX_SL_L_Ph_JungleIlde	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_JungleIlde_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ph_JungleIlde\MX_SL_L_Ph_JungleIlde\MX_SL_L_Ph_JungleIlde		966455
+	572220241	MX_OC_L_MemoryFoam VoiceMelody Clean-014	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-014_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceChord-002\MX_OC_L_MemoryFoam VoiceMelody Clean-014		166474
+	648748943	MX_OC_L_MemoryFoam VoiceMelody Clean-006	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-006_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-006\MX_OC_L_MemoryFoam VoiceMelody Clean-006		154911
 	650248975	AMB_SL_CaveMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveMain		1749847
+	652188665	MX_OC_L_MemoryFoam VoiceMelody Clean-008	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-008_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-008\MX_OC_L_MemoryFoam VoiceMelody Clean-008		128021
 	653017450	AMB_SL_DesertWindShimmerring	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_DesertWindShimmerring_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindShimmerring		2947597
+	656787441	- Forest reveal	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Forest reveal_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Jungle\- Forest reveal\- Forest reveal		1944271
 	706303143	MX_SL_L_Computer	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Computer_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Computer\MX_SL_L_Computer\MX_SL_L_Computer		183555
+	708718145	MX_OC_L_MemoryFoam VoiceMelody Satur-011	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-011_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-011\MX_OC_L_MemoryFoam VoiceMelody Satur-011		114742
+	713482463	Riviere	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\Riviere_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_River\Riviere\Riviere		1571145
 	714917065	AMB_SL_DesertWindrumble	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_DesertWindrumble_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWind\AMB_SL_DesertWindrumble		2992296
+	722942054	- Luciole	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- Luciole_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Firefly\- Luciole\- Luciole		1925407
+	732295639	MemoryFoam test	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MemoryFoam test_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct\MemoryFoam test\MemoryFoam test		1862299
 	751414899	AMB_SL_CaveWaterCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_CaveWaterCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Cave\AMB_SL_CaveWaterCalm		3716419
 	753117707	AMB_SL_DesertSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_DesertSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertSand		1315946
 	758395994	SFX_SL_ElevatorLoopBzzz	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorLoopBzzz_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorLoop\SFX_SL_ElevatorLoopBzzz		61305
 	763726669	AMB_SL_DesertWindCalmSand	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_DesertWindCalmSand_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalmSand		1044123
 	767807071	AMB_SL_LabComputerGlitch3	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabComputerGlitch3_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabComputerGlitch\AMB_SL_LabComputerGlitch3		148941
 	772524158	MX_SL_L_Ruins	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ruins_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Ruins\MX_SL_L_Ruins\MX_SL_L_Ruins		1461732
-	776328722	MX_SL_L_Ph_Jungle	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_Jungle_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Jungle\MX_SL_L_Ph_Jungle\MX_SL_L_Ph_Jungle		1185757
+	787082948	MX_OC_L_MemoryFoam VoiceMelody Satur-007	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-007_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-007\MX_OC_L_MemoryFoam VoiceMelody Satur-007		146984
 	790156763	MX_SL_L_BaliseStrings	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_BaliseStrings_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Balise\MX_SL_St_PulseBass\MX_SL_L_BaliseStrings		1032601
 	794799802	SFX_SL_ElevatorStingerBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\SFX_SL_ElevatorStingerBass_8E324C96.wem		\Actor-Mixer Hierarchy\SFX\SFX_Strelitzia\SFX_SL_ElevatorStingerBass		150218
 	843470390	AMB_SL_DesertWindCalm	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_DesertWindCalm_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Desert\AMB_SL_Desert\AMB_SL_DesertWindCalm\AMB_SL_DesertWindCalm		1027237
-	843486018	MX_SL_L_Ph_River	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Ph_River_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_River\MX_SL_L_Ph_River\MX_SL_L_Ph_River		1014998
 	850388099	AMB_SL_SiloWaterfall	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloWaterfall_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloWaterfall\AMB_SL_SiloWaterfall		936197
 	854002697	MX_SL_L_Clickpulse	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_L_Clickpulse_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_Clickpulse\MX_SL_L_Clickpulse\MX_SL_L_Clickpulse		2583030
+	857537764	MX_OC_L_MemoryFoam VoiceMelody Satur-010	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-010_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-010\MX_OC_L_MemoryFoam VoiceMelody Satur-010		148345
+	860850274	MX_OC_L_MemoryFoam VoiceMelody Clean-013	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-013_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceChord-001\MX_OC_L_MemoryFoam VoiceMelody Clean-013		179367
+	863564893	MX_OC_L_MemoryFoam VoiceMelody Clean-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-003_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-003\MX_OC_L_MemoryFoam VoiceMelody Clean-003		129735
 	893077939	MX_SL_St_BaliseBass	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_St_BaliseBass_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_BaliseBass\MX_SL_St_BaliseBass		88806
 	893978070	AMB_SL_JunleMain	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_JunleMain_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleMain		1639747
+	907680118	MX_OC_L_MemoryFoam VoiceMelody Satur-008	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-008_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-008\MX_OC_L_MemoryFoam VoiceMelody Satur-008		146921
 	913542370	AMB_SL_LabScreenGlitch	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_LabScreenGlitch_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Lab\AMB_SL_LabScreenGlitch		665050
+	913666410	MX_OC_L_MemoryFoam VoiceMelody Satur-003	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Satur-003_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-003\MX_OC_L_MemoryFoam VoiceMelody Satur-003		150046
 	914647982	MX_SL_St_BaliseWind	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_St_BaliseWind_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_BaliseBass\MX_SL_St_BaliseWind		91085
+	948117693	MX_OC_L_MemoryFoam VoiceMelody Clean-012	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_OC_L_MemoryFoam VoiceMelody Clean-012_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamMelody\MX_OC_L_MemoryFoam VoiceMelody-012\MX_OC_L_MemoryFoam VoiceMelody Clean-012		109991
+	1006732654	- CaveEmpty	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\- CaveEmpty_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_L_CaveEmpty\MX_SL_L_CaveEmpty\- CaveEmpty		1817751
 	1008141990	MX_SL_St_BaliseStrings	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\MX_SL_St_BaliseStrings_56CEF360.wem		\Interactive Music Hierarchy\MX\MX_Strelitzia\MX_SL_Stingers\MX_SL_St_BaliseBass\MX_SL_St_BaliseStrings		72633
 	1056833438	AMB_SL_JunleFrog	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_JunleFrog_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Jungle\AMB_SL_JunleFrog		509741
 	1060224785	AMB_SL_SiloBird	C:\Users\ELE64f86f2d10253\Documents\+WWISE+\LeWorld_Wwise_Session\.cache\Mac\SFX\AMB_SL_SiloBird_56CEF360.wem		\Actor-Mixer Hierarchy\AMB\AMB_Strelitzia\AMB_SL_Silo\AMB_SL_SiloBird		1796798
