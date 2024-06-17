@@ -9,6 +9,7 @@ namespace LW.Data
         screenshot,
         resetPosition,
         commands,
-        load
+        load,
+        spinboi
     }
 }

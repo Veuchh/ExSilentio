@@ -101,6 +101,19 @@ namespace LW.Level
 
         public void RevealItem(Texture2D texture, int letterAmount)
         {
+            if (!wasInitialized)
+            {
+                switch (type)
+                {
+                    case RevealableItemType.MeshRenderer:
+                        MeshRendererAwake();
+                        break;
+                    case RevealableItemType.VFXGraph:
+                        VFXGraphAwake();
+                        break;
+                }
+            }
+
             switch (type)
             {
                 case RevealableItemType.MeshRenderer:

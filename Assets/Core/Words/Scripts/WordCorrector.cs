@@ -33,7 +33,7 @@ namespace LW.Word
 
             for (int i = firstWordID + 1; i < separatedInput.Length; i++)
             {
-                arguments += separatedInput[i] + (i == separatedInput.Length - 1 ? "":" ");
+                arguments += separatedInput[i] + (i == separatedInput.Length - 1 ? "" : " ");
             }
 
             if (arguments.Length > 0)
@@ -56,6 +56,9 @@ namespace LW.Word
                 }
                 else
                 {
+                    if (id == CommandID.spinboi || id == CommandID.setSpeed)
+                        continue;
+
                     int levensteinDistance = LevensteinDistance.Calculate(NormalizeString(table.GetEntry(stringID).LocalizedValue), NormalizeString(separatedInput[firstWordID]));
 
                     if (levensteinDistance < bestCandidateScore)
@@ -66,7 +69,7 @@ namespace LW.Word
                 }
             }
 
-            if (bestCandidateScore <= Mathf.Max(1,currentWordInput.Length / 5))
+            if (bestCandidateScore <= Mathf.Max(1, currentWordInput.Length / 5))
             {
                 onSuccesfullCommandParse?.Invoke(bestCandidate, arguments);
                 return true;

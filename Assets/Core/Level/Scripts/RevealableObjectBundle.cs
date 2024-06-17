@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -24,6 +25,7 @@ namespace LW.Level
         [SerializeField] bool isTextureVertical = false;
         [SerializeField, ShowIf(nameof(playWwiseEventOnReveal))] AK.Wwise.Event eventToPlay;
         [SerializeField] HintDatabase hintDatabse;
+        [SerializeField] UnityEvent OnReveal;
         [SerializeField, HideInInspector] List<string> hintsBase;
 
         bool isRevealed = false;
@@ -107,6 +109,8 @@ namespace LW.Level
                 SaveLoad.SaveStringToPlayerPrefs(
                     GetBundleKey,
                     usedID.ToString());
+
+            OnReveal?.Invoke();
         }
 
         public void SetupElements()

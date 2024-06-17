@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using NaughtyAttributes;
 using LW.Audio;
+using UnityEngine.Events;
 
 public class Mycelium_Dome : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Mycelium_Dome : MonoBehaviour
     [SerializeField] float openingDuration = 5;
     [SerializeField] AnimationCurve rotationCurve;
     [SerializeField] AK.Wwise.Event pannelOpenAudio;
+    [SerializeField] UnityEvent OnPannelOpen;
 
     [SerializeField, HideInInspector] Quaternion endRotation;
     bool isOpened = false;
@@ -26,7 +28,8 @@ public class Mycelium_Dome : MonoBehaviour
         isOpened = true;
 
         WwiseInterface.Instance.PlayEvent(pannelOpenAudio, targetObject.gameObject);
-        targetObject.DORotateQuaternion(endRotation, openingDuration).SetEase(rotationCurve);
+        targetObject.DORotateQuaternion(endRotation, openingDuration).SetEase(rotationCurve); 
+        OnPannelOpen?.Invoke();
     }
 
     [Button]

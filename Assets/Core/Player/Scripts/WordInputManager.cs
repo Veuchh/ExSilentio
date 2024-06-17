@@ -200,6 +200,19 @@ namespace LW.Player
                 case CommandID.load:
                     OnLevelCommand(arguments);
                     break;
+                case CommandID.spinboi:
+                    OnSpinCommand();
+                    break;
+            }
+        }
+
+        private void OnSpinCommand()
+        {
+            RotateOnAxis roa = FindObjectOfType<RotateOnAxis>();
+
+            if (roa != null)
+            {
+                roa.OnSpinToWin();
             }
         }
 
