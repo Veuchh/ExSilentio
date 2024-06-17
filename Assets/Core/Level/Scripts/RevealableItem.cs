@@ -29,6 +29,7 @@ namespace LW.Level
         public WordID ID => id;
         public bool IsTextureVertical => isTextureVertical;
 
+        bool wasInitialized = false;
 
         public void Init(WordID newID, Renderer attachedRenderer)
         {
@@ -63,6 +64,7 @@ namespace LW.Level
 
         void MeshRendererAwake()
         {
+            wasInitialized = true;
             mpb = new MaterialPropertyBlock();
             attachedRenderer.GetPropertyBlock(mpb);
             mpb.SetFloat(DISSOLVE_PARAMETER_NAME, 0);
@@ -71,6 +73,7 @@ namespace LW.Level
 
         void VFXGraphAwake()
         {
+            wasInitialized = true;
             vfx.Stop();
         }
 
@@ -112,12 +115,13 @@ namespace LW.Level
         void MeshRendererReveal(Texture2D texture, int letterAmount)
         {
             isRevealing = true;
-            startRevealTime = Time.time;
-            endRevealTime = Time.time + revealDuration;
             attachedRenderer.GetPropertyBlock(mpb);
             mpb.SetTexture(TEXTURE_PARAMETER_NAME, texture);
             mpb.SetInt(LETTER_NUMBER_PARAMETER_NAME, letterAmount);
             attachedRenderer.SetPropertyBlock(mpb);
+
+            startRevealTime = Time.time;
+            endRevealTime = Time.time + revealDuration;
         }
 
         void VFXGraph(Texture2D texture, int letterAmount)
@@ -131,6 +135,19 @@ namespace LW.Level
         {
             if (type != RevealableItemType.MeshRenderer)
                 return;
+
+            if (!wasInitialized)
+            {
+                switch (type)
+                {
+                    case RevealableItemType.MeshRenderer:
+                        MeshRendererAwake();
+                        break;
+                    case RevealableItemType.VFXGraph:
+                        VFXGraphAwake();
+                        break;
+                }
+            }
 
             attachedRenderer.GetPropertyBlock(mpb);
 
