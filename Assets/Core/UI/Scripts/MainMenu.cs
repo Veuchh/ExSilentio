@@ -1,3 +1,4 @@
+using LW.Audio;
 using LW.Data;
 using LW.UI;
 using System;
@@ -12,6 +13,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button quitButton;
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] bool isPauseMenu;
+    [SerializeField] AK.Wwise.Event toggleMenuOn;
+    [SerializeField] AK.Wwise.Event toggleMenuOff;
 
     public static event Action onMainMenuPressPlay;
     public static event Action onPauseMenuPressPlay;
@@ -55,6 +58,7 @@ public class MainMenu : MonoBehaviour
         canvasGroup.interactable = isToggled;
         canvasGroup.blocksRaycasts = isToggled;
         StaticData.OpenWindowsAmount += isToggled ? 1 : -1;
+        WwiseInterface.Instance.PlayEvent(isToggled ? toggleMenuOn : toggleMenuOff);
     }
 
     void OnPlayButton()

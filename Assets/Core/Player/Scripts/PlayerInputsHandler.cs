@@ -150,7 +150,7 @@ namespace LW.Player
             {
                 ToggleWordMode();
             }
-            else if (MainMenu.Instance.IsPauseMenu)
+            else if (MainMenu.Instance.IsPauseMenu && StaticData.OpenWindowsAmount < 2)
             {
                 MainMenu.Instance.ToggleMenu();
             }

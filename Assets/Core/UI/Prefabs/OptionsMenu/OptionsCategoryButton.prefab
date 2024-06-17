@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6049706243837635351}
   - component: {fileID: 4271649333837266729}
   - component: {fileID: 2997287993518172347}
+  - component: {fileID: 7430787845828790021}
   m_Layer: 5
   m_Name: OptionsCategoryButton
   m_TagString: Untagged
@@ -90,6 +91,29 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7430787845828790021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707975984429155827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a423e4c0b7e84f9c1875ed684dbd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2997287993518172347}
+  hoverEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4be8a20ff852cec478c81224ebdfd45c,
+      type: 2}
+  clickEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1f6c54ba8eacbc44da909a7c15465571,
+      type: 2}
 --- !u!1 &4278949305061494730
 GameObject:
   m_ObjectHideFlags: 0
