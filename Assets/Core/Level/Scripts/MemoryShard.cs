@@ -2,12 +2,14 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.Localization;
+using System.Collections.Generic;
 
 public class MemoryShard : MonoBehaviour
 {
     const string PLAYER_TAG = "Player";
     const string MEMORYSHARD_ID = "MemoryShard";
     const string TEXTURE_ID = "_Main_Tex";
+    const string DISSOLVE_ID = "_Dissolve_Amount";
 
     [SerializeField] LocalizedStringTable memoryShardTable;
     [SerializeField] MeshRenderer meshRenderer;
@@ -18,10 +20,16 @@ public class MemoryShard : MonoBehaviour
     [SerializeField] float arrowLockDuration = 60f;
     [SerializeField] float durationInColliderToLock = .5f;
     [SerializeField] float textFadeDuration = 1.5f;
+    [SerializeField] float textureDissolveTime = .4f;
     [SerializeField] UnityEvent onRevealText;
+    [SerializeField] List<Renderer> ringsToDissolve;
 
     float remainingTimeInCollider;
+    float startDissolveTime;
+    float endDissolveTime;
     bool isLocked = false;
+
+    bool isFadingRings = false;
 
     private void Start()
     {
@@ -44,7 +52,28 @@ public class MemoryShard : MonoBehaviour
     private void Update()
     {
         if (isLocked)
+        {
+            if (isFadingRings)
+            {
+                MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+
+                float dissolveAmount = Mathf.InverseLerp(startDissolveTime, endDissolveTime, Time.time);
+
+                foreach (var item in ringsToDissolve)
+                {
+                    item.GetPropertyBlock(mpb);
+
+                    mpb.SetFloat(DISSOLVE_ID, Time.time > endDissolveTime ? 1 : dissolveAmount);
+
+                    item.SetPropertyBlock(mpb);
+                }
+
+                if (Time.time > endDissolveTime)
+                    isFadingRings = false;
+            }
+
             return;
+        }
 
         DelockedBehaviour();
     }
@@ -77,8 +106,16 @@ public class MemoryShard : MonoBehaviour
 
             sequence.Append(rotatingArrow.transform.DORotate(Vector3.up * lookRotationAngle, arrowLockDuration));
             sequence.AppendCallback(() => onRevealText?.Invoke());
+            sequence.AppendCallback(() => StartFadingRings());
             sequence.Append(textToSpawn.DOFade(1, textFadeDuration));
         }
+    }
+
+    void StartFadingRings()
+    {
+        isFadingRings = true;
+        startDissolveTime = Time.time;
+        endDissolveTime = Time.time + textureDissolveTime;
     }
 
     private void OnTriggerExit(Collider other)
