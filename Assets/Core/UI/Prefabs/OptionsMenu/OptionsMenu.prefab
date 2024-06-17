@@ -985,6 +985,7 @@ MonoBehaviour:
   entry3: {fileID: 5097272358867343711}
   invertYOption: {fileID: 3245419798674813640}
   mouseSensitivityOption: {fileID: 4501064541293228021}
+  toggleConsoleRebind: {fileID: 2272659445280749692}
   deleteConfirmationText: {fileID: 7266229663747510719}
   fullscreenOption: {fileID: 7067005813846043132}
   vSyncOption: {fileID: 8943910606236992305}
@@ -1956,7 +1957,7 @@ PrefabInstance:
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
@@ -3527,7 +3528,7 @@ PrefabInstance:
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
@@ -4978,7 +4979,7 @@ PrefabInstance:
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
@@ -6792,6 +6793,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f25dcd618d3acd64795bf8bb32edb6c9, type: 3}
+--- !u!114 &2272659445280749692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6680292650503350826, guid: f25dcd618d3acd64795bf8bb32edb6c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4845646136737960534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc11d99b1a6682f4cbc4aba1fcd9ac5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2272659445280749695 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6680292650503350825, guid: f25dcd618d3acd64795bf8bb32edb6c9,
@@ -7225,7 +7238,7 @@ PrefabInstance:
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
@@ -7596,7 +7609,7 @@ PrefabInstance:
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 271.805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371615208811228764, guid: d687db256cfc3e44db2872c39d391f20,
         type: 3}

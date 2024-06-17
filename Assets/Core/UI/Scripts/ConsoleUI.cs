@@ -44,6 +44,7 @@ namespace LW.UI
         [Header("Notifications")]
         [SerializeField] CanvasGroup notificationCanvasGroup;
         [SerializeField] CanvasGroup notificationGlowCanvasGroup;
+        [SerializeField] TextMeshProUGUI bindingDisplay;
         [SerializeField] Image notificationIcon;
         [SerializeField] float notificationGlowSpeed;
 
@@ -197,6 +198,11 @@ namespace LW.UI
         public void UpdateConsoleDashes(bool useDashes)
         {
             separateWithDashes = useDashes;
+        }
+
+        public void UpdateBindingDisplay(string binding)
+        {
+            bindingDisplay.text = binding;
         }
     }
 }

@@ -24,9 +24,16 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [SerializeField] LocalizeStringEvent stringEvent;
         [SerializeField] LocalizedStringTable stringTable;
 
+        public UnityEvent<string> OnBindingUpdated;
+
         protected virtual void Awake()
         {
             ToggleHighlight(false);
+        }
+
+        private void Start()
+        {
+            UpdateBindingDisplay();
         }
 
         protected virtual void ToggleHighlight(bool ishighlighted)
@@ -240,6 +247,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 if (bindingIndex != -1)
                     displayString = action.GetBindingDisplayString(bindingIndex, out deviceLayoutName, out controlPath, displayStringOptions);
             }
+
+            OnBindingUpdated?.Invoke(displayString);
 
             // Set on label (if any).
             if (m_BindingText != null)

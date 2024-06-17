@@ -2,6 +2,7 @@ using LW.Data;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Samples.RebindUI;
 using UnityEngine.UI;
 
 namespace LW.UI
@@ -54,6 +55,7 @@ namespace LW.UI
         [Header("Options - Controls")]
         [SerializeField] OptionToggle invertYOption;
         [SerializeField] OptionSlider mouseSensitivityOption;
+        [SerializeField] RebindActionUI toggleConsoleRebind;
         [SerializeField] GameObject deleteConfirmationText;
 
         [Header("Options - Graphics")]
@@ -84,6 +86,7 @@ namespace LW.UI
         //  Controls
         public static event Action<string, bool> onInvertYChanged;
         public static event Action<string, float> onLookSensitivityChanged;
+        public static event Action<string> onTabBindingUpdated;
         //  Graphics
         public static event Action<string, bool> onFullscreenChanged;
         public static event Action<string, bool> onVSyncChanged;
@@ -126,6 +129,7 @@ namespace LW.UI
             //  Controls
             invertYOption.onValueChanged += OnInvertYChange;
             mouseSensitivityOption.onValueChanged += OnMouseSensitivityChange;
+            toggleConsoleRebind.OnBindingUpdated.AddListener((string s) => onTabBindingUpdated?.Invoke(s));
 
             //  Graphics
             fullscreenOption.onValueChanged += OnFullscreenChange;
@@ -164,6 +168,7 @@ namespace LW.UI
             //  Controls
             invertYOption.onValueChanged -= OnInvertYChange;
             mouseSensitivityOption.onValueChanged -= OnMouseSensitivityChange;
+            toggleConsoleRebind.OnBindingUpdated.RemoveAllListeners();
 
             //  Graphics
             fullscreenOption.onValueChanged -= OnFullscreenChange;

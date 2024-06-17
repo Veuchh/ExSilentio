@@ -61,6 +61,7 @@ public class SettingsHandler : MonoBehaviour
         //  Controls
         OptionsMenu.onLookSensitivityChanged += OnLookSensitivityChanged;
         OptionsMenu.onInvertYChanged += OnInvertYChanged;
+        OptionsMenu.onTabBindingUpdated += OnTabBindingUpdated;
         PlayerMovement.requestSettings += OnPlayerRequestSettings;
 
         //  Graphics
@@ -189,6 +190,11 @@ public class SettingsHandler : MonoBehaviour
         ChangeSFXVolume(floatOptions.Keys.Contains("sfxVolume") ? floatOptions["sfxVolume"] : 50);
         ChangeMusicVolume(floatOptions.Keys.Contains("musicVolume") ? floatOptions["musicVolume"] : 50);
         ChangeHighFreqFilter(floatOptions.Keys.Contains("highFrequenciesFilter") ? intOptions["highFrequenciesFilter"] == 1 : false);
+    }
+
+    private void OnTabBindingUpdated(string binding)
+    {
+        ConsoleUI.Instance.UpdateBindingDisplay(binding);
     }
 
     private void ChangeLanguage(string newLanguage)
