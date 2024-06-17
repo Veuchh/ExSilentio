@@ -20,6 +20,11 @@ public class MainMenuButton : MonoBehaviour, ISelectHandler, IDeselectHandler, I
         localizeEvent.OnUpdateString.AddListener(UpdateBGText);
     }
 
+    private void Start()
+    {
+        UpdateBGText(frontText.text);
+    }
+
     private void OnDestroy()
     {
         localizeEvent.OnUpdateString.RemoveListener(UpdateBGText);

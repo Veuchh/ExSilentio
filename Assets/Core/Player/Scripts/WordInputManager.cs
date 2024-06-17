@@ -41,6 +41,7 @@ namespace LW.Player
         [SerializeField] AK.Wwise.Event uiClWriteText;
         [SerializeField] AK.Wwise.Event uiClDeleteText;
         [SerializeField] AK.Wwise.Event uiClWordEnter;
+        [SerializeField] AK.Wwise.Event respawnCommandUsed;
         string currentWordInput;
 
         [Header("Input Settings")]
@@ -268,6 +269,7 @@ namespace LW.Player
             ConsoleUI.Instance.AddToHistory(consoleOutput);
 
             onResetPlayerPos?.Invoke();
+            WwiseInterface.Instance.PlayEvent(respawnCommandUsed);
 
             if (RespawnCommandCallbackHandler.Instance != null)
                 RespawnCommandCallbackHandler.Instance.OnRespawnCommand();
