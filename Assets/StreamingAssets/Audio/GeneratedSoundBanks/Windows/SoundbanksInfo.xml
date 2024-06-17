@@ -3578,7 +3578,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{AAE83A69-9D18-E69F-2B99-F0422EC9F2C5}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{8C359ECC-3BB9-7681-8361-2839685F94EC}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -3613,7 +3613,8 @@
 				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2094399898" Name="MX_MY_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamOct" GUID="{229EFC43-E24A-4DCF-844C-4F120653C623}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="48776809" Name="SFX_MY_Doors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_Doors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3596045613" Name="SFX_MY_CloseDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_CloseDoors" GUID="{E4C9912C-66B2-416E-8583-9E044BBCFE46}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2361831529" Name="SFX_MY_OpenDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_OpenDoors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2927351608" Name="SFX_MY_PannelOpen" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_PannelOpen" GUID="{35069E82-2EC3-4C0B-B5DD-068A5D018A7C}" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1722516999" Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
@@ -5164,5 +5165,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3E4A32AF-3084-70D1-3F25-CB6CBA11EDE5}</FileHash>
+	<FileHash>{C99595C4-E11F-D03A-F747-27D982A75BDC}</FileHash>
 </SoundBanksInfo>
