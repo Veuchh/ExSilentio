@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{0FA295AD-1557-D2BC-F69B-10FF1522C13B}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{09D514C8-8516-B27A-B4A1-A3002FFC6288}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -697,9 +697,17 @@
 						<ActionSetStateEntry GroupId="4118992754" Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\Second" GUID="{291C9266-1458-4E1B-9DE5-62DEB679778D}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
-				<Event Id="2415996523" Name="MX_SL_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit" GUID="{E44B385B-5C76-4F86-B1A6-1519033709D6}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
-				<Event Id="3715859067" Name="MX_SL_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct" GUID="{6AFE993C-9BE8-4176-9B0F-E1F7E1F29C00}" MaxAttenuation="15" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1890713911" Id="1752637612" Name="In" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_MemoryFoam\In" GUID="{E5B77E29-7498-48CE-92D1-D5A8C1B21528}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2415996523" Name="MX_SL_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit" GUID="{E44B385B-5C76-4F86-B1A6-1519033709D6}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1890713911" Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_MemoryFoam\Out" GUID="{3DCAC780-92E7-4C19-84F4-0E8660BD1504}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3715859067" Name="MX_SL_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct" GUID="{6AFE993C-9BE8-4176-9B0F-E1F7E1F29C00}" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="732295639"/>
 					</MediaRefs>
@@ -5416,5 +5424,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E19DB0F4-BB5B-C032-AACF-27DCC3918FDC}</FileHash>
+	<FileHash>{B29EAAAB-CA81-FB3B-AB7D-2909F3D86DB4}</FileHash>
 </SoundBanksInfo>
