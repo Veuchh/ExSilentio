@@ -1,4 +1,3 @@
-using Codice.CM.Client.Differences;
 using LW.Audio;
 using LW.Data;
 using LW.Level;
@@ -180,7 +179,7 @@ namespace LW.Player
             foreach (var bundle in RevealableObjectHandler.Instance.GetBundles())
             {
                 DatabaseQueryResult queryResult = wordDatabase.AttemptDatabaseRetrieve(bundle.ID);
-                
+
                 wordIDs.Add(queryResult.MainResult.ID);
 
                 foreach (var item in queryResult.SecondaryResults)
