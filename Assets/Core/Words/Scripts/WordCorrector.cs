@@ -1,5 +1,6 @@
 using LW.Data;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -78,14 +79,14 @@ namespace LW.Word
             return false;
         }
 
-        public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action<string> OnFailedParse)
+        public void AttemptParsingToID(string word, Action<WordID> onSuccesfulParse, Action<string> OnFailedParse, List<WordID> possibleIDs)
         {
             var table = wordStringTable.GetTable();
 
             WordID bestCandidate = (WordID)(-1);
             int bestCandidateScore = int.MaxValue;
 
-            foreach (WordID id in Enum.GetValues(typeof(WordID)))
+            foreach (WordID id in possibleIDs)
             {
                 string stringID = id.ToString();
                 if (table.GetEntry(id.ToString()) == null)

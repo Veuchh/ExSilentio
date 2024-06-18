@@ -3,6 +3,7 @@ using LW.Data;
 using LW.UI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -63,6 +64,7 @@ namespace LW.Level
             {
                 Debug.LogWarning("A bundle attempted to register twice. Register attempt rejected.");
             }
+            bundles.OrderBy(bundle => bundle.ObjectImportance);
         }
 
         public void AttemptWordDiscovery(DatabaseQueryResult queryResult, Action OnSuccesfulWordReveal)
