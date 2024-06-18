@@ -3663,7 +3663,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{B93C5975-3B55-A57E-24C0-426A300C63F6}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{397CEC98-05D7-4180-D842-5496AF9D60CB}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -3769,7 +3769,17 @@
 						<ActionSetStateEntry GroupId="3829978697" Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1856895233" Name="MX_MY_AllCoreReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_AllCoreReveal" GUID="{69A20D93-9E0A-4488-9B28-984F1B3D2A75}" DurationType="Infinite">
+				<Event Id="1856895233" Name="MX_MY_AllCoreReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_AllCoreReveal" GUID="{69A20D93-9E0A-4488-9B28-984F1B3D2A75}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1136174028" Name="MX_MY_PulseEnd" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_PulseEnd" GUID="{7390CAD2-6CB3-453F-B706-B7C1A8BA321F}"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2299968845" Name="MX_MY_EarthReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_EarthReveal" GUID="{0BEE9EED-E5CE-4479-90BF-D88DE49EFFE8}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="332960936" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Reveal" GUID="{04AD297B-C6AB-4A25-A937-D9332204B032}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1136174028" Name="MX_MY_PulseEnd" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_PulseEnd" GUID="{7390CAD2-6CB3-453F-B706-B7C1A8BA321F}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="332960936" Id="3384621607" GUID="{3E5EED5F-E6BD-4D30-BCA3-D6728DE96261}"/>
@@ -3806,11 +3816,6 @@
 							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
-				</Event>
-				<Event Id="2299968845" Name="MX_MY_EarthReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_EarthReveal" GUID="{0BEE9EED-E5CE-4479-90BF-D88DE49EFFE8}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="332960936" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Reveal" GUID="{04AD297B-C6AB-4A25-A937-D9332204B032}"/>
-					</ActionSetState>
 				</Event>
 				<Event Id="3766624338" Name="MX_MY_ST_MemoryFoamIdle" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamIdle" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -5402,5 +5407,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{20AFB58C-153B-28BD-80D9-51D5E3F0EE15}</FileHash>
+	<FileHash>{3497623D-EF36-EFBA-A317-7D915882891D}</FileHash>
 </SoundBanksInfo>
