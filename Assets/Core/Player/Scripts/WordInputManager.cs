@@ -182,13 +182,13 @@ namespace LW.Player
 
                 wordIDs.Add(queryResult.MainResult.ID);
 
-                foreach (var item in queryResult.SecondaryResults)
+                foreach (var item in queryResult.MainResult.AdditionalAcceptedIds)
                 {
-                    wordIDs.Add(item.ID);
+                    wordIDs.Add(item);
                 }
-                foreach (var item in queryResult.SemanticallyCloseIDs)
+                foreach (var item in queryResult.MainResult.CloselySemanticIds)
                 {
-                    wordIDs.Add(item.ID);
+                    wordIDs.Add(item);
                 }
             }
 
