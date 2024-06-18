@@ -4,6 +4,8 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using System.Collections.Generic;
 using System.Collections;
+using NaughtyAttributes;
+using LW.Audio;
 
 public class MemoryShard : MonoBehaviour
 {
@@ -24,6 +26,8 @@ public class MemoryShard : MonoBehaviour
     [SerializeField] float textureDissolveTime = .4f;
     [SerializeField] UnityEvent onRevealText;
     [SerializeField] List<Renderer> ringsToDissolve;
+    [SerializeField] bool playEventWhenLocking = false;
+    [SerializeField, ShowIf(nameof(playEventWhenLocking))] AK.Wwise.Event lockEvent;
 
     float remainingTimeInCollider;
     float startDissolveTime;
@@ -114,6 +118,10 @@ public class MemoryShard : MonoBehaviour
             sequence.Append(rotatingArrow.transform.DORotate(Vector3.up * lookRotationAngle, arrowLockDuration));
             sequence.AppendCallback(() => onRevealText?.Invoke());
             sequence.AppendCallback(() => StartFadingRings());
+            
+            if (playEventWhenLocking)
+                sequence.AppendCallback(() => WwiseInterface.Instance.PlayEvent(lockEvent, trigger.gameObject));
+            
             sequence.Append(textToSpawn.DOFade(1, textFadeDuration));
         }
     }
