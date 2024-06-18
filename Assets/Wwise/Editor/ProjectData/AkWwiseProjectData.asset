@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584829032145141517
+    m_lastTime: -8584828936943195593
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -604,6 +604,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: d3aad800118eac4abf38d5fb8699999a
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX
+    - name: MX_Mycelium
+      guid: 30ab715e5c54e445a7571d08f7ea973e
+      id: 2870356188
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d61985cf09a10a4990eafeb0bc047465
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MX
+        ObjectType: 2
+        guid: d3aad800118eac4abf38d5fb8699999a
+      - ElementName: MX_Mycelium
+        ObjectType: 2
+        guid: 30ab715e5c54e445a7571d08f7ea973e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MX\MX_Mycelium
     - name: MX_OC_Boat
       guid: ab3f1d002f951c4497435a30b0170177
       id: 991637072
@@ -2931,7 +2951,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584829610676529706
+    m_lastTime: -8584828921886004979
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -2970,9 +2990,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: MX_MY_End
-      guid: 10945041c7475f48b9ab952bd7f713e0
-      id: 546842145
+    - name: MX_MY_AllCoreReveal
+      guid: 930da2690a9e88449b28984f1b3d2a75
+      id: 1856895233
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2983,13 +3003,59 @@ MonoBehaviour:
       - ElementName: MX_Mycelium
         ObjectType: 4
         guid: 15af895817a32b4eae917cc35943ace1
-      - ElementName: MX_MY_End
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      - ElementName: MX_MY_AllCoreReveal
         ObjectType: 3
-        guid: 10945041c7475f48b9ab952bd7f713e0
-      Path: Events\MX\MX_Mycelium\MX_MY_End
+        guid: 930da2690a9e88449b28984f1b3d2a75
+      Path: Events\MX\MX_Mycelium\Trigger\MX_MY_AllCoreReveal
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: MX_MY_EarthReveal
+      guid: ed9eee0bcee5794490bfd88de49effe8
+      id: 2299968845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      - ElementName: MX_MY_EarthReveal
+        ObjectType: 3
+        guid: ed9eee0bcee5794490bfd88de49effe8
+      Path: Events\MX\MX_Mycelium\Trigger\MX_MY_EarthReveal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MX_MY_PulseEnd
+      guid: d2ca9073b36c3f45b706b7c1a8ba321f
+      id: 1136174028
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: MX_MY_PulseEnd
+        ObjectType: 3
+        guid: d2ca9073b36c3f45b706b7c1a8ba321f
+      Path: Events\MX\MX_Mycelium\MX_MY_PulseEnd
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MX_MY_ST_MemoryFoamIdle
       guid: 49eead7716ff2d4db373759d3f1d3a3c
       id: 3766624338
@@ -4116,26 +4182,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Trigger
-      guid: 913066a5d89cdb4c8bc8dea816ad3ff7
-      id: 3571255931
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: MX
-        ObjectType: 12
-        guid: 67012ec0e2ce5e42abc047769215ac15
-      - ElementName: MX_Mycelium
-        ObjectType: 4
-        guid: 15af895817a32b4eae917cc35943ace1
-      - ElementName: Trigger
-        ObjectType: 4
-        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
-      Path: Events\MX\MX_Mycelium\Trigger
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Trigger
       guid: 0a6d2b755e3b404396389f317dce77fc
       id: 3571255931
       PathAndIcons:
@@ -4152,6 +4198,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 0a6d2b755e3b404396389f317dce77fc
       Path: Events\MX\MX_OceanCity\Trigger
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Trigger
+      guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      id: 3571255931
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MX
+        ObjectType: 12
+        guid: 67012ec0e2ce5e42abc047769215ac15
+      - ElementName: MX_Mycelium
+        ObjectType: 4
+        guid: 15af895817a32b4eae917cc35943ace1
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 913066a5d89cdb4c8bc8dea816ad3ff7
+      Path: Events\MX\MX_Mycelium\Trigger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -4186,7 +4252,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584829037162690708
+    m_lastTime: -8584828931816669879
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
@@ -5068,7 +5134,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584829602429042722
+    m_lastTime: -8584828923561988085
     List:
     - name: GP_M_AMB
       guid: 31118e06c9c6e641b57545921eca7323
@@ -5169,6 +5235,20 @@ MonoBehaviour:
         ObjectType: 4
         guid: e3dd2a5de834514782ad32ab397ef27d
       Path: Game Parameters\Game Parameters\GP_Menu
+    - name: GP_Mycelium
+      guid: 1dd0681fa8d78f40bfd52853567952ee
+      id: 1866530882
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Mycelium
+        ObjectType: 4
+        guid: 1dd0681fa8d78f40bfd52853567952ee
+      Path: Game Parameters\Game Parameters\GP_Mycelium
     - name: GP_OC_FT
       guid: ce681717342c57409452e90da9cf38af
       id: 226166670
@@ -5300,6 +5380,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 1da2e570a6b65a468f458f76ba5d2e93
       Path: Game Parameters\Game Parameters\GP_OceanCity
+    - name: GP_PulseEndDist
+      guid: ab95edd7e4bf804bbde8e7e19372c973
+      id: 423649449
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Mycelium
+        ObjectType: 4
+        guid: 1dd0681fa8d78f40bfd52853567952ee
+      - ElementName: GP_PulseEndDist
+        ObjectType: 13
+        guid: ab95edd7e4bf804bbde8e7e19372c973
+      Path: Game Parameters\Game Parameters\GP_Mycelium\GP_PulseEndDist
     - name: GP_SL_DesertWind
       guid: 9f23e7c7e001964790e70708d12f50bb
       id: 919542588
@@ -5444,164 +5541,8 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584829032144570360
+    m_lastTime: -8584828936786971057
     List:
-    - name: EarthOpen
-      guid: aea9d0927bac5849a00a48b9c6acd69c
-      id: 1722516999
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: States
-        ObjectType: 12
-        guid: 12f7b7ed918fd640be4092cb10051c61
-      - ElementName: ST_Mycelium
-        ObjectType: 4
-        guid: 5ef5a1543fad054ebcf53356ea834788
-      - ElementName: EarthOpen
-        ObjectType: 9
-        guid: aea9d0927bac5849a00a48b9c6acd69c
-      Path: States\States\ST_Mycelium\EarthOpen
-      values:
-      - name: Close
-        guid: 7a346bd3b007304099062ebc1d800b9f
-        id: 1451272583
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthOpen
-          ObjectType: 9
-          guid: aea9d0927bac5849a00a48b9c6acd69c
-        - ElementName: Close
-          ObjectType: 8
-          guid: 7a346bd3b007304099062ebc1d800b9f
-      - name: None
-        guid: 3841490b7dea2e44bb2176f0c941f51a
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthOpen
-          ObjectType: 9
-          guid: aea9d0927bac5849a00a48b9c6acd69c
-        - ElementName: None
-          ObjectType: 8
-          guid: 3841490b7dea2e44bb2176f0c941f51a
-      - name: Open
-        guid: c22938a0c0396e4a9da038d50e4a857d
-        id: 3072142513
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthOpen
-          ObjectType: 9
-          guid: aea9d0927bac5849a00a48b9c6acd69c
-        - ElementName: Open
-          ObjectType: 8
-          guid: c22938a0c0396e4a9da038d50e4a857d
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: EarthPlace
-      guid: 711b43304403f442bb878cb2b89e588b
-      id: 3171034840
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: States
-        ObjectType: 12
-        guid: 12f7b7ed918fd640be4092cb10051c61
-      - ElementName: ST_Mycelium
-        ObjectType: 4
-        guid: 5ef5a1543fad054ebcf53356ea834788
-      - ElementName: EarthPlace
-        ObjectType: 9
-        guid: 711b43304403f442bb878cb2b89e588b
-      Path: States\States\ST_Mycelium\EarthPlace
-      values:
-      - name: In
-        guid: 6846765a72aa6f4ab549c549eb5ebf48
-        id: 1752637612
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthPlace
-          ObjectType: 9
-          guid: 711b43304403f442bb878cb2b89e588b
-        - ElementName: In
-          ObjectType: 8
-          guid: 6846765a72aa6f4ab549c549eb5ebf48
-      - name: None
-        guid: 7ae18d5472a9f3468442f017c9bd04fc
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthPlace
-          ObjectType: 9
-          guid: 711b43304403f442bb878cb2b89e588b
-        - ElementName: None
-          ObjectType: 8
-          guid: 7ae18d5472a9f3468442f017c9bd04fc
-      - name: Out
-        guid: 450ac838dbb81d47be5283c3a961a4d4
-        id: 645492555
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 12f7b7ed918fd640be4092cb10051c61
-        - ElementName: ST_Mycelium
-          ObjectType: 4
-          guid: 5ef5a1543fad054ebcf53356ea834788
-        - ElementName: EarthPlace
-          ObjectType: 9
-          guid: 711b43304403f442bb878cb2b89e588b
-        - ElementName: Out
-          ObjectType: 8
-          guid: 450ac838dbb81d47be5283c3a961a4d4
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
     - name: MX_SL_ST_Cave
       guid: ab2d4ba05274f64782692eae8a43a38f
       id: 2289571526
@@ -9067,6 +9008,240 @@ MonoBehaviour:
         - ElementName: Unreveal
           ObjectType: 8
           guid: 898456de5183a740979d85d7ecaafe26
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_MY_Earth
+      guid: c8505729a9377e42a5254785d2b5fab0
+      id: 332960936
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Mycelium
+        ObjectType: 4
+        guid: 5ef5a1543fad054ebcf53356ea834788
+      - ElementName: ST_MY_Earth
+        ObjectType: 9
+        guid: c8505729a9377e42a5254785d2b5fab0
+      Path: States\States\ST_Mycelium\ST_MY_Earth
+      values:
+      - name: None
+        guid: ee71338a21f74b459ef6469651b22078
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_Earth
+          ObjectType: 9
+          guid: c8505729a9377e42a5254785d2b5fab0
+        - ElementName: None
+          ObjectType: 8
+          guid: ee71338a21f74b459ef6469651b22078
+      - name: Reveal
+        guid: 7b29ad04abc6254aa937d9332204b032
+        id: 634183254
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_Earth
+          ObjectType: 9
+          guid: c8505729a9377e42a5254785d2b5fab0
+        - ElementName: Reveal
+          ObjectType: 8
+          guid: 7b29ad04abc6254aa937d9332204b032
+      - name: Unreveal
+        guid: 5fed5e3ebde6304dbca3d6728de96261
+        id: 3384621607
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_Earth
+          ObjectType: 9
+          guid: c8505729a9377e42a5254785d2b5fab0
+        - ElementName: Unreveal
+          ObjectType: 8
+          guid: 5fed5e3ebde6304dbca3d6728de96261
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_MY_EarthOpen
+      guid: aea9d0927bac5849a00a48b9c6acd69c
+      id: 2425716192
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Mycelium
+        ObjectType: 4
+        guid: 5ef5a1543fad054ebcf53356ea834788
+      - ElementName: ST_MY_EarthOpen
+        ObjectType: 9
+        guid: aea9d0927bac5849a00a48b9c6acd69c
+      Path: States\States\ST_Mycelium\ST_MY_EarthOpen
+      values:
+      - name: Close
+        guid: 7a346bd3b007304099062ebc1d800b9f
+        id: 1451272583
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthOpen
+          ObjectType: 9
+          guid: aea9d0927bac5849a00a48b9c6acd69c
+        - ElementName: Close
+          ObjectType: 8
+          guid: 7a346bd3b007304099062ebc1d800b9f
+      - name: None
+        guid: 3841490b7dea2e44bb2176f0c941f51a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthOpen
+          ObjectType: 9
+          guid: aea9d0927bac5849a00a48b9c6acd69c
+        - ElementName: None
+          ObjectType: 8
+          guid: 3841490b7dea2e44bb2176f0c941f51a
+      - name: Open
+        guid: c22938a0c0396e4a9da038d50e4a857d
+        id: 3072142513
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthOpen
+          ObjectType: 9
+          guid: aea9d0927bac5849a00a48b9c6acd69c
+        - ElementName: Open
+          ObjectType: 8
+          guid: c22938a0c0396e4a9da038d50e4a857d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_MY_EarthPlace
+      guid: 711b43304403f442bb878cb2b89e588b
+      id: 3829978697
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_Mycelium
+        ObjectType: 4
+        guid: 5ef5a1543fad054ebcf53356ea834788
+      - ElementName: ST_MY_EarthPlace
+        ObjectType: 9
+        guid: 711b43304403f442bb878cb2b89e588b
+      Path: States\States\ST_Mycelium\ST_MY_EarthPlace
+      values:
+      - name: In
+        guid: 6846765a72aa6f4ab549c549eb5ebf48
+        id: 1752637612
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthPlace
+          ObjectType: 9
+          guid: 711b43304403f442bb878cb2b89e588b
+        - ElementName: In
+          ObjectType: 8
+          guid: 6846765a72aa6f4ab549c549eb5ebf48
+      - name: None
+        guid: 7ae18d5472a9f3468442f017c9bd04fc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthPlace
+          ObjectType: 9
+          guid: 711b43304403f442bb878cb2b89e588b
+        - ElementName: None
+          ObjectType: 8
+          guid: 7ae18d5472a9f3468442f017c9bd04fc
+      - name: Out
+        guid: 450ac838dbb81d47be5283c3a961a4d4
+        id: 645492555
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_Mycelium
+          ObjectType: 4
+          guid: 5ef5a1543fad054ebcf53356ea834788
+        - ElementName: ST_MY_EarthPlace
+          ObjectType: 9
+          guid: 711b43304403f442bb878cb2b89e588b
+        - ElementName: Out
+          ObjectType: 8
+          guid: 450ac838dbb81d47be5283c3a961a4d4
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

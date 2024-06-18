@@ -930,7 +930,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{5E7418A7-014B-14D4-EC90-ACE943132F04}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{1F6A4396-613A-F1A0-9B79-86FC7527E8FA}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1339,6 +1339,7 @@
 			<GameParameters>
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
 				<GameParameter Id="420790418" Name="GP_SL_MX_MemoryFoamOctDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance" GUID="{9B855DC5-B0EB-43BF-89F2-2EB2ACFC560F}"/>
+				<GameParameter Id="423649449" Name="GP_PulseEndDist" ObjectPath="\Game Parameters\Game Parameters\GP_Mycelium\GP_PulseEndDist" GUID="{D7ED95AB-BFE4-4B80-BDE8-E7E19372C973}"/>
 				<GameParameter Id="437935957" Name="GP_OC_MX_Sd_Buildings" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_Buildings" GUID="{23848B40-B6AB-4E5D-9FEE-C6494CF34FC5}"/>
 				<GameParameter Id="919542588" Name="GP_SL_DesertWind" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind" GUID="{C7E7239F-01E0-4796-90E7-0708D12F50BB}"/>
 				<GameParameter Id="1263410310" Name="GP_SL_DistantRiver" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver" GUID="{AE880407-86C8-4AF3-AF6A-B0AFD1D1B6F8}"/>
@@ -3662,7 +3663,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{AF4AFDA3-0F11-AB6E-302F-7AA53EDE5386}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{397CEC98-05D7-4180-D842-5496AF9D60CB}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -3768,7 +3769,17 @@
 						<ActionSetStateEntry GroupId="3829978697" Id="645492555" Name="Out" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthPlace\Out" GUID="{38C80A45-B8DB-471D-BE52-83C3A961A4D4}"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1856895233" Name="MX_MY_AllCoreReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_AllCoreReveal" GUID="{69A20D93-9E0A-4488-9B28-984F1B3D2A75}" DurationType="Infinite">
+				<Event Id="1856895233" Name="MX_MY_AllCoreReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_AllCoreReveal" GUID="{69A20D93-9E0A-4488-9B28-984F1B3D2A75}" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1136174028" Name="MX_MY_PulseEnd" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_PulseEnd" GUID="{7390CAD2-6CB3-453F-B706-B7C1A8BA321F}"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2299968845" Name="MX_MY_EarthReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_EarthReveal" GUID="{0BEE9EED-E5CE-4479-90BF-D88DE49EFFE8}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="332960936" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Reveal" GUID="{04AD297B-C6AB-4A25-A937-D9332204B032}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1136174028" Name="MX_MY_PulseEnd" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_PulseEnd" GUID="{7390CAD2-6CB3-453F-B706-B7C1A8BA321F}" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="332960936" Id="3384621607" GUID="{3E5EED5F-E6BD-4D30-BCA3-D6728DE96261}"/>
@@ -3806,11 +3817,6 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2299968845" Name="MX_MY_EarthReveal" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_EarthReveal" GUID="{0BEE9EED-E5CE-4479-90BF-D88DE49EFFE8}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="332960936" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Reveal" GUID="{04AD297B-C6AB-4A25-A937-D9332204B032}"/>
-					</ActionSetState>
-				</Event>
 				<Event Id="3766624338" Name="MX_MY_ST_MemoryFoamIdle" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamIdle" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -3847,6 +3853,9 @@
 					</ActionSetState>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="423649449" Name="GP_PulseEndDist" ObjectPath="\Game Parameters\Game Parameters\GP_Mycelium\GP_PulseEndDist" GUID="{D7ED95AB-BFE4-4B80-BDE8-E7E19372C973}"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="332960936" Name="ST_MY_Earth" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth" GUID="{295750C8-37A9-427E-A525-4785D2B5FAB0}">
 					<States>
@@ -5398,5 +5407,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C3DBAC6B-D9EE-E3B7-BC2E-A23E60D2EDEC}</FileHash>
+	<FileHash>{3497623D-EF36-EFBA-A317-7D915882891D}</FileHash>
 </SoundBanksInfo>
