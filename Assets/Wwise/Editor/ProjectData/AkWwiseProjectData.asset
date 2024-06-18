@@ -1430,7 +1430,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584829039179329330
+    m_lastTime: -8584828881206201021
     List:
     - name: AMB_M_Main
       guid: a94c25a65f3e8d4aa396e8c4263692b6
@@ -2951,7 +2951,7 @@ MonoBehaviour:
     ParentPath: Events\MX
     guid: 67012ec0e2ce5e42abc047769215ac15
     GuidInternal: 
-    m_lastTime: -8584828921886004979
+    m_lastTime: -8584828780986809171
     List:
     - name: MX_M_Main
       guid: a52d1462c7460249abdf1f17e0ffcf7c
@@ -3927,8 +3927,8 @@ MonoBehaviour:
         guid: f857e032e2fec247927355b53c5a45b9
       Path: Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 0
+      minDuration: 0
     - name: MX_SL_ST_MemoryFoamMelodyExit
       guid: 5b384be4765c864fb1a61519033709d6
       id: 2415996523
@@ -3950,8 +3950,8 @@ MonoBehaviour:
         guid: 5b384be4765c864fb1a61519033709d6
       Path: Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyExit
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 0
+      minDuration: 0
     - name: MX_SL_ST_MemoryFoamOct
       guid: 3c99fe6ae89b76419b0fe1f7e1f29c00
       id: 3715859067
@@ -3969,9 +3969,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3c99fe6ae89b76419b0fe1f7e1f29c00
       Path: Events\MX\MX_Strelitzia\MX_SL_ST_MemoryFoamOct
-      maxAttenuation: 15
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 20
+      maxDuration: -1
+      minDuration: -1
     - name: MX_SL_ST_River
       guid: 529806eef822f847a65166ddc9d0e65f
       id: 4045214441
@@ -5134,7 +5134,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584828923561988085
+    m_lastTime: -8584828785275949479
     List:
     - name: GP_M_AMB
       guid: 31118e06c9c6e641b57545921eca7323
