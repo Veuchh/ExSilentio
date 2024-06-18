@@ -353,6 +353,7 @@ namespace LW.Player
 
             List<RevealableObjectBundle> bundles = RevealableObjectHandler.Instance.GetBundles()
                     .Where(x => !x.RevealByDefault)
+                    .OrderBy(x => x.ObjectImportance)
                     .ToList();
 
             arguments = arguments.Replace(" ", "");
