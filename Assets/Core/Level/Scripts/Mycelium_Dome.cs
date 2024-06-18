@@ -12,11 +12,17 @@ public class Mycelium_Dome : MonoBehaviour
     [SerializeField] float openingDuration = 5;
     [SerializeField] AnimationCurve rotationCurve;
     [SerializeField] AK.Wwise.Event pannelOpenAudio;
+    [SerializeField] AK.Wwise.Event pulseAudio;
     [SerializeField] UnityEvent OnPannelOpen;
 
     [SerializeField, HideInInspector] Quaternion endRotation;
     bool isOpened = false;
 
+    private void Start(){
+        if (SaveLoad.GetIntFromPlayerPrefs(SaveLoad.SCENE_WITH_ALL_CORE_REVEALED) >= 2)
+        WwiseInterface.Instance.PlayEvent(pulseAudio, targetObject.gameObject);
+        }
+    
     private void OnTriggerEnter(Collider other)
     {
         //TODO : this piece of code uses a magic number. In the future, we should have a way to know how many totoal level we have.
