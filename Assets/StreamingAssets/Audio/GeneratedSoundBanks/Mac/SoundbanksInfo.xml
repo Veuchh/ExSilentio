@@ -930,7 +930,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F91641C3-0FA6-58F8-0D6F-1CFED13797FF}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{842DD31C-FC86-0493-5FC6-25608EA3289E}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1732,7 +1732,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{31D2E506-7B95-94AE-FAFD-DB5BE427AD41}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{A6D94933-9C1A-D8BD-4B7D-9258F232F6B8}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -3294,6 +3294,7 @@
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4136079247" Id="67980898" Name="OutMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu\OutMenu" GUID="{F93B1DF9-7458-4FD6-AC8D-7930663E5D72}"/>
 						<ActionSetStateEntry GroupId="1623614963" Id="998496889" Name="First" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\StingerMute\ST_MX_OC_Stmute_Boat\First" GUID="{CE5D04F1-4583-4967-BF3B-99196E2FD259}"/>
+						<ActionSetStateEntry GroupId="332960936" Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Unreveal" GUID="{3E5EED5F-E6BD-4D30-BCA3-D6728DE96261}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="870376687" Name="SFX_G_ErrorMap" ObjectPath="\Events\SFX\SFX_Global\SFX_G_ErrorMap" GUID="{A8F665CA-656C-4CC3-9CF6-1D643477030D}" MaxAttenuation="25" DurationType="OneShot" DurationMin="60.261166" DurationMax="60.261166">
@@ -3408,6 +3409,9 @@
 					<MediaRefs>
 						<MediaRef Id="960380483"/>
 					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2425716192" Id="1451272583" Name="Close" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthOpen\Close" GUID="{D36B347A-07B0-4030-9906-2EBC1D800B9F}"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="1749630015" Name="UI_M_OpenMenu" ObjectPath="\Events\UI\UI_Menu\UI_M_OpenMenu" GUID="{FAEF5D2A-15D8-4A91-B06C-7915AFB6AA8C}" DurationType="OneShot" DurationMin="0.49433333" DurationMax="0.49433333">
 					<MediaRefs>
@@ -3515,6 +3519,13 @@
 						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\StingerMute\ST_MX_OC_Stmute_Sun\Second" GUID="{3E5AD44E-D3BE-4E62-9D4E-0465BAF9B907}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="332960936" Name="ST_MY_Earth" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth" GUID="{295750C8-37A9-427E-A525-4785D2B5FAB0}">
+					<States>
+						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Reveal" GUID="{04AD297B-C6AB-4A25-A937-D9332204B032}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\None" GUID="{8A3371EE-F721-454B-9EF6-469651B22078}"/>
+						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth\Unreveal" GUID="{3E5EED5F-E6BD-4D30-BCA3-D6728DE96261}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="1231701662" Name="ST_OC_TrainInsideStation" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation" GUID="{1EF966CB-0A16-4A46-B895-77AF63C6C7C9}">
 					<States>
 						<State Id="645492555" Name="out" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\out" GUID="{35EA7573-D9D3-4913-A9D9-B6DDC7ABEB3E}"/>
@@ -3555,6 +3566,13 @@
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_Occlusion\Out" GUID="{F629EA86-0D3E-4666-9E71-FB4850B3C1DB}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_Occlusion\None" GUID="{4A31AB27-28F0-42B9-A8B3-19B7AEFD1DF9}"/>
 						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_Occlusion\In" GUID="{6B68DFC7-E91D-4D84-ABAF-76A218ACE4BD}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2425716192" Name="ST_MY_EarthOpen" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthOpen" GUID="{92D0A9AE-AC7B-4958-A00A-48B9C6ACD69C}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthOpen\None" GUID="{0B494138-EA7D-442E-BB21-76F0C941F51A}"/>
+						<State Id="1451272583" Name="Close" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthOpen\Close" GUID="{D36B347A-07B0-4030-9906-2EBC1D800B9F}"/>
+						<State Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\ST_MY_EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2466189218" Name="ST_SL_AMB_MuteDesert" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert" GUID="{C6DC8DBE-13EC-4A2E-8252-F8B11A431AC7}">
@@ -3654,7 +3672,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{397CEC98-05D7-4180-D842-5496AF9D60CB}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{231D1D75-F4ED-8A0F-E9BD-11A10CCB7876}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -5398,5 +5416,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E6CACB9F-7721-AD79-57E0-2A503DB97528}</FileHash>
+	<FileHash>{DCC48208-4559-973F-7132-27E1AB8E89CF}</FileHash>
 </SoundBanksInfo>
