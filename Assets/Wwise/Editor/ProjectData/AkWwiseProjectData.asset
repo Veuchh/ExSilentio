@@ -2364,7 +2364,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 621768256638d74d912ad79b72fd0f2d
       Path: Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver
-      maxAttenuation: 100
+      maxAttenuation: 45
       maxDuration: -1
       minDuration: -1
     - name: AMB_SL_SiloWaterfall
@@ -5068,7 +5068,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Game Parameters
     guid: bab44e09d18d8841bf1f7a1ac201fe0e
     GuidInternal: 
-    m_lastTime: -8584830332934775808
+    m_lastTime: -8584829602429042722
     List:
     - name: GP_M_AMB
       guid: 31118e06c9c6e641b57545921eca7323
@@ -5368,6 +5368,23 @@ MonoBehaviour:
         ObjectType: 13
         guid: c55d859bebb0bf4389f22eb2acfc560f
       Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance
+    - name: GP_SL_RiverDist
+      guid: 019a051e83964d4eb6b922c6c32df6a7
+      id: 3284978257
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Game Parameters
+        ObjectType: 12
+        guid: bab44e09d18d8841bf1f7a1ac201fe0e
+      - ElementName: GP_Strelitzia
+        ObjectType: 4
+        guid: d3e0923578a9f9439da65a0032f0865c
+      - ElementName: GP_SL_RiverDist
+        ObjectType: 13
+        guid: 019a051e83964d4eb6b922c6c32df6a7
+      Path: Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_RiverDist
     - name: GP_Strelitzia
       guid: d3e0923578a9f9439da65a0032f0865c
       id: 3361372928
