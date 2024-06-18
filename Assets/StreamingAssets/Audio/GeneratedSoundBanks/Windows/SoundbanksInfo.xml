@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{B36044BF-BCCA-B1F9-A051-FD4287CB430A}">
+		<SoundBank Id="757101314" Type="User" GUID="{64E2EC6B-15C3-4549-A53A-D9D0F37A2CA8}" Language="SFX" Hash="{0FA295AD-1557-D2BC-F69B-10FF1522C13B}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Strelitzia</ObjectPath>
 			<ShortName>Strelitzia</ShortName>
 			<Path>Strelitzia.bnk</Path>
@@ -498,7 +498,7 @@
 						<MediaRef Id="1060224785"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="916999477" Name="AMB_SL_SiloRiver" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver" GUID="{25681762-3866-4DD7-912A-D79B72FD0F2D}" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="916999477" Name="AMB_SL_SiloRiver" ObjectPath="\Events\AMB\AMB_Strelitzia\AMB_SL_SiloRiver" GUID="{25681762-3866-4DD7-912A-D79B72FD0F2D}" MaxAttenuation="45" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="259377318"/>
 						<MediaRef Id="301683489"/>
@@ -680,6 +680,7 @@
 					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4277713600" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Firefly\Reveal" GUID="{F44C1F9B-0619-4BB2-9CE2-C0A8BB920590}"/>
+						<ActionSetStateEntry GroupId="3291738556" Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\Second" GUID="{D4049310-7001-4AD8-9A68-F9D6D964C8F6}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="923296675" Name="MX_SL_ST_Frog" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_Frog" GUID="{1E775BF3-0116-4EAE-9678-D63FDF9E0811}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -693,6 +694,7 @@
 					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1011090278" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle\Reveal" GUID="{44373BE9-BE36-4993-9365-6ED3B56328FB}"/>
+						<ActionSetStateEntry GroupId="4118992754" Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\Second" GUID="{291C9266-1458-4E1B-9DE5-62DEB679778D}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="4032337355" Name="MX_SL_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Strelitzia\Trigger\MX_SL_ST_MemoryFoamMelodyEnter" GUID="{32E057F8-FEE2-47C2-9273-55B53C5A45B9}" DurationType="OneShot" DurationMin="1" DurationMax="1"/>
@@ -718,6 +720,7 @@
 					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="146427616" Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\Reveal" GUID="{78D4F78E-A374-49AD-BE34-21EFF53DA0FF}"/>
+						<ActionSetStateEntry GroupId="177378444" Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\Second" GUID="{0F6755DD-6FFE-48FA-957D-9A4B8A2589BA}"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="1642955674" Name="MX_SL_ST_Tent" ObjectPath="\Events\MX\MX_Strelitzia\MX_SL_ST_Tent" GUID="{84CAB54F-4EF7-4DBE-9F79-898029A3CC64}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -753,6 +756,7 @@
 			<GameParameters>
 				<GameParameter Id="420790418" Name="GP_SL_MX_MemoryFoamOctDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance" GUID="{9B855DC5-B0EB-43BF-89F2-2EB2ACFC560F}"/>
 				<GameParameter Id="919542588" Name="GP_SL_DesertWind" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind" GUID="{C7E7239F-01E0-4796-90E7-0708D12F50BB}"/>
+				<GameParameter Id="1263410310" Name="GP_SL_DistantRiver" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver" GUID="{AE880407-86C8-4AF3-AF6A-B0AFD1D1B6F8}"/>
 				<GameParameter Id="3954811855" Name="GP_SL_FireCampDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance" GUID="{9F0E1BAA-319F-4CEA-9446-B2328241DB5A}"/>
 			</GameParameters>
 			<StateGroups>
@@ -768,6 +772,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\Reveal" GUID="{78D4F78E-A374-49AD-BE34-21EFF53DA0FF}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\None" GUID="{0F432558-22EE-4379-84AC-A86A00CC0315}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\Unreveal" GUID="{DE568489-8351-40A7-979D-85D7ECAAFE26}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="177378444" Name="MX_SL_StmuteStars" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars" GUID="{F513F622-276F-4A04-823A-7B05B397A76F}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\None" GUID="{63F91684-639B-490C-A0F3-6272B9694453}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\First" GUID="{27913B23-BE7F-4557-910B-4811D7F1F616}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\Second" GUID="{0F6755DD-6FFE-48FA-957D-9A4B8A2589BA}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="254875094" Name="ST_SL_AMB_MuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle" GUID="{5237A3C3-430E-4E80-B958-C6E6177593A9}">
@@ -875,6 +886,13 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins\Unreveal" GUID="{965C417F-6899-4C7A-B91E-51DC97112629}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3291738556" Name="MX_SL_StmuteFirefly" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly" GUID="{70FC6C90-7989-42D0-95C9-295DD3845283}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\None" GUID="{2F8A0A0B-B47D-4719-991E-925E26F4FF96}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\First" GUID="{BC35635D-5F9F-478F-B33B-D668E5F4CB1C}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\Second" GUID="{D4049310-7001-4AD8-9A68-F9D6D964C8F6}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3369780566" Name="ST_SL_AMB_MuteSilo" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo" GUID="{E5E3E830-A847-4E2F-A2FF-C36CB4590504}">
 					<States>
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo\Out" GUID="{6EAEB604-11A5-4EE2-8DA8-9B44E5B338E6}"/>
@@ -887,6 +905,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Reveal" GUID="{BA6776CD-DD20-48E1-A7B6-59ADA509152C}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\None" GUID="{2105BA96-9CCD-46FF-B420-D8A8968C1419}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Unreveal" GUID="{9ACAD233-B846-4DC1-96B2-A82A71B83B76}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4118992754" Name="MX_SL_StmuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle" GUID="{97278123-43F9-4EF2-8D9F-01137A5A8ABA}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\None" GUID="{95490D54-4B15-4F28-87A6-316F645833F1}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\First" GUID="{232E5DF6-3730-42E4-9DFF-006EF921B36F}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\Second" GUID="{291C9266-1458-4E1B-9DE5-62DEB679778D}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4211601786" Name="MX_SL_ST_FireCamp" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_FireCamp" GUID="{22DB1127-B224-4329-BEF9-90B5925E0D45}">
@@ -905,7 +930,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{99EC34BE-1D09-55FC-D364-37F785A0B01C}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{85A9C789-6F7B-79D3-D35A-6CB30DED3A11}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1320,6 +1345,7 @@
 				<GameParameter Id="2325539248" Name="GP_M_MX" ObjectPath="\Game Parameters\Game Parameters\GP_Menu\GP_M_MX" GUID="{4E7C6990-F5EB-4DB1-9F03-834D0BEFD4D0}"/>
 				<GameParameter Id="2809572625" Name="GP_M_Master" ObjectPath="\Game Parameters\Game Parameters\GP_Menu\GP_M_Master" GUID="{CCEE96A6-F550-49CD-827F-EB716527D585}"/>
 				<GameParameter Id="3259652844" Name="GP_OC_MX_Sd_MemoryFoam" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_MemoryFoam" GUID="{F96EFCAC-D310-41B6-875E-F2F4ECBFBBEC}"/>
+				<GameParameter Id="3284978257" Name="GP_SL_RiverDist" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_RiverDist" GUID="{1E059A01-9683-4E4D-B6B9-22C6C32DF6A7}"/>
 				<GameParameter Id="3471781427" Name="GP_OC_MX_MemoryFoamOctDistance" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\GP_OC_MX_MemoryFoamOctDistance" GUID="{A0459394-1A5B-4761-83C0-FC3A1F875970}"/>
 				<GameParameter Id="3815697657" Name="GP_OC_WaterHigh" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_WaterHigh" GUID="{FAA5339D-BEAD-4829-B320-C9D7A03BB665}"/>
 				<GameParameter Id="3954811855" Name="GP_SL_FireCampDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance" GUID="{9F0E1BAA-319F-4CEA-9446-B2328241DB5A}"/>
@@ -1339,6 +1365,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\Reveal" GUID="{78D4F78E-A374-49AD-BE34-21EFF53DA0FF}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\None" GUID="{0F432558-22EE-4379-84AC-A86A00CC0315}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars\Unreveal" GUID="{DE568489-8351-40A7-979D-85D7ECAAFE26}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="177378444" Name="MX_SL_StmuteStars" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars" GUID="{F513F622-276F-4A04-823A-7B05B397A76F}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\None" GUID="{63F91684-639B-490C-A0F3-6272B9694453}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\First" GUID="{27913B23-BE7F-4557-910B-4811D7F1F616}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\Second" GUID="{0F6755DD-6FFE-48FA-957D-9A4B8A2589BA}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="254875094" Name="ST_SL_AMB_MuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle" GUID="{5237A3C3-430E-4E80-B958-C6E6177593A9}">
@@ -1579,6 +1612,13 @@
 						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_Mycelium\EarthPlace\In" GUID="{5A764668-AA72-4A6F-B549-C549EB5EBF48}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3291738556" Name="MX_SL_StmuteFirefly" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly" GUID="{70FC6C90-7989-42D0-95C9-295DD3845283}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\None" GUID="{2F8A0A0B-B47D-4719-991E-925E26F4FF96}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\First" GUID="{BC35635D-5F9F-478F-B33B-D668E5F4CB1C}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\Second" GUID="{D4049310-7001-4AD8-9A68-F9D6D964C8F6}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3369780566" Name="ST_SL_AMB_MuteSilo" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo" GUID="{E5E3E830-A847-4E2F-A2FF-C36CB4590504}">
 					<States>
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo\Out" GUID="{6EAEB604-11A5-4EE2-8DA8-9B44E5B338E6}"/>
@@ -1612,6 +1652,13 @@
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Reveal" GUID="{BA6776CD-DD20-48E1-A7B6-59ADA509152C}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\None" GUID="{2105BA96-9CCD-46FF-B420-D8A8968C1419}"/>
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River\Unreveal" GUID="{9ACAD233-B846-4DC1-96B2-A82A71B83B76}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4118992754" Name="MX_SL_StmuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle" GUID="{97278123-43F9-4EF2-8D9F-01137A5A8ABA}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\None" GUID="{95490D54-4B15-4F28-87A6-316F645833F1}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\First" GUID="{232E5DF6-3730-42E4-9DFF-006EF921B36F}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\Second" GUID="{291C9266-1458-4E1B-9DE5-62DEB679778D}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4136079247" Name="ST_G_MuteMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu" GUID="{61017A4B-715D-415E-A761-6FDCAFEB9088}">
@@ -1676,7 +1723,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{1789FC65-4F48-D6E8-0FD1-0DCAAF4578C6}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{DC85BD59-4676-9524-01B2-F7C967BE048E}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -2093,10 +2140,6 @@
 					<ShortName>FT_OC_GroundL2-005.wav</ShortName>
 					<CachePath>SFX/FT_OC_GroundL2-005_8E324C96.wem</CachePath>
 				</File>
-				<File Id="548112328" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>UI_CL_Line.wav</ShortName>
-					<CachePath>SFX/UI_CL_Line_42B9A1D3.wem</CachePath>
-				</File>
 				<File Id="550170229" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FT_OC_Water-004.wav</ShortName>
 					<CachePath>SFX/FT_OC_Water-004_8E324C96.wem</CachePath>
@@ -2108,6 +2151,10 @@
 				<File Id="561487437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_G_ErrorMapBug.wav</ShortName>
 					<CachePath>SFX/SFX_G_ErrorMapBug_8E324C96.wem</CachePath>
+				</File>
+				<File Id="568891921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_C4951E12.wem</CachePath>
 				</File>
 				<File Id="583113551" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_M_Toggle.wav</ShortName>
@@ -3283,9 +3330,9 @@
 						<MediaRef Id="963266010"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1967546360" Name="UI_CL_Line" ObjectPath="\Events\UI\UI_Consol\UI_CL_Line" GUID="{0DA15F7A-460B-4DEC-AC28-50F7FDF63FAF}" DurationType="OneShot" DurationMin="0.34452575" DurationMax="0.34452575">
+				<Event Id="1967546360" Name="UI_CL_Line" ObjectPath="\Events\UI\UI_Consol\UI_CL_Line" GUID="{0DA15F7A-460B-4DEC-AC28-50F7FDF63FAF}" DurationType="OneShot" DurationMin="1.1807721" DurationMax="1.1807721">
 					<MediaRefs>
-						<MediaRef Id="548112328"/>
+						<MediaRef Id="568891921"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="767596870" Name="UI_CL_Open" ObjectPath="\Events\UI\UI_Consol\UI_CL_Open" GUID="{AC05B2B9-9F4E-4DF0-B23E-67430A0CD88D}" DurationType="Infinite">
@@ -3418,6 +3465,13 @@
 						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave\In" GUID="{8AD784C4-D751-42E5-9F8E-504B4CFAECEE}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="177378444" Name="MX_SL_StmuteStars" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars" GUID="{F513F622-276F-4A04-823A-7B05B397A76F}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\None" GUID="{63F91684-639B-490C-A0F3-6272B9694453}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\First" GUID="{27913B23-BE7F-4557-910B-4811D7F1F616}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars\Second" GUID="{0F6755DD-6FFE-48FA-957D-9A4B8A2589BA}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="254875094" Name="ST_SL_AMB_MuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle" GUID="{5237A3C3-430E-4E80-B958-C6E6177593A9}">
 					<States>
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle\Out" GUID="{A4FD871B-EA07-448F-A357-144C5579A850}"/>
@@ -3530,6 +3584,13 @@
 						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_Mycelium\EarthPlace\In" GUID="{5A764668-AA72-4A6F-B549-C549EB5EBF48}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3291738556" Name="MX_SL_StmuteFirefly" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly" GUID="{70FC6C90-7989-42D0-95C9-295DD3845283}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\None" GUID="{2F8A0A0B-B47D-4719-991E-925E26F4FF96}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\First" GUID="{BC35635D-5F9F-478F-B33B-D668E5F4CB1C}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly\Second" GUID="{D4049310-7001-4AD8-9A68-F9D6D964C8F6}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3369780566" Name="ST_SL_AMB_MuteSilo" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo" GUID="{E5E3E830-A847-4E2F-A2FF-C36CB4590504}">
 					<States>
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo\Out" GUID="{6EAEB604-11A5-4EE2-8DA8-9B44E5B338E6}"/>
@@ -3542,6 +3603,13 @@
 						<State Id="645492555" Name="Out" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\Out" GUID="{28D92298-A59E-4DDA-A0E6-C0BAD7DDC78D}"/>
 						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\None" GUID="{DD330B51-9CFE-49BB-B4E6-C8881312AC4D}"/>
 						<State Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_SFXTrainImpact\In" GUID="{B8CA5F6F-CBE9-415B-AC56-167EF28029AD}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4118992754" Name="MX_SL_StmuteJungle" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle" GUID="{97278123-43F9-4EF2-8D9F-01137A5A8ABA}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\None" GUID="{95490D54-4B15-4F28-87A6-316F645833F1}"/>
+						<State Id="998496889" Name="First" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\First" GUID="{232E5DF6-3730-42E4-9DFF-006EF921B36F}"/>
+						<State Id="3476314365" Name="Second" ObjectPath="\States\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle\Second" GUID="{291C9266-1458-4E1B-9DE5-62DEB679778D}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4136079247" Name="ST_G_MuteMenu" ObjectPath="\States\States\ST_Global\ST_G_MuteMenu" GUID="{61017A4B-715D-415E-A761-6FDCAFEB9088}">
@@ -3578,18 +3646,62 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{8C359ECC-3BB9-7681-8361-2839685F94EC}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{07854604-E97B-0C5F-ACD9-39294675D836}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
 			<Media>
 				<File Id="19827504" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rumble Drone In C3 by AudioMarauder Id-733461.wav</ShortName>
-					<CachePath>SFX/Rumble Drone In C3 by AudioMarauder Id-733461_8E324C96.wem</CachePath>
+					<CachePath>SFX/Rumble Drone In C3 by AudioMarauder Id-733461_56CEF360.wem</CachePath>
+				</File>
+				<File Id="59735167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MY_DoorClose.wav</ShortName>
+					<CachePath>SFX/SFX_MY_DoorClose_8E324C96.wem</CachePath>
+				</File>
+				<File Id="173441831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_MY_DoorOpen.wav</ShortName>
+					<CachePath>SFX/SFX_MY_DoorOpen_8E324C96.wem</CachePath>
+				</File>
+				<File Id="265232576" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_4126F6C4.wem</CachePath>
+				</File>
+				<File Id="302750259" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_3A92A707.wem</CachePath>
+				</File>
+				<File Id="338270815" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_5B2FB450.wem</CachePath>
+				</File>
+				<File Id="356766628" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_6D836619.wem</CachePath>
+				</File>
+				<File Id="548112328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_D72BD621.wem</CachePath>
+				</File>
+				<File Id="568891921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_C4951E12.wem</CachePath>
+				</File>
+				<File Id="857262904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_162A64C7.wem</CachePath>
+				</File>
+				<File Id="865234397" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_044D440F.wem</CachePath>
+				</File>
+				<File Id="995961898" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_FDCB6CD5.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3462791964" Name="AMB_MY_Awake" ObjectPath="\Events\AMB\AMB_Mycelium\AMB_MY_Awake" GUID="{5AA27641-7326-411B-9AFB-CF6E5FCCEF8B}" DurationType="OneShot" DurationMin="67.694565" DurationMax="67.694565">
+				<Event Id="3462791964" Name="AMB_MY_Awake" ObjectPath="\Events\AMB\AMB_Mycelium\AMB_MY_Awake" GUID="{5AA27641-7326-411B-9AFB-CF6E5FCCEF8B}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="19827504"/>
 					</MediaRefs>
@@ -3612,9 +3724,30 @@
 				<Event Id="3766624338" Name="MX_MY_ST_MemoryFoamIdle" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamIdle" GUID="{77ADEE49-FF16-4D2D-B373-759D3F1D3A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1708309274" Name="MX_MY_ST_MemoryFoamMelodyEnter" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyEnter" GUID="{462BC39A-DD77-409A-8BBE-9B0B896C6B1D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1655119304" Name="MX_MY_ST_MemoryFoamMelodyExit" ObjectPath="\Events\MX\MX_Mycelium\Trigger\MX_MY_ST_MemoryFoamMelodyExit" GUID="{CE3026ED-69C8-4B61-ADB2-3D651D5D634D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2094399898" Name="MX_MY_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamOct" GUID="{229EFC43-E24A-4DCF-844C-4F120653C623}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3596045613" Name="SFX_MY_CloseDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_CloseDoors" GUID="{E4C9912C-66B2-416E-8583-9E044BBCFE46}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2361831529" Name="SFX_MY_OpenDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_OpenDoors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2094399898" Name="MX_MY_ST_MemoryFoamOct" ObjectPath="\Events\MX\MX_Mycelium\MX_MY_ST_MemoryFoamOct" GUID="{229EFC43-E24A-4DCF-844C-4F120653C623}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3596045613" Name="SFX_MY_CloseDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_CloseDoors" GUID="{E4C9912C-66B2-416E-8583-9E044BBCFE46}" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.9808958" DurationMax="0.9808958">
+					<MediaRefs>
+						<MediaRef Id="59735167"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="559616322" Name="SFX_MY_MemoryFoamEnter" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_MemoryFoamEnter" GUID="{682DB5E9-FF6E-48C7-B9B4-1282DB2FF3B2}" DurationType="OneShot" DurationMin="0.94711494" DurationMax="1.4636201">
+					<MediaRefs>
+						<MediaRef Id="265232576"/>
+						<MediaRef Id="302750259"/>
+						<MediaRef Id="338270815"/>
+						<MediaRef Id="356766628"/>
+						<MediaRef Id="548112328"/>
+						<MediaRef Id="568891921"/>
+						<MediaRef Id="857262904"/>
+						<MediaRef Id="865234397"/>
+						<MediaRef Id="995961898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2361831529" Name="SFX_MY_OpenDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_OpenDoors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" MaxAttenuation="10" DurationType="OneShot" DurationMin="2.5661874" DurationMax="2.5661874">
+					<MediaRefs>
+						<MediaRef Id="173441831"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2927351608" Name="SFX_MY_PannelOpen" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_PannelOpen" GUID="{35069E82-2EC3-4C0B-B5DD-068A5D018A7C}" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1722516999" Id="3072142513" Name="Open" ObjectPath="\States\States\ST_Mycelium\EarthOpen\Open" GUID="{A03829C2-39C0-4A6E-9DA0-38D50E4A857D}"/>
@@ -5165,5 +5298,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C99595C4-E11F-D03A-F747-27D982A75BDC}</FileHash>
+	<FileHash>{8133BA2F-A08D-6A30-58BB-A4FFEEFF0537}</FileHash>
 </SoundBanksInfo>

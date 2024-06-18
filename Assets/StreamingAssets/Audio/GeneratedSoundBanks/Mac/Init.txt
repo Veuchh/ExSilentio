@@ -18,6 +18,7 @@ Switch	ID	Name	Switch Group			Notes
 State Group	ID	Name			Wwise Object Path	Notes
 	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
 	146427616	ST_MX_SL_Stars			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars	
+	177378444	MX_SL_StmuteStars			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars	
 	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
 	272500339	ST_MX_OC_FontainTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_FontainTrig	
 	274315000	ST_MX_OC_WindTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig	
@@ -52,11 +53,13 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
 	3171034840	EarthPlace			\States\ST_Mycelium\EarthPlace	
+	3291738556	MX_SL_StmuteFirefly			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
 	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
+	4118992754	MX_SL_StmuteJungle			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle	
 	4136079247	ST_G_MuteMenu			\States\ST_Global\ST_G_MuteMenu	
 	4165626038	ST_MX_OC_Fish			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Fish	
 	4205926058	ST_MX_OC_StationTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_StationTrig	
@@ -71,6 +74,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_SL_Stars			
 	748895195	None	ST_MX_SL_Stars			
 	3384621607	Unreveal	ST_MX_SL_Stars			
+	748895195	None	MX_SL_StmuteStars			
+	998496889	First	MX_SL_StmuteStars			
+	3476314365	Second	MX_SL_StmuteStars			
 	645492555	Out	ST_SL_AMB_MuteJungle			
 	748895195	None	ST_SL_AMB_MuteJungle			
 	1752637612	In	ST_SL_AMB_MuteJungle			
@@ -173,6 +179,9 @@ State	ID	Name	State Group			Notes
 	645492555	Out	EarthPlace			
 	748895195	None	EarthPlace			
 	1752637612	In	EarthPlace			
+	748895195	None	MX_SL_StmuteFirefly			
+	998496889	First	MX_SL_StmuteFirefly			
+	3476314365	Second	MX_SL_StmuteFirefly			
 	645492555	Out	ST_SL_AMB_MuteSilo			
 	748895195	None	ST_SL_AMB_MuteSilo			
 	1752637612	In	ST_SL_AMB_MuteSilo			
@@ -188,6 +197,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	MX_SL_ST_River			
 	748895195	None	MX_SL_ST_River			
 	3384621607	Unreveal	MX_SL_ST_River			
+	748895195	None	MX_SL_StmuteJungle			
+	998496889	First	MX_SL_StmuteJungle			
+	3476314365	Second	MX_SL_StmuteJungle			
 	67980898	OutMenu	ST_G_MuteMenu			
 	748895195	None	ST_G_MuteMenu			
 	3374585465	InMenu	ST_G_MuteMenu			

@@ -53,6 +53,7 @@ Event	ID	Name			Wwise Object Path	Notes
 State Group	ID	Name			Wwise Object Path	Notes
 	19052470	ST_SL_AMB_MuteCave			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteCave	
 	146427616	ST_MX_SL_Stars			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Stars	
+	177378444	MX_SL_StmuteStars			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteStars	
 	254875094	ST_SL_AMB_MuteJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteJungle	
 	923296675	MX_SL_ST_Frog			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Frog	
 	1011090278	MX_SL_ST_Jungle			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Jungle	
@@ -68,8 +69,10 @@ State Group	ID	Name			Wwise Object Path	Notes
 	2905957914	ST_SL_AMB_MuteHighJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteHighJungle	
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
+	3291738556	MX_SL_StmuteFirefly			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
+	4118992754	MX_SL_StmuteJungle			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle	
 	4211601786	MX_SL_ST_FireCamp			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_FireCamp	
 	4277713600	MX_SL_ST_Firefly			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Firefly	
 
@@ -80,6 +83,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_SL_Stars			
 	748895195	None	ST_MX_SL_Stars			
 	3384621607	Unreveal	ST_MX_SL_Stars			
+	748895195	None	MX_SL_StmuteStars			
+	998496889	First	MX_SL_StmuteStars			
+	3476314365	Second	MX_SL_StmuteStars			
 	645492555	Out	ST_SL_AMB_MuteJungle			
 	748895195	None	ST_SL_AMB_MuteJungle			
 	1752637612	In	ST_SL_AMB_MuteJungle			
@@ -125,12 +131,18 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_SL_Ruins			
 	748895195	None	ST_MX_SL_Ruins			
 	3384621607	Unreveal	ST_MX_SL_Ruins			
+	748895195	None	MX_SL_StmuteFirefly			
+	998496889	First	MX_SL_StmuteFirefly			
+	3476314365	Second	MX_SL_StmuteFirefly			
 	645492555	Out	ST_SL_AMB_MuteSilo			
 	748895195	None	ST_SL_AMB_MuteSilo			
 	1752637612	In	ST_SL_AMB_MuteSilo			
 	634183254	Reveal	MX_SL_ST_River			
 	748895195	None	MX_SL_ST_River			
 	3384621607	Unreveal	MX_SL_ST_River			
+	748895195	None	MX_SL_StmuteJungle			
+	998496889	First	MX_SL_StmuteJungle			
+	3476314365	Second	MX_SL_StmuteJungle			
 	634183254	Reveal	MX_SL_ST_FireCamp			
 	748895195	None	MX_SL_ST_FireCamp			
 	3384621607	Unreveal	MX_SL_ST_FireCamp			
@@ -141,6 +153,7 @@ State	ID	Name	State Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	420790418	GP_SL_MX_MemoryFoamOctDistance			\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance	
 	919542588	GP_SL_DesertWind			\Game Parameters\GP_Strelitzia\GP_SL_DesertWind	
+	1263410310	GP_SL_DistantRiver			\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver	
 	3954811855	GP_SL_FireCampDistance			\Game Parameters\GP_Strelitzia\GP_SL_FireCampDistance	
 
 Effect plug-ins	ID	Name	Type				Notes
