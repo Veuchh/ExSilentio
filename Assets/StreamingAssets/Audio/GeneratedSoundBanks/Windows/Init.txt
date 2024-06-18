@@ -24,6 +24,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	274315000	ST_MX_OC_WindTrig			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_WindTrig	
 	290239708	ST_MX_OC_Stmute_Buildings			\States\ST_OceanCity\ST_OC_MX\StingerMute\ST_MX_OC_Stmute_Buildings	
 	305264505	ST_MX_OC_Stmute_Sun			\States\ST_OceanCity\ST_OC_MX\StingerMute\ST_MX_OC_Stmute_Sun	
+	332960936	ST_MY_Earth			\States\ST_Mycelium\ST_MY_Earth	
 	533948994	ST_MX_OC_Wind			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Wind	
 	637628402	ST_MX_OC_Boat			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Boat	
 	719384611	ST_MX_OC_Buildings			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings	
@@ -35,7 +36,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1621923877	ST_MX_OC_Seagull			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Seagull	
 	1623614963	ST_MX_OC_Stmute_Boat			\States\ST_OceanCity\ST_OC_MX\StingerMute\ST_MX_OC_Stmute_Boat	
 	1642955674	MX_SL_ST_Tent			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Tent	
-	1722516999	EarthOpen			\States\ST_Mycelium\EarthOpen	
 	1759635723	ST_G_HighFrequencyFilter			\States\ST_Global\ST_G_HighFrequencyFilter	
 	1775344635	ST_SL_AMB_DesertWind			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_DesertWind	
 	1890713911	ST_MX_SL_MemoryFoam			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_MemoryFoam	
@@ -43,6 +43,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	2015358534	ST_MX_OC_MemoryFoam			\States\ST_OceanCity\ST_OC_MX\Trigger\ST_MX_OC_MemoryFoam	
 	2289571526	MX_SL_ST_Cave			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_Cave	
 	2352230403	ST_OC_Occlusion			\States\ST_OceanCity\ST_OC_Occlusion	
+	2425716192	ST_MY_EarthOpen			\States\ST_Mycelium\ST_MY_EarthOpen	
 	2432701204	ST_SL_AMB_Elevator			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_Elevator	
 	2446983323	ST_MX_SL_Balise			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Balise	
 	2466189218	ST_SL_AMB_MuteDesert			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteDesert	
@@ -52,12 +53,12 @@ State Group	ID	Name			Wwise Object Path	Notes
 	2905957914	ST_SL_AMB_MuteHighJungle			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteHighJungle	
 	3032021402	ST_MX_SL_Desert			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Desert	
 	3051165994	ST_MX_SL_Ruins			\States\ST_Strelitzia\ST_SL_MX\ST_MX_SL_Ruins	
-	3171034840	EarthPlace			\States\ST_Mycelium\EarthPlace	
 	3291738556	MX_SL_StmuteFirefly			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteFirefly	
 	3369780566	ST_SL_AMB_MuteSilo			\States\ST_Strelitzia\ST_SL_AMB\ST_SL_AMB_MuteSilo	
 	3449563311	ST_OC_SFXTrainImpact			\States\ST_OceanCity\ST_OC_SFXTrainImpact	
 	3608668146	ST_MX_OC_Ocean			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Ocean	
 	3640304444	ST_MX_OC_Station			\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Station	
+	3829978697	ST_MY_EarthPlace			\States\ST_Mycelium\ST_MY_EarthPlace	
 	4045214441	MX_SL_ST_River			\States\ST_Strelitzia\ST_SL_MX\MX_SL_ST_River	
 	4118992754	MX_SL_StmuteJungle			\States\ST_Strelitzia\ST_SL_MX\StingerMute\MX_SL_StmuteJungle	
 	4136079247	ST_G_MuteMenu			\States\ST_Global\ST_G_MuteMenu	
@@ -92,6 +93,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	ST_MX_OC_Stmute_Sun			
 	998496889	First	ST_MX_OC_Stmute_Sun			
 	3476314365	Second	ST_MX_OC_Stmute_Sun			
+	634183254	Reveal	ST_MY_Earth			
+	748895195	None	ST_MY_Earth			
+	3384621607	Unreveal	ST_MY_Earth			
 	634183254	Reveal	ST_MX_OC_Wind			
 	748895195	None	ST_MX_OC_Wind			
 	3384621607	Unreveal	ST_MX_OC_Wind			
@@ -125,9 +129,6 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	MX_SL_ST_Tent			
 	748895195	None	MX_SL_ST_Tent			
 	3384621607	Unreveal	MX_SL_ST_Tent			
-	748895195	None	EarthOpen			
-	1451272583	Close	EarthOpen			
-	3072142513	Open	EarthOpen			
 	748895195	None	ST_G_HighFrequencyFilter			
 	930712164	Off	ST_G_HighFrequencyFilter			
 	1651971902	On	ST_G_HighFrequencyFilter			
@@ -149,6 +150,9 @@ State	ID	Name	State Group			Notes
 	645492555	Out	ST_OC_Occlusion			
 	748895195	None	ST_OC_Occlusion			
 	1752637612	In	ST_OC_Occlusion			
+	748895195	None	ST_MY_EarthOpen			
+	1451272583	Close	ST_MY_EarthOpen			
+	3072142513	Open	ST_MY_EarthOpen			
 	748895195	None	ST_SL_AMB_Elevator			
 	998496889	First	ST_SL_AMB_Elevator			
 	3476314365	Second	ST_SL_AMB_Elevator			
@@ -176,9 +180,6 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_SL_Ruins			
 	748895195	None	ST_MX_SL_Ruins			
 	3384621607	Unreveal	ST_MX_SL_Ruins			
-	645492555	Out	EarthPlace			
-	748895195	None	EarthPlace			
-	1752637612	In	EarthPlace			
 	748895195	None	MX_SL_StmuteFirefly			
 	998496889	First	MX_SL_StmuteFirefly			
 	3476314365	Second	MX_SL_StmuteFirefly			
@@ -194,6 +195,9 @@ State	ID	Name	State Group			Notes
 	634183254	Reveal	ST_MX_OC_Station			
 	748895195	None	ST_MX_OC_Station			
 	3384621607	Unreveal	ST_MX_OC_Station			
+	645492555	Out	ST_MY_EarthPlace			
+	748895195	None	ST_MY_EarthPlace			
+	1752637612	In	ST_MY_EarthPlace			
 	634183254	Reveal	MX_SL_ST_River			
 	748895195	None	MX_SL_ST_River			
 	3384621607	Unreveal	MX_SL_ST_River			
@@ -265,6 +269,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2511555531	UI_Menu			\Default Work Unit\Master Audio Bus\UI\UI_Menu	
 	2561704480	MX_OC_Train			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Train	
 	2826138305	AMB_OC_Boat			\Default Work Unit\Master Audio Bus\AMB\AMB_OceanCIty\AMB_OC_Boat	
+	2870356188	MX_Mycelium			\Default Work Unit\Master Audio Bus\MX\MX_Mycelium	
 	2991871507	MX_OC_Fontain			\Default Work Unit\Master Audio Bus\MX\MX_OceanCity\MX_OC_Fontain	
 	3000346181	AMB_Strelitzia			\Default Work Unit\Master Audio Bus\AMB\AMB_Strelitzia	
 	3134725817	AMB_SL_Desert			\Default Work Unit\Master Audio Bus\AMB\AMB_Strelitzia\AMB_SL_Desert	
