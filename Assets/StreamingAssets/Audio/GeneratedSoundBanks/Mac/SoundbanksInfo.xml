@@ -930,7 +930,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{F65B1A7D-0B86-DB0D-3EC7-8BE1AEF006DB}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{24AC2265-91E9-16F9-5BFE-2C92DFD64803}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1339,6 +1339,7 @@
 			<GameParameters>
 				<GameParameter Id="226166670" Name="GP_OC_FT" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_FT" GUID="{171768CE-2C34-4057-9452-E90DA9CF38AF}"/>
 				<GameParameter Id="420790418" Name="GP_SL_MX_MemoryFoamOctDistance" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_MX_MemoryFoamOctDistance" GUID="{9B855DC5-B0EB-43BF-89F2-2EB2ACFC560F}"/>
+				<GameParameter Id="423649449" Name="GP_PulseEndDist" ObjectPath="\Game Parameters\Game Parameters\GP_Mycelium\GP_PulseEndDist" GUID="{D7ED95AB-BFE4-4B80-BDE8-E7E19372C973}"/>
 				<GameParameter Id="437935957" Name="GP_OC_MX_Sd_Buildings" ObjectPath="\Game Parameters\Game Parameters\GP_OceanCity\GP_OC_MX\SideChain\GP_OC_MX_Sd_Buildings" GUID="{23848B40-B6AB-4E5D-9FEE-C6494CF34FC5}"/>
 				<GameParameter Id="919542588" Name="GP_SL_DesertWind" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DesertWind" GUID="{C7E7239F-01E0-4796-90E7-0708D12F50BB}"/>
 				<GameParameter Id="1263410310" Name="GP_SL_DistantRiver" ObjectPath="\Game Parameters\Game Parameters\GP_Strelitzia\GP_SL_DistantRiver" GUID="{AE880407-86C8-4AF3-AF6A-B0AFD1D1B6F8}"/>
@@ -3662,7 +3663,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{AF4AFDA3-0F11-AB6E-302F-7AA53EDE5386}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{B93C5975-3B55-A57E-24C0-426A300C63F6}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -3847,6 +3848,9 @@
 					</ActionSetState>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="423649449" Name="GP_PulseEndDist" ObjectPath="\Game Parameters\Game Parameters\GP_Mycelium\GP_PulseEndDist" GUID="{D7ED95AB-BFE4-4B80-BDE8-E7E19372C973}"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="332960936" Name="ST_MY_Earth" ObjectPath="\States\States\ST_Mycelium\ST_MY_Earth" GUID="{295750C8-37A9-427E-A525-4785D2B5FAB0}">
 					<States>
@@ -5398,5 +5402,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{71890318-60D9-616F-26DF-B3DE3D1BC036}</FileHash>
+	<FileHash>{91657567-9A17-56A5-5590-13058ECA611C}</FileHash>
 </SoundBanksInfo>
