@@ -82,6 +82,7 @@ namespace LW.Player
 
         public void ToggleConsole(bool isToggled)
         {
+            isDeleting = false;
             ConsoleUI.Instance.ToggleConsole(isToggled);
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
