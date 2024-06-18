@@ -1,3 +1,4 @@
+using Codice.CM.Client.Differences;
 using LW.Audio;
 using LW.Data;
 using LW.Level;
@@ -164,12 +165,35 @@ namespace LW.Player
             CustomLogger.OnWordInput(currentWordInput, Vector3.zero, 0);
 
             if (!wordCorrector.AttemptParsingToCommand(currentWordInput, OnUseCommand))
-                wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse);
+                wordCorrector.AttemptParsingToID(currentWordInput, OnSuccesfullParse, OnFailedParse, GetPossibleWordIDs());
 
 
             WwiseInterface.Instance.PlayEvent(uiClWordEnter);
             ClearWord();
             ConsoleUI.Instance.UpdateInput(currentWordInput);
+        }
+
+        List<WordID> GetPossibleWordIDs()
+        {
+            List<WordID> wordIDs = new List<WordID>();
+
+            foreach (var bundle in RevealableObjectHandler.Instance.GetBundles())
+            {
+                DatabaseQueryResult queryResult = wordDatabase.AttemptDatabaseRetrieve(bundle.ID);
+                
+                wordIDs.Add(queryResult.MainResult.ID);
+
+                foreach (var item in queryResult.SecondaryResults)
+                {
+                    wordIDs.Add(item.ID);
+                }
+                foreach (var item in queryResult.SemanticallyCloseIDs)
+                {
+                    wordIDs.Add(item.ID);
+                }
+            }
+
+            return wordIDs;
         }
 
         private void OnUseCommand(CommandID id, string arguments = "")
