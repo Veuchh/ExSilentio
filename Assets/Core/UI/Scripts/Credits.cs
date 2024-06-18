@@ -24,10 +24,12 @@ public class Credits : MonoBehaviour
 
             Sequence sequence = DOTween.Sequence();
             sequence.AppendCallback(() => ConsoleUI.Instance.ToggleConsole(false, true));
+            sequence.AppendCallback(() => ConsoleUI.Instance.TogglePreventConsole());
             sequence.AppendInterval(startupDuration);
             sequence.Append(canvasGroup.DOFade(1, fadeInDuration));
             sequence.AppendInterval(stayDuration);
             sequence.Append(canvasGroup.DOFade(0, fadeOutDuration));
+            sequence.AppendCallback(() => ConsoleUI.Instance.TogglePreventConsole());
             sequence.AppendCallback(() => ConsoleUI.Instance.ToggleConsole(false, false));
             sequence.Play();
         }

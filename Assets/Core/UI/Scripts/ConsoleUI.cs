@@ -60,6 +60,9 @@ namespace LW.UI
         bool isConsoleShown = false;
         bool hasNotification = false;
 
+        bool preventConsole = false;
+        public bool PreventConsole => preventConsole;
+
         public static ConsoleUI Instance;
 
         private void Awake()
@@ -101,8 +104,16 @@ namespace LW.UI
             togglePannelButton.onClick.RemoveAllListeners();
         }
 
+        public void TogglePreventConsole()
+        {
+            preventConsole = !preventConsole;
+        }
+
         public void ToggleConsole(bool toggle, bool applyToAll = false)
         {
+            if (preventConsole)
+                return;
+
             canvas.sortingOrder = toggle ? 1 : -1;
             consoleCanvasGroup.alpha = toggle ? 1 : 0;
 

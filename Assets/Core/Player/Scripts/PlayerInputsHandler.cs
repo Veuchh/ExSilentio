@@ -120,7 +120,8 @@ namespace LW.Player
 
         public void ToggleWordMode()
         {
-            if (!isWordModeEnabled && StaticData.OpenWindowsAmount > 0)
+            if ((!isWordModeEnabled && StaticData.OpenWindowsAmount > 0)
+                || ConsoleUI.Instance.PreventConsole)
                 return;
 
             isWordModeEnabled = !isWordModeEnabled;
