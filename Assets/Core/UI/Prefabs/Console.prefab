@@ -2554,6 +2554,7 @@ GameObject:
   - component: {fileID: 8979986845710501193}
   - component: {fileID: 3147279863064337657}
   - component: {fileID: 4642702414715763359}
+  - component: {fileID: 2179225829946513634}
   m_Layer: 5
   m_Name: Console
   m_TagString: Untagged
@@ -2675,6 +2676,7 @@ MonoBehaviour:
   screenshotCommand: {fileID: 8410881148977592538}
   togglePannelButton: {fileID: 133961638583134871}
   toggleButtonPositions: {x: -535, y: -838}
+  icueWrapper: {fileID: 2179225829946513634}
   cursorFlashingSpeed: 7
   separateWithDashes: 0
   changeBackground: 1
@@ -2693,6 +2695,18 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: cf8436844a66e0c47b830c5ee47ac368,
       type: 2}
+--- !u!114 &2179225829946513634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078920715122459245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d7dfdf282ad0548936eaa8e58eda2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6359857025025766001
 GameObject:
   m_ObjectHideFlags: 0

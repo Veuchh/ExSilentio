@@ -29,6 +29,7 @@ namespace LW.UI
         [SerializeField] Button screenshotCommand;
         [SerializeField] Button togglePannelButton;
         [SerializeField] Vector2 toggleButtonPositions = new Vector2(-535, -838);
+        [SerializeField] ICueWrapper icueWrapper;
 
 
 
@@ -111,6 +112,8 @@ namespace LW.UI
 
         public void ToggleConsole(bool toggle, bool applyToAll = false)
         {
+            icueWrapper.UpdateKeyboardState(toggle);
+
             if (preventConsole)
                 return;
 
