@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d61985cf09a10a4990eafeb0bc047465
     GuidInternal: 
-    m_lastTime: -8584828887690644149
+    m_lastTime: -8584828749888120791
     List:
     - name: AMB
       guid: 17e60068accf6e44a0fd6bee02b9632e
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     ParentPath: Events\AMB
     guid: 90f9e10d7a2f78498de32deeabae2699
     GuidInternal: 
-    m_lastTime: -8584828881206201021
+    m_lastTime: -8584750352139729858
     List:
     - name: AMB_M_Main
       guid: a94c25a65f3e8d4aa396e8c4263692b6
@@ -1841,6 +1841,29 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1b3b559b65c4e04e9882370b675ab9c2
       Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_OC_TrainEnterStationNew
+      guid: 1f16cddf3b200a4a8c884d32e7b61e5a
+      id: 2501482317
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: AMB
+        ObjectType: 12
+        guid: 90f9e10d7a2f78498de32deeabae2699
+      - ElementName: AMB_OceanCity
+        ObjectType: 4
+        guid: 0b541abb7f3cb046bf8f351963be05e5
+      - ElementName: Trigger
+        ObjectType: 4
+        guid: 60640b7280ccd749852a4fa6507a1675
+      - ElementName: AMB_OC_TrainEnterStationNew
+        ObjectType: 3
+        guid: 1f16cddf3b200a4a8c884d32e7b61e5a
+      Path: Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStationNew
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4252,7 +4275,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 76472c2a1bb628498d56368a6177b6ad
     GuidInternal: 
-    m_lastTime: -8584828891271265692
+    m_lastTime: -8584828747263408218
     List:
     - name: SFX_Awake
       guid: a4e5a939bb33b54aa2a7a93fc9680a77
@@ -4466,8 +4489,8 @@ MonoBehaviour:
         guid: c127c221a7fa794698f5546ab936f2e5
       Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainExit
       maxAttenuation: 0
-      maxDuration: 2.363896
-      minDuration: 2.363896
+      maxDuration: 0
+      minDuration: 0
     - name: SFX_OC_TrainPlayerImpactIn
       guid: 9e6461593e869442a1fb8919daceeefd
       id: 82434068
@@ -4526,8 +4549,8 @@ MonoBehaviour:
         guid: 00781b24c80c344db68c1e3149d1078d
       Path: Events\SFX\SFX_OceanCity\SFX_OC_TrainStop
       maxAttenuation: 0
-      maxDuration: 2.370375
-      minDuration: 2.370375
+      maxDuration: 0
+      minDuration: 0
     - name: SFX_OceanCity
       guid: cf900004579f444db5d16c1f9110932f
       id: 3300249780
@@ -5541,7 +5564,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 12f7b7ed918fd640be4092cb10051c61
     GuidInternal: 
-    m_lastTime: -8584828936786971057
+    m_lastTime: -8584750352756335823
     List:
     - name: MX_SL_ST_Cave
       guid: ab2d4ba05274f64782692eae8a43a38f
@@ -9260,6 +9283,84 @@ MonoBehaviour:
         guid: 5ef5a1543fad054ebcf53356ea834788
       Path: States\States\ST_Mycelium
       values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ST_OC_Debug
+      guid: f92fcf8a3d13744d93168d41ec7a0bb9
+      id: 833381421
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 12f7b7ed918fd640be4092cb10051c61
+      - ElementName: ST_OceanCity
+        ObjectType: 4
+        guid: 5d0c55818c3c8847a893d7c1da597f12
+      - ElementName: ST_OC_Debug
+        ObjectType: 9
+        guid: f92fcf8a3d13744d93168d41ec7a0bb9
+      Path: States\States\ST_OceanCity\ST_OC_Debug
+      values:
+      - name: No
+        guid: e124954d3d22504ba0ef75564c00317d
+        id: 1668749452
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Debug
+          ObjectType: 9
+          guid: f92fcf8a3d13744d93168d41ec7a0bb9
+        - ElementName: No
+          ObjectType: 8
+          guid: e124954d3d22504ba0ef75564c00317d
+      - name: None
+        guid: eda88223fa0ba2469367785cd334527b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Debug
+          ObjectType: 9
+          guid: f92fcf8a3d13744d93168d41ec7a0bb9
+        - ElementName: None
+          ObjectType: 8
+          guid: eda88223fa0ba2469367785cd334527b
+      - name: Yes
+        guid: 7e5496e58a73034d9100992f5b319030
+        id: 979470758
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 12f7b7ed918fd640be4092cb10051c61
+        - ElementName: ST_OceanCity
+          ObjectType: 4
+          guid: 5d0c55818c3c8847a893d7c1da597f12
+        - ElementName: ST_OC_Debug
+          ObjectType: 9
+          guid: f92fcf8a3d13744d93168d41ec7a0bb9
+        - ElementName: Yes
+          ObjectType: 8
+          guid: 7e5496e58a73034d9100992f5b319030
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

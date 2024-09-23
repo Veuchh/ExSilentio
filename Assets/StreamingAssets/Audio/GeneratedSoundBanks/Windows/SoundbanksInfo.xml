@@ -938,7 +938,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{D6BF33F3-7076-8DF9-85C8-544B81BC6EE6}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{DD274B0E-2278-48D0-956A-10F2CA913371}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -1447,6 +1447,13 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="833381421" Name="ST_OC_Debug" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug" GUID="{8ACF2FF9-133D-4D74-9316-8D41EC7A0BB9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\None" GUID="{2382A8ED-0BFA-46A2-9367-785CD334527B}"/>
+						<State Id="979470758" Name="Yes" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\Yes" GUID="{E596547E-738A-4D03-9100-992F5B319030}"/>
+						<State Id="1668749452" Name="No" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\No" GUID="{4D9524E1-223D-4B50-A0EF-75564C00317D}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="867132074" Name="ST_MX_OC_Child" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child" GUID="{6EB25FAB-6CF5-46C5-9386-5BADF9A75695}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
@@ -1740,7 +1747,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{3549FC72-15A0-FC30-6B69-34D79A28F6B0}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{1B38B9C9-235F-F008-C38A-17CCE25685D0}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -2548,6 +2555,9 @@
 			</Media>
 			<Events>
 				<Event Id="126894539" Name="FT_OceanCityPlay" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay" GUID="{D0B2B762-3554-4CC3-9DE3-DBECEA1B77C6}" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="838776142" Name="Silo" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Silo" GUID="{E82A8F42-6D34-4793-9314-D85DFDF78F4A}"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="267428953" GUID="{672BBB3F-9241-45B0-A1D3-C654DD98B2FD}"/>
@@ -3897,7 +3907,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{02C8105F-0A72-A724-F470-C1A62759D670}">
+		<SoundBank Id="2321219508" Type="User" GUID="{D5CE19E1-6BAB-4A7A-8E25-731A958027CD}" Language="SFX" Hash="{F9917821-C49A-EFED-D1F8-0604A408597F}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\OceanCity</ObjectPath>
 			<ShortName>OceanCity</ShortName>
 			<Path>OceanCity.bnk</Path>
@@ -4894,6 +4904,11 @@
 				</Event>
 				<Event Id="3205911533" Name="AMB_OC_TrainEnterStation" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStation" GUID="{9B553B1B-C465-4EE0-9882-370B675AB9C2}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
+						<ActionSetStateEntry GroupId="833381421" Id="979470758" Name="Yes" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\Yes" GUID="{E596547E-738A-4D03-9100-992F5B319030}"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2501482317" Name="AMB_OC_TrainEnterStationNew" ObjectPath="\Events\AMB\AMB_OceanCity\Trigger\AMB_OC_TrainEnterStationNew" GUID="{DFCD161F-203B-4A0A-8C88-4D32E7B61E5A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
 						<ActionSetStateEntry GroupId="1231701662" Id="1752637612" Name="In" ObjectPath="\States\States\ST_OceanCity\ST_OC_TrainInsideStation\In" GUID="{26E278CB-86CE-49A8-8B6F-F040A616EB7F}"/>
 					</ActionSetState>
 				</Event>
@@ -5270,6 +5285,13 @@
 						<State Id="3384621607" Name="Unreveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Buildings\Unreveal" GUID="{DA3B54F0-B1F8-4DD8-8818-74E1D4FE1E69}"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="833381421" Name="ST_OC_Debug" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug" GUID="{8ACF2FF9-133D-4D74-9316-8D41EC7A0BB9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\None" GUID="{2382A8ED-0BFA-46A2-9367-785CD334527B}"/>
+						<State Id="979470758" Name="Yes" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\Yes" GUID="{E596547E-738A-4D03-9100-992F5B319030}"/>
+						<State Id="1668749452" Name="No" ObjectPath="\States\States\ST_OceanCity\ST_OC_Debug\No" GUID="{4D9524E1-223D-4B50-A0EF-75564C00317D}"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="867132074" Name="ST_MX_OC_Child" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child" GUID="{6EB25FAB-6CF5-46C5-9386-5BADF9A75695}">
 					<States>
 						<State Id="634183254" Name="Reveal" ObjectPath="\States\States\ST_OceanCity\ST_OC_MX\ST_MX_OC_Child\Reveal" GUID="{E701BDA8-E7EC-436C-BD92-00CC69774318}"/>
@@ -5408,5 +5430,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0544DAFD-EC05-E525-A70C-86894A055DCA}</FileHash>
+	<FileHash>{7925C430-715F-AD21-E76D-484E6986DF4F}</FileHash>
 </SoundBanksInfo>
