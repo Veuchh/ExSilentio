@@ -1747,7 +1747,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{1B38B9C9-235F-F008-C38A-17CCE25685D0}">
+		<SoundBank Id="1465331116" Type="User" GUID="{88CD6AD0-0475-46C9-B336-E86A99380790}" Language="SFX" Hash="{BDE4DB88-3F4E-1D77-16B9-4D9FC28F7253}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Global</ObjectPath>
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
@@ -2555,9 +2555,6 @@
 			</Media>
 			<Events>
 				<Event Id="126894539" Name="FT_OceanCityPlay" ObjectPath="\Events\FOOTSTEPS\FT_OceanCity\FT_OceanCityPlay" GUID="{D0B2B762-3554-4CC3-9DE3-DBECEA1B77C6}" DurationType="Infinite">
-					<AuxBusRefs>
-						<AuxBusRef Id="838776142" Name="Silo" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Silo" GUID="{E82A8F42-6D34-4793-9314-D85DFDF78F4A}"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1218704685" Id="267428953" GUID="{672BBB3F-9241-45B0-A1D3-C654DD98B2FD}"/>
@@ -3690,7 +3687,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{391E06CD-F34C-5087-AC6E-AE0E2943E4D6}">
+		<SoundBank Id="2121747212" Type="User" GUID="{32EE0E36-FB39-402F-94C2-92287ED37A7D}" Language="SFX" Hash="{49336630-C961-B4EC-A9F9-CF9940973E7E}">
 			<ObjectPath>\SoundBanks\Ex_Silencio\Mycelium</ObjectPath>
 			<ShortName>Mycelium</ShortName>
 			<Path>Mycelium.bnk</Path>
@@ -3699,6 +3696,10 @@
 					<ShortName>SFX_MY_DoorClose.wav</ShortName>
 					<CachePath>SFX/SFX_MY_DoorClose_8E324C96.wem</CachePath>
 				</File>
+				<File Id="96938929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_DF255E23.wem</CachePath>
+				</File>
 				<File Id="118919536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_MY_RoomtoneShip.wav</ShortName>
 					<CachePath>SFX/AMB_MY_RoomtoneShip_56CEF360.wem</CachePath>
@@ -3706,6 +3707,10 @@
 				<File Id="173441831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_MY_DoorOpen.wav</ShortName>
 					<CachePath>SFX/SFX_MY_DoorOpen_8E324C96.wem</CachePath>
+				</File>
+				<File Id="220719378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_3011A365.wem</CachePath>
 				</File>
 				<File Id="265232576" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_CL_Line.wav</ShortName>
@@ -3723,6 +3728,14 @@
 					<ShortName>UILineglitch.wav</ShortName>
 					<CachePath>SFX/UILineglitch_6D836619.wem</CachePath>
 				</File>
+				<File Id="378866683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_72595C01.wem</CachePath>
+				</File>
+				<File Id="381295232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_D563B7DC.wem</CachePath>
+				</File>
 				<File Id="461141195" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_MY_RoomtoneBathroom.wav</ShortName>
 					<CachePath>SFX/AMB_MY_RoomtoneBathroom_56CEF360.wem</CachePath>
@@ -3739,9 +3752,25 @@
 					<ShortName>MX_MY_End.wav</ShortName>
 					<CachePath>SFX/MX_MY_End_56CEF360.wem</CachePath>
 				</File>
+				<File Id="636862381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_2DCCDF4A.wem</CachePath>
+				</File>
+				<File Id="681577702" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_36A81A29.wem</CachePath>
+				</File>
 				<File Id="697171149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MX_MY_PulseEnd.wav</ShortName>
 					<CachePath>SFX/MX_MY_PulseEnd_56CEF360.wem</CachePath>
+				</File>
+				<File Id="742813696" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UILineglitch.wav</ShortName>
+					<CachePath>SFX/UILineglitch_6CB9180C.wem</CachePath>
+				</File>
+				<File Id="776621907" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_5ED9CD60.wem</CachePath>
 				</File>
 				<File Id="782304097" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AMB_MY_RoomtoneAir.wav</ShortName>
@@ -3750,6 +3779,10 @@
 				<File Id="857262904" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UILineglitch.wav</ShortName>
 					<CachePath>SFX/UILineglitch_162A64C7.wem</CachePath>
+				</File>
+				<File Id="864533703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_CL_Line.wav</ShortName>
+					<CachePath>SFX/UI_CL_Line_9E8C0987.wem</CachePath>
 				</File>
 				<File Id="865234397" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UILineglitch.wav</ShortName>
@@ -3864,6 +3897,19 @@
 						<MediaRef Id="857262904"/>
 						<MediaRef Id="865234397"/>
 						<MediaRef Id="995961898"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1160889923" Name="SFX_MY_MemoryFoamPreEnter" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_MemoryFoamPreEnter" GUID="{EA6A0885-78D8-420D-BB94-189394B2D912}" DurationType="OneShot" DurationMin="0.35389552" DurationMax="0.6707823">
+					<MediaRefs>
+						<MediaRef Id="96938929"/>
+						<MediaRef Id="220719378"/>
+						<MediaRef Id="378866683"/>
+						<MediaRef Id="381295232"/>
+						<MediaRef Id="636862381"/>
+						<MediaRef Id="681577702"/>
+						<MediaRef Id="742813696"/>
+						<MediaRef Id="776621907"/>
+						<MediaRef Id="864533703"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2361831529" Name="SFX_MY_OpenDoors" ObjectPath="\Events\SFX\SFX_Mycelium\SFX_MY_OpenDoors" GUID="{5D6C73A6-92CC-4341-9F49-6F85010C29CE}" MaxAttenuation="10" DurationType="OneShot" DurationMin="2.5661874" DurationMax="2.5661874">
@@ -5430,5 +5476,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EB762106-65BB-15DB-82A9-3EA7223625C4}</FileHash>
+	<FileHash>{7F926572-AC40-D754-333B-75E3D847C76A}</FileHash>
 </SoundBanksInfo>
